@@ -12,39 +12,76 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PutApiV4GroupsIdRequestAiSettingsAttributes : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("ai_catalog_restricted_to_group_hierarchy") is { } nullNodeAiCatalogRestrictedToGroupHierarchy && nullNodeAiCatalogRestrictedToGroupHierarchy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AiCatalogRestrictedToGroupHierarchy = null;
+            if (parseNode.GetChildNode("ai_usage_data_collection_enabled") is { } nullNodeAiUsageDataCollectionEnabled && nullNodeAiUsageDataCollectionEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AiUsageDataCollectionEnabled = null;
+            if (parseNode.GetChildNode("allow_all_unix_sockets") is { } nullNodeAllowAllUnixSockets && nullNodeAllowAllUnixSockets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowAllUnixSockets = null;
+            if (parseNode.GetChildNode("allow_project_extension") is { } nullNodeAllowProjectExtension && nullNodeAllowProjectExtension.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowProjectExtension = null;
+            if (parseNode.GetChildNode("duo_agent_platform_enabled") is { } nullNodeDuoAgentPlatformEnabled && nullNodeDuoAgentPlatformEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DuoAgentPlatformEnabled = null;
+            if (parseNode.GetChildNode("duo_workflow_mcp_enabled") is { } nullNodeDuoWorkflowMcpEnabled && nullNodeDuoWorkflowMcpEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DuoWorkflowMcpEnabled = null;
+            if (parseNode.GetChildNode("foundational_agents_default_enabled") is { } nullNodeFoundationalAgentsDefaultEnabled && nullNodeFoundationalAgentsDefaultEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FoundationalAgentsDefaultEnabled = null;
+            if (parseNode.GetChildNode("include_recommended_allowed") is { } nullNodeIncludeRecommendedAllowed && nullNodeIncludeRecommendedAllowed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IncludeRecommendedAllowed = null;
+            if (parseNode.GetChildNode("minimum_access_level_enable_on_projects") is { } nullNodeMinimumAccessLevelEnableOnProjects && nullNodeMinimumAccessLevelEnableOnProjects.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinimumAccessLevelEnableOnProjects = null;
+            if (parseNode.GetChildNode("minimum_access_level_execute") is { } nullNodeMinimumAccessLevelExecute && nullNodeMinimumAccessLevelExecute.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinimumAccessLevelExecute = null;
+            if (parseNode.GetChildNode("minimum_access_level_execute_async") is { } nullNodeMinimumAccessLevelExecuteAsync && nullNodeMinimumAccessLevelExecuteAsync.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinimumAccessLevelExecuteAsync = null;
+            if (parseNode.GetChildNode("minimum_access_level_manage") is { } nullNodeMinimumAccessLevelManage && nullNodeMinimumAccessLevelManage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinimumAccessLevelManage = null;
+            if (parseNode.GetChildNode("prompt_injection_protection_level") is { } nullNodePromptInjectionProtectionLevel && nullNodePromptInjectionProtectionLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PromptInjectionProtectionLevel = null;
+            if (parseNode.GetChildNode("require_sandbox") is { } nullNodeRequireSandbox && nullNodeRequireSandbox.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequireSandbox = null;
+            if (parseNode.GetChildNode("web_search_enabled") is { } nullNodeWebSearchEnabled && nullNodeWebSearchEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebSearchEnabled = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Confine the AI Catalog to items within this top-level group hierarchy</summary>
-        public bool? AiCatalogRestrictedToGroupHierarchy { get; set; }
+        public bool? AiCatalogRestrictedToGroupHierarchy { get => _explicitNullValueAiCatalogRestrictedToGroupHierarchy; set { _explicitNullValueAiCatalogRestrictedToGroupHierarchy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ai_catalog_restricted_to_group_hierarchy"); else _explicitNullProperties?.Remove("ai_catalog_restricted_to_group_hierarchy"); } }
+        private bool? _explicitNullValueAiCatalogRestrictedToGroupHierarchy = default!;
         /// <summary>Enable AI usage data collection for this namespace</summary>
-        public bool? AiUsageDataCollectionEnabled { get; set; }
+        public bool? AiUsageDataCollectionEnabled { get => _explicitNullValueAiUsageDataCollectionEnabled; set { _explicitNullValueAiUsageDataCollectionEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ai_usage_data_collection_enabled"); else _explicitNullProperties?.Remove("ai_usage_data_collection_enabled"); } }
+        private bool? _explicitNullValueAiUsageDataCollectionEnabled = default!;
         /// <summary>Whether to allow all Unix sockets for network access</summary>
-        public bool? AllowAllUnixSockets { get; set; }
+        public bool? AllowAllUnixSockets { get => _explicitNullValueAllowAllUnixSockets; set { _explicitNullValueAllowAllUnixSockets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allow_all_unix_sockets"); else _explicitNullProperties?.Remove("allow_all_unix_sockets"); } }
+        private bool? _explicitNullValueAllowAllUnixSockets = default!;
         /// <summary>Whether to allow projects to extend the network access domain allowlist</summary>
-        public bool? AllowProjectExtension { get; set; }
+        public bool? AllowProjectExtension { get => _explicitNullValueAllowProjectExtension; set { _explicitNullValueAllowProjectExtension = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allow_project_extension"); else _explicitNullProperties?.Remove("allow_project_extension"); } }
+        private bool? _explicitNullValueAllowProjectExtension = default!;
         /// <summary>Whether Duo Agent Platform features are enabled</summary>
-        public bool? DuoAgentPlatformEnabled { get; set; }
+        public bool? DuoAgentPlatformEnabled { get => _explicitNullValueDuoAgentPlatformEnabled; set { _explicitNullValueDuoAgentPlatformEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duo_agent_platform_enabled"); else _explicitNullProperties?.Remove("duo_agent_platform_enabled"); } }
+        private bool? _explicitNullValueDuoAgentPlatformEnabled = default!;
         /// <summary>Enable MCP support for Duo Agent Platform</summary>
-        public bool? DuoWorkflowMcpEnabled { get; set; }
+        public bool? DuoWorkflowMcpEnabled { get => _explicitNullValueDuoWorkflowMcpEnabled; set { _explicitNullValueDuoWorkflowMcpEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duo_workflow_mcp_enabled"); else _explicitNullProperties?.Remove("duo_workflow_mcp_enabled"); } }
+        private bool? _explicitNullValueDuoWorkflowMcpEnabled = default!;
         /// <summary>Whether new foundational agents are enabled by default</summary>
-        public bool? FoundationalAgentsDefaultEnabled { get; set; }
+        public bool? FoundationalAgentsDefaultEnabled { get => _explicitNullValueFoundationalAgentsDefaultEnabled; set { _explicitNullValueFoundationalAgentsDefaultEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("foundational_agents_default_enabled"); else _explicitNullProperties?.Remove("foundational_agents_default_enabled"); } }
+        private bool? _explicitNullValueFoundationalAgentsDefaultEnabled = default!;
         /// <summary>Whether to include recommended domains in the network access allowlist</summary>
-        public bool? IncludeRecommendedAllowed { get; set; }
+        public bool? IncludeRecommendedAllowed { get => _explicitNullValueIncludeRecommendedAllowed; set { _explicitNullValueIncludeRecommendedAllowed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("include_recommended_allowed"); else _explicitNullProperties?.Remove("include_recommended_allowed"); } }
+        private bool? _explicitNullValueIncludeRecommendedAllowed = default!;
         /// <summary>The minimum access level required to enable Duo Agent Platform. This field is behind a feature flag.</summary>
-        public int? MinimumAccessLevelEnableOnProjects { get; set; }
+        public int? MinimumAccessLevelEnableOnProjects { get => _explicitNullValueMinimumAccessLevelEnableOnProjects; set { _explicitNullValueMinimumAccessLevelEnableOnProjects = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minimum_access_level_enable_on_projects"); else _explicitNullProperties?.Remove("minimum_access_level_enable_on_projects"); } }
+        private int? _explicitNullValueMinimumAccessLevelEnableOnProjects = default!;
         /// <summary>The minimum access level required to execute Duo Agent Platform. This field is behind a feature flag.</summary>
-        public int? MinimumAccessLevelExecute { get; set; }
+        public int? MinimumAccessLevelExecute { get => _explicitNullValueMinimumAccessLevelExecute; set { _explicitNullValueMinimumAccessLevelExecute = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minimum_access_level_execute"); else _explicitNullProperties?.Remove("minimum_access_level_execute"); } }
+        private int? _explicitNullValueMinimumAccessLevelExecute = default!;
         /// <summary>The minimum access level required to execute Duo Agent Platform features in CI/CD. This field is behind a feature flag.</summary>
-        public int? MinimumAccessLevelExecuteAsync { get; set; }
+        public int? MinimumAccessLevelExecuteAsync { get => _explicitNullValueMinimumAccessLevelExecuteAsync; set { _explicitNullValueMinimumAccessLevelExecuteAsync = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minimum_access_level_execute_async"); else _explicitNullProperties?.Remove("minimum_access_level_execute_async"); } }
+        private int? _explicitNullValueMinimumAccessLevelExecuteAsync = default!;
         /// <summary>The minimum access level required to manage Duo Agent Platform. This field is behind a feature flag.</summary>
-        public int? MinimumAccessLevelManage { get; set; }
+        public int? MinimumAccessLevelManage { get => _explicitNullValueMinimumAccessLevelManage; set { _explicitNullValueMinimumAccessLevelManage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minimum_access_level_manage"); else _explicitNullProperties?.Remove("minimum_access_level_manage"); } }
+        private int? _explicitNullValueMinimumAccessLevelManage = default!;
         /// <summary>Prompt injection protection level. One of `no_checks`, `log_only` or `interrupt`</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdRequestAiSettingsAttributesPromptInjectionProtectionLevel? PromptInjectionProtectionLevel { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdRequestAiSettingsAttributesPromptInjectionProtectionLevel? PromptInjectionProtectionLevel { get => _explicitNullValuePromptInjectionProtectionLevel; set { _explicitNullValuePromptInjectionProtectionLevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prompt_injection_protection_level"); else _explicitNullProperties?.Remove("prompt_injection_protection_level"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdRequestAiSettingsAttributesPromptInjectionProtectionLevel? _explicitNullValuePromptInjectionProtectionLevel = default!;
         /// <summary>Whether flows that run on GitLab Runner fail when the execution environment sandbox is unavailable</summary>
-        public bool? RequireSandbox { get; set; }
+        public bool? RequireSandbox { get => _explicitNullValueRequireSandbox; set { _explicitNullValueRequireSandbox = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("require_sandbox"); else _explicitNullProperties?.Remove("require_sandbox"); } }
+        private bool? _explicitNullValueRequireSandbox = default!;
         /// <summary>Allow web search in GitLab Duo Chat for this top-level group</summary>
-        public bool? WebSearchEnabled { get; set; }
+        public bool? WebSearchEnabled { get => _explicitNullValueWebSearchEnabled; set { _explicitNullValueWebSearchEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("web_search_enabled"); else _explicitNullProperties?.Remove("web_search_enabled"); } }
+        private bool? _explicitNullValueWebSearchEnabled = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdRequestAiSettingsAttributes"/> and sets the default values.
         /// </summary>
@@ -60,7 +97,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdRequestAiSettingsAttributes CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdRequestAiSettingsAttributes();
+            // Preserve a nullable root response.
+            if (parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) return null!;
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdRequestAiSettingsAttributes(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -109,6 +148,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdRequestAiSettingsAttributesPromptInjectionProtectionLevel>("prompt_injection_protection_level", PromptInjectionProtectionLevel);
             writer.WriteBoolValue("require_sandbox", RequireSandbox);
             writer.WriteBoolValue("web_search_enabled", WebSearchEnabled);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

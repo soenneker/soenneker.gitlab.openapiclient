@@ -11,37 +11,62 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ApiEntitiesProtectedRefAccess : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("access_level") is { } nullNodeAccessLevel && nullNodeAccessLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccessLevel = null;
+            if (parseNode.GetChildNode("access_level_description") is { } nullNodeAccessLevelDescription && nullNodeAccessLevelDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccessLevelDescription = null;
+            if (parseNode.GetChildNode("deploy_key_id") is { } nullNodeDeployKeyId && nullNodeDeployKeyId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeployKeyId = null;
+            if (parseNode.GetChildNode("group_id") is { } nullNodeGroupId && nullNodeGroupId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GroupId = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("member_role_id") is { } nullNodeMemberRoleId && nullNodeMemberRoleId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MemberRoleId = null;
+            if (parseNode.GetChildNode("member_role_name") is { } nullNodeMemberRoleName && nullNodeMemberRoleName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MemberRoleName = null;
+            if (parseNode.GetChildNode("user_id") is { } nullNodeUserId && nullNodeUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserId = null;
+        }
+
         /// <summary>The access_level property</summary>
-        public int? AccessLevel { get; set; }
+        public int? AccessLevel { get => _explicitNullValueAccessLevel; set { _explicitNullValueAccessLevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("access_level"); else _explicitNullProperties?.Remove("access_level"); } }
+        private int? _explicitNullValueAccessLevel = default!;
         /// <summary>The access_level_description property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AccessLevelDescription { get; set; }
+        public string? AccessLevelDescription { get => _explicitNullValueAccessLevelDescription; set { _explicitNullValueAccessLevelDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("access_level_description"); else _explicitNullProperties?.Remove("access_level_description"); } }
+        private string? _explicitNullValueAccessLevelDescription = default!;
 #nullable restore
 #else
-        public string AccessLevelDescription { get; set; }
+        public string AccessLevelDescription { get => _explicitNullValueAccessLevelDescription; set { _explicitNullValueAccessLevelDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("access_level_description"); else _explicitNullProperties?.Remove("access_level_description"); } }
+        private string _explicitNullValueAccessLevelDescription = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The deploy_key_id property</summary>
-        public long? DeployKeyId { get; set; }
+        public long? DeployKeyId { get => _explicitNullValueDeployKeyId; set { _explicitNullValueDeployKeyId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deploy_key_id"); else _explicitNullProperties?.Remove("deploy_key_id"); } }
+        private long? _explicitNullValueDeployKeyId = default!;
         /// <summary>The group_id property</summary>
-        public long? GroupId { get; set; }
+        public long? GroupId { get => _explicitNullValueGroupId; set { _explicitNullValueGroupId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_id"); else _explicitNullProperties?.Remove("group_id"); } }
+        private long? _explicitNullValueGroupId = default!;
         /// <summary>The id property</summary>
-        public long? Id { get; set; }
+        public long? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private long? _explicitNullValueId = default!;
         /// <summary>The member_role_id property</summary>
-        public long? MemberRoleId { get; set; }
+        public long? MemberRoleId { get => _explicitNullValueMemberRoleId; set { _explicitNullValueMemberRoleId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("member_role_id"); else _explicitNullProperties?.Remove("member_role_id"); } }
+        private long? _explicitNullValueMemberRoleId = default!;
         /// <summary>The member_role_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MemberRoleName { get; set; }
+        public string? MemberRoleName { get => _explicitNullValueMemberRoleName; set { _explicitNullValueMemberRoleName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("member_role_name"); else _explicitNullProperties?.Remove("member_role_name"); } }
+        private string? _explicitNullValueMemberRoleName = default!;
 #nullable restore
 #else
-        public string MemberRoleName { get; set; }
+        public string MemberRoleName { get => _explicitNullValueMemberRoleName; set { _explicitNullValueMemberRoleName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("member_role_name"); else _explicitNullProperties?.Remove("member_role_name"); } }
+        private string _explicitNullValueMemberRoleName = default!;
 #endif
         /// <summary>The user_id property</summary>
-        public long? UserId { get; set; }
+        public long? UserId { get => _explicitNullValueUserId; set { _explicitNullValueUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_id"); else _explicitNullProperties?.Remove("user_id"); } }
+        private long? _explicitNullValueUserId = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedRefAccess"/> and sets the default values.
         /// </summary>
@@ -57,7 +82,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedRefAccess CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedRefAccess();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedRefAccess(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -92,6 +117,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteLongValue("member_role_id", MemberRoleId);
             writer.WriteStringValue("member_role_name", MemberRoleName);
             writer.WriteLongValue("user_id", UserId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

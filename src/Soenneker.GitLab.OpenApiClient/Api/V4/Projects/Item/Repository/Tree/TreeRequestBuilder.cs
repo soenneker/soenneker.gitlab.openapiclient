@@ -49,7 +49,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Tree
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesTreeObject>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesTreeObject.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesTreeObject>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesTreeObject.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Lists all repository files and directories in a specified project. This endpoint can be accessed without authentication if the repository is publicly accessible. This command provides essentially the same features as the `git ls-tree` command. Use `with_last_commit` to include the last commit that changed each entry. `with_last_commit` cannot be combined with `recursive`.

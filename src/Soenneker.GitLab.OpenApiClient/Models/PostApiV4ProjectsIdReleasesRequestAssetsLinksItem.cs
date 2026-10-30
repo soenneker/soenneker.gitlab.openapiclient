@@ -11,42 +11,63 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostApiV4ProjectsIdReleasesRequestAssetsLinksItem : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("direct_asset_path") is { } nullNodeDirectAssetPath && nullNodeDirectAssetPath.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DirectAssetPath = null;
+            if (parseNode.GetChildNode("filepath") is { } nullNodeFilepath && nullNodeFilepath.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Filepath = null;
+            if (parseNode.GetChildNode("link_type") is { } nullNodeLinkType && nullNodeLinkType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LinkType = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Path for a direct asset link.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DirectAssetPath { get; set; }
+        public string? DirectAssetPath { get => _explicitNullValueDirectAssetPath; set { _explicitNullValueDirectAssetPath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("direct_asset_path"); else _explicitNullProperties?.Remove("direct_asset_path"); } }
+        private string? _explicitNullValueDirectAssetPath = default!;
 #nullable restore
 #else
-        public string DirectAssetPath { get; set; }
+        public string DirectAssetPath { get => _explicitNullValueDirectAssetPath; set { _explicitNullValueDirectAssetPath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("direct_asset_path"); else _explicitNullProperties?.Remove("direct_asset_path"); } }
+        private string _explicitNullValueDirectAssetPath = default!;
 #endif
         /// <summary>Deprecated: optional path for a direct asset link</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Filepath { get; set; }
+        public string? Filepath { get => _explicitNullValueFilepath; set { _explicitNullValueFilepath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filepath"); else _explicitNullProperties?.Remove("filepath"); } }
+        private string? _explicitNullValueFilepath = default!;
 #nullable restore
 #else
-        public string Filepath { get; set; }
+        public string Filepath { get => _explicitNullValueFilepath; set { _explicitNullValueFilepath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filepath"); else _explicitNullProperties?.Remove("filepath"); } }
+        private string _explicitNullValueFilepath = default!;
 #endif
         /// <summary>The type of the link.</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdReleasesRequestAssetsLinksItemLinkType? LinkType { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdReleasesRequestAssetsLinksItemLinkType? LinkType { get => _explicitNullValueLinkType; set { _explicitNullValueLinkType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("link_type"); else _explicitNullProperties?.Remove("link_type"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdReleasesRequestAssetsLinksItemLinkType? _explicitNullValueLinkType = default!;
         /// <summary>Name of the link. Link names must be unique within the release.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>URL of the link. Link URLs must be unique within the release.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Url { get; set; }
+        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        private string? _explicitNullValueUrl = default!;
 #nullable restore
 #else
-        public string Url { get; set; }
+        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        private string _explicitNullValueUrl = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdReleasesRequestAssetsLinksItem"/> and sets the default values.
@@ -63,7 +84,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdReleasesRequestAssetsLinksItem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdReleasesRequestAssetsLinksItem();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdReleasesRequestAssetsLinksItem(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -92,6 +113,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdReleasesRequestAssetsLinksItemLinkType>("link_type", LinkType);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("url", Url);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

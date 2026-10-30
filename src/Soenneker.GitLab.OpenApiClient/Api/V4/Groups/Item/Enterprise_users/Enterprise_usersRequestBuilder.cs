@@ -62,7 +62,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Enterprise_users
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserPublic>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserPublic.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserPublic>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserPublic.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
             return collectionResult?.AsList();
         }
         /// <summary>

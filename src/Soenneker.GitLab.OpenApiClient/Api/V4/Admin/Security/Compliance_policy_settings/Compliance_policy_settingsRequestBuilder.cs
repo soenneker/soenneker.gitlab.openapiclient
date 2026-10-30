@@ -49,7 +49,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Security.Compliance_policy
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAdminSecurityPolicySetting>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAdminSecurityPolicySetting.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAdminSecurityPolicySetting>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAdminSecurityPolicySetting.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Updates the security policy settings for this GitLab instance.
@@ -69,7 +69,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Security.Compliance_policy
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPutRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAdminSecurityPolicySetting>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAdminSecurityPolicySetting.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAdminSecurityPolicySetting>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAdminSecurityPolicySetting.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieves the current security policy settings for this GitLab instance.

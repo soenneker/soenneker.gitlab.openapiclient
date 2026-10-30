@@ -16,6 +16,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.User.Item
     public partial class WithUserItemRequestBuilder : BaseRequestBuilder
     {
         /// <summary>The credit_card_validation property</summary>
+        [Obsolete("")]
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.User.Item.Credit_card_validation.Credit_card_validationRequestBuilder Credit_card_validation
         {
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.User.Item.Credit_card_validation.Credit_card_validationRequestBuilder(PathParameters, RequestAdapter);

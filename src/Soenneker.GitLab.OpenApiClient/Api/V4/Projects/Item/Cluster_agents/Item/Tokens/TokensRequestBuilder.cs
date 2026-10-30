@@ -62,7 +62,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Cluster_agents.Ite
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesClustersAgentTokenBasic>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesClustersAgentTokenBasic.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesClustersAgentTokenBasic>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesClustersAgentTokenBasic.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Creates a token for an agent. You must have the Maintainer or Owner role to use this endpoint. An agent can have only two active tokens at one time.
@@ -82,7 +82,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Cluster_agents.Ite
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesClustersAgentTokenWithToken>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesClustersAgentTokenWithToken.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesClustersAgentTokenWithToken>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesClustersAgentTokenWithToken.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Lists all active tokens for an agent. You must have the Developer, Maintainer, or Owner role to use this endpoint.

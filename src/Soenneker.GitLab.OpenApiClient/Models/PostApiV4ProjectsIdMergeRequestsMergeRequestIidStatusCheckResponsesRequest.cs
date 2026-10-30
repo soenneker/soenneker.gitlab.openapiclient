@@ -11,21 +11,35 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostApiV4ProjectsIdMergeRequestsMergeRequestIidStatusCheckResponsesRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("external_status_check_id") is { } nullNodeExternalStatusCheckId && nullNodeExternalStatusCheckId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalStatusCheckId = null;
+            if (parseNode.GetChildNode("sha") is { } nullNodeSha && nullNodeSha.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sha = null;
+            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>ID of the external status check.</summary>
-        public int? ExternalStatusCheckId { get; set; }
+        public int? ExternalStatusCheckId { get => _explicitNullValueExternalStatusCheckId; set { _explicitNullValueExternalStatusCheckId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_status_check_id"); else _explicitNullProperties?.Remove("external_status_check_id"); } }
+        private int? _explicitNullValueExternalStatusCheckId = default!;
         /// <summary>SHA at `HEAD` of the source branch.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Sha { get; set; }
+        public string? Sha { get => _explicitNullValueSha; set { _explicitNullValueSha = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sha"); else _explicitNullProperties?.Remove("sha"); } }
+        private string? _explicitNullValueSha = default!;
 #nullable restore
 #else
-        public string Sha { get; set; }
+        public string Sha { get => _explicitNullValueSha; set { _explicitNullValueSha = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sha"); else _explicitNullProperties?.Remove("sha"); } }
+        private string _explicitNullValueSha = default!;
 #endif
         /// <summary>Status of the check.</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdMergeRequestsMergeRequestIidStatusCheckResponsesRequestStatus? Status { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdMergeRequestsMergeRequestIidStatusCheckResponsesRequestStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdMergeRequestsMergeRequestIidStatusCheckResponsesRequestStatus? _explicitNullValueStatus = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdMergeRequestsMergeRequestIidStatusCheckResponsesRequest"/> and sets the default values.
         /// </summary>
@@ -41,7 +55,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdMergeRequestsMergeRequestIidStatusCheckResponsesRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdMergeRequestsMergeRequestIidStatusCheckResponsesRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdMergeRequestsMergeRequestIidStatusCheckResponsesRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -66,6 +80,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteIntValue("external_status_check_id", ExternalStatusCheckId);
             writer.WriteStringValue("sha", Sha);
             writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdMergeRequestsMergeRequestIidStatusCheckResponsesRequestStatus>("status", Status);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

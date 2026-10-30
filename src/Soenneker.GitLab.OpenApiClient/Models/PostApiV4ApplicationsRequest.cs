@@ -11,42 +11,63 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostApiV4ApplicationsRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("confidential") is { } nullNodeConfidential && nullNodeConfidential.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Confidential = null;
+            if (parseNode.GetChildNode("granular_scopes") is { } nullNodeGranularScopes && nullNodeGranularScopes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GranularScopes = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("redirect_uri") is { } nullNodeRedirectUri && nullNodeRedirectUri.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RedirectUri = null;
+            if (parseNode.GetChildNode("scopes") is { } nullNodeScopes && nullNodeScopes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Scopes = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>If `true`, the application can securely store client credentials, such as the client secret. Non-confidential applications (such as native mobile apps and Single Page Apps) might expose client credentials.</summary>
-        public bool? Confidential { get; set; }
+        public bool? Confidential { get => _explicitNullValueConfidential; set { _explicitNullValueConfidential = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("confidential"); else _explicitNullProperties?.Remove("confidential"); } }
+        private bool? _explicitNullValueConfidential = default!;
         /// <summary>List of granular scopes to assign.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ApplicationsRequestGranularScopesItem>? GranularScopes { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ApplicationsRequestGranularScopesItem>? GranularScopes { get => _explicitNullValueGranularScopes; set { _explicitNullValueGranularScopes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("granular_scopes"); else _explicitNullProperties?.Remove("granular_scopes"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ApplicationsRequestGranularScopesItem>? _explicitNullValueGranularScopes = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ApplicationsRequestGranularScopesItem> GranularScopes { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ApplicationsRequestGranularScopesItem> GranularScopes { get => _explicitNullValueGranularScopes; set { _explicitNullValueGranularScopes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("granular_scopes"); else _explicitNullProperties?.Remove("granular_scopes"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ApplicationsRequestGranularScopesItem> _explicitNullValueGranularScopes = default!;
 #endif
         /// <summary>Name of the application.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>Redirect URI of the application.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RedirectUri { get; set; }
+        public string? RedirectUri { get => _explicitNullValueRedirectUri; set { _explicitNullValueRedirectUri = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("redirect_uri"); else _explicitNullProperties?.Remove("redirect_uri"); } }
+        private string? _explicitNullValueRedirectUri = default!;
 #nullable restore
 #else
-        public string RedirectUri { get; set; }
+        public string RedirectUri { get => _explicitNullValueRedirectUri; set { _explicitNullValueRedirectUri = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("redirect_uri"); else _explicitNullProperties?.Remove("redirect_uri"); } }
+        private string _explicitNullValueRedirectUri = default!;
 #endif
         /// <summary>Scopes available to the application. Separate multiple scopes with a space.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Scopes { get; set; }
+        public string? Scopes { get => _explicitNullValueScopes; set { _explicitNullValueScopes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scopes"); else _explicitNullProperties?.Remove("scopes"); } }
+        private string? _explicitNullValueScopes = default!;
 #nullable restore
 #else
-        public string Scopes { get; set; }
+        public string Scopes { get => _explicitNullValueScopes; set { _explicitNullValueScopes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scopes"); else _explicitNullProperties?.Remove("scopes"); } }
+        private string _explicitNullValueScopes = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ApplicationsRequest"/> and sets the default values.
@@ -64,7 +85,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ApplicationsRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ApplicationsRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ApplicationsRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -93,6 +114,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("redirect_uri", RedirectUri);
             writer.WriteStringValue("scopes", Scopes);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

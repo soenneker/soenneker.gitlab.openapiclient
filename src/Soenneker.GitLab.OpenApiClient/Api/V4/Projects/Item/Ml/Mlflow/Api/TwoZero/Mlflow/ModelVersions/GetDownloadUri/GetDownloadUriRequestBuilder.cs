@@ -49,7 +49,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Ml.Mlflow.Api.TwoZ
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMlMlflowGetDownload>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMlMlflowGetDownload.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMlMlflowGetDownload>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMlMlflowGetDownload.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Returns version in MLflow format &quot;mlflow-artifacts:&lt;version&gt;&quot; https://mlflow.org/docs/2.19.0/rest-api.html#get-download-uri-for-modelversion-artifacts

@@ -11,15 +11,28 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ApiEntitiesCiMinutesUsage : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("monthly_minutes_used") is { } nullNodeMonthlyMinutesUsed && nullNodeMonthlyMinutesUsed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MonthlyMinutesUsed = null;
+            if (parseNode.GetChildNode("purchased_minutes_used") is { } nullNodePurchasedMinutesUsed && nullNodePurchasedMinutesUsed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PurchasedMinutesUsed = null;
+            if (parseNode.GetChildNode("total_minutes_used") is { } nullNodeTotalMinutesUsed && nullNodeTotalMinutesUsed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalMinutesUsed = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The monthly_minutes_used property</summary>
-        public int? MonthlyMinutesUsed { get; set; }
+        public int? MonthlyMinutesUsed { get => _explicitNullValueMonthlyMinutesUsed; set { _explicitNullValueMonthlyMinutesUsed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("monthly_minutes_used"); else _explicitNullProperties?.Remove("monthly_minutes_used"); } }
+        private int? _explicitNullValueMonthlyMinutesUsed = default!;
         /// <summary>The purchased_minutes_used property</summary>
-        public int? PurchasedMinutesUsed { get; set; }
+        public int? PurchasedMinutesUsed { get => _explicitNullValuePurchasedMinutesUsed; set { _explicitNullValuePurchasedMinutesUsed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("purchased_minutes_used"); else _explicitNullProperties?.Remove("purchased_minutes_used"); } }
+        private int? _explicitNullValuePurchasedMinutesUsed = default!;
         /// <summary>The total_minutes_used property</summary>
-        public int? TotalMinutesUsed { get; set; }
+        public int? TotalMinutesUsed { get => _explicitNullValueTotalMinutesUsed; set { _explicitNullValueTotalMinutesUsed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total_minutes_used"); else _explicitNullProperties?.Remove("total_minutes_used"); } }
+        private int? _explicitNullValueTotalMinutesUsed = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiMinutesUsage"/> and sets the default values.
         /// </summary>
@@ -35,7 +48,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiMinutesUsage CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiMinutesUsage();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiMinutesUsage(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -60,6 +73,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteIntValue("monthly_minutes_used", MonthlyMinutesUsed);
             writer.WriteIntValue("purchased_minutes_used", PurchasedMinutesUsed);
             writer.WriteIntValue("total_minutes_used", TotalMinutesUsed);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

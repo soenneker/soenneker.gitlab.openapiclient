@@ -11,123 +11,199 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PutApiV4ProjectsIdHooksHookIdRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("branch_filter_strategy") is { } nullNodeBranchFilterStrategy && nullNodeBranchFilterStrategy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BranchFilterStrategy = null;
+            if (parseNode.GetChildNode("confidential_issues_events") is { } nullNodeConfidentialIssuesEvents && nullNodeConfidentialIssuesEvents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConfidentialIssuesEvents = null;
+            if (parseNode.GetChildNode("confidential_note_events") is { } nullNodeConfidentialNoteEvents && nullNodeConfidentialNoteEvents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConfidentialNoteEvents = null;
+            if (parseNode.GetChildNode("custom_headers") is { } nullNodeCustomHeaders && nullNodeCustomHeaders.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomHeaders = null;
+            if (parseNode.GetChildNode("custom_webhook_template") is { } nullNodeCustomWebhookTemplate && nullNodeCustomWebhookTemplate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomWebhookTemplate = null;
+            if (parseNode.GetChildNode("deployment_events") is { } nullNodeDeploymentEvents && nullNodeDeploymentEvents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeploymentEvents = null;
+            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("duo_flow_callback_enabled") is { } nullNodeDuoFlowCallbackEnabled && nullNodeDuoFlowCallbackEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DuoFlowCallbackEnabled = null;
+            if (parseNode.GetChildNode("emoji_events") is { } nullNodeEmojiEvents && nullNodeEmojiEvents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmojiEvents = null;
+            if (parseNode.GetChildNode("enable_ssl_verification") is { } nullNodeEnableSslVerification && nullNodeEnableSslVerification.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableSslVerification = null;
+            if (parseNode.GetChildNode("feature_flag_events") is { } nullNodeFeatureFlagEvents && nullNodeFeatureFlagEvents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FeatureFlagEvents = null;
+            if (parseNode.GetChildNode("issues_events") is { } nullNodeIssuesEvents && nullNodeIssuesEvents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssuesEvents = null;
+            if (parseNode.GetChildNode("job_events") is { } nullNodeJobEvents && nullNodeJobEvents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) JobEvents = null;
+            if (parseNode.GetChildNode("merge_requests_events") is { } nullNodeMergeRequestsEvents && nullNodeMergeRequestsEvents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MergeRequestsEvents = null;
+            if (parseNode.GetChildNode("milestone_events") is { } nullNodeMilestoneEvents && nullNodeMilestoneEvents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MilestoneEvents = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("note_events") is { } nullNodeNoteEvents && nullNodeNoteEvents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NoteEvents = null;
+            if (parseNode.GetChildNode("pipeline_events") is { } nullNodePipelineEvents && nullNodePipelineEvents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PipelineEvents = null;
+            if (parseNode.GetChildNode("push_events") is { } nullNodePushEvents && nullNodePushEvents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PushEvents = null;
+            if (parseNode.GetChildNode("push_events_branch_filter") is { } nullNodePushEventsBranchFilter && nullNodePushEventsBranchFilter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PushEventsBranchFilter = null;
+            if (parseNode.GetChildNode("releases_events") is { } nullNodeReleasesEvents && nullNodeReleasesEvents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReleasesEvents = null;
+            if (parseNode.GetChildNode("resource_access_token_events") is { } nullNodeResourceAccessTokenEvents && nullNodeResourceAccessTokenEvents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResourceAccessTokenEvents = null;
+            if (parseNode.GetChildNode("resource_deploy_token_events") is { } nullNodeResourceDeployTokenEvents && nullNodeResourceDeployTokenEvents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResourceDeployTokenEvents = null;
+            if (parseNode.GetChildNode("signing_token") is { } nullNodeSigningToken && nullNodeSigningToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SigningToken = null;
+            if (parseNode.GetChildNode("tag_push_events") is { } nullNodeTagPushEvents && nullNodeTagPushEvents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TagPushEvents = null;
+            if (parseNode.GetChildNode("token") is { } nullNodeToken && nullNodeToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Token = null;
+            if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
+            if (parseNode.GetChildNode("url_variables") is { } nullNodeUrlVariables && nullNodeUrlVariables.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UrlVariables = null;
+            if (parseNode.GetChildNode("vulnerability_events") is { } nullNodeVulnerabilityEvents && nullNodeVulnerabilityEvents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VulnerabilityEvents = null;
+            if (parseNode.GetChildNode("wiki_page_events") is { } nullNodeWikiPageEvents && nullNodeWikiPageEvents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WikiPageEvents = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Filter push events by branch. Defaults to `wildcard`.</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdHooksHookIdRequestBranchFilterStrategy? BranchFilterStrategy { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdHooksHookIdRequestBranchFilterStrategy? BranchFilterStrategy { get => _explicitNullValueBranchFilterStrategy; set { _explicitNullValueBranchFilterStrategy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("branch_filter_strategy"); else _explicitNullProperties?.Remove("branch_filter_strategy"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdHooksHookIdRequestBranchFilterStrategy? _explicitNullValueBranchFilterStrategy = default!;
         /// <summary>If `true`, triggers the project webhook on confidential issue events.</summary>
-        public bool? ConfidentialIssuesEvents { get; set; }
+        public bool? ConfidentialIssuesEvents { get => _explicitNullValueConfidentialIssuesEvents; set { _explicitNullValueConfidentialIssuesEvents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("confidential_issues_events"); else _explicitNullProperties?.Remove("confidential_issues_events"); } }
+        private bool? _explicitNullValueConfidentialIssuesEvents = default!;
         /// <summary>If `true`, triggers the project webhook on confidential note events.</summary>
-        public bool? ConfidentialNoteEvents { get; set; }
+        public bool? ConfidentialNoteEvents { get => _explicitNullValueConfidentialNoteEvents; set { _explicitNullValueConfidentialNoteEvents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("confidential_note_events"); else _explicitNullProperties?.Remove("confidential_note_events"); } }
+        private bool? _explicitNullValueConfidentialNoteEvents = default!;
         /// <summary>Custom headers for the hook.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdHooksHookIdRequestCustomHeadersItem>? CustomHeaders { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdHooksHookIdRequestCustomHeadersItem>? CustomHeaders { get => _explicitNullValueCustomHeaders; set { _explicitNullValueCustomHeaders = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_headers"); else _explicitNullProperties?.Remove("custom_headers"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdHooksHookIdRequestCustomHeadersItem>? _explicitNullValueCustomHeaders = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdHooksHookIdRequestCustomHeadersItem> CustomHeaders { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdHooksHookIdRequestCustomHeadersItem> CustomHeaders { get => _explicitNullValueCustomHeaders; set { _explicitNullValueCustomHeaders = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_headers"); else _explicitNullProperties?.Remove("custom_headers"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdHooksHookIdRequestCustomHeadersItem> _explicitNullValueCustomHeaders = default!;
 #endif
         /// <summary>Custom template for the webhook request payload.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CustomWebhookTemplate { get; set; }
+        public string? CustomWebhookTemplate { get => _explicitNullValueCustomWebhookTemplate; set { _explicitNullValueCustomWebhookTemplate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_webhook_template"); else _explicitNullProperties?.Remove("custom_webhook_template"); } }
+        private string? _explicitNullValueCustomWebhookTemplate = default!;
 #nullable restore
 #else
-        public string CustomWebhookTemplate { get; set; }
+        public string CustomWebhookTemplate { get => _explicitNullValueCustomWebhookTemplate; set { _explicitNullValueCustomWebhookTemplate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_webhook_template"); else _explicitNullProperties?.Remove("custom_webhook_template"); } }
+        private string _explicitNullValueCustomWebhookTemplate = default!;
 #endif
         /// <summary>If `true`, triggers the project webhook on deployment events.</summary>
-        public bool? DeploymentEvents { get; set; }
+        public bool? DeploymentEvents { get => _explicitNullValueDeploymentEvents; set { _explicitNullValueDeploymentEvents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deployment_events"); else _explicitNullProperties?.Remove("deployment_events"); } }
+        private bool? _explicitNullValueDeploymentEvents = default!;
         /// <summary>Description of the project webhook. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/460887) in GitLab 17.1.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get; set; }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get; set; }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>If `true`, allows Duo Agent Platform flows to send lifecycle and progress events to this project webhook. A flow must reference the webhook&apos;s ID as `callback_hook_id` when it starts. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/249149) in GitLab 19.4 [with a feature flag](https://docs.gitlab.com/administration/feature_flags/) named `duo_flow_callback_hooks`. Disabled by default.</summary>
-        public bool? DuoFlowCallbackEnabled { get; set; }
+        public bool? DuoFlowCallbackEnabled { get => _explicitNullValueDuoFlowCallbackEnabled; set { _explicitNullValueDuoFlowCallbackEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duo_flow_callback_enabled"); else _explicitNullProperties?.Remove("duo_flow_callback_enabled"); } }
+        private bool? _explicitNullValueDuoFlowCallbackEnabled = default!;
         /// <summary>If `true`, triggers the project webhook on emoji events.</summary>
-        public bool? EmojiEvents { get; set; }
+        public bool? EmojiEvents { get => _explicitNullValueEmojiEvents; set { _explicitNullValueEmojiEvents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emoji_events"); else _explicitNullProperties?.Remove("emoji_events"); } }
+        private bool? _explicitNullValueEmojiEvents = default!;
         /// <summary>If `true`, verifies the SSL certificate when the webhook is triggered.</summary>
-        public bool? EnableSslVerification { get; set; }
+        public bool? EnableSslVerification { get => _explicitNullValueEnableSslVerification; set { _explicitNullValueEnableSslVerification = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enable_ssl_verification"); else _explicitNullProperties?.Remove("enable_ssl_verification"); } }
+        private bool? _explicitNullValueEnableSslVerification = default!;
         /// <summary>If `true`, triggers the project webhook on feature flag events.</summary>
-        public bool? FeatureFlagEvents { get; set; }
+        public bool? FeatureFlagEvents { get => _explicitNullValueFeatureFlagEvents; set { _explicitNullValueFeatureFlagEvents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("feature_flag_events"); else _explicitNullProperties?.Remove("feature_flag_events"); } }
+        private bool? _explicitNullValueFeatureFlagEvents = default!;
         /// <summary>If `true`, triggers the project webhook on issue events.</summary>
-        public bool? IssuesEvents { get; set; }
+        public bool? IssuesEvents { get => _explicitNullValueIssuesEvents; set { _explicitNullValueIssuesEvents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issues_events"); else _explicitNullProperties?.Remove("issues_events"); } }
+        private bool? _explicitNullValueIssuesEvents = default!;
         /// <summary>If `true`, triggers the project webhook on job events.</summary>
-        public bool? JobEvents { get; set; }
+        public bool? JobEvents { get => _explicitNullValueJobEvents; set { _explicitNullValueJobEvents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("job_events"); else _explicitNullProperties?.Remove("job_events"); } }
+        private bool? _explicitNullValueJobEvents = default!;
         /// <summary>If `true`, triggers the project webhook on merge request events.</summary>
-        public bool? MergeRequestsEvents { get; set; }
+        public bool? MergeRequestsEvents { get => _explicitNullValueMergeRequestsEvents; set { _explicitNullValueMergeRequestsEvents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_requests_events"); else _explicitNullProperties?.Remove("merge_requests_events"); } }
+        private bool? _explicitNullValueMergeRequestsEvents = default!;
         /// <summary>If `true`, triggers the project webhook on milestone events.</summary>
-        public bool? MilestoneEvents { get; set; }
+        public bool? MilestoneEvents { get => _explicitNullValueMilestoneEvents; set { _explicitNullValueMilestoneEvents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("milestone_events"); else _explicitNullProperties?.Remove("milestone_events"); } }
+        private bool? _explicitNullValueMilestoneEvents = default!;
         /// <summary>Name of the project webhook. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/460887) in GitLab 17.1.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>If `true`, triggers the project webhook on note events.</summary>
-        public bool? NoteEvents { get; set; }
+        public bool? NoteEvents { get => _explicitNullValueNoteEvents; set { _explicitNullValueNoteEvents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("note_events"); else _explicitNullProperties?.Remove("note_events"); } }
+        private bool? _explicitNullValueNoteEvents = default!;
         /// <summary>If `true`, triggers the project webhook on pipeline events.</summary>
-        public bool? PipelineEvents { get; set; }
+        public bool? PipelineEvents { get => _explicitNullValuePipelineEvents; set { _explicitNullValuePipelineEvents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pipeline_events"); else _explicitNullProperties?.Remove("pipeline_events"); } }
+        private bool? _explicitNullValuePipelineEvents = default!;
         /// <summary>If `true`, triggers the project webhook on push events.</summary>
-        public bool? PushEvents { get; set; }
+        public bool? PushEvents { get => _explicitNullValuePushEvents; set { _explicitNullValuePushEvents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("push_events"); else _explicitNullProperties?.Remove("push_events"); } }
+        private bool? _explicitNullValuePushEvents = default!;
         /// <summary>Filter push events by branch name.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PushEventsBranchFilter { get; set; }
+        public string? PushEventsBranchFilter { get => _explicitNullValuePushEventsBranchFilter; set { _explicitNullValuePushEventsBranchFilter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("push_events_branch_filter"); else _explicitNullProperties?.Remove("push_events_branch_filter"); } }
+        private string? _explicitNullValuePushEventsBranchFilter = default!;
 #nullable restore
 #else
-        public string PushEventsBranchFilter { get; set; }
+        public string PushEventsBranchFilter { get => _explicitNullValuePushEventsBranchFilter; set { _explicitNullValuePushEventsBranchFilter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("push_events_branch_filter"); else _explicitNullProperties?.Remove("push_events_branch_filter"); } }
+        private string _explicitNullValuePushEventsBranchFilter = default!;
 #endif
         /// <summary>If `true`, triggers the project webhook on release events.</summary>
-        public bool? ReleasesEvents { get; set; }
+        public bool? ReleasesEvents { get => _explicitNullValueReleasesEvents; set { _explicitNullValueReleasesEvents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("releases_events"); else _explicitNullProperties?.Remove("releases_events"); } }
+        private bool? _explicitNullValueReleasesEvents = default!;
         /// <summary>If `true`, triggers the project webhook on project access token expiry events.</summary>
-        public bool? ResourceAccessTokenEvents { get; set; }
+        public bool? ResourceAccessTokenEvents { get => _explicitNullValueResourceAccessTokenEvents; set { _explicitNullValueResourceAccessTokenEvents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resource_access_token_events"); else _explicitNullProperties?.Remove("resource_access_token_events"); } }
+        private bool? _explicitNullValueResourceAccessTokenEvents = default!;
         /// <summary>If `true`, triggers the project webhook on project deploy token expiry events.</summary>
-        public bool? ResourceDeployTokenEvents { get; set; }
+        public bool? ResourceDeployTokenEvents { get => _explicitNullValueResourceDeployTokenEvents; set { _explicitNullValueResourceDeployTokenEvents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resource_deploy_token_events"); else _explicitNullProperties?.Remove("resource_deploy_token_events"); } }
+        private bool? _explicitNullValueResourceDeployTokenEvents = default!;
         /// <summary>HMAC signing token used to compute the `webhook-signature` header. Must be in `whsec_&lt;base64&gt;` format encoding a 32-byte key, and is not returned in the response. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/231325) in GitLab 19.0.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SigningToken { get; set; }
+        public string? SigningToken { get => _explicitNullValueSigningToken; set { _explicitNullValueSigningToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signing_token"); else _explicitNullProperties?.Remove("signing_token"); } }
+        private string? _explicitNullValueSigningToken = default!;
 #nullable restore
 #else
-        public string SigningToken { get; set; }
+        public string SigningToken { get => _explicitNullValueSigningToken; set { _explicitNullValueSigningToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signing_token"); else _explicitNullProperties?.Remove("signing_token"); } }
+        private string _explicitNullValueSigningToken = default!;
 #endif
         /// <summary>If `true`, triggers the project webhook on tag push events.</summary>
-        public bool? TagPushEvents { get; set; }
+        public bool? TagPushEvents { get => _explicitNullValueTagPushEvents; set { _explicitNullValueTagPushEvents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tag_push_events"); else _explicitNullProperties?.Remove("tag_push_events"); } }
+        private bool? _explicitNullValueTagPushEvents = default!;
         /// <summary>Secret token used to validate received payloads. Not returned in the response, and changing the webhook URL resets it.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Token { get; set; }
+        public string? Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
+        private string? _explicitNullValueToken = default!;
 #nullable restore
 #else
-        public string Token { get; set; }
+        public string Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
+        private string _explicitNullValueToken = default!;
 #endif
         /// <summary>Webhook URL.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Url { get; set; }
+        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        private string? _explicitNullValueUrl = default!;
 #nullable restore
 #else
-        public string Url { get; set; }
+        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        private string _explicitNullValueUrl = default!;
 #endif
         /// <summary>URL variables for interpolation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdHooksHookIdRequestUrlVariablesItem>? UrlVariables { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdHooksHookIdRequestUrlVariablesItem>? UrlVariables { get => _explicitNullValueUrlVariables; set { _explicitNullValueUrlVariables = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url_variables"); else _explicitNullProperties?.Remove("url_variables"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdHooksHookIdRequestUrlVariablesItem>? _explicitNullValueUrlVariables = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdHooksHookIdRequestUrlVariablesItem> UrlVariables { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdHooksHookIdRequestUrlVariablesItem> UrlVariables { get => _explicitNullValueUrlVariables; set { _explicitNullValueUrlVariables = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url_variables"); else _explicitNullProperties?.Remove("url_variables"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdHooksHookIdRequestUrlVariablesItem> _explicitNullValueUrlVariables = default!;
 #endif
         /// <summary>If `true`, triggers the project webhook on vulnerability events.</summary>
-        public bool? VulnerabilityEvents { get; set; }
+        public bool? VulnerabilityEvents { get => _explicitNullValueVulnerabilityEvents; set { _explicitNullValueVulnerabilityEvents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vulnerability_events"); else _explicitNullProperties?.Remove("vulnerability_events"); } }
+        private bool? _explicitNullValueVulnerabilityEvents = default!;
         /// <summary>If `true`, triggers the project webhook on wiki page events.</summary>
-        public bool? WikiPageEvents { get; set; }
+        public bool? WikiPageEvents { get => _explicitNullValueWikiPageEvents; set { _explicitNullValueWikiPageEvents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wiki_page_events"); else _explicitNullProperties?.Remove("wiki_page_events"); } }
+        private bool? _explicitNullValueWikiPageEvents = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdHooksHookIdRequest"/> and sets the default values.
         /// </summary>
@@ -143,7 +219,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdHooksHookIdRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdHooksHookIdRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdHooksHookIdRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -222,6 +298,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdHooksHookIdRequestUrlVariablesItem>("url_variables", UrlVariables);
             writer.WriteBoolValue("vulnerability_events", VulnerabilityEvents);
             writer.WriteBoolValue("wiki_page_events", WikiPageEvents);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,20 +11,34 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ApiEntitiesRepositoryHealthReferences : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("loose_count") is { } nullNodeLooseCount && nullNodeLooseCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LooseCount = null;
+            if (parseNode.GetChildNode("packed_size") is { } nullNodePackedSize && nullNodePackedSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PackedSize = null;
+            if (parseNode.GetChildNode("reference_backend") is { } nullNodeReferenceBackend && nullNodeReferenceBackend.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReferenceBackend = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The loose_count property</summary>
-        public int? LooseCount { get; set; }
+        public int? LooseCount { get => _explicitNullValueLooseCount; set { _explicitNullValueLooseCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("loose_count"); else _explicitNullProperties?.Remove("loose_count"); } }
+        private int? _explicitNullValueLooseCount = default!;
         /// <summary>The packed_size property</summary>
-        public int? PackedSize { get; set; }
+        public int? PackedSize { get => _explicitNullValuePackedSize; set { _explicitNullValuePackedSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("packed_size"); else _explicitNullProperties?.Remove("packed_size"); } }
+        private int? _explicitNullValuePackedSize = default!;
         /// <summary>The reference_backend property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ReferenceBackend { get; set; }
+        public string? ReferenceBackend { get => _explicitNullValueReferenceBackend; set { _explicitNullValueReferenceBackend = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reference_backend"); else _explicitNullProperties?.Remove("reference_backend"); } }
+        private string? _explicitNullValueReferenceBackend = default!;
 #nullable restore
 #else
-        public string ReferenceBackend { get; set; }
+        public string ReferenceBackend { get => _explicitNullValueReferenceBackend; set { _explicitNullValueReferenceBackend = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reference_backend"); else _explicitNullProperties?.Remove("reference_backend"); } }
+        private string _explicitNullValueReferenceBackend = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRepositoryHealthReferences"/> and sets the default values.
@@ -41,7 +55,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRepositoryHealthReferences CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRepositoryHealthReferences();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRepositoryHealthReferences(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -66,6 +80,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteIntValue("loose_count", LooseCount);
             writer.WriteIntValue("packed_size", PackedSize);
             writer.WriteStringValue("reference_backend", ReferenceBackend);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,19 +11,31 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PutApiV4GroupsIdSecuritySettingsRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("projects_to_exclude") is { } nullNodeProjectsToExclude && nullNodeProjectsToExclude.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProjectsToExclude = null;
+            if (parseNode.GetChildNode("secret_push_protection_enabled") is { } nullNodeSecretPushProtectionEnabled && nullNodeSecretPushProtectionEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SecretPushProtectionEnabled = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>IDs of projects to exclude from secret push protection.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<int?>? ProjectsToExclude { get; set; }
+        public List<int?>? ProjectsToExclude { get => _explicitNullValueProjectsToExclude; set { _explicitNullValueProjectsToExclude = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("projects_to_exclude"); else _explicitNullProperties?.Remove("projects_to_exclude"); } }
+        private List<int?>? _explicitNullValueProjectsToExclude = default!;
 #nullable restore
 #else
-        public List<int?> ProjectsToExclude { get; set; }
+        public List<int?> ProjectsToExclude { get => _explicitNullValueProjectsToExclude; set { _explicitNullValueProjectsToExclude = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("projects_to_exclude"); else _explicitNullProperties?.Remove("projects_to_exclude"); } }
+        private List<int?> _explicitNullValueProjectsToExclude = default!;
 #endif
         /// <summary>If `true`, enables secret push protection for projects in the group.</summary>
-        public bool? SecretPushProtectionEnabled { get; set; }
+        public bool? SecretPushProtectionEnabled { get => _explicitNullValueSecretPushProtectionEnabled; set { _explicitNullValueSecretPushProtectionEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secret_push_protection_enabled"); else _explicitNullProperties?.Remove("secret_push_protection_enabled"); } }
+        private bool? _explicitNullValueSecretPushProtectionEnabled = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdSecuritySettingsRequest"/> and sets the default values.
         /// </summary>
@@ -39,7 +51,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdSecuritySettingsRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdSecuritySettingsRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdSecuritySettingsRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -62,6 +74,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfPrimitiveValues<int?>("projects_to_exclude", ProjectsToExclude);
             writer.WriteBoolValue("secret_push_protection_enabled", SecretPushProtectionEnabled);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

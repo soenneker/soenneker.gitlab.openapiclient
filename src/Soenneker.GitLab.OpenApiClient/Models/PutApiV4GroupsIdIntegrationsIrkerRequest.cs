@@ -11,41 +11,65 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PutApiV4GroupsIdIntegrationsIrkerRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("colorize_messages") is { } nullNodeColorizeMessages && nullNodeColorizeMessages.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ColorizeMessages = null;
+            if (parseNode.GetChildNode("default_irc_uri") is { } nullNodeDefaultIrcUri && nullNodeDefaultIrcUri.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultIrcUri = null;
+            if (parseNode.GetChildNode("push_events") is { } nullNodePushEvents && nullNodePushEvents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PushEvents = null;
+            if (parseNode.GetChildNode("recipients") is { } nullNodeRecipients && nullNodeRecipients.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Recipients = null;
+            if (parseNode.GetChildNode("server_host") is { } nullNodeServerHost && nullNodeServerHost.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServerHost = null;
+            if (parseNode.GetChildNode("server_port") is { } nullNodeServerPort && nullNodeServerPort.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServerPort = null;
+            if (parseNode.GetChildNode("use_inherited_settings") is { } nullNodeUseInheritedSettings && nullNodeUseInheritedSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UseInheritedSettings = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Colorize messages</summary>
-        public bool? ColorizeMessages { get; set; }
+        public bool? ColorizeMessages { get => _explicitNullValueColorizeMessages; set { _explicitNullValueColorizeMessages = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("colorize_messages"); else _explicitNullProperties?.Remove("colorize_messages"); } }
+        private bool? _explicitNullValueColorizeMessages = default!;
         /// <summary>URI to add before each recipient. The default value is `irc://irc.network.net:6697/`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DefaultIrcUri { get; set; }
+        public string? DefaultIrcUri { get => _explicitNullValueDefaultIrcUri; set { _explicitNullValueDefaultIrcUri = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_irc_uri"); else _explicitNullProperties?.Remove("default_irc_uri"); } }
+        private string? _explicitNullValueDefaultIrcUri = default!;
 #nullable restore
 #else
-        public string DefaultIrcUri { get; set; }
+        public string DefaultIrcUri { get => _explicitNullValueDefaultIrcUri; set { _explicitNullValueDefaultIrcUri = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_irc_uri"); else _explicitNullProperties?.Remove("default_irc_uri"); } }
+        private string _explicitNullValueDefaultIrcUri = default!;
 #endif
         /// <summary>Trigger event for pushes to the repository.</summary>
-        public bool? PushEvents { get; set; }
+        public bool? PushEvents { get => _explicitNullValuePushEvents; set { _explicitNullValuePushEvents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("push_events"); else _explicitNullProperties?.Remove("push_events"); } }
+        private bool? _explicitNullValuePushEvents = default!;
         /// <summary>Comma-separated list of channels or email addresses.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Recipients { get; set; }
+        public string? Recipients { get => _explicitNullValueRecipients; set { _explicitNullValueRecipients = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recipients"); else _explicitNullProperties?.Remove("recipients"); } }
+        private string? _explicitNullValueRecipients = default!;
 #nullable restore
 #else
-        public string Recipients { get; set; }
+        public string Recipients { get => _explicitNullValueRecipients; set { _explicitNullValueRecipients = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recipients"); else _explicitNullProperties?.Remove("recipients"); } }
+        private string _explicitNullValueRecipients = default!;
 #endif
         /// <summary>irker daemon hostname. The default value is `localhost`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ServerHost { get; set; }
+        public string? ServerHost { get => _explicitNullValueServerHost; set { _explicitNullValueServerHost = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("server_host"); else _explicitNullProperties?.Remove("server_host"); } }
+        private string? _explicitNullValueServerHost = default!;
 #nullable restore
 #else
-        public string ServerHost { get; set; }
+        public string ServerHost { get => _explicitNullValueServerHost; set { _explicitNullValueServerHost = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("server_host"); else _explicitNullProperties?.Remove("server_host"); } }
+        private string _explicitNullValueServerHost = default!;
 #endif
         /// <summary>irker daemon port. The default value is `6659`.</summary>
-        public int? ServerPort { get; set; }
+        public int? ServerPort { get => _explicitNullValueServerPort; set { _explicitNullValueServerPort = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("server_port"); else _explicitNullProperties?.Remove("server_port"); } }
+        private int? _explicitNullValueServerPort = default!;
         /// <summary>Indicates whether to inherit the default settings. Defaults to `false`.</summary>
-        public bool? UseInheritedSettings { get; set; }
+        public bool? UseInheritedSettings { get => _explicitNullValueUseInheritedSettings; set { _explicitNullValueUseInheritedSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("use_inherited_settings"); else _explicitNullProperties?.Remove("use_inherited_settings"); } }
+        private bool? _explicitNullValueUseInheritedSettings = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdIntegrationsIrkerRequest"/> and sets the default values.
         /// </summary>
@@ -61,7 +85,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdIntegrationsIrkerRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdIntegrationsIrkerRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdIntegrationsIrkerRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -94,6 +118,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("server_host", ServerHost);
             writer.WriteIntValue("server_port", ServerPort);
             writer.WriteBoolValue("use_inherited_settings", UseInheritedSettings);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

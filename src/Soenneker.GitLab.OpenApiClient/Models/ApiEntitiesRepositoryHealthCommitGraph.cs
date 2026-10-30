@@ -11,17 +11,32 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ApiEntitiesRepositoryHealthCommitGraph : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("commit_graph_chain_length") is { } nullNodeCommitGraphChainLength && nullNodeCommitGraphChainLength.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommitGraphChainLength = null;
+            if (parseNode.GetChildNode("has_bloom_filters") is { } nullNodeHasBloomFilters && nullNodeHasBloomFilters.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HasBloomFilters = null;
+            if (parseNode.GetChildNode("has_generation_data") is { } nullNodeHasGenerationData && nullNodeHasGenerationData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HasGenerationData = null;
+            if (parseNode.GetChildNode("has_generation_data_overflow") is { } nullNodeHasGenerationDataOverflow && nullNodeHasGenerationDataOverflow.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HasGenerationDataOverflow = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The commit_graph_chain_length property</summary>
-        public int? CommitGraphChainLength { get; set; }
+        public int? CommitGraphChainLength { get => _explicitNullValueCommitGraphChainLength; set { _explicitNullValueCommitGraphChainLength = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commit_graph_chain_length"); else _explicitNullProperties?.Remove("commit_graph_chain_length"); } }
+        private int? _explicitNullValueCommitGraphChainLength = default!;
         /// <summary>The has_bloom_filters property</summary>
-        public bool? HasBloomFilters { get; set; }
+        public bool? HasBloomFilters { get => _explicitNullValueHasBloomFilters; set { _explicitNullValueHasBloomFilters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("has_bloom_filters"); else _explicitNullProperties?.Remove("has_bloom_filters"); } }
+        private bool? _explicitNullValueHasBloomFilters = default!;
         /// <summary>The has_generation_data property</summary>
-        public bool? HasGenerationData { get; set; }
+        public bool? HasGenerationData { get => _explicitNullValueHasGenerationData; set { _explicitNullValueHasGenerationData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("has_generation_data"); else _explicitNullProperties?.Remove("has_generation_data"); } }
+        private bool? _explicitNullValueHasGenerationData = default!;
         /// <summary>The has_generation_data_overflow property</summary>
-        public bool? HasGenerationDataOverflow { get; set; }
+        public bool? HasGenerationDataOverflow { get => _explicitNullValueHasGenerationDataOverflow; set { _explicitNullValueHasGenerationDataOverflow = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("has_generation_data_overflow"); else _explicitNullProperties?.Remove("has_generation_data_overflow"); } }
+        private bool? _explicitNullValueHasGenerationDataOverflow = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRepositoryHealthCommitGraph"/> and sets the default values.
         /// </summary>
@@ -37,7 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRepositoryHealthCommitGraph CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRepositoryHealthCommitGraph();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRepositoryHealthCommitGraph(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -64,6 +79,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteBoolValue("has_bloom_filters", HasBloomFilters);
             writer.WriteBoolValue("has_generation_data", HasGenerationData);
             writer.WriteBoolValue("has_generation_data_overflow", HasGenerationDataOverflow);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

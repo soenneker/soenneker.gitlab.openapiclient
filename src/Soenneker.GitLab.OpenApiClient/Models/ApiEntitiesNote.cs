@@ -11,115 +11,178 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ApiEntitiesNote : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("author") is { } nullNodeAuthor && nullNodeAuthor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Author = null;
+            if (parseNode.GetChildNode("body") is { } nullNodeBody && nullNodeBody.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Body = null;
+            if (parseNode.GetChildNode("commands_changes") is { } nullNodeCommandsChanges && nullNodeCommandsChanges.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommandsChanges = null;
+            if (parseNode.GetChildNode("commit_id") is { } nullNodeCommitId && nullNodeCommitId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommitId = null;
+            if (parseNode.GetChildNode("confidential") is { } nullNodeConfidential && nullNodeConfidential.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Confidential = null;
+            if (parseNode.GetChildNode("created_at") is { } nullNodeCreatedAt && nullNodeCreatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedAt = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("imported") is { } nullNodeImported && nullNodeImported.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Imported = null;
+            if (parseNode.GetChildNode("imported_from") is { } nullNodeImportedFrom && nullNodeImportedFrom.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImportedFrom = null;
+            if (parseNode.GetChildNode("internal") is { } nullNodeInternal && nullNodeInternal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Internal = null;
+            if (parseNode.GetChildNode("noteable_id") is { } nullNodeNoteableId && nullNodeNoteableId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NoteableId = null;
+            if (parseNode.GetChildNode("noteable_iid") is { } nullNodeNoteableIid && nullNodeNoteableIid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NoteableIid = null;
+            if (parseNode.GetChildNode("noteable_type") is { } nullNodeNoteableType && nullNodeNoteableType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NoteableType = null;
+            if (parseNode.GetChildNode("position") is { } nullNodePosition && nullNodePosition.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Position = null;
+            if (parseNode.GetChildNode("project_id") is { } nullNodeProjectId && nullNodeProjectId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProjectId = null;
+            if (parseNode.GetChildNode("resolvable") is { } nullNodeResolvable && nullNodeResolvable.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Resolvable = null;
+            if (parseNode.GetChildNode("resolved") is { } nullNodeResolved && nullNodeResolved.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Resolved = null;
+            if (parseNode.GetChildNode("resolved_at") is { } nullNodeResolvedAt && nullNodeResolvedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResolvedAt = null;
+            if (parseNode.GetChildNode("resolved_by") is { } nullNodeResolvedBy && nullNodeResolvedBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResolvedBy = null;
+            if (parseNode.GetChildNode("suggestions") is { } nullNodeSuggestions && nullNodeSuggestions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Suggestions = null;
+            if (parseNode.GetChildNode("system") is { } nullNodeSystem && nullNodeSystem.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) System = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("updated_at") is { } nullNodeUpdatedAt && nullNodeUpdatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdatedAt = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The author property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic? Author { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic? Author { get => _explicitNullValueAuthor; set { _explicitNullValueAuthor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("author"); else _explicitNullProperties?.Remove("author"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic? _explicitNullValueAuthor = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic Author { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic Author { get => _explicitNullValueAuthor; set { _explicitNullValueAuthor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("author"); else _explicitNullProperties?.Remove("author"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic _explicitNullValueAuthor = default!;
 #endif
         /// <summary>The body property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Body { get; set; }
+        public string? Body { get => _explicitNullValueBody; set { _explicitNullValueBody = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("body"); else _explicitNullProperties?.Remove("body"); } }
+        private string? _explicitNullValueBody = default!;
 #nullable restore
 #else
-        public string Body { get; set; }
+        public string Body { get => _explicitNullValueBody; set { _explicitNullValueBody = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("body"); else _explicitNullProperties?.Remove("body"); } }
+        private string _explicitNullValueBody = default!;
 #endif
         /// <summary>The commands_changes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNoteCommandsChangesProperty? CommandsChanges { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNoteCommandsChangesProperty? CommandsChanges { get => _explicitNullValueCommandsChanges; set { _explicitNullValueCommandsChanges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commands_changes"); else _explicitNullProperties?.Remove("commands_changes"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNoteCommandsChangesProperty? _explicitNullValueCommandsChanges = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNoteCommandsChangesProperty CommandsChanges { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNoteCommandsChangesProperty CommandsChanges { get => _explicitNullValueCommandsChanges; set { _explicitNullValueCommandsChanges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commands_changes"); else _explicitNullProperties?.Remove("commands_changes"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNoteCommandsChangesProperty _explicitNullValueCommandsChanges = default!;
 #endif
         /// <summary>The commit_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CommitId { get; set; }
+        public string? CommitId { get => _explicitNullValueCommitId; set { _explicitNullValueCommitId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commit_id"); else _explicitNullProperties?.Remove("commit_id"); } }
+        private string? _explicitNullValueCommitId = default!;
 #nullable restore
 #else
-        public string CommitId { get; set; }
+        public string CommitId { get => _explicitNullValueCommitId; set { _explicitNullValueCommitId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commit_id"); else _explicitNullProperties?.Remove("commit_id"); } }
+        private string _explicitNullValueCommitId = default!;
 #endif
         /// <summary>The confidential property</summary>
-        public bool? Confidential { get; set; }
+        public bool? Confidential { get => _explicitNullValueConfidential; set { _explicitNullValueConfidential = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("confidential"); else _explicitNullProperties?.Remove("confidential"); } }
+        private bool? _explicitNullValueConfidential = default!;
         /// <summary>The created_at property</summary>
-        public DateTimeOffset? CreatedAt { get; set; }
+        public DateTimeOffset? CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_at"); else _explicitNullProperties?.Remove("created_at"); } }
+        private DateTimeOffset? _explicitNullValueCreatedAt = default!;
         /// <summary>The id property</summary>
-        public long? Id { get; set; }
+        public long? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private long? _explicitNullValueId = default!;
         /// <summary>The imported property</summary>
-        public bool? Imported { get; set; }
+        public bool? Imported { get => _explicitNullValueImported; set { _explicitNullValueImported = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("imported"); else _explicitNullProperties?.Remove("imported"); } }
+        private bool? _explicitNullValueImported = default!;
         /// <summary>The imported_from property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ImportedFrom { get; set; }
+        public string? ImportedFrom { get => _explicitNullValueImportedFrom; set { _explicitNullValueImportedFrom = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("imported_from"); else _explicitNullProperties?.Remove("imported_from"); } }
+        private string? _explicitNullValueImportedFrom = default!;
 #nullable restore
 #else
-        public string ImportedFrom { get; set; }
+        public string ImportedFrom { get => _explicitNullValueImportedFrom; set { _explicitNullValueImportedFrom = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("imported_from"); else _explicitNullProperties?.Remove("imported_from"); } }
+        private string _explicitNullValueImportedFrom = default!;
 #endif
         /// <summary>The internal property</summary>
-        public bool? Internal { get; set; }
+        public bool? Internal { get => _explicitNullValueInternal; set { _explicitNullValueInternal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("internal"); else _explicitNullProperties?.Remove("internal"); } }
+        private bool? _explicitNullValueInternal = default!;
         /// <summary>The noteable_id property</summary>
-        public long? NoteableId { get; set; }
+        public long? NoteableId { get => _explicitNullValueNoteableId; set { _explicitNullValueNoteableId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("noteable_id"); else _explicitNullProperties?.Remove("noteable_id"); } }
+        private long? _explicitNullValueNoteableId = default!;
         /// <summary>The noteable_iid property</summary>
-        public int? NoteableIid { get; set; }
+        public int? NoteableIid { get => _explicitNullValueNoteableIid; set { _explicitNullValueNoteableIid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("noteable_iid"); else _explicitNullProperties?.Remove("noteable_iid"); } }
+        private int? _explicitNullValueNoteableIid = default!;
         /// <summary>The noteable_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NoteableType { get; set; }
+        public string? NoteableType { get => _explicitNullValueNoteableType; set { _explicitNullValueNoteableType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("noteable_type"); else _explicitNullProperties?.Remove("noteable_type"); } }
+        private string? _explicitNullValueNoteableType = default!;
 #nullable restore
 #else
-        public string NoteableType { get; set; }
+        public string NoteableType { get => _explicitNullValueNoteableType; set { _explicitNullValueNoteableType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("noteable_type"); else _explicitNullProperties?.Remove("noteable_type"); } }
+        private string _explicitNullValueNoteableType = default!;
 #endif
         /// <summary>The position property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNotePositionProperty? Position { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNotePositionProperty? Position { get => _explicitNullValuePosition; set { _explicitNullValuePosition = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("position"); else _explicitNullProperties?.Remove("position"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNotePositionProperty? _explicitNullValuePosition = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNotePositionProperty Position { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNotePositionProperty Position { get => _explicitNullValuePosition; set { _explicitNullValuePosition = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("position"); else _explicitNullProperties?.Remove("position"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNotePositionProperty _explicitNullValuePosition = default!;
 #endif
         /// <summary>The project_id property</summary>
-        public long? ProjectId { get; set; }
+        public long? ProjectId { get => _explicitNullValueProjectId; set { _explicitNullValueProjectId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_id"); else _explicitNullProperties?.Remove("project_id"); } }
+        private long? _explicitNullValueProjectId = default!;
         /// <summary>The resolvable property</summary>
-        public bool? Resolvable { get; set; }
+        public bool? Resolvable { get => _explicitNullValueResolvable; set { _explicitNullValueResolvable = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resolvable"); else _explicitNullProperties?.Remove("resolvable"); } }
+        private bool? _explicitNullValueResolvable = default!;
         /// <summary>The resolved property</summary>
-        public bool? Resolved { get; set; }
+        public bool? Resolved { get => _explicitNullValueResolved; set { _explicitNullValueResolved = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resolved"); else _explicitNullProperties?.Remove("resolved"); } }
+        private bool? _explicitNullValueResolved = default!;
         /// <summary>The resolved_at property</summary>
-        public DateTimeOffset? ResolvedAt { get; set; }
+        public DateTimeOffset? ResolvedAt { get => _explicitNullValueResolvedAt; set { _explicitNullValueResolvedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resolved_at"); else _explicitNullProperties?.Remove("resolved_at"); } }
+        private DateTimeOffset? _explicitNullValueResolvedAt = default!;
         /// <summary>The resolved_by property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic? ResolvedBy { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic? ResolvedBy { get => _explicitNullValueResolvedBy; set { _explicitNullValueResolvedBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resolved_by"); else _explicitNullProperties?.Remove("resolved_by"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic? _explicitNullValueResolvedBy = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic ResolvedBy { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic ResolvedBy { get => _explicitNullValueResolvedBy; set { _explicitNullValueResolvedBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resolved_by"); else _explicitNullProperties?.Remove("resolved_by"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic _explicitNullValueResolvedBy = default!;
 #endif
         /// <summary>The suggestions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSuggestion? Suggestions { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSuggestion? Suggestions { get => _explicitNullValueSuggestions; set { _explicitNullValueSuggestions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("suggestions"); else _explicitNullProperties?.Remove("suggestions"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSuggestion? _explicitNullValueSuggestions = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSuggestion Suggestions { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSuggestion Suggestions { get => _explicitNullValueSuggestions; set { _explicitNullValueSuggestions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("suggestions"); else _explicitNullProperties?.Remove("suggestions"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSuggestion _explicitNullValueSuggestions = default!;
 #endif
         /// <summary>The system property</summary>
-        public bool? System { get; set; }
+        public bool? System { get => _explicitNullValueSystem; set { _explicitNullValueSystem = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("system"); else _explicitNullProperties?.Remove("system"); } }
+        private bool? _explicitNullValueSystem = default!;
         /// <summary>The type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Type { get; set; }
+        public string? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private string? _explicitNullValueType = default!;
 #nullable restore
 #else
-        public string Type { get; set; }
+        public string Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private string _explicitNullValueType = default!;
 #endif
         /// <summary>The updated_at property</summary>
-        public DateTimeOffset? UpdatedAt { get; set; }
+        public DateTimeOffset? UpdatedAt { get => _explicitNullValueUpdatedAt; set { _explicitNullValueUpdatedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updated_at"); else _explicitNullProperties?.Remove("updated_at"); } }
+        private DateTimeOffset? _explicitNullValueUpdatedAt = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNote"/> and sets the default values.
         /// </summary>
@@ -135,7 +198,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNote CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNote();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNote(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -200,6 +263,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteBoolValue("system", System);
             writer.WriteStringValue("type", Type);
             writer.WriteDateTimeOffsetValue("updated_at", UpdatedAt);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

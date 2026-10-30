@@ -11,19 +11,36 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostApiV4ProjectsIdBoardsBoardIdListsRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("assignee_id") is { } nullNodeAssigneeId && nullNodeAssigneeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AssigneeId = null;
+            if (parseNode.GetChildNode("iteration_id") is { } nullNodeIterationId && nullNodeIterationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IterationId = null;
+            if (parseNode.GetChildNode("label_id") is { } nullNodeLabelId && nullNodeLabelId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LabelId = null;
+            if (parseNode.GetChildNode("milestone_id") is { } nullNodeMilestoneId && nullNodeMilestoneId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MilestoneId = null;
+            if (parseNode.GetChildNode("status_id") is { } nullNodeStatusId && nullNodeStatusId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatusId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>ID of the user. Premium and Ultimate only. Exactly one of `label_id`, `milestone_id`, `iteration_id`, `assignee_id`, `status_id` must be provided.</summary>
-        public int? AssigneeId { get; set; }
+        public int? AssigneeId { get => _explicitNullValueAssigneeId; set { _explicitNullValueAssigneeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assignee_id"); else _explicitNullProperties?.Remove("assignee_id"); } }
+        private int? _explicitNullValueAssigneeId = default!;
         /// <summary>ID of the iteration. Premium and Ultimate only. Exactly one of `label_id`, `milestone_id`, `iteration_id`, `assignee_id`, `status_id` must be provided.</summary>
-        public int? IterationId { get; set; }
+        public int? IterationId { get => _explicitNullValueIterationId; set { _explicitNullValueIterationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("iteration_id"); else _explicitNullProperties?.Remove("iteration_id"); } }
+        private int? _explicitNullValueIterationId = default!;
         /// <summary>ID of the label. Exactly one of `label_id`, `milestone_id`, `iteration_id`, `assignee_id`, `status_id` must be provided.</summary>
-        public int? LabelId { get; set; }
+        public int? LabelId { get => _explicitNullValueLabelId; set { _explicitNullValueLabelId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label_id"); else _explicitNullProperties?.Remove("label_id"); } }
+        private int? _explicitNullValueLabelId = default!;
         /// <summary>The ID of an existing milestone. Exactly one of `label_id`, `milestone_id`, `iteration_id`, `assignee_id`, `status_id` must be provided.</summary>
-        public int? MilestoneId { get; set; }
+        public int? MilestoneId { get => _explicitNullValueMilestoneId; set { _explicitNullValueMilestoneId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("milestone_id"); else _explicitNullProperties?.Remove("milestone_id"); } }
+        private int? _explicitNullValueMilestoneId = default!;
         /// <summary>ID of the status. Premium and Ultimate only. Exactly one of `label_id`, `milestone_id`, `iteration_id`, `assignee_id`, `status_id` must be provided.</summary>
-        public int? StatusId { get; set; }
+        public int? StatusId { get => _explicitNullValueStatusId; set { _explicitNullValueStatusId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status_id"); else _explicitNullProperties?.Remove("status_id"); } }
+        private int? _explicitNullValueStatusId = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdBoardsBoardIdListsRequest"/> and sets the default values.
         /// </summary>
@@ -39,7 +56,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdBoardsBoardIdListsRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdBoardsBoardIdListsRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdBoardsBoardIdListsRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +85,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteIntValue("label_id", LabelId);
             writer.WriteIntValue("milestone_id", MilestoneId);
             writer.WriteIntValue("status_id", StatusId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

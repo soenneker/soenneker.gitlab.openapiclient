@@ -11,146 +11,206 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ApiEntitiesAppearance : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("email_header_and_footer_enabled") is { } nullNodeEmailHeaderAndFooterEnabled && nullNodeEmailHeaderAndFooterEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailHeaderAndFooterEnabled = null;
+            if (parseNode.GetChildNode("favicon") is { } nullNodeFavicon && nullNodeFavicon.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Favicon = null;
+            if (parseNode.GetChildNode("footer_message") is { } nullNodeFooterMessage && nullNodeFooterMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FooterMessage = null;
+            if (parseNode.GetChildNode("header_logo") is { } nullNodeHeaderLogo && nullNodeHeaderLogo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HeaderLogo = null;
+            if (parseNode.GetChildNode("header_message") is { } nullNodeHeaderMessage && nullNodeHeaderMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HeaderMessage = null;
+            if (parseNode.GetChildNode("logo") is { } nullNodeLogo && nullNodeLogo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Logo = null;
+            if (parseNode.GetChildNode("member_guidelines") is { } nullNodeMemberGuidelines && nullNodeMemberGuidelines.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MemberGuidelines = null;
+            if (parseNode.GetChildNode("message_background_color") is { } nullNodeMessageBackgroundColor && nullNodeMessageBackgroundColor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MessageBackgroundColor = null;
+            if (parseNode.GetChildNode("message_font_color") is { } nullNodeMessageFontColor && nullNodeMessageFontColor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MessageFontColor = null;
+            if (parseNode.GetChildNode("new_project_guidelines") is { } nullNodeNewProjectGuidelines && nullNodeNewProjectGuidelines.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewProjectGuidelines = null;
+            if (parseNode.GetChildNode("profile_image_guidelines") is { } nullNodeProfileImageGuidelines && nullNodeProfileImageGuidelines.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProfileImageGuidelines = null;
+            if (parseNode.GetChildNode("pwa_description") is { } nullNodePwaDescription && nullNodePwaDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PwaDescription = null;
+            if (parseNode.GetChildNode("pwa_icon") is { } nullNodePwaIcon && nullNodePwaIcon.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PwaIcon = null;
+            if (parseNode.GetChildNode("pwa_name") is { } nullNodePwaName && nullNodePwaName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PwaName = null;
+            if (parseNode.GetChildNode("pwa_short_name") is { } nullNodePwaShortName && nullNodePwaShortName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PwaShortName = null;
+            if (parseNode.GetChildNode("site_name") is { } nullNodeSiteName && nullNodeSiteName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SiteName = null;
+            if (parseNode.GetChildNode("title") is { } nullNodeTitle && nullNodeTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Title = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The description property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get; set; }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get; set; }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>The email_header_and_footer_enabled property</summary>
-        public bool? EmailHeaderAndFooterEnabled { get; set; }
+        public bool? EmailHeaderAndFooterEnabled { get => _explicitNullValueEmailHeaderAndFooterEnabled; set { _explicitNullValueEmailHeaderAndFooterEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_header_and_footer_enabled"); else _explicitNullProperties?.Remove("email_header_and_footer_enabled"); } }
+        private bool? _explicitNullValueEmailHeaderAndFooterEnabled = default!;
         /// <summary>The favicon property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Favicon { get; set; }
+        public string? Favicon { get => _explicitNullValueFavicon; set { _explicitNullValueFavicon = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("favicon"); else _explicitNullProperties?.Remove("favicon"); } }
+        private string? _explicitNullValueFavicon = default!;
 #nullable restore
 #else
-        public string Favicon { get; set; }
+        public string Favicon { get => _explicitNullValueFavicon; set { _explicitNullValueFavicon = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("favicon"); else _explicitNullProperties?.Remove("favicon"); } }
+        private string _explicitNullValueFavicon = default!;
 #endif
         /// <summary>The footer_message property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FooterMessage { get; set; }
+        public string? FooterMessage { get => _explicitNullValueFooterMessage; set { _explicitNullValueFooterMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("footer_message"); else _explicitNullProperties?.Remove("footer_message"); } }
+        private string? _explicitNullValueFooterMessage = default!;
 #nullable restore
 #else
-        public string FooterMessage { get; set; }
+        public string FooterMessage { get => _explicitNullValueFooterMessage; set { _explicitNullValueFooterMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("footer_message"); else _explicitNullProperties?.Remove("footer_message"); } }
+        private string _explicitNullValueFooterMessage = default!;
 #endif
         /// <summary>The header_logo property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HeaderLogo { get; set; }
+        public string? HeaderLogo { get => _explicitNullValueHeaderLogo; set { _explicitNullValueHeaderLogo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("header_logo"); else _explicitNullProperties?.Remove("header_logo"); } }
+        private string? _explicitNullValueHeaderLogo = default!;
 #nullable restore
 #else
-        public string HeaderLogo { get; set; }
+        public string HeaderLogo { get => _explicitNullValueHeaderLogo; set { _explicitNullValueHeaderLogo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("header_logo"); else _explicitNullProperties?.Remove("header_logo"); } }
+        private string _explicitNullValueHeaderLogo = default!;
 #endif
         /// <summary>The header_message property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HeaderMessage { get; set; }
+        public string? HeaderMessage { get => _explicitNullValueHeaderMessage; set { _explicitNullValueHeaderMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("header_message"); else _explicitNullProperties?.Remove("header_message"); } }
+        private string? _explicitNullValueHeaderMessage = default!;
 #nullable restore
 #else
-        public string HeaderMessage { get; set; }
+        public string HeaderMessage { get => _explicitNullValueHeaderMessage; set { _explicitNullValueHeaderMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("header_message"); else _explicitNullProperties?.Remove("header_message"); } }
+        private string _explicitNullValueHeaderMessage = default!;
 #endif
         /// <summary>The logo property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Logo { get; set; }
+        public string? Logo { get => _explicitNullValueLogo; set { _explicitNullValueLogo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("logo"); else _explicitNullProperties?.Remove("logo"); } }
+        private string? _explicitNullValueLogo = default!;
 #nullable restore
 #else
-        public string Logo { get; set; }
+        public string Logo { get => _explicitNullValueLogo; set { _explicitNullValueLogo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("logo"); else _explicitNullProperties?.Remove("logo"); } }
+        private string _explicitNullValueLogo = default!;
 #endif
         /// <summary>The member_guidelines property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MemberGuidelines { get; set; }
+        public string? MemberGuidelines { get => _explicitNullValueMemberGuidelines; set { _explicitNullValueMemberGuidelines = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("member_guidelines"); else _explicitNullProperties?.Remove("member_guidelines"); } }
+        private string? _explicitNullValueMemberGuidelines = default!;
 #nullable restore
 #else
-        public string MemberGuidelines { get; set; }
+        public string MemberGuidelines { get => _explicitNullValueMemberGuidelines; set { _explicitNullValueMemberGuidelines = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("member_guidelines"); else _explicitNullProperties?.Remove("member_guidelines"); } }
+        private string _explicitNullValueMemberGuidelines = default!;
 #endif
         /// <summary>The message_background_color property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MessageBackgroundColor { get; set; }
+        public string? MessageBackgroundColor { get => _explicitNullValueMessageBackgroundColor; set { _explicitNullValueMessageBackgroundColor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message_background_color"); else _explicitNullProperties?.Remove("message_background_color"); } }
+        private string? _explicitNullValueMessageBackgroundColor = default!;
 #nullable restore
 #else
-        public string MessageBackgroundColor { get; set; }
+        public string MessageBackgroundColor { get => _explicitNullValueMessageBackgroundColor; set { _explicitNullValueMessageBackgroundColor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message_background_color"); else _explicitNullProperties?.Remove("message_background_color"); } }
+        private string _explicitNullValueMessageBackgroundColor = default!;
 #endif
         /// <summary>The message_font_color property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MessageFontColor { get; set; }
+        public string? MessageFontColor { get => _explicitNullValueMessageFontColor; set { _explicitNullValueMessageFontColor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message_font_color"); else _explicitNullProperties?.Remove("message_font_color"); } }
+        private string? _explicitNullValueMessageFontColor = default!;
 #nullable restore
 #else
-        public string MessageFontColor { get; set; }
+        public string MessageFontColor { get => _explicitNullValueMessageFontColor; set { _explicitNullValueMessageFontColor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message_font_color"); else _explicitNullProperties?.Remove("message_font_color"); } }
+        private string _explicitNullValueMessageFontColor = default!;
 #endif
         /// <summary>The new_project_guidelines property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NewProjectGuidelines { get; set; }
+        public string? NewProjectGuidelines { get => _explicitNullValueNewProjectGuidelines; set { _explicitNullValueNewProjectGuidelines = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_project_guidelines"); else _explicitNullProperties?.Remove("new_project_guidelines"); } }
+        private string? _explicitNullValueNewProjectGuidelines = default!;
 #nullable restore
 #else
-        public string NewProjectGuidelines { get; set; }
+        public string NewProjectGuidelines { get => _explicitNullValueNewProjectGuidelines; set { _explicitNullValueNewProjectGuidelines = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_project_guidelines"); else _explicitNullProperties?.Remove("new_project_guidelines"); } }
+        private string _explicitNullValueNewProjectGuidelines = default!;
 #endif
         /// <summary>The profile_image_guidelines property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ProfileImageGuidelines { get; set; }
+        public string? ProfileImageGuidelines { get => _explicitNullValueProfileImageGuidelines; set { _explicitNullValueProfileImageGuidelines = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("profile_image_guidelines"); else _explicitNullProperties?.Remove("profile_image_guidelines"); } }
+        private string? _explicitNullValueProfileImageGuidelines = default!;
 #nullable restore
 #else
-        public string ProfileImageGuidelines { get; set; }
+        public string ProfileImageGuidelines { get => _explicitNullValueProfileImageGuidelines; set { _explicitNullValueProfileImageGuidelines = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("profile_image_guidelines"); else _explicitNullProperties?.Remove("profile_image_guidelines"); } }
+        private string _explicitNullValueProfileImageGuidelines = default!;
 #endif
         /// <summary>The pwa_description property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PwaDescription { get; set; }
+        public string? PwaDescription { get => _explicitNullValuePwaDescription; set { _explicitNullValuePwaDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pwa_description"); else _explicitNullProperties?.Remove("pwa_description"); } }
+        private string? _explicitNullValuePwaDescription = default!;
 #nullable restore
 #else
-        public string PwaDescription { get; set; }
+        public string PwaDescription { get => _explicitNullValuePwaDescription; set { _explicitNullValuePwaDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pwa_description"); else _explicitNullProperties?.Remove("pwa_description"); } }
+        private string _explicitNullValuePwaDescription = default!;
 #endif
         /// <summary>The pwa_icon property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PwaIcon { get; set; }
+        public string? PwaIcon { get => _explicitNullValuePwaIcon; set { _explicitNullValuePwaIcon = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pwa_icon"); else _explicitNullProperties?.Remove("pwa_icon"); } }
+        private string? _explicitNullValuePwaIcon = default!;
 #nullable restore
 #else
-        public string PwaIcon { get; set; }
+        public string PwaIcon { get => _explicitNullValuePwaIcon; set { _explicitNullValuePwaIcon = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pwa_icon"); else _explicitNullProperties?.Remove("pwa_icon"); } }
+        private string _explicitNullValuePwaIcon = default!;
 #endif
         /// <summary>The pwa_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PwaName { get; set; }
+        public string? PwaName { get => _explicitNullValuePwaName; set { _explicitNullValuePwaName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pwa_name"); else _explicitNullProperties?.Remove("pwa_name"); } }
+        private string? _explicitNullValuePwaName = default!;
 #nullable restore
 #else
-        public string PwaName { get; set; }
+        public string PwaName { get => _explicitNullValuePwaName; set { _explicitNullValuePwaName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pwa_name"); else _explicitNullProperties?.Remove("pwa_name"); } }
+        private string _explicitNullValuePwaName = default!;
 #endif
         /// <summary>The pwa_short_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PwaShortName { get; set; }
+        public string? PwaShortName { get => _explicitNullValuePwaShortName; set { _explicitNullValuePwaShortName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pwa_short_name"); else _explicitNullProperties?.Remove("pwa_short_name"); } }
+        private string? _explicitNullValuePwaShortName = default!;
 #nullable restore
 #else
-        public string PwaShortName { get; set; }
+        public string PwaShortName { get => _explicitNullValuePwaShortName; set { _explicitNullValuePwaShortName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pwa_short_name"); else _explicitNullProperties?.Remove("pwa_short_name"); } }
+        private string _explicitNullValuePwaShortName = default!;
 #endif
         /// <summary>The site_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SiteName { get; set; }
+        public string? SiteName { get => _explicitNullValueSiteName; set { _explicitNullValueSiteName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("site_name"); else _explicitNullProperties?.Remove("site_name"); } }
+        private string? _explicitNullValueSiteName = default!;
 #nullable restore
 #else
-        public string SiteName { get; set; }
+        public string SiteName { get => _explicitNullValueSiteName; set { _explicitNullValueSiteName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("site_name"); else _explicitNullProperties?.Remove("site_name"); } }
+        private string _explicitNullValueSiteName = default!;
 #endif
         /// <summary>The title property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Title { get; set; }
+        public string? Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
+        private string? _explicitNullValueTitle = default!;
 #nullable restore
 #else
-        public string Title { get; set; }
+        public string Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
+        private string _explicitNullValueTitle = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAppearance"/> and sets the default values.
@@ -167,7 +227,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAppearance CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAppearance();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAppearance(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -222,6 +282,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("pwa_short_name", PwaShortName);
             writer.WriteStringValue("site_name", SiteName);
             writer.WriteStringValue("title", Title);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

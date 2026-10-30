@@ -12,42 +12,63 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PostApiV4OfflineExportsRequestS3CompatibleConfiguration : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("aws_access_key_id") is { } nullNodeAwsAccessKeyId && nullNodeAwsAccessKeyId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AwsAccessKeyId = null;
+            if (parseNode.GetChildNode("aws_secret_access_key") is { } nullNodeAwsSecretAccessKey && nullNodeAwsSecretAccessKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AwsSecretAccessKey = null;
+            if (parseNode.GetChildNode("endpoint") is { } nullNodeEndpoint && nullNodeEndpoint.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Endpoint = null;
+            if (parseNode.GetChildNode("path_style") is { } nullNodePathStyle && nullNodePathStyle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PathStyle = null;
+            if (parseNode.GetChildNode("region") is { } nullNodeRegion && nullNodeRegion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Region = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>S3-compatible access key ID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AwsAccessKeyId { get; set; }
+        public string? AwsAccessKeyId { get => _explicitNullValueAwsAccessKeyId; set { _explicitNullValueAwsAccessKeyId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("aws_access_key_id"); else _explicitNullProperties?.Remove("aws_access_key_id"); } }
+        private string? _explicitNullValueAwsAccessKeyId = default!;
 #nullable restore
 #else
-        public string AwsAccessKeyId { get; set; }
+        public string AwsAccessKeyId { get => _explicitNullValueAwsAccessKeyId; set { _explicitNullValueAwsAccessKeyId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("aws_access_key_id"); else _explicitNullProperties?.Remove("aws_access_key_id"); } }
+        private string _explicitNullValueAwsAccessKeyId = default!;
 #endif
         /// <summary>S3-compatible secret access key.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AwsSecretAccessKey { get; set; }
+        public string? AwsSecretAccessKey { get => _explicitNullValueAwsSecretAccessKey; set { _explicitNullValueAwsSecretAccessKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("aws_secret_access_key"); else _explicitNullProperties?.Remove("aws_secret_access_key"); } }
+        private string? _explicitNullValueAwsSecretAccessKey = default!;
 #nullable restore
 #else
-        public string AwsSecretAccessKey { get; set; }
+        public string AwsSecretAccessKey { get => _explicitNullValueAwsSecretAccessKey; set { _explicitNullValueAwsSecretAccessKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("aws_secret_access_key"); else _explicitNullProperties?.Remove("aws_secret_access_key"); } }
+        private string _explicitNullValueAwsSecretAccessKey = default!;
 #endif
         /// <summary>Object storage location endpoint.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Endpoint { get; set; }
+        public string? Endpoint { get => _explicitNullValueEndpoint; set { _explicitNullValueEndpoint = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endpoint"); else _explicitNullProperties?.Remove("endpoint"); } }
+        private string? _explicitNullValueEndpoint = default!;
 #nullable restore
 #else
-        public string Endpoint { get; set; }
+        public string Endpoint { get => _explicitNullValueEndpoint; set { _explicitNullValueEndpoint = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endpoint"); else _explicitNullProperties?.Remove("endpoint"); } }
+        private string _explicitNullValueEndpoint = default!;
 #endif
         /// <summary>If `true`, uses path-style URLs instead of virtual-hosted-style URLs.</summary>
-        public bool? PathStyle { get; set; }
+        public bool? PathStyle { get => _explicitNullValuePathStyle; set { _explicitNullValuePathStyle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("path_style"); else _explicitNullProperties?.Remove("path_style"); } }
+        private bool? _explicitNullValuePathStyle = default!;
         /// <summary>S3-compatible object storage region.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Region { get; set; }
+        public string? Region { get => _explicitNullValueRegion; set { _explicitNullValueRegion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("region"); else _explicitNullProperties?.Remove("region"); } }
+        private string? _explicitNullValueRegion = default!;
 #nullable restore
 #else
-        public string Region { get; set; }
+        public string Region { get => _explicitNullValueRegion; set { _explicitNullValueRegion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("region"); else _explicitNullProperties?.Remove("region"); } }
+        private string _explicitNullValueRegion = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4OfflineExportsRequestS3CompatibleConfiguration"/> and sets the default values.
@@ -65,7 +86,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4OfflineExportsRequestS3CompatibleConfiguration CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4OfflineExportsRequestS3CompatibleConfiguration();
+            // Preserve a nullable root response.
+            if (parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) return null!;
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4OfflineExportsRequestS3CompatibleConfiguration(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -94,6 +117,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("endpoint", Endpoint);
             writer.WriteBoolValue("path_style", PathStyle);
             writer.WriteStringValue("region", Region);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

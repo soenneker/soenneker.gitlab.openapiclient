@@ -62,7 +62,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Approval_rules
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroupApprovalRule>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroupApprovalRule.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroupApprovalRule>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroupApprovalRule.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Creates an approval rule for a group. Restricted to group administrators. Do not use the `rule_type` field when building approval rules from the API. The field supports these rule types: - `any_approver`: A pre-configured default rule with `approvals_required` set to `0`.
@@ -82,7 +82,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Approval_rules
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroupApprovalRule>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroupApprovalRule.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroupApprovalRule>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroupApprovalRule.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Lists all approval rules and any associated details for a specified group. Restricted to group administrators. Use the `page` and `per_page` pagination parameters to restrict the list of approval rules.

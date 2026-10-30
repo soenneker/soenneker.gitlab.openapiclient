@@ -11,32 +11,48 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostApiV4ProjectsIdImportGitRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("import_url") is { } nullNodeImportUrl && nullNodeImportUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImportUrl = null;
+            if (parseNode.GetChildNode("import_url_password") is { } nullNodeImportUrlPassword && nullNodeImportUrlPassword.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImportUrlPassword = null;
+            if (parseNode.GetChildNode("import_url_user") is { } nullNodeImportUrlUser && nullNodeImportUrlUser.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ImportUrlUser = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>URL from which the project is imported.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ImportUrl { get; set; }
+        public string? ImportUrl { get => _explicitNullValueImportUrl; set { _explicitNullValueImportUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("import_url"); else _explicitNullProperties?.Remove("import_url"); } }
+        private string? _explicitNullValueImportUrl = default!;
 #nullable restore
 #else
-        public string ImportUrl { get; set; }
+        public string ImportUrl { get => _explicitNullValueImportUrl; set { _explicitNullValueImportUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("import_url"); else _explicitNullProperties?.Remove("import_url"); } }
+        private string _explicitNullValueImportUrl = default!;
 #endif
         /// <summary>Password for the import URL.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ImportUrlPassword { get; set; }
+        public string? ImportUrlPassword { get => _explicitNullValueImportUrlPassword; set { _explicitNullValueImportUrlPassword = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("import_url_password"); else _explicitNullProperties?.Remove("import_url_password"); } }
+        private string? _explicitNullValueImportUrlPassword = default!;
 #nullable restore
 #else
-        public string ImportUrlPassword { get; set; }
+        public string ImportUrlPassword { get => _explicitNullValueImportUrlPassword; set { _explicitNullValueImportUrlPassword = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("import_url_password"); else _explicitNullProperties?.Remove("import_url_password"); } }
+        private string _explicitNullValueImportUrlPassword = default!;
 #endif
         /// <summary>Username for the import URL.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ImportUrlUser { get; set; }
+        public string? ImportUrlUser { get => _explicitNullValueImportUrlUser; set { _explicitNullValueImportUrlUser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("import_url_user"); else _explicitNullProperties?.Remove("import_url_user"); } }
+        private string? _explicitNullValueImportUrlUser = default!;
 #nullable restore
 #else
-        public string ImportUrlUser { get; set; }
+        public string ImportUrlUser { get => _explicitNullValueImportUrlUser; set { _explicitNullValueImportUrlUser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("import_url_user"); else _explicitNullProperties?.Remove("import_url_user"); } }
+        private string _explicitNullValueImportUrlUser = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdImportGitRequest"/> and sets the default values.
@@ -53,7 +69,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdImportGitRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdImportGitRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdImportGitRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -78,6 +94,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("import_url", ImportUrl);
             writer.WriteStringValue("import_url_password", ImportUrlPassword);
             writer.WriteStringValue("import_url_user", ImportUrlUser);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

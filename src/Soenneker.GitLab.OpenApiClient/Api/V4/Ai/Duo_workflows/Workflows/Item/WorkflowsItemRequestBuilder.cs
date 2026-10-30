@@ -10,6 +10,7 @@ using Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Workflows.Item.Even
 using Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Workflows.Item.Execute;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Workflows.Item.Restart;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Workflows.Item.Resume;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Workflows.Item.Session_files;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Workflows.Item.TraceJsonl;
 using Soenneker.GitLab.OpenApiClient.Models;
 using System.Collections.Generic;
@@ -60,6 +61,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Workflows.Item
         {
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Workflows.Item.Resume.ResumeRequestBuilder(PathParameters, RequestAdapter);
         }
+        /// <summary>The session_files property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Workflows.Item.Session_files.Session_filesRequestBuilder Session_files
+        {
+            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Workflows.Item.Session_files.Session_filesRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The traceJsonl property</summary>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Workflows.Item.TraceJsonl.TraceJsonlRequestBuilder TraceJsonl
         {
@@ -97,7 +103,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Workflows.Item
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiDuoWorkflowsWorkflow>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiDuoWorkflowsWorkflow.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiDuoWorkflowsWorkflow>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiDuoWorkflowsWorkflow.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Updates the execution status of a specified workflow.
@@ -117,7 +123,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Workflows.Item
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPatchRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieves detailed information about a specific workflow by its ID.

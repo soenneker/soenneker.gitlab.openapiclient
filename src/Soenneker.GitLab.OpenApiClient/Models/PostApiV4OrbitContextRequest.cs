@@ -11,20 +11,34 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostApiV4OrbitContextRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("expand") is { } nullNodeExpand && nullNodeExpand.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Expand = null;
+            if (parseNode.GetChildNode("response_format") is { } nullNodeResponseFormat && nullNodeResponseFormat.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResponseFormat = null;
+            if (parseNode.GetChildNode("tokens") is { } nullNodeTokens && nullNodeTokens.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tokens = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Attach the graph neighborhood of the entity</summary>
-        public bool? Expand { get; set; }
+        public bool? Expand { get => _explicitNullValueExpand; set { _explicitNullValueExpand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expand"); else _explicitNullProperties?.Remove("expand"); } }
+        private bool? _explicitNullValueExpand = default!;
         /// <summary>Response format: raw or llm</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4OrbitContextRequestResponseFormat? ResponseFormat { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4OrbitContextRequestResponseFormat? ResponseFormat { get => _explicitNullValueResponseFormat; set { _explicitNullValueResponseFormat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("response_format"); else _explicitNullProperties?.Remove("response_format"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4OrbitContextRequestResponseFormat? _explicitNullValueResponseFormat = default!;
         /// <summary>Exactly one token: Type[id], a GID, an instance URL, path!iid, path#iid, path&amp;iid (epic), or path@ref (branch or commit)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Tokens { get; set; }
+        public List<string>? Tokens { get => _explicitNullValueTokens; set { _explicitNullValueTokens = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tokens"); else _explicitNullProperties?.Remove("tokens"); } }
+        private List<string>? _explicitNullValueTokens = default!;
 #nullable restore
 #else
-        public List<string> Tokens { get; set; }
+        public List<string> Tokens { get => _explicitNullValueTokens; set { _explicitNullValueTokens = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tokens"); else _explicitNullProperties?.Remove("tokens"); } }
+        private List<string> _explicitNullValueTokens = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4OrbitContextRequest"/> and sets the default values.
@@ -42,7 +56,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4OrbitContextRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4OrbitContextRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4OrbitContextRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -67,6 +81,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteBoolValue("expand", Expand);
             writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4OrbitContextRequestResponseFormat>("response_format", ResponseFormat);
             writer.WriteCollectionOfPrimitiveValues<string>("tokens", Tokens);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

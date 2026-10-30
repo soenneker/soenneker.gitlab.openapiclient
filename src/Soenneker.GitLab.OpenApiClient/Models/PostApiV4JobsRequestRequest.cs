@@ -11,48 +11,70 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostApiV4JobsRequestRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("info") is { } nullNodeInfo && nullNodeInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Info = null;
+            if (parseNode.GetChildNode("last_update") is { } nullNodeLastUpdate && nullNodeLastUpdate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastUpdate = null;
+            if (parseNode.GetChildNode("session") is { } nullNodeSession && nullNodeSession.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Session = null;
+            if (parseNode.GetChildNode("system_id") is { } nullNodeSystemId && nullNodeSystemId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SystemId = null;
+            if (parseNode.GetChildNode("token") is { } nullNodeToken && nullNodeToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Token = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Runner&apos;s metadata</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4JobsRequestRequestInfo? Info { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4JobsRequestRequestInfo? Info { get => _explicitNullValueInfo; set { _explicitNullValueInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("info"); else _explicitNullProperties?.Remove("info"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4JobsRequestRequestInfo? _explicitNullValueInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4JobsRequestRequestInfo Info { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4JobsRequestRequestInfo Info { get => _explicitNullValueInfo; set { _explicitNullValueInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("info"); else _explicitNullProperties?.Remove("info"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4JobsRequestRequestInfo _explicitNullValueInfo = default!;
 #endif
         /// <summary>`last_update` token of the runner queue.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LastUpdate { get; set; }
+        public string? LastUpdate { get => _explicitNullValueLastUpdate; set { _explicitNullValueLastUpdate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_update"); else _explicitNullProperties?.Remove("last_update"); } }
+        private string? _explicitNullValueLastUpdate = default!;
 #nullable restore
 #else
-        public string LastUpdate { get; set; }
+        public string LastUpdate { get => _explicitNullValueLastUpdate; set { _explicitNullValueLastUpdate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_update"); else _explicitNullProperties?.Remove("last_update"); } }
+        private string _explicitNullValueLastUpdate = default!;
 #endif
         /// <summary>Session data of the runner.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4JobsRequestRequestSession? Session { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4JobsRequestRequestSession? Session { get => _explicitNullValueSession; set { _explicitNullValueSession = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session"); else _explicitNullProperties?.Remove("session"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4JobsRequestRequestSession? _explicitNullValueSession = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4JobsRequestRequestSession Session { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4JobsRequestRequestSession Session { get => _explicitNullValueSession; set { _explicitNullValueSession = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session"); else _explicitNullProperties?.Remove("session"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4JobsRequestRequestSession _explicitNullValueSession = default!;
 #endif
         /// <summary>Runner&apos;s system identifier</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SystemId { get; set; }
+        public string? SystemId { get => _explicitNullValueSystemId; set { _explicitNullValueSystemId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("system_id"); else _explicitNullProperties?.Remove("system_id"); } }
+        private string? _explicitNullValueSystemId = default!;
 #nullable restore
 #else
-        public string SystemId { get; set; }
+        public string SystemId { get => _explicitNullValueSystemId; set { _explicitNullValueSystemId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("system_id"); else _explicitNullProperties?.Remove("system_id"); } }
+        private string _explicitNullValueSystemId = default!;
 #endif
         /// <summary>Runner&apos;s authentication token</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Token { get; set; }
+        public string? Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
+        private string? _explicitNullValueToken = default!;
 #nullable restore
 #else
-        public string Token { get; set; }
+        public string Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
+        private string _explicitNullValueToken = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4JobsRequestRequest"/> and sets the default values.
@@ -69,7 +91,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4JobsRequestRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4JobsRequestRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4JobsRequestRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -98,6 +120,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4JobsRequestRequestSession>("session", Session);
             writer.WriteStringValue("system_id", SystemId);
             writer.WriteStringValue("token", Token);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

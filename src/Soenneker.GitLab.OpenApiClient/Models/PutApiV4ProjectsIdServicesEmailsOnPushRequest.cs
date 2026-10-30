@@ -11,35 +11,58 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PutApiV4ProjectsIdServicesEmailsOnPushRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("branches_to_be_notified") is { } nullNodeBranchesToBeNotified && nullNodeBranchesToBeNotified.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BranchesToBeNotified = null;
+            if (parseNode.GetChildNode("disable_diffs") is { } nullNodeDisableDiffs && nullNodeDisableDiffs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisableDiffs = null;
+            if (parseNode.GetChildNode("push_events") is { } nullNodePushEvents && nullNodePushEvents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PushEvents = null;
+            if (parseNode.GetChildNode("recipients") is { } nullNodeRecipients && nullNodeRecipients.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Recipients = null;
+            if (parseNode.GetChildNode("send_from_committer_email") is { } nullNodeSendFromCommitterEmail && nullNodeSendFromCommitterEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SendFromCommitterEmail = null;
+            if (parseNode.GetChildNode("tag_push_events") is { } nullNodeTagPushEvents && nullNodeTagPushEvents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TagPushEvents = null;
+            if (parseNode.GetChildNode("use_inherited_settings") is { } nullNodeUseInheritedSettings && nullNodeUseInheritedSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UseInheritedSettings = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Branches to send notifications for. Valid options are `all`, `default`, `protected`, and `default_and_protected`. The default value is `default`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BranchesToBeNotified { get; set; }
+        public string? BranchesToBeNotified { get => _explicitNullValueBranchesToBeNotified; set { _explicitNullValueBranchesToBeNotified = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("branches_to_be_notified"); else _explicitNullProperties?.Remove("branches_to_be_notified"); } }
+        private string? _explicitNullValueBranchesToBeNotified = default!;
 #nullable restore
 #else
-        public string BranchesToBeNotified { get; set; }
+        public string BranchesToBeNotified { get => _explicitNullValueBranchesToBeNotified; set { _explicitNullValueBranchesToBeNotified = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("branches_to_be_notified"); else _explicitNullProperties?.Remove("branches_to_be_notified"); } }
+        private string _explicitNullValueBranchesToBeNotified = default!;
 #endif
         /// <summary>Disable code diffs</summary>
-        public bool? DisableDiffs { get; set; }
+        public bool? DisableDiffs { get => _explicitNullValueDisableDiffs; set { _explicitNullValueDisableDiffs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("disable_diffs"); else _explicitNullProperties?.Remove("disable_diffs"); } }
+        private bool? _explicitNullValueDisableDiffs = default!;
         /// <summary>Trigger event for pushes to the repository.</summary>
-        public bool? PushEvents { get; set; }
+        public bool? PushEvents { get => _explicitNullValuePushEvents; set { _explicitNullValuePushEvents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("push_events"); else _explicitNullProperties?.Remove("push_events"); } }
+        private bool? _explicitNullValuePushEvents = default!;
         /// <summary>Emails separated by whitespace.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Recipients { get; set; }
+        public string? Recipients { get => _explicitNullValueRecipients; set { _explicitNullValueRecipients = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recipients"); else _explicitNullProperties?.Remove("recipients"); } }
+        private string? _explicitNullValueRecipients = default!;
 #nullable restore
 #else
-        public string Recipients { get; set; }
+        public string Recipients { get => _explicitNullValueRecipients; set { _explicitNullValueRecipients = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recipients"); else _explicitNullProperties?.Remove("recipients"); } }
+        private string _explicitNullValueRecipients = default!;
 #endif
         /// <summary>Send from committer</summary>
-        public bool? SendFromCommitterEmail { get; set; }
+        public bool? SendFromCommitterEmail { get => _explicitNullValueSendFromCommitterEmail; set { _explicitNullValueSendFromCommitterEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("send_from_committer_email"); else _explicitNullProperties?.Remove("send_from_committer_email"); } }
+        private bool? _explicitNullValueSendFromCommitterEmail = default!;
         /// <summary>Trigger event for new tags pushed to the repository.</summary>
-        public bool? TagPushEvents { get; set; }
+        public bool? TagPushEvents { get => _explicitNullValueTagPushEvents; set { _explicitNullValueTagPushEvents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tag_push_events"); else _explicitNullProperties?.Remove("tag_push_events"); } }
+        private bool? _explicitNullValueTagPushEvents = default!;
         /// <summary>Indicates whether to inherit the default settings. Defaults to `false`.</summary>
-        public bool? UseInheritedSettings { get; set; }
+        public bool? UseInheritedSettings { get => _explicitNullValueUseInheritedSettings; set { _explicitNullValueUseInheritedSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("use_inherited_settings"); else _explicitNullProperties?.Remove("use_inherited_settings"); } }
+        private bool? _explicitNullValueUseInheritedSettings = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdServicesEmailsOnPushRequest"/> and sets the default values.
         /// </summary>
@@ -55,7 +78,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdServicesEmailsOnPushRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdServicesEmailsOnPushRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdServicesEmailsOnPushRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -88,6 +111,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteBoolValue("send_from_committer_email", SendFromCommitterEmail);
             writer.WriteBoolValue("tag_push_events", TagPushEvents);
             writer.WriteBoolValue("use_inherited_settings", UseInheritedSettings);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

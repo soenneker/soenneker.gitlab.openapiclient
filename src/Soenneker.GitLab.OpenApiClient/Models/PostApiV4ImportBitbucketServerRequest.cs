@@ -11,67 +11,97 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostApiV4ImportBitbucketServerRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("bitbucket_server_project") is { } nullNodeBitbucketServerProject && nullNodeBitbucketServerProject.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BitbucketServerProject = null;
+            if (parseNode.GetChildNode("bitbucket_server_repo") is { } nullNodeBitbucketServerRepo && nullNodeBitbucketServerRepo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BitbucketServerRepo = null;
+            if (parseNode.GetChildNode("bitbucket_server_url") is { } nullNodeBitbucketServerUrl && nullNodeBitbucketServerUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BitbucketServerUrl = null;
+            if (parseNode.GetChildNode("bitbucket_server_username") is { } nullNodeBitbucketServerUsername && nullNodeBitbucketServerUsername.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BitbucketServerUsername = null;
+            if (parseNode.GetChildNode("new_name") is { } nullNodeNewName && nullNodeNewName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewName = null;
+            if (parseNode.GetChildNode("new_namespace") is { } nullNodeNewNamespace && nullNodeNewNamespace.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewNamespace = null;
+            if (parseNode.GetChildNode("personal_access_token") is { } nullNodePersonalAccessToken && nullNodePersonalAccessToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PersonalAccessToken = null;
+            if (parseNode.GetChildNode("timeout_strategy") is { } nullNodeTimeoutStrategy && nullNodeTimeoutStrategy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimeoutStrategy = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Key of the Bitbucket Server project. Must contain only letters, numbers, hyphens, underscores, periods, or whitespace characters. Personal project keys start with `~`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BitbucketServerProject { get; set; }
+        public string? BitbucketServerProject { get => _explicitNullValueBitbucketServerProject; set { _explicitNullValueBitbucketServerProject = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bitbucket_server_project"); else _explicitNullProperties?.Remove("bitbucket_server_project"); } }
+        private string? _explicitNullValueBitbucketServerProject = default!;
 #nullable restore
 #else
-        public string BitbucketServerProject { get; set; }
+        public string BitbucketServerProject { get => _explicitNullValueBitbucketServerProject; set { _explicitNullValueBitbucketServerProject = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bitbucket_server_project"); else _explicitNullProperties?.Remove("bitbucket_server_project"); } }
+        private string _explicitNullValueBitbucketServerProject = default!;
 #endif
         /// <summary>Name of the Bitbucket Server repository. Must contain only letters, numbers, hyphens, underscores, periods, or whitespace characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BitbucketServerRepo { get; set; }
+        public string? BitbucketServerRepo { get => _explicitNullValueBitbucketServerRepo; set { _explicitNullValueBitbucketServerRepo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bitbucket_server_repo"); else _explicitNullProperties?.Remove("bitbucket_server_repo"); } }
+        private string? _explicitNullValueBitbucketServerRepo = default!;
 #nullable restore
 #else
-        public string BitbucketServerRepo { get; set; }
+        public string BitbucketServerRepo { get => _explicitNullValueBitbucketServerRepo; set { _explicitNullValueBitbucketServerRepo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bitbucket_server_repo"); else _explicitNullProperties?.Remove("bitbucket_server_repo"); } }
+        private string _explicitNullValueBitbucketServerRepo = default!;
 #endif
         /// <summary>URL of the Bitbucket Server instance.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BitbucketServerUrl { get; set; }
+        public string? BitbucketServerUrl { get => _explicitNullValueBitbucketServerUrl; set { _explicitNullValueBitbucketServerUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bitbucket_server_url"); else _explicitNullProperties?.Remove("bitbucket_server_url"); } }
+        private string? _explicitNullValueBitbucketServerUrl = default!;
 #nullable restore
 #else
-        public string BitbucketServerUrl { get; set; }
+        public string BitbucketServerUrl { get => _explicitNullValueBitbucketServerUrl; set { _explicitNullValueBitbucketServerUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bitbucket_server_url"); else _explicitNullProperties?.Remove("bitbucket_server_url"); } }
+        private string _explicitNullValueBitbucketServerUrl = default!;
 #endif
         /// <summary>Bitbucket Server username.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BitbucketServerUsername { get; set; }
+        public string? BitbucketServerUsername { get => _explicitNullValueBitbucketServerUsername; set { _explicitNullValueBitbucketServerUsername = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bitbucket_server_username"); else _explicitNullProperties?.Remove("bitbucket_server_username"); } }
+        private string? _explicitNullValueBitbucketServerUsername = default!;
 #nullable restore
 #else
-        public string BitbucketServerUsername { get; set; }
+        public string BitbucketServerUsername { get => _explicitNullValueBitbucketServerUsername; set { _explicitNullValueBitbucketServerUsername = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bitbucket_server_username"); else _explicitNullProperties?.Remove("bitbucket_server_username"); } }
+        private string _explicitNullValueBitbucketServerUsername = default!;
 #endif
         /// <summary>Name of the new project. Also used as the new path, so it must not start or end with a special character and must not contain consecutive special characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NewName { get; set; }
+        public string? NewName { get => _explicitNullValueNewName; set { _explicitNullValueNewName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_name"); else _explicitNullProperties?.Remove("new_name"); } }
+        private string? _explicitNullValueNewName = default!;
 #nullable restore
 #else
-        public string NewName { get; set; }
+        public string NewName { get => _explicitNullValueNewName; set { _explicitNullValueNewName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_name"); else _explicitNullProperties?.Remove("new_name"); } }
+        private string _explicitNullValueNewName = default!;
 #endif
         /// <summary>Namespace to import the repository into.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NewNamespace { get; set; }
+        public string? NewNamespace { get => _explicitNullValueNewNamespace; set { _explicitNullValueNewNamespace = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_namespace"); else _explicitNullProperties?.Remove("new_namespace"); } }
+        private string? _explicitNullValueNewNamespace = default!;
 #nullable restore
 #else
-        public string NewNamespace { get; set; }
+        public string NewNamespace { get => _explicitNullValueNewNamespace; set { _explicitNullValueNewNamespace = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_namespace"); else _explicitNullProperties?.Remove("new_namespace"); } }
+        private string _explicitNullValueNewNamespace = default!;
 #endif
         /// <summary>Bitbucket Server personal access token or password.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PersonalAccessToken { get; set; }
+        public string? PersonalAccessToken { get => _explicitNullValuePersonalAccessToken; set { _explicitNullValuePersonalAccessToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("personal_access_token"); else _explicitNullProperties?.Remove("personal_access_token"); } }
+        private string? _explicitNullValuePersonalAccessToken = default!;
 #nullable restore
 #else
-        public string PersonalAccessToken { get; set; }
+        public string PersonalAccessToken { get => _explicitNullValuePersonalAccessToken; set { _explicitNullValuePersonalAccessToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("personal_access_token"); else _explicitNullProperties?.Remove("personal_access_token"); } }
+        private string _explicitNullValuePersonalAccessToken = default!;
 #endif
         /// <summary>Strategy for handling import timeouts. `optimistic` continues to the next stage of the import. `pessimistic` fails the import immediately. Defaults to `pessimistic`.</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ImportBitbucketServerRequestTimeoutStrategy? TimeoutStrategy { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ImportBitbucketServerRequestTimeoutStrategy? TimeoutStrategy { get => _explicitNullValueTimeoutStrategy; set { _explicitNullValueTimeoutStrategy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timeout_strategy"); else _explicitNullProperties?.Remove("timeout_strategy"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ImportBitbucketServerRequestTimeoutStrategy? _explicitNullValueTimeoutStrategy = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ImportBitbucketServerRequest"/> and sets the default values.
         /// </summary>
@@ -87,7 +117,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ImportBitbucketServerRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ImportBitbucketServerRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ImportBitbucketServerRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -122,6 +152,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("new_namespace", NewNamespace);
             writer.WriteStringValue("personal_access_token", PersonalAccessToken);
             writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ImportBitbucketServerRequestTimeoutStrategy>("timeout_strategy", TimeoutStrategy);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -33,6 +33,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Namespaces.Item
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Namespaces.Item.Gitlab_subscription.Gitlab_subscriptionRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The minutes property</summary>
+        [Obsolete("")]
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Namespaces.Item.Minutes.MinutesRequestBuilder Minutes
         {
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Namespaces.Item.Minutes.MinutesRequestBuilder(PathParameters, RequestAdapter);
@@ -79,7 +80,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Namespaces.Item
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNamespace>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNamespace.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNamespace>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNamespace.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Deprecated in 17.8
@@ -99,7 +100,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Namespaces.Item
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPutRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNamespace>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNamespace.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNamespace>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNamespace.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieves a specified namespace.

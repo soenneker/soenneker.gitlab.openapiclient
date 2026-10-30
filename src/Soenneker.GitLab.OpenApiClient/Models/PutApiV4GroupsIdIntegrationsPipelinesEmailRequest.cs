@@ -11,37 +11,62 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PutApiV4GroupsIdIntegrationsPipelinesEmailRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("branches_to_be_notified") is { } nullNodeBranchesToBeNotified && nullNodeBranchesToBeNotified.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BranchesToBeNotified = null;
+            if (parseNode.GetChildNode("notify_child_pipelines") is { } nullNodeNotifyChildPipelines && nullNodeNotifyChildPipelines.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotifyChildPipelines = null;
+            if (parseNode.GetChildNode("notify_only_broken_pipelines") is { } nullNodeNotifyOnlyBrokenPipelines && nullNodeNotifyOnlyBrokenPipelines.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotifyOnlyBrokenPipelines = null;
+            if (parseNode.GetChildNode("notify_only_default_branch") is { } nullNodeNotifyOnlyDefaultBranch && nullNodeNotifyOnlyDefaultBranch.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotifyOnlyDefaultBranch = null;
+            if (parseNode.GetChildNode("notify_only_when_pipeline_status_changes") is { } nullNodeNotifyOnlyWhenPipelineStatusChanges && nullNodeNotifyOnlyWhenPipelineStatusChanges.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotifyOnlyWhenPipelineStatusChanges = null;
+            if (parseNode.GetChildNode("pipeline_events") is { } nullNodePipelineEvents && nullNodePipelineEvents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PipelineEvents = null;
+            if (parseNode.GetChildNode("recipients") is { } nullNodeRecipients && nullNodeRecipients.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Recipients = null;
+            if (parseNode.GetChildNode("use_inherited_settings") is { } nullNodeUseInheritedSettings && nullNodeUseInheritedSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UseInheritedSettings = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Branches to send notifications for. Valid options are `all`, `default`, `protected`, and `default_and_protected`. The default value is `default`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BranchesToBeNotified { get; set; }
+        public string? BranchesToBeNotified { get => _explicitNullValueBranchesToBeNotified; set { _explicitNullValueBranchesToBeNotified = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("branches_to_be_notified"); else _explicitNullProperties?.Remove("branches_to_be_notified"); } }
+        private string? _explicitNullValueBranchesToBeNotified = default!;
 #nullable restore
 #else
-        public string BranchesToBeNotified { get; set; }
+        public string BranchesToBeNotified { get => _explicitNullValueBranchesToBeNotified; set { _explicitNullValueBranchesToBeNotified = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("branches_to_be_notified"); else _explicitNullProperties?.Remove("branches_to_be_notified"); } }
+        private string _explicitNullValueBranchesToBeNotified = default!;
 #endif
         /// <summary>Send notifications for child pipelines.</summary>
-        public bool? NotifyChildPipelines { get; set; }
+        public bool? NotifyChildPipelines { get => _explicitNullValueNotifyChildPipelines; set { _explicitNullValueNotifyChildPipelines = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notify_child_pipelines"); else _explicitNullProperties?.Remove("notify_child_pipelines"); } }
+        private bool? _explicitNullValueNotifyChildPipelines = default!;
         /// <summary>Send notifications for broken pipelines.</summary>
-        public bool? NotifyOnlyBrokenPipelines { get; set; }
+        public bool? NotifyOnlyBrokenPipelines { get => _explicitNullValueNotifyOnlyBrokenPipelines; set { _explicitNullValueNotifyOnlyBrokenPipelines = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notify_only_broken_pipelines"); else _explicitNullProperties?.Remove("notify_only_broken_pipelines"); } }
+        private bool? _explicitNullValueNotifyOnlyBrokenPipelines = default!;
         /// <summary>Send notifications for the default branch.</summary>
-        public bool? NotifyOnlyDefaultBranch { get; set; }
+        public bool? NotifyOnlyDefaultBranch { get => _explicitNullValueNotifyOnlyDefaultBranch; set { _explicitNullValueNotifyOnlyDefaultBranch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notify_only_default_branch"); else _explicitNullProperties?.Remove("notify_only_default_branch"); } }
+        private bool? _explicitNullValueNotifyOnlyDefaultBranch = default!;
         /// <summary>Send notifications only when the pipeline status changes.</summary>
-        public bool? NotifyOnlyWhenPipelineStatusChanges { get; set; }
+        public bool? NotifyOnlyWhenPipelineStatusChanges { get => _explicitNullValueNotifyOnlyWhenPipelineStatusChanges; set { _explicitNullValueNotifyOnlyWhenPipelineStatusChanges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notify_only_when_pipeline_status_changes"); else _explicitNullProperties?.Remove("notify_only_when_pipeline_status_changes"); } }
+        private bool? _explicitNullValueNotifyOnlyWhenPipelineStatusChanges = default!;
         /// <summary>Trigger event when a pipeline status changes.</summary>
-        public bool? PipelineEvents { get; set; }
+        public bool? PipelineEvents { get => _explicitNullValuePipelineEvents; set { _explicitNullValuePipelineEvents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pipeline_events"); else _explicitNullProperties?.Remove("pipeline_events"); } }
+        private bool? _explicitNullValuePipelineEvents = default!;
         /// <summary>Comma-separated list of recipient email addresses.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Recipients { get; set; }
+        public string? Recipients { get => _explicitNullValueRecipients; set { _explicitNullValueRecipients = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recipients"); else _explicitNullProperties?.Remove("recipients"); } }
+        private string? _explicitNullValueRecipients = default!;
 #nullable restore
 #else
-        public string Recipients { get; set; }
+        public string Recipients { get => _explicitNullValueRecipients; set { _explicitNullValueRecipients = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recipients"); else _explicitNullProperties?.Remove("recipients"); } }
+        private string _explicitNullValueRecipients = default!;
 #endif
         /// <summary>Indicates whether to inherit the default settings. Defaults to `false`.</summary>
-        public bool? UseInheritedSettings { get; set; }
+        public bool? UseInheritedSettings { get => _explicitNullValueUseInheritedSettings; set { _explicitNullValueUseInheritedSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("use_inherited_settings"); else _explicitNullProperties?.Remove("use_inherited_settings"); } }
+        private bool? _explicitNullValueUseInheritedSettings = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdIntegrationsPipelinesEmailRequest"/> and sets the default values.
         /// </summary>
@@ -57,7 +82,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdIntegrationsPipelinesEmailRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdIntegrationsPipelinesEmailRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdIntegrationsPipelinesEmailRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -92,6 +117,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteBoolValue("pipeline_events", PipelineEvents);
             writer.WriteStringValue("recipients", Recipients);
             writer.WriteBoolValue("use_inherited_settings", UseInheritedSettings);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

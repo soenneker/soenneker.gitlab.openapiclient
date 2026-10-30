@@ -11,36 +11,56 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ApiEntitiesErrorTrackingProjectSetting : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("active") is { } nullNodeActive && nullNodeActive.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Active = null;
+            if (parseNode.GetChildNode("api_url") is { } nullNodeApiUrl && nullNodeApiUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApiUrl = null;
+            if (parseNode.GetChildNode("integrated") is { } nullNodeIntegrated && nullNodeIntegrated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Integrated = null;
+            if (parseNode.GetChildNode("project_name") is { } nullNodeProjectName && nullNodeProjectName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProjectName = null;
+            if (parseNode.GetChildNode("sentry_external_url") is { } nullNodeSentryExternalUrl && nullNodeSentryExternalUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SentryExternalUrl = null;
+        }
+
         /// <summary>The active property</summary>
-        public bool? Active { get; set; }
+        public bool? Active { get => _explicitNullValueActive; set { _explicitNullValueActive = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("active"); else _explicitNullProperties?.Remove("active"); } }
+        private bool? _explicitNullValueActive = default!;
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The api_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ApiUrl { get; set; }
+        public string? ApiUrl { get => _explicitNullValueApiUrl; set { _explicitNullValueApiUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("api_url"); else _explicitNullProperties?.Remove("api_url"); } }
+        private string? _explicitNullValueApiUrl = default!;
 #nullable restore
 #else
-        public string ApiUrl { get; set; }
+        public string ApiUrl { get => _explicitNullValueApiUrl; set { _explicitNullValueApiUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("api_url"); else _explicitNullProperties?.Remove("api_url"); } }
+        private string _explicitNullValueApiUrl = default!;
 #endif
         /// <summary>The integrated property</summary>
-        public bool? Integrated { get; set; }
+        public bool? Integrated { get => _explicitNullValueIntegrated; set { _explicitNullValueIntegrated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("integrated"); else _explicitNullProperties?.Remove("integrated"); } }
+        private bool? _explicitNullValueIntegrated = default!;
         /// <summary>The project_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ProjectName { get; set; }
+        public string? ProjectName { get => _explicitNullValueProjectName; set { _explicitNullValueProjectName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_name"); else _explicitNullProperties?.Remove("project_name"); } }
+        private string? _explicitNullValueProjectName = default!;
 #nullable restore
 #else
-        public string ProjectName { get; set; }
+        public string ProjectName { get => _explicitNullValueProjectName; set { _explicitNullValueProjectName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_name"); else _explicitNullProperties?.Remove("project_name"); } }
+        private string _explicitNullValueProjectName = default!;
 #endif
         /// <summary>The sentry_external_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SentryExternalUrl { get; set; }
+        public string? SentryExternalUrl { get => _explicitNullValueSentryExternalUrl; set { _explicitNullValueSentryExternalUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sentry_external_url"); else _explicitNullProperties?.Remove("sentry_external_url"); } }
+        private string? _explicitNullValueSentryExternalUrl = default!;
 #nullable restore
 #else
-        public string SentryExternalUrl { get; set; }
+        public string SentryExternalUrl { get => _explicitNullValueSentryExternalUrl; set { _explicitNullValueSentryExternalUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sentry_external_url"); else _explicitNullProperties?.Remove("sentry_external_url"); } }
+        private string _explicitNullValueSentryExternalUrl = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesErrorTrackingProjectSetting"/> and sets the default values.
@@ -57,7 +77,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesErrorTrackingProjectSetting CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesErrorTrackingProjectSetting();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesErrorTrackingProjectSetting(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -86,6 +106,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteBoolValue("integrated", Integrated);
             writer.WriteStringValue("project_name", ProjectName);
             writer.WriteStringValue("sentry_external_url", SentryExternalUrl);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

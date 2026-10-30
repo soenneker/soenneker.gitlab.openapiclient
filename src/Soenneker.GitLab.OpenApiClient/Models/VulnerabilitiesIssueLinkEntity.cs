@@ -11,48 +11,70 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class VulnerabilitiesIssueLinkEntity : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("author") is { } nullNodeAuthor && nullNodeAuthor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Author = null;
+            if (parseNode.GetChildNode("created_at") is { } nullNodeCreatedAt && nullNodeCreatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedAt = null;
+            if (parseNode.GetChildNode("issue_iid") is { } nullNodeIssueIid && nullNodeIssueIid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssueIid = null;
+            if (parseNode.GetChildNode("issue_url") is { } nullNodeIssueUrl && nullNodeIssueUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssueUrl = null;
+            if (parseNode.GetChildNode("link_type") is { } nullNodeLinkType && nullNodeLinkType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LinkType = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The author property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.UserEntity? Author { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.UserEntity? Author { get => _explicitNullValueAuthor; set { _explicitNullValueAuthor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("author"); else _explicitNullProperties?.Remove("author"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.UserEntity? _explicitNullValueAuthor = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.UserEntity Author { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.UserEntity Author { get => _explicitNullValueAuthor; set { _explicitNullValueAuthor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("author"); else _explicitNullProperties?.Remove("author"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.UserEntity _explicitNullValueAuthor = default!;
 #endif
         /// <summary>The created_at property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CreatedAt { get; set; }
+        public string? CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_at"); else _explicitNullProperties?.Remove("created_at"); } }
+        private string? _explicitNullValueCreatedAt = default!;
 #nullable restore
 #else
-        public string CreatedAt { get; set; }
+        public string CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_at"); else _explicitNullProperties?.Remove("created_at"); } }
+        private string _explicitNullValueCreatedAt = default!;
 #endif
         /// <summary>The issue_iid property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IssueIid { get; set; }
+        public string? IssueIid { get => _explicitNullValueIssueIid; set { _explicitNullValueIssueIid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issue_iid"); else _explicitNullProperties?.Remove("issue_iid"); } }
+        private string? _explicitNullValueIssueIid = default!;
 #nullable restore
 #else
-        public string IssueIid { get; set; }
+        public string IssueIid { get => _explicitNullValueIssueIid; set { _explicitNullValueIssueIid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issue_iid"); else _explicitNullProperties?.Remove("issue_iid"); } }
+        private string _explicitNullValueIssueIid = default!;
 #endif
         /// <summary>The issue_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IssueUrl { get; set; }
+        public string? IssueUrl { get => _explicitNullValueIssueUrl; set { _explicitNullValueIssueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issue_url"); else _explicitNullProperties?.Remove("issue_url"); } }
+        private string? _explicitNullValueIssueUrl = default!;
 #nullable restore
 #else
-        public string IssueUrl { get; set; }
+        public string IssueUrl { get => _explicitNullValueIssueUrl; set { _explicitNullValueIssueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issue_url"); else _explicitNullProperties?.Remove("issue_url"); } }
+        private string _explicitNullValueIssueUrl = default!;
 #endif
         /// <summary>The link_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LinkType { get; set; }
+        public string? LinkType { get => _explicitNullValueLinkType; set { _explicitNullValueLinkType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("link_type"); else _explicitNullProperties?.Remove("link_type"); } }
+        private string? _explicitNullValueLinkType = default!;
 #nullable restore
 #else
-        public string LinkType { get; set; }
+        public string LinkType { get => _explicitNullValueLinkType; set { _explicitNullValueLinkType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("link_type"); else _explicitNullProperties?.Remove("link_type"); } }
+        private string _explicitNullValueLinkType = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesIssueLinkEntity"/> and sets the default values.
@@ -69,7 +91,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesIssueLinkEntity CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesIssueLinkEntity();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesIssueLinkEntity(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -98,6 +120,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("issue_iid", IssueIid);
             writer.WriteStringValue("issue_url", IssueUrl);
             writer.WriteStringValue("link_type", LinkType);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

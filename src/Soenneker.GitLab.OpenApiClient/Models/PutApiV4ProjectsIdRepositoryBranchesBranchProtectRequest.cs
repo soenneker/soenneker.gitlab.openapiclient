@@ -11,13 +11,24 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PutApiV4ProjectsIdRepositoryBranchesBranchProtectRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("developers_can_merge") is { } nullNodeDevelopersCanMerge && nullNodeDevelopersCanMerge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DevelopersCanMerge = null;
+            if (parseNode.GetChildNode("developers_can_push") is { } nullNodeDevelopersCanPush && nullNodeDevelopersCanPush.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DevelopersCanPush = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>If `true`, allows developers to merge to the branch.</summary>
-        public bool? DevelopersCanMerge { get; set; }
+        public bool? DevelopersCanMerge { get => _explicitNullValueDevelopersCanMerge; set { _explicitNullValueDevelopersCanMerge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("developers_can_merge"); else _explicitNullProperties?.Remove("developers_can_merge"); } }
+        private bool? _explicitNullValueDevelopersCanMerge = default!;
         /// <summary>If `true`, allows developers to push to the branch.</summary>
-        public bool? DevelopersCanPush { get; set; }
+        public bool? DevelopersCanPush { get => _explicitNullValueDevelopersCanPush; set { _explicitNullValueDevelopersCanPush = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("developers_can_push"); else _explicitNullProperties?.Remove("developers_can_push"); } }
+        private bool? _explicitNullValueDevelopersCanPush = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdRepositoryBranchesBranchProtectRequest"/> and sets the default values.
         /// </summary>
@@ -33,7 +44,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdRepositoryBranchesBranchProtectRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdRepositoryBranchesBranchProtectRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdRepositoryBranchesBranchProtectRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -56,6 +67,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("developers_can_merge", DevelopersCanMerge);
             writer.WriteBoolValue("developers_can_push", DevelopersCanPush);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

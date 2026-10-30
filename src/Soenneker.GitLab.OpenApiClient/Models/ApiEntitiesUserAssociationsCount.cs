@@ -11,40 +11,59 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ApiEntitiesUserAssociationsCount : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("groups_count") is { } nullNodeGroupsCount && nullNodeGroupsCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GroupsCount = null;
+            if (parseNode.GetChildNode("issues_count") is { } nullNodeIssuesCount && nullNodeIssuesCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssuesCount = null;
+            if (parseNode.GetChildNode("merge_requests_count") is { } nullNodeMergeRequestsCount && nullNodeMergeRequestsCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MergeRequestsCount = null;
+            if (parseNode.GetChildNode("projects_count") is { } nullNodeProjectsCount && nullNodeProjectsCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProjectsCount = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The groups_count property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? GroupsCount { get; set; }
+        public string? GroupsCount { get => _explicitNullValueGroupsCount; set { _explicitNullValueGroupsCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("groups_count"); else _explicitNullProperties?.Remove("groups_count"); } }
+        private string? _explicitNullValueGroupsCount = default!;
 #nullable restore
 #else
-        public string GroupsCount { get; set; }
+        public string GroupsCount { get => _explicitNullValueGroupsCount; set { _explicitNullValueGroupsCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("groups_count"); else _explicitNullProperties?.Remove("groups_count"); } }
+        private string _explicitNullValueGroupsCount = default!;
 #endif
         /// <summary>The issues_count property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IssuesCount { get; set; }
+        public string? IssuesCount { get => _explicitNullValueIssuesCount; set { _explicitNullValueIssuesCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issues_count"); else _explicitNullProperties?.Remove("issues_count"); } }
+        private string? _explicitNullValueIssuesCount = default!;
 #nullable restore
 #else
-        public string IssuesCount { get; set; }
+        public string IssuesCount { get => _explicitNullValueIssuesCount; set { _explicitNullValueIssuesCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issues_count"); else _explicitNullProperties?.Remove("issues_count"); } }
+        private string _explicitNullValueIssuesCount = default!;
 #endif
         /// <summary>The merge_requests_count property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MergeRequestsCount { get; set; }
+        public string? MergeRequestsCount { get => _explicitNullValueMergeRequestsCount; set { _explicitNullValueMergeRequestsCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_requests_count"); else _explicitNullProperties?.Remove("merge_requests_count"); } }
+        private string? _explicitNullValueMergeRequestsCount = default!;
 #nullable restore
 #else
-        public string MergeRequestsCount { get; set; }
+        public string MergeRequestsCount { get => _explicitNullValueMergeRequestsCount; set { _explicitNullValueMergeRequestsCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_requests_count"); else _explicitNullProperties?.Remove("merge_requests_count"); } }
+        private string _explicitNullValueMergeRequestsCount = default!;
 #endif
         /// <summary>The projects_count property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ProjectsCount { get; set; }
+        public string? ProjectsCount { get => _explicitNullValueProjectsCount; set { _explicitNullValueProjectsCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("projects_count"); else _explicitNullProperties?.Remove("projects_count"); } }
+        private string? _explicitNullValueProjectsCount = default!;
 #nullable restore
 #else
-        public string ProjectsCount { get; set; }
+        public string ProjectsCount { get => _explicitNullValueProjectsCount; set { _explicitNullValueProjectsCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("projects_count"); else _explicitNullProperties?.Remove("projects_count"); } }
+        private string _explicitNullValueProjectsCount = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserAssociationsCount"/> and sets the default values.
@@ -61,7 +80,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserAssociationsCount CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserAssociationsCount();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserAssociationsCount(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -88,6 +107,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("issues_count", IssuesCount);
             writer.WriteStringValue("merge_requests_count", MergeRequestsCount);
             writer.WriteStringValue("projects_count", ProjectsCount);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

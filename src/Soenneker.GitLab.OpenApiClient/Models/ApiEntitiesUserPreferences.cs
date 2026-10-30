@@ -11,64 +11,92 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ApiEntitiesUserPreferences : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("emoji_skin_tone") is { } nullNodeEmojiSkinTone && nullNodeEmojiSkinTone.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmojiSkinTone = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("pass_user_identities_to_ci_jwt") is { } nullNodePassUserIdentitiesToCiJwt && nullNodePassUserIdentitiesToCiJwt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PassUserIdentitiesToCiJwt = null;
+            if (parseNode.GetChildNode("policy_advanced_editor") is { } nullNodePolicyAdvancedEditor && nullNodePolicyAdvancedEditor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PolicyAdvancedEditor = null;
+            if (parseNode.GetChildNode("show_whitespace_in_diffs") is { } nullNodeShowWhitespaceInDiffs && nullNodeShowWhitespaceInDiffs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShowWhitespaceInDiffs = null;
+            if (parseNode.GetChildNode("user_id") is { } nullNodeUserId && nullNodeUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserId = null;
+            if (parseNode.GetChildNode("view_diffs_file_by_file") is { } nullNodeViewDiffsFileByFile && nullNodeViewDiffsFileByFile.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ViewDiffsFileByFile = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The emoji_skin_tone property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EmojiSkinTone { get; set; }
+        public string? EmojiSkinTone { get => _explicitNullValueEmojiSkinTone; set { _explicitNullValueEmojiSkinTone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emoji_skin_tone"); else _explicitNullProperties?.Remove("emoji_skin_tone"); } }
+        private string? _explicitNullValueEmojiSkinTone = default!;
 #nullable restore
 #else
-        public string EmojiSkinTone { get; set; }
+        public string EmojiSkinTone { get => _explicitNullValueEmojiSkinTone; set { _explicitNullValueEmojiSkinTone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emoji_skin_tone"); else _explicitNullProperties?.Remove("emoji_skin_tone"); } }
+        private string _explicitNullValueEmojiSkinTone = default!;
 #endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>The pass_user_identities_to_ci_jwt property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PassUserIdentitiesToCiJwt { get; set; }
+        public string? PassUserIdentitiesToCiJwt { get => _explicitNullValuePassUserIdentitiesToCiJwt; set { _explicitNullValuePassUserIdentitiesToCiJwt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pass_user_identities_to_ci_jwt"); else _explicitNullProperties?.Remove("pass_user_identities_to_ci_jwt"); } }
+        private string? _explicitNullValuePassUserIdentitiesToCiJwt = default!;
 #nullable restore
 #else
-        public string PassUserIdentitiesToCiJwt { get; set; }
+        public string PassUserIdentitiesToCiJwt { get => _explicitNullValuePassUserIdentitiesToCiJwt; set { _explicitNullValuePassUserIdentitiesToCiJwt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pass_user_identities_to_ci_jwt"); else _explicitNullProperties?.Remove("pass_user_identities_to_ci_jwt"); } }
+        private string _explicitNullValuePassUserIdentitiesToCiJwt = default!;
 #endif
         /// <summary>The policy_advanced_editor property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PolicyAdvancedEditor { get; set; }
+        public string? PolicyAdvancedEditor { get => _explicitNullValuePolicyAdvancedEditor; set { _explicitNullValuePolicyAdvancedEditor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("policy_advanced_editor"); else _explicitNullProperties?.Remove("policy_advanced_editor"); } }
+        private string? _explicitNullValuePolicyAdvancedEditor = default!;
 #nullable restore
 #else
-        public string PolicyAdvancedEditor { get; set; }
+        public string PolicyAdvancedEditor { get => _explicitNullValuePolicyAdvancedEditor; set { _explicitNullValuePolicyAdvancedEditor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("policy_advanced_editor"); else _explicitNullProperties?.Remove("policy_advanced_editor"); } }
+        private string _explicitNullValuePolicyAdvancedEditor = default!;
 #endif
         /// <summary>The show_whitespace_in_diffs property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ShowWhitespaceInDiffs { get; set; }
+        public string? ShowWhitespaceInDiffs { get => _explicitNullValueShowWhitespaceInDiffs; set { _explicitNullValueShowWhitespaceInDiffs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("show_whitespace_in_diffs"); else _explicitNullProperties?.Remove("show_whitespace_in_diffs"); } }
+        private string? _explicitNullValueShowWhitespaceInDiffs = default!;
 #nullable restore
 #else
-        public string ShowWhitespaceInDiffs { get; set; }
+        public string ShowWhitespaceInDiffs { get => _explicitNullValueShowWhitespaceInDiffs; set { _explicitNullValueShowWhitespaceInDiffs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("show_whitespace_in_diffs"); else _explicitNullProperties?.Remove("show_whitespace_in_diffs"); } }
+        private string _explicitNullValueShowWhitespaceInDiffs = default!;
 #endif
         /// <summary>The user_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UserId { get; set; }
+        public string? UserId { get => _explicitNullValueUserId; set { _explicitNullValueUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_id"); else _explicitNullProperties?.Remove("user_id"); } }
+        private string? _explicitNullValueUserId = default!;
 #nullable restore
 #else
-        public string UserId { get; set; }
+        public string UserId { get => _explicitNullValueUserId; set { _explicitNullValueUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_id"); else _explicitNullProperties?.Remove("user_id"); } }
+        private string _explicitNullValueUserId = default!;
 #endif
         /// <summary>The view_diffs_file_by_file property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ViewDiffsFileByFile { get; set; }
+        public string? ViewDiffsFileByFile { get => _explicitNullValueViewDiffsFileByFile; set { _explicitNullValueViewDiffsFileByFile = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("view_diffs_file_by_file"); else _explicitNullProperties?.Remove("view_diffs_file_by_file"); } }
+        private string? _explicitNullValueViewDiffsFileByFile = default!;
 #nullable restore
 #else
-        public string ViewDiffsFileByFile { get; set; }
+        public string ViewDiffsFileByFile { get => _explicitNullValueViewDiffsFileByFile; set { _explicitNullValueViewDiffsFileByFile = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("view_diffs_file_by_file"); else _explicitNullProperties?.Remove("view_diffs_file_by_file"); } }
+        private string _explicitNullValueViewDiffsFileByFile = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserPreferences"/> and sets the default values.
@@ -85,7 +113,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserPreferences CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserPreferences();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserPreferences(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -118,6 +146,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("show_whitespace_in_diffs", ShowWhitespaceInDiffs);
             writer.WriteStringValue("user_id", UserId);
             writer.WriteStringValue("view_diffs_file_by_file", ViewDiffsFileByFile);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

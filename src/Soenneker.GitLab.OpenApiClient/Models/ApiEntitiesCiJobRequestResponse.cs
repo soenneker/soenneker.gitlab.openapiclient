@@ -11,176 +11,246 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ApiEntitiesCiJobRequestResponse : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("allow_git_fetch") is { } nullNodeAllowGitFetch && nullNodeAllowGitFetch.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowGitFetch = null;
+            if (parseNode.GetChildNode("artifacts") is { } nullNodeArtifacts && nullNodeArtifacts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Artifacts = null;
+            if (parseNode.GetChildNode("cache") is { } nullNodeCache && nullNodeCache.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cache = null;
+            if (parseNode.GetChildNode("credentials") is { } nullNodeCredentials && nullNodeCredentials.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Credentials = null;
+            if (parseNode.GetChildNode("dependencies") is { } nullNodeDependencies && nullNodeDependencies.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Dependencies = null;
+            if (parseNode.GetChildNode("features") is { } nullNodeFeatures && nullNodeFeatures.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Features = null;
+            if (parseNode.GetChildNode("git_info") is { } nullNodeGitInfo && nullNodeGitInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GitInfo = null;
+            if (parseNode.GetChildNode("hooks") is { } nullNodeHooks && nullNodeHooks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Hooks = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("image") is { } nullNodeImage && nullNodeImage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Image = null;
+            if (parseNode.GetChildNode("inputs") is { } nullNodeInputs && nullNodeInputs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Inputs = null;
+            if (parseNode.GetChildNode("job_info") is { } nullNodeJobInfo && nullNodeJobInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) JobInfo = null;
+            if (parseNode.GetChildNode("policy_options") is { } nullNodePolicyOptions && nullNodePolicyOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PolicyOptions = null;
+            if (parseNode.GetChildNode("run") is { } nullNodeRun && nullNodeRun.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Run = null;
+            if (parseNode.GetChildNode("runner_info") is { } nullNodeRunnerInfo && nullNodeRunnerInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RunnerInfo = null;
+            if (parseNode.GetChildNode("secrets") is { } nullNodeSecrets && nullNodeSecrets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Secrets = null;
+            if (parseNode.GetChildNode("services") is { } nullNodeServices && nullNodeServices.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Services = null;
+            if (parseNode.GetChildNode("steps") is { } nullNodeSteps && nullNodeSteps.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Steps = null;
+            if (parseNode.GetChildNode("suspend_options") is { } nullNodeSuspendOptions && nullNodeSuspendOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SuspendOptions = null;
+            if (parseNode.GetChildNode("token") is { } nullNodeToken && nullNodeToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Token = null;
+            if (parseNode.GetChildNode("variables") is { } nullNodeVariables && nullNodeVariables.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Variables = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The allow_git_fetch property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AllowGitFetch { get; set; }
+        public string? AllowGitFetch { get => _explicitNullValueAllowGitFetch; set { _explicitNullValueAllowGitFetch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allow_git_fetch"); else _explicitNullProperties?.Remove("allow_git_fetch"); } }
+        private string? _explicitNullValueAllowGitFetch = default!;
 #nullable restore
 #else
-        public string AllowGitFetch { get; set; }
+        public string AllowGitFetch { get => _explicitNullValueAllowGitFetch; set { _explicitNullValueAllowGitFetch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allow_git_fetch"); else _explicitNullProperties?.Remove("allow_git_fetch"); } }
+        private string _explicitNullValueAllowGitFetch = default!;
 #endif
         /// <summary>The artifacts property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestArtifacts? Artifacts { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestArtifacts? Artifacts { get => _explicitNullValueArtifacts; set { _explicitNullValueArtifacts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("artifacts"); else _explicitNullProperties?.Remove("artifacts"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestArtifacts? _explicitNullValueArtifacts = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestArtifacts Artifacts { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestArtifacts Artifacts { get => _explicitNullValueArtifacts; set { _explicitNullValueArtifacts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("artifacts"); else _explicitNullProperties?.Remove("artifacts"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestArtifacts _explicitNullValueArtifacts = default!;
 #endif
         /// <summary>The cache property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestCache? Cache { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestCache? Cache { get => _explicitNullValueCache; set { _explicitNullValueCache = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cache"); else _explicitNullProperties?.Remove("cache"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestCache? _explicitNullValueCache = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestCache Cache { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestCache Cache { get => _explicitNullValueCache; set { _explicitNullValueCache = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cache"); else _explicitNullProperties?.Remove("cache"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestCache _explicitNullValueCache = default!;
 #endif
         /// <summary>The credentials property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestCredentials? Credentials { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestCredentials? Credentials { get => _explicitNullValueCredentials; set { _explicitNullValueCredentials = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credentials"); else _explicitNullProperties?.Remove("credentials"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestCredentials? _explicitNullValueCredentials = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestCredentials Credentials { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestCredentials Credentials { get => _explicitNullValueCredentials; set { _explicitNullValueCredentials = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credentials"); else _explicitNullProperties?.Remove("credentials"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestCredentials _explicitNullValueCredentials = default!;
 #endif
         /// <summary>The dependencies property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Dependencies { get; set; }
+        public string? Dependencies { get => _explicitNullValueDependencies; set { _explicitNullValueDependencies = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dependencies"); else _explicitNullProperties?.Remove("dependencies"); } }
+        private string? _explicitNullValueDependencies = default!;
 #nullable restore
 #else
-        public string Dependencies { get; set; }
+        public string Dependencies { get => _explicitNullValueDependencies; set { _explicitNullValueDependencies = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dependencies"); else _explicitNullProperties?.Remove("dependencies"); } }
+        private string _explicitNullValueDependencies = default!;
 #endif
         /// <summary>The features property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Features { get; set; }
+        public string? Features { get => _explicitNullValueFeatures; set { _explicitNullValueFeatures = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("features"); else _explicitNullProperties?.Remove("features"); } }
+        private string? _explicitNullValueFeatures = default!;
 #nullable restore
 #else
-        public string Features { get; set; }
+        public string Features { get => _explicitNullValueFeatures; set { _explicitNullValueFeatures = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("features"); else _explicitNullProperties?.Remove("features"); } }
+        private string _explicitNullValueFeatures = default!;
 #endif
         /// <summary>The git_info property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestGitInfo? GitInfo { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestGitInfo? GitInfo { get => _explicitNullValueGitInfo; set { _explicitNullValueGitInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("git_info"); else _explicitNullProperties?.Remove("git_info"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestGitInfo? _explicitNullValueGitInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestGitInfo GitInfo { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestGitInfo GitInfo { get => _explicitNullValueGitInfo; set { _explicitNullValueGitInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("git_info"); else _explicitNullProperties?.Remove("git_info"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestGitInfo _explicitNullValueGitInfo = default!;
 #endif
         /// <summary>The hooks property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestHook? Hooks { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestHook? Hooks { get => _explicitNullValueHooks; set { _explicitNullValueHooks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hooks"); else _explicitNullProperties?.Remove("hooks"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestHook? _explicitNullValueHooks = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestHook Hooks { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestHook Hooks { get => _explicitNullValueHooks; set { _explicitNullValueHooks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hooks"); else _explicitNullProperties?.Remove("hooks"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestHook _explicitNullValueHooks = default!;
 #endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>The image property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestImage? Image { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestImage? Image { get => _explicitNullValueImage; set { _explicitNullValueImage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image"); else _explicitNullProperties?.Remove("image"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestImage? _explicitNullValueImage = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestImage Image { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestImage Image { get => _explicitNullValueImage; set { _explicitNullValueImage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image"); else _explicitNullProperties?.Remove("image"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestImage _explicitNullValueImage = default!;
 #endif
         /// <summary>The inputs property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Inputs { get; set; }
+        public string? Inputs { get => _explicitNullValueInputs; set { _explicitNullValueInputs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inputs"); else _explicitNullProperties?.Remove("inputs"); } }
+        private string? _explicitNullValueInputs = default!;
 #nullable restore
 #else
-        public string Inputs { get; set; }
+        public string Inputs { get => _explicitNullValueInputs; set { _explicitNullValueInputs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inputs"); else _explicitNullProperties?.Remove("inputs"); } }
+        private string _explicitNullValueInputs = default!;
 #endif
         /// <summary>The job_info property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestJobInfo? JobInfo { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestJobInfo? JobInfo { get => _explicitNullValueJobInfo; set { _explicitNullValueJobInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("job_info"); else _explicitNullProperties?.Remove("job_info"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestJobInfo? _explicitNullValueJobInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestJobInfo JobInfo { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestJobInfo JobInfo { get => _explicitNullValueJobInfo; set { _explicitNullValueJobInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("job_info"); else _explicitNullProperties?.Remove("job_info"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestJobInfo _explicitNullValueJobInfo = default!;
 #endif
         /// <summary>The policy_options property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PolicyOptions { get; set; }
+        public string? PolicyOptions { get => _explicitNullValuePolicyOptions; set { _explicitNullValuePolicyOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("policy_options"); else _explicitNullProperties?.Remove("policy_options"); } }
+        private string? _explicitNullValuePolicyOptions = default!;
 #nullable restore
 #else
-        public string PolicyOptions { get; set; }
+        public string PolicyOptions { get => _explicitNullValuePolicyOptions; set { _explicitNullValuePolicyOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("policy_options"); else _explicitNullProperties?.Remove("policy_options"); } }
+        private string _explicitNullValuePolicyOptions = default!;
 #endif
         /// <summary>The run property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Run { get; set; }
+        public string? Run { get => _explicitNullValueRun; set { _explicitNullValueRun = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("run"); else _explicitNullProperties?.Remove("run"); } }
+        private string? _explicitNullValueRun = default!;
 #nullable restore
 #else
-        public string Run { get; set; }
+        public string Run { get => _explicitNullValueRun; set { _explicitNullValueRun = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("run"); else _explicitNullProperties?.Remove("run"); } }
+        private string _explicitNullValueRun = default!;
 #endif
         /// <summary>The runner_info property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestRunnerInfo? RunnerInfo { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestRunnerInfo? RunnerInfo { get => _explicitNullValueRunnerInfo; set { _explicitNullValueRunnerInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("runner_info"); else _explicitNullProperties?.Remove("runner_info"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestRunnerInfo? _explicitNullValueRunnerInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestRunnerInfo RunnerInfo { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestRunnerInfo RunnerInfo { get => _explicitNullValueRunnerInfo; set { _explicitNullValueRunnerInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("runner_info"); else _explicitNullProperties?.Remove("runner_info"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestRunnerInfo _explicitNullValueRunnerInfo = default!;
 #endif
         /// <summary>The secrets property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Secrets { get; set; }
+        public string? Secrets { get => _explicitNullValueSecrets; set { _explicitNullValueSecrets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secrets"); else _explicitNullProperties?.Remove("secrets"); } }
+        private string? _explicitNullValueSecrets = default!;
 #nullable restore
 #else
-        public string Secrets { get; set; }
+        public string Secrets { get => _explicitNullValueSecrets; set { _explicitNullValueSecrets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secrets"); else _explicitNullProperties?.Remove("secrets"); } }
+        private string _explicitNullValueSecrets = default!;
 #endif
         /// <summary>The services property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestService? Services { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestService? Services { get => _explicitNullValueServices; set { _explicitNullValueServices = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("services"); else _explicitNullProperties?.Remove("services"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestService? _explicitNullValueServices = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestService Services { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestService Services { get => _explicitNullValueServices; set { _explicitNullValueServices = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("services"); else _explicitNullProperties?.Remove("services"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestService _explicitNullValueServices = default!;
 #endif
         /// <summary>The steps property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestStep? Steps { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestStep? Steps { get => _explicitNullValueSteps; set { _explicitNullValueSteps = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("steps"); else _explicitNullProperties?.Remove("steps"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestStep? _explicitNullValueSteps = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestStep Steps { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestStep Steps { get => _explicitNullValueSteps; set { _explicitNullValueSteps = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("steps"); else _explicitNullProperties?.Remove("steps"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestStep _explicitNullValueSteps = default!;
 #endif
         /// <summary>The suspend_options property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SuspendOptions { get; set; }
+        public string? SuspendOptions { get => _explicitNullValueSuspendOptions; set { _explicitNullValueSuspendOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("suspend_options"); else _explicitNullProperties?.Remove("suspend_options"); } }
+        private string? _explicitNullValueSuspendOptions = default!;
 #nullable restore
 #else
-        public string SuspendOptions { get; set; }
+        public string SuspendOptions { get => _explicitNullValueSuspendOptions; set { _explicitNullValueSuspendOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("suspend_options"); else _explicitNullProperties?.Remove("suspend_options"); } }
+        private string _explicitNullValueSuspendOptions = default!;
 #endif
         /// <summary>The token property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Token { get; set; }
+        public string? Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
+        private string? _explicitNullValueToken = default!;
 #nullable restore
 #else
-        public string Token { get; set; }
+        public string Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
+        private string _explicitNullValueToken = default!;
 #endif
         /// <summary>The variables property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Variables { get; set; }
+        public string? Variables { get => _explicitNullValueVariables; set { _explicitNullValueVariables = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variables"); else _explicitNullProperties?.Remove("variables"); } }
+        private string? _explicitNullValueVariables = default!;
 #nullable restore
 #else
-        public string Variables { get; set; }
+        public string Variables { get => _explicitNullValueVariables; set { _explicitNullValueVariables = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variables"); else _explicitNullProperties?.Remove("variables"); } }
+        private string _explicitNullValueVariables = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestResponse"/> and sets the default values.
@@ -197,7 +267,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -258,6 +328,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("suspend_options", SuspendOptions);
             writer.WriteStringValue("token", Token);
             writer.WriteStringValue("variables", Variables);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

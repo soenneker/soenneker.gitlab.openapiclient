@@ -11,46 +11,71 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostApiV4CodeSuggestionsCompletionsRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("context") is { } nullNodeContext && nullNodeContext.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Context = null;
+            if (parseNode.GetChildNode("current_file") is { } nullNodeCurrentFile && nullNodeCurrentFile.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrentFile = null;
+            if (parseNode.GetChildNode("generation_type") is { } nullNodeGenerationType && nullNodeGenerationType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GenerationType = null;
+            if (parseNode.GetChildNode("intent") is { } nullNodeIntent && nullNodeIntent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Intent = null;
+            if (parseNode.GetChildNode("project_path") is { } nullNodeProjectPath && nullNodeProjectPath.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProjectPath = null;
+            if (parseNode.GetChildNode("stream") is { } nullNodeStream && nullNodeStream.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Stream = null;
+            if (parseNode.GetChildNode("user_instruction") is { } nullNodeUserInstruction && nullNodeUserInstruction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserInstruction = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Additional context to use for Code Suggestions. [Generally available](https://gitlab.com/gitlab-org/gitlab/-/issues/462750) in GitLab 18.6. Feature flag `code_suggestions_context` removed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4CodeSuggestionsCompletionsRequestContextItem>? Context { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4CodeSuggestionsCompletionsRequestContextItem>? Context { get => _explicitNullValueContext; set { _explicitNullValueContext = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("context"); else _explicitNullProperties?.Remove("context"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4CodeSuggestionsCompletionsRequestContextItem>? _explicitNullValueContext = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4CodeSuggestionsCompletionsRequestContextItem> Context { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4CodeSuggestionsCompletionsRequestContextItem> Context { get => _explicitNullValueContext; set { _explicitNullValueContext = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("context"); else _explicitNullProperties?.Remove("context"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4CodeSuggestionsCompletionsRequestContextItem> _explicitNullValueContext = default!;
 #endif
         /// <summary>Attributes of the file that suggestions are generated for.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4CodeSuggestionsCompletionsRequestCurrentFile? CurrentFile { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4CodeSuggestionsCompletionsRequestCurrentFile? CurrentFile { get => _explicitNullValueCurrentFile; set { _explicitNullValueCurrentFile = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("current_file"); else _explicitNullProperties?.Remove("current_file"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4CodeSuggestionsCompletionsRequestCurrentFile? _explicitNullValueCurrentFile = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4CodeSuggestionsCompletionsRequestCurrentFile CurrentFile { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4CodeSuggestionsCompletionsRequestCurrentFile CurrentFile { get => _explicitNullValueCurrentFile; set { _explicitNullValueCurrentFile = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("current_file"); else _explicitNullProperties?.Remove("current_file"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4CodeSuggestionsCompletionsRequestCurrentFile _explicitNullValueCurrentFile = default!;
 #endif
         /// <summary>Type of event for generation requests.</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4CodeSuggestionsCompletionsRequestGenerationType? GenerationType { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4CodeSuggestionsCompletionsRequestGenerationType? GenerationType { get => _explicitNullValueGenerationType; set { _explicitNullValueGenerationType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("generation_type"); else _explicitNullProperties?.Remove("generation_type"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4CodeSuggestionsCompletionsRequestGenerationType? _explicitNullValueGenerationType = default!;
         /// <summary>Intent of the completion request.</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4CodeSuggestionsCompletionsRequestIntent? Intent { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4CodeSuggestionsCompletionsRequestIntent? Intent { get => _explicitNullValueIntent; set { _explicitNullValueIntent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("intent"); else _explicitNullProperties?.Remove("intent"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4CodeSuggestionsCompletionsRequestIntent? _explicitNullValueIntent = default!;
         /// <summary>Path of the project.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ProjectPath { get; set; }
+        public string? ProjectPath { get => _explicitNullValueProjectPath; set { _explicitNullValueProjectPath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_path"); else _explicitNullProperties?.Remove("project_path"); } }
+        private string? _explicitNullValueProjectPath = default!;
 #nullable restore
 #else
-        public string ProjectPath { get; set; }
+        public string ProjectPath { get => _explicitNullValueProjectPath; set { _explicitNullValueProjectPath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_path"); else _explicitNullProperties?.Remove("project_path"); } }
+        private string _explicitNullValueProjectPath = default!;
 #endif
         /// <summary>If `true`, streams the response as smaller chunks as they are ready, if applicable.</summary>
-        public bool? Stream { get; set; }
+        public bool? Stream { get => _explicitNullValueStream; set { _explicitNullValueStream = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stream"); else _explicitNullProperties?.Remove("stream"); } }
+        private bool? _explicitNullValueStream = default!;
         /// <summary>User&apos;s instructions for Code Suggestions. [Generally available](https://gitlab.com/gitlab-org/gitlab/-/issues/462750) in GitLab 18.6. Feature flag `code_suggestions_context` removed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UserInstruction { get; set; }
+        public string? UserInstruction { get => _explicitNullValueUserInstruction; set { _explicitNullValueUserInstruction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_instruction"); else _explicitNullProperties?.Remove("user_instruction"); } }
+        private string? _explicitNullValueUserInstruction = default!;
 #nullable restore
 #else
-        public string UserInstruction { get; set; }
+        public string UserInstruction { get => _explicitNullValueUserInstruction; set { _explicitNullValueUserInstruction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_instruction"); else _explicitNullProperties?.Remove("user_instruction"); } }
+        private string _explicitNullValueUserInstruction = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4CodeSuggestionsCompletionsRequest"/> and sets the default values.
@@ -68,7 +93,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4CodeSuggestionsCompletionsRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4CodeSuggestionsCompletionsRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4CodeSuggestionsCompletionsRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -101,6 +126,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("project_path", ProjectPath);
             writer.WriteBoolValue("stream", Stream);
             writer.WriteStringValue("user_instruction", UserInstruction);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

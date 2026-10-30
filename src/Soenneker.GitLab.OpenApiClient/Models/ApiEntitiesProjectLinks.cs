@@ -11,72 +11,103 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ApiEntitiesProjectLinks : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("cluster_agents") is { } nullNodeClusterAgents && nullNodeClusterAgents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClusterAgents = null;
+            if (parseNode.GetChildNode("events") is { } nullNodeEvents && nullNodeEvents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Events = null;
+            if (parseNode.GetChildNode("issues") is { } nullNodeIssues && nullNodeIssues.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Issues = null;
+            if (parseNode.GetChildNode("labels") is { } nullNodeLabels && nullNodeLabels.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Labels = null;
+            if (parseNode.GetChildNode("members") is { } nullNodeMembers && nullNodeMembers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Members = null;
+            if (parseNode.GetChildNode("merge_requests") is { } nullNodeMergeRequests && nullNodeMergeRequests.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MergeRequests = null;
+            if (parseNode.GetChildNode("repo_branches") is { } nullNodeRepoBranches && nullNodeRepoBranches.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RepoBranches = null;
+            if (parseNode.GetChildNode("self") is { } nullNodeSelf && nullNodeSelf.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Self = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The cluster_agents property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ClusterAgents { get; set; }
+        public string? ClusterAgents { get => _explicitNullValueClusterAgents; set { _explicitNullValueClusterAgents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cluster_agents"); else _explicitNullProperties?.Remove("cluster_agents"); } }
+        private string? _explicitNullValueClusterAgents = default!;
 #nullable restore
 #else
-        public string ClusterAgents { get; set; }
+        public string ClusterAgents { get => _explicitNullValueClusterAgents; set { _explicitNullValueClusterAgents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cluster_agents"); else _explicitNullProperties?.Remove("cluster_agents"); } }
+        private string _explicitNullValueClusterAgents = default!;
 #endif
         /// <summary>The events property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Events { get; set; }
+        public string? Events { get => _explicitNullValueEvents; set { _explicitNullValueEvents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("events"); else _explicitNullProperties?.Remove("events"); } }
+        private string? _explicitNullValueEvents = default!;
 #nullable restore
 #else
-        public string Events { get; set; }
+        public string Events { get => _explicitNullValueEvents; set { _explicitNullValueEvents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("events"); else _explicitNullProperties?.Remove("events"); } }
+        private string _explicitNullValueEvents = default!;
 #endif
         /// <summary>The issues property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Issues { get; set; }
+        public string? Issues { get => _explicitNullValueIssues; set { _explicitNullValueIssues = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issues"); else _explicitNullProperties?.Remove("issues"); } }
+        private string? _explicitNullValueIssues = default!;
 #nullable restore
 #else
-        public string Issues { get; set; }
+        public string Issues { get => _explicitNullValueIssues; set { _explicitNullValueIssues = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issues"); else _explicitNullProperties?.Remove("issues"); } }
+        private string _explicitNullValueIssues = default!;
 #endif
         /// <summary>The labels property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Labels { get; set; }
+        public string? Labels { get => _explicitNullValueLabels; set { _explicitNullValueLabels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("labels"); else _explicitNullProperties?.Remove("labels"); } }
+        private string? _explicitNullValueLabels = default!;
 #nullable restore
 #else
-        public string Labels { get; set; }
+        public string Labels { get => _explicitNullValueLabels; set { _explicitNullValueLabels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("labels"); else _explicitNullProperties?.Remove("labels"); } }
+        private string _explicitNullValueLabels = default!;
 #endif
         /// <summary>The members property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Members { get; set; }
+        public string? Members { get => _explicitNullValueMembers; set { _explicitNullValueMembers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("members"); else _explicitNullProperties?.Remove("members"); } }
+        private string? _explicitNullValueMembers = default!;
 #nullable restore
 #else
-        public string Members { get; set; }
+        public string Members { get => _explicitNullValueMembers; set { _explicitNullValueMembers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("members"); else _explicitNullProperties?.Remove("members"); } }
+        private string _explicitNullValueMembers = default!;
 #endif
         /// <summary>The merge_requests property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MergeRequests { get; set; }
+        public string? MergeRequests { get => _explicitNullValueMergeRequests; set { _explicitNullValueMergeRequests = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_requests"); else _explicitNullProperties?.Remove("merge_requests"); } }
+        private string? _explicitNullValueMergeRequests = default!;
 #nullable restore
 #else
-        public string MergeRequests { get; set; }
+        public string MergeRequests { get => _explicitNullValueMergeRequests; set { _explicitNullValueMergeRequests = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_requests"); else _explicitNullProperties?.Remove("merge_requests"); } }
+        private string _explicitNullValueMergeRequests = default!;
 #endif
         /// <summary>The repo_branches property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RepoBranches { get; set; }
+        public string? RepoBranches { get => _explicitNullValueRepoBranches; set { _explicitNullValueRepoBranches = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("repo_branches"); else _explicitNullProperties?.Remove("repo_branches"); } }
+        private string? _explicitNullValueRepoBranches = default!;
 #nullable restore
 #else
-        public string RepoBranches { get; set; }
+        public string RepoBranches { get => _explicitNullValueRepoBranches; set { _explicitNullValueRepoBranches = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("repo_branches"); else _explicitNullProperties?.Remove("repo_branches"); } }
+        private string _explicitNullValueRepoBranches = default!;
 #endif
         /// <summary>The self property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Self { get; set; }
+        public string? Self { get => _explicitNullValueSelf; set { _explicitNullValueSelf = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("self"); else _explicitNullProperties?.Remove("self"); } }
+        private string? _explicitNullValueSelf = default!;
 #nullable restore
 #else
-        public string Self { get; set; }
+        public string Self { get => _explicitNullValueSelf; set { _explicitNullValueSelf = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("self"); else _explicitNullProperties?.Remove("self"); } }
+        private string _explicitNullValueSelf = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectLinks"/> and sets the default values.
@@ -93,7 +124,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectLinks CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectLinks();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectLinks(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -128,6 +159,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("merge_requests", MergeRequests);
             writer.WriteStringValue("repo_branches", RepoBranches);
             writer.WriteStringValue("self", Self);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,63 +11,94 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostApiV4ChatCompletionsRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("additional_context") is { } nullNodeAdditionalContext && nullNodeAdditionalContext.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdditionalContext = null;
+            if (parseNode.GetChildNode("client_subscription_id") is { } nullNodeClientSubscriptionId && nullNodeClientSubscriptionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClientSubscriptionId = null;
+            if (parseNode.GetChildNode("content") is { } nullNodeContent && nullNodeContent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Content = null;
+            if (parseNode.GetChildNode("current_file") is { } nullNodeCurrentFile && nullNodeCurrentFile.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrentFile = null;
+            if (parseNode.GetChildNode("project_id") is { } nullNodeProjectId && nullNodeProjectId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProjectId = null;
+            if (parseNode.GetChildNode("referer_url") is { } nullNodeRefererUrl && nullNodeRefererUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RefererUrl = null;
+            if (parseNode.GetChildNode("resource_id") is { } nullNodeResourceId && nullNodeResourceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResourceId = null;
+            if (parseNode.GetChildNode("resource_type") is { } nullNodeResourceType && nullNodeResourceType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResourceType = null;
+            if (parseNode.GetChildNode("with_clean_history") is { } nullNodeWithCleanHistory && nullNodeWithCleanHistory.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WithCleanHistory = null;
+        }
+
         /// <summary>Additional context to pass to the chat request. See [Context attributes](https://docs.gitlab.com/api/chat/#context-attributes) for the parameters this attribute accepts.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ChatCompletionsRequestAdditionalContextItem>? AdditionalContext { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ChatCompletionsRequestAdditionalContextItem>? AdditionalContext { get => _explicitNullValueAdditionalContext; set { _explicitNullValueAdditionalContext = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("additional_context"); else _explicitNullProperties?.Remove("additional_context"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ChatCompletionsRequestAdditionalContextItem>? _explicitNullValueAdditionalContext = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ChatCompletionsRequestAdditionalContextItem> AdditionalContext { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ChatCompletionsRequestAdditionalContextItem> AdditionalContext { get => _explicitNullValueAdditionalContext; set { _explicitNullValueAdditionalContext = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("additional_context"); else _explicitNullProperties?.Remove("additional_context"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ChatCompletionsRequestAdditionalContextItem> _explicitNullValueAdditionalContext = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Client subscription ID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ClientSubscriptionId { get; set; }
+        public string? ClientSubscriptionId { get => _explicitNullValueClientSubscriptionId; set { _explicitNullValueClientSubscriptionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_subscription_id"); else _explicitNullProperties?.Remove("client_subscription_id"); } }
+        private string? _explicitNullValueClientSubscriptionId = default!;
 #nullable restore
 #else
-        public string ClientSubscriptionId { get; set; }
+        public string ClientSubscriptionId { get => _explicitNullValueClientSubscriptionId; set { _explicitNullValueClientSubscriptionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_subscription_id"); else _explicitNullProperties?.Remove("client_subscription_id"); } }
+        private string _explicitNullValueClientSubscriptionId = default!;
 #endif
         /// <summary>Question sent to Chat.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Content { get; set; }
+        public string? Content { get => _explicitNullValueContent; set { _explicitNullValueContent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("content"); else _explicitNullProperties?.Remove("content"); } }
+        private string? _explicitNullValueContent = default!;
 #nullable restore
 #else
-        public string Content { get; set; }
+        public string Content { get => _explicitNullValueContent; set { _explicitNullValueContent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("content"); else _explicitNullProperties?.Remove("content"); } }
+        private string _explicitNullValueContent = default!;
 #endif
         /// <summary>Object that contains information about the current file.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ChatCompletionsRequestCurrentFile? CurrentFile { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ChatCompletionsRequestCurrentFile? CurrentFile { get => _explicitNullValueCurrentFile; set { _explicitNullValueCurrentFile = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("current_file"); else _explicitNullProperties?.Remove("current_file"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ChatCompletionsRequestCurrentFile? _explicitNullValueCurrentFile = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ChatCompletionsRequestCurrentFile CurrentFile { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ChatCompletionsRequestCurrentFile CurrentFile { get => _explicitNullValueCurrentFile; set { _explicitNullValueCurrentFile = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("current_file"); else _explicitNullProperties?.Remove("current_file"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ChatCompletionsRequestCurrentFile _explicitNullValueCurrentFile = default!;
 #endif
         /// <summary>ID of the project. Required when `resource_type` is `commit`.</summary>
-        public int? ProjectId { get; set; }
+        public int? ProjectId { get => _explicitNullValueProjectId; set { _explicitNullValueProjectId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_id"); else _explicitNullProperties?.Remove("project_id"); } }
+        private int? _explicitNullValueProjectId = default!;
         /// <summary>Referer URL.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RefererUrl { get; set; }
+        public string? RefererUrl { get => _explicitNullValueRefererUrl; set { _explicitNullValueRefererUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("referer_url"); else _explicitNullProperties?.Remove("referer_url"); } }
+        private string? _explicitNullValueRefererUrl = default!;
 #nullable restore
 #else
-        public string RefererUrl { get; set; }
+        public string RefererUrl { get => _explicitNullValueRefererUrl; set { _explicitNullValueRefererUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("referer_url"); else _explicitNullProperties?.Remove("referer_url"); } }
+        private string _explicitNullValueRefererUrl = default!;
 #endif
         /// <summary>ID of the resource. Can be a numeric ID or a commit SHA.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ChatCompletionsRequestResourceId? ResourceId { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ChatCompletionsRequestResourceId? ResourceId { get => _explicitNullValueResourceId; set { _explicitNullValueResourceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resource_id"); else _explicitNullProperties?.Remove("resource_id"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ChatCompletionsRequestResourceId? _explicitNullValueResourceId = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ChatCompletionsRequestResourceId ResourceId { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ChatCompletionsRequestResourceId ResourceId { get => _explicitNullValueResourceId; set { _explicitNullValueResourceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resource_id"); else _explicitNullProperties?.Remove("resource_id"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ChatCompletionsRequestResourceId _explicitNullValueResourceId = default!;
 #endif
         /// <summary>Type of resource sent with the chat question.</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ChatCompletionsRequestResourceType? ResourceType { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ChatCompletionsRequestResourceType? ResourceType { get => _explicitNullValueResourceType; set { _explicitNullValueResourceType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resource_type"); else _explicitNullProperties?.Remove("resource_type"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ChatCompletionsRequestResourceType? _explicitNullValueResourceType = default!;
         /// <summary>If `true`, resets history before and after the request.</summary>
-        public bool? WithCleanHistory { get; set; }
+        public bool? WithCleanHistory { get => _explicitNullValueWithCleanHistory; set { _explicitNullValueWithCleanHistory = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("with_clean_history"); else _explicitNullProperties?.Remove("with_clean_history"); } }
+        private bool? _explicitNullValueWithCleanHistory = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ChatCompletionsRequest"/> and sets the default values.
         /// </summary>
@@ -83,7 +114,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ChatCompletionsRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ChatCompletionsRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ChatCompletionsRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -120,6 +151,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ChatCompletionsRequestResourceId>("resource_id", ResourceId);
             writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ChatCompletionsRequestResourceType>("resource_type", ResourceType);
             writer.WriteBoolValue("with_clean_history", WithCleanHistory);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

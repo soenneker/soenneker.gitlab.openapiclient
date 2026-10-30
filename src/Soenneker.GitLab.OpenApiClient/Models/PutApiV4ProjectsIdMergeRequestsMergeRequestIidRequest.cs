@@ -11,100 +11,154 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PutApiV4ProjectsIdMergeRequestsMergeRequestIidRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("add_labels") is { } nullNodeAddLabels && nullNodeAddLabels.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddLabels = null;
+            if (parseNode.GetChildNode("allow_collaboration") is { } nullNodeAllowCollaboration && nullNodeAllowCollaboration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowCollaboration = null;
+            if (parseNode.GetChildNode("allow_maintainer_to_push") is { } nullNodeAllowMaintainerToPush && nullNodeAllowMaintainerToPush.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowMaintainerToPush = null;
+            if (parseNode.GetChildNode("approvals_before_merge") is { } nullNodeApprovalsBeforeMerge && nullNodeApprovalsBeforeMerge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApprovalsBeforeMerge = null;
+            if (parseNode.GetChildNode("assignee_id") is { } nullNodeAssigneeId && nullNodeAssigneeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AssigneeId = null;
+            if (parseNode.GetChildNode("assignee_ids") is { } nullNodeAssigneeIds && nullNodeAssigneeIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AssigneeIds = null;
+            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("discussion_locked") is { } nullNodeDiscussionLocked && nullNodeDiscussionLocked.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DiscussionLocked = null;
+            if (parseNode.GetChildNode("labels") is { } nullNodeLabels && nullNodeLabels.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Labels = null;
+            if (parseNode.GetChildNode("merge_after") is { } nullNodeMergeAfter && nullNodeMergeAfter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MergeAfter = null;
+            if (parseNode.GetChildNode("milestone") is { } nullNodeMilestone && nullNodeMilestone.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Milestone = null;
+            if (parseNode.GetChildNode("milestone_id") is { } nullNodeMilestoneId && nullNodeMilestoneId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MilestoneId = null;
+            if (parseNode.GetChildNode("remove_labels") is { } nullNodeRemoveLabels && nullNodeRemoveLabels.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RemoveLabels = null;
+            if (parseNode.GetChildNode("remove_source_branch") is { } nullNodeRemoveSourceBranch && nullNodeRemoveSourceBranch.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RemoveSourceBranch = null;
+            if (parseNode.GetChildNode("reviewer_ids") is { } nullNodeReviewerIds && nullNodeReviewerIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReviewerIds = null;
+            if (parseNode.GetChildNode("squash") is { } nullNodeSquash && nullNodeSquash.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Squash = null;
+            if (parseNode.GetChildNode("state_event") is { } nullNodeStateEvent && nullNodeStateEvent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StateEvent = null;
+            if (parseNode.GetChildNode("target_branch") is { } nullNodeTargetBranch && nullNodeTargetBranch.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetBranch = null;
+            if (parseNode.GetChildNode("title") is { } nullNodeTitle && nullNodeTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Title = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Comma-separated label names to add to the merge request. If a label does not already exist, this creates a new project label and assigns it to the merge request. At least one of `assignee_id`, `assignee_ids`, `reviewer_ids`, `description`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `remove_source_branch`, `allow_collaboration`, `allow_maintainer_to_push`, `squash`, `target_branch`, `title`, `state_event`, `discussion_locked`, `merge_after` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? AddLabels { get; set; }
+        public List<string>? AddLabels { get => _explicitNullValueAddLabels; set { _explicitNullValueAddLabels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("add_labels"); else _explicitNullProperties?.Remove("add_labels"); } }
+        private List<string>? _explicitNullValueAddLabels = default!;
 #nullable restore
 #else
-        public List<string> AddLabels { get; set; }
+        public List<string> AddLabels { get => _explicitNullValueAddLabels; set { _explicitNullValueAddLabels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("add_labels"); else _explicitNullProperties?.Remove("add_labels"); } }
+        private List<string> _explicitNullValueAddLabels = default!;
 #endif
         /// <summary>If `true`, allows commits from members who can merge to the target branch. At least one of `assignee_id`, `assignee_ids`, `reviewer_ids`, `description`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `remove_source_branch`, `allow_collaboration`, `allow_maintainer_to_push`, `squash`, `target_branch`, `title`, `state_event`, `discussion_locked`, `merge_after` must be provided.</summary>
-        public bool? AllowCollaboration { get; set; }
+        public bool? AllowCollaboration { get => _explicitNullValueAllowCollaboration; set { _explicitNullValueAllowCollaboration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allow_collaboration"); else _explicitNullProperties?.Remove("allow_collaboration"); } }
+        private bool? _explicitNullValueAllowCollaboration = default!;
         /// <summary>If `true`, allows commits from members who can merge to the target branch. Deprecated. Use `allow_collaboration` instead. At least one of `assignee_id`, `assignee_ids`, `reviewer_ids`, `description`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `remove_source_branch`, `allow_collaboration`, `allow_maintainer_to_push`, `squash`, `target_branch`, `title`, `state_event`, `discussion_locked`, `merge_after` must be provided.</summary>
-        public bool? AllowMaintainerToPush { get; set; }
+        public bool? AllowMaintainerToPush { get => _explicitNullValueAllowMaintainerToPush; set { _explicitNullValueAllowMaintainerToPush = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allow_maintainer_to_push"); else _explicitNullProperties?.Remove("allow_maintainer_to_push"); } }
+        private bool? _explicitNullValueAllowMaintainerToPush = default!;
         /// <summary>Number of approvals required before the merge request can be merged. [Deprecated](https://gitlab.com/gitlab-org/gitlab/-/issues/353097) in GitLab 16.0. Premium and Ultimate only.</summary>
-        public int? ApprovalsBeforeMerge { get; set; }
+        public int? ApprovalsBeforeMerge { get => _explicitNullValueApprovalsBeforeMerge; set { _explicitNullValueApprovalsBeforeMerge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approvals_before_merge"); else _explicitNullProperties?.Remove("approvals_before_merge"); } }
+        private int? _explicitNullValueApprovalsBeforeMerge = default!;
         /// <summary>ID of the user to assign to the merge request. Set to `0` or leave empty to unassign all assignees. At least one of `assignee_id`, `assignee_ids`, `reviewer_ids`, `description`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `remove_source_branch`, `allow_collaboration`, `allow_maintainer_to_push`, `squash`, `target_branch`, `title`, `state_event`, `discussion_locked`, `merge_after` must be provided.</summary>
-        public int? AssigneeId { get; set; }
+        public int? AssigneeId { get => _explicitNullValueAssigneeId; set { _explicitNullValueAssigneeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assignee_id"); else _explicitNullProperties?.Remove("assignee_id"); } }
+        private int? _explicitNullValueAssigneeId = default!;
         /// <summary>IDs of the users to assign to the merge request, as a comma-separated list. Set to `0` or leave empty to unassign all assignees. At least one of `assignee_id`, `assignee_ids`, `reviewer_ids`, `description`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `remove_source_branch`, `allow_collaboration`, `allow_maintainer_to_push`, `squash`, `target_branch`, `title`, `state_event`, `discussion_locked`, `merge_after` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<int?>? AssigneeIds { get; set; }
+        public List<int?>? AssigneeIds { get => _explicitNullValueAssigneeIds; set { _explicitNullValueAssigneeIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assignee_ids"); else _explicitNullProperties?.Remove("assignee_ids"); } }
+        private List<int?>? _explicitNullValueAssigneeIds = default!;
 #nullable restore
 #else
-        public List<int?> AssigneeIds { get; set; }
+        public List<int?> AssigneeIds { get => _explicitNullValueAssigneeIds; set { _explicitNullValueAssigneeIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assignee_ids"); else _explicitNullProperties?.Remove("assignee_ids"); } }
+        private List<int?> _explicitNullValueAssigneeIds = default!;
 #endif
         /// <summary>Description of the merge request. Limited to 1,048,576 characters. At least one of `assignee_id`, `assignee_ids`, `reviewer_ids`, `description`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `remove_source_branch`, `allow_collaboration`, `allow_maintainer_to_push`, `squash`, `target_branch`, `title`, `state_event`, `discussion_locked`, `merge_after` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get; set; }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get; set; }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>If `true`, locks the merge request&apos;s discussion so only project members can add, edit, or resolve comments. At least one of `assignee_id`, `assignee_ids`, `reviewer_ids`, `description`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `remove_source_branch`, `allow_collaboration`, `allow_maintainer_to_push`, `squash`, `target_branch`, `title`, `state_event`, `discussion_locked`, `merge_after` must be provided.</summary>
-        public bool? DiscussionLocked { get; set; }
+        public bool? DiscussionLocked { get => _explicitNullValueDiscussionLocked; set { _explicitNullValueDiscussionLocked = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discussion_locked"); else _explicitNullProperties?.Remove("discussion_locked"); } }
+        private bool? _explicitNullValueDiscussionLocked = default!;
         /// <summary>Comma-separated label names for the merge request. If a label does not already exist, this creates a new project label and assigns it to the merge request. Set to an empty string to unassign all labels. At least one of `assignee_id`, `assignee_ids`, `reviewer_ids`, `description`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `remove_source_branch`, `allow_collaboration`, `allow_maintainer_to_push`, `squash`, `target_branch`, `title`, `state_event`, `discussion_locked`, `merge_after` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Labels { get; set; }
+        public List<string>? Labels { get => _explicitNullValueLabels; set { _explicitNullValueLabels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("labels"); else _explicitNullProperties?.Remove("labels"); } }
+        private List<string>? _explicitNullValueLabels = default!;
 #nullable restore
 #else
-        public List<string> Labels { get; set; }
+        public List<string> Labels { get => _explicitNullValueLabels; set { _explicitNullValueLabels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("labels"); else _explicitNullProperties?.Remove("labels"); } }
+        private List<string> _explicitNullValueLabels = default!;
 #endif
         /// <summary>Date after which the merge request can be merged. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/510992) in GitLab 17.8. At least one of `assignee_id`, `assignee_ids`, `reviewer_ids`, `description`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `remove_source_branch`, `allow_collaboration`, `allow_maintainer_to_push`, `squash`, `target_branch`, `title`, `state_event`, `discussion_locked`, `merge_after` must be provided.</summary>
-        public DateTimeOffset? MergeAfter { get; set; }
+        public DateTimeOffset? MergeAfter { get => _explicitNullValueMergeAfter; set { _explicitNullValueMergeAfter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_after"); else _explicitNullProperties?.Remove("merge_after"); } }
+        private DateTimeOffset? _explicitNullValueMergeAfter = default!;
         /// <summary>The title of a project or ancestor-group milestone to assign the merge request to. Mutually exclusive with `milestone_id`. At least one of `assignee_id`, `assignee_ids`, `reviewer_ids`, `description`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `remove_source_branch`, `allow_collaboration`, `allow_maintainer_to_push`, `squash`, `target_branch`, `title`, `state_event`, `discussion_locked`, `merge_after` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Milestone { get; set; }
+        public string? Milestone { get => _explicitNullValueMilestone; set { _explicitNullValueMilestone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("milestone"); else _explicitNullProperties?.Remove("milestone"); } }
+        private string? _explicitNullValueMilestone = default!;
 #nullable restore
 #else
-        public string Milestone { get; set; }
+        public string Milestone { get => _explicitNullValueMilestone; set { _explicitNullValueMilestone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("milestone"); else _explicitNullProperties?.Remove("milestone"); } }
+        private string _explicitNullValueMilestone = default!;
 #endif
         /// <summary>Global ID of a milestone to assign to the merge request. Set to `0` or leave empty to unassign the milestone. Mutually exclusive with `milestone`. At least one of `assignee_id`, `assignee_ids`, `reviewer_ids`, `description`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `remove_source_branch`, `allow_collaboration`, `allow_maintainer_to_push`, `squash`, `target_branch`, `title`, `state_event`, `discussion_locked`, `merge_after` must be provided.</summary>
-        public int? MilestoneId { get; set; }
+        public int? MilestoneId { get => _explicitNullValueMilestoneId; set { _explicitNullValueMilestoneId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("milestone_id"); else _explicitNullProperties?.Remove("milestone_id"); } }
+        private int? _explicitNullValueMilestoneId = default!;
         /// <summary>Comma-separated label names to remove from the merge request. At least one of `assignee_id`, `assignee_ids`, `reviewer_ids`, `description`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `remove_source_branch`, `allow_collaboration`, `allow_maintainer_to_push`, `squash`, `target_branch`, `title`, `state_event`, `discussion_locked`, `merge_after` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? RemoveLabels { get; set; }
+        public List<string>? RemoveLabels { get => _explicitNullValueRemoveLabels; set { _explicitNullValueRemoveLabels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("remove_labels"); else _explicitNullProperties?.Remove("remove_labels"); } }
+        private List<string>? _explicitNullValueRemoveLabels = default!;
 #nullable restore
 #else
-        public List<string> RemoveLabels { get; set; }
+        public List<string> RemoveLabels { get => _explicitNullValueRemoveLabels; set { _explicitNullValueRemoveLabels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("remove_labels"); else _explicitNullProperties?.Remove("remove_labels"); } }
+        private List<string> _explicitNullValueRemoveLabels = default!;
 #endif
         /// <summary>If `true`, the source branch is removed when the merge request merges. At least one of `assignee_id`, `assignee_ids`, `reviewer_ids`, `description`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `remove_source_branch`, `allow_collaboration`, `allow_maintainer_to_push`, `squash`, `target_branch`, `title`, `state_event`, `discussion_locked`, `merge_after` must be provided.</summary>
-        public bool? RemoveSourceBranch { get; set; }
+        public bool? RemoveSourceBranch { get => _explicitNullValueRemoveSourceBranch; set { _explicitNullValueRemoveSourceBranch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("remove_source_branch"); else _explicitNullProperties?.Remove("remove_source_branch"); } }
+        private bool? _explicitNullValueRemoveSourceBranch = default!;
         /// <summary>IDs of the users to set as reviewers of the merge request, as a comma-separated list. If set to `0` or left empty, no reviewers are set. At least one of `assignee_id`, `assignee_ids`, `reviewer_ids`, `description`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `remove_source_branch`, `allow_collaboration`, `allow_maintainer_to_push`, `squash`, `target_branch`, `title`, `state_event`, `discussion_locked`, `merge_after` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<int?>? ReviewerIds { get; set; }
+        public List<int?>? ReviewerIds { get => _explicitNullValueReviewerIds; set { _explicitNullValueReviewerIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reviewer_ids"); else _explicitNullProperties?.Remove("reviewer_ids"); } }
+        private List<int?>? _explicitNullValueReviewerIds = default!;
 #nullable restore
 #else
-        public List<int?> ReviewerIds { get; set; }
+        public List<int?> ReviewerIds { get => _explicitNullValueReviewerIds; set { _explicitNullValueReviewerIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reviewer_ids"); else _explicitNullProperties?.Remove("reviewer_ids"); } }
+        private List<int?> _explicitNullValueReviewerIds = default!;
 #endif
         /// <summary>If `true`, squashes all commits into a single commit on merge. When omitted, defaults to the [project&apos;s squash option setting](https://docs.gitlab.com/user/project/merge_requests/squash_and_merge/#configure-squash-options-for-a-project), which can override this value at merge time. At least one of `assignee_id`, `assignee_ids`, `reviewer_ids`, `description`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `remove_source_branch`, `allow_collaboration`, `allow_maintainer_to_push`, `squash`, `target_branch`, `title`, `state_event`, `discussion_locked`, `merge_after` must be provided.</summary>
-        public bool? Squash { get; set; }
+        public bool? Squash { get => _explicitNullValueSquash; set { _explicitNullValueSquash = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("squash"); else _explicitNullProperties?.Remove("squash"); } }
+        private bool? _explicitNullValueSquash = default!;
         /// <summary>Event to change the state of the merge request. At least one of `assignee_id`, `assignee_ids`, `reviewer_ids`, `description`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `remove_source_branch`, `allow_collaboration`, `allow_maintainer_to_push`, `squash`, `target_branch`, `title`, `state_event`, `discussion_locked`, `merge_after` must be provided.</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdMergeRequestsMergeRequestIidRequestStateEvent? StateEvent { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdMergeRequestsMergeRequestIidRequestStateEvent? StateEvent { get => _explicitNullValueStateEvent; set { _explicitNullValueStateEvent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("state_event"); else _explicitNullProperties?.Remove("state_event"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdMergeRequestsMergeRequestIidRequestStateEvent? _explicitNullValueStateEvent = default!;
         /// <summary>Target branch. At least one of `assignee_id`, `assignee_ids`, `reviewer_ids`, `description`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `remove_source_branch`, `allow_collaboration`, `allow_maintainer_to_push`, `squash`, `target_branch`, `title`, `state_event`, `discussion_locked`, `merge_after` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TargetBranch { get; set; }
+        public string? TargetBranch { get => _explicitNullValueTargetBranch; set { _explicitNullValueTargetBranch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_branch"); else _explicitNullProperties?.Remove("target_branch"); } }
+        private string? _explicitNullValueTargetBranch = default!;
 #nullable restore
 #else
-        public string TargetBranch { get; set; }
+        public string TargetBranch { get => _explicitNullValueTargetBranch; set { _explicitNullValueTargetBranch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_branch"); else _explicitNullProperties?.Remove("target_branch"); } }
+        private string _explicitNullValueTargetBranch = default!;
 #endif
         /// <summary>Title of the merge request. At least one of `assignee_id`, `assignee_ids`, `reviewer_ids`, `description`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `remove_source_branch`, `allow_collaboration`, `allow_maintainer_to_push`, `squash`, `target_branch`, `title`, `state_event`, `discussion_locked`, `merge_after` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Title { get; set; }
+        public string? Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
+        private string? _explicitNullValueTitle = default!;
 #nullable restore
 #else
-        public string Title { get; set; }
+        public string Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
+        private string _explicitNullValueTitle = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdMergeRequestsMergeRequestIidRequest"/> and sets the default values.
@@ -121,7 +175,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdMergeRequestsMergeRequestIidRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdMergeRequestsMergeRequestIidRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdMergeRequestsMergeRequestIidRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -178,6 +232,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdMergeRequestsMergeRequestIidRequestStateEvent>("state_event", StateEvent);
             writer.WriteStringValue("target_branch", TargetBranch);
             writer.WriteStringValue("title", Title);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

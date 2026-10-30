@@ -11,45 +11,73 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class TestSuiteEntity : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("error_count") is { } nullNodeErrorCount && nullNodeErrorCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ErrorCount = null;
+            if (parseNode.GetChildNode("failed_count") is { } nullNodeFailedCount && nullNodeFailedCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FailedCount = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("skipped_count") is { } nullNodeSkippedCount && nullNodeSkippedCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SkippedCount = null;
+            if (parseNode.GetChildNode("success_count") is { } nullNodeSuccessCount && nullNodeSuccessCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SuccessCount = null;
+            if (parseNode.GetChildNode("suite_error") is { } nullNodeSuiteError && nullNodeSuiteError.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SuiteError = null;
+            if (parseNode.GetChildNode("test_cases") is { } nullNodeTestCases && nullNodeTestCases.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TestCases = null;
+            if (parseNode.GetChildNode("total_count") is { } nullNodeTotalCount && nullNodeTotalCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalCount = null;
+            if (parseNode.GetChildNode("total_time") is { } nullNodeTotalTime && nullNodeTotalTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalTime = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The error_count property</summary>
-        public int? ErrorCount { get; set; }
+        public int? ErrorCount { get => _explicitNullValueErrorCount; set { _explicitNullValueErrorCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error_count"); else _explicitNullProperties?.Remove("error_count"); } }
+        private int? _explicitNullValueErrorCount = default!;
         /// <summary>The failed_count property</summary>
-        public int? FailedCount { get; set; }
+        public int? FailedCount { get => _explicitNullValueFailedCount; set { _explicitNullValueFailedCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failed_count"); else _explicitNullProperties?.Remove("failed_count"); } }
+        private int? _explicitNullValueFailedCount = default!;
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>The skipped_count property</summary>
-        public int? SkippedCount { get; set; }
+        public int? SkippedCount { get => _explicitNullValueSkippedCount; set { _explicitNullValueSkippedCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("skipped_count"); else _explicitNullProperties?.Remove("skipped_count"); } }
+        private int? _explicitNullValueSkippedCount = default!;
         /// <summary>The success_count property</summary>
-        public int? SuccessCount { get; set; }
+        public int? SuccessCount { get => _explicitNullValueSuccessCount; set { _explicitNullValueSuccessCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("success_count"); else _explicitNullProperties?.Remove("success_count"); } }
+        private int? _explicitNullValueSuccessCount = default!;
         /// <summary>The suite_error property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SuiteError { get; set; }
+        public string? SuiteError { get => _explicitNullValueSuiteError; set { _explicitNullValueSuiteError = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("suite_error"); else _explicitNullProperties?.Remove("suite_error"); } }
+        private string? _explicitNullValueSuiteError = default!;
 #nullable restore
 #else
-        public string SuiteError { get; set; }
+        public string SuiteError { get => _explicitNullValueSuiteError; set { _explicitNullValueSuiteError = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("suite_error"); else _explicitNullProperties?.Remove("suite_error"); } }
+        private string _explicitNullValueSuiteError = default!;
 #endif
         /// <summary>The test_cases property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.TestCaseEntity>? TestCases { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.TestCaseEntity>? TestCases { get => _explicitNullValueTestCases; set { _explicitNullValueTestCases = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("test_cases"); else _explicitNullProperties?.Remove("test_cases"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.TestCaseEntity>? _explicitNullValueTestCases = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.TestCaseEntity> TestCases { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.TestCaseEntity> TestCases { get => _explicitNullValueTestCases; set { _explicitNullValueTestCases = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("test_cases"); else _explicitNullProperties?.Remove("test_cases"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.TestCaseEntity> _explicitNullValueTestCases = default!;
 #endif
         /// <summary>The total_count property</summary>
-        public int? TotalCount { get; set; }
+        public int? TotalCount { get => _explicitNullValueTotalCount; set { _explicitNullValueTotalCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total_count"); else _explicitNullProperties?.Remove("total_count"); } }
+        private int? _explicitNullValueTotalCount = default!;
         /// <summary>The total_time property</summary>
-        public int? TotalTime { get; set; }
+        public int? TotalTime { get => _explicitNullValueTotalTime; set { _explicitNullValueTotalTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total_time"); else _explicitNullProperties?.Remove("total_time"); } }
+        private int? _explicitNullValueTotalTime = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.TestSuiteEntity"/> and sets the default values.
         /// </summary>
@@ -65,7 +93,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.TestSuiteEntity CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.TestSuiteEntity();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.TestSuiteEntity(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -102,6 +130,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.TestCaseEntity>("test_cases", TestCases);
             writer.WriteIntValue("total_count", TotalCount);
             writer.WriteIntValue("total_time", TotalTime);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

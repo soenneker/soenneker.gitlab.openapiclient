@@ -11,47 +11,72 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostApiV4BulkImportsRequestEntitiesItem : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("destination_name") is { } nullNodeDestinationName && nullNodeDestinationName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DestinationName = null;
+            if (parseNode.GetChildNode("destination_namespace") is { } nullNodeDestinationNamespace && nullNodeDestinationNamespace.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DestinationNamespace = null;
+            if (parseNode.GetChildNode("destination_slug") is { } nullNodeDestinationSlug && nullNodeDestinationSlug.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DestinationSlug = null;
+            if (parseNode.GetChildNode("migrate_memberships") is { } nullNodeMigrateMemberships && nullNodeMigrateMemberships.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MigrateMemberships = null;
+            if (parseNode.GetChildNode("migrate_projects") is { } nullNodeMigrateProjects && nullNodeMigrateProjects.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MigrateProjects = null;
+            if (parseNode.GetChildNode("source_full_path") is { } nullNodeSourceFullPath && nullNodeSourceFullPath.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SourceFullPath = null;
+            if (parseNode.GetChildNode("source_type") is { } nullNodeSourceType && nullNodeSourceType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SourceType = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Deprecated: Use :destination_slug instead. Destination slug for the entity</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DestinationName { get; set; }
+        public string? DestinationName { get => _explicitNullValueDestinationName; set { _explicitNullValueDestinationName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("destination_name"); else _explicitNullProperties?.Remove("destination_name"); } }
+        private string? _explicitNullValueDestinationName = default!;
 #nullable restore
 #else
-        public string DestinationName { get; set; }
+        public string DestinationName { get => _explicitNullValueDestinationName; set { _explicitNullValueDestinationName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("destination_name"); else _explicitNullProperties?.Remove("destination_name"); } }
+        private string _explicitNullValueDestinationName = default!;
 #endif
         /// <summary>Destination namespace for the entity</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DestinationNamespace { get; set; }
+        public string? DestinationNamespace { get => _explicitNullValueDestinationNamespace; set { _explicitNullValueDestinationNamespace = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("destination_namespace"); else _explicitNullProperties?.Remove("destination_namespace"); } }
+        private string? _explicitNullValueDestinationNamespace = default!;
 #nullable restore
 #else
-        public string DestinationNamespace { get; set; }
+        public string DestinationNamespace { get => _explicitNullValueDestinationNamespace; set { _explicitNullValueDestinationNamespace = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("destination_namespace"); else _explicitNullProperties?.Remove("destination_namespace"); } }
+        private string _explicitNullValueDestinationNamespace = default!;
 #endif
         /// <summary>Destination slug for the entity</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DestinationSlug { get; set; }
+        public string? DestinationSlug { get => _explicitNullValueDestinationSlug; set { _explicitNullValueDestinationSlug = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("destination_slug"); else _explicitNullProperties?.Remove("destination_slug"); } }
+        private string? _explicitNullValueDestinationSlug = default!;
 #nullable restore
 #else
-        public string DestinationSlug { get; set; }
+        public string DestinationSlug { get => _explicitNullValueDestinationSlug; set { _explicitNullValueDestinationSlug = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("destination_slug"); else _explicitNullProperties?.Remove("destination_slug"); } }
+        private string _explicitNullValueDestinationSlug = default!;
 #endif
         /// <summary>The option to migrate memberships or not</summary>
-        public bool? MigrateMemberships { get; set; }
+        public bool? MigrateMemberships { get => _explicitNullValueMigrateMemberships; set { _explicitNullValueMigrateMemberships = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("migrate_memberships"); else _explicitNullProperties?.Remove("migrate_memberships"); } }
+        private bool? _explicitNullValueMigrateMemberships = default!;
         /// <summary>Indicates group migration should include nested projects</summary>
-        public bool? MigrateProjects { get; set; }
+        public bool? MigrateProjects { get => _explicitNullValueMigrateProjects; set { _explicitNullValueMigrateProjects = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("migrate_projects"); else _explicitNullProperties?.Remove("migrate_projects"); } }
+        private bool? _explicitNullValueMigrateProjects = default!;
         /// <summary>Relative path of the source entity to import</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SourceFullPath { get; set; }
+        public string? SourceFullPath { get => _explicitNullValueSourceFullPath; set { _explicitNullValueSourceFullPath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source_full_path"); else _explicitNullProperties?.Remove("source_full_path"); } }
+        private string? _explicitNullValueSourceFullPath = default!;
 #nullable restore
 #else
-        public string SourceFullPath { get; set; }
+        public string SourceFullPath { get => _explicitNullValueSourceFullPath; set { _explicitNullValueSourceFullPath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source_full_path"); else _explicitNullProperties?.Remove("source_full_path"); } }
+        private string _explicitNullValueSourceFullPath = default!;
 #endif
         /// <summary>Source entity type</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4BulkImportsRequestEntitiesItemSourceType? SourceType { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4BulkImportsRequestEntitiesItemSourceType? SourceType { get => _explicitNullValueSourceType; set { _explicitNullValueSourceType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source_type"); else _explicitNullProperties?.Remove("source_type"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4BulkImportsRequestEntitiesItemSourceType? _explicitNullValueSourceType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4BulkImportsRequestEntitiesItem"/> and sets the default values.
         /// </summary>
@@ -69,7 +94,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4BulkImportsRequestEntitiesItem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4BulkImportsRequestEntitiesItem();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4BulkImportsRequestEntitiesItem(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -102,6 +127,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteBoolValue("migrate_projects", MigrateProjects);
             writer.WriteStringValue("source_full_path", SourceFullPath);
             writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4BulkImportsRequestEntitiesItemSourceType>("source_type", SourceType);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

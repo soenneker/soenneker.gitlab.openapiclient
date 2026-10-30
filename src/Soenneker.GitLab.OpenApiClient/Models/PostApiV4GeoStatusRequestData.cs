@@ -12,60 +12,99 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PostApiV4GeoStatusRequestData : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("cursor_last_event_date") is { } nullNodeCursorLastEventDate && nullNodeCursorLastEventDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CursorLastEventDate = null;
+            if (parseNode.GetChildNode("cursor_last_event_id") is { } nullNodeCursorLastEventId && nullNodeCursorLastEventId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CursorLastEventId = null;
+            if (parseNode.GetChildNode("db_replication_lag_seconds") is { } nullNodeDbReplicationLagSeconds && nullNodeDbReplicationLagSeconds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DbReplicationLagSeconds = null;
+            if (parseNode.GetChildNode("geo_node_id") is { } nullNodeGeoNodeId && nullNodeGeoNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GeoNodeId = null;
+            if (parseNode.GetChildNode("last_event_date") is { } nullNodeLastEventDate && nullNodeLastEventDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastEventDate = null;
+            if (parseNode.GetChildNode("last_event_id") is { } nullNodeLastEventId && nullNodeLastEventId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastEventId = null;
+            if (parseNode.GetChildNode("last_successful_status_check_at") is { } nullNodeLastSuccessfulStatusCheckAt && nullNodeLastSuccessfulStatusCheckAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastSuccessfulStatusCheckAt = null;
+            if (parseNode.GetChildNode("replication_slots_count") is { } nullNodeReplicationSlotsCount && nullNodeReplicationSlotsCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReplicationSlotsCount = null;
+            if (parseNode.GetChildNode("replication_slots_max_retained_wal_bytes") is { } nullNodeReplicationSlotsMaxRetainedWalBytes && nullNodeReplicationSlotsMaxRetainedWalBytes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReplicationSlotsMaxRetainedWalBytes = null;
+            if (parseNode.GetChildNode("replication_slots_used_count") is { } nullNodeReplicationSlotsUsedCount && nullNodeReplicationSlotsUsedCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReplicationSlotsUsedCount = null;
+            if (parseNode.GetChildNode("revision") is { } nullNodeRevision && nullNodeRevision.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Revision = null;
+            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("status_message") is { } nullNodeStatusMessage && nullNodeStatusMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatusMessage = null;
+            if (parseNode.GetChildNode("version") is { } nullNodeVersion && nullNodeVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Version = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Date of the last event processed by the cursor.</summary>
-        public DateTimeOffset? CursorLastEventDate { get; set; }
+        public DateTimeOffset? CursorLastEventDate { get => _explicitNullValueCursorLastEventDate; set { _explicitNullValueCursorLastEventDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cursor_last_event_date"); else _explicitNullProperties?.Remove("cursor_last_event_date"); } }
+        private DateTimeOffset? _explicitNullValueCursorLastEventDate = default!;
         /// <summary>ID of the last event processed by the cursor.</summary>
-        public int? CursorLastEventId { get; set; }
+        public int? CursorLastEventId { get => _explicitNullValueCursorLastEventId; set { _explicitNullValueCursorLastEventId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cursor_last_event_id"); else _explicitNullProperties?.Remove("cursor_last_event_id"); } }
+        private int? _explicitNullValueCursorLastEventId = default!;
         /// <summary>Database replication lag, in seconds.</summary>
-        public int? DbReplicationLagSeconds { get; set; }
+        public int? DbReplicationLagSeconds { get => _explicitNullValueDbReplicationLagSeconds; set { _explicitNullValueDbReplicationLagSeconds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("db_replication_lag_seconds"); else _explicitNullProperties?.Remove("db_replication_lag_seconds"); } }
+        private int? _explicitNullValueDbReplicationLagSeconds = default!;
         /// <summary>ID of the Geo node the status applies to.</summary>
-        public int? GeoNodeId { get; set; }
+        public int? GeoNodeId { get => _explicitNullValueGeoNodeId; set { _explicitNullValueGeoNodeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("geo_node_id"); else _explicitNullProperties?.Remove("geo_node_id"); } }
+        private int? _explicitNullValueGeoNodeId = default!;
         /// <summary>Last event date.</summary>
-        public DateTimeOffset? LastEventDate { get; set; }
+        public DateTimeOffset? LastEventDate { get => _explicitNullValueLastEventDate; set { _explicitNullValueLastEventDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_event_date"); else _explicitNullProperties?.Remove("last_event_date"); } }
+        private DateTimeOffset? _explicitNullValueLastEventDate = default!;
         /// <summary>ID of the last event.</summary>
-        public int? LastEventId { get; set; }
+        public int? LastEventId { get => _explicitNullValueLastEventId; set { _explicitNullValueLastEventId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_event_id"); else _explicitNullProperties?.Remove("last_event_id"); } }
+        private int? _explicitNullValueLastEventId = default!;
         /// <summary>Last successful status check date.</summary>
-        public DateTimeOffset? LastSuccessfulStatusCheckAt { get; set; }
+        public DateTimeOffset? LastSuccessfulStatusCheckAt { get => _explicitNullValueLastSuccessfulStatusCheckAt; set { _explicitNullValueLastSuccessfulStatusCheckAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_successful_status_check_at"); else _explicitNullProperties?.Remove("last_successful_status_check_at"); } }
+        private DateTimeOffset? _explicitNullValueLastSuccessfulStatusCheckAt = default!;
         /// <summary>Number of replication slots.</summary>
-        public int? ReplicationSlotsCount { get; set; }
+        public int? ReplicationSlotsCount { get => _explicitNullValueReplicationSlotsCount; set { _explicitNullValueReplicationSlotsCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("replication_slots_count"); else _explicitNullProperties?.Remove("replication_slots_count"); } }
+        private int? _explicitNullValueReplicationSlotsCount = default!;
         /// <summary>Maximum number of bytes retained in the WAL on the primary.</summary>
-        public int? ReplicationSlotsMaxRetainedWalBytes { get; set; }
+        public int? ReplicationSlotsMaxRetainedWalBytes { get => _explicitNullValueReplicationSlotsMaxRetainedWalBytes; set { _explicitNullValueReplicationSlotsMaxRetainedWalBytes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("replication_slots_max_retained_wal_bytes"); else _explicitNullProperties?.Remove("replication_slots_max_retained_wal_bytes"); } }
+        private int? _explicitNullValueReplicationSlotsMaxRetainedWalBytes = default!;
         /// <summary>Number of replication slots in use.</summary>
-        public int? ReplicationSlotsUsedCount { get; set; }
+        public int? ReplicationSlotsUsedCount { get => _explicitNullValueReplicationSlotsUsedCount; set { _explicitNullValueReplicationSlotsUsedCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("replication_slots_used_count"); else _explicitNullProperties?.Remove("replication_slots_used_count"); } }
+        private int? _explicitNullValueReplicationSlotsUsedCount = default!;
         /// <summary>GitLab revision.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Revision { get; set; }
+        public string? Revision { get => _explicitNullValueRevision; set { _explicitNullValueRevision = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("revision"); else _explicitNullProperties?.Remove("revision"); } }
+        private string? _explicitNullValueRevision = default!;
 #nullable restore
 #else
-        public string Revision { get; set; }
+        public string Revision { get => _explicitNullValueRevision; set { _explicitNullValueRevision = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("revision"); else _explicitNullProperties?.Remove("revision"); } }
+        private string _explicitNullValueRevision = default!;
 #endif
         /// <summary>Object that contains information on replication and verification status metrics for GitLab resources on Geo nodes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4GeoStatusRequestDataStatus? Status { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4GeoStatusRequestDataStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4GeoStatusRequestDataStatus? _explicitNullValueStatus = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4GeoStatusRequestDataStatus Status { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4GeoStatusRequestDataStatus Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4GeoStatusRequestDataStatus _explicitNullValueStatus = default!;
 #endif
         /// <summary>Status message.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StatusMessage { get; set; }
+        public string? StatusMessage { get => _explicitNullValueStatusMessage; set { _explicitNullValueStatusMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status_message"); else _explicitNullProperties?.Remove("status_message"); } }
+        private string? _explicitNullValueStatusMessage = default!;
 #nullable restore
 #else
-        public string StatusMessage { get; set; }
+        public string StatusMessage { get => _explicitNullValueStatusMessage; set { _explicitNullValueStatusMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status_message"); else _explicitNullProperties?.Remove("status_message"); } }
+        private string _explicitNullValueStatusMessage = default!;
 #endif
         /// <summary>GitLab version.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Version { get; set; }
+        public string? Version { get => _explicitNullValueVersion; set { _explicitNullValueVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("version"); else _explicitNullProperties?.Remove("version"); } }
+        private string? _explicitNullValueVersion = default!;
 #nullable restore
 #else
-        public string Version { get; set; }
+        public string Version { get => _explicitNullValueVersion; set { _explicitNullValueVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("version"); else _explicitNullProperties?.Remove("version"); } }
+        private string _explicitNullValueVersion = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4GeoStatusRequestData"/> and sets the default values.
@@ -82,7 +121,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4GeoStatusRequestData CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4GeoStatusRequestData();
+            // Preserve a nullable root response.
+            if (parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) return null!;
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4GeoStatusRequestData(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -129,6 +170,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4GeoStatusRequestDataStatus>("status", Status);
             writer.WriteStringValue("status_message", StatusMessage);
             writer.WriteStringValue("version", Version);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

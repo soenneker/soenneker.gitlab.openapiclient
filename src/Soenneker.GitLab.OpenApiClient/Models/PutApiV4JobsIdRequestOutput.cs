@@ -12,18 +12,30 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PutApiV4JobsIdRequestOutput : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("bytesize") is { } nullNodeBytesize && nullNodeBytesize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Bytesize = null;
+            if (parseNode.GetChildNode("checksum") is { } nullNodeChecksum && nullNodeChecksum.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Checksum = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Size of the job&apos;s trace output, in bytes.</summary>
-        public int? Bytesize { get; set; }
+        public int? Bytesize { get => _explicitNullValueBytesize; set { _explicitNullValueBytesize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bytesize"); else _explicitNullProperties?.Remove("bytesize"); } }
+        private int? _explicitNullValueBytesize = default!;
         /// <summary>CRC32 checksum of the job trace.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Checksum { get; set; }
+        public string? Checksum { get => _explicitNullValueChecksum; set { _explicitNullValueChecksum = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checksum"); else _explicitNullProperties?.Remove("checksum"); } }
+        private string? _explicitNullValueChecksum = default!;
 #nullable restore
 #else
-        public string Checksum { get; set; }
+        public string Checksum { get => _explicitNullValueChecksum; set { _explicitNullValueChecksum = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checksum"); else _explicitNullProperties?.Remove("checksum"); } }
+        private string _explicitNullValueChecksum = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4JobsIdRequestOutput"/> and sets the default values.
@@ -40,7 +52,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4JobsIdRequestOutput CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4JobsIdRequestOutput();
+            // Preserve a nullable root response.
+            if (parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) return null!;
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4JobsIdRequestOutput(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -63,6 +77,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("bytesize", Bytesize);
             writer.WriteStringValue("checksum", Checksum);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

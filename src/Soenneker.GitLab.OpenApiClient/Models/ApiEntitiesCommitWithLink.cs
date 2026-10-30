@@ -11,190 +11,269 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ApiEntitiesCommitWithLink : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("author") is { } nullNodeAuthor && nullNodeAuthor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Author = null;
+            if (parseNode.GetChildNode("authored_date") is { } nullNodeAuthoredDate && nullNodeAuthoredDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AuthoredDate = null;
+            if (parseNode.GetChildNode("author_email") is { } nullNodeAuthorEmail && nullNodeAuthorEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AuthorEmail = null;
+            if (parseNode.GetChildNode("author_gravatar_url") is { } nullNodeAuthorGravatarUrl && nullNodeAuthorGravatarUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AuthorGravatarUrl = null;
+            if (parseNode.GetChildNode("author_name") is { } nullNodeAuthorName && nullNodeAuthorName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AuthorName = null;
+            if (parseNode.GetChildNode("commit_path") is { } nullNodeCommitPath && nullNodeCommitPath.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommitPath = null;
+            if (parseNode.GetChildNode("committed_date") is { } nullNodeCommittedDate && nullNodeCommittedDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommittedDate = null;
+            if (parseNode.GetChildNode("committer_email") is { } nullNodeCommitterEmail && nullNodeCommitterEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommitterEmail = null;
+            if (parseNode.GetChildNode("committer_name") is { } nullNodeCommitterName && nullNodeCommitterName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommitterName = null;
+            if (parseNode.GetChildNode("commit_url") is { } nullNodeCommitUrl && nullNodeCommitUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommitUrl = null;
+            if (parseNode.GetChildNode("created_at") is { } nullNodeCreatedAt && nullNodeCreatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedAt = null;
+            if (parseNode.GetChildNode("description_html") is { } nullNodeDescriptionHtml && nullNodeDescriptionHtml.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DescriptionHtml = null;
+            if (parseNode.GetChildNode("extended_trailers") is { } nullNodeExtendedTrailers && nullNodeExtendedTrailers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExtendedTrailers = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("message") is { } nullNodeMessage && nullNodeMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Message = null;
+            if (parseNode.GetChildNode("next_commit_id") is { } nullNodeNextCommitId && nullNodeNextCommitId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NextCommitId = null;
+            if (parseNode.GetChildNode("parent_ids") is { } nullNodeParentIds && nullNodeParentIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ParentIds = null;
+            if (parseNode.GetChildNode("pipeline_status_path") is { } nullNodePipelineStatusPath && nullNodePipelineStatusPath.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PipelineStatusPath = null;
+            if (parseNode.GetChildNode("prev_commit_id") is { } nullNodePrevCommitId && nullNodePrevCommitId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrevCommitId = null;
+            if (parseNode.GetChildNode("short_id") is { } nullNodeShortId && nullNodeShortId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShortId = null;
+            if (parseNode.GetChildNode("signature_html") is { } nullNodeSignatureHtml && nullNodeSignatureHtml.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SignatureHtml = null;
+            if (parseNode.GetChildNode("title") is { } nullNodeTitle && nullNodeTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Title = null;
+            if (parseNode.GetChildNode("title_html") is { } nullNodeTitleHtml && nullNodeTitleHtml.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TitleHtml = null;
+            if (parseNode.GetChildNode("trailers") is { } nullNodeTrailers && nullNodeTrailers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Trailers = null;
+            if (parseNode.GetChildNode("web_url") is { } nullNodeWebUrl && nullNodeWebUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebUrl = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The author property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserPath? Author { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserPath? Author { get => _explicitNullValueAuthor; set { _explicitNullValueAuthor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("author"); else _explicitNullProperties?.Remove("author"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserPath? _explicitNullValueAuthor = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserPath Author { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserPath Author { get => _explicitNullValueAuthor; set { _explicitNullValueAuthor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("author"); else _explicitNullProperties?.Remove("author"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserPath _explicitNullValueAuthor = default!;
 #endif
         /// <summary>The authored_date property</summary>
-        public DateTimeOffset? AuthoredDate { get; set; }
+        public DateTimeOffset? AuthoredDate { get => _explicitNullValueAuthoredDate; set { _explicitNullValueAuthoredDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authored_date"); else _explicitNullProperties?.Remove("authored_date"); } }
+        private DateTimeOffset? _explicitNullValueAuthoredDate = default!;
         /// <summary>The author_email property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AuthorEmail { get; set; }
+        public string? AuthorEmail { get => _explicitNullValueAuthorEmail; set { _explicitNullValueAuthorEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("author_email"); else _explicitNullProperties?.Remove("author_email"); } }
+        private string? _explicitNullValueAuthorEmail = default!;
 #nullable restore
 #else
-        public string AuthorEmail { get; set; }
+        public string AuthorEmail { get => _explicitNullValueAuthorEmail; set { _explicitNullValueAuthorEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("author_email"); else _explicitNullProperties?.Remove("author_email"); } }
+        private string _explicitNullValueAuthorEmail = default!;
 #endif
         /// <summary>The author_gravatar_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AuthorGravatarUrl { get; set; }
+        public string? AuthorGravatarUrl { get => _explicitNullValueAuthorGravatarUrl; set { _explicitNullValueAuthorGravatarUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("author_gravatar_url"); else _explicitNullProperties?.Remove("author_gravatar_url"); } }
+        private string? _explicitNullValueAuthorGravatarUrl = default!;
 #nullable restore
 #else
-        public string AuthorGravatarUrl { get; set; }
+        public string AuthorGravatarUrl { get => _explicitNullValueAuthorGravatarUrl; set { _explicitNullValueAuthorGravatarUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("author_gravatar_url"); else _explicitNullProperties?.Remove("author_gravatar_url"); } }
+        private string _explicitNullValueAuthorGravatarUrl = default!;
 #endif
         /// <summary>The author_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AuthorName { get; set; }
+        public string? AuthorName { get => _explicitNullValueAuthorName; set { _explicitNullValueAuthorName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("author_name"); else _explicitNullProperties?.Remove("author_name"); } }
+        private string? _explicitNullValueAuthorName = default!;
 #nullable restore
 #else
-        public string AuthorName { get; set; }
+        public string AuthorName { get => _explicitNullValueAuthorName; set { _explicitNullValueAuthorName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("author_name"); else _explicitNullProperties?.Remove("author_name"); } }
+        private string _explicitNullValueAuthorName = default!;
 #endif
         /// <summary>The commit_path property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CommitPath { get; set; }
+        public string? CommitPath { get => _explicitNullValueCommitPath; set { _explicitNullValueCommitPath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commit_path"); else _explicitNullProperties?.Remove("commit_path"); } }
+        private string? _explicitNullValueCommitPath = default!;
 #nullable restore
 #else
-        public string CommitPath { get; set; }
+        public string CommitPath { get => _explicitNullValueCommitPath; set { _explicitNullValueCommitPath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commit_path"); else _explicitNullProperties?.Remove("commit_path"); } }
+        private string _explicitNullValueCommitPath = default!;
 #endif
         /// <summary>The committed_date property</summary>
-        public DateTimeOffset? CommittedDate { get; set; }
+        public DateTimeOffset? CommittedDate { get => _explicitNullValueCommittedDate; set { _explicitNullValueCommittedDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("committed_date"); else _explicitNullProperties?.Remove("committed_date"); } }
+        private DateTimeOffset? _explicitNullValueCommittedDate = default!;
         /// <summary>The committer_email property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CommitterEmail { get; set; }
+        public string? CommitterEmail { get => _explicitNullValueCommitterEmail; set { _explicitNullValueCommitterEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("committer_email"); else _explicitNullProperties?.Remove("committer_email"); } }
+        private string? _explicitNullValueCommitterEmail = default!;
 #nullable restore
 #else
-        public string CommitterEmail { get; set; }
+        public string CommitterEmail { get => _explicitNullValueCommitterEmail; set { _explicitNullValueCommitterEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("committer_email"); else _explicitNullProperties?.Remove("committer_email"); } }
+        private string _explicitNullValueCommitterEmail = default!;
 #endif
         /// <summary>The committer_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CommitterName { get; set; }
+        public string? CommitterName { get => _explicitNullValueCommitterName; set { _explicitNullValueCommitterName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("committer_name"); else _explicitNullProperties?.Remove("committer_name"); } }
+        private string? _explicitNullValueCommitterName = default!;
 #nullable restore
 #else
-        public string CommitterName { get; set; }
+        public string CommitterName { get => _explicitNullValueCommitterName; set { _explicitNullValueCommitterName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("committer_name"); else _explicitNullProperties?.Remove("committer_name"); } }
+        private string _explicitNullValueCommitterName = default!;
 #endif
         /// <summary>The commit_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CommitUrl { get; set; }
+        public string? CommitUrl { get => _explicitNullValueCommitUrl; set { _explicitNullValueCommitUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commit_url"); else _explicitNullProperties?.Remove("commit_url"); } }
+        private string? _explicitNullValueCommitUrl = default!;
 #nullable restore
 #else
-        public string CommitUrl { get; set; }
+        public string CommitUrl { get => _explicitNullValueCommitUrl; set { _explicitNullValueCommitUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commit_url"); else _explicitNullProperties?.Remove("commit_url"); } }
+        private string _explicitNullValueCommitUrl = default!;
 #endif
         /// <summary>The created_at property</summary>
-        public DateTimeOffset? CreatedAt { get; set; }
+        public DateTimeOffset? CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_at"); else _explicitNullProperties?.Remove("created_at"); } }
+        private DateTimeOffset? _explicitNullValueCreatedAt = default!;
         /// <summary>The description_html property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DescriptionHtml { get; set; }
+        public string? DescriptionHtml { get => _explicitNullValueDescriptionHtml; set { _explicitNullValueDescriptionHtml = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description_html"); else _explicitNullProperties?.Remove("description_html"); } }
+        private string? _explicitNullValueDescriptionHtml = default!;
 #nullable restore
 #else
-        public string DescriptionHtml { get; set; }
+        public string DescriptionHtml { get => _explicitNullValueDescriptionHtml; set { _explicitNullValueDescriptionHtml = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description_html"); else _explicitNullProperties?.Remove("description_html"); } }
+        private string _explicitNullValueDescriptionHtml = default!;
 #endif
         /// <summary>The extended_trailers property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommitWithLinkExtendedTrailersProperty? ExtendedTrailers { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommitWithLinkExtendedTrailersProperty? ExtendedTrailers { get => _explicitNullValueExtendedTrailers; set { _explicitNullValueExtendedTrailers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extended_trailers"); else _explicitNullProperties?.Remove("extended_trailers"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommitWithLinkExtendedTrailersProperty? _explicitNullValueExtendedTrailers = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommitWithLinkExtendedTrailersProperty ExtendedTrailers { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommitWithLinkExtendedTrailersProperty ExtendedTrailers { get => _explicitNullValueExtendedTrailers; set { _explicitNullValueExtendedTrailers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extended_trailers"); else _explicitNullProperties?.Remove("extended_trailers"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommitWithLinkExtendedTrailersProperty _explicitNullValueExtendedTrailers = default!;
 #endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>The message property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Message { get; set; }
+        public string? Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
+        private string? _explicitNullValueMessage = default!;
 #nullable restore
 #else
-        public string Message { get; set; }
+        public string Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
+        private string _explicitNullValueMessage = default!;
 #endif
         /// <summary>The next_commit_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NextCommitId { get; set; }
+        public string? NextCommitId { get => _explicitNullValueNextCommitId; set { _explicitNullValueNextCommitId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("next_commit_id"); else _explicitNullProperties?.Remove("next_commit_id"); } }
+        private string? _explicitNullValueNextCommitId = default!;
 #nullable restore
 #else
-        public string NextCommitId { get; set; }
+        public string NextCommitId { get => _explicitNullValueNextCommitId; set { _explicitNullValueNextCommitId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("next_commit_id"); else _explicitNullProperties?.Remove("next_commit_id"); } }
+        private string _explicitNullValueNextCommitId = default!;
 #endif
         /// <summary>The parent_ids property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ParentIds { get; set; }
+        public List<string>? ParentIds { get => _explicitNullValueParentIds; set { _explicitNullValueParentIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parent_ids"); else _explicitNullProperties?.Remove("parent_ids"); } }
+        private List<string>? _explicitNullValueParentIds = default!;
 #nullable restore
 #else
-        public List<string> ParentIds { get; set; }
+        public List<string> ParentIds { get => _explicitNullValueParentIds; set { _explicitNullValueParentIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parent_ids"); else _explicitNullProperties?.Remove("parent_ids"); } }
+        private List<string> _explicitNullValueParentIds = default!;
 #endif
         /// <summary>The pipeline_status_path property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PipelineStatusPath { get; set; }
+        public string? PipelineStatusPath { get => _explicitNullValuePipelineStatusPath; set { _explicitNullValuePipelineStatusPath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pipeline_status_path"); else _explicitNullProperties?.Remove("pipeline_status_path"); } }
+        private string? _explicitNullValuePipelineStatusPath = default!;
 #nullable restore
 #else
-        public string PipelineStatusPath { get; set; }
+        public string PipelineStatusPath { get => _explicitNullValuePipelineStatusPath; set { _explicitNullValuePipelineStatusPath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pipeline_status_path"); else _explicitNullProperties?.Remove("pipeline_status_path"); } }
+        private string _explicitNullValuePipelineStatusPath = default!;
 #endif
         /// <summary>The prev_commit_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PrevCommitId { get; set; }
+        public string? PrevCommitId { get => _explicitNullValuePrevCommitId; set { _explicitNullValuePrevCommitId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prev_commit_id"); else _explicitNullProperties?.Remove("prev_commit_id"); } }
+        private string? _explicitNullValuePrevCommitId = default!;
 #nullable restore
 #else
-        public string PrevCommitId { get; set; }
+        public string PrevCommitId { get => _explicitNullValuePrevCommitId; set { _explicitNullValuePrevCommitId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prev_commit_id"); else _explicitNullProperties?.Remove("prev_commit_id"); } }
+        private string _explicitNullValuePrevCommitId = default!;
 #endif
         /// <summary>The short_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ShortId { get; set; }
+        public string? ShortId { get => _explicitNullValueShortId; set { _explicitNullValueShortId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("short_id"); else _explicitNullProperties?.Remove("short_id"); } }
+        private string? _explicitNullValueShortId = default!;
 #nullable restore
 #else
-        public string ShortId { get; set; }
+        public string ShortId { get => _explicitNullValueShortId; set { _explicitNullValueShortId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("short_id"); else _explicitNullProperties?.Remove("short_id"); } }
+        private string _explicitNullValueShortId = default!;
 #endif
         /// <summary>The signature_html property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SignatureHtml { get; set; }
+        public string? SignatureHtml { get => _explicitNullValueSignatureHtml; set { _explicitNullValueSignatureHtml = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signature_html"); else _explicitNullProperties?.Remove("signature_html"); } }
+        private string? _explicitNullValueSignatureHtml = default!;
 #nullable restore
 #else
-        public string SignatureHtml { get; set; }
+        public string SignatureHtml { get => _explicitNullValueSignatureHtml; set { _explicitNullValueSignatureHtml = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signature_html"); else _explicitNullProperties?.Remove("signature_html"); } }
+        private string _explicitNullValueSignatureHtml = default!;
 #endif
         /// <summary>The title property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Title { get; set; }
+        public string? Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
+        private string? _explicitNullValueTitle = default!;
 #nullable restore
 #else
-        public string Title { get; set; }
+        public string Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
+        private string _explicitNullValueTitle = default!;
 #endif
         /// <summary>The title_html property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TitleHtml { get; set; }
+        public string? TitleHtml { get => _explicitNullValueTitleHtml; set { _explicitNullValueTitleHtml = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title_html"); else _explicitNullProperties?.Remove("title_html"); } }
+        private string? _explicitNullValueTitleHtml = default!;
 #nullable restore
 #else
-        public string TitleHtml { get; set; }
+        public string TitleHtml { get => _explicitNullValueTitleHtml; set { _explicitNullValueTitleHtml = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title_html"); else _explicitNullProperties?.Remove("title_html"); } }
+        private string _explicitNullValueTitleHtml = default!;
 #endif
         /// <summary>The trailers property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommitWithLinkTrailersProperty? Trailers { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommitWithLinkTrailersProperty? Trailers { get => _explicitNullValueTrailers; set { _explicitNullValueTrailers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trailers"); else _explicitNullProperties?.Remove("trailers"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommitWithLinkTrailersProperty? _explicitNullValueTrailers = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommitWithLinkTrailersProperty Trailers { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommitWithLinkTrailersProperty Trailers { get => _explicitNullValueTrailers; set { _explicitNullValueTrailers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trailers"); else _explicitNullProperties?.Remove("trailers"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommitWithLinkTrailersProperty _explicitNullValueTrailers = default!;
 #endif
         /// <summary>The web_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WebUrl { get; set; }
+        public string? WebUrl { get => _explicitNullValueWebUrl; set { _explicitNullValueWebUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("web_url"); else _explicitNullProperties?.Remove("web_url"); } }
+        private string? _explicitNullValueWebUrl = default!;
 #nullable restore
 #else
-        public string WebUrl { get; set; }
+        public string WebUrl { get => _explicitNullValueWebUrl; set { _explicitNullValueWebUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("web_url"); else _explicitNullProperties?.Remove("web_url"); } }
+        private string _explicitNullValueWebUrl = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommitWithLink"/> and sets the default values.
@@ -211,7 +290,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommitWithLink CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommitWithLink();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommitWithLink(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -280,6 +359,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("title_html", TitleHtml);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommitWithLinkTrailersProperty>("trailers", Trailers);
             writer.WriteStringValue("web_url", WebUrl);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

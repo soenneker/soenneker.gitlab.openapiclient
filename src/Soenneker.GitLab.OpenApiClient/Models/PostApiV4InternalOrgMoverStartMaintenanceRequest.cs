@@ -11,13 +11,24 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostApiV4InternalOrgMoverStartMaintenanceRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("maintenance_reason") is { } nullNodeMaintenanceReason && nullNodeMaintenanceReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaintenanceReason = null;
+            if (parseNode.GetChildNode("organization_id") is { } nullNodeOrganizationId && nullNodeOrganizationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrganizationId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The reason for entering maintenance</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4InternalOrgMoverStartMaintenanceRequestMaintenanceReason? MaintenanceReason { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4InternalOrgMoverStartMaintenanceRequestMaintenanceReason? MaintenanceReason { get => _explicitNullValueMaintenanceReason; set { _explicitNullValueMaintenanceReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maintenance_reason"); else _explicitNullProperties?.Remove("maintenance_reason"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4InternalOrgMoverStartMaintenanceRequestMaintenanceReason? _explicitNullValueMaintenanceReason = default!;
         /// <summary>The ID of the organization</summary>
-        public int? OrganizationId { get; set; }
+        public int? OrganizationId { get => _explicitNullValueOrganizationId; set { _explicitNullValueOrganizationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organization_id"); else _explicitNullProperties?.Remove("organization_id"); } }
+        private int? _explicitNullValueOrganizationId = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4InternalOrgMoverStartMaintenanceRequest"/> and sets the default values.
         /// </summary>
@@ -33,7 +44,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4InternalOrgMoverStartMaintenanceRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4InternalOrgMoverStartMaintenanceRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4InternalOrgMoverStartMaintenanceRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -56,6 +67,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4InternalOrgMoverStartMaintenanceRequestMaintenanceReason>("maintenance_reason", MaintenanceReason);
             writer.WriteIntValue("organization_id", OrganizationId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

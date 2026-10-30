@@ -11,68 +11,105 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostApiV4RunnersRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("access_level") is { } nullNodeAccessLevel && nullNodeAccessLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccessLevel = null;
+            if (parseNode.GetChildNode("active") is { } nullNodeActive && nullNodeActive.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Active = null;
+            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("info") is { } nullNodeInfo && nullNodeInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Info = null;
+            if (parseNode.GetChildNode("locked") is { } nullNodeLocked && nullNodeLocked.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Locked = null;
+            if (parseNode.GetChildNode("maintainer_note") is { } nullNodeMaintainerNote && nullNodeMaintainerNote.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaintainerNote = null;
+            if (parseNode.GetChildNode("maintenance_note") is { } nullNodeMaintenanceNote && nullNodeMaintenanceNote.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaintenanceNote = null;
+            if (parseNode.GetChildNode("maximum_timeout") is { } nullNodeMaximumTimeout && nullNodeMaximumTimeout.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaximumTimeout = null;
+            if (parseNode.GetChildNode("paused") is { } nullNodePaused && nullNodePaused.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Paused = null;
+            if (parseNode.GetChildNode("run_untagged") is { } nullNodeRunUntagged && nullNodeRunUntagged.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RunUntagged = null;
+            if (parseNode.GetChildNode("tag_list") is { } nullNodeTagList && nullNodeTagList.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TagList = null;
+            if (parseNode.GetChildNode("token") is { } nullNodeToken && nullNodeToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Token = null;
+        }
+
         /// <summary>Access level of the runner.</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4RunnersRequestAccessLevel? AccessLevel { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4RunnersRequestAccessLevel? AccessLevel { get => _explicitNullValueAccessLevel; set { _explicitNullValueAccessLevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("access_level"); else _explicitNullProperties?.Remove("access_level"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4RunnersRequestAccessLevel? _explicitNullValueAccessLevel = default!;
         /// <summary>If `true`, the runner is allowed to receive new jobs. Deprecated. Use `paused` instead. Mutually exclusive with `paused`.</summary>
-        public bool? Active { get; set; }
+        public bool? Active { get => _explicitNullValueActive; set { _explicitNullValueActive = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("active"); else _explicitNullProperties?.Remove("active"); } }
+        private bool? _explicitNullValueActive = default!;
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Description of the runner.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get; set; }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get; set; }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>Runner&apos;s metadata</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4RunnersRequestInfo? Info { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4RunnersRequestInfo? Info { get => _explicitNullValueInfo; set { _explicitNullValueInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("info"); else _explicitNullProperties?.Remove("info"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4RunnersRequestInfo? _explicitNullValueInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4RunnersRequestInfo Info { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4RunnersRequestInfo Info { get => _explicitNullValueInfo; set { _explicitNullValueInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("info"); else _explicitNullProperties?.Remove("info"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4RunnersRequestInfo _explicitNullValueInfo = default!;
 #endif
         /// <summary>If `true`, the runner is locked for the current project.</summary>
-        public bool? Locked { get; set; }
+        public bool? Locked { get => _explicitNullValueLocked; set { _explicitNullValueLocked = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locked"); else _explicitNullProperties?.Remove("locked"); } }
+        private bool? _explicitNullValueLocked = default!;
         /// <summary>Free-form maintenance notes for the runner. Deprecated. Use `maintenance_note` instead. Mutually exclusive with `maintenance_note`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MaintainerNote { get; set; }
+        public string? MaintainerNote { get => _explicitNullValueMaintainerNote; set { _explicitNullValueMaintainerNote = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maintainer_note"); else _explicitNullProperties?.Remove("maintainer_note"); } }
+        private string? _explicitNullValueMaintainerNote = default!;
 #nullable restore
 #else
-        public string MaintainerNote { get; set; }
+        public string MaintainerNote { get => _explicitNullValueMaintainerNote; set { _explicitNullValueMaintainerNote = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maintainer_note"); else _explicitNullProperties?.Remove("maintainer_note"); } }
+        private string _explicitNullValueMaintainerNote = default!;
 #endif
         /// <summary>Free-form maintenance notes for the runner (1024 characters). Mutually exclusive with `maintainer_note`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MaintenanceNote { get; set; }
+        public string? MaintenanceNote { get => _explicitNullValueMaintenanceNote; set { _explicitNullValueMaintenanceNote = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maintenance_note"); else _explicitNullProperties?.Remove("maintenance_note"); } }
+        private string? _explicitNullValueMaintenanceNote = default!;
 #nullable restore
 #else
-        public string MaintenanceNote { get; set; }
+        public string MaintenanceNote { get => _explicitNullValueMaintenanceNote; set { _explicitNullValueMaintenanceNote = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maintenance_note"); else _explicitNullProperties?.Remove("maintenance_note"); } }
+        private string _explicitNullValueMaintenanceNote = default!;
 #endif
         /// <summary>Maximum time, in seconds, that runners can spend running a job.</summary>
-        public int? MaximumTimeout { get; set; }
+        public int? MaximumTimeout { get => _explicitNullValueMaximumTimeout; set { _explicitNullValueMaximumTimeout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maximum_timeout"); else _explicitNullProperties?.Remove("maximum_timeout"); } }
+        private int? _explicitNullValueMaximumTimeout = default!;
         /// <summary>If `true`, the runner ignores new jobs. Mutually exclusive with `active`.</summary>
-        public bool? Paused { get; set; }
+        public bool? Paused { get => _explicitNullValuePaused; set { _explicitNullValuePaused = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paused"); else _explicitNullProperties?.Remove("paused"); } }
+        private bool? _explicitNullValuePaused = default!;
         /// <summary>If `true`, the runner handles untagged jobs.</summary>
-        public bool? RunUntagged { get; set; }
+        public bool? RunUntagged { get => _explicitNullValueRunUntagged; set { _explicitNullValueRunUntagged = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("run_untagged"); else _explicitNullProperties?.Remove("run_untagged"); } }
+        private bool? _explicitNullValueRunUntagged = default!;
         /// <summary>List of runner tags.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? TagList { get; set; }
+        public List<string>? TagList { get => _explicitNullValueTagList; set { _explicitNullValueTagList = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tag_list"); else _explicitNullProperties?.Remove("tag_list"); } }
+        private List<string>? _explicitNullValueTagList = default!;
 #nullable restore
 #else
-        public List<string> TagList { get; set; }
+        public List<string> TagList { get => _explicitNullValueTagList; set { _explicitNullValueTagList = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tag_list"); else _explicitNullProperties?.Remove("tag_list"); } }
+        private List<string> _explicitNullValueTagList = default!;
 #endif
         /// <summary>Registration token.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Token { get; set; }
+        public string? Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
+        private string? _explicitNullValueToken = default!;
 #nullable restore
 #else
-        public string Token { get; set; }
+        public string Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
+        private string _explicitNullValueToken = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4RunnersRequest"/> and sets the default values.
@@ -89,7 +126,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4RunnersRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4RunnersRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4RunnersRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -132,6 +169,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteBoolValue("run_untagged", RunUntagged);
             writer.WriteCollectionOfPrimitiveValues<string>("tag_list", TagList);
             writer.WriteStringValue("token", Token);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

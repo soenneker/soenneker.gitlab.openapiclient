@@ -11,23 +11,39 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostApiV4ProjectsIdMergeTrainsMergeRequestsMergeRequestIidRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("auto_merge") is { } nullNodeAutoMerge && nullNodeAutoMerge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutoMerge = null;
+            if (parseNode.GetChildNode("sha") is { } nullNodeSha && nullNodeSha.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sha = null;
+            if (parseNode.GetChildNode("squash") is { } nullNodeSquash && nullNodeSquash.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Squash = null;
+            if (parseNode.GetChildNode("when_pipeline_succeeds") is { } nullNodeWhenPipelineSucceeds && nullNodeWhenPipelineSucceeds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WhenPipelineSucceeds = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>If `true`, the merge request is added to the merge train when checks pass. If `false` or unspecified, it is added to the merge train immediately.</summary>
-        public bool? AutoMerge { get; set; }
+        public bool? AutoMerge { get => _explicitNullValueAutoMerge; set { _explicitNullValueAutoMerge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auto_merge"); else _explicitNullProperties?.Remove("auto_merge"); } }
+        private bool? _explicitNullValueAutoMerge = default!;
         /// <summary>SHA that must match the `HEAD` of the source branch, otherwise the merge fails.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Sha { get; set; }
+        public string? Sha { get => _explicitNullValueSha; set { _explicitNullValueSha = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sha"); else _explicitNullProperties?.Remove("sha"); } }
+        private string? _explicitNullValueSha = default!;
 #nullable restore
 #else
-        public string Sha { get; set; }
+        public string Sha { get => _explicitNullValueSha; set { _explicitNullValueSha = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sha"); else _explicitNullProperties?.Remove("sha"); } }
+        private string _explicitNullValueSha = default!;
 #endif
         /// <summary>If `true`, the commits are squashed into a single commit on merge.</summary>
-        public bool? Squash { get; set; }
+        public bool? Squash { get => _explicitNullValueSquash; set { _explicitNullValueSquash = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("squash"); else _explicitNullProperties?.Remove("squash"); } }
+        private bool? _explicitNullValueSquash = default!;
         /// <summary>[Deprecated](https://gitlab.com/gitlab-org/gitlab/-/issues/521290) in GitLab 17.11. Use `auto_merge` instead.</summary>
-        public bool? WhenPipelineSucceeds { get; set; }
+        public bool? WhenPipelineSucceeds { get => _explicitNullValueWhenPipelineSucceeds; set { _explicitNullValueWhenPipelineSucceeds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("when_pipeline_succeeds"); else _explicitNullProperties?.Remove("when_pipeline_succeeds"); } }
+        private bool? _explicitNullValueWhenPipelineSucceeds = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdMergeTrainsMergeRequestsMergeRequestIidRequest"/> and sets the default values.
         /// </summary>
@@ -43,7 +59,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdMergeTrainsMergeRequestsMergeRequestIidRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdMergeTrainsMergeRequestsMergeRequestIidRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdMergeTrainsMergeRequestsMergeRequestIidRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -70,6 +86,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("sha", Sha);
             writer.WriteBoolValue("squash", Squash);
             writer.WriteBoolValue("when_pipeline_succeeds", WhenPipelineSucceeds);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

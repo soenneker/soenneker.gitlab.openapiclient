@@ -11,21 +11,35 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PutApiV4AdminActiveContextCodeEnabledNamespacesRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("connection_id") is { } nullNodeConnectionId && nullNodeConnectionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConnectionId = null;
+            if (parseNode.GetChildNode("namespace_id") is { } nullNodeNamespaceId && nullNodeNamespaceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NamespaceId = null;
+            if (parseNode.GetChildNode("state") is { } nullNodeState && nullNodeState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) State = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>ID of the connection. If omitted, defaults to the active connection.</summary>
-        public int? ConnectionId { get; set; }
+        public int? ConnectionId { get => _explicitNullValueConnectionId; set { _explicitNullValueConnectionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("connection_id"); else _explicitNullProperties?.Remove("connection_id"); } }
+        private int? _explicitNullValueConnectionId = default!;
         /// <summary>ID or path of the namespace.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4AdminActiveContextCodeEnabledNamespacesRequestNamespaceId? NamespaceId { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4AdminActiveContextCodeEnabledNamespacesRequestNamespaceId? NamespaceId { get => _explicitNullValueNamespaceId; set { _explicitNullValueNamespaceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("namespace_id"); else _explicitNullProperties?.Remove("namespace_id"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4AdminActiveContextCodeEnabledNamespacesRequestNamespaceId? _explicitNullValueNamespaceId = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4AdminActiveContextCodeEnabledNamespacesRequestNamespaceId NamespaceId { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4AdminActiveContextCodeEnabledNamespacesRequestNamespaceId NamespaceId { get => _explicitNullValueNamespaceId; set { _explicitNullValueNamespaceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("namespace_id"); else _explicitNullProperties?.Remove("namespace_id"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4AdminActiveContextCodeEnabledNamespacesRequestNamespaceId _explicitNullValueNamespaceId = default!;
 #endif
         /// <summary>Indexing state to transition the enabled namespace to.</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4AdminActiveContextCodeEnabledNamespacesRequestState? State { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4AdminActiveContextCodeEnabledNamespacesRequestState? State { get => _explicitNullValueState; set { _explicitNullValueState = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("state"); else _explicitNullProperties?.Remove("state"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4AdminActiveContextCodeEnabledNamespacesRequestState? _explicitNullValueState = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4AdminActiveContextCodeEnabledNamespacesRequest"/> and sets the default values.
         /// </summary>
@@ -41,7 +55,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4AdminActiveContextCodeEnabledNamespacesRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4AdminActiveContextCodeEnabledNamespacesRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4AdminActiveContextCodeEnabledNamespacesRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -66,6 +80,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteIntValue("connection_id", ConnectionId);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4AdminActiveContextCodeEnabledNamespacesRequestNamespaceId>("namespace_id", NamespaceId);
             writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4AdminActiveContextCodeEnabledNamespacesRequestState>("state", State);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

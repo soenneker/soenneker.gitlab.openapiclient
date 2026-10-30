@@ -11,74 +11,107 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostApiV4ProjectsIdRepositoryChangelogRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("branch") is { } nullNodeBranch && nullNodeBranch.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Branch = null;
+            if (parseNode.GetChildNode("config_file") is { } nullNodeConfigFile && nullNodeConfigFile.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConfigFile = null;
+            if (parseNode.GetChildNode("config_file_ref") is { } nullNodeConfigFileRef && nullNodeConfigFileRef.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConfigFileRef = null;
+            if (parseNode.GetChildNode("date") is { } nullNodeDate && nullNodeDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Date = null;
+            if (parseNode.GetChildNode("file") is { } nullNodeFile && nullNodeFile.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) File = null;
+            if (parseNode.GetChildNode("from") is { } nullNodeFrom && nullNodeFrom.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) From = null;
+            if (parseNode.GetChildNode("message") is { } nullNodeMessage && nullNodeMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Message = null;
+            if (parseNode.GetChildNode("to") is { } nullNodeTo && nullNodeTo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) To = null;
+            if (parseNode.GetChildNode("trailer") is { } nullNodeTrailer && nullNodeTrailer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Trailer = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Name of the branch to commit the changelog changes to. If omitted, defaults to the project&apos;s default branch.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Branch { get; set; }
+        public string? Branch { get => _explicitNullValueBranch; set { _explicitNullValueBranch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("branch"); else _explicitNullProperties?.Remove("branch"); } }
+        private string? _explicitNullValueBranch = default!;
 #nullable restore
 #else
-        public string Branch { get; set; }
+        public string Branch { get => _explicitNullValueBranch; set { _explicitNullValueBranch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("branch"); else _explicitNullProperties?.Remove("branch"); } }
+        private string _explicitNullValueBranch = default!;
 #endif
         /// <summary>Path to the changelog configuration file in the project&apos;s Git repository. If omitted, uses `.gitlab/changelog_config.yml`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ConfigFile { get; set; }
+        public string? ConfigFile { get => _explicitNullValueConfigFile; set { _explicitNullValueConfigFile = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("config_file"); else _explicitNullProperties?.Remove("config_file"); } }
+        private string? _explicitNullValueConfigFile = default!;
 #nullable restore
 #else
-        public string ConfigFile { get; set; }
+        public string ConfigFile { get => _explicitNullValueConfigFile; set { _explicitNullValueConfigFile = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("config_file"); else _explicitNullProperties?.Remove("config_file"); } }
+        private string _explicitNullValueConfigFile = default!;
 #endif
         /// <summary>Git reference, for example a branch, where the changelog configuration file is defined. Defaults to the default branch of the repository.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ConfigFileRef { get; set; }
+        public string? ConfigFileRef { get => _explicitNullValueConfigFileRef; set { _explicitNullValueConfigFileRef = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("config_file_ref"); else _explicitNullProperties?.Remove("config_file_ref"); } }
+        private string? _explicitNullValueConfigFileRef = default!;
 #nullable restore
 #else
-        public string ConfigFileRef { get; set; }
+        public string ConfigFileRef { get => _explicitNullValueConfigFileRef; set { _explicitNullValueConfigFileRef = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("config_file_ref"); else _explicitNullProperties?.Remove("config_file_ref"); } }
+        private string _explicitNullValueConfigFileRef = default!;
 #endif
         /// <summary>Date and time of the release. Defaults to the current time.</summary>
-        public DateTimeOffset? Date { get; set; }
+        public DateTimeOffset? Date { get => _explicitNullValueDate; set { _explicitNullValueDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date"); else _explicitNullProperties?.Remove("date"); } }
+        private DateTimeOffset? _explicitNullValueDate = default!;
         /// <summary>File to commit the changes to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? File { get; set; }
+        public string? File { get => _explicitNullValueFile; set { _explicitNullValueFile = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file"); else _explicitNullProperties?.Remove("file"); } }
+        private string? _explicitNullValueFile = default!;
 #nullable restore
 #else
-        public string File { get; set; }
+        public string File { get => _explicitNullValueFile; set { _explicitNullValueFile = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file"); else _explicitNullProperties?.Remove("file"); } }
+        private string _explicitNullValueFile = default!;
 #endif
         /// <summary>First commit in the range of commits, as a SHA, to use for the changelog. This commit is not included in the changelog. If omitted, the most recent stable version tag before `version` is used.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? From { get; set; }
+        public string? From { get => _explicitNullValueFrom; set { _explicitNullValueFrom = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("from"); else _explicitNullProperties?.Remove("from"); } }
+        private string? _explicitNullValueFrom = default!;
 #nullable restore
 #else
-        public string From { get; set; }
+        public string From { get => _explicitNullValueFrom; set { _explicitNullValueFrom = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("from"); else _explicitNullProperties?.Remove("from"); } }
+        private string _explicitNullValueFrom = default!;
 #endif
         /// <summary>Commit message to use when committing the changelog changes. If omitted, defaults to `Add changelog for version X`, where `X` is the value of the `version` parameter.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Message { get; set; }
+        public string? Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
+        private string? _explicitNullValueMessage = default!;
 #nullable restore
 #else
-        public string Message { get; set; }
+        public string Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
+        private string _explicitNullValueMessage = default!;
 #endif
         /// <summary>Last commit in the range of commits, as a SHA, to use for the changelog. This commit is included in the changelog. If omitted, uses the latest commit on the default branch. For the Add changelog data to file operation, uses the latest commit on `branch` instead. The range can contain at most 15,000 commits.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? To { get; set; }
+        public string? To { get => _explicitNullValueTo; set { _explicitNullValueTo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("to"); else _explicitNullProperties?.Remove("to"); } }
+        private string? _explicitNullValueTo = default!;
 #nullable restore
 #else
-        public string To { get; set; }
+        public string To { get => _explicitNullValueTo; set { _explicitNullValueTo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("to"); else _explicitNullProperties?.Remove("to"); } }
+        private string _explicitNullValueTo = default!;
 #endif
         /// <summary>Git trailer to use for including commits. Case-sensitive: `Example` does not match `example` or `eXaMpLE`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Trailer { get; set; }
+        public string? Trailer { get => _explicitNullValueTrailer; set { _explicitNullValueTrailer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trailer"); else _explicitNullProperties?.Remove("trailer"); } }
+        private string? _explicitNullValueTrailer = default!;
 #nullable restore
 #else
-        public string Trailer { get; set; }
+        public string Trailer { get => _explicitNullValueTrailer; set { _explicitNullValueTrailer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trailer"); else _explicitNullProperties?.Remove("trailer"); } }
+        private string _explicitNullValueTrailer = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdRepositoryChangelogRequest"/> and sets the default values.
@@ -97,7 +130,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdRepositoryChangelogRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdRepositoryChangelogRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdRepositoryChangelogRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -134,6 +167,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("message", Message);
             writer.WriteStringValue("to", To);
             writer.WriteStringValue("trailer", Trailer);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

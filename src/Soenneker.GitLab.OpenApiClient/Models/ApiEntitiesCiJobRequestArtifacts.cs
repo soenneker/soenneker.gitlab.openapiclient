@@ -11,72 +11,103 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ApiEntitiesCiJobRequestArtifacts : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("artifact_format") is { } nullNodeArtifactFormat && nullNodeArtifactFormat.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ArtifactFormat = null;
+            if (parseNode.GetChildNode("artifact_type") is { } nullNodeArtifactType && nullNodeArtifactType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ArtifactType = null;
+            if (parseNode.GetChildNode("exclude") is { } nullNodeExclude && nullNodeExclude.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Exclude = null;
+            if (parseNode.GetChildNode("expire_in") is { } nullNodeExpireIn && nullNodeExpireIn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExpireIn = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("paths") is { } nullNodePaths && nullNodePaths.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Paths = null;
+            if (parseNode.GetChildNode("untracked") is { } nullNodeUntracked && nullNodeUntracked.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Untracked = null;
+            if (parseNode.GetChildNode("when") is { } nullNodeWhen && nullNodeWhen.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) When = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The artifact_format property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ArtifactFormat { get; set; }
+        public string? ArtifactFormat { get => _explicitNullValueArtifactFormat; set { _explicitNullValueArtifactFormat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("artifact_format"); else _explicitNullProperties?.Remove("artifact_format"); } }
+        private string? _explicitNullValueArtifactFormat = default!;
 #nullable restore
 #else
-        public string ArtifactFormat { get; set; }
+        public string ArtifactFormat { get => _explicitNullValueArtifactFormat; set { _explicitNullValueArtifactFormat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("artifact_format"); else _explicitNullProperties?.Remove("artifact_format"); } }
+        private string _explicitNullValueArtifactFormat = default!;
 #endif
         /// <summary>The artifact_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ArtifactType { get; set; }
+        public string? ArtifactType { get => _explicitNullValueArtifactType; set { _explicitNullValueArtifactType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("artifact_type"); else _explicitNullProperties?.Remove("artifact_type"); } }
+        private string? _explicitNullValueArtifactType = default!;
 #nullable restore
 #else
-        public string ArtifactType { get; set; }
+        public string ArtifactType { get => _explicitNullValueArtifactType; set { _explicitNullValueArtifactType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("artifact_type"); else _explicitNullProperties?.Remove("artifact_type"); } }
+        private string _explicitNullValueArtifactType = default!;
 #endif
         /// <summary>The exclude property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Exclude { get; set; }
+        public string? Exclude { get => _explicitNullValueExclude; set { _explicitNullValueExclude = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exclude"); else _explicitNullProperties?.Remove("exclude"); } }
+        private string? _explicitNullValueExclude = default!;
 #nullable restore
 #else
-        public string Exclude { get; set; }
+        public string Exclude { get => _explicitNullValueExclude; set { _explicitNullValueExclude = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exclude"); else _explicitNullProperties?.Remove("exclude"); } }
+        private string _explicitNullValueExclude = default!;
 #endif
         /// <summary>The expire_in property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExpireIn { get; set; }
+        public string? ExpireIn { get => _explicitNullValueExpireIn; set { _explicitNullValueExpireIn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expire_in"); else _explicitNullProperties?.Remove("expire_in"); } }
+        private string? _explicitNullValueExpireIn = default!;
 #nullable restore
 #else
-        public string ExpireIn { get; set; }
+        public string ExpireIn { get => _explicitNullValueExpireIn; set { _explicitNullValueExpireIn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expire_in"); else _explicitNullProperties?.Remove("expire_in"); } }
+        private string _explicitNullValueExpireIn = default!;
 #endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>The paths property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Paths { get; set; }
+        public string? Paths { get => _explicitNullValuePaths; set { _explicitNullValuePaths = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paths"); else _explicitNullProperties?.Remove("paths"); } }
+        private string? _explicitNullValuePaths = default!;
 #nullable restore
 #else
-        public string Paths { get; set; }
+        public string Paths { get => _explicitNullValuePaths; set { _explicitNullValuePaths = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paths"); else _explicitNullProperties?.Remove("paths"); } }
+        private string _explicitNullValuePaths = default!;
 #endif
         /// <summary>The untracked property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Untracked { get; set; }
+        public string? Untracked { get => _explicitNullValueUntracked; set { _explicitNullValueUntracked = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("untracked"); else _explicitNullProperties?.Remove("untracked"); } }
+        private string? _explicitNullValueUntracked = default!;
 #nullable restore
 #else
-        public string Untracked { get; set; }
+        public string Untracked { get => _explicitNullValueUntracked; set { _explicitNullValueUntracked = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("untracked"); else _explicitNullProperties?.Remove("untracked"); } }
+        private string _explicitNullValueUntracked = default!;
 #endif
         /// <summary>The when property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? When { get; set; }
+        public string? When { get => _explicitNullValueWhen; set { _explicitNullValueWhen = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("when"); else _explicitNullProperties?.Remove("when"); } }
+        private string? _explicitNullValueWhen = default!;
 #nullable restore
 #else
-        public string When { get; set; }
+        public string When { get => _explicitNullValueWhen; set { _explicitNullValueWhen = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("when"); else _explicitNullProperties?.Remove("when"); } }
+        private string _explicitNullValueWhen = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestArtifacts"/> and sets the default values.
@@ -93,7 +124,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestArtifacts CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestArtifacts();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestArtifacts(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -128,6 +159,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("paths", Paths);
             writer.WriteStringValue("untracked", Untracked);
             writer.WriteStringValue("when", When);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

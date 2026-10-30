@@ -55,7 +55,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Integrations.Jira_forge.Installa
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBasicSuccess>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBasicSuccess.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBasicSuccess>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBasicSuccess.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Sets the GitLab instance the installation points at. Omit instance_url (or send null) for GitLab.com. Requires a Jira site or organization admin.
@@ -75,7 +75,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Integrations.Jira_forge.Installa
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPutRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBasicSuccess>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBasicSuccess.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBasicSuccess>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBasicSuccess.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Called by the Forge app preUninstall hook. A pure-native install fires no Connect uninstalled event, so this is what removes the installation, its subscriptions, and deactivates the linked jira_cloud_app integrations. FIT authentication carries the same trust as the signed Connect lifecycle event, so no Jira admin check is needed. Succeeds with no change when the installation is already gone.

@@ -11,101 +11,145 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ApiEntitiesAiExternalAgentsSession : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("agent_type") is { } nullNodeAgentType && nullNodeAgentType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AgentType = null;
+            if (parseNode.GetChildNode("agent_version") is { } nullNodeAgentVersion && nullNodeAgentVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AgentVersion = null;
+            if (parseNode.GetChildNode("created_at") is { } nullNodeCreatedAt && nullNodeCreatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedAt = null;
+            if (parseNode.GetChildNode("external_xid") is { } nullNodeExternalXid && nullNodeExternalXid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalXid = null;
+            if (parseNode.GetChildNode("flow_type") is { } nullNodeFlowType && nullNodeFlowType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FlowType = null;
+            if (parseNode.GetChildNode("glab_version") is { } nullNodeGlabVersion && nullNodeGlabVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GlabVersion = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("session_finished_at") is { } nullNodeSessionFinishedAt && nullNodeSessionFinishedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SessionFinishedAt = null;
+            if (parseNode.GetChildNode("session_started_at") is { } nullNodeSessionStartedAt && nullNodeSessionStartedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SessionStartedAt = null;
+            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("sync_type") is { } nullNodeSyncType && nullNodeSyncType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SyncType = null;
+            if (parseNode.GetChildNode("updated_at") is { } nullNodeUpdatedAt && nullNodeUpdatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdatedAt = null;
+            if (parseNode.GetChildNode("user_id") is { } nullNodeUserId && nullNodeUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The agent_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AgentType { get; set; }
+        public string? AgentType { get => _explicitNullValueAgentType; set { _explicitNullValueAgentType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("agent_type"); else _explicitNullProperties?.Remove("agent_type"); } }
+        private string? _explicitNullValueAgentType = default!;
 #nullable restore
 #else
-        public string AgentType { get; set; }
+        public string AgentType { get => _explicitNullValueAgentType; set { _explicitNullValueAgentType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("agent_type"); else _explicitNullProperties?.Remove("agent_type"); } }
+        private string _explicitNullValueAgentType = default!;
 #endif
         /// <summary>The agent_version property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AgentVersion { get; set; }
+        public string? AgentVersion { get => _explicitNullValueAgentVersion; set { _explicitNullValueAgentVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("agent_version"); else _explicitNullProperties?.Remove("agent_version"); } }
+        private string? _explicitNullValueAgentVersion = default!;
 #nullable restore
 #else
-        public string AgentVersion { get; set; }
+        public string AgentVersion { get => _explicitNullValueAgentVersion; set { _explicitNullValueAgentVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("agent_version"); else _explicitNullProperties?.Remove("agent_version"); } }
+        private string _explicitNullValueAgentVersion = default!;
 #endif
         /// <summary>The created_at property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CreatedAt { get; set; }
+        public string? CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_at"); else _explicitNullProperties?.Remove("created_at"); } }
+        private string? _explicitNullValueCreatedAt = default!;
 #nullable restore
 #else
-        public string CreatedAt { get; set; }
+        public string CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_at"); else _explicitNullProperties?.Remove("created_at"); } }
+        private string _explicitNullValueCreatedAt = default!;
 #endif
         /// <summary>The external_xid property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExternalXid { get; set; }
+        public string? ExternalXid { get => _explicitNullValueExternalXid; set { _explicitNullValueExternalXid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_xid"); else _explicitNullProperties?.Remove("external_xid"); } }
+        private string? _explicitNullValueExternalXid = default!;
 #nullable restore
 #else
-        public string ExternalXid { get; set; }
+        public string ExternalXid { get => _explicitNullValueExternalXid; set { _explicitNullValueExternalXid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_xid"); else _explicitNullProperties?.Remove("external_xid"); } }
+        private string _explicitNullValueExternalXid = default!;
 #endif
         /// <summary>The flow_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FlowType { get; set; }
+        public string? FlowType { get => _explicitNullValueFlowType; set { _explicitNullValueFlowType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flow_type"); else _explicitNullProperties?.Remove("flow_type"); } }
+        private string? _explicitNullValueFlowType = default!;
 #nullable restore
 #else
-        public string FlowType { get; set; }
+        public string FlowType { get => _explicitNullValueFlowType; set { _explicitNullValueFlowType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flow_type"); else _explicitNullProperties?.Remove("flow_type"); } }
+        private string _explicitNullValueFlowType = default!;
 #endif
         /// <summary>The glab_version property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? GlabVersion { get; set; }
+        public string? GlabVersion { get => _explicitNullValueGlabVersion; set { _explicitNullValueGlabVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("glab_version"); else _explicitNullProperties?.Remove("glab_version"); } }
+        private string? _explicitNullValueGlabVersion = default!;
 #nullable restore
 #else
-        public string GlabVersion { get; set; }
+        public string GlabVersion { get => _explicitNullValueGlabVersion; set { _explicitNullValueGlabVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("glab_version"); else _explicitNullProperties?.Remove("glab_version"); } }
+        private string _explicitNullValueGlabVersion = default!;
 #endif
         /// <summary>The id property</summary>
-        public int? Id { get; set; }
+        public int? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private int? _explicitNullValueId = default!;
         /// <summary>The session_finished_at property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SessionFinishedAt { get; set; }
+        public string? SessionFinishedAt { get => _explicitNullValueSessionFinishedAt; set { _explicitNullValueSessionFinishedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session_finished_at"); else _explicitNullProperties?.Remove("session_finished_at"); } }
+        private string? _explicitNullValueSessionFinishedAt = default!;
 #nullable restore
 #else
-        public string SessionFinishedAt { get; set; }
+        public string SessionFinishedAt { get => _explicitNullValueSessionFinishedAt; set { _explicitNullValueSessionFinishedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session_finished_at"); else _explicitNullProperties?.Remove("session_finished_at"); } }
+        private string _explicitNullValueSessionFinishedAt = default!;
 #endif
         /// <summary>The session_started_at property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SessionStartedAt { get; set; }
+        public string? SessionStartedAt { get => _explicitNullValueSessionStartedAt; set { _explicitNullValueSessionStartedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session_started_at"); else _explicitNullProperties?.Remove("session_started_at"); } }
+        private string? _explicitNullValueSessionStartedAt = default!;
 #nullable restore
 #else
-        public string SessionStartedAt { get; set; }
+        public string SessionStartedAt { get => _explicitNullValueSessionStartedAt; set { _explicitNullValueSessionStartedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session_started_at"); else _explicitNullProperties?.Remove("session_started_at"); } }
+        private string _explicitNullValueSessionStartedAt = default!;
 #endif
         /// <summary>The status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Status { get; set; }
+        public string? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private string? _explicitNullValueStatus = default!;
 #nullable restore
 #else
-        public string Status { get; set; }
+        public string Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private string _explicitNullValueStatus = default!;
 #endif
         /// <summary>The sync_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SyncType { get; set; }
+        public string? SyncType { get => _explicitNullValueSyncType; set { _explicitNullValueSyncType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sync_type"); else _explicitNullProperties?.Remove("sync_type"); } }
+        private string? _explicitNullValueSyncType = default!;
 #nullable restore
 #else
-        public string SyncType { get; set; }
+        public string SyncType { get => _explicitNullValueSyncType; set { _explicitNullValueSyncType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sync_type"); else _explicitNullProperties?.Remove("sync_type"); } }
+        private string _explicitNullValueSyncType = default!;
 #endif
         /// <summary>The updated_at property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UpdatedAt { get; set; }
+        public string? UpdatedAt { get => _explicitNullValueUpdatedAt; set { _explicitNullValueUpdatedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updated_at"); else _explicitNullProperties?.Remove("updated_at"); } }
+        private string? _explicitNullValueUpdatedAt = default!;
 #nullable restore
 #else
-        public string UpdatedAt { get; set; }
+        public string UpdatedAt { get => _explicitNullValueUpdatedAt; set { _explicitNullValueUpdatedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updated_at"); else _explicitNullProperties?.Remove("updated_at"); } }
+        private string _explicitNullValueUpdatedAt = default!;
 #endif
         /// <summary>The user_id property</summary>
-        public int? UserId { get; set; }
+        public int? UserId { get => _explicitNullValueUserId; set { _explicitNullValueUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_id"); else _explicitNullProperties?.Remove("user_id"); } }
+        private int? _explicitNullValueUserId = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiExternalAgentsSession"/> and sets the default values.
         /// </summary>
@@ -121,7 +165,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiExternalAgentsSession CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiExternalAgentsSession();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiExternalAgentsSession(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -166,6 +210,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("sync_type", SyncType);
             writer.WriteStringValue("updated_at", UpdatedAt);
             writer.WriteIntValue("user_id", UserId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

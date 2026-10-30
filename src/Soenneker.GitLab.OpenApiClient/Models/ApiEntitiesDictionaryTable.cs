@@ -11,32 +11,48 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ApiEntitiesDictionaryTable : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("feature_categories") is { } nullNodeFeatureCategories && nullNodeFeatureCategories.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FeatureCategories = null;
+            if (parseNode.GetChildNode("table_name") is { } nullNodeTableName && nullNodeTableName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TableName = null;
+            if (parseNode.GetChildNode("table_size") is { } nullNodeTableSize && nullNodeTableSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TableSize = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The feature_categories property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? FeatureCategories { get; set; }
+        public List<string>? FeatureCategories { get => _explicitNullValueFeatureCategories; set { _explicitNullValueFeatureCategories = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("feature_categories"); else _explicitNullProperties?.Remove("feature_categories"); } }
+        private List<string>? _explicitNullValueFeatureCategories = default!;
 #nullable restore
 #else
-        public List<string> FeatureCategories { get; set; }
+        public List<string> FeatureCategories { get => _explicitNullValueFeatureCategories; set { _explicitNullValueFeatureCategories = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("feature_categories"); else _explicitNullProperties?.Remove("feature_categories"); } }
+        private List<string> _explicitNullValueFeatureCategories = default!;
 #endif
         /// <summary>The table_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TableName { get; set; }
+        public string? TableName { get => _explicitNullValueTableName; set { _explicitNullValueTableName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("table_name"); else _explicitNullProperties?.Remove("table_name"); } }
+        private string? _explicitNullValueTableName = default!;
 #nullable restore
 #else
-        public string TableName { get; set; }
+        public string TableName { get => _explicitNullValueTableName; set { _explicitNullValueTableName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("table_name"); else _explicitNullProperties?.Remove("table_name"); } }
+        private string _explicitNullValueTableName = default!;
 #endif
         /// <summary>The table_size property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TableSize { get; set; }
+        public string? TableSize { get => _explicitNullValueTableSize; set { _explicitNullValueTableSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("table_size"); else _explicitNullProperties?.Remove("table_size"); } }
+        private string? _explicitNullValueTableSize = default!;
 #nullable restore
 #else
-        public string TableSize { get; set; }
+        public string TableSize { get => _explicitNullValueTableSize; set { _explicitNullValueTableSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("table_size"); else _explicitNullProperties?.Remove("table_size"); } }
+        private string _explicitNullValueTableSize = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDictionaryTable"/> and sets the default values.
@@ -53,7 +69,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDictionaryTable CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDictionaryTable();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDictionaryTable(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -78,6 +94,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("feature_categories", FeatureCategories);
             writer.WriteStringValue("table_name", TableName);
             writer.WriteStringValue("table_size", TableSize);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

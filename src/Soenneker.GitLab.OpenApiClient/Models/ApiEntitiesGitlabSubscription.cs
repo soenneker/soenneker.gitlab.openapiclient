@@ -11,32 +11,48 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ApiEntitiesGitlabSubscription : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("billing") is { } nullNodeBilling && nullNodeBilling.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Billing = null;
+            if (parseNode.GetChildNode("plan") is { } nullNodePlan && nullNodePlan.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Plan = null;
+            if (parseNode.GetChildNode("usage") is { } nullNodeUsage && nullNodeUsage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Usage = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The billing property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGitlabSubscriptionBilling? Billing { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGitlabSubscriptionBilling? Billing { get => _explicitNullValueBilling; set { _explicitNullValueBilling = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing"); else _explicitNullProperties?.Remove("billing"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGitlabSubscriptionBilling? _explicitNullValueBilling = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGitlabSubscriptionBilling Billing { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGitlabSubscriptionBilling Billing { get => _explicitNullValueBilling; set { _explicitNullValueBilling = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billing"); else _explicitNullProperties?.Remove("billing"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGitlabSubscriptionBilling _explicitNullValueBilling = default!;
 #endif
         /// <summary>The plan property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGitlabSubscriptionPlan? Plan { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGitlabSubscriptionPlan? Plan { get => _explicitNullValuePlan; set { _explicitNullValuePlan = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("plan"); else _explicitNullProperties?.Remove("plan"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGitlabSubscriptionPlan? _explicitNullValuePlan = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGitlabSubscriptionPlan Plan { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGitlabSubscriptionPlan Plan { get => _explicitNullValuePlan; set { _explicitNullValuePlan = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("plan"); else _explicitNullProperties?.Remove("plan"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGitlabSubscriptionPlan _explicitNullValuePlan = default!;
 #endif
         /// <summary>The usage property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGitlabSubscriptionUsage? Usage { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGitlabSubscriptionUsage? Usage { get => _explicitNullValueUsage; set { _explicitNullValueUsage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("usage"); else _explicitNullProperties?.Remove("usage"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGitlabSubscriptionUsage? _explicitNullValueUsage = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGitlabSubscriptionUsage Usage { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGitlabSubscriptionUsage Usage { get => _explicitNullValueUsage; set { _explicitNullValueUsage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("usage"); else _explicitNullProperties?.Remove("usage"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGitlabSubscriptionUsage _explicitNullValueUsage = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGitlabSubscription"/> and sets the default values.
@@ -53,7 +69,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGitlabSubscription CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGitlabSubscription();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGitlabSubscription(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -78,6 +94,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGitlabSubscriptionBilling>("billing", Billing);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGitlabSubscriptionPlan>("plan", Plan);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGitlabSubscriptionUsage>("usage", Usage);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

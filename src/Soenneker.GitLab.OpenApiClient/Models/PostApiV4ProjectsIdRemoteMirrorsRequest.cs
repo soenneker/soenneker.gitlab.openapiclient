@@ -11,40 +11,64 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostApiV4ProjectsIdRemoteMirrorsRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("auth_method") is { } nullNodeAuthMethod && nullNodeAuthMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AuthMethod = null;
+            if (parseNode.GetChildNode("enabled") is { } nullNodeEnabled && nullNodeEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Enabled = null;
+            if (parseNode.GetChildNode("host_keys") is { } nullNodeHostKeys && nullNodeHostKeys.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HostKeys = null;
+            if (parseNode.GetChildNode("keep_divergent_refs") is { } nullNodeKeepDivergentRefs && nullNodeKeepDivergentRefs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) KeepDivergentRefs = null;
+            if (parseNode.GetChildNode("mirror_branch_regex") is { } nullNodeMirrorBranchRegex && nullNodeMirrorBranchRegex.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MirrorBranchRegex = null;
+            if (parseNode.GetChildNode("only_protected_branches") is { } nullNodeOnlyProtectedBranches && nullNodeOnlyProtectedBranches.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OnlyProtectedBranches = null;
+            if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Mirror authentication method.</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdRemoteMirrorsRequestAuthMethod? AuthMethod { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdRemoteMirrorsRequestAuthMethod? AuthMethod { get => _explicitNullValueAuthMethod; set { _explicitNullValueAuthMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auth_method"); else _explicitNullProperties?.Remove("auth_method"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdRemoteMirrorsRequestAuthMethod? _explicitNullValueAuthMethod = default!;
         /// <summary>If `true`, the mirror is enabled.</summary>
-        public bool? Enabled { get; set; }
+        public bool? Enabled { get => _explicitNullValueEnabled; set { _explicitNullValueEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enabled"); else _explicitNullProperties?.Remove("enabled"); } }
+        private bool? _explicitNullValueEnabled = default!;
         /// <summary>SSH host keys in bare format, such as `ssh-ed25519 AAAA...`, or full `known_hosts` format, such as `hostname ssh-ed25519 AAAA...`. Bare keys use the hostname from the mirror URL.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? HostKeys { get; set; }
+        public List<string>? HostKeys { get => _explicitNullValueHostKeys; set { _explicitNullValueHostKeys = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("host_keys"); else _explicitNullProperties?.Remove("host_keys"); } }
+        private List<string>? _explicitNullValueHostKeys = default!;
 #nullable restore
 #else
-        public List<string> HostKeys { get; set; }
+        public List<string> HostKeys { get => _explicitNullValueHostKeys; set { _explicitNullValueHostKeys = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("host_keys"); else _explicitNullProperties?.Remove("host_keys"); } }
+        private List<string> _explicitNullValueHostKeys = default!;
 #endif
         /// <summary>If `true`, divergent refs are kept when mirroring.</summary>
-        public bool? KeepDivergentRefs { get; set; }
+        public bool? KeepDivergentRefs { get => _explicitNullValueKeepDivergentRefs; set { _explicitNullValueKeepDivergentRefs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("keep_divergent_refs"); else _explicitNullProperties?.Remove("keep_divergent_refs"); } }
+        private bool? _explicitNullValueKeepDivergentRefs = default!;
         /// <summary>Determines if only matched branches are mirrored. Mutually exclusive with `only_protected_branches`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MirrorBranchRegex { get; set; }
+        public string? MirrorBranchRegex { get => _explicitNullValueMirrorBranchRegex; set { _explicitNullValueMirrorBranchRegex = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mirror_branch_regex"); else _explicitNullProperties?.Remove("mirror_branch_regex"); } }
+        private string? _explicitNullValueMirrorBranchRegex = default!;
 #nullable restore
 #else
-        public string MirrorBranchRegex { get; set; }
+        public string MirrorBranchRegex { get => _explicitNullValueMirrorBranchRegex; set { _explicitNullValueMirrorBranchRegex = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mirror_branch_regex"); else _explicitNullProperties?.Remove("mirror_branch_regex"); } }
+        private string _explicitNullValueMirrorBranchRegex = default!;
 #endif
         /// <summary>If `true`, only protected branches are mirrored. Mutually exclusive with `mirror_branch_regex`.</summary>
-        public bool? OnlyProtectedBranches { get; set; }
+        public bool? OnlyProtectedBranches { get => _explicitNullValueOnlyProtectedBranches; set { _explicitNullValueOnlyProtectedBranches = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("only_protected_branches"); else _explicitNullProperties?.Remove("only_protected_branches"); } }
+        private bool? _explicitNullValueOnlyProtectedBranches = default!;
         /// <summary>Target URL to which the repository is mirrored.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Url { get; set; }
+        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        private string? _explicitNullValueUrl = default!;
 #nullable restore
 #else
-        public string Url { get; set; }
+        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        private string _explicitNullValueUrl = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdRemoteMirrorsRequest"/> and sets the default values.
@@ -61,7 +85,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdRemoteMirrorsRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdRemoteMirrorsRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdRemoteMirrorsRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -94,6 +118,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("mirror_branch_regex", MirrorBranchRegex);
             writer.WriteBoolValue("only_protected_branches", OnlyProtectedBranches);
             writer.WriteStringValue("url", Url);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

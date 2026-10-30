@@ -11,68 +11,100 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ApiEntitiesAiDuoWorkflowsCheckpoint : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("checkpoint") is { } nullNodeCheckpoint && nullNodeCheckpoint.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Checkpoint = null;
+            if (parseNode.GetChildNode("checkpoint_ns") is { } nullNodeCheckpointNs && nullNodeCheckpointNs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CheckpointNs = null;
+            if (parseNode.GetChildNode("checkpoint_writes") is { } nullNodeCheckpointWrites && nullNodeCheckpointWrites.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CheckpointWrites = null;
+            if (parseNode.GetChildNode("compressed_checkpoint") is { } nullNodeCompressedCheckpoint && nullNodeCompressedCheckpoint.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CompressedCheckpoint = null;
+            if (parseNode.GetChildNode("current_thread") is { } nullNodeCurrentThread && nullNodeCurrentThread.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CurrentThread = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("metadata") is { } nullNodeMetadata && nullNodeMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metadata = null;
+            if (parseNode.GetChildNode("parent_ts") is { } nullNodeParentTs && nullNodeParentTs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ParentTs = null;
+            if (parseNode.GetChildNode("thread_ts") is { } nullNodeThreadTs && nullNodeThreadTs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ThreadTs = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The checkpoint property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiDuoWorkflowsCheckpointCheckpointProperty? Checkpoint { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiDuoWorkflowsCheckpointCheckpointProperty? Checkpoint { get => _explicitNullValueCheckpoint; set { _explicitNullValueCheckpoint = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checkpoint"); else _explicitNullProperties?.Remove("checkpoint"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiDuoWorkflowsCheckpointCheckpointProperty? _explicitNullValueCheckpoint = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiDuoWorkflowsCheckpointCheckpointProperty Checkpoint { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiDuoWorkflowsCheckpointCheckpointProperty Checkpoint { get => _explicitNullValueCheckpoint; set { _explicitNullValueCheckpoint = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checkpoint"); else _explicitNullProperties?.Remove("checkpoint"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiDuoWorkflowsCheckpointCheckpointProperty _explicitNullValueCheckpoint = default!;
 #endif
         /// <summary>The checkpoint_ns property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CheckpointNs { get; set; }
+        public string? CheckpointNs { get => _explicitNullValueCheckpointNs; set { _explicitNullValueCheckpointNs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checkpoint_ns"); else _explicitNullProperties?.Remove("checkpoint_ns"); } }
+        private string? _explicitNullValueCheckpointNs = default!;
 #nullable restore
 #else
-        public string CheckpointNs { get; set; }
+        public string CheckpointNs { get => _explicitNullValueCheckpointNs; set { _explicitNullValueCheckpointNs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checkpoint_ns"); else _explicitNullProperties?.Remove("checkpoint_ns"); } }
+        private string _explicitNullValueCheckpointNs = default!;
 #endif
         /// <summary>The checkpoint_writes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiDuoWorkflowsCheckpointWrite>? CheckpointWrites { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiDuoWorkflowsCheckpointWrite>? CheckpointWrites { get => _explicitNullValueCheckpointWrites; set { _explicitNullValueCheckpointWrites = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checkpoint_writes"); else _explicitNullProperties?.Remove("checkpoint_writes"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiDuoWorkflowsCheckpointWrite>? _explicitNullValueCheckpointWrites = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiDuoWorkflowsCheckpointWrite> CheckpointWrites { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiDuoWorkflowsCheckpointWrite> CheckpointWrites { get => _explicitNullValueCheckpointWrites; set { _explicitNullValueCheckpointWrites = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checkpoint_writes"); else _explicitNullProperties?.Remove("checkpoint_writes"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiDuoWorkflowsCheckpointWrite> _explicitNullValueCheckpointWrites = default!;
 #endif
         /// <summary>The compressed_checkpoint property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CompressedCheckpoint { get; set; }
+        public string? CompressedCheckpoint { get => _explicitNullValueCompressedCheckpoint; set { _explicitNullValueCompressedCheckpoint = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("compressed_checkpoint"); else _explicitNullProperties?.Remove("compressed_checkpoint"); } }
+        private string? _explicitNullValueCompressedCheckpoint = default!;
 #nullable restore
 #else
-        public string CompressedCheckpoint { get; set; }
+        public string CompressedCheckpoint { get => _explicitNullValueCompressedCheckpoint; set { _explicitNullValueCompressedCheckpoint = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("compressed_checkpoint"); else _explicitNullProperties?.Remove("compressed_checkpoint"); } }
+        private string _explicitNullValueCompressedCheckpoint = default!;
 #endif
         /// <summary>The current_thread property</summary>
-        public int? CurrentThread { get; set; }
+        public int? CurrentThread { get => _explicitNullValueCurrentThread; set { _explicitNullValueCurrentThread = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("current_thread"); else _explicitNullProperties?.Remove("current_thread"); } }
+        private int? _explicitNullValueCurrentThread = default!;
         /// <summary>The id property</summary>
-        public int? Id { get; set; }
+        public int? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private int? _explicitNullValueId = default!;
         /// <summary>The metadata property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiDuoWorkflowsCheckpointMetadataProperty? Metadata { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiDuoWorkflowsCheckpointMetadataProperty? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiDuoWorkflowsCheckpointMetadataProperty? _explicitNullValueMetadata = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiDuoWorkflowsCheckpointMetadataProperty Metadata { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiDuoWorkflowsCheckpointMetadataProperty Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiDuoWorkflowsCheckpointMetadataProperty _explicitNullValueMetadata = default!;
 #endif
         /// <summary>The parent_ts property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ParentTs { get; set; }
+        public string? ParentTs { get => _explicitNullValueParentTs; set { _explicitNullValueParentTs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parent_ts"); else _explicitNullProperties?.Remove("parent_ts"); } }
+        private string? _explicitNullValueParentTs = default!;
 #nullable restore
 #else
-        public string ParentTs { get; set; }
+        public string ParentTs { get => _explicitNullValueParentTs; set { _explicitNullValueParentTs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parent_ts"); else _explicitNullProperties?.Remove("parent_ts"); } }
+        private string _explicitNullValueParentTs = default!;
 #endif
         /// <summary>The thread_ts property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ThreadTs { get; set; }
+        public string? ThreadTs { get => _explicitNullValueThreadTs; set { _explicitNullValueThreadTs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thread_ts"); else _explicitNullProperties?.Remove("thread_ts"); } }
+        private string? _explicitNullValueThreadTs = default!;
 #nullable restore
 #else
-        public string ThreadTs { get; set; }
+        public string ThreadTs { get => _explicitNullValueThreadTs; set { _explicitNullValueThreadTs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("thread_ts"); else _explicitNullProperties?.Remove("thread_ts"); } }
+        private string _explicitNullValueThreadTs = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiDuoWorkflowsCheckpoint"/> and sets the default values.
@@ -89,7 +121,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiDuoWorkflowsCheckpoint CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiDuoWorkflowsCheckpoint();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiDuoWorkflowsCheckpoint(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -126,6 +158,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiDuoWorkflowsCheckpointMetadataProperty>("metadata", Metadata);
             writer.WriteStringValue("parent_ts", ParentTs);
             writer.WriteStringValue("thread_ts", ThreadTs);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

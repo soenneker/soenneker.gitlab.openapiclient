@@ -49,7 +49,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Error_tracking.Set
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesErrorTrackingProjectSetting>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesErrorTrackingProjectSetting.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesErrorTrackingProjectSetting>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesErrorTrackingProjectSetting.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Updates Error Tracking settings for a specified project. You must have the Maintainer or Owner role for the project.
@@ -69,7 +69,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Error_tracking.Set
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPatchRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesErrorTrackingProjectSetting>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesErrorTrackingProjectSetting.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesErrorTrackingProjectSetting>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesErrorTrackingProjectSetting.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Creates Error Tracking settings for a specified project. You must have the Maintainer or Owner role for the project.
@@ -89,7 +89,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Error_tracking.Set
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPutRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesErrorTrackingProjectSetting>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesErrorTrackingProjectSetting.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesErrorTrackingProjectSetting>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesErrorTrackingProjectSetting.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieves the Error Tracking settings for a specified project.

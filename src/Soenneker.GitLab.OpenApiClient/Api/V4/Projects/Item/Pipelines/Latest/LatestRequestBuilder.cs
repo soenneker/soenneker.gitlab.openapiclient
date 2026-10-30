@@ -49,7 +49,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines.Latest
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiPipelineWithMetadata>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiPipelineWithMetadata.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiPipelineWithMetadata>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiPipelineWithMetadata.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieves the latest pipeline for the most recent commit on a specified ref in a project. If no pipeline exists for the commit, a `403` status code is returned. Use the `page` and `per_page` pagination parameters to control the pagination of results.

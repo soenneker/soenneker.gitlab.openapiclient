@@ -11,24 +11,37 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ApiEntitiesPackagesConanPackageRevisions : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("packageReference") is { } nullNodePackageReference && nullNodePackageReference.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PackageReference = null;
+            if (parseNode.GetChildNode("revisions") is { } nullNodeRevisions && nullNodeRevisions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Revisions = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The Conan package reference</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PackageReference { get; set; }
+        public string? PackageReference { get => _explicitNullValuePackageReference; set { _explicitNullValuePackageReference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("packageReference"); else _explicitNullProperties?.Remove("packageReference"); } }
+        private string? _explicitNullValuePackageReference = default!;
 #nullable restore
 #else
-        public string PackageReference { get; set; }
+        public string PackageReference { get => _explicitNullValuePackageReference; set { _explicitNullValuePackageReference = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("packageReference"); else _explicitNullProperties?.Remove("packageReference"); } }
+        private string _explicitNullValuePackageReference = default!;
 #endif
         /// <summary>List of package revisions</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackagesConanRevision>? Revisions { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackagesConanRevision>? Revisions { get => _explicitNullValueRevisions; set { _explicitNullValueRevisions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("revisions"); else _explicitNullProperties?.Remove("revisions"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackagesConanRevision>? _explicitNullValueRevisions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackagesConanRevision> Revisions { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackagesConanRevision> Revisions { get => _explicitNullValueRevisions; set { _explicitNullValueRevisions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("revisions"); else _explicitNullProperties?.Remove("revisions"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackagesConanRevision> _explicitNullValueRevisions = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackagesConanPackageRevisions"/> and sets the default values.
@@ -45,7 +58,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackagesConanPackageRevisions CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackagesConanPackageRevisions();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackagesConanPackageRevisions(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +81,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("packageReference", PackageReference);
             writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackagesConanRevision>("revisions", Revisions);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

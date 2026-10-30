@@ -11,15 +11,28 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PutApiV4AdminActiveContextCollectionsIdRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("connection_id") is { } nullNodeConnectionId && nullNodeConnectionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConnectionId = null;
+            if (parseNode.GetChildNode("queue_shard_count") is { } nullNodeQueueShardCount && nullNodeQueueShardCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QueueShardCount = null;
+            if (parseNode.GetChildNode("queue_shard_limit") is { } nullNodeQueueShardLimit && nullNodeQueueShardLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) QueueShardLimit = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>ID of the connection. If omitted, defaults to the active connection.</summary>
-        public int? ConnectionId { get; set; }
+        public int? ConnectionId { get => _explicitNullValueConnectionId; set { _explicitNullValueConnectionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("connection_id"); else _explicitNullProperties?.Remove("connection_id"); } }
+        private int? _explicitNullValueConnectionId = default!;
         /// <summary>Number of queue shards. At least one of `queue_shard_count`, `queue_shard_limit` must be provided.</summary>
-        public int? QueueShardCount { get; set; }
+        public int? QueueShardCount { get => _explicitNullValueQueueShardCount; set { _explicitNullValueQueueShardCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("queue_shard_count"); else _explicitNullProperties?.Remove("queue_shard_count"); } }
+        private int? _explicitNullValueQueueShardCount = default!;
         /// <summary>Maximum number of queued items processed from each queue shard at a time. At least one of `queue_shard_count`, `queue_shard_limit` must be provided.</summary>
-        public int? QueueShardLimit { get; set; }
+        public int? QueueShardLimit { get => _explicitNullValueQueueShardLimit; set { _explicitNullValueQueueShardLimit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("queue_shard_limit"); else _explicitNullProperties?.Remove("queue_shard_limit"); } }
+        private int? _explicitNullValueQueueShardLimit = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4AdminActiveContextCollectionsIdRequest"/> and sets the default values.
         /// </summary>
@@ -35,7 +48,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4AdminActiveContextCollectionsIdRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4AdminActiveContextCollectionsIdRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4AdminActiveContextCollectionsIdRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -60,6 +73,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteIntValue("connection_id", ConnectionId);
             writer.WriteIntValue("queue_shard_count", QueueShardCount);
             writer.WriteIntValue("queue_shard_limit", QueueShardLimit);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

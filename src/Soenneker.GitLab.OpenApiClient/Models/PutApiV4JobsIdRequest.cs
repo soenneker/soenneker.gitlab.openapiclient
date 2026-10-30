@@ -11,58 +11,85 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PutApiV4JobsIdRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("checksum") is { } nullNodeChecksum && nullNodeChecksum.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Checksum = null;
+            if (parseNode.GetChildNode("exit_code") is { } nullNodeExitCode && nullNodeExitCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExitCode = null;
+            if (parseNode.GetChildNode("failure_reason") is { } nullNodeFailureReason && nullNodeFailureReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FailureReason = null;
+            if (parseNode.GetChildNode("output") is { } nullNodeOutput && nullNodeOutput.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Output = null;
+            if (parseNode.GetChildNode("runtime_environment_key") is { } nullNodeRuntimeEnvironmentKey && nullNodeRuntimeEnvironmentKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RuntimeEnvironmentKey = null;
+            if (parseNode.GetChildNode("state") is { } nullNodeState && nullNodeState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) State = null;
+            if (parseNode.GetChildNode("token") is { } nullNodeToken && nullNodeToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Token = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>CRC32 checksum of the job trace.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Checksum { get; set; }
+        public string? Checksum { get => _explicitNullValueChecksum; set { _explicitNullValueChecksum = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checksum"); else _explicitNullProperties?.Remove("checksum"); } }
+        private string? _explicitNullValueChecksum = default!;
 #nullable restore
 #else
-        public string Checksum { get; set; }
+        public string Checksum { get => _explicitNullValueChecksum; set { _explicitNullValueChecksum = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checksum"); else _explicitNullProperties?.Remove("checksum"); } }
+        private string _explicitNullValueChecksum = default!;
 #endif
         /// <summary>Exit code of the job.</summary>
-        public int? ExitCode { get; set; }
+        public int? ExitCode { get => _explicitNullValueExitCode; set { _explicitNullValueExitCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exit_code"); else _explicitNullProperties?.Remove("exit_code"); } }
+        private int? _explicitNullValueExitCode = default!;
         /// <summary>Failure reason of the job.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FailureReason { get; set; }
+        public string? FailureReason { get => _explicitNullValueFailureReason; set { _explicitNullValueFailureReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failure_reason"); else _explicitNullProperties?.Remove("failure_reason"); } }
+        private string? _explicitNullValueFailureReason = default!;
 #nullable restore
 #else
-        public string FailureReason { get; set; }
+        public string FailureReason { get => _explicitNullValueFailureReason; set { _explicitNullValueFailureReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failure_reason"); else _explicitNullProperties?.Remove("failure_reason"); } }
+        private string _explicitNullValueFailureReason = default!;
 #endif
         /// <summary>Build log state.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4JobsIdRequestOutput? Output { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4JobsIdRequestOutput? Output { get => _explicitNullValueOutput; set { _explicitNullValueOutput = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("output"); else _explicitNullProperties?.Remove("output"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4JobsIdRequestOutput? _explicitNullValueOutput = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4JobsIdRequestOutput Output { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4JobsIdRequestOutput Output { get => _explicitNullValueOutput; set { _explicitNullValueOutput = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("output"); else _explicitNullProperties?.Remove("output"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4JobsIdRequestOutput _explicitNullValueOutput = default!;
 #endif
         /// <summary>Runtime environment key emitted by the runner on job suspension</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RuntimeEnvironmentKey { get; set; }
+        public string? RuntimeEnvironmentKey { get => _explicitNullValueRuntimeEnvironmentKey; set { _explicitNullValueRuntimeEnvironmentKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("runtime_environment_key"); else _explicitNullProperties?.Remove("runtime_environment_key"); } }
+        private string? _explicitNullValueRuntimeEnvironmentKey = default!;
 #nullable restore
 #else
-        public string RuntimeEnvironmentKey { get; set; }
+        public string RuntimeEnvironmentKey { get => _explicitNullValueRuntimeEnvironmentKey; set { _explicitNullValueRuntimeEnvironmentKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("runtime_environment_key"); else _explicitNullProperties?.Remove("runtime_environment_key"); } }
+        private string _explicitNullValueRuntimeEnvironmentKey = default!;
 #endif
         /// <summary>Status of the job: `running`, `success`, or `failed`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? State { get; set; }
+        public string? State { get => _explicitNullValueState; set { _explicitNullValueState = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("state"); else _explicitNullProperties?.Remove("state"); } }
+        private string? _explicitNullValueState = default!;
 #nullable restore
 #else
-        public string State { get; set; }
+        public string State { get => _explicitNullValueState; set { _explicitNullValueState = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("state"); else _explicitNullProperties?.Remove("state"); } }
+        private string _explicitNullValueState = default!;
 #endif
         /// <summary>Authentication token of the job.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Token { get; set; }
+        public string? Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
+        private string? _explicitNullValueToken = default!;
 #nullable restore
 #else
-        public string Token { get; set; }
+        public string Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
+        private string _explicitNullValueToken = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4JobsIdRequest"/> and sets the default values.
@@ -79,7 +106,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4JobsIdRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4JobsIdRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4JobsIdRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -112,6 +139,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("runtime_environment_key", RuntimeEnvironmentKey);
             writer.WriteStringValue("state", State);
             writer.WriteStringValue("token", Token);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

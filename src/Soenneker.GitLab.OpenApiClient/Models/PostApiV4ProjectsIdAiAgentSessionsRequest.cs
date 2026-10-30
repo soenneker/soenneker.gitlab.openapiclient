@@ -11,56 +11,86 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostApiV4ProjectsIdAiAgentSessionsRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("agent_identity_id") is { } nullNodeAgentIdentityId && nullNodeAgentIdentityId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AgentIdentityId = null;
+            if (parseNode.GetChildNode("agent_type") is { } nullNodeAgentType && nullNodeAgentType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AgentType = null;
+            if (parseNode.GetChildNode("agent_version") is { } nullNodeAgentVersion && nullNodeAgentVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AgentVersion = null;
+            if (parseNode.GetChildNode("glab_version") is { } nullNodeGlabVersion && nullNodeGlabVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GlabVersion = null;
+            if (parseNode.GetChildNode("goal") is { } nullNodeGoal && nullNodeGoal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Goal = null;
+            if (parseNode.GetChildNode("idempotency_key") is { } nullNodeIdempotencyKey && nullNodeIdempotencyKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IdempotencyKey = null;
+            if (parseNode.GetChildNode("started_at") is { } nullNodeStartedAt && nullNodeStartedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartedAt = null;
+            if (parseNode.GetChildNode("sync_type") is { } nullNodeSyncType && nullNodeSyncType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SyncType = null;
+            if (parseNode.GetChildNode("workflow_definition") is { } nullNodeWorkflowDefinition && nullNodeWorkflowDefinition.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkflowDefinition = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>ID of the registered agent identity.</summary>
-        public int? AgentIdentityId { get; set; }
+        public int? AgentIdentityId { get => _explicitNullValueAgentIdentityId; set { _explicitNullValueAgentIdentityId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("agent_identity_id"); else _explicitNullProperties?.Remove("agent_identity_id"); } }
+        private int? _explicitNullValueAgentIdentityId = default!;
         /// <summary>The type of agent.</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdAiAgentSessionsRequestAgentType? AgentType { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdAiAgentSessionsRequestAgentType? AgentType { get => _explicitNullValueAgentType; set { _explicitNullValueAgentType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("agent_type"); else _explicitNullProperties?.Remove("agent_type"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdAiAgentSessionsRequestAgentType? _explicitNullValueAgentType = default!;
         /// <summary>Version of the agent that ran the session.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AgentVersion { get; set; }
+        public string? AgentVersion { get => _explicitNullValueAgentVersion; set { _explicitNullValueAgentVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("agent_version"); else _explicitNullProperties?.Remove("agent_version"); } }
+        private string? _explicitNullValueAgentVersion = default!;
 #nullable restore
 #else
-        public string AgentVersion { get; set; }
+        public string AgentVersion { get => _explicitNullValueAgentVersion; set { _explicitNullValueAgentVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("agent_version"); else _explicitNullProperties?.Remove("agent_version"); } }
+        private string _explicitNullValueAgentVersion = default!;
 #endif
         /// <summary>Version of the glab binary that created the session.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? GlabVersion { get; set; }
+        public string? GlabVersion { get => _explicitNullValueGlabVersion; set { _explicitNullValueGlabVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("glab_version"); else _explicitNullProperties?.Remove("glab_version"); } }
+        private string? _explicitNullValueGlabVersion = default!;
 #nullable restore
 #else
-        public string GlabVersion { get; set; }
+        public string GlabVersion { get => _explicitNullValueGlabVersion; set { _explicitNullValueGlabVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("glab_version"); else _explicitNullProperties?.Remove("glab_version"); } }
+        private string _explicitNullValueGlabVersion = default!;
 #endif
         /// <summary>User-provided session description.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Goal { get; set; }
+        public string? Goal { get => _explicitNullValueGoal; set { _explicitNullValueGoal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("goal"); else _explicitNullProperties?.Remove("goal"); } }
+        private string? _explicitNullValueGoal = default!;
 #nullable restore
 #else
-        public string Goal { get; set; }
+        public string Goal { get => _explicitNullValueGoal; set { _explicitNullValueGoal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("goal"); else _explicitNullProperties?.Remove("goal"); } }
+        private string _explicitNullValueGoal = default!;
 #endif
         /// <summary>Client-generated UUID for retry safety.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IdempotencyKey { get; set; }
+        public string? IdempotencyKey { get => _explicitNullValueIdempotencyKey; set { _explicitNullValueIdempotencyKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("idempotency_key"); else _explicitNullProperties?.Remove("idempotency_key"); } }
+        private string? _explicitNullValueIdempotencyKey = default!;
 #nullable restore
 #else
-        public string IdempotencyKey { get; set; }
+        public string IdempotencyKey { get => _explicitNullValueIdempotencyKey; set { _explicitNullValueIdempotencyKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("idempotency_key"); else _explicitNullProperties?.Remove("idempotency_key"); } }
+        private string _explicitNullValueIdempotencyKey = default!;
 #endif
         /// <summary>Session start time, supports backfill.</summary>
-        public DateTimeOffset? StartedAt { get; set; }
+        public DateTimeOffset? StartedAt { get => _explicitNullValueStartedAt; set { _explicitNullValueStartedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("started_at"); else _explicitNullProperties?.Remove("started_at"); } }
+        private DateTimeOffset? _explicitNullValueStartedAt = default!;
         /// <summary>How the session was synced.</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdAiAgentSessionsRequestSyncType? SyncType { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdAiAgentSessionsRequestSyncType? SyncType { get => _explicitNullValueSyncType; set { _explicitNullValueSyncType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sync_type"); else _explicitNullProperties?.Remove("sync_type"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdAiAgentSessionsRequestSyncType? _explicitNullValueSyncType = default!;
         /// <summary>Workflow definition identifier for the session.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WorkflowDefinition { get; set; }
+        public string? WorkflowDefinition { get => _explicitNullValueWorkflowDefinition; set { _explicitNullValueWorkflowDefinition = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflow_definition"); else _explicitNullProperties?.Remove("workflow_definition"); } }
+        private string? _explicitNullValueWorkflowDefinition = default!;
 #nullable restore
 #else
-        public string WorkflowDefinition { get; set; }
+        public string WorkflowDefinition { get => _explicitNullValueWorkflowDefinition; set { _explicitNullValueWorkflowDefinition = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflow_definition"); else _explicitNullProperties?.Remove("workflow_definition"); } }
+        private string _explicitNullValueWorkflowDefinition = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdAiAgentSessionsRequest"/> and sets the default values.
@@ -77,7 +107,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdAiAgentSessionsRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdAiAgentSessionsRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdAiAgentSessionsRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -114,6 +144,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("started_at", StartedAt);
             writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdAiAgentSessionsRequestSyncType>("sync_type", SyncType);
             writer.WriteStringValue("workflow_definition", WorkflowDefinition);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,19 +11,36 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PutApiV4UserPreferencesRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("emoji_skin_tone") is { } nullNodeEmojiSkinTone && nullNodeEmojiSkinTone.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmojiSkinTone = null;
+            if (parseNode.GetChildNode("pass_user_identities_to_ci_jwt") is { } nullNodePassUserIdentitiesToCiJwt && nullNodePassUserIdentitiesToCiJwt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PassUserIdentitiesToCiJwt = null;
+            if (parseNode.GetChildNode("policy_advanced_editor") is { } nullNodePolicyAdvancedEditor && nullNodePolicyAdvancedEditor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PolicyAdvancedEditor = null;
+            if (parseNode.GetChildNode("show_whitespace_in_diffs") is { } nullNodeShowWhitespaceInDiffs && nullNodeShowWhitespaceInDiffs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShowWhitespaceInDiffs = null;
+            if (parseNode.GetChildNode("view_diffs_file_by_file") is { } nullNodeViewDiffsFileByFile && nullNodeViewDiffsFileByFile.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ViewDiffsFileByFile = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Default skin tone for emoji that have skin tone variants. One of `default`, `light`, `medium_light`, `medium`, `medium_dark`, or `dark`. At least one of `view_diffs_file_by_file`, `show_whitespace_in_diffs`, `pass_user_identities_to_ci_jwt`, `policy_advanced_editor`, `emoji_skin_tone` must be provided.</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4UserPreferencesRequestEmojiSkinTone? EmojiSkinTone { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4UserPreferencesRequestEmojiSkinTone? EmojiSkinTone { get => _explicitNullValueEmojiSkinTone; set { _explicitNullValueEmojiSkinTone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emoji_skin_tone"); else _explicitNullProperties?.Remove("emoji_skin_tone"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4UserPreferencesRequestEmojiSkinTone? _explicitNullValueEmojiSkinTone = default!;
         /// <summary>If `true`, passes the user&apos;s external identities to CI jobs as part of a JSON web token. This attribute is internal to GitLab and must not be passed to third-party services. For more information, see [Token Payload](https://docs.gitlab.com/ci/secrets/id_token_authentication/#token-payload). At least one of `view_diffs_file_by_file`, `show_whitespace_in_diffs`, `pass_user_identities_to_ci_jwt`, `policy_advanced_editor`, `emoji_skin_tone` must be provided.</summary>
-        public bool? PassUserIdentitiesToCiJwt { get; set; }
+        public bool? PassUserIdentitiesToCiJwt { get => _explicitNullValuePassUserIdentitiesToCiJwt; set { _explicitNullValuePassUserIdentitiesToCiJwt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pass_user_identities_to_ci_jwt"); else _explicitNullProperties?.Remove("pass_user_identities_to_ci_jwt"); } }
+        private bool? _explicitNullValuePassUserIdentitiesToCiJwt = default!;
         /// <summary>If `true`, enables the advanced editor. At least one of `view_diffs_file_by_file`, `show_whitespace_in_diffs`, `pass_user_identities_to_ci_jwt`, `policy_advanced_editor`, `emoji_skin_tone` must be provided.</summary>
-        public bool? PolicyAdvancedEditor { get; set; }
+        public bool? PolicyAdvancedEditor { get => _explicitNullValuePolicyAdvancedEditor; set { _explicitNullValuePolicyAdvancedEditor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("policy_advanced_editor"); else _explicitNullProperties?.Remove("policy_advanced_editor"); } }
+        private bool? _explicitNullValuePolicyAdvancedEditor = default!;
         /// <summary>If `true`, the user sees whitespace changes in diffs. At least one of `view_diffs_file_by_file`, `show_whitespace_in_diffs`, `pass_user_identities_to_ci_jwt`, `policy_advanced_editor`, `emoji_skin_tone` must be provided.</summary>
-        public bool? ShowWhitespaceInDiffs { get; set; }
+        public bool? ShowWhitespaceInDiffs { get => _explicitNullValueShowWhitespaceInDiffs; set { _explicitNullValueShowWhitespaceInDiffs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("show_whitespace_in_diffs"); else _explicitNullProperties?.Remove("show_whitespace_in_diffs"); } }
+        private bool? _explicitNullValueShowWhitespaceInDiffs = default!;
         /// <summary>If `true`, the user sees only one file diff per page. At least one of `view_diffs_file_by_file`, `show_whitespace_in_diffs`, `pass_user_identities_to_ci_jwt`, `policy_advanced_editor`, `emoji_skin_tone` must be provided.</summary>
-        public bool? ViewDiffsFileByFile { get; set; }
+        public bool? ViewDiffsFileByFile { get => _explicitNullValueViewDiffsFileByFile; set { _explicitNullValueViewDiffsFileByFile = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("view_diffs_file_by_file"); else _explicitNullProperties?.Remove("view_diffs_file_by_file"); } }
+        private bool? _explicitNullValueViewDiffsFileByFile = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4UserPreferencesRequest"/> and sets the default values.
         /// </summary>
@@ -39,7 +56,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4UserPreferencesRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4UserPreferencesRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4UserPreferencesRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +85,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteBoolValue("policy_advanced_editor", PolicyAdvancedEditor);
             writer.WriteBoolValue("show_whitespace_in_diffs", ShowWhitespaceInDiffs);
             writer.WriteBoolValue("view_diffs_file_by_file", ViewDiffsFileByFile);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

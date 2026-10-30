@@ -11,31 +11,60 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ApiEntitiesApplicationStatistics : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("active_users") is { } nullNodeActiveUsers && nullNodeActiveUsers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ActiveUsers = null;
+            if (parseNode.GetChildNode("forks") is { } nullNodeForks && nullNodeForks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Forks = null;
+            if (parseNode.GetChildNode("groups") is { } nullNodeGroups && nullNodeGroups.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Groups = null;
+            if (parseNode.GetChildNode("issues") is { } nullNodeIssues && nullNodeIssues.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Issues = null;
+            if (parseNode.GetChildNode("merge_requests") is { } nullNodeMergeRequests && nullNodeMergeRequests.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MergeRequests = null;
+            if (parseNode.GetChildNode("milestones") is { } nullNodeMilestones && nullNodeMilestones.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Milestones = null;
+            if (parseNode.GetChildNode("notes") is { } nullNodeNotes && nullNodeNotes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Notes = null;
+            if (parseNode.GetChildNode("projects") is { } nullNodeProjects && nullNodeProjects.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Projects = null;
+            if (parseNode.GetChildNode("snippets") is { } nullNodeSnippets && nullNodeSnippets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Snippets = null;
+            if (parseNode.GetChildNode("ssh_keys") is { } nullNodeSshKeys && nullNodeSshKeys.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SshKeys = null;
+            if (parseNode.GetChildNode("users") is { } nullNodeUsers && nullNodeUsers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Users = null;
+        }
+
         /// <summary>Number of active users</summary>
-        public int? ActiveUsers { get; set; }
+        public int? ActiveUsers { get => _explicitNullValueActiveUsers; set { _explicitNullValueActiveUsers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("active_users"); else _explicitNullProperties?.Remove("active_users"); } }
+        private int? _explicitNullValueActiveUsers = default!;
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Approximate number of repo forks</summary>
-        public int? Forks { get; set; }
+        public int? Forks { get => _explicitNullValueForks; set { _explicitNullValueForks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("forks"); else _explicitNullProperties?.Remove("forks"); } }
+        private int? _explicitNullValueForks = default!;
         /// <summary>Approximate number of projects</summary>
-        public int? Groups { get; set; }
+        public int? Groups { get => _explicitNullValueGroups; set { _explicitNullValueGroups = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("groups"); else _explicitNullProperties?.Remove("groups"); } }
+        private int? _explicitNullValueGroups = default!;
         /// <summary>Approximate number of issues</summary>
-        public int? Issues { get; set; }
+        public int? Issues { get => _explicitNullValueIssues; set { _explicitNullValueIssues = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issues"); else _explicitNullProperties?.Remove("issues"); } }
+        private int? _explicitNullValueIssues = default!;
         /// <summary>Approximate number of merge requests</summary>
-        public int? MergeRequests { get; set; }
+        public int? MergeRequests { get => _explicitNullValueMergeRequests; set { _explicitNullValueMergeRequests = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_requests"); else _explicitNullProperties?.Remove("merge_requests"); } }
+        private int? _explicitNullValueMergeRequests = default!;
         /// <summary>Approximate number of milestones</summary>
-        public int? Milestones { get; set; }
+        public int? Milestones { get => _explicitNullValueMilestones; set { _explicitNullValueMilestones = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("milestones"); else _explicitNullProperties?.Remove("milestones"); } }
+        private int? _explicitNullValueMilestones = default!;
         /// <summary>Approximate number of notes</summary>
-        public int? Notes { get; set; }
+        public int? Notes { get => _explicitNullValueNotes; set { _explicitNullValueNotes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notes"); else _explicitNullProperties?.Remove("notes"); } }
+        private int? _explicitNullValueNotes = default!;
         /// <summary>Approximate number of projects</summary>
-        public int? Projects { get; set; }
+        public int? Projects { get => _explicitNullValueProjects; set { _explicitNullValueProjects = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("projects"); else _explicitNullProperties?.Remove("projects"); } }
+        private int? _explicitNullValueProjects = default!;
         /// <summary>Approximate number of snippets</summary>
-        public int? Snippets { get; set; }
+        public int? Snippets { get => _explicitNullValueSnippets; set { _explicitNullValueSnippets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("snippets"); else _explicitNullProperties?.Remove("snippets"); } }
+        private int? _explicitNullValueSnippets = default!;
         /// <summary>Approximate number of SSH keys</summary>
-        public int? SshKeys { get; set; }
+        public int? SshKeys { get => _explicitNullValueSshKeys; set { _explicitNullValueSshKeys = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ssh_keys"); else _explicitNullProperties?.Remove("ssh_keys"); } }
+        private int? _explicitNullValueSshKeys = default!;
         /// <summary>Approximate number of users</summary>
-        public int? Users { get; set; }
+        public int? Users { get => _explicitNullValueUsers; set { _explicitNullValueUsers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("users"); else _explicitNullProperties?.Remove("users"); } }
+        private int? _explicitNullValueUsers = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationStatistics"/> and sets the default values.
         /// </summary>
@@ -51,7 +80,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationStatistics CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationStatistics();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationStatistics(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -92,6 +121,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteIntValue("snippets", Snippets);
             writer.WriteIntValue("ssh_keys", SshKeys);
             writer.WriteIntValue("users", Users);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

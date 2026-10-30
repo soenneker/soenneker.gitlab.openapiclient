@@ -12,43 +12,69 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ApiEntitiesGitlabSubscriptionsAddOnPurchase : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("add_on") is { } nullNodeAddOn && nullNodeAddOn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddOn = null;
+            if (parseNode.GetChildNode("expires_on") is { } nullNodeExpiresOn && nullNodeExpiresOn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExpiresOn = null;
+            if (parseNode.GetChildNode("namespace_id") is { } nullNodeNamespaceId && nullNodeNamespaceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NamespaceId = null;
+            if (parseNode.GetChildNode("namespace_name") is { } nullNodeNamespaceName && nullNodeNamespaceName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NamespaceName = null;
+            if (parseNode.GetChildNode("purchase_xid") is { } nullNodePurchaseXid && nullNodePurchaseXid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PurchaseXid = null;
+            if (parseNode.GetChildNode("quantity") is { } nullNodeQuantity && nullNodeQuantity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Quantity = null;
+            if (parseNode.GetChildNode("started_on") is { } nullNodeStartedOn && nullNodeStartedOn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartedOn = null;
+            if (parseNode.GetChildNode("trial") is { } nullNodeTrial && nullNodeTrial.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Trial = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The add_on property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AddOn { get; set; }
+        public string? AddOn { get => _explicitNullValueAddOn; set { _explicitNullValueAddOn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("add_on"); else _explicitNullProperties?.Remove("add_on"); } }
+        private string? _explicitNullValueAddOn = default!;
 #nullable restore
 #else
-        public string AddOn { get; set; }
+        public string AddOn { get => _explicitNullValueAddOn; set { _explicitNullValueAddOn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("add_on"); else _explicitNullProperties?.Remove("add_on"); } }
+        private string _explicitNullValueAddOn = default!;
 #endif
         /// <summary>The expires_on property</summary>
-        public Date? ExpiresOn { get; set; }
+        public Date? ExpiresOn { get => _explicitNullValueExpiresOn; set { _explicitNullValueExpiresOn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expires_on"); else _explicitNullProperties?.Remove("expires_on"); } }
+        private Date? _explicitNullValueExpiresOn = default!;
         /// <summary>The namespace_id property</summary>
-        public long? NamespaceId { get; set; }
+        public long? NamespaceId { get => _explicitNullValueNamespaceId; set { _explicitNullValueNamespaceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("namespace_id"); else _explicitNullProperties?.Remove("namespace_id"); } }
+        private long? _explicitNullValueNamespaceId = default!;
         /// <summary>The namespace_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NamespaceName { get; set; }
+        public string? NamespaceName { get => _explicitNullValueNamespaceName; set { _explicitNullValueNamespaceName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("namespace_name"); else _explicitNullProperties?.Remove("namespace_name"); } }
+        private string? _explicitNullValueNamespaceName = default!;
 #nullable restore
 #else
-        public string NamespaceName { get; set; }
+        public string NamespaceName { get => _explicitNullValueNamespaceName; set { _explicitNullValueNamespaceName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("namespace_name"); else _explicitNullProperties?.Remove("namespace_name"); } }
+        private string _explicitNullValueNamespaceName = default!;
 #endif
         /// <summary>The purchase_xid property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PurchaseXid { get; set; }
+        public string? PurchaseXid { get => _explicitNullValuePurchaseXid; set { _explicitNullValuePurchaseXid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("purchase_xid"); else _explicitNullProperties?.Remove("purchase_xid"); } }
+        private string? _explicitNullValuePurchaseXid = default!;
 #nullable restore
 #else
-        public string PurchaseXid { get; set; }
+        public string PurchaseXid { get => _explicitNullValuePurchaseXid; set { _explicitNullValuePurchaseXid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("purchase_xid"); else _explicitNullProperties?.Remove("purchase_xid"); } }
+        private string _explicitNullValuePurchaseXid = default!;
 #endif
         /// <summary>The quantity property</summary>
-        public int? Quantity { get; set; }
+        public int? Quantity { get => _explicitNullValueQuantity; set { _explicitNullValueQuantity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quantity"); else _explicitNullProperties?.Remove("quantity"); } }
+        private int? _explicitNullValueQuantity = default!;
         /// <summary>The started_on property</summary>
-        public Date? StartedOn { get; set; }
+        public Date? StartedOn { get => _explicitNullValueStartedOn; set { _explicitNullValueStartedOn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("started_on"); else _explicitNullProperties?.Remove("started_on"); } }
+        private Date? _explicitNullValueStartedOn = default!;
         /// <summary>The trial property</summary>
-        public bool? Trial { get; set; }
+        public bool? Trial { get => _explicitNullValueTrial; set { _explicitNullValueTrial = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trial"); else _explicitNullProperties?.Remove("trial"); } }
+        private bool? _explicitNullValueTrial = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGitlabSubscriptionsAddOnPurchase"/> and sets the default values.
         /// </summary>
@@ -64,7 +90,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGitlabSubscriptionsAddOnPurchase CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGitlabSubscriptionsAddOnPurchase();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGitlabSubscriptionsAddOnPurchase(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -99,6 +125,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteIntValue("quantity", Quantity);
             writer.WriteDateValue("started_on", StartedOn);
             writer.WriteBoolValue("trial", Trial);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,34 +11,52 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PutApiV4UserStatusRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("availability") is { } nullNodeAvailability && nullNodeAvailability.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Availability = null;
+            if (parseNode.GetChildNode("clear_status_after") is { } nullNodeClearStatusAfter && nullNodeClearStatusAfter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClearStatusAfter = null;
+            if (parseNode.GetChildNode("emoji") is { } nullNodeEmoji && nullNodeEmoji.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Emoji = null;
+            if (parseNode.GetChildNode("message") is { } nullNodeMessage && nullNodeMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Message = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Availability of the user. Possible values are `busy` and `not_set`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Availability { get; set; }
+        public string? Availability { get => _explicitNullValueAvailability; set { _explicitNullValueAvailability = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("availability"); else _explicitNullProperties?.Remove("availability"); } }
+        private string? _explicitNullValueAvailability = default!;
 #nullable restore
 #else
-        public string Availability { get; set; }
+        public string Availability { get => _explicitNullValueAvailability; set { _explicitNullValueAvailability = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("availability"); else _explicitNullProperties?.Remove("availability"); } }
+        private string _explicitNullValueAvailability = default!;
 #endif
         /// <summary>Time after which the status is cleared automatically.</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4UserStatusRequestClearStatusAfter? ClearStatusAfter { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4UserStatusRequestClearStatusAfter? ClearStatusAfter { get => _explicitNullValueClearStatusAfter; set { _explicitNullValueClearStatusAfter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("clear_status_after"); else _explicitNullProperties?.Remove("clear_status_after"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4UserStatusRequestClearStatusAfter? _explicitNullValueClearStatusAfter = default!;
         /// <summary>Name of the emoji to use as a status. If omitted, `speech_balloon` is used. Must be one of the names in the [Gemojione index](https://github.com/bonusly/gemojione/blob/master/config/index.json).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Emoji { get; set; }
+        public string? Emoji { get => _explicitNullValueEmoji; set { _explicitNullValueEmoji = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emoji"); else _explicitNullProperties?.Remove("emoji"); } }
+        private string? _explicitNullValueEmoji = default!;
 #nullable restore
 #else
-        public string Emoji { get; set; }
+        public string Emoji { get => _explicitNullValueEmoji; set { _explicitNullValueEmoji = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emoji"); else _explicitNullProperties?.Remove("emoji"); } }
+        private string _explicitNullValueEmoji = default!;
 #endif
         /// <summary>Message to set as a status. Can contain emoji codes. Maximum of 100 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Message { get; set; }
+        public string? Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
+        private string? _explicitNullValueMessage = default!;
 #nullable restore
 #else
-        public string Message { get; set; }
+        public string Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
+        private string _explicitNullValueMessage = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4UserStatusRequest"/> and sets the default values.
@@ -55,7 +73,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4UserStatusRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4UserStatusRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4UserStatusRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -82,6 +100,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4UserStatusRequestClearStatusAfter>("clear_status_after", ClearStatusAfter);
             writer.WriteStringValue("emoji", Emoji);
             writer.WriteStringValue("message", Message);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,48 +11,75 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PutApiV4ProjectsIdMirrorPullRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("auth_password") is { } nullNodeAuthPassword && nullNodeAuthPassword.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AuthPassword = null;
+            if (parseNode.GetChildNode("auth_user") is { } nullNodeAuthUser && nullNodeAuthUser.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AuthUser = null;
+            if (parseNode.GetChildNode("enabled") is { } nullNodeEnabled && nullNodeEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Enabled = null;
+            if (parseNode.GetChildNode("mirror_branch_regex") is { } nullNodeMirrorBranchRegex && nullNodeMirrorBranchRegex.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MirrorBranchRegex = null;
+            if (parseNode.GetChildNode("mirror_overwrites_diverged_branches") is { } nullNodeMirrorOverwritesDivergedBranches && nullNodeMirrorOverwritesDivergedBranches.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MirrorOverwritesDivergedBranches = null;
+            if (parseNode.GetChildNode("mirror_trigger_builds") is { } nullNodeMirrorTriggerBuilds && nullNodeMirrorTriggerBuilds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MirrorTriggerBuilds = null;
+            if (parseNode.GetChildNode("only_mirror_protected_branches") is { } nullNodeOnlyMirrorProtectedBranches && nullNodeOnlyMirrorProtectedBranches.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OnlyMirrorProtectedBranches = null;
+            if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Password used to authenticate a project pull mirror, or a personal access token with the `api` scope enabled. At least one of `enabled`, `url`, `auth_user`, `auth_password`, `mirror_overwrites_diverged_branches`, `mirror_trigger_builds`, `only_mirror_protected_branches`, `mirror_branch_regex` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AuthPassword { get; set; }
+        public string? AuthPassword { get => _explicitNullValueAuthPassword; set { _explicitNullValueAuthPassword = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auth_password"); else _explicitNullProperties?.Remove("auth_password"); } }
+        private string? _explicitNullValueAuthPassword = default!;
 #nullable restore
 #else
-        public string AuthPassword { get; set; }
+        public string AuthPassword { get => _explicitNullValueAuthPassword; set { _explicitNullValueAuthPassword = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auth_password"); else _explicitNullProperties?.Remove("auth_password"); } }
+        private string _explicitNullValueAuthPassword = default!;
 #endif
         /// <summary>Username used to authenticate a project pull mirror. At least one of `enabled`, `url`, `auth_user`, `auth_password`, `mirror_overwrites_diverged_branches`, `mirror_trigger_builds`, `only_mirror_protected_branches`, `mirror_branch_regex` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AuthUser { get; set; }
+        public string? AuthUser { get => _explicitNullValueAuthUser; set { _explicitNullValueAuthUser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auth_user"); else _explicitNullProperties?.Remove("auth_user"); } }
+        private string? _explicitNullValueAuthUser = default!;
 #nullable restore
 #else
-        public string AuthUser { get; set; }
+        public string AuthUser { get => _explicitNullValueAuthUser; set { _explicitNullValueAuthUser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auth_user"); else _explicitNullProperties?.Remove("auth_user"); } }
+        private string _explicitNullValueAuthUser = default!;
 #endif
         /// <summary>If `true`, enables pull mirroring on the project. At least one of `enabled`, `url`, `auth_user`, `auth_password`, `mirror_overwrites_diverged_branches`, `mirror_trigger_builds`, `only_mirror_protected_branches`, `mirror_branch_regex` must be provided.</summary>
-        public bool? Enabled { get; set; }
+        public bool? Enabled { get => _explicitNullValueEnabled; set { _explicitNullValueEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enabled"); else _explicitNullProperties?.Remove("enabled"); } }
+        private bool? _explicitNullValueEnabled = default!;
         /// <summary>Regular expression for branch names to mirror. Only branches with names matching the regex are mirrored. Requires `only_mirror_protected_branches` to be disabled. Mutually exclusive with `only_mirror_protected_branches`. At least one of `enabled`, `url`, `auth_user`, `auth_password`, `mirror_overwrites_diverged_branches`, `mirror_trigger_builds`, `only_mirror_protected_branches`, `mirror_branch_regex` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MirrorBranchRegex { get; set; }
+        public string? MirrorBranchRegex { get => _explicitNullValueMirrorBranchRegex; set { _explicitNullValueMirrorBranchRegex = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mirror_branch_regex"); else _explicitNullProperties?.Remove("mirror_branch_regex"); } }
+        private string? _explicitNullValueMirrorBranchRegex = default!;
 #nullable restore
 #else
-        public string MirrorBranchRegex { get; set; }
+        public string MirrorBranchRegex { get => _explicitNullValueMirrorBranchRegex; set { _explicitNullValueMirrorBranchRegex = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mirror_branch_regex"); else _explicitNullProperties?.Remove("mirror_branch_regex"); } }
+        private string _explicitNullValueMirrorBranchRegex = default!;
 #endif
         /// <summary>If `true`, overwrites diverged branches. At least one of `enabled`, `url`, `auth_user`, `auth_password`, `mirror_overwrites_diverged_branches`, `mirror_trigger_builds`, `only_mirror_protected_branches`, `mirror_branch_regex` must be provided.</summary>
-        public bool? MirrorOverwritesDivergedBranches { get; set; }
+        public bool? MirrorOverwritesDivergedBranches { get => _explicitNullValueMirrorOverwritesDivergedBranches; set { _explicitNullValueMirrorOverwritesDivergedBranches = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mirror_overwrites_diverged_branches"); else _explicitNullProperties?.Remove("mirror_overwrites_diverged_branches"); } }
+        private bool? _explicitNullValueMirrorOverwritesDivergedBranches = default!;
         /// <summary>If `true`, triggers pipelines for mirror updates. At least one of `enabled`, `url`, `auth_user`, `auth_password`, `mirror_overwrites_diverged_branches`, `mirror_trigger_builds`, `only_mirror_protected_branches`, `mirror_branch_regex` must be provided.</summary>
-        public bool? MirrorTriggerBuilds { get; set; }
+        public bool? MirrorTriggerBuilds { get => _explicitNullValueMirrorTriggerBuilds; set { _explicitNullValueMirrorTriggerBuilds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mirror_trigger_builds"); else _explicitNullProperties?.Remove("mirror_trigger_builds"); } }
+        private bool? _explicitNullValueMirrorTriggerBuilds = default!;
         /// <summary>If `true`, limits mirroring to only protected branches. Mutually exclusive with `mirror_branch_regex`. At least one of `enabled`, `url`, `auth_user`, `auth_password`, `mirror_overwrites_diverged_branches`, `mirror_trigger_builds`, `only_mirror_protected_branches`, `mirror_branch_regex` must be provided.</summary>
-        public bool? OnlyMirrorProtectedBranches { get; set; }
+        public bool? OnlyMirrorProtectedBranches { get => _explicitNullValueOnlyMirrorProtectedBranches; set { _explicitNullValueOnlyMirrorProtectedBranches = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("only_mirror_protected_branches"); else _explicitNullProperties?.Remove("only_mirror_protected_branches"); } }
+        private bool? _explicitNullValueOnlyMirrorProtectedBranches = default!;
         /// <summary>URL of the remote repository being mirrored. At least one of `enabled`, `url`, `auth_user`, `auth_password`, `mirror_overwrites_diverged_branches`, `mirror_trigger_builds`, `only_mirror_protected_branches`, `mirror_branch_regex` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Url { get; set; }
+        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        private string? _explicitNullValueUrl = default!;
 #nullable restore
 #else
-        public string Url { get; set; }
+        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        private string _explicitNullValueUrl = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdMirrorPullRequest"/> and sets the default values.
@@ -69,7 +96,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdMirrorPullRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdMirrorPullRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdMirrorPullRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -104,6 +131,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteBoolValue("mirror_trigger_builds", MirrorTriggerBuilds);
             writer.WriteBoolValue("only_mirror_protected_branches", OnlyMirrorProtectedBranches);
             writer.WriteStringValue("url", Url);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

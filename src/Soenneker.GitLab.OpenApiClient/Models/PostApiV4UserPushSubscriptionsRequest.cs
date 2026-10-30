@@ -11,55 +11,83 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostApiV4UserPushSubscriptionsRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("apns_environment") is { } nullNodeApnsEnvironment && nullNodeApnsEnvironment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApnsEnvironment = null;
+            if (parseNode.GetChildNode("app_version") is { } nullNodeAppVersion && nullNodeAppVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AppVersion = null;
+            if (parseNode.GetChildNode("bundle_id") is { } nullNodeBundleId && nullNodeBundleId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BundleId = null;
+            if (parseNode.GetChildNode("device_name") is { } nullNodeDeviceName && nullNodeDeviceName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeviceName = null;
+            if (parseNode.GetChildNode("device_token") is { } nullNodeDeviceToken && nullNodeDeviceToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeviceToken = null;
+            if (parseNode.GetChildNode("locale") is { } nullNodeLocale && nullNodeLocale.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Locale = null;
+            if (parseNode.GetChildNode("payload_mode") is { } nullNodePayloadMode && nullNodePayloadMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PayloadMode = null;
+            if (parseNode.GetChildNode("platform") is { } nullNodePlatform && nullNodePlatform.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Platform = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The APNs environment the token was issued for</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4UserPushSubscriptionsRequestApnsEnvironment? ApnsEnvironment { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4UserPushSubscriptionsRequestApnsEnvironment? ApnsEnvironment { get => _explicitNullValueApnsEnvironment; set { _explicitNullValueApnsEnvironment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("apns_environment"); else _explicitNullProperties?.Remove("apns_environment"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4UserPushSubscriptionsRequestApnsEnvironment? _explicitNullValueApnsEnvironment = default!;
         /// <summary>The installed application version</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AppVersion { get; set; }
+        public string? AppVersion { get => _explicitNullValueAppVersion; set { _explicitNullValueAppVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("app_version"); else _explicitNullProperties?.Remove("app_version"); } }
+        private string? _explicitNullValueAppVersion = default!;
 #nullable restore
 #else
-        public string AppVersion { get; set; }
+        public string AppVersion { get => _explicitNullValueAppVersion; set { _explicitNullValueAppVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("app_version"); else _explicitNullProperties?.Remove("app_version"); } }
+        private string _explicitNullValueAppVersion = default!;
 #endif
         /// <summary>The application bundle identifier</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BundleId { get; set; }
+        public string? BundleId { get => _explicitNullValueBundleId; set { _explicitNullValueBundleId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bundle_id"); else _explicitNullProperties?.Remove("bundle_id"); } }
+        private string? _explicitNullValueBundleId = default!;
 #nullable restore
 #else
-        public string BundleId { get; set; }
+        public string BundleId { get => _explicitNullValueBundleId; set { _explicitNullValueBundleId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bundle_id"); else _explicitNullProperties?.Remove("bundle_id"); } }
+        private string _explicitNullValueBundleId = default!;
 #endif
         /// <summary>A human-readable device name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DeviceName { get; set; }
+        public string? DeviceName { get => _explicitNullValueDeviceName; set { _explicitNullValueDeviceName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("device_name"); else _explicitNullProperties?.Remove("device_name"); } }
+        private string? _explicitNullValueDeviceName = default!;
 #nullable restore
 #else
-        public string DeviceName { get; set; }
+        public string DeviceName { get => _explicitNullValueDeviceName; set { _explicitNullValueDeviceName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("device_name"); else _explicitNullProperties?.Remove("device_name"); } }
+        private string _explicitNullValueDeviceName = default!;
 #endif
         /// <summary>The hexadecimal APNs device token</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DeviceToken { get; set; }
+        public string? DeviceToken { get => _explicitNullValueDeviceToken; set { _explicitNullValueDeviceToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("device_token"); else _explicitNullProperties?.Remove("device_token"); } }
+        private string? _explicitNullValueDeviceToken = default!;
 #nullable restore
 #else
-        public string DeviceToken { get; set; }
+        public string DeviceToken { get => _explicitNullValueDeviceToken; set { _explicitNullValueDeviceToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("device_token"); else _explicitNullProperties?.Remove("device_token"); } }
+        private string _explicitNullValueDeviceToken = default!;
 #endif
         /// <summary>The device locale</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Locale { get; set; }
+        public string? Locale { get => _explicitNullValueLocale; set { _explicitNullValueLocale = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locale"); else _explicitNullProperties?.Remove("locale"); } }
+        private string? _explicitNullValueLocale = default!;
 #nullable restore
 #else
-        public string Locale { get; set; }
+        public string Locale { get => _explicitNullValueLocale; set { _explicitNullValueLocale = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locale"); else _explicitNullProperties?.Remove("locale"); } }
+        private string _explicitNullValueLocale = default!;
 #endif
         /// <summary>Whether notifications carry the full content or only identifiers</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4UserPushSubscriptionsRequestPayloadMode? PayloadMode { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4UserPushSubscriptionsRequestPayloadMode? PayloadMode { get => _explicitNullValuePayloadMode; set { _explicitNullValuePayloadMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("payload_mode"); else _explicitNullProperties?.Remove("payload_mode"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4UserPushSubscriptionsRequestPayloadMode? _explicitNullValuePayloadMode = default!;
         /// <summary>The device platform</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4UserPushSubscriptionsRequestPlatform? Platform { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4UserPushSubscriptionsRequestPlatform? Platform { get => _explicitNullValuePlatform; set { _explicitNullValuePlatform = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("platform"); else _explicitNullProperties?.Remove("platform"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4UserPushSubscriptionsRequestPlatform? _explicitNullValuePlatform = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4UserPushSubscriptionsRequest"/> and sets the default values.
         /// </summary>
@@ -75,7 +103,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4UserPushSubscriptionsRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4UserPushSubscriptionsRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4UserPushSubscriptionsRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -110,6 +138,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("locale", Locale);
             writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4UserPushSubscriptionsRequestPayloadMode>("payload_mode", PayloadMode);
             writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4UserPushSubscriptionsRequestPlatform>("platform", Platform);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

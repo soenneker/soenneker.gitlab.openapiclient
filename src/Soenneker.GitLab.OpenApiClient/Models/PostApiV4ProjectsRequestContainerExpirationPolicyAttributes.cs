@@ -12,44 +12,67 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PostApiV4ProjectsRequestContainerExpirationPolicyAttributes : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("cadence") is { } nullNodeCadence && nullNodeCadence.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cadence = null;
+            if (parseNode.GetChildNode("enabled") is { } nullNodeEnabled && nullNodeEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Enabled = null;
+            if (parseNode.GetChildNode("keep_n") is { } nullNodeKeepN && nullNodeKeepN.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) KeepN = null;
+            if (parseNode.GetChildNode("name_regex") is { } nullNodeNameRegex && nullNodeNameRegex.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NameRegex = null;
+            if (parseNode.GetChildNode("name_regex_keep") is { } nullNodeNameRegexKeep && nullNodeNameRegexKeep.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NameRegexKeep = null;
+            if (parseNode.GetChildNode("older_than") is { } nullNodeOlderThan && nullNodeOlderThan.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OlderThan = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Container expiration policy cadence for recurring job</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Cadence { get; set; }
+        public string? Cadence { get => _explicitNullValueCadence; set { _explicitNullValueCadence = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cadence"); else _explicitNullProperties?.Remove("cadence"); } }
+        private string? _explicitNullValueCadence = default!;
 #nullable restore
 #else
-        public string Cadence { get; set; }
+        public string Cadence { get => _explicitNullValueCadence; set { _explicitNullValueCadence = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cadence"); else _explicitNullProperties?.Remove("cadence"); } }
+        private string _explicitNullValueCadence = default!;
 #endif
         /// <summary>Flag indication if container expiration policy is enabled</summary>
-        public bool? Enabled { get; set; }
+        public bool? Enabled { get => _explicitNullValueEnabled; set { _explicitNullValueEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enabled"); else _explicitNullProperties?.Remove("enabled"); } }
+        private bool? _explicitNullValueEnabled = default!;
         /// <summary>Container expiration policy number of images to keep</summary>
-        public int? KeepN { get; set; }
+        public int? KeepN { get => _explicitNullValueKeepN; set { _explicitNullValueKeepN = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("keep_n"); else _explicitNullProperties?.Remove("keep_n"); } }
+        private int? _explicitNullValueKeepN = default!;
         /// <summary>Container expiration policy regex for image removal</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NameRegex { get; set; }
+        public string? NameRegex { get => _explicitNullValueNameRegex; set { _explicitNullValueNameRegex = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name_regex"); else _explicitNullProperties?.Remove("name_regex"); } }
+        private string? _explicitNullValueNameRegex = default!;
 #nullable restore
 #else
-        public string NameRegex { get; set; }
+        public string NameRegex { get => _explicitNullValueNameRegex; set { _explicitNullValueNameRegex = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name_regex"); else _explicitNullProperties?.Remove("name_regex"); } }
+        private string _explicitNullValueNameRegex = default!;
 #endif
         /// <summary>Container expiration policy regex for image retention</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NameRegexKeep { get; set; }
+        public string? NameRegexKeep { get => _explicitNullValueNameRegexKeep; set { _explicitNullValueNameRegexKeep = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name_regex_keep"); else _explicitNullProperties?.Remove("name_regex_keep"); } }
+        private string? _explicitNullValueNameRegexKeep = default!;
 #nullable restore
 #else
-        public string NameRegexKeep { get; set; }
+        public string NameRegexKeep { get => _explicitNullValueNameRegexKeep; set { _explicitNullValueNameRegexKeep = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name_regex_keep"); else _explicitNullProperties?.Remove("name_regex_keep"); } }
+        private string _explicitNullValueNameRegexKeep = default!;
 #endif
         /// <summary>Container expiration policy remove images older than value</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OlderThan { get; set; }
+        public string? OlderThan { get => _explicitNullValueOlderThan; set { _explicitNullValueOlderThan = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("older_than"); else _explicitNullProperties?.Remove("older_than"); } }
+        private string? _explicitNullValueOlderThan = default!;
 #nullable restore
 #else
-        public string OlderThan { get; set; }
+        public string OlderThan { get => _explicitNullValueOlderThan; set { _explicitNullValueOlderThan = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("older_than"); else _explicitNullProperties?.Remove("older_than"); } }
+        private string _explicitNullValueOlderThan = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsRequestContainerExpirationPolicyAttributes"/> and sets the default values.
@@ -66,7 +89,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsRequestContainerExpirationPolicyAttributes CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsRequestContainerExpirationPolicyAttributes();
+            // Preserve a nullable root response.
+            if (parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) return null!;
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsRequestContainerExpirationPolicyAttributes(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -97,6 +122,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("name_regex", NameRegex);
             writer.WriteStringValue("name_regex_keep", NameRegexKeep);
             writer.WriteStringValue("older_than", OlderThan);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

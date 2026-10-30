@@ -11,39 +11,61 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostApiV4UsageDataTrackEventRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("additional_properties") is { } nullNodeAdditionalProperties && nullNodeAdditionalProperties.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdditionalProperties = null;
+            if (parseNode.GetChildNode("event") is { } nullNodeEvent && nullNodeEvent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Event = null;
+            if (parseNode.GetChildNode("namespace_id") is { } nullNodeNamespaceId && nullNodeNamespaceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NamespaceId = null;
+            if (parseNode.GetChildNode("project_id") is { } nullNodeProjectId && nullNodeProjectId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProjectId = null;
+            if (parseNode.GetChildNode("project_path") is { } nullNodeProjectPath && nullNodeProjectPath.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProjectPath = null;
+            if (parseNode.GetChildNode("send_to_snowplow") is { } nullNodeSendToSnowplow && nullNodeSendToSnowplow.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SendToSnowplow = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Additional properties to be tracked.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4UsageDataTrackEventRequestAdditionalPropertiesProperty? AdditionalProperties { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4UsageDataTrackEventRequestAdditionalPropertiesProperty? AdditionalProperties { get => _explicitNullValueAdditionalProperties; set { _explicitNullValueAdditionalProperties = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("additional_properties"); else _explicitNullProperties?.Remove("additional_properties"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4UsageDataTrackEventRequestAdditionalPropertiesProperty? _explicitNullValueAdditionalProperties = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4UsageDataTrackEventRequestAdditionalPropertiesProperty AdditionalProperties { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4UsageDataTrackEventRequestAdditionalPropertiesProperty AdditionalProperties { get => _explicitNullValueAdditionalProperties; set { _explicitNullValueAdditionalProperties = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("additional_properties"); else _explicitNullProperties?.Remove("additional_properties"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4UsageDataTrackEventRequestAdditionalPropertiesProperty _explicitNullValueAdditionalProperties = default!;
 #endif
         /// <summary>Name of the event to track.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Event { get; set; }
+        public string? Event { get => _explicitNullValueEvent; set { _explicitNullValueEvent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("event"); else _explicitNullProperties?.Remove("event"); } }
+        private string? _explicitNullValueEvent = default!;
 #nullable restore
 #else
-        public string Event { get; set; }
+        public string Event { get => _explicitNullValueEvent; set { _explicitNullValueEvent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("event"); else _explicitNullProperties?.Remove("event"); } }
+        private string _explicitNullValueEvent = default!;
 #endif
         /// <summary>ID of the namespace associated with the event.</summary>
-        public int? NamespaceId { get; set; }
+        public int? NamespaceId { get => _explicitNullValueNamespaceId; set { _explicitNullValueNamespaceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("namespace_id"); else _explicitNullProperties?.Remove("namespace_id"); } }
+        private int? _explicitNullValueNamespaceId = default!;
         /// <summary>ID of the project. Mutually exclusive with `project_path`.</summary>
-        public int? ProjectId { get; set; }
+        public int? ProjectId { get => _explicitNullValueProjectId; set { _explicitNullValueProjectId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_id"); else _explicitNullProperties?.Remove("project_id"); } }
+        private int? _explicitNullValueProjectId = default!;
         /// <summary>Path of the project. Used to find `project_id` when it is not provided. Mutually exclusive with `project_id`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ProjectPath { get; set; }
+        public string? ProjectPath { get => _explicitNullValueProjectPath; set { _explicitNullValueProjectPath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_path"); else _explicitNullProperties?.Remove("project_path"); } }
+        private string? _explicitNullValueProjectPath = default!;
 #nullable restore
 #else
-        public string ProjectPath { get; set; }
+        public string ProjectPath { get => _explicitNullValueProjectPath; set { _explicitNullValueProjectPath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_path"); else _explicitNullProperties?.Remove("project_path"); } }
+        private string _explicitNullValueProjectPath = default!;
 #endif
         /// <summary>If `true`, sends the tracked event to Snowplow.</summary>
-        public bool? SendToSnowplow { get; set; }
+        public bool? SendToSnowplow { get => _explicitNullValueSendToSnowplow; set { _explicitNullValueSendToSnowplow = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("send_to_snowplow"); else _explicitNullProperties?.Remove("send_to_snowplow"); } }
+        private bool? _explicitNullValueSendToSnowplow = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4UsageDataTrackEventRequest"/> and sets the default values.
         /// </summary>
@@ -59,7 +81,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4UsageDataTrackEventRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4UsageDataTrackEventRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4UsageDataTrackEventRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -90,6 +112,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteIntValue("project_id", ProjectId);
             writer.WriteStringValue("project_path", ProjectPath);
             writer.WriteBoolValue("send_to_snowplow", SendToSnowplow);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

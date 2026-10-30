@@ -11,26 +11,41 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostApiV4VulnerabilitiesIdIssueLinksRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("link_type") is { } nullNodeLinkType && nullNodeLinkType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LinkType = null;
+            if (parseNode.GetChildNode("target_issue_iid") is { } nullNodeTargetIssueIid && nullNodeTargetIssueIid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetIssueIid = null;
+            if (parseNode.GetChildNode("target_project_id") is { } nullNodeTargetProjectId && nullNodeTargetProjectId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetProjectId = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Link type</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LinkType { get; set; }
+        public string? LinkType { get => _explicitNullValueLinkType; set { _explicitNullValueLinkType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("link_type"); else _explicitNullProperties?.Remove("link_type"); } }
+        private string? _explicitNullValueLinkType = default!;
 #nullable restore
 #else
-        public string LinkType { get; set; }
+        public string LinkType { get => _explicitNullValueLinkType; set { _explicitNullValueLinkType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("link_type"); else _explicitNullProperties?.Remove("link_type"); } }
+        private string _explicitNullValueLinkType = default!;
 #endif
         /// <summary>Internal ID of the issue to relate to the vulnerability.</summary>
-        public int? TargetIssueIid { get; set; }
+        public int? TargetIssueIid { get => _explicitNullValueTargetIssueIid; set { _explicitNullValueTargetIssueIid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_issue_iid"); else _explicitNullProperties?.Remove("target_issue_iid"); } }
+        private int? _explicitNullValueTargetIssueIid = default!;
         /// <summary>The ID of the target project</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TargetProjectId { get; set; }
+        public string? TargetProjectId { get => _explicitNullValueTargetProjectId; set { _explicitNullValueTargetProjectId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_project_id"); else _explicitNullProperties?.Remove("target_project_id"); } }
+        private string? _explicitNullValueTargetProjectId = default!;
 #nullable restore
 #else
-        public string TargetProjectId { get; set; }
+        public string TargetProjectId { get => _explicitNullValueTargetProjectId; set { _explicitNullValueTargetProjectId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_project_id"); else _explicitNullProperties?.Remove("target_project_id"); } }
+        private string _explicitNullValueTargetProjectId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4VulnerabilitiesIdIssueLinksRequest"/> and sets the default values.
@@ -48,7 +63,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4VulnerabilitiesIdIssueLinksRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4VulnerabilitiesIdIssueLinksRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4VulnerabilitiesIdIssueLinksRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -73,6 +88,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("link_type", LinkType);
             writer.WriteIntValue("target_issue_iid", TargetIssueIid);
             writer.WriteStringValue("target_project_id", TargetProjectId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

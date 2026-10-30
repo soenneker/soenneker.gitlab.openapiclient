@@ -11,29 +11,46 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PutApiV4GroupsIdIntegrationsJiraCloudAppRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("jira_cloud_app_deployment_gating_environments") is { } nullNodeJiraCloudAppDeploymentGatingEnvironments && nullNodeJiraCloudAppDeploymentGatingEnvironments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) JiraCloudAppDeploymentGatingEnvironments = null;
+            if (parseNode.GetChildNode("jira_cloud_app_enable_deployment_gating") is { } nullNodeJiraCloudAppEnableDeploymentGating && nullNodeJiraCloudAppEnableDeploymentGating.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) JiraCloudAppEnableDeploymentGating = null;
+            if (parseNode.GetChildNode("jira_cloud_app_service_ids") is { } nullNodeJiraCloudAppServiceIds && nullNodeJiraCloudAppServiceIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) JiraCloudAppServiceIds = null;
+            if (parseNode.GetChildNode("use_inherited_settings") is { } nullNodeUseInheritedSettings && nullNodeUseInheritedSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UseInheritedSettings = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Enter the environment (production,staging,testing,development) where you want to enable deployment gating. Use comma (,) to separate multiple environments.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? JiraCloudAppDeploymentGatingEnvironments { get; set; }
+        public string? JiraCloudAppDeploymentGatingEnvironments { get => _explicitNullValueJiraCloudAppDeploymentGatingEnvironments; set { _explicitNullValueJiraCloudAppDeploymentGatingEnvironments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("jira_cloud_app_deployment_gating_environments"); else _explicitNullProperties?.Remove("jira_cloud_app_deployment_gating_environments"); } }
+        private string? _explicitNullValueJiraCloudAppDeploymentGatingEnvironments = default!;
 #nullable restore
 #else
-        public string JiraCloudAppDeploymentGatingEnvironments { get; set; }
+        public string JiraCloudAppDeploymentGatingEnvironments { get => _explicitNullValueJiraCloudAppDeploymentGatingEnvironments; set { _explicitNullValueJiraCloudAppDeploymentGatingEnvironments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("jira_cloud_app_deployment_gating_environments"); else _explicitNullProperties?.Remove("jira_cloud_app_deployment_gating_environments"); } }
+        private string _explicitNullValueJiraCloudAppDeploymentGatingEnvironments = default!;
 #endif
         /// <summary>Enable to approve or reject blocked GitLab deployments from Jira Service Management.</summary>
-        public bool? JiraCloudAppEnableDeploymentGating { get; set; }
+        public bool? JiraCloudAppEnableDeploymentGating { get => _explicitNullValueJiraCloudAppEnableDeploymentGating; set { _explicitNullValueJiraCloudAppEnableDeploymentGating = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("jira_cloud_app_enable_deployment_gating"); else _explicitNullProperties?.Remove("jira_cloud_app_enable_deployment_gating"); } }
+        private bool? _explicitNullValueJiraCloudAppEnableDeploymentGating = default!;
         /// <summary>Copy and paste your JSM Service ID here. Use comma (,) to separate multiple IDs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? JiraCloudAppServiceIds { get; set; }
+        public string? JiraCloudAppServiceIds { get => _explicitNullValueJiraCloudAppServiceIds; set { _explicitNullValueJiraCloudAppServiceIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("jira_cloud_app_service_ids"); else _explicitNullProperties?.Remove("jira_cloud_app_service_ids"); } }
+        private string? _explicitNullValueJiraCloudAppServiceIds = default!;
 #nullable restore
 #else
-        public string JiraCloudAppServiceIds { get; set; }
+        public string JiraCloudAppServiceIds { get => _explicitNullValueJiraCloudAppServiceIds; set { _explicitNullValueJiraCloudAppServiceIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("jira_cloud_app_service_ids"); else _explicitNullProperties?.Remove("jira_cloud_app_service_ids"); } }
+        private string _explicitNullValueJiraCloudAppServiceIds = default!;
 #endif
         /// <summary>Indicates whether to inherit the default settings. Defaults to `false`.</summary>
-        public bool? UseInheritedSettings { get; set; }
+        public bool? UseInheritedSettings { get => _explicitNullValueUseInheritedSettings; set { _explicitNullValueUseInheritedSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("use_inherited_settings"); else _explicitNullProperties?.Remove("use_inherited_settings"); } }
+        private bool? _explicitNullValueUseInheritedSettings = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdIntegrationsJiraCloudAppRequest"/> and sets the default values.
         /// </summary>
@@ -49,7 +66,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdIntegrationsJiraCloudAppRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdIntegrationsJiraCloudAppRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdIntegrationsJiraCloudAppRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -76,6 +93,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteBoolValue("jira_cloud_app_enable_deployment_gating", JiraCloudAppEnableDeploymentGating);
             writer.WriteStringValue("jira_cloud_app_service_ids", JiraCloudAppServiceIds);
             writer.WriteBoolValue("use_inherited_settings", UseInheritedSettings);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

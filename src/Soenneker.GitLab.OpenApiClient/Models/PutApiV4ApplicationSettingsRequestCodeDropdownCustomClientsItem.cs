@@ -11,32 +11,48 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PutApiV4ApplicationSettingsRequestCodeDropdownCustomClientsItem : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("http_url_template") is { } nullNodeHttpUrlTemplate && nullNodeHttpUrlTemplate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HttpUrlTemplate = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("ssh_url_template") is { } nullNodeSshUrlTemplate && nullNodeSshUrlTemplate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SshUrlTemplate = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>URL template opened for the HTTPS clone URL. Must contain {url} exactly once</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HttpUrlTemplate { get; set; }
+        public string? HttpUrlTemplate { get => _explicitNullValueHttpUrlTemplate; set { _explicitNullValueHttpUrlTemplate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("http_url_template"); else _explicitNullProperties?.Remove("http_url_template"); } }
+        private string? _explicitNullValueHttpUrlTemplate = default!;
 #nullable restore
 #else
-        public string HttpUrlTemplate { get; set; }
+        public string HttpUrlTemplate { get => _explicitNullValueHttpUrlTemplate; set { _explicitNullValueHttpUrlTemplate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("http_url_template"); else _explicitNullProperties?.Remove("http_url_template"); } }
+        private string _explicitNullValueHttpUrlTemplate = default!;
 #endif
         /// <summary>Name shown to users in the Code dropdown list</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>URL template opened for the SSH clone URL. Must contain {url} exactly once</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SshUrlTemplate { get; set; }
+        public string? SshUrlTemplate { get => _explicitNullValueSshUrlTemplate; set { _explicitNullValueSshUrlTemplate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ssh_url_template"); else _explicitNullProperties?.Remove("ssh_url_template"); } }
+        private string? _explicitNullValueSshUrlTemplate = default!;
 #nullable restore
 #else
-        public string SshUrlTemplate { get; set; }
+        public string SshUrlTemplate { get => _explicitNullValueSshUrlTemplate; set { _explicitNullValueSshUrlTemplate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ssh_url_template"); else _explicitNullProperties?.Remove("ssh_url_template"); } }
+        private string _explicitNullValueSshUrlTemplate = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ApplicationSettingsRequestCodeDropdownCustomClientsItem"/> and sets the default values.
@@ -53,7 +69,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ApplicationSettingsRequestCodeDropdownCustomClientsItem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ApplicationSettingsRequestCodeDropdownCustomClientsItem();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ApplicationSettingsRequestCodeDropdownCustomClientsItem(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -78,6 +94,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("http_url_template", HttpUrlTemplate);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("ssh_url_template", SshUrlTemplate);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

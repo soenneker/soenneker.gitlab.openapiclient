@@ -11,37 +11,57 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PutApiV4ProjectsIdIntegrationsGooglePlayRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("google_play_protected_refs") is { } nullNodeGooglePlayProtectedRefs && nullNodeGooglePlayProtectedRefs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GooglePlayProtectedRefs = null;
+            if (parseNode.GetChildNode("package_name") is { } nullNodePackageName && nullNodePackageName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PackageName = null;
+            if (parseNode.GetChildNode("service_account_key") is { } nullNodeServiceAccountKey && nullNodeServiceAccountKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServiceAccountKey = null;
+            if (parseNode.GetChildNode("service_account_key_file_name") is { } nullNodeServiceAccountKeyFileName && nullNodeServiceAccountKeyFileName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServiceAccountKeyFileName = null;
+            if (parseNode.GetChildNode("use_inherited_settings") is { } nullNodeUseInheritedSettings && nullNodeUseInheritedSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UseInheritedSettings = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Set variables on protected branches and tags only.</summary>
-        public bool? GooglePlayProtectedRefs { get; set; }
+        public bool? GooglePlayProtectedRefs { get => _explicitNullValueGooglePlayProtectedRefs; set { _explicitNullValueGooglePlayProtectedRefs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("google_play_protected_refs"); else _explicitNullProperties?.Remove("google_play_protected_refs"); } }
+        private bool? _explicitNullValueGooglePlayProtectedRefs = default!;
         /// <summary>Package name of the app in Google Play.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PackageName { get; set; }
+        public string? PackageName { get => _explicitNullValuePackageName; set { _explicitNullValuePackageName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("package_name"); else _explicitNullProperties?.Remove("package_name"); } }
+        private string? _explicitNullValuePackageName = default!;
 #nullable restore
 #else
-        public string PackageName { get; set; }
+        public string PackageName { get => _explicitNullValuePackageName; set { _explicitNullValuePackageName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("package_name"); else _explicitNullProperties?.Remove("package_name"); } }
+        private string _explicitNullValuePackageName = default!;
 #endif
         /// <summary>Google Play service account key.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ServiceAccountKey { get; set; }
+        public string? ServiceAccountKey { get => _explicitNullValueServiceAccountKey; set { _explicitNullValueServiceAccountKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("service_account_key"); else _explicitNullProperties?.Remove("service_account_key"); } }
+        private string? _explicitNullValueServiceAccountKey = default!;
 #nullable restore
 #else
-        public string ServiceAccountKey { get; set; }
+        public string ServiceAccountKey { get => _explicitNullValueServiceAccountKey; set { _explicitNullValueServiceAccountKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("service_account_key"); else _explicitNullProperties?.Remove("service_account_key"); } }
+        private string _explicitNullValueServiceAccountKey = default!;
 #endif
         /// <summary>File name of the Google Play service account key.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ServiceAccountKeyFileName { get; set; }
+        public string? ServiceAccountKeyFileName { get => _explicitNullValueServiceAccountKeyFileName; set { _explicitNullValueServiceAccountKeyFileName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("service_account_key_file_name"); else _explicitNullProperties?.Remove("service_account_key_file_name"); } }
+        private string? _explicitNullValueServiceAccountKeyFileName = default!;
 #nullable restore
 #else
-        public string ServiceAccountKeyFileName { get; set; }
+        public string ServiceAccountKeyFileName { get => _explicitNullValueServiceAccountKeyFileName; set { _explicitNullValueServiceAccountKeyFileName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("service_account_key_file_name"); else _explicitNullProperties?.Remove("service_account_key_file_name"); } }
+        private string _explicitNullValueServiceAccountKeyFileName = default!;
 #endif
         /// <summary>Indicates whether to inherit the default settings. Defaults to `false`.</summary>
-        public bool? UseInheritedSettings { get; set; }
+        public bool? UseInheritedSettings { get => _explicitNullValueUseInheritedSettings; set { _explicitNullValueUseInheritedSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("use_inherited_settings"); else _explicitNullProperties?.Remove("use_inherited_settings"); } }
+        private bool? _explicitNullValueUseInheritedSettings = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdIntegrationsGooglePlayRequest"/> and sets the default values.
         /// </summary>
@@ -57,7 +77,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdIntegrationsGooglePlayRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdIntegrationsGooglePlayRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdIntegrationsGooglePlayRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -86,6 +106,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("service_account_key", ServiceAccountKey);
             writer.WriteStringValue("service_account_key_file_name", ServiceAccountKeyFileName);
             writer.WriteBoolValue("use_inherited_settings", UseInheritedSettings);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

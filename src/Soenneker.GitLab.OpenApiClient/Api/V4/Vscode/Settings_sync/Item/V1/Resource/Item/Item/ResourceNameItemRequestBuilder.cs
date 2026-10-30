@@ -49,7 +49,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Vscode.Settings_sync.Item.V1.Res
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiVsCodeSettingsEntitiesVsCodeSetting>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiVsCodeSettingsEntitiesVsCodeSetting.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiVsCodeSettingsEntitiesVsCodeSetting>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiVsCodeSettingsEntitiesVsCodeSetting.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieves a single VS Code setting resource. Returns 204 when the resource does not exist.

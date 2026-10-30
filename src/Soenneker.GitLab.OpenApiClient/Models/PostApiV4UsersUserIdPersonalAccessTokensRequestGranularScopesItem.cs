@@ -11,34 +11,52 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostApiV4UsersUserIdPersonalAccessTokensRequestGranularScopesItem : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("access") is { } nullNodeAccess && nullNodeAccess.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Access = null;
+            if (parseNode.GetChildNode("group_ids") is { } nullNodeGroupIds && nullNodeGroupIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GroupIds = null;
+            if (parseNode.GetChildNode("permissions") is { } nullNodePermissions && nullNodePermissions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Permissions = null;
+            if (parseNode.GetChildNode("project_ids") is { } nullNodeProjectIds && nullNodeProjectIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProjectIds = null;
+        }
+
         /// <summary>Access to configure for the granular scope.</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4UsersUserIdPersonalAccessTokensRequestGranularScopesItemAccess? Access { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4UsersUserIdPersonalAccessTokensRequestGranularScopesItemAccess? Access { get => _explicitNullValueAccess; set { _explicitNullValueAccess = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("access"); else _explicitNullProperties?.Remove("access"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4UsersUserIdPersonalAccessTokensRequestGranularScopesItemAccess? _explicitNullValueAccess = default!;
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>IDs of groups to associate with the granular scope, when access is `selected_memberships`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<int?>? GroupIds { get; set; }
+        public List<int?>? GroupIds { get => _explicitNullValueGroupIds; set { _explicitNullValueGroupIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_ids"); else _explicitNullProperties?.Remove("group_ids"); } }
+        private List<int?>? _explicitNullValueGroupIds = default!;
 #nullable restore
 #else
-        public List<int?> GroupIds { get; set; }
+        public List<int?> GroupIds { get => _explicitNullValueGroupIds; set { _explicitNullValueGroupIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_ids"); else _explicitNullProperties?.Remove("group_ids"); } }
+        private List<int?> _explicitNullValueGroupIds = default!;
 #endif
         /// <summary>List of permissions for the granular scope.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Permissions { get; set; }
+        public List<string>? Permissions { get => _explicitNullValuePermissions; set { _explicitNullValuePermissions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("permissions"); else _explicitNullProperties?.Remove("permissions"); } }
+        private List<string>? _explicitNullValuePermissions = default!;
 #nullable restore
 #else
-        public List<string> Permissions { get; set; }
+        public List<string> Permissions { get => _explicitNullValuePermissions; set { _explicitNullValuePermissions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("permissions"); else _explicitNullProperties?.Remove("permissions"); } }
+        private List<string> _explicitNullValuePermissions = default!;
 #endif
         /// <summary>IDs of projects to associate with the granular scope, when access is `selected_memberships`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<int?>? ProjectIds { get; set; }
+        public List<int?>? ProjectIds { get => _explicitNullValueProjectIds; set { _explicitNullValueProjectIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_ids"); else _explicitNullProperties?.Remove("project_ids"); } }
+        private List<int?>? _explicitNullValueProjectIds = default!;
 #nullable restore
 #else
-        public List<int?> ProjectIds { get; set; }
+        public List<int?> ProjectIds { get => _explicitNullValueProjectIds; set { _explicitNullValueProjectIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_ids"); else _explicitNullProperties?.Remove("project_ids"); } }
+        private List<int?> _explicitNullValueProjectIds = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4UsersUserIdPersonalAccessTokensRequestGranularScopesItem"/> and sets the default values.
@@ -55,7 +73,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4UsersUserIdPersonalAccessTokensRequestGranularScopesItem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4UsersUserIdPersonalAccessTokensRequestGranularScopesItem();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4UsersUserIdPersonalAccessTokensRequestGranularScopesItem(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -82,6 +100,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<int?>("group_ids", GroupIds);
             writer.WriteCollectionOfPrimitiveValues<string>("permissions", Permissions);
             writer.WriteCollectionOfPrimitiveValues<int?>("project_ids", ProjectIds);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

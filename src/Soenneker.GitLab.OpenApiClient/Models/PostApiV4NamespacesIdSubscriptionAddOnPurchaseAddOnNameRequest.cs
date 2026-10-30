@@ -12,25 +12,43 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostApiV4NamespacesIdSubscriptionAddOnPurchaseAddOnNameRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("expires_on") is { } nullNodeExpiresOn && nullNodeExpiresOn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExpiresOn = null;
+            if (parseNode.GetChildNode("purchase_xid") is { } nullNodePurchaseXid && nullNodePurchaseXid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PurchaseXid = null;
+            if (parseNode.GetChildNode("quantity") is { } nullNodeQuantity && nullNodeQuantity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Quantity = null;
+            if (parseNode.GetChildNode("started_on") is { } nullNodeStartedOn && nullNodeStartedOn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartedOn = null;
+            if (parseNode.GetChildNode("trial") is { } nullNodeTrial && nullNodeTrial.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Trial = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Date when the purchase expires.</summary>
-        public Date? ExpiresOn { get; set; }
+        public Date? ExpiresOn { get => _explicitNullValueExpiresOn; set { _explicitNullValueExpiresOn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expires_on"); else _explicitNullProperties?.Remove("expires_on"); } }
+        private Date? _explicitNullValueExpiresOn = default!;
         /// <summary>Identifier of the purchase, for example the subscription name.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PurchaseXid { get; set; }
+        public string? PurchaseXid { get => _explicitNullValuePurchaseXid; set { _explicitNullValuePurchaseXid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("purchase_xid"); else _explicitNullProperties?.Remove("purchase_xid"); } }
+        private string? _explicitNullValuePurchaseXid = default!;
 #nullable restore
 #else
-        public string PurchaseXid { get; set; }
+        public string PurchaseXid { get => _explicitNullValuePurchaseXid; set { _explicitNullValuePurchaseXid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("purchase_xid"); else _explicitNullProperties?.Remove("purchase_xid"); } }
+        private string _explicitNullValuePurchaseXid = default!;
 #endif
         /// <summary>Quantity of the purchase.</summary>
-        public int? Quantity { get; set; }
+        public int? Quantity { get => _explicitNullValueQuantity; set { _explicitNullValueQuantity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quantity"); else _explicitNullProperties?.Remove("quantity"); } }
+        private int? _explicitNullValueQuantity = default!;
         /// <summary>Date when the purchase takes effect.</summary>
-        public Date? StartedOn { get; set; }
+        public Date? StartedOn { get => _explicitNullValueStartedOn; set { _explicitNullValueStartedOn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("started_on"); else _explicitNullProperties?.Remove("started_on"); } }
+        private Date? _explicitNullValueStartedOn = default!;
         /// <summary>If `true`, the add-on purchase is a trial.</summary>
-        public bool? Trial { get; set; }
+        public bool? Trial { get => _explicitNullValueTrial; set { _explicitNullValueTrial = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trial"); else _explicitNullProperties?.Remove("trial"); } }
+        private bool? _explicitNullValueTrial = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4NamespacesIdSubscriptionAddOnPurchaseAddOnNameRequest"/> and sets the default values.
         /// </summary>
@@ -47,7 +65,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4NamespacesIdSubscriptionAddOnPurchaseAddOnNameRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4NamespacesIdSubscriptionAddOnPurchaseAddOnNameRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4NamespacesIdSubscriptionAddOnPurchaseAddOnNameRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -76,6 +94,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteIntValue("quantity", Quantity);
             writer.WriteDateValue("started_on", StartedOn);
             writer.WriteBoolValue("trial", Trial);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,26 +11,41 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ApiEntitiesBillableMembershipAccessLevel : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("custom_role") is { } nullNodeCustomRole && nullNodeCustomRole.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomRole = null;
+            if (parseNode.GetChildNode("integer_value") is { } nullNodeIntegerValue && nullNodeIntegerValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IntegerValue = null;
+            if (parseNode.GetChildNode("string_value") is { } nullNodeStringValue && nullNodeStringValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StringValue = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The custom_role property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBillableMembershipAccessLevelCustomRoleProperty? CustomRole { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBillableMembershipAccessLevelCustomRoleProperty? CustomRole { get => _explicitNullValueCustomRole; set { _explicitNullValueCustomRole = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_role"); else _explicitNullProperties?.Remove("custom_role"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBillableMembershipAccessLevelCustomRoleProperty? _explicitNullValueCustomRole = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBillableMembershipAccessLevelCustomRoleProperty CustomRole { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBillableMembershipAccessLevelCustomRoleProperty CustomRole { get => _explicitNullValueCustomRole; set { _explicitNullValueCustomRole = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_role"); else _explicitNullProperties?.Remove("custom_role"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBillableMembershipAccessLevelCustomRoleProperty _explicitNullValueCustomRole = default!;
 #endif
         /// <summary>The integer_value property</summary>
-        public int? IntegerValue { get; set; }
+        public int? IntegerValue { get => _explicitNullValueIntegerValue; set { _explicitNullValueIntegerValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("integer_value"); else _explicitNullProperties?.Remove("integer_value"); } }
+        private int? _explicitNullValueIntegerValue = default!;
         /// <summary>The string_value property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StringValue { get; set; }
+        public string? StringValue { get => _explicitNullValueStringValue; set { _explicitNullValueStringValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("string_value"); else _explicitNullProperties?.Remove("string_value"); } }
+        private string? _explicitNullValueStringValue = default!;
 #nullable restore
 #else
-        public string StringValue { get; set; }
+        public string StringValue { get => _explicitNullValueStringValue; set { _explicitNullValueStringValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("string_value"); else _explicitNullProperties?.Remove("string_value"); } }
+        private string _explicitNullValueStringValue = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBillableMembershipAccessLevel"/> and sets the default values.
@@ -47,7 +62,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBillableMembershipAccessLevel CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBillableMembershipAccessLevel();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBillableMembershipAccessLevel(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -72,6 +87,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBillableMembershipAccessLevelCustomRoleProperty>("custom_role", CustomRole);
             writer.WriteIntValue("integer_value", IntegerValue);
             writer.WriteStringValue("string_value", StringValue);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

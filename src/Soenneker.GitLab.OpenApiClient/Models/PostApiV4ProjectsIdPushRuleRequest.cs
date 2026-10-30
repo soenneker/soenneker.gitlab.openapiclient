@@ -11,65 +11,103 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostApiV4ProjectsIdPushRuleRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("author_email_regex") is { } nullNodeAuthorEmailRegex && nullNodeAuthorEmailRegex.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AuthorEmailRegex = null;
+            if (parseNode.GetChildNode("branch_name_regex") is { } nullNodeBranchNameRegex && nullNodeBranchNameRegex.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BranchNameRegex = null;
+            if (parseNode.GetChildNode("commit_committer_check") is { } nullNodeCommitCommitterCheck && nullNodeCommitCommitterCheck.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommitCommitterCheck = null;
+            if (parseNode.GetChildNode("commit_committer_name_check") is { } nullNodeCommitCommitterNameCheck && nullNodeCommitCommitterNameCheck.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommitCommitterNameCheck = null;
+            if (parseNode.GetChildNode("commit_message_negative_regex") is { } nullNodeCommitMessageNegativeRegex && nullNodeCommitMessageNegativeRegex.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommitMessageNegativeRegex = null;
+            if (parseNode.GetChildNode("commit_message_regex") is { } nullNodeCommitMessageRegex && nullNodeCommitMessageRegex.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommitMessageRegex = null;
+            if (parseNode.GetChildNode("deny_delete_tag") is { } nullNodeDenyDeleteTag && nullNodeDenyDeleteTag.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DenyDeleteTag = null;
+            if (parseNode.GetChildNode("file_name_regex") is { } nullNodeFileNameRegex && nullNodeFileNameRegex.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FileNameRegex = null;
+            if (parseNode.GetChildNode("max_file_size") is { } nullNodeMaxFileSize && nullNodeMaxFileSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxFileSize = null;
+            if (parseNode.GetChildNode("member_check") is { } nullNodeMemberCheck && nullNodeMemberCheck.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MemberCheck = null;
+            if (parseNode.GetChildNode("prevent_secrets") is { } nullNodePreventSecrets && nullNodePreventSecrets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreventSecrets = null;
+            if (parseNode.GetChildNode("reject_non_dco_commits") is { } nullNodeRejectNonDcoCommits && nullNodeRejectNonDcoCommits.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RejectNonDcoCommits = null;
+            if (parseNode.GetChildNode("reject_unsigned_commits") is { } nullNodeRejectUnsignedCommits && nullNodeRejectUnsignedCommits.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RejectUnsignedCommits = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Regular expression that commit author emails must match, for example `@my-company.com$`. At least one of `deny_delete_tag`, `member_check`, `prevent_secrets`, `commit_message_regex`, `commit_message_negative_regex`, `branch_name_regex`, `author_email_regex`, `file_name_regex`, `max_file_size`, `commit_committer_check`, `commit_committer_name_check`, `reject_unsigned_commits`, `reject_non_dco_commits` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AuthorEmailRegex { get; set; }
+        public string? AuthorEmailRegex { get => _explicitNullValueAuthorEmailRegex; set { _explicitNullValueAuthorEmailRegex = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("author_email_regex"); else _explicitNullProperties?.Remove("author_email_regex"); } }
+        private string? _explicitNullValueAuthorEmailRegex = default!;
 #nullable restore
 #else
-        public string AuthorEmailRegex { get; set; }
+        public string AuthorEmailRegex { get => _explicitNullValueAuthorEmailRegex; set { _explicitNullValueAuthorEmailRegex = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("author_email_regex"); else _explicitNullProperties?.Remove("author_email_regex"); } }
+        private string _explicitNullValueAuthorEmailRegex = default!;
 #endif
         /// <summary>Regular expression that branch names must match. At least one of `deny_delete_tag`, `member_check`, `prevent_secrets`, `commit_message_regex`, `commit_message_negative_regex`, `branch_name_regex`, `author_email_regex`, `file_name_regex`, `max_file_size`, `commit_committer_check`, `commit_committer_name_check`, `reject_unsigned_commits`, `reject_non_dco_commits` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BranchNameRegex { get; set; }
+        public string? BranchNameRegex { get => _explicitNullValueBranchNameRegex; set { _explicitNullValueBranchNameRegex = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("branch_name_regex"); else _explicitNullProperties?.Remove("branch_name_regex"); } }
+        private string? _explicitNullValueBranchNameRegex = default!;
 #nullable restore
 #else
-        public string BranchNameRegex { get; set; }
+        public string BranchNameRegex { get => _explicitNullValueBranchNameRegex; set { _explicitNullValueBranchNameRegex = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("branch_name_regex"); else _explicitNullProperties?.Remove("branch_name_regex"); } }
+        private string _explicitNullValueBranchNameRegex = default!;
 #endif
         /// <summary>If `true`, users can push commits only if the committer email is one of their own verified emails. At least one of `deny_delete_tag`, `member_check`, `prevent_secrets`, `commit_message_regex`, `commit_message_negative_regex`, `branch_name_regex`, `author_email_regex`, `file_name_regex`, `max_file_size`, `commit_committer_check`, `commit_committer_name_check`, `reject_unsigned_commits`, `reject_non_dco_commits` must be provided.</summary>
-        public bool? CommitCommitterCheck { get; set; }
+        public bool? CommitCommitterCheck { get => _explicitNullValueCommitCommitterCheck; set { _explicitNullValueCommitCommitterCheck = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commit_committer_check"); else _explicitNullProperties?.Remove("commit_committer_check"); } }
+        private bool? _explicitNullValueCommitCommitterCheck = default!;
         /// <summary>If `true`, users can push commits only if the commit author name is consistent with their GitLab account name. At least one of `deny_delete_tag`, `member_check`, `prevent_secrets`, `commit_message_regex`, `commit_message_negative_regex`, `branch_name_regex`, `author_email_regex`, `file_name_regex`, `max_file_size`, `commit_committer_check`, `commit_committer_name_check`, `reject_unsigned_commits`, `reject_non_dco_commits` must be provided.</summary>
-        public bool? CommitCommitterNameCheck { get; set; }
+        public bool? CommitCommitterNameCheck { get => _explicitNullValueCommitCommitterNameCheck; set { _explicitNullValueCommitCommitterNameCheck = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commit_committer_name_check"); else _explicitNullProperties?.Remove("commit_committer_name_check"); } }
+        private bool? _explicitNullValueCommitCommitterNameCheck = default!;
         /// <summary>Regular expression that commit messages must not match. At least one of `deny_delete_tag`, `member_check`, `prevent_secrets`, `commit_message_regex`, `commit_message_negative_regex`, `branch_name_regex`, `author_email_regex`, `file_name_regex`, `max_file_size`, `commit_committer_check`, `commit_committer_name_check`, `reject_unsigned_commits`, `reject_non_dco_commits` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CommitMessageNegativeRegex { get; set; }
+        public string? CommitMessageNegativeRegex { get => _explicitNullValueCommitMessageNegativeRegex; set { _explicitNullValueCommitMessageNegativeRegex = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commit_message_negative_regex"); else _explicitNullProperties?.Remove("commit_message_negative_regex"); } }
+        private string? _explicitNullValueCommitMessageNegativeRegex = default!;
 #nullable restore
 #else
-        public string CommitMessageNegativeRegex { get; set; }
+        public string CommitMessageNegativeRegex { get => _explicitNullValueCommitMessageNegativeRegex; set { _explicitNullValueCommitMessageNegativeRegex = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commit_message_negative_regex"); else _explicitNullProperties?.Remove("commit_message_negative_regex"); } }
+        private string _explicitNullValueCommitMessageNegativeRegex = default!;
 #endif
         /// <summary>Regular expression that commit messages must match, for example `Fixed \d+\..*`. At least one of `deny_delete_tag`, `member_check`, `prevent_secrets`, `commit_message_regex`, `commit_message_negative_regex`, `branch_name_regex`, `author_email_regex`, `file_name_regex`, `max_file_size`, `commit_committer_check`, `commit_committer_name_check`, `reject_unsigned_commits`, `reject_non_dco_commits` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CommitMessageRegex { get; set; }
+        public string? CommitMessageRegex { get => _explicitNullValueCommitMessageRegex; set { _explicitNullValueCommitMessageRegex = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commit_message_regex"); else _explicitNullProperties?.Remove("commit_message_regex"); } }
+        private string? _explicitNullValueCommitMessageRegex = default!;
 #nullable restore
 #else
-        public string CommitMessageRegex { get; set; }
+        public string CommitMessageRegex { get => _explicitNullValueCommitMessageRegex; set { _explicitNullValueCommitMessageRegex = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commit_message_regex"); else _explicitNullProperties?.Remove("commit_message_regex"); } }
+        private string _explicitNullValueCommitMessageRegex = default!;
 #endif
         /// <summary>If `true`, denies deleting a tag. At least one of `deny_delete_tag`, `member_check`, `prevent_secrets`, `commit_message_regex`, `commit_message_negative_regex`, `branch_name_regex`, `author_email_regex`, `file_name_regex`, `max_file_size`, `commit_committer_check`, `commit_committer_name_check`, `reject_unsigned_commits`, `reject_non_dco_commits` must be provided.</summary>
-        public bool? DenyDeleteTag { get; set; }
+        public bool? DenyDeleteTag { get => _explicitNullValueDenyDeleteTag; set { _explicitNullValueDenyDeleteTag = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deny_delete_tag"); else _explicitNullProperties?.Remove("deny_delete_tag"); } }
+        private bool? _explicitNullValueDenyDeleteTag = default!;
         /// <summary>Regular expression that committed filenames must not match. At least one of `deny_delete_tag`, `member_check`, `prevent_secrets`, `commit_message_regex`, `commit_message_negative_regex`, `branch_name_regex`, `author_email_regex`, `file_name_regex`, `max_file_size`, `commit_committer_check`, `commit_committer_name_check`, `reject_unsigned_commits`, `reject_non_dco_commits` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FileNameRegex { get; set; }
+        public string? FileNameRegex { get => _explicitNullValueFileNameRegex; set { _explicitNullValueFileNameRegex = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file_name_regex"); else _explicitNullProperties?.Remove("file_name_regex"); } }
+        private string? _explicitNullValueFileNameRegex = default!;
 #nullable restore
 #else
-        public string FileNameRegex { get; set; }
+        public string FileNameRegex { get => _explicitNullValueFileNameRegex; set { _explicitNullValueFileNameRegex = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file_name_regex"); else _explicitNullProperties?.Remove("file_name_regex"); } }
+        private string _explicitNullValueFileNameRegex = default!;
 #endif
         /// <summary>Maximum file size allowed, in MB. At least one of `deny_delete_tag`, `member_check`, `prevent_secrets`, `commit_message_regex`, `commit_message_negative_regex`, `branch_name_regex`, `author_email_regex`, `file_name_regex`, `max_file_size`, `commit_committer_check`, `commit_committer_name_check`, `reject_unsigned_commits`, `reject_non_dco_commits` must be provided.</summary>
-        public int? MaxFileSize { get; set; }
+        public int? MaxFileSize { get => _explicitNullValueMaxFileSize; set { _explicitNullValueMaxFileSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("max_file_size"); else _explicitNullProperties?.Remove("max_file_size"); } }
+        private int? _explicitNullValueMaxFileSize = default!;
         /// <summary>If `true`, restricts commits by author email to existing GitLab users. At least one of `deny_delete_tag`, `member_check`, `prevent_secrets`, `commit_message_regex`, `commit_message_negative_regex`, `branch_name_regex`, `author_email_regex`, `file_name_regex`, `max_file_size`, `commit_committer_check`, `commit_committer_name_check`, `reject_unsigned_commits`, `reject_non_dco_commits` must be provided.</summary>
-        public bool? MemberCheck { get; set; }
+        public bool? MemberCheck { get => _explicitNullValueMemberCheck; set { _explicitNullValueMemberCheck = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("member_check"); else _explicitNullProperties?.Remove("member_check"); } }
+        private bool? _explicitNullValueMemberCheck = default!;
         /// <summary>If `true`, rejects files that are likely to [contain secrets](https://gitlab.com/gitlab-org/gitlab/-/blob/master/ee/lib/gitlab/checks/files_denylist.yml). At least one of `deny_delete_tag`, `member_check`, `prevent_secrets`, `commit_message_regex`, `commit_message_negative_regex`, `branch_name_regex`, `author_email_regex`, `file_name_regex`, `max_file_size`, `commit_committer_check`, `commit_committer_name_check`, `reject_unsigned_commits`, `reject_non_dco_commits` must be provided.</summary>
-        public bool? PreventSecrets { get; set; }
+        public bool? PreventSecrets { get => _explicitNullValuePreventSecrets; set { _explicitNullValuePreventSecrets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prevent_secrets"); else _explicitNullProperties?.Remove("prevent_secrets"); } }
+        private bool? _explicitNullValuePreventSecrets = default!;
         /// <summary>If `true`, rejects commits that are not DCO certified. At least one of `deny_delete_tag`, `member_check`, `prevent_secrets`, `commit_message_regex`, `commit_message_negative_regex`, `branch_name_regex`, `author_email_regex`, `file_name_regex`, `max_file_size`, `commit_committer_check`, `commit_committer_name_check`, `reject_unsigned_commits`, `reject_non_dco_commits` must be provided.</summary>
-        public bool? RejectNonDcoCommits { get; set; }
+        public bool? RejectNonDcoCommits { get => _explicitNullValueRejectNonDcoCommits; set { _explicitNullValueRejectNonDcoCommits = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reject_non_dco_commits"); else _explicitNullProperties?.Remove("reject_non_dco_commits"); } }
+        private bool? _explicitNullValueRejectNonDcoCommits = default!;
         /// <summary>If `true`, rejects commits that are not signed. At least one of `deny_delete_tag`, `member_check`, `prevent_secrets`, `commit_message_regex`, `commit_message_negative_regex`, `branch_name_regex`, `author_email_regex`, `file_name_regex`, `max_file_size`, `commit_committer_check`, `commit_committer_name_check`, `reject_unsigned_commits`, `reject_non_dco_commits` must be provided.</summary>
-        public bool? RejectUnsignedCommits { get; set; }
+        public bool? RejectUnsignedCommits { get => _explicitNullValueRejectUnsignedCommits; set { _explicitNullValueRejectUnsignedCommits = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reject_unsigned_commits"); else _explicitNullProperties?.Remove("reject_unsigned_commits"); } }
+        private bool? _explicitNullValueRejectUnsignedCommits = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdPushRuleRequest"/> and sets the default values.
         /// </summary>
@@ -85,7 +123,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdPushRuleRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdPushRuleRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdPushRuleRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -130,6 +168,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteBoolValue("prevent_secrets", PreventSecrets);
             writer.WriteBoolValue("reject_non_dco_commits", RejectNonDcoCommits);
             writer.WriteBoolValue("reject_unsigned_commits", RejectUnsignedCommits);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

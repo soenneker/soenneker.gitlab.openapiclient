@@ -11,31 +11,60 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ApiEntitiesProjectStatistics : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("commit_count") is { } nullNodeCommitCount && nullNodeCommitCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommitCount = null;
+            if (parseNode.GetChildNode("container_registry_size") is { } nullNodeContainerRegistrySize && nullNodeContainerRegistrySize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContainerRegistrySize = null;
+            if (parseNode.GetChildNode("job_artifacts_size") is { } nullNodeJobArtifactsSize && nullNodeJobArtifactsSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) JobArtifactsSize = null;
+            if (parseNode.GetChildNode("lfs_objects_size") is { } nullNodeLfsObjectsSize && nullNodeLfsObjectsSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LfsObjectsSize = null;
+            if (parseNode.GetChildNode("packages_size") is { } nullNodePackagesSize && nullNodePackagesSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PackagesSize = null;
+            if (parseNode.GetChildNode("pipeline_artifacts_size") is { } nullNodePipelineArtifactsSize && nullNodePipelineArtifactsSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PipelineArtifactsSize = null;
+            if (parseNode.GetChildNode("repository_size") is { } nullNodeRepositorySize && nullNodeRepositorySize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RepositorySize = null;
+            if (parseNode.GetChildNode("snippets_size") is { } nullNodeSnippetsSize && nullNodeSnippetsSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SnippetsSize = null;
+            if (parseNode.GetChildNode("storage_size") is { } nullNodeStorageSize && nullNodeStorageSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StorageSize = null;
+            if (parseNode.GetChildNode("uploads_size") is { } nullNodeUploadsSize && nullNodeUploadsSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UploadsSize = null;
+            if (parseNode.GetChildNode("wiki_size") is { } nullNodeWikiSize && nullNodeWikiSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WikiSize = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The commit_count property</summary>
-        public int? CommitCount { get; set; }
+        public int? CommitCount { get => _explicitNullValueCommitCount; set { _explicitNullValueCommitCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commit_count"); else _explicitNullProperties?.Remove("commit_count"); } }
+        private int? _explicitNullValueCommitCount = default!;
         /// <summary>The container_registry_size property</summary>
-        public int? ContainerRegistrySize { get; set; }
+        public int? ContainerRegistrySize { get => _explicitNullValueContainerRegistrySize; set { _explicitNullValueContainerRegistrySize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("container_registry_size"); else _explicitNullProperties?.Remove("container_registry_size"); } }
+        private int? _explicitNullValueContainerRegistrySize = default!;
         /// <summary>The job_artifacts_size property</summary>
-        public int? JobArtifactsSize { get; set; }
+        public int? JobArtifactsSize { get => _explicitNullValueJobArtifactsSize; set { _explicitNullValueJobArtifactsSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("job_artifacts_size"); else _explicitNullProperties?.Remove("job_artifacts_size"); } }
+        private int? _explicitNullValueJobArtifactsSize = default!;
         /// <summary>The lfs_objects_size property</summary>
-        public int? LfsObjectsSize { get; set; }
+        public int? LfsObjectsSize { get => _explicitNullValueLfsObjectsSize; set { _explicitNullValueLfsObjectsSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lfs_objects_size"); else _explicitNullProperties?.Remove("lfs_objects_size"); } }
+        private int? _explicitNullValueLfsObjectsSize = default!;
         /// <summary>The packages_size property</summary>
-        public int? PackagesSize { get; set; }
+        public int? PackagesSize { get => _explicitNullValuePackagesSize; set { _explicitNullValuePackagesSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("packages_size"); else _explicitNullProperties?.Remove("packages_size"); } }
+        private int? _explicitNullValuePackagesSize = default!;
         /// <summary>The pipeline_artifacts_size property</summary>
-        public int? PipelineArtifactsSize { get; set; }
+        public int? PipelineArtifactsSize { get => _explicitNullValuePipelineArtifactsSize; set { _explicitNullValuePipelineArtifactsSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pipeline_artifacts_size"); else _explicitNullProperties?.Remove("pipeline_artifacts_size"); } }
+        private int? _explicitNullValuePipelineArtifactsSize = default!;
         /// <summary>The repository_size property</summary>
-        public int? RepositorySize { get; set; }
+        public int? RepositorySize { get => _explicitNullValueRepositorySize; set { _explicitNullValueRepositorySize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("repository_size"); else _explicitNullProperties?.Remove("repository_size"); } }
+        private int? _explicitNullValueRepositorySize = default!;
         /// <summary>The snippets_size property</summary>
-        public int? SnippetsSize { get; set; }
+        public int? SnippetsSize { get => _explicitNullValueSnippetsSize; set { _explicitNullValueSnippetsSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("snippets_size"); else _explicitNullProperties?.Remove("snippets_size"); } }
+        private int? _explicitNullValueSnippetsSize = default!;
         /// <summary>The storage_size property</summary>
-        public int? StorageSize { get; set; }
+        public int? StorageSize { get => _explicitNullValueStorageSize; set { _explicitNullValueStorageSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("storage_size"); else _explicitNullProperties?.Remove("storage_size"); } }
+        private int? _explicitNullValueStorageSize = default!;
         /// <summary>The uploads_size property</summary>
-        public int? UploadsSize { get; set; }
+        public int? UploadsSize { get => _explicitNullValueUploadsSize; set { _explicitNullValueUploadsSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uploads_size"); else _explicitNullProperties?.Remove("uploads_size"); } }
+        private int? _explicitNullValueUploadsSize = default!;
         /// <summary>The wiki_size property</summary>
-        public int? WikiSize { get; set; }
+        public int? WikiSize { get => _explicitNullValueWikiSize; set { _explicitNullValueWikiSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wiki_size"); else _explicitNullProperties?.Remove("wiki_size"); } }
+        private int? _explicitNullValueWikiSize = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectStatistics"/> and sets the default values.
         /// </summary>
@@ -51,7 +80,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectStatistics CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectStatistics();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectStatistics(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -92,6 +121,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteIntValue("storage_size", StorageSize);
             writer.WriteIntValue("uploads_size", UploadsSize);
             writer.WriteIntValue("wiki_size", WikiSize);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

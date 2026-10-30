@@ -11,40 +11,59 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PutApiV4ProjectsIdExternalStatusChecksCheckIdRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("external_url") is { } nullNodeExternalUrl && nullNodeExternalUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalUrl = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("protected_branch_ids") is { } nullNodeProtectedBranchIds && nullNodeProtectedBranchIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProtectedBranchIds = null;
+            if (parseNode.GetChildNode("shared_secret") is { } nullNodeSharedSecret && nullNodeSharedSecret.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SharedSecret = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>URL of the external status check service.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExternalUrl { get; set; }
+        public string? ExternalUrl { get => _explicitNullValueExternalUrl; set { _explicitNullValueExternalUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_url"); else _explicitNullProperties?.Remove("external_url"); } }
+        private string? _explicitNullValueExternalUrl = default!;
 #nullable restore
 #else
-        public string ExternalUrl { get; set; }
+        public string ExternalUrl { get => _explicitNullValueExternalUrl; set { _explicitNullValueExternalUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_url"); else _explicitNullProperties?.Remove("external_url"); } }
+        private string _explicitNullValueExternalUrl = default!;
 #endif
         /// <summary>Display name of the external status check service.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>IDs of protected branches to scope the rule by.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<int?>? ProtectedBranchIds { get; set; }
+        public List<int?>? ProtectedBranchIds { get => _explicitNullValueProtectedBranchIds; set { _explicitNullValueProtectedBranchIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("protected_branch_ids"); else _explicitNullProperties?.Remove("protected_branch_ids"); } }
+        private List<int?>? _explicitNullValueProtectedBranchIds = default!;
 #nullable restore
 #else
-        public List<int?> ProtectedBranchIds { get; set; }
+        public List<int?> ProtectedBranchIds { get => _explicitNullValueProtectedBranchIds; set { _explicitNullValueProtectedBranchIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("protected_branch_ids"); else _explicitNullProperties?.Remove("protected_branch_ids"); } }
+        private List<int?> _explicitNullValueProtectedBranchIds = default!;
 #endif
         /// <summary>HMAC secret for the external status check.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SharedSecret { get; set; }
+        public string? SharedSecret { get => _explicitNullValueSharedSecret; set { _explicitNullValueSharedSecret = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shared_secret"); else _explicitNullProperties?.Remove("shared_secret"); } }
+        private string? _explicitNullValueSharedSecret = default!;
 #nullable restore
 #else
-        public string SharedSecret { get; set; }
+        public string SharedSecret { get => _explicitNullValueSharedSecret; set { _explicitNullValueSharedSecret = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shared_secret"); else _explicitNullProperties?.Remove("shared_secret"); } }
+        private string _explicitNullValueSharedSecret = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdExternalStatusChecksCheckIdRequest"/> and sets the default values.
@@ -61,7 +80,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdExternalStatusChecksCheckIdRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdExternalStatusChecksCheckIdRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdExternalStatusChecksCheckIdRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -88,6 +107,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("name", Name);
             writer.WriteCollectionOfPrimitiveValues<int?>("protected_branch_ids", ProtectedBranchIds);
             writer.WriteStringValue("shared_secret", SharedSecret);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

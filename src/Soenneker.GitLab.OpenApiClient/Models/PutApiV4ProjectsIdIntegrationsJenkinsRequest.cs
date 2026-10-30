@@ -11,50 +11,79 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PutApiV4ProjectsIdIntegrationsJenkinsRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("enable_ssl_verification") is { } nullNodeEnableSslVerification && nullNodeEnableSslVerification.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnableSslVerification = null;
+            if (parseNode.GetChildNode("jenkins_url") is { } nullNodeJenkinsUrl && nullNodeJenkinsUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) JenkinsUrl = null;
+            if (parseNode.GetChildNode("merge_requests_events") is { } nullNodeMergeRequestsEvents && nullNodeMergeRequestsEvents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MergeRequestsEvents = null;
+            if (parseNode.GetChildNode("password") is { } nullNodePassword && nullNodePassword.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Password = null;
+            if (parseNode.GetChildNode("project_name") is { } nullNodeProjectName && nullNodeProjectName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProjectName = null;
+            if (parseNode.GetChildNode("push_events") is { } nullNodePushEvents && nullNodePushEvents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PushEvents = null;
+            if (parseNode.GetChildNode("tag_push_events") is { } nullNodeTagPushEvents && nullNodeTagPushEvents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TagPushEvents = null;
+            if (parseNode.GetChildNode("use_inherited_settings") is { } nullNodeUseInheritedSettings && nullNodeUseInheritedSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UseInheritedSettings = null;
+            if (parseNode.GetChildNode("username") is { } nullNodeUsername && nullNodeUsername.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Username = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Enable SSL verification. Defaults to `true` (enabled).</summary>
-        public bool? EnableSslVerification { get; set; }
+        public bool? EnableSslVerification { get => _explicitNullValueEnableSslVerification; set { _explicitNullValueEnableSslVerification = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enable_ssl_verification"); else _explicitNullProperties?.Remove("enable_ssl_verification"); } }
+        private bool? _explicitNullValueEnableSslVerification = default!;
         /// <summary>URL of the Jenkins server.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? JenkinsUrl { get; set; }
+        public string? JenkinsUrl { get => _explicitNullValueJenkinsUrl; set { _explicitNullValueJenkinsUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("jenkins_url"); else _explicitNullProperties?.Remove("jenkins_url"); } }
+        private string? _explicitNullValueJenkinsUrl = default!;
 #nullable restore
 #else
-        public string JenkinsUrl { get; set; }
+        public string JenkinsUrl { get => _explicitNullValueJenkinsUrl; set { _explicitNullValueJenkinsUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("jenkins_url"); else _explicitNullProperties?.Remove("jenkins_url"); } }
+        private string _explicitNullValueJenkinsUrl = default!;
 #endif
         /// <summary>Trigger event when a merge request is created, updated, or merged.</summary>
-        public bool? MergeRequestsEvents { get; set; }
+        public bool? MergeRequestsEvents { get => _explicitNullValueMergeRequestsEvents; set { _explicitNullValueMergeRequestsEvents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_requests_events"); else _explicitNullProperties?.Remove("merge_requests_events"); } }
+        private bool? _explicitNullValueMergeRequestsEvents = default!;
         /// <summary>Password of the Jenkins server.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Password { get; set; }
+        public string? Password { get => _explicitNullValuePassword; set { _explicitNullValuePassword = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("password"); else _explicitNullProperties?.Remove("password"); } }
+        private string? _explicitNullValuePassword = default!;
 #nullable restore
 #else
-        public string Password { get; set; }
+        public string Password { get => _explicitNullValuePassword; set { _explicitNullValuePassword = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("password"); else _explicitNullProperties?.Remove("password"); } }
+        private string _explicitNullValuePassword = default!;
 #endif
         /// <summary>Name of the Jenkins project.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ProjectName { get; set; }
+        public string? ProjectName { get => _explicitNullValueProjectName; set { _explicitNullValueProjectName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_name"); else _explicitNullProperties?.Remove("project_name"); } }
+        private string? _explicitNullValueProjectName = default!;
 #nullable restore
 #else
-        public string ProjectName { get; set; }
+        public string ProjectName { get => _explicitNullValueProjectName; set { _explicitNullValueProjectName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_name"); else _explicitNullProperties?.Remove("project_name"); } }
+        private string _explicitNullValueProjectName = default!;
 #endif
         /// <summary>Trigger event for pushes to the repository.</summary>
-        public bool? PushEvents { get; set; }
+        public bool? PushEvents { get => _explicitNullValuePushEvents; set { _explicitNullValuePushEvents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("push_events"); else _explicitNullProperties?.Remove("push_events"); } }
+        private bool? _explicitNullValuePushEvents = default!;
         /// <summary>Trigger event for new tags pushed to the repository.</summary>
-        public bool? TagPushEvents { get; set; }
+        public bool? TagPushEvents { get => _explicitNullValueTagPushEvents; set { _explicitNullValueTagPushEvents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tag_push_events"); else _explicitNullProperties?.Remove("tag_push_events"); } }
+        private bool? _explicitNullValueTagPushEvents = default!;
         /// <summary>Indicates whether to inherit the default settings. Defaults to `false`.</summary>
-        public bool? UseInheritedSettings { get; set; }
+        public bool? UseInheritedSettings { get => _explicitNullValueUseInheritedSettings; set { _explicitNullValueUseInheritedSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("use_inherited_settings"); else _explicitNullProperties?.Remove("use_inherited_settings"); } }
+        private bool? _explicitNullValueUseInheritedSettings = default!;
         /// <summary>Username of the Jenkins server.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Username { get; set; }
+        public string? Username { get => _explicitNullValueUsername; set { _explicitNullValueUsername = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("username"); else _explicitNullProperties?.Remove("username"); } }
+        private string? _explicitNullValueUsername = default!;
 #nullable restore
 #else
-        public string Username { get; set; }
+        public string Username { get => _explicitNullValueUsername; set { _explicitNullValueUsername = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("username"); else _explicitNullProperties?.Remove("username"); } }
+        private string _explicitNullValueUsername = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdIntegrationsJenkinsRequest"/> and sets the default values.
@@ -71,7 +100,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdIntegrationsJenkinsRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdIntegrationsJenkinsRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdIntegrationsJenkinsRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -108,6 +137,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteBoolValue("tag_push_events", TagPushEvents);
             writer.WriteBoolValue("use_inherited_settings", UseInheritedSettings);
             writer.WriteStringValue("username", Username);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

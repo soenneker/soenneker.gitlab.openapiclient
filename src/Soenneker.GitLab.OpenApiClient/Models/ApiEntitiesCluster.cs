@@ -11,128 +11,180 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ApiEntitiesCluster : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("cluster_type") is { } nullNodeClusterType && nullNodeClusterType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClusterType = null;
+            if (parseNode.GetChildNode("created_at") is { } nullNodeCreatedAt && nullNodeCreatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedAt = null;
+            if (parseNode.GetChildNode("domain") is { } nullNodeDomain && nullNodeDomain.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Domain = null;
+            if (parseNode.GetChildNode("enabled") is { } nullNodeEnabled && nullNodeEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Enabled = null;
+            if (parseNode.GetChildNode("environment_scope") is { } nullNodeEnvironmentScope && nullNodeEnvironmentScope.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnvironmentScope = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("managed") is { } nullNodeManaged && nullNodeManaged.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Managed = null;
+            if (parseNode.GetChildNode("management_project") is { } nullNodeManagementProject && nullNodeManagementProject.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ManagementProject = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("namespace_per_environment") is { } nullNodeNamespacePerEnvironment && nullNodeNamespacePerEnvironment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NamespacePerEnvironment = null;
+            if (parseNode.GetChildNode("platform_kubernetes") is { } nullNodePlatformKubernetes && nullNodePlatformKubernetes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PlatformKubernetes = null;
+            if (parseNode.GetChildNode("platform_type") is { } nullNodePlatformType && nullNodePlatformType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PlatformType = null;
+            if (parseNode.GetChildNode("provider_gcp") is { } nullNodeProviderGcp && nullNodeProviderGcp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProviderGcp = null;
+            if (parseNode.GetChildNode("provider_type") is { } nullNodeProviderType && nullNodeProviderType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProviderType = null;
+            if (parseNode.GetChildNode("user") is { } nullNodeUser && nullNodeUser.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) User = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The cluster_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ClusterType { get; set; }
+        public string? ClusterType { get => _explicitNullValueClusterType; set { _explicitNullValueClusterType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cluster_type"); else _explicitNullProperties?.Remove("cluster_type"); } }
+        private string? _explicitNullValueClusterType = default!;
 #nullable restore
 #else
-        public string ClusterType { get; set; }
+        public string ClusterType { get => _explicitNullValueClusterType; set { _explicitNullValueClusterType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cluster_type"); else _explicitNullProperties?.Remove("cluster_type"); } }
+        private string _explicitNullValueClusterType = default!;
 #endif
         /// <summary>The created_at property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CreatedAt { get; set; }
+        public string? CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_at"); else _explicitNullProperties?.Remove("created_at"); } }
+        private string? _explicitNullValueCreatedAt = default!;
 #nullable restore
 #else
-        public string CreatedAt { get; set; }
+        public string CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_at"); else _explicitNullProperties?.Remove("created_at"); } }
+        private string _explicitNullValueCreatedAt = default!;
 #endif
         /// <summary>The domain property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Domain { get; set; }
+        public string? Domain { get => _explicitNullValueDomain; set { _explicitNullValueDomain = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("domain"); else _explicitNullProperties?.Remove("domain"); } }
+        private string? _explicitNullValueDomain = default!;
 #nullable restore
 #else
-        public string Domain { get; set; }
+        public string Domain { get => _explicitNullValueDomain; set { _explicitNullValueDomain = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("domain"); else _explicitNullProperties?.Remove("domain"); } }
+        private string _explicitNullValueDomain = default!;
 #endif
         /// <summary>The enabled property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Enabled { get; set; }
+        public string? Enabled { get => _explicitNullValueEnabled; set { _explicitNullValueEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enabled"); else _explicitNullProperties?.Remove("enabled"); } }
+        private string? _explicitNullValueEnabled = default!;
 #nullable restore
 #else
-        public string Enabled { get; set; }
+        public string Enabled { get => _explicitNullValueEnabled; set { _explicitNullValueEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enabled"); else _explicitNullProperties?.Remove("enabled"); } }
+        private string _explicitNullValueEnabled = default!;
 #endif
         /// <summary>The environment_scope property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EnvironmentScope { get; set; }
+        public string? EnvironmentScope { get => _explicitNullValueEnvironmentScope; set { _explicitNullValueEnvironmentScope = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("environment_scope"); else _explicitNullProperties?.Remove("environment_scope"); } }
+        private string? _explicitNullValueEnvironmentScope = default!;
 #nullable restore
 #else
-        public string EnvironmentScope { get; set; }
+        public string EnvironmentScope { get => _explicitNullValueEnvironmentScope; set { _explicitNullValueEnvironmentScope = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("environment_scope"); else _explicitNullProperties?.Remove("environment_scope"); } }
+        private string _explicitNullValueEnvironmentScope = default!;
 #endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>The managed property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Managed { get; set; }
+        public string? Managed { get => _explicitNullValueManaged; set { _explicitNullValueManaged = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("managed"); else _explicitNullProperties?.Remove("managed"); } }
+        private string? _explicitNullValueManaged = default!;
 #nullable restore
 #else
-        public string Managed { get; set; }
+        public string Managed { get => _explicitNullValueManaged; set { _explicitNullValueManaged = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("managed"); else _explicitNullProperties?.Remove("managed"); } }
+        private string _explicitNullValueManaged = default!;
 #endif
         /// <summary>The management_project property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectIdentity? ManagementProject { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectIdentity? ManagementProject { get => _explicitNullValueManagementProject; set { _explicitNullValueManagementProject = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("management_project"); else _explicitNullProperties?.Remove("management_project"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectIdentity? _explicitNullValueManagementProject = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectIdentity ManagementProject { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectIdentity ManagementProject { get => _explicitNullValueManagementProject; set { _explicitNullValueManagementProject = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("management_project"); else _explicitNullProperties?.Remove("management_project"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectIdentity _explicitNullValueManagementProject = default!;
 #endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>The namespace_per_environment property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NamespacePerEnvironment { get; set; }
+        public string? NamespacePerEnvironment { get => _explicitNullValueNamespacePerEnvironment; set { _explicitNullValueNamespacePerEnvironment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("namespace_per_environment"); else _explicitNullProperties?.Remove("namespace_per_environment"); } }
+        private string? _explicitNullValueNamespacePerEnvironment = default!;
 #nullable restore
 #else
-        public string NamespacePerEnvironment { get; set; }
+        public string NamespacePerEnvironment { get => _explicitNullValueNamespacePerEnvironment; set { _explicitNullValueNamespacePerEnvironment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("namespace_per_environment"); else _explicitNullProperties?.Remove("namespace_per_environment"); } }
+        private string _explicitNullValueNamespacePerEnvironment = default!;
 #endif
         /// <summary>The platform_kubernetes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPlatformKubernetes? PlatformKubernetes { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPlatformKubernetes? PlatformKubernetes { get => _explicitNullValuePlatformKubernetes; set { _explicitNullValuePlatformKubernetes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("platform_kubernetes"); else _explicitNullProperties?.Remove("platform_kubernetes"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPlatformKubernetes? _explicitNullValuePlatformKubernetes = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPlatformKubernetes PlatformKubernetes { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPlatformKubernetes PlatformKubernetes { get => _explicitNullValuePlatformKubernetes; set { _explicitNullValuePlatformKubernetes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("platform_kubernetes"); else _explicitNullProperties?.Remove("platform_kubernetes"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPlatformKubernetes _explicitNullValuePlatformKubernetes = default!;
 #endif
         /// <summary>The platform_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PlatformType { get; set; }
+        public string? PlatformType { get => _explicitNullValuePlatformType; set { _explicitNullValuePlatformType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("platform_type"); else _explicitNullProperties?.Remove("platform_type"); } }
+        private string? _explicitNullValuePlatformType = default!;
 #nullable restore
 #else
-        public string PlatformType { get; set; }
+        public string PlatformType { get => _explicitNullValuePlatformType; set { _explicitNullValuePlatformType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("platform_type"); else _explicitNullProperties?.Remove("platform_type"); } }
+        private string _explicitNullValuePlatformType = default!;
 #endif
         /// <summary>The provider_gcp property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProviderGcp? ProviderGcp { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProviderGcp? ProviderGcp { get => _explicitNullValueProviderGcp; set { _explicitNullValueProviderGcp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("provider_gcp"); else _explicitNullProperties?.Remove("provider_gcp"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProviderGcp? _explicitNullValueProviderGcp = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProviderGcp ProviderGcp { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProviderGcp ProviderGcp { get => _explicitNullValueProviderGcp; set { _explicitNullValueProviderGcp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("provider_gcp"); else _explicitNullProperties?.Remove("provider_gcp"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProviderGcp _explicitNullValueProviderGcp = default!;
 #endif
         /// <summary>The provider_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ProviderType { get; set; }
+        public string? ProviderType { get => _explicitNullValueProviderType; set { _explicitNullValueProviderType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("provider_type"); else _explicitNullProperties?.Remove("provider_type"); } }
+        private string? _explicitNullValueProviderType = default!;
 #nullable restore
 #else
-        public string ProviderType { get; set; }
+        public string ProviderType { get => _explicitNullValueProviderType; set { _explicitNullValueProviderType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("provider_type"); else _explicitNullProperties?.Remove("provider_type"); } }
+        private string _explicitNullValueProviderType = default!;
 #endif
         /// <summary>The user property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic? User { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic? User { get => _explicitNullValueUser; set { _explicitNullValueUser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user"); else _explicitNullProperties?.Remove("user"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic? _explicitNullValueUser = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic User { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic User { get => _explicitNullValueUser; set { _explicitNullValueUser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user"); else _explicitNullProperties?.Remove("user"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic _explicitNullValueUser = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCluster"/> and sets the default values.
@@ -149,7 +201,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCluster CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCluster();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCluster(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -198,6 +250,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProviderGcp>("provider_gcp", ProviderGcp);
             writer.WriteStringValue("provider_type", ProviderType);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic>("user", User);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

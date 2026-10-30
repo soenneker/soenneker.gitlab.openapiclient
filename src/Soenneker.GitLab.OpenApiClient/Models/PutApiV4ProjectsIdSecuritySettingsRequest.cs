@@ -11,15 +11,28 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PutApiV4ProjectsIdSecuritySettingsRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("fast_dependency_paths_enabled") is { } nullNodeFastDependencyPathsEnabled && nullNodeFastDependencyPathsEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FastDependencyPathsEnabled = null;
+            if (parseNode.GetChildNode("pre_receive_secret_detection_enabled") is { } nullNodePreReceiveSecretDetectionEnabled && nullNodePreReceiveSecretDetectionEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreReceiveSecretDetectionEnabled = null;
+            if (parseNode.GetChildNode("secret_push_protection_enabled") is { } nullNodeSecretPushProtectionEnabled && nullNodeSecretPushProtectionEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SecretPushProtectionEnabled = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>If `true`, enables fast mode for dependency path graph builds, recording one path per dependency instead of all possible paths to reduce memory and processing time for large dependency graphs. Requires the `dependency_paths` feature flag to be enabled. At least one of `secret_push_protection_enabled`, `pre_receive_secret_detection_enabled`, `fast_dependency_paths_enabled` must be provided.</summary>
-        public bool? FastDependencyPathsEnabled { get; set; }
+        /// <summary>Deprecated. Has no effect; dependency graph builds always record direct edges only. At least one of `secret_push_protection_enabled`, `pre_receive_secret_detection_enabled`, `fast_dependency_paths_enabled` must be provided.</summary>
+        public bool? FastDependencyPathsEnabled { get => _explicitNullValueFastDependencyPathsEnabled; set { _explicitNullValueFastDependencyPathsEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fast_dependency_paths_enabled"); else _explicitNullProperties?.Remove("fast_dependency_paths_enabled"); } }
+        private bool? _explicitNullValueFastDependencyPathsEnabled = default!;
         /// <summary>If `true`, enables secret push protection for the project. [Deprecated](https://gitlab.com/gitlab-org/gitlab/-/issues/514413) in GitLab 17.9. Use `secret_push_protection_enabled` instead. At least one of `secret_push_protection_enabled`, `pre_receive_secret_detection_enabled`, `fast_dependency_paths_enabled` must be provided.</summary>
-        public bool? PreReceiveSecretDetectionEnabled { get; set; }
+        public bool? PreReceiveSecretDetectionEnabled { get => _explicitNullValuePreReceiveSecretDetectionEnabled; set { _explicitNullValuePreReceiveSecretDetectionEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pre_receive_secret_detection_enabled"); else _explicitNullProperties?.Remove("pre_receive_secret_detection_enabled"); } }
+        private bool? _explicitNullValuePreReceiveSecretDetectionEnabled = default!;
         /// <summary>If `true`, enables secret push protection for the project. At least one of `secret_push_protection_enabled`, `pre_receive_secret_detection_enabled`, `fast_dependency_paths_enabled` must be provided.</summary>
-        public bool? SecretPushProtectionEnabled { get; set; }
+        public bool? SecretPushProtectionEnabled { get => _explicitNullValueSecretPushProtectionEnabled; set { _explicitNullValueSecretPushProtectionEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secret_push_protection_enabled"); else _explicitNullProperties?.Remove("secret_push_protection_enabled"); } }
+        private bool? _explicitNullValueSecretPushProtectionEnabled = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdSecuritySettingsRequest"/> and sets the default values.
         /// </summary>
@@ -35,7 +48,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdSecuritySettingsRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdSecuritySettingsRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdSecuritySettingsRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -60,6 +73,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteBoolValue("fast_dependency_paths_enabled", FastDependencyPathsEnabled);
             writer.WriteBoolValue("pre_receive_secret_detection_enabled", PreReceiveSecretDetectionEnabled);
             writer.WriteBoolValue("secret_push_protection_enabled", SecretPushProtectionEnabled);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

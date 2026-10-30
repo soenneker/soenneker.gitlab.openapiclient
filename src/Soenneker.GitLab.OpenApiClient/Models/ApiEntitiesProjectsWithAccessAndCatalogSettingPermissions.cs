@@ -11,24 +11,37 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ApiEntitiesProjectsWithAccessAndCatalogSettingPermissions : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("group_access") is { } nullNodeGroupAccess && nullNodeGroupAccess.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GroupAccess = null;
+            if (parseNode.GetChildNode("project_access") is { } nullNodeProjectAccess && nullNodeProjectAccess.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProjectAccess = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The group_access property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroupAccess? GroupAccess { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroupAccess? GroupAccess { get => _explicitNullValueGroupAccess; set { _explicitNullValueGroupAccess = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_access"); else _explicitNullProperties?.Remove("group_access"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroupAccess? _explicitNullValueGroupAccess = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroupAccess GroupAccess { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroupAccess GroupAccess { get => _explicitNullValueGroupAccess; set { _explicitNullValueGroupAccess = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_access"); else _explicitNullProperties?.Remove("group_access"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroupAccess _explicitNullValueGroupAccess = default!;
 #endif
         /// <summary>The project_access property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectAccess? ProjectAccess { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectAccess? ProjectAccess { get => _explicitNullValueProjectAccess; set { _explicitNullValueProjectAccess = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_access"); else _explicitNullProperties?.Remove("project_access"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectAccess? _explicitNullValueProjectAccess = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectAccess ProjectAccess { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectAccess ProjectAccess { get => _explicitNullValueProjectAccess; set { _explicitNullValueProjectAccess = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_access"); else _explicitNullProperties?.Remove("project_access"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectAccess _explicitNullValueProjectAccess = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectsWithAccessAndCatalogSettingPermissions"/> and sets the default values.
@@ -45,7 +58,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectsWithAccessAndCatalogSettingPermissions CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectsWithAccessAndCatalogSettingPermissions();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectsWithAccessAndCatalogSettingPermissions(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +81,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroupAccess>("group_access", GroupAccess);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectAccess>("project_access", ProjectAccess);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,29 +11,51 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class TestReportEntity : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("error_count") is { } nullNodeErrorCount && nullNodeErrorCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ErrorCount = null;
+            if (parseNode.GetChildNode("failed_count") is { } nullNodeFailedCount && nullNodeFailedCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FailedCount = null;
+            if (parseNode.GetChildNode("skipped_count") is { } nullNodeSkippedCount && nullNodeSkippedCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SkippedCount = null;
+            if (parseNode.GetChildNode("success_count") is { } nullNodeSuccessCount && nullNodeSuccessCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SuccessCount = null;
+            if (parseNode.GetChildNode("test_suites") is { } nullNodeTestSuites && nullNodeTestSuites.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TestSuites = null;
+            if (parseNode.GetChildNode("total_count") is { } nullNodeTotalCount && nullNodeTotalCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalCount = null;
+            if (parseNode.GetChildNode("total_time") is { } nullNodeTotalTime && nullNodeTotalTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalTime = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The error_count property</summary>
-        public int? ErrorCount { get; set; }
+        public int? ErrorCount { get => _explicitNullValueErrorCount; set { _explicitNullValueErrorCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error_count"); else _explicitNullProperties?.Remove("error_count"); } }
+        private int? _explicitNullValueErrorCount = default!;
         /// <summary>The failed_count property</summary>
-        public int? FailedCount { get; set; }
+        public int? FailedCount { get => _explicitNullValueFailedCount; set { _explicitNullValueFailedCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failed_count"); else _explicitNullProperties?.Remove("failed_count"); } }
+        private int? _explicitNullValueFailedCount = default!;
         /// <summary>The skipped_count property</summary>
-        public int? SkippedCount { get; set; }
+        public int? SkippedCount { get => _explicitNullValueSkippedCount; set { _explicitNullValueSkippedCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("skipped_count"); else _explicitNullProperties?.Remove("skipped_count"); } }
+        private int? _explicitNullValueSkippedCount = default!;
         /// <summary>The success_count property</summary>
-        public int? SuccessCount { get; set; }
+        public int? SuccessCount { get => _explicitNullValueSuccessCount; set { _explicitNullValueSuccessCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("success_count"); else _explicitNullProperties?.Remove("success_count"); } }
+        private int? _explicitNullValueSuccessCount = default!;
         /// <summary>The test_suites property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.TestSuiteEntity>? TestSuites { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.TestSuiteEntity>? TestSuites { get => _explicitNullValueTestSuites; set { _explicitNullValueTestSuites = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("test_suites"); else _explicitNullProperties?.Remove("test_suites"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.TestSuiteEntity>? _explicitNullValueTestSuites = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.TestSuiteEntity> TestSuites { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.TestSuiteEntity> TestSuites { get => _explicitNullValueTestSuites; set { _explicitNullValueTestSuites = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("test_suites"); else _explicitNullProperties?.Remove("test_suites"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.TestSuiteEntity> _explicitNullValueTestSuites = default!;
 #endif
         /// <summary>The total_count property</summary>
-        public int? TotalCount { get; set; }
+        public int? TotalCount { get => _explicitNullValueTotalCount; set { _explicitNullValueTotalCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total_count"); else _explicitNullProperties?.Remove("total_count"); } }
+        private int? _explicitNullValueTotalCount = default!;
         /// <summary>The total_time property</summary>
-        public int? TotalTime { get; set; }
+        public int? TotalTime { get => _explicitNullValueTotalTime; set { _explicitNullValueTotalTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total_time"); else _explicitNullProperties?.Remove("total_time"); } }
+        private int? _explicitNullValueTotalTime = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.TestReportEntity"/> and sets the default values.
         /// </summary>
@@ -49,7 +71,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.TestReportEntity CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.TestReportEntity();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.TestReportEntity(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -82,6 +104,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.TestSuiteEntity>("test_suites", TestSuites);
             writer.WriteIntValue("total_count", TotalCount);
             writer.WriteIntValue("total_time", TotalTime);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

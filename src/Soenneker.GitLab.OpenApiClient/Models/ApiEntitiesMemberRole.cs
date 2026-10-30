@@ -11,123 +11,234 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ApiEntitiesMemberRole : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("admin_ai_catalog_item") is { } nullNodeAdminAiCatalogItem && nullNodeAdminAiCatalogItem.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdminAiCatalogItem = null;
+            if (parseNode.GetChildNode("admin_ai_catalog_item_consumer") is { } nullNodeAdminAiCatalogItemConsumer && nullNodeAdminAiCatalogItemConsumer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdminAiCatalogItemConsumer = null;
+            if (parseNode.GetChildNode("admin_cicd_variables") is { } nullNodeAdminCicdVariables && nullNodeAdminCicdVariables.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdminCicdVariables = null;
+            if (parseNode.GetChildNode("admin_compliance_framework") is { } nullNodeAdminComplianceFramework && nullNodeAdminComplianceFramework.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdminComplianceFramework = null;
+            if (parseNode.GetChildNode("admin_group_member") is { } nullNodeAdminGroupMember && nullNodeAdminGroupMember.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdminGroupMember = null;
+            if (parseNode.GetChildNode("admin_integrations") is { } nullNodeAdminIntegrations && nullNodeAdminIntegrations.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdminIntegrations = null;
+            if (parseNode.GetChildNode("admin_merge_request") is { } nullNodeAdminMergeRequest && nullNodeAdminMergeRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdminMergeRequest = null;
+            if (parseNode.GetChildNode("admin_protected_branch") is { } nullNodeAdminProtectedBranch && nullNodeAdminProtectedBranch.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdminProtectedBranch = null;
+            if (parseNode.GetChildNode("admin_protected_environments") is { } nullNodeAdminProtectedEnvironments && nullNodeAdminProtectedEnvironments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdminProtectedEnvironments = null;
+            if (parseNode.GetChildNode("admin_push_rules") is { } nullNodeAdminPushRules && nullNodeAdminPushRules.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdminPushRules = null;
+            if (parseNode.GetChildNode("admin_runners") is { } nullNodeAdminRunners && nullNodeAdminRunners.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdminRunners = null;
+            if (parseNode.GetChildNode("admin_security_attributes") is { } nullNodeAdminSecurityAttributes && nullNodeAdminSecurityAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdminSecurityAttributes = null;
+            if (parseNode.GetChildNode("admin_terraform_state") is { } nullNodeAdminTerraformState && nullNodeAdminTerraformState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdminTerraformState = null;
+            if (parseNode.GetChildNode("admin_vulnerability") is { } nullNodeAdminVulnerability && nullNodeAdminVulnerability.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdminVulnerability = null;
+            if (parseNode.GetChildNode("admin_web_hook") is { } nullNodeAdminWebHook && nullNodeAdminWebHook.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdminWebHook = null;
+            if (parseNode.GetChildNode("apply_security_scan_profiles") is { } nullNodeApplySecurityScanProfiles && nullNodeApplySecurityScanProfiles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApplySecurityScanProfiles = null;
+            if (parseNode.GetChildNode("archive_project") is { } nullNodeArchiveProject && nullNodeArchiveProject.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ArchiveProject = null;
+            if (parseNode.GetChildNode("archive_subgroup") is { } nullNodeArchiveSubgroup && nullNodeArchiveSubgroup.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ArchiveSubgroup = null;
+            if (parseNode.GetChildNode("base_access_level") is { } nullNodeBaseAccessLevel && nullNodeBaseAccessLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BaseAccessLevel = null;
+            if (parseNode.GetChildNode("create_security_scan_profiles") is { } nullNodeCreateSecurityScanProfiles && nullNodeCreateSecurityScanProfiles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreateSecurityScanProfiles = null;
+            if (parseNode.GetChildNode("delete_security_scan_profiles") is { } nullNodeDeleteSecurityScanProfiles && nullNodeDeleteSecurityScanProfiles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeleteSecurityScanProfiles = null;
+            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("destroy_package") is { } nullNodeDestroyPackage && nullNodeDestroyPackage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DestroyPackage = null;
+            if (parseNode.GetChildNode("group_id") is { } nullNodeGroupId && nullNodeGroupId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GroupId = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("manage_deploy_tokens") is { } nullNodeManageDeployTokens && nullNodeManageDeployTokens.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ManageDeployTokens = null;
+            if (parseNode.GetChildNode("manage_group_access_tokens") is { } nullNodeManageGroupAccessTokens && nullNodeManageGroupAccessTokens.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ManageGroupAccessTokens = null;
+            if (parseNode.GetChildNode("manage_merge_request_settings") is { } nullNodeManageMergeRequestSettings && nullNodeManageMergeRequestSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ManageMergeRequestSettings = null;
+            if (parseNode.GetChildNode("manage_project_access_tokens") is { } nullNodeManageProjectAccessTokens && nullNodeManageProjectAccessTokens.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ManageProjectAccessTokens = null;
+            if (parseNode.GetChildNode("manage_security_policy_link") is { } nullNodeManageSecurityPolicyLink && nullNodeManageSecurityPolicyLink.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ManageSecurityPolicyLink = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("read_admin_cicd") is { } nullNodeReadAdminCicd && nullNodeReadAdminCicd.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReadAdminCicd = null;
+            if (parseNode.GetChildNode("read_admin_groups") is { } nullNodeReadAdminGroups && nullNodeReadAdminGroups.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReadAdminGroups = null;
+            if (parseNode.GetChildNode("read_admin_monitoring") is { } nullNodeReadAdminMonitoring && nullNodeReadAdminMonitoring.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReadAdminMonitoring = null;
+            if (parseNode.GetChildNode("read_admin_projects") is { } nullNodeReadAdminProjects && nullNodeReadAdminProjects.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReadAdminProjects = null;
+            if (parseNode.GetChildNode("read_admin_subscription") is { } nullNodeReadAdminSubscription && nullNodeReadAdminSubscription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReadAdminSubscription = null;
+            if (parseNode.GetChildNode("read_admin_users") is { } nullNodeReadAdminUsers && nullNodeReadAdminUsers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReadAdminUsers = null;
+            if (parseNode.GetChildNode("read_agent_artifacts") is { } nullNodeReadAgentArtifacts && nullNodeReadAgentArtifacts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReadAgentArtifacts = null;
+            if (parseNode.GetChildNode("read_code") is { } nullNodeReadCode && nullNodeReadCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReadCode = null;
+            if (parseNode.GetChildNode("read_compliance_dashboard") is { } nullNodeReadComplianceDashboard && nullNodeReadComplianceDashboard.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReadComplianceDashboard = null;
+            if (parseNode.GetChildNode("read_crm_contact") is { } nullNodeReadCrmContact && nullNodeReadCrmContact.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReadCrmContact = null;
+            if (parseNode.GetChildNode("read_dependency") is { } nullNodeReadDependency && nullNodeReadDependency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReadDependency = null;
+            if (parseNode.GetChildNode("read_runners") is { } nullNodeReadRunners && nullNodeReadRunners.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReadRunners = null;
+            if (parseNode.GetChildNode("read_security_attribute") is { } nullNodeReadSecurityAttribute && nullNodeReadSecurityAttribute.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReadSecurityAttribute = null;
+            if (parseNode.GetChildNode("read_security_scan_profiles") is { } nullNodeReadSecurityScanProfiles && nullNodeReadSecurityScanProfiles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReadSecurityScanProfiles = null;
+            if (parseNode.GetChildNode("read_virtual_registry") is { } nullNodeReadVirtualRegistry && nullNodeReadVirtualRegistry.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReadVirtualRegistry = null;
+            if (parseNode.GetChildNode("read_vulnerability") is { } nullNodeReadVulnerability && nullNodeReadVulnerability.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReadVulnerability = null;
+            if (parseNode.GetChildNode("remove_group") is { } nullNodeRemoveGroup && nullNodeRemoveGroup.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RemoveGroup = null;
+            if (parseNode.GetChildNode("remove_project") is { } nullNodeRemoveProject && nullNodeRemoveProject.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RemoveProject = null;
+            if (parseNode.GetChildNode("update_sec_ai_workflow_settings") is { } nullNodeUpdateSecAiWorkflowSettings && nullNodeUpdateSecAiWorkflowSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdateSecAiWorkflowSettings = null;
+            if (parseNode.GetChildNode("update_security_scan_profiles") is { } nullNodeUpdateSecurityScanProfiles && nullNodeUpdateSecurityScanProfiles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdateSecurityScanProfiles = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The admin_ai_catalog_item property</summary>
-        public bool? AdminAiCatalogItem { get; set; }
+        public bool? AdminAiCatalogItem { get => _explicitNullValueAdminAiCatalogItem; set { _explicitNullValueAdminAiCatalogItem = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("admin_ai_catalog_item"); else _explicitNullProperties?.Remove("admin_ai_catalog_item"); } }
+        private bool? _explicitNullValueAdminAiCatalogItem = default!;
         /// <summary>The admin_ai_catalog_item_consumer property</summary>
-        public bool? AdminAiCatalogItemConsumer { get; set; }
+        public bool? AdminAiCatalogItemConsumer { get => _explicitNullValueAdminAiCatalogItemConsumer; set { _explicitNullValueAdminAiCatalogItemConsumer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("admin_ai_catalog_item_consumer"); else _explicitNullProperties?.Remove("admin_ai_catalog_item_consumer"); } }
+        private bool? _explicitNullValueAdminAiCatalogItemConsumer = default!;
         /// <summary>The admin_cicd_variables property</summary>
-        public bool? AdminCicdVariables { get; set; }
+        public bool? AdminCicdVariables { get => _explicitNullValueAdminCicdVariables; set { _explicitNullValueAdminCicdVariables = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("admin_cicd_variables"); else _explicitNullProperties?.Remove("admin_cicd_variables"); } }
+        private bool? _explicitNullValueAdminCicdVariables = default!;
         /// <summary>The admin_compliance_framework property</summary>
-        public bool? AdminComplianceFramework { get; set; }
+        public bool? AdminComplianceFramework { get => _explicitNullValueAdminComplianceFramework; set { _explicitNullValueAdminComplianceFramework = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("admin_compliance_framework"); else _explicitNullProperties?.Remove("admin_compliance_framework"); } }
+        private bool? _explicitNullValueAdminComplianceFramework = default!;
         /// <summary>The admin_group_member property</summary>
-        public bool? AdminGroupMember { get; set; }
+        public bool? AdminGroupMember { get => _explicitNullValueAdminGroupMember; set { _explicitNullValueAdminGroupMember = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("admin_group_member"); else _explicitNullProperties?.Remove("admin_group_member"); } }
+        private bool? _explicitNullValueAdminGroupMember = default!;
         /// <summary>The admin_integrations property</summary>
-        public bool? AdminIntegrations { get; set; }
+        public bool? AdminIntegrations { get => _explicitNullValueAdminIntegrations; set { _explicitNullValueAdminIntegrations = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("admin_integrations"); else _explicitNullProperties?.Remove("admin_integrations"); } }
+        private bool? _explicitNullValueAdminIntegrations = default!;
         /// <summary>The admin_merge_request property</summary>
-        public bool? AdminMergeRequest { get; set; }
+        public bool? AdminMergeRequest { get => _explicitNullValueAdminMergeRequest; set { _explicitNullValueAdminMergeRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("admin_merge_request"); else _explicitNullProperties?.Remove("admin_merge_request"); } }
+        private bool? _explicitNullValueAdminMergeRequest = default!;
         /// <summary>The admin_protected_branch property</summary>
-        public bool? AdminProtectedBranch { get; set; }
+        public bool? AdminProtectedBranch { get => _explicitNullValueAdminProtectedBranch; set { _explicitNullValueAdminProtectedBranch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("admin_protected_branch"); else _explicitNullProperties?.Remove("admin_protected_branch"); } }
+        private bool? _explicitNullValueAdminProtectedBranch = default!;
         /// <summary>The admin_protected_environments property</summary>
-        public bool? AdminProtectedEnvironments { get; set; }
+        public bool? AdminProtectedEnvironments { get => _explicitNullValueAdminProtectedEnvironments; set { _explicitNullValueAdminProtectedEnvironments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("admin_protected_environments"); else _explicitNullProperties?.Remove("admin_protected_environments"); } }
+        private bool? _explicitNullValueAdminProtectedEnvironments = default!;
         /// <summary>The admin_push_rules property</summary>
-        public bool? AdminPushRules { get; set; }
+        public bool? AdminPushRules { get => _explicitNullValueAdminPushRules; set { _explicitNullValueAdminPushRules = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("admin_push_rules"); else _explicitNullProperties?.Remove("admin_push_rules"); } }
+        private bool? _explicitNullValueAdminPushRules = default!;
         /// <summary>The admin_runners property</summary>
-        public bool? AdminRunners { get; set; }
+        public bool? AdminRunners { get => _explicitNullValueAdminRunners; set { _explicitNullValueAdminRunners = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("admin_runners"); else _explicitNullProperties?.Remove("admin_runners"); } }
+        private bool? _explicitNullValueAdminRunners = default!;
         /// <summary>The admin_security_attributes property</summary>
-        public bool? AdminSecurityAttributes { get; set; }
+        public bool? AdminSecurityAttributes { get => _explicitNullValueAdminSecurityAttributes; set { _explicitNullValueAdminSecurityAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("admin_security_attributes"); else _explicitNullProperties?.Remove("admin_security_attributes"); } }
+        private bool? _explicitNullValueAdminSecurityAttributes = default!;
         /// <summary>The admin_terraform_state property</summary>
-        public bool? AdminTerraformState { get; set; }
+        public bool? AdminTerraformState { get => _explicitNullValueAdminTerraformState; set { _explicitNullValueAdminTerraformState = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("admin_terraform_state"); else _explicitNullProperties?.Remove("admin_terraform_state"); } }
+        private bool? _explicitNullValueAdminTerraformState = default!;
         /// <summary>The admin_vulnerability property</summary>
-        public bool? AdminVulnerability { get; set; }
+        public bool? AdminVulnerability { get => _explicitNullValueAdminVulnerability; set { _explicitNullValueAdminVulnerability = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("admin_vulnerability"); else _explicitNullProperties?.Remove("admin_vulnerability"); } }
+        private bool? _explicitNullValueAdminVulnerability = default!;
         /// <summary>The admin_web_hook property</summary>
-        public bool? AdminWebHook { get; set; }
+        public bool? AdminWebHook { get => _explicitNullValueAdminWebHook; set { _explicitNullValueAdminWebHook = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("admin_web_hook"); else _explicitNullProperties?.Remove("admin_web_hook"); } }
+        private bool? _explicitNullValueAdminWebHook = default!;
         /// <summary>The apply_security_scan_profiles property</summary>
-        public bool? ApplySecurityScanProfiles { get; set; }
+        public bool? ApplySecurityScanProfiles { get => _explicitNullValueApplySecurityScanProfiles; set { _explicitNullValueApplySecurityScanProfiles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("apply_security_scan_profiles"); else _explicitNullProperties?.Remove("apply_security_scan_profiles"); } }
+        private bool? _explicitNullValueApplySecurityScanProfiles = default!;
         /// <summary>The archive_project property</summary>
-        public bool? ArchiveProject { get; set; }
+        public bool? ArchiveProject { get => _explicitNullValueArchiveProject; set { _explicitNullValueArchiveProject = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("archive_project"); else _explicitNullProperties?.Remove("archive_project"); } }
+        private bool? _explicitNullValueArchiveProject = default!;
         /// <summary>The archive_subgroup property</summary>
-        public bool? ArchiveSubgroup { get; set; }
+        public bool? ArchiveSubgroup { get => _explicitNullValueArchiveSubgroup; set { _explicitNullValueArchiveSubgroup = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("archive_subgroup"); else _explicitNullProperties?.Remove("archive_subgroup"); } }
+        private bool? _explicitNullValueArchiveSubgroup = default!;
         /// <summary>The base_access_level property</summary>
-        public int? BaseAccessLevel { get; set; }
+        public int? BaseAccessLevel { get => _explicitNullValueBaseAccessLevel; set { _explicitNullValueBaseAccessLevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("base_access_level"); else _explicitNullProperties?.Remove("base_access_level"); } }
+        private int? _explicitNullValueBaseAccessLevel = default!;
         /// <summary>The create_security_scan_profiles property</summary>
-        public bool? CreateSecurityScanProfiles { get; set; }
+        public bool? CreateSecurityScanProfiles { get => _explicitNullValueCreateSecurityScanProfiles; set { _explicitNullValueCreateSecurityScanProfiles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("create_security_scan_profiles"); else _explicitNullProperties?.Remove("create_security_scan_profiles"); } }
+        private bool? _explicitNullValueCreateSecurityScanProfiles = default!;
         /// <summary>The delete_security_scan_profiles property</summary>
-        public bool? DeleteSecurityScanProfiles { get; set; }
+        public bool? DeleteSecurityScanProfiles { get => _explicitNullValueDeleteSecurityScanProfiles; set { _explicitNullValueDeleteSecurityScanProfiles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("delete_security_scan_profiles"); else _explicitNullProperties?.Remove("delete_security_scan_profiles"); } }
+        private bool? _explicitNullValueDeleteSecurityScanProfiles = default!;
         /// <summary>The description property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get; set; }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get; set; }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>The destroy_package property</summary>
-        public bool? DestroyPackage { get; set; }
+        public bool? DestroyPackage { get => _explicitNullValueDestroyPackage; set { _explicitNullValueDestroyPackage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("destroy_package"); else _explicitNullProperties?.Remove("destroy_package"); } }
+        private bool? _explicitNullValueDestroyPackage = default!;
         /// <summary>The group_id property</summary>
-        public long? GroupId { get; set; }
+        public long? GroupId { get => _explicitNullValueGroupId; set { _explicitNullValueGroupId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_id"); else _explicitNullProperties?.Remove("group_id"); } }
+        private long? _explicitNullValueGroupId = default!;
         /// <summary>The id property</summary>
-        public long? Id { get; set; }
+        public long? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private long? _explicitNullValueId = default!;
         /// <summary>The manage_deploy_tokens property</summary>
-        public bool? ManageDeployTokens { get; set; }
+        public bool? ManageDeployTokens { get => _explicitNullValueManageDeployTokens; set { _explicitNullValueManageDeployTokens = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("manage_deploy_tokens"); else _explicitNullProperties?.Remove("manage_deploy_tokens"); } }
+        private bool? _explicitNullValueManageDeployTokens = default!;
         /// <summary>The manage_group_access_tokens property</summary>
-        public bool? ManageGroupAccessTokens { get; set; }
+        public bool? ManageGroupAccessTokens { get => _explicitNullValueManageGroupAccessTokens; set { _explicitNullValueManageGroupAccessTokens = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("manage_group_access_tokens"); else _explicitNullProperties?.Remove("manage_group_access_tokens"); } }
+        private bool? _explicitNullValueManageGroupAccessTokens = default!;
         /// <summary>The manage_merge_request_settings property</summary>
-        public bool? ManageMergeRequestSettings { get; set; }
+        public bool? ManageMergeRequestSettings { get => _explicitNullValueManageMergeRequestSettings; set { _explicitNullValueManageMergeRequestSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("manage_merge_request_settings"); else _explicitNullProperties?.Remove("manage_merge_request_settings"); } }
+        private bool? _explicitNullValueManageMergeRequestSettings = default!;
         /// <summary>The manage_project_access_tokens property</summary>
-        public bool? ManageProjectAccessTokens { get; set; }
+        public bool? ManageProjectAccessTokens { get => _explicitNullValueManageProjectAccessTokens; set { _explicitNullValueManageProjectAccessTokens = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("manage_project_access_tokens"); else _explicitNullProperties?.Remove("manage_project_access_tokens"); } }
+        private bool? _explicitNullValueManageProjectAccessTokens = default!;
         /// <summary>The manage_security_policy_link property</summary>
-        public bool? ManageSecurityPolicyLink { get; set; }
+        public bool? ManageSecurityPolicyLink { get => _explicitNullValueManageSecurityPolicyLink; set { _explicitNullValueManageSecurityPolicyLink = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("manage_security_policy_link"); else _explicitNullProperties?.Remove("manage_security_policy_link"); } }
+        private bool? _explicitNullValueManageSecurityPolicyLink = default!;
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>The read_admin_cicd property</summary>
-        public bool? ReadAdminCicd { get; set; }
+        public bool? ReadAdminCicd { get => _explicitNullValueReadAdminCicd; set { _explicitNullValueReadAdminCicd = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("read_admin_cicd"); else _explicitNullProperties?.Remove("read_admin_cicd"); } }
+        private bool? _explicitNullValueReadAdminCicd = default!;
         /// <summary>The read_admin_groups property</summary>
-        public bool? ReadAdminGroups { get; set; }
+        public bool? ReadAdminGroups { get => _explicitNullValueReadAdminGroups; set { _explicitNullValueReadAdminGroups = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("read_admin_groups"); else _explicitNullProperties?.Remove("read_admin_groups"); } }
+        private bool? _explicitNullValueReadAdminGroups = default!;
         /// <summary>The read_admin_monitoring property</summary>
-        public bool? ReadAdminMonitoring { get; set; }
+        public bool? ReadAdminMonitoring { get => _explicitNullValueReadAdminMonitoring; set { _explicitNullValueReadAdminMonitoring = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("read_admin_monitoring"); else _explicitNullProperties?.Remove("read_admin_monitoring"); } }
+        private bool? _explicitNullValueReadAdminMonitoring = default!;
         /// <summary>The read_admin_projects property</summary>
-        public bool? ReadAdminProjects { get; set; }
+        public bool? ReadAdminProjects { get => _explicitNullValueReadAdminProjects; set { _explicitNullValueReadAdminProjects = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("read_admin_projects"); else _explicitNullProperties?.Remove("read_admin_projects"); } }
+        private bool? _explicitNullValueReadAdminProjects = default!;
         /// <summary>The read_admin_subscription property</summary>
-        public bool? ReadAdminSubscription { get; set; }
+        public bool? ReadAdminSubscription { get => _explicitNullValueReadAdminSubscription; set { _explicitNullValueReadAdminSubscription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("read_admin_subscription"); else _explicitNullProperties?.Remove("read_admin_subscription"); } }
+        private bool? _explicitNullValueReadAdminSubscription = default!;
         /// <summary>The read_admin_users property</summary>
-        public bool? ReadAdminUsers { get; set; }
+        public bool? ReadAdminUsers { get => _explicitNullValueReadAdminUsers; set { _explicitNullValueReadAdminUsers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("read_admin_users"); else _explicitNullProperties?.Remove("read_admin_users"); } }
+        private bool? _explicitNullValueReadAdminUsers = default!;
         /// <summary>The read_agent_artifacts property</summary>
-        public bool? ReadAgentArtifacts { get; set; }
+        public bool? ReadAgentArtifacts { get => _explicitNullValueReadAgentArtifacts; set { _explicitNullValueReadAgentArtifacts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("read_agent_artifacts"); else _explicitNullProperties?.Remove("read_agent_artifacts"); } }
+        private bool? _explicitNullValueReadAgentArtifacts = default!;
         /// <summary>The read_code property</summary>
-        public bool? ReadCode { get; set; }
+        public bool? ReadCode { get => _explicitNullValueReadCode; set { _explicitNullValueReadCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("read_code"); else _explicitNullProperties?.Remove("read_code"); } }
+        private bool? _explicitNullValueReadCode = default!;
         /// <summary>The read_compliance_dashboard property</summary>
-        public bool? ReadComplianceDashboard { get; set; }
+        public bool? ReadComplianceDashboard { get => _explicitNullValueReadComplianceDashboard; set { _explicitNullValueReadComplianceDashboard = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("read_compliance_dashboard"); else _explicitNullProperties?.Remove("read_compliance_dashboard"); } }
+        private bool? _explicitNullValueReadComplianceDashboard = default!;
         /// <summary>The read_crm_contact property</summary>
-        public bool? ReadCrmContact { get; set; }
+        public bool? ReadCrmContact { get => _explicitNullValueReadCrmContact; set { _explicitNullValueReadCrmContact = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("read_crm_contact"); else _explicitNullProperties?.Remove("read_crm_contact"); } }
+        private bool? _explicitNullValueReadCrmContact = default!;
         /// <summary>The read_dependency property</summary>
-        public bool? ReadDependency { get; set; }
+        public bool? ReadDependency { get => _explicitNullValueReadDependency; set { _explicitNullValueReadDependency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("read_dependency"); else _explicitNullProperties?.Remove("read_dependency"); } }
+        private bool? _explicitNullValueReadDependency = default!;
         /// <summary>The read_runners property</summary>
-        public bool? ReadRunners { get; set; }
+        public bool? ReadRunners { get => _explicitNullValueReadRunners; set { _explicitNullValueReadRunners = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("read_runners"); else _explicitNullProperties?.Remove("read_runners"); } }
+        private bool? _explicitNullValueReadRunners = default!;
         /// <summary>The read_security_attribute property</summary>
-        public bool? ReadSecurityAttribute { get; set; }
+        public bool? ReadSecurityAttribute { get => _explicitNullValueReadSecurityAttribute; set { _explicitNullValueReadSecurityAttribute = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("read_security_attribute"); else _explicitNullProperties?.Remove("read_security_attribute"); } }
+        private bool? _explicitNullValueReadSecurityAttribute = default!;
         /// <summary>The read_security_scan_profiles property</summary>
-        public bool? ReadSecurityScanProfiles { get; set; }
+        public bool? ReadSecurityScanProfiles { get => _explicitNullValueReadSecurityScanProfiles; set { _explicitNullValueReadSecurityScanProfiles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("read_security_scan_profiles"); else _explicitNullProperties?.Remove("read_security_scan_profiles"); } }
+        private bool? _explicitNullValueReadSecurityScanProfiles = default!;
         /// <summary>The read_virtual_registry property</summary>
-        public bool? ReadVirtualRegistry { get; set; }
+        public bool? ReadVirtualRegistry { get => _explicitNullValueReadVirtualRegistry; set { _explicitNullValueReadVirtualRegistry = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("read_virtual_registry"); else _explicitNullProperties?.Remove("read_virtual_registry"); } }
+        private bool? _explicitNullValueReadVirtualRegistry = default!;
         /// <summary>The read_vulnerability property</summary>
-        public bool? ReadVulnerability { get; set; }
+        public bool? ReadVulnerability { get => _explicitNullValueReadVulnerability; set { _explicitNullValueReadVulnerability = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("read_vulnerability"); else _explicitNullProperties?.Remove("read_vulnerability"); } }
+        private bool? _explicitNullValueReadVulnerability = default!;
         /// <summary>The remove_group property</summary>
-        public bool? RemoveGroup { get; set; }
+        public bool? RemoveGroup { get => _explicitNullValueRemoveGroup; set { _explicitNullValueRemoveGroup = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("remove_group"); else _explicitNullProperties?.Remove("remove_group"); } }
+        private bool? _explicitNullValueRemoveGroup = default!;
         /// <summary>The remove_project property</summary>
-        public bool? RemoveProject { get; set; }
+        public bool? RemoveProject { get => _explicitNullValueRemoveProject; set { _explicitNullValueRemoveProject = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("remove_project"); else _explicitNullProperties?.Remove("remove_project"); } }
+        private bool? _explicitNullValueRemoveProject = default!;
         /// <summary>The update_sec_ai_workflow_settings property</summary>
-        public bool? UpdateSecAiWorkflowSettings { get; set; }
+        public bool? UpdateSecAiWorkflowSettings { get => _explicitNullValueUpdateSecAiWorkflowSettings; set { _explicitNullValueUpdateSecAiWorkflowSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("update_sec_ai_workflow_settings"); else _explicitNullProperties?.Remove("update_sec_ai_workflow_settings"); } }
+        private bool? _explicitNullValueUpdateSecAiWorkflowSettings = default!;
         /// <summary>The update_security_scan_profiles property</summary>
-        public bool? UpdateSecurityScanProfiles { get; set; }
+        public bool? UpdateSecurityScanProfiles { get => _explicitNullValueUpdateSecurityScanProfiles; set { _explicitNullValueUpdateSecurityScanProfiles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("update_security_scan_profiles"); else _explicitNullProperties?.Remove("update_security_scan_profiles"); } }
+        private bool? _explicitNullValueUpdateSecurityScanProfiles = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMemberRole"/> and sets the default values.
         /// </summary>
@@ -189,7 +300,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMemberRole CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMemberRole();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMemberRole(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -310,6 +421,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteBoolValue("remove_project", RemoveProject);
             writer.WriteBoolValue("update_sec_ai_workflow_settings", UpdateSecAiWorkflowSettings);
             writer.WriteBoolValue("update_security_scan_profiles", UpdateSecurityScanProfiles);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

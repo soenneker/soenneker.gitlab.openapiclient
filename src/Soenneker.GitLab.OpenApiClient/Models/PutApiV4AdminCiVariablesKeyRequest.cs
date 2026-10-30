@@ -11,33 +11,54 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PutApiV4AdminCiVariablesKeyRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("masked") is { } nullNodeMasked && nullNodeMasked.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Masked = null;
+            if (parseNode.GetChildNode("protected") is { } nullNodeProtected && nullNodeProtected.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Protected = null;
+            if (parseNode.GetChildNode("raw") is { } nullNodeRaw && nullNodeRaw.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Raw = null;
+            if (parseNode.GetChildNode("value") is { } nullNodeValue && nullNodeValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Value = null;
+            if (parseNode.GetChildNode("variable_type") is { } nullNodeVariableType && nullNodeVariableType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VariableType = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Description of the variable. Limited to 255 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get; set; }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get; set; }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>If `true`, the variable is masked.</summary>
-        public bool? Masked { get; set; }
+        public bool? Masked { get => _explicitNullValueMasked; set { _explicitNullValueMasked = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("masked"); else _explicitNullProperties?.Remove("masked"); } }
+        private bool? _explicitNullValueMasked = default!;
         /// <summary>If `true`, the variable is protected.</summary>
-        public bool? Protected { get; set; }
+        public bool? Protected { get => _explicitNullValueProtected; set { _explicitNullValueProtected = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("protected"); else _explicitNullProperties?.Remove("protected"); } }
+        private bool? _explicitNullValueProtected = default!;
         /// <summary>If `true`, the variable is treated as a raw string. If `false`, the value is [expanded](https://docs.gitlab.com/ci/variables/#allow-cicd-variable-expansion).</summary>
-        public bool? Raw { get; set; }
+        public bool? Raw { get => _explicitNullValueRaw; set { _explicitNullValueRaw = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("raw"); else _explicitNullProperties?.Remove("raw"); } }
+        private bool? _explicitNullValueRaw = default!;
         /// <summary>Value of the variable. Limited to 10,000 characters, or 50,000 characters for `file` variables.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Value { get; set; }
+        public string? Value { get => _explicitNullValueValue; set { _explicitNullValueValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value"); else _explicitNullProperties?.Remove("value"); } }
+        private string? _explicitNullValueValue = default!;
 #nullable restore
 #else
-        public string Value { get; set; }
+        public string Value { get => _explicitNullValueValue; set { _explicitNullValueValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("value"); else _explicitNullProperties?.Remove("value"); } }
+        private string _explicitNullValueValue = default!;
 #endif
         /// <summary>The type of a variable. Available types are: env_var (default) and file</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4AdminCiVariablesKeyRequestVariableType? VariableType { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4AdminCiVariablesKeyRequestVariableType? VariableType { get => _explicitNullValueVariableType; set { _explicitNullValueVariableType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variable_type"); else _explicitNullProperties?.Remove("variable_type"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4AdminCiVariablesKeyRequestVariableType? _explicitNullValueVariableType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4AdminCiVariablesKeyRequest"/> and sets the default values.
         /// </summary>
@@ -53,7 +74,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4AdminCiVariablesKeyRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4AdminCiVariablesKeyRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4AdminCiVariablesKeyRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -84,6 +105,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteBoolValue("raw", Raw);
             writer.WriteStringValue("value", Value);
             writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4AdminCiVariablesKeyRequestVariableType>("variable_type", VariableType);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

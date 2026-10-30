@@ -11,71 +11,140 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PutApiV4ApplicationPlanLimitsRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("cargo_max_file_size") is { } nullNodeCargoMaxFileSize && nullNodeCargoMaxFileSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CargoMaxFileSize = null;
+            if (parseNode.GetChildNode("ci_active_jobs") is { } nullNodeCiActiveJobs && nullNodeCiActiveJobs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CiActiveJobs = null;
+            if (parseNode.GetChildNode("ci_instance_level_variables") is { } nullNodeCiInstanceLevelVariables && nullNodeCiInstanceLevelVariables.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CiInstanceLevelVariables = null;
+            if (parseNode.GetChildNode("ci_needs_size_limit") is { } nullNodeCiNeedsSizeLimit && nullNodeCiNeedsSizeLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CiNeedsSizeLimit = null;
+            if (parseNode.GetChildNode("ci_pipeline_schedules") is { } nullNodeCiPipelineSchedules && nullNodeCiPipelineSchedules.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CiPipelineSchedules = null;
+            if (parseNode.GetChildNode("ci_pipeline_size") is { } nullNodeCiPipelineSize && nullNodeCiPipelineSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CiPipelineSize = null;
+            if (parseNode.GetChildNode("ci_project_subscriptions") is { } nullNodeCiProjectSubscriptions && nullNodeCiProjectSubscriptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CiProjectSubscriptions = null;
+            if (parseNode.GetChildNode("ci_registered_group_runners") is { } nullNodeCiRegisteredGroupRunners && nullNodeCiRegisteredGroupRunners.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CiRegisteredGroupRunners = null;
+            if (parseNode.GetChildNode("ci_registered_project_runners") is { } nullNodeCiRegisteredProjectRunners && nullNodeCiRegisteredProjectRunners.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CiRegisteredProjectRunners = null;
+            if (parseNode.GetChildNode("conan_max_file_size") is { } nullNodeConanMaxFileSize && nullNodeConanMaxFileSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConanMaxFileSize = null;
+            if (parseNode.GetChildNode("dotenv_size") is { } nullNodeDotenvSize && nullNodeDotenvSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DotenvSize = null;
+            if (parseNode.GetChildNode("dotenv_variables") is { } nullNodeDotenvVariables && nullNodeDotenvVariables.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DotenvVariables = null;
+            if (parseNode.GetChildNode("enforcement_limit") is { } nullNodeEnforcementLimit && nullNodeEnforcementLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnforcementLimit = null;
+            if (parseNode.GetChildNode("generic_packages_max_file_size") is { } nullNodeGenericPackagesMaxFileSize && nullNodeGenericPackagesMaxFileSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GenericPackagesMaxFileSize = null;
+            if (parseNode.GetChildNode("helm_max_file_size") is { } nullNodeHelmMaxFileSize && nullNodeHelmMaxFileSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HelmMaxFileSize = null;
+            if (parseNode.GetChildNode("maven_max_file_size") is { } nullNodeMavenMaxFileSize && nullNodeMavenMaxFileSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MavenMaxFileSize = null;
+            if (parseNode.GetChildNode("max_pipelines_per_merge_train") is { } nullNodeMaxPipelinesPerMergeTrain && nullNodeMaxPipelinesPerMergeTrain.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxPipelinesPerMergeTrain = null;
+            if (parseNode.GetChildNode("notification_limit") is { } nullNodeNotificationLimit && nullNodeNotificationLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotificationLimit = null;
+            if (parseNode.GetChildNode("npm_max_file_size") is { } nullNodeNpmMaxFileSize && nullNodeNpmMaxFileSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NpmMaxFileSize = null;
+            if (parseNode.GetChildNode("nuget_max_file_size") is { } nullNodeNugetMaxFileSize && nullNodeNugetMaxFileSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NugetMaxFileSize = null;
+            if (parseNode.GetChildNode("organization_hooks") is { } nullNodeOrganizationHooks && nullNodeOrganizationHooks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrganizationHooks = null;
+            if (parseNode.GetChildNode("pipeline_hierarchy_size") is { } nullNodePipelineHierarchySize && nullNodePipelineHierarchySize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PipelineHierarchySize = null;
+            if (parseNode.GetChildNode("plan_name") is { } nullNodePlanName && nullNodePlanName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PlanName = null;
+            if (parseNode.GetChildNode("pypi_max_file_size") is { } nullNodePypiMaxFileSize && nullNodePypiMaxFileSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PypiMaxFileSize = null;
+            if (parseNode.GetChildNode("service_desk_outbound_emails_per_day") is { } nullNodeServiceDeskOutboundEmailsPerDay && nullNodeServiceDeskOutboundEmailsPerDay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServiceDeskOutboundEmailsPerDay = null;
+            if (parseNode.GetChildNode("service_desk_outbound_emails_per_hour") is { } nullNodeServiceDeskOutboundEmailsPerHour && nullNodeServiceDeskOutboundEmailsPerHour.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServiceDeskOutboundEmailsPerHour = null;
+            if (parseNode.GetChildNode("storage_size_limit") is { } nullNodeStorageSizeLimit && nullNodeStorageSizeLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StorageSizeLimit = null;
+            if (parseNode.GetChildNode("terraform_module_max_file_size") is { } nullNodeTerraformModuleMaxFileSize && nullNodeTerraformModuleMaxFileSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TerraformModuleMaxFileSize = null;
+            if (parseNode.GetChildNode("web_hook_calls") is { } nullNodeWebHookCalls && nullNodeWebHookCalls.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebHookCalls = null;
+            if (parseNode.GetChildNode("web_hook_calls_low") is { } nullNodeWebHookCallsLow && nullNodeWebHookCallsLow.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebHookCallsLow = null;
+            if (parseNode.GetChildNode("web_hook_calls_mid") is { } nullNodeWebHookCallsMid && nullNodeWebHookCallsMid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebHookCallsMid = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Maximum Cargo package file size in bytes. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/work_items/33060) in GitLab 19.3.</summary>
-        public int? CargoMaxFileSize { get; set; }
+        public int? CargoMaxFileSize { get => _explicitNullValueCargoMaxFileSize; set { _explicitNullValueCargoMaxFileSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cargo_max_file_size"); else _explicitNullProperties?.Remove("cargo_max_file_size"); } }
+        private int? _explicitNullValueCargoMaxFileSize = default!;
         /// <summary>Total number of jobs in currently active pipelines.</summary>
-        public int? CiActiveJobs { get; set; }
+        public int? CiActiveJobs { get => _explicitNullValueCiActiveJobs; set { _explicitNullValueCiActiveJobs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ci_active_jobs"); else _explicitNullProperties?.Remove("ci_active_jobs"); } }
+        private int? _explicitNullValueCiActiveJobs = default!;
         /// <summary>Maximum number of instance-level CI/CD variables that can be defined.</summary>
-        public int? CiInstanceLevelVariables { get; set; }
+        public int? CiInstanceLevelVariables { get => _explicitNullValueCiInstanceLevelVariables; set { _explicitNullValueCiInstanceLevelVariables = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ci_instance_level_variables"); else _explicitNullProperties?.Remove("ci_instance_level_variables"); } }
+        private int? _explicitNullValueCiInstanceLevelVariables = default!;
         /// <summary>Maximum number of `needs` dependencies that a job can have.</summary>
-        public int? CiNeedsSizeLimit { get; set; }
+        public int? CiNeedsSizeLimit { get => _explicitNullValueCiNeedsSizeLimit; set { _explicitNullValueCiNeedsSizeLimit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ci_needs_size_limit"); else _explicitNullProperties?.Remove("ci_needs_size_limit"); } }
+        private int? _explicitNullValueCiNeedsSizeLimit = default!;
         /// <summary>Maximum number of pipeline schedules.</summary>
-        public int? CiPipelineSchedules { get; set; }
+        public int? CiPipelineSchedules { get => _explicitNullValueCiPipelineSchedules; set { _explicitNullValueCiPipelineSchedules = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ci_pipeline_schedules"); else _explicitNullProperties?.Remove("ci_pipeline_schedules"); } }
+        private int? _explicitNullValueCiPipelineSchedules = default!;
         /// <summary>Maximum number of jobs in a single pipeline.</summary>
-        public int? CiPipelineSize { get; set; }
+        public int? CiPipelineSize { get => _explicitNullValueCiPipelineSize; set { _explicitNullValueCiPipelineSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ci_pipeline_size"); else _explicitNullProperties?.Remove("ci_pipeline_size"); } }
+        private int? _explicitNullValueCiPipelineSize = default!;
         /// <summary>Maximum number of pipeline subscriptions to and from a project.</summary>
-        public int? CiProjectSubscriptions { get; set; }
+        public int? CiProjectSubscriptions { get => _explicitNullValueCiProjectSubscriptions; set { _explicitNullValueCiProjectSubscriptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ci_project_subscriptions"); else _explicitNullProperties?.Remove("ci_project_subscriptions"); } }
+        private int? _explicitNullValueCiProjectSubscriptions = default!;
         /// <summary>Maximum number of runners created or active in a group during the past seven days.</summary>
-        public int? CiRegisteredGroupRunners { get; set; }
+        public int? CiRegisteredGroupRunners { get => _explicitNullValueCiRegisteredGroupRunners; set { _explicitNullValueCiRegisteredGroupRunners = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ci_registered_group_runners"); else _explicitNullProperties?.Remove("ci_registered_group_runners"); } }
+        private int? _explicitNullValueCiRegisteredGroupRunners = default!;
         /// <summary>Maximum number of runners created or active in a project during the past seven days.</summary>
-        public int? CiRegisteredProjectRunners { get; set; }
+        public int? CiRegisteredProjectRunners { get => _explicitNullValueCiRegisteredProjectRunners; set { _explicitNullValueCiRegisteredProjectRunners = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ci_registered_project_runners"); else _explicitNullProperties?.Remove("ci_registered_project_runners"); } }
+        private int? _explicitNullValueCiRegisteredProjectRunners = default!;
         /// <summary>Maximum Conan package file size in bytes.</summary>
-        public int? ConanMaxFileSize { get; set; }
+        public int? ConanMaxFileSize { get => _explicitNullValueConanMaxFileSize; set { _explicitNullValueConanMaxFileSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conan_max_file_size"); else _explicitNullProperties?.Remove("conan_max_file_size"); } }
+        private int? _explicitNullValueConanMaxFileSize = default!;
         /// <summary>Maximum size of a dotenv artifact in bytes. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/432529) in GitLab 17.1.</summary>
-        public int? DotenvSize { get; set; }
+        public int? DotenvSize { get => _explicitNullValueDotenvSize; set { _explicitNullValueDotenvSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dotenv_size"); else _explicitNullProperties?.Remove("dotenv_size"); } }
+        private int? _explicitNullValueDotenvSize = default!;
         /// <summary>Maximum number of variables in a dotenv artifact. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/432529) in GitLab 17.1.</summary>
-        public int? DotenvVariables { get; set; }
+        public int? DotenvVariables { get => _explicitNullValueDotenvVariables; set { _explicitNullValueDotenvVariables = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dotenv_variables"); else _explicitNullProperties?.Remove("dotenv_variables"); } }
+        private int? _explicitNullValueDotenvVariables = default!;
         /// <summary>Maximum storage size for root namespace limit enforcement, in MiB.</summary>
-        public int? EnforcementLimit { get; set; }
+        public int? EnforcementLimit { get => _explicitNullValueEnforcementLimit; set { _explicitNullValueEnforcementLimit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enforcement_limit"); else _explicitNullProperties?.Remove("enforcement_limit"); } }
+        private int? _explicitNullValueEnforcementLimit = default!;
         /// <summary>Maximum generic package file size in bytes.</summary>
-        public int? GenericPackagesMaxFileSize { get; set; }
+        public int? GenericPackagesMaxFileSize { get => _explicitNullValueGenericPackagesMaxFileSize; set { _explicitNullValueGenericPackagesMaxFileSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("generic_packages_max_file_size"); else _explicitNullProperties?.Remove("generic_packages_max_file_size"); } }
+        private int? _explicitNullValueGenericPackagesMaxFileSize = default!;
         /// <summary>Maximum Helm chart file size in bytes.</summary>
-        public int? HelmMaxFileSize { get; set; }
+        public int? HelmMaxFileSize { get => _explicitNullValueHelmMaxFileSize; set { _explicitNullValueHelmMaxFileSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("helm_max_file_size"); else _explicitNullProperties?.Remove("helm_max_file_size"); } }
+        private int? _explicitNullValueHelmMaxFileSize = default!;
         /// <summary>Maximum Maven package file size in bytes.</summary>
-        public int? MavenMaxFileSize { get; set; }
+        public int? MavenMaxFileSize { get => _explicitNullValueMavenMaxFileSize; set { _explicitNullValueMavenMaxFileSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("maven_max_file_size"); else _explicitNullProperties?.Remove("maven_max_file_size"); } }
+        private int? _explicitNullValueMavenMaxFileSize = default!;
         /// <summary>Maximum number of parallel pipelines per merge train. The default is `20` and the minimum is `1`. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/374188) in GitLab 19.0.</summary>
-        public int? MaxPipelinesPerMergeTrain { get; set; }
+        public int? MaxPipelinesPerMergeTrain { get => _explicitNullValueMaxPipelinesPerMergeTrain; set { _explicitNullValueMaxPipelinesPerMergeTrain = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("max_pipelines_per_merge_train"); else _explicitNullProperties?.Remove("max_pipelines_per_merge_train"); } }
+        private int? _explicitNullValueMaxPipelinesPerMergeTrain = default!;
         /// <summary>Maximum storage size for root namespace limit notifications, in MiB.</summary>
-        public int? NotificationLimit { get; set; }
+        public int? NotificationLimit { get => _explicitNullValueNotificationLimit; set { _explicitNullValueNotificationLimit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notification_limit"); else _explicitNullProperties?.Remove("notification_limit"); } }
+        private int? _explicitNullValueNotificationLimit = default!;
         /// <summary>Maximum npm package file size in bytes.</summary>
-        public int? NpmMaxFileSize { get; set; }
+        public int? NpmMaxFileSize { get => _explicitNullValueNpmMaxFileSize; set { _explicitNullValueNpmMaxFileSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("npm_max_file_size"); else _explicitNullProperties?.Remove("npm_max_file_size"); } }
+        private int? _explicitNullValueNpmMaxFileSize = default!;
         /// <summary>Maximum NuGet package file size in bytes.</summary>
-        public int? NugetMaxFileSize { get; set; }
+        public int? NugetMaxFileSize { get => _explicitNullValueNugetMaxFileSize; set { _explicitNullValueNugetMaxFileSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nuget_max_file_size"); else _explicitNullProperties?.Remove("nuget_max_file_size"); } }
+        private int? _explicitNullValueNugetMaxFileSize = default!;
         /// <summary>Maximum number of system hooks per organization, for hooks managed by organization administrators. Set to `0` for unlimited. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/work_items/632599) in GitLab 19.6.</summary>
-        public int? OrganizationHooks { get; set; }
+        public int? OrganizationHooks { get => _explicitNullValueOrganizationHooks; set { _explicitNullValueOrganizationHooks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organization_hooks"); else _explicitNullProperties?.Remove("organization_hooks"); } }
+        private int? _explicitNullValueOrganizationHooks = default!;
         /// <summary>Maximum number of downstream pipelines in a pipeline&apos;s hierarchy tree. The default is `1000`. Higher values are not recommended.</summary>
-        public int? PipelineHierarchySize { get; set; }
+        public int? PipelineHierarchySize { get => _explicitNullValuePipelineHierarchySize; set { _explicitNullValuePipelineHierarchySize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pipeline_hierarchy_size"); else _explicitNullProperties?.Remove("pipeline_hierarchy_size"); } }
+        private int? _explicitNullValuePipelineHierarchySize = default!;
         /// <summary>Name of the plan to update.</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ApplicationPlanLimitsRequestPlanName? PlanName { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ApplicationPlanLimitsRequestPlanName? PlanName { get => _explicitNullValuePlanName; set { _explicitNullValuePlanName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("plan_name"); else _explicitNullProperties?.Remove("plan_name"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ApplicationPlanLimitsRequestPlanName? _explicitNullValuePlanName = default!;
         /// <summary>Maximum PyPI package file size in bytes.</summary>
-        public int? PypiMaxFileSize { get; set; }
+        public int? PypiMaxFileSize { get => _explicitNullValuePypiMaxFileSize; set { _explicitNullValuePypiMaxFileSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pypi_max_file_size"); else _explicitNullProperties?.Remove("pypi_max_file_size"); } }
+        private int? _explicitNullValuePypiMaxFileSize = default!;
         /// <summary>Maximum number of outbound Service Desk emails per day, per top-level namespace. Set to `0` for unlimited. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/253087) in GitLab 19.4.</summary>
-        public int? ServiceDeskOutboundEmailsPerDay { get; set; }
+        public int? ServiceDeskOutboundEmailsPerDay { get => _explicitNullValueServiceDeskOutboundEmailsPerDay; set { _explicitNullValueServiceDeskOutboundEmailsPerDay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("service_desk_outbound_emails_per_day"); else _explicitNullProperties?.Remove("service_desk_outbound_emails_per_day"); } }
+        private int? _explicitNullValueServiceDeskOutboundEmailsPerDay = default!;
         /// <summary>Maximum number of outbound Service Desk emails per hour, per top-level namespace. Set to `0` for unlimited. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/253087) in GitLab 19.4.</summary>
-        public int? ServiceDeskOutboundEmailsPerHour { get; set; }
+        public int? ServiceDeskOutboundEmailsPerHour { get => _explicitNullValueServiceDeskOutboundEmailsPerHour; set { _explicitNullValueServiceDeskOutboundEmailsPerHour = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("service_desk_outbound_emails_per_hour"); else _explicitNullProperties?.Remove("service_desk_outbound_emails_per_hour"); } }
+        private int? _explicitNullValueServiceDeskOutboundEmailsPerHour = default!;
         /// <summary>Maximum storage size for the root namespace, in MiB.</summary>
-        public int? StorageSizeLimit { get; set; }
+        public int? StorageSizeLimit { get => _explicitNullValueStorageSizeLimit; set { _explicitNullValueStorageSizeLimit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("storage_size_limit"); else _explicitNullProperties?.Remove("storage_size_limit"); } }
+        private int? _explicitNullValueStorageSizeLimit = default!;
         /// <summary>Maximum Terraform module package file size in bytes.</summary>
-        public int? TerraformModuleMaxFileSize { get; set; }
+        public int? TerraformModuleMaxFileSize { get => _explicitNullValueTerraformModuleMaxFileSize; set { _explicitNullValueTerraformModuleMaxFileSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("terraform_module_max_file_size"); else _explicitNullProperties?.Remove("terraform_module_max_file_size"); } }
+        private int? _explicitNullValueTerraformModuleMaxFileSize = default!;
         /// <summary>Maximum number of times a webhook can be called per minute, per top-level namespace. Set to `0` for unlimited. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/571738) in GitLab 18.5.</summary>
-        public int? WebHookCalls { get; set; }
+        public int? WebHookCalls { get => _explicitNullValueWebHookCalls; set { _explicitNullValueWebHookCalls = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("web_hook_calls"); else _explicitNullProperties?.Remove("web_hook_calls"); } }
+        private int? _explicitNullValueWebHookCalls = default!;
         /// <summary>Maximum number of times a webhook can be called per minute, per top-level namespace. Set to `0` for unlimited. GitLab.com only.</summary>
-        public int? WebHookCallsLow { get; set; }
+        public int? WebHookCallsLow { get => _explicitNullValueWebHookCallsLow; set { _explicitNullValueWebHookCallsLow = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("web_hook_calls_low"); else _explicitNullProperties?.Remove("web_hook_calls_low"); } }
+        private int? _explicitNullValueWebHookCallsLow = default!;
         /// <summary>Maximum number of times a webhook can be called per minute, per top-level namespace. Set to `0` for unlimited. GitLab.com only.</summary>
-        public int? WebHookCallsMid { get; set; }
+        public int? WebHookCallsMid { get => _explicitNullValueWebHookCallsMid; set { _explicitNullValueWebHookCallsMid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("web_hook_calls_mid"); else _explicitNullProperties?.Remove("web_hook_calls_mid"); } }
+        private int? _explicitNullValueWebHookCallsMid = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ApplicationPlanLimitsRequest"/> and sets the default values.
         /// </summary>
@@ -91,7 +160,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ApplicationPlanLimitsRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ApplicationPlanLimitsRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ApplicationPlanLimitsRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -172,6 +241,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteIntValue("web_hook_calls", WebHookCalls);
             writer.WriteIntValue("web_hook_calls_low", WebHookCallsLow);
             writer.WriteIntValue("web_hook_calls_mid", WebHookCallsMid);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

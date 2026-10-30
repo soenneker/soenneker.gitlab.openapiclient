@@ -11,79 +11,126 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PutApiV4GroupsIdIntegrationsDatadogRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("api_key") is { } nullNodeApiKey && nullNodeApiKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApiKey = null;
+            if (parseNode.GetChildNode("api_url") is { } nullNodeApiUrl && nullNodeApiUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApiUrl = null;
+            if (parseNode.GetChildNode("archive_trace_events") is { } nullNodeArchiveTraceEvents && nullNodeArchiveTraceEvents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ArchiveTraceEvents = null;
+            if (parseNode.GetChildNode("build_events") is { } nullNodeBuildEvents && nullNodeBuildEvents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BuildEvents = null;
+            if (parseNode.GetChildNode("datadog_ci_visibility") is { } nullNodeDatadogCiVisibility && nullNodeDatadogCiVisibility.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DatadogCiVisibility = null;
+            if (parseNode.GetChildNode("datadog_env") is { } nullNodeDatadogEnv && nullNodeDatadogEnv.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DatadogEnv = null;
+            if (parseNode.GetChildNode("datadog_service") is { } nullNodeDatadogService && nullNodeDatadogService.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DatadogService = null;
+            if (parseNode.GetChildNode("datadog_site") is { } nullNodeDatadogSite && nullNodeDatadogSite.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DatadogSite = null;
+            if (parseNode.GetChildNode("datadog_tags") is { } nullNodeDatadogTags && nullNodeDatadogTags.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DatadogTags = null;
+            if (parseNode.GetChildNode("merge_requests_events") is { } nullNodeMergeRequestsEvents && nullNodeMergeRequestsEvents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MergeRequestsEvents = null;
+            if (parseNode.GetChildNode("note_events") is { } nullNodeNoteEvents && nullNodeNoteEvents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NoteEvents = null;
+            if (parseNode.GetChildNode("pipeline_events") is { } nullNodePipelineEvents && nullNodePipelineEvents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PipelineEvents = null;
+            if (parseNode.GetChildNode("project_events") is { } nullNodeProjectEvents && nullNodeProjectEvents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProjectEvents = null;
+            if (parseNode.GetChildNode("push_events") is { } nullNodePushEvents && nullNodePushEvents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PushEvents = null;
+            if (parseNode.GetChildNode("subgroup_events") is { } nullNodeSubgroupEvents && nullNodeSubgroupEvents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubgroupEvents = null;
+            if (parseNode.GetChildNode("tag_push_events") is { } nullNodeTagPushEvents && nullNodeTagPushEvents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TagPushEvents = null;
+            if (parseNode.GetChildNode("use_inherited_settings") is { } nullNodeUseInheritedSettings && nullNodeUseInheritedSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UseInheritedSettings = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>&lt;a target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; href=&quot;https://docs.datadoghq.com/account_management/api-app-keys/&quot;&gt;API key&lt;/a&gt; used for authentication with Datadog.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ApiKey { get; set; }
+        public string? ApiKey { get => _explicitNullValueApiKey; set { _explicitNullValueApiKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("api_key"); else _explicitNullProperties?.Remove("api_key"); } }
+        private string? _explicitNullValueApiKey = default!;
 #nullable restore
 #else
-        public string ApiKey { get; set; }
+        public string ApiKey { get => _explicitNullValueApiKey; set { _explicitNullValueApiKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("api_key"); else _explicitNullProperties?.Remove("api_key"); } }
+        private string _explicitNullValueApiKey = default!;
 #endif
         /// <summary>Full URL of your Datadog site. Only required if you do not use a standard Datadog site.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ApiUrl { get; set; }
+        public string? ApiUrl { get => _explicitNullValueApiUrl; set { _explicitNullValueApiUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("api_url"); else _explicitNullProperties?.Remove("api_url"); } }
+        private string? _explicitNullValueApiUrl = default!;
 #nullable restore
 #else
-        public string ApiUrl { get; set; }
+        public string ApiUrl { get => _explicitNullValueApiUrl; set { _explicitNullValueApiUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("api_url"); else _explicitNullProperties?.Remove("api_url"); } }
+        private string _explicitNullValueApiUrl = default!;
 #endif
         /// <summary>When enabled, job logs are collected by Datadog and displayed along with pipeline execution traces.</summary>
-        public bool? ArchiveTraceEvents { get; set; }
+        public bool? ArchiveTraceEvents { get => _explicitNullValueArchiveTraceEvents; set { _explicitNullValueArchiveTraceEvents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("archive_trace_events"); else _explicitNullProperties?.Remove("archive_trace_events"); } }
+        private bool? _explicitNullValueArchiveTraceEvents = default!;
         /// <summary>Trigger event when a build is created.</summary>
-        public bool? BuildEvents { get; set; }
+        public bool? BuildEvents { get => _explicitNullValueBuildEvents; set { _explicitNullValueBuildEvents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("build_events"); else _explicitNullProperties?.Remove("build_events"); } }
+        private bool? _explicitNullValueBuildEvents = default!;
         /// <summary>Enable CI Visibility</summary>
-        public bool? DatadogCiVisibility { get; set; }
+        public bool? DatadogCiVisibility { get => _explicitNullValueDatadogCiVisibility; set { _explicitNullValueDatadogCiVisibility = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("datadog_ci_visibility"); else _explicitNullProperties?.Remove("datadog_ci_visibility"); } }
+        private bool? _explicitNullValueDatadogCiVisibility = default!;
         /// <summary>For self-managed deployments, `env` tag for all the data sent to Datadog.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DatadogEnv { get; set; }
+        public string? DatadogEnv { get => _explicitNullValueDatadogEnv; set { _explicitNullValueDatadogEnv = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("datadog_env"); else _explicitNullProperties?.Remove("datadog_env"); } }
+        private string? _explicitNullValueDatadogEnv = default!;
 #nullable restore
 #else
-        public string DatadogEnv { get; set; }
+        public string DatadogEnv { get => _explicitNullValueDatadogEnv; set { _explicitNullValueDatadogEnv = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("datadog_env"); else _explicitNullProperties?.Remove("datadog_env"); } }
+        private string _explicitNullValueDatadogEnv = default!;
 #endif
         /// <summary>Tag all pipeline data from this GitLab instance in Datadog. Can be used when managing several self-managed deployments.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DatadogService { get; set; }
+        public string? DatadogService { get => _explicitNullValueDatadogService; set { _explicitNullValueDatadogService = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("datadog_service"); else _explicitNullProperties?.Remove("datadog_service"); } }
+        private string? _explicitNullValueDatadogService = default!;
 #nullable restore
 #else
-        public string DatadogService { get; set; }
+        public string DatadogService { get => _explicitNullValueDatadogService; set { _explicitNullValueDatadogService = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("datadog_service"); else _explicitNullProperties?.Remove("datadog_service"); } }
+        private string _explicitNullValueDatadogService = default!;
 #endif
         /// <summary>Datadog site to send data to. Learn more about Datadog sites in the &lt;a target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; href=&quot;https://docs.datadoghq.com/getting_started/site/&quot;&gt;documentation&lt;/a&gt;.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DatadogSite { get; set; }
+        public string? DatadogSite { get => _explicitNullValueDatadogSite; set { _explicitNullValueDatadogSite = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("datadog_site"); else _explicitNullProperties?.Remove("datadog_site"); } }
+        private string? _explicitNullValueDatadogSite = default!;
 #nullable restore
 #else
-        public string DatadogSite { get; set; }
+        public string DatadogSite { get => _explicitNullValueDatadogSite; set { _explicitNullValueDatadogSite = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("datadog_site"); else _explicitNullProperties?.Remove("datadog_site"); } }
+        private string _explicitNullValueDatadogSite = default!;
 #endif
         /// <summary>Custom tags in Datadog. Specify one tag per line in the format `key:value\nkey2:value2`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DatadogTags { get; set; }
+        public string? DatadogTags { get => _explicitNullValueDatadogTags; set { _explicitNullValueDatadogTags = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("datadog_tags"); else _explicitNullProperties?.Remove("datadog_tags"); } }
+        private string? _explicitNullValueDatadogTags = default!;
 #nullable restore
 #else
-        public string DatadogTags { get; set; }
+        public string DatadogTags { get => _explicitNullValueDatadogTags; set { _explicitNullValueDatadogTags = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("datadog_tags"); else _explicitNullProperties?.Remove("datadog_tags"); } }
+        private string _explicitNullValueDatadogTags = default!;
 #endif
         /// <summary>Trigger event when a merge request is created, updated, or merged.</summary>
-        public bool? MergeRequestsEvents { get; set; }
+        public bool? MergeRequestsEvents { get => _explicitNullValueMergeRequestsEvents; set { _explicitNullValueMergeRequestsEvents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_requests_events"); else _explicitNullProperties?.Remove("merge_requests_events"); } }
+        private bool? _explicitNullValueMergeRequestsEvents = default!;
         /// <summary>Trigger event for new comments.</summary>
-        public bool? NoteEvents { get; set; }
+        public bool? NoteEvents { get => _explicitNullValueNoteEvents; set { _explicitNullValueNoteEvents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("note_events"); else _explicitNullProperties?.Remove("note_events"); } }
+        private bool? _explicitNullValueNoteEvents = default!;
         /// <summary>Trigger event when a pipeline status changes.</summary>
-        public bool? PipelineEvents { get; set; }
+        public bool? PipelineEvents { get => _explicitNullValuePipelineEvents; set { _explicitNullValuePipelineEvents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pipeline_events"); else _explicitNullProperties?.Remove("pipeline_events"); } }
+        private bool? _explicitNullValuePipelineEvents = default!;
         /// <summary>The project_events property</summary>
-        public bool? ProjectEvents { get; set; }
+        public bool? ProjectEvents { get => _explicitNullValueProjectEvents; set { _explicitNullValueProjectEvents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_events"); else _explicitNullProperties?.Remove("project_events"); } }
+        private bool? _explicitNullValueProjectEvents = default!;
         /// <summary>Trigger event for pushes to the repository.</summary>
-        public bool? PushEvents { get; set; }
+        public bool? PushEvents { get => _explicitNullValuePushEvents; set { _explicitNullValuePushEvents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("push_events"); else _explicitNullProperties?.Remove("push_events"); } }
+        private bool? _explicitNullValuePushEvents = default!;
         /// <summary>The subgroup_events property</summary>
-        public bool? SubgroupEvents { get; set; }
+        public bool? SubgroupEvents { get => _explicitNullValueSubgroupEvents; set { _explicitNullValueSubgroupEvents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subgroup_events"); else _explicitNullProperties?.Remove("subgroup_events"); } }
+        private bool? _explicitNullValueSubgroupEvents = default!;
         /// <summary>Trigger event for new tags pushed to the repository.</summary>
-        public bool? TagPushEvents { get; set; }
+        public bool? TagPushEvents { get => _explicitNullValueTagPushEvents; set { _explicitNullValueTagPushEvents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tag_push_events"); else _explicitNullProperties?.Remove("tag_push_events"); } }
+        private bool? _explicitNullValueTagPushEvents = default!;
         /// <summary>Indicates whether to inherit the default settings. Defaults to `false`.</summary>
-        public bool? UseInheritedSettings { get; set; }
+        public bool? UseInheritedSettings { get => _explicitNullValueUseInheritedSettings; set { _explicitNullValueUseInheritedSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("use_inherited_settings"); else _explicitNullProperties?.Remove("use_inherited_settings"); } }
+        private bool? _explicitNullValueUseInheritedSettings = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdIntegrationsDatadogRequest"/> and sets the default values.
         /// </summary>
@@ -99,7 +146,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdIntegrationsDatadogRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdIntegrationsDatadogRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdIntegrationsDatadogRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -152,6 +199,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteBoolValue("subgroup_events", SubgroupEvents);
             writer.WriteBoolValue("tag_push_events", TagPushEvents);
             writer.WriteBoolValue("use_inherited_settings", UseInheritedSettings);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

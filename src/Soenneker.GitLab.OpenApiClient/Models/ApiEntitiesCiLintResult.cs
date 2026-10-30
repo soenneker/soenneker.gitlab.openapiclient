@@ -11,50 +11,74 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ApiEntitiesCiLintResult : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("errors") is { } nullNodeErrors && nullNodeErrors.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Errors = null;
+            if (parseNode.GetChildNode("includes") is { } nullNodeIncludes && nullNodeIncludes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Includes = null;
+            if (parseNode.GetChildNode("jobs") is { } nullNodeJobs && nullNodeJobs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Jobs = null;
+            if (parseNode.GetChildNode("merged_yaml") is { } nullNodeMergedYaml && nullNodeMergedYaml.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MergedYaml = null;
+            if (parseNode.GetChildNode("valid") is { } nullNodeValid && nullNodeValid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Valid = null;
+            if (parseNode.GetChildNode("warnings") is { } nullNodeWarnings && nullNodeWarnings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Warnings = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The errors property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Errors { get; set; }
+        public List<string>? Errors { get => _explicitNullValueErrors; set { _explicitNullValueErrors = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errors"); else _explicitNullProperties?.Remove("errors"); } }
+        private List<string>? _explicitNullValueErrors = default!;
 #nullable restore
 #else
-        public List<string> Errors { get; set; }
+        public List<string> Errors { get => _explicitNullValueErrors; set { _explicitNullValueErrors = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errors"); else _explicitNullProperties?.Remove("errors"); } }
+        private List<string> _explicitNullValueErrors = default!;
 #endif
         /// <summary>The includes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiLintResultInclude>? Includes { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiLintResultInclude>? Includes { get => _explicitNullValueIncludes; set { _explicitNullValueIncludes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("includes"); else _explicitNullProperties?.Remove("includes"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiLintResultInclude>? _explicitNullValueIncludes = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiLintResultInclude> Includes { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiLintResultInclude> Includes { get => _explicitNullValueIncludes; set { _explicitNullValueIncludes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("includes"); else _explicitNullProperties?.Remove("includes"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiLintResultInclude> _explicitNullValueIncludes = default!;
 #endif
         /// <summary>The jobs property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiLintResultJobsItemProperty>? Jobs { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiLintResultJobsItemProperty>? Jobs { get => _explicitNullValueJobs; set { _explicitNullValueJobs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("jobs"); else _explicitNullProperties?.Remove("jobs"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiLintResultJobsItemProperty>? _explicitNullValueJobs = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiLintResultJobsItemProperty> Jobs { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiLintResultJobsItemProperty> Jobs { get => _explicitNullValueJobs; set { _explicitNullValueJobs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("jobs"); else _explicitNullProperties?.Remove("jobs"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiLintResultJobsItemProperty> _explicitNullValueJobs = default!;
 #endif
         /// <summary>The merged_yaml property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MergedYaml { get; set; }
+        public string? MergedYaml { get => _explicitNullValueMergedYaml; set { _explicitNullValueMergedYaml = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merged_yaml"); else _explicitNullProperties?.Remove("merged_yaml"); } }
+        private string? _explicitNullValueMergedYaml = default!;
 #nullable restore
 #else
-        public string MergedYaml { get; set; }
+        public string MergedYaml { get => _explicitNullValueMergedYaml; set { _explicitNullValueMergedYaml = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merged_yaml"); else _explicitNullProperties?.Remove("merged_yaml"); } }
+        private string _explicitNullValueMergedYaml = default!;
 #endif
         /// <summary>The valid property</summary>
-        public bool? Valid { get; set; }
+        public bool? Valid { get => _explicitNullValueValid; set { _explicitNullValueValid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("valid"); else _explicitNullProperties?.Remove("valid"); } }
+        private bool? _explicitNullValueValid = default!;
         /// <summary>The warnings property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Warnings { get; set; }
+        public List<string>? Warnings { get => _explicitNullValueWarnings; set { _explicitNullValueWarnings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("warnings"); else _explicitNullProperties?.Remove("warnings"); } }
+        private List<string>? _explicitNullValueWarnings = default!;
 #nullable restore
 #else
-        public List<string> Warnings { get; set; }
+        public List<string> Warnings { get => _explicitNullValueWarnings; set { _explicitNullValueWarnings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("warnings"); else _explicitNullProperties?.Remove("warnings"); } }
+        private List<string> _explicitNullValueWarnings = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiLintResult"/> and sets the default values.
@@ -71,7 +95,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiLintResult CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiLintResult();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiLintResult(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -102,6 +126,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("merged_yaml", MergedYaml);
             writer.WriteBoolValue("valid", Valid);
             writer.WriteCollectionOfPrimitiveValues<string>("warnings", Warnings);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

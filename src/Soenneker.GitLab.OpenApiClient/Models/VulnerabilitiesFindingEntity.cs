@@ -11,336 +11,466 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class VulnerabilitiesFindingEntity : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("ai_resolution_enabled") is { } nullNodeAiResolutionEnabled && nullNodeAiResolutionEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AiResolutionEnabled = null;
+            if (parseNode.GetChildNode("assets") is { } nullNodeAssets && nullNodeAssets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Assets = null;
+            if (parseNode.GetChildNode("auto_severity_override") is { } nullNodeAutoSeverityOverride && nullNodeAutoSeverityOverride.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutoSeverityOverride = null;
+            if (parseNode.GetChildNode("blob_path") is { } nullNodeBlobPath && nullNodeBlobPath.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BlobPath = null;
+            if (parseNode.GetChildNode("create_jira_issue_url") is { } nullNodeCreateJiraIssueUrl && nullNodeCreateJiraIssueUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreateJiraIssueUrl = null;
+            if (parseNode.GetChildNode("create_vulnerability_feedback_dismissal_path") is { } nullNodeCreateVulnerabilityFeedbackDismissalPath && nullNodeCreateVulnerabilityFeedbackDismissalPath.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreateVulnerabilityFeedbackDismissalPath = null;
+            if (parseNode.GetChildNode("create_vulnerability_feedback_issue_path") is { } nullNodeCreateVulnerabilityFeedbackIssuePath && nullNodeCreateVulnerabilityFeedbackIssuePath.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreateVulnerabilityFeedbackIssuePath = null;
+            if (parseNode.GetChildNode("create_vulnerability_feedback_merge_request_path") is { } nullNodeCreateVulnerabilityFeedbackMergeRequestPath && nullNodeCreateVulnerabilityFeedbackMergeRequestPath.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreateVulnerabilityFeedbackMergeRequestPath = null;
+            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("description_html") is { } nullNodeDescriptionHtml && nullNodeDescriptionHtml.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DescriptionHtml = null;
+            if (parseNode.GetChildNode("details") is { } nullNodeDetails && nullNodeDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Details = null;
+            if (parseNode.GetChildNode("dismissal_feedback") is { } nullNodeDismissalFeedback && nullNodeDismissalFeedback.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DismissalFeedback = null;
+            if (parseNode.GetChildNode("evidence") is { } nullNodeEvidence && nullNodeEvidence.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Evidence = null;
+            if (parseNode.GetChildNode("evidence_source") is { } nullNodeEvidenceSource && nullNodeEvidenceSource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EvidenceSource = null;
+            if (parseNode.GetChildNode("external_issue_links") is { } nullNodeExternalIssueLinks && nullNodeExternalIssueLinks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalIssueLinks = null;
+            if (parseNode.GetChildNode("false_positive") is { } nullNodeFalsePositive && nullNodeFalsePositive.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FalsePositive = null;
+            if (parseNode.GetChildNode("found_by_pipeline") is { } nullNodeFoundByPipeline && nullNodeFoundByPipeline.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FoundByPipeline = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("identifiers") is { } nullNodeIdentifiers && nullNodeIdentifiers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Identifiers = null;
+            if (parseNode.GetChildNode("issue_feedback") is { } nullNodeIssueFeedback && nullNodeIssueFeedback.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssueFeedback = null;
+            if (parseNode.GetChildNode("issue_links") is { } nullNodeIssueLinks && nullNodeIssueLinks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssueLinks = null;
+            if (parseNode.GetChildNode("links") is { } nullNodeLinks && nullNodeLinks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Links = null;
+            if (parseNode.GetChildNode("location") is { } nullNodeLocation && nullNodeLocation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Location = null;
+            if (parseNode.GetChildNode("matches_auto_dismiss_policy") is { } nullNodeMatchesAutoDismissPolicy && nullNodeMatchesAutoDismissPolicy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MatchesAutoDismissPolicy = null;
+            if (parseNode.GetChildNode("merge_request_feedback") is { } nullNodeMergeRequestFeedback && nullNodeMergeRequestFeedback.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MergeRequestFeedback = null;
+            if (parseNode.GetChildNode("merge_request_links") is { } nullNodeMergeRequestLinks && nullNodeMergeRequestLinks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MergeRequestLinks = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("project") is { } nullNodeProject && nullNodeProject.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Project = null;
+            if (parseNode.GetChildNode("remediations") is { } nullNodeRemediations && nullNodeRemediations.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Remediations = null;
+            if (parseNode.GetChildNode("report_type") is { } nullNodeReportType && nullNodeReportType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReportType = null;
+            if (parseNode.GetChildNode("request") is { } nullNodeRequest && nullNodeRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Request = null;
+            if (parseNode.GetChildNode("response") is { } nullNodeResponse && nullNodeResponse.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Response = null;
+            if (parseNode.GetChildNode("scan") is { } nullNodeScan && nullNodeScan.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Scan = null;
+            if (parseNode.GetChildNode("scanner") is { } nullNodeScanner && nullNodeScanner.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Scanner = null;
+            if (parseNode.GetChildNode("severity") is { } nullNodeSeverity && nullNodeSeverity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Severity = null;
+            if (parseNode.GetChildNode("solution") is { } nullNodeSolution && nullNodeSolution.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Solution = null;
+            if (parseNode.GetChildNode("state") is { } nullNodeState && nullNodeState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) State = null;
+            if (parseNode.GetChildNode("state_transitions") is { } nullNodeStateTransitions && nullNodeStateTransitions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StateTransitions = null;
+            if (parseNode.GetChildNode("supporting_messages") is { } nullNodeSupportingMessages && nullNodeSupportingMessages.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SupportingMessages = null;
+            if (parseNode.GetChildNode("unverified") is { } nullNodeUnverified && nullNodeUnverified.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Unverified = null;
+            if (parseNode.GetChildNode("uuid") is { } nullNodeUuid && nullNodeUuid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Uuid = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The ai_resolution_enabled property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AiResolutionEnabled { get; set; }
+        public string? AiResolutionEnabled { get => _explicitNullValueAiResolutionEnabled; set { _explicitNullValueAiResolutionEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ai_resolution_enabled"); else _explicitNullProperties?.Remove("ai_resolution_enabled"); } }
+        private string? _explicitNullValueAiResolutionEnabled = default!;
 #nullable restore
 #else
-        public string AiResolutionEnabled { get; set; }
+        public string AiResolutionEnabled { get => _explicitNullValueAiResolutionEnabled; set { _explicitNullValueAiResolutionEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ai_resolution_enabled"); else _explicitNullProperties?.Remove("ai_resolution_enabled"); } }
+        private string _explicitNullValueAiResolutionEnabled = default!;
 #endif
         /// <summary>The assets property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Assets { get; set; }
+        public string? Assets { get => _explicitNullValueAssets; set { _explicitNullValueAssets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assets"); else _explicitNullProperties?.Remove("assets"); } }
+        private string? _explicitNullValueAssets = default!;
 #nullable restore
 #else
-        public string Assets { get; set; }
+        public string Assets { get => _explicitNullValueAssets; set { _explicitNullValueAssets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assets"); else _explicitNullProperties?.Remove("assets"); } }
+        private string _explicitNullValueAssets = default!;
 #endif
         /// <summary>The auto_severity_override property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AutoSeverityOverride { get; set; }
+        public string? AutoSeverityOverride { get => _explicitNullValueAutoSeverityOverride; set { _explicitNullValueAutoSeverityOverride = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auto_severity_override"); else _explicitNullProperties?.Remove("auto_severity_override"); } }
+        private string? _explicitNullValueAutoSeverityOverride = default!;
 #nullable restore
 #else
-        public string AutoSeverityOverride { get; set; }
+        public string AutoSeverityOverride { get => _explicitNullValueAutoSeverityOverride; set { _explicitNullValueAutoSeverityOverride = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auto_severity_override"); else _explicitNullProperties?.Remove("auto_severity_override"); } }
+        private string _explicitNullValueAutoSeverityOverride = default!;
 #endif
         /// <summary>The blob_path property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BlobPath { get; set; }
+        public string? BlobPath { get => _explicitNullValueBlobPath; set { _explicitNullValueBlobPath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("blob_path"); else _explicitNullProperties?.Remove("blob_path"); } }
+        private string? _explicitNullValueBlobPath = default!;
 #nullable restore
 #else
-        public string BlobPath { get; set; }
+        public string BlobPath { get => _explicitNullValueBlobPath; set { _explicitNullValueBlobPath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("blob_path"); else _explicitNullProperties?.Remove("blob_path"); } }
+        private string _explicitNullValueBlobPath = default!;
 #endif
         /// <summary>The create_jira_issue_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CreateJiraIssueUrl { get; set; }
+        public string? CreateJiraIssueUrl { get => _explicitNullValueCreateJiraIssueUrl; set { _explicitNullValueCreateJiraIssueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("create_jira_issue_url"); else _explicitNullProperties?.Remove("create_jira_issue_url"); } }
+        private string? _explicitNullValueCreateJiraIssueUrl = default!;
 #nullable restore
 #else
-        public string CreateJiraIssueUrl { get; set; }
+        public string CreateJiraIssueUrl { get => _explicitNullValueCreateJiraIssueUrl; set { _explicitNullValueCreateJiraIssueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("create_jira_issue_url"); else _explicitNullProperties?.Remove("create_jira_issue_url"); } }
+        private string _explicitNullValueCreateJiraIssueUrl = default!;
 #endif
         /// <summary>The create_vulnerability_feedback_dismissal_path property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CreateVulnerabilityFeedbackDismissalPath { get; set; }
+        public string? CreateVulnerabilityFeedbackDismissalPath { get => _explicitNullValueCreateVulnerabilityFeedbackDismissalPath; set { _explicitNullValueCreateVulnerabilityFeedbackDismissalPath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("create_vulnerability_feedback_dismissal_path"); else _explicitNullProperties?.Remove("create_vulnerability_feedback_dismissal_path"); } }
+        private string? _explicitNullValueCreateVulnerabilityFeedbackDismissalPath = default!;
 #nullable restore
 #else
-        public string CreateVulnerabilityFeedbackDismissalPath { get; set; }
+        public string CreateVulnerabilityFeedbackDismissalPath { get => _explicitNullValueCreateVulnerabilityFeedbackDismissalPath; set { _explicitNullValueCreateVulnerabilityFeedbackDismissalPath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("create_vulnerability_feedback_dismissal_path"); else _explicitNullProperties?.Remove("create_vulnerability_feedback_dismissal_path"); } }
+        private string _explicitNullValueCreateVulnerabilityFeedbackDismissalPath = default!;
 #endif
         /// <summary>The create_vulnerability_feedback_issue_path property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CreateVulnerabilityFeedbackIssuePath { get; set; }
+        public string? CreateVulnerabilityFeedbackIssuePath { get => _explicitNullValueCreateVulnerabilityFeedbackIssuePath; set { _explicitNullValueCreateVulnerabilityFeedbackIssuePath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("create_vulnerability_feedback_issue_path"); else _explicitNullProperties?.Remove("create_vulnerability_feedback_issue_path"); } }
+        private string? _explicitNullValueCreateVulnerabilityFeedbackIssuePath = default!;
 #nullable restore
 #else
-        public string CreateVulnerabilityFeedbackIssuePath { get; set; }
+        public string CreateVulnerabilityFeedbackIssuePath { get => _explicitNullValueCreateVulnerabilityFeedbackIssuePath; set { _explicitNullValueCreateVulnerabilityFeedbackIssuePath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("create_vulnerability_feedback_issue_path"); else _explicitNullProperties?.Remove("create_vulnerability_feedback_issue_path"); } }
+        private string _explicitNullValueCreateVulnerabilityFeedbackIssuePath = default!;
 #endif
         /// <summary>The create_vulnerability_feedback_merge_request_path property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CreateVulnerabilityFeedbackMergeRequestPath { get; set; }
+        public string? CreateVulnerabilityFeedbackMergeRequestPath { get => _explicitNullValueCreateVulnerabilityFeedbackMergeRequestPath; set { _explicitNullValueCreateVulnerabilityFeedbackMergeRequestPath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("create_vulnerability_feedback_merge_request_path"); else _explicitNullProperties?.Remove("create_vulnerability_feedback_merge_request_path"); } }
+        private string? _explicitNullValueCreateVulnerabilityFeedbackMergeRequestPath = default!;
 #nullable restore
 #else
-        public string CreateVulnerabilityFeedbackMergeRequestPath { get; set; }
+        public string CreateVulnerabilityFeedbackMergeRequestPath { get => _explicitNullValueCreateVulnerabilityFeedbackMergeRequestPath; set { _explicitNullValueCreateVulnerabilityFeedbackMergeRequestPath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("create_vulnerability_feedback_merge_request_path"); else _explicitNullProperties?.Remove("create_vulnerability_feedback_merge_request_path"); } }
+        private string _explicitNullValueCreateVulnerabilityFeedbackMergeRequestPath = default!;
 #endif
         /// <summary>The description property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get; set; }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get; set; }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>The description_html property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DescriptionHtml { get; set; }
+        public string? DescriptionHtml { get => _explicitNullValueDescriptionHtml; set { _explicitNullValueDescriptionHtml = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description_html"); else _explicitNullProperties?.Remove("description_html"); } }
+        private string? _explicitNullValueDescriptionHtml = default!;
 #nullable restore
 #else
-        public string DescriptionHtml { get; set; }
+        public string DescriptionHtml { get => _explicitNullValueDescriptionHtml; set { _explicitNullValueDescriptionHtml = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description_html"); else _explicitNullProperties?.Remove("description_html"); } }
+        private string _explicitNullValueDescriptionHtml = default!;
 #endif
         /// <summary>The details property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Details { get; set; }
+        public string? Details { get => _explicitNullValueDetails; set { _explicitNullValueDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("details"); else _explicitNullProperties?.Remove("details"); } }
+        private string? _explicitNullValueDetails = default!;
 #nullable restore
 #else
-        public string Details { get; set; }
+        public string Details { get => _explicitNullValueDetails; set { _explicitNullValueDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("details"); else _explicitNullProperties?.Remove("details"); } }
+        private string _explicitNullValueDetails = default!;
 #endif
         /// <summary>The dismissal_feedback property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFeedbackEntity? DismissalFeedback { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFeedbackEntity? DismissalFeedback { get => _explicitNullValueDismissalFeedback; set { _explicitNullValueDismissalFeedback = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dismissal_feedback"); else _explicitNullProperties?.Remove("dismissal_feedback"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFeedbackEntity? _explicitNullValueDismissalFeedback = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFeedbackEntity DismissalFeedback { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFeedbackEntity DismissalFeedback { get => _explicitNullValueDismissalFeedback; set { _explicitNullValueDismissalFeedback = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dismissal_feedback"); else _explicitNullProperties?.Remove("dismissal_feedback"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFeedbackEntity _explicitNullValueDismissalFeedback = default!;
 #endif
         /// <summary>The evidence property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Evidence { get; set; }
+        public string? Evidence { get => _explicitNullValueEvidence; set { _explicitNullValueEvidence = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("evidence"); else _explicitNullProperties?.Remove("evidence"); } }
+        private string? _explicitNullValueEvidence = default!;
 #nullable restore
 #else
-        public string Evidence { get; set; }
+        public string Evidence { get => _explicitNullValueEvidence; set { _explicitNullValueEvidence = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("evidence"); else _explicitNullProperties?.Remove("evidence"); } }
+        private string _explicitNullValueEvidence = default!;
 #endif
         /// <summary>The evidence_source property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EvidenceSource { get; set; }
+        public string? EvidenceSource { get => _explicitNullValueEvidenceSource; set { _explicitNullValueEvidenceSource = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("evidence_source"); else _explicitNullProperties?.Remove("evidence_source"); } }
+        private string? _explicitNullValueEvidenceSource = default!;
 #nullable restore
 #else
-        public string EvidenceSource { get; set; }
+        public string EvidenceSource { get => _explicitNullValueEvidenceSource; set { _explicitNullValueEvidenceSource = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("evidence_source"); else _explicitNullProperties?.Remove("evidence_source"); } }
+        private string _explicitNullValueEvidenceSource = default!;
 #endif
         /// <summary>The external_issue_links property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesExternalIssueLinkEntity? ExternalIssueLinks { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesExternalIssueLinkEntity? ExternalIssueLinks { get => _explicitNullValueExternalIssueLinks; set { _explicitNullValueExternalIssueLinks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_issue_links"); else _explicitNullProperties?.Remove("external_issue_links"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesExternalIssueLinkEntity? _explicitNullValueExternalIssueLinks = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesExternalIssueLinkEntity ExternalIssueLinks { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesExternalIssueLinkEntity ExternalIssueLinks { get => _explicitNullValueExternalIssueLinks; set { _explicitNullValueExternalIssueLinks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_issue_links"); else _explicitNullProperties?.Remove("external_issue_links"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesExternalIssueLinkEntity _explicitNullValueExternalIssueLinks = default!;
 #endif
         /// <summary>The false_positive property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FalsePositive { get; set; }
+        public string? FalsePositive { get => _explicitNullValueFalsePositive; set { _explicitNullValueFalsePositive = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("false_positive"); else _explicitNullProperties?.Remove("false_positive"); } }
+        private string? _explicitNullValueFalsePositive = default!;
 #nullable restore
 #else
-        public string FalsePositive { get; set; }
+        public string FalsePositive { get => _explicitNullValueFalsePositive; set { _explicitNullValueFalsePositive = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("false_positive"); else _explicitNullProperties?.Remove("false_positive"); } }
+        private string _explicitNullValueFalsePositive = default!;
 #endif
         /// <summary>The found_by_pipeline property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFindingEntityFoundByPipeline? FoundByPipeline { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFindingEntityFoundByPipeline? FoundByPipeline { get => _explicitNullValueFoundByPipeline; set { _explicitNullValueFoundByPipeline = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("found_by_pipeline"); else _explicitNullProperties?.Remove("found_by_pipeline"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFindingEntityFoundByPipeline? _explicitNullValueFoundByPipeline = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFindingEntityFoundByPipeline FoundByPipeline { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFindingEntityFoundByPipeline FoundByPipeline { get => _explicitNullValueFoundByPipeline; set { _explicitNullValueFoundByPipeline = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("found_by_pipeline"); else _explicitNullProperties?.Remove("found_by_pipeline"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFindingEntityFoundByPipeline _explicitNullValueFoundByPipeline = default!;
 #endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>The identifiers property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesIdentifierEntity? Identifiers { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesIdentifierEntity? Identifiers { get => _explicitNullValueIdentifiers; set { _explicitNullValueIdentifiers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("identifiers"); else _explicitNullProperties?.Remove("identifiers"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesIdentifierEntity? _explicitNullValueIdentifiers = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesIdentifierEntity Identifiers { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesIdentifierEntity Identifiers { get => _explicitNullValueIdentifiers; set { _explicitNullValueIdentifiers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("identifiers"); else _explicitNullProperties?.Remove("identifiers"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesIdentifierEntity _explicitNullValueIdentifiers = default!;
 #endif
         /// <summary>The issue_feedback property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFeedbackEntity? IssueFeedback { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFeedbackEntity? IssueFeedback { get => _explicitNullValueIssueFeedback; set { _explicitNullValueIssueFeedback = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issue_feedback"); else _explicitNullProperties?.Remove("issue_feedback"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFeedbackEntity? _explicitNullValueIssueFeedback = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFeedbackEntity IssueFeedback { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFeedbackEntity IssueFeedback { get => _explicitNullValueIssueFeedback; set { _explicitNullValueIssueFeedback = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issue_feedback"); else _explicitNullProperties?.Remove("issue_feedback"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFeedbackEntity _explicitNullValueIssueFeedback = default!;
 #endif
         /// <summary>The issue_links property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesIssueLinkEntity? IssueLinks { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesIssueLinkEntity? IssueLinks { get => _explicitNullValueIssueLinks; set { _explicitNullValueIssueLinks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issue_links"); else _explicitNullProperties?.Remove("issue_links"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesIssueLinkEntity? _explicitNullValueIssueLinks = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesIssueLinkEntity IssueLinks { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesIssueLinkEntity IssueLinks { get => _explicitNullValueIssueLinks; set { _explicitNullValueIssueLinks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issue_links"); else _explicitNullProperties?.Remove("issue_links"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesIssueLinkEntity _explicitNullValueIssueLinks = default!;
 #endif
         /// <summary>The links property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Links { get; set; }
+        public string? Links { get => _explicitNullValueLinks; set { _explicitNullValueLinks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("links"); else _explicitNullProperties?.Remove("links"); } }
+        private string? _explicitNullValueLinks = default!;
 #nullable restore
 #else
-        public string Links { get; set; }
+        public string Links { get => _explicitNullValueLinks; set { _explicitNullValueLinks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("links"); else _explicitNullProperties?.Remove("links"); } }
+        private string _explicitNullValueLinks = default!;
 #endif
         /// <summary>The location property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Location { get; set; }
+        public string? Location { get => _explicitNullValueLocation; set { _explicitNullValueLocation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("location"); else _explicitNullProperties?.Remove("location"); } }
+        private string? _explicitNullValueLocation = default!;
 #nullable restore
 #else
-        public string Location { get; set; }
+        public string Location { get => _explicitNullValueLocation; set { _explicitNullValueLocation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("location"); else _explicitNullProperties?.Remove("location"); } }
+        private string _explicitNullValueLocation = default!;
 #endif
         /// <summary>The matches_auto_dismiss_policy property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MatchesAutoDismissPolicy { get; set; }
+        public string? MatchesAutoDismissPolicy { get => _explicitNullValueMatchesAutoDismissPolicy; set { _explicitNullValueMatchesAutoDismissPolicy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("matches_auto_dismiss_policy"); else _explicitNullProperties?.Remove("matches_auto_dismiss_policy"); } }
+        private string? _explicitNullValueMatchesAutoDismissPolicy = default!;
 #nullable restore
 #else
-        public string MatchesAutoDismissPolicy { get; set; }
+        public string MatchesAutoDismissPolicy { get => _explicitNullValueMatchesAutoDismissPolicy; set { _explicitNullValueMatchesAutoDismissPolicy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("matches_auto_dismiss_policy"); else _explicitNullProperties?.Remove("matches_auto_dismiss_policy"); } }
+        private string _explicitNullValueMatchesAutoDismissPolicy = default!;
 #endif
         /// <summary>The merge_request_feedback property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFeedbackEntity? MergeRequestFeedback { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFeedbackEntity? MergeRequestFeedback { get => _explicitNullValueMergeRequestFeedback; set { _explicitNullValueMergeRequestFeedback = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_request_feedback"); else _explicitNullProperties?.Remove("merge_request_feedback"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFeedbackEntity? _explicitNullValueMergeRequestFeedback = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFeedbackEntity MergeRequestFeedback { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFeedbackEntity MergeRequestFeedback { get => _explicitNullValueMergeRequestFeedback; set { _explicitNullValueMergeRequestFeedback = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_request_feedback"); else _explicitNullProperties?.Remove("merge_request_feedback"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFeedbackEntity _explicitNullValueMergeRequestFeedback = default!;
 #endif
         /// <summary>The merge_request_links property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesMergeRequestLinkEntity? MergeRequestLinks { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesMergeRequestLinkEntity? MergeRequestLinks { get => _explicitNullValueMergeRequestLinks; set { _explicitNullValueMergeRequestLinks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_request_links"); else _explicitNullProperties?.Remove("merge_request_links"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesMergeRequestLinkEntity? _explicitNullValueMergeRequestLinks = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesMergeRequestLinkEntity MergeRequestLinks { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesMergeRequestLinkEntity MergeRequestLinks { get => _explicitNullValueMergeRequestLinks; set { _explicitNullValueMergeRequestLinks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_request_links"); else _explicitNullProperties?.Remove("merge_request_links"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesMergeRequestLinkEntity _explicitNullValueMergeRequestLinks = default!;
 #endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>The project property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ProjectEntity? Project { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ProjectEntity? Project { get => _explicitNullValueProject; set { _explicitNullValueProject = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project"); else _explicitNullProperties?.Remove("project"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ProjectEntity? _explicitNullValueProject = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ProjectEntity Project { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ProjectEntity Project { get => _explicitNullValueProject; set { _explicitNullValueProject = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project"); else _explicitNullProperties?.Remove("project"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ProjectEntity _explicitNullValueProject = default!;
 #endif
         /// <summary>The remediations property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Remediations { get; set; }
+        public string? Remediations { get => _explicitNullValueRemediations; set { _explicitNullValueRemediations = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("remediations"); else _explicitNullProperties?.Remove("remediations"); } }
+        private string? _explicitNullValueRemediations = default!;
 #nullable restore
 #else
-        public string Remediations { get; set; }
+        public string Remediations { get => _explicitNullValueRemediations; set { _explicitNullValueRemediations = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("remediations"); else _explicitNullProperties?.Remove("remediations"); } }
+        private string _explicitNullValueRemediations = default!;
 #endif
         /// <summary>The report_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ReportType { get; set; }
+        public string? ReportType { get => _explicitNullValueReportType; set { _explicitNullValueReportType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("report_type"); else _explicitNullProperties?.Remove("report_type"); } }
+        private string? _explicitNullValueReportType = default!;
 #nullable restore
 #else
-        public string ReportType { get; set; }
+        public string ReportType { get => _explicitNullValueReportType; set { _explicitNullValueReportType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("report_type"); else _explicitNullProperties?.Remove("report_type"); } }
+        private string _explicitNullValueReportType = default!;
 #endif
         /// <summary>The request property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesRequestEntity? Request { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesRequestEntity? Request { get => _explicitNullValueRequest; set { _explicitNullValueRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("request"); else _explicitNullProperties?.Remove("request"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesRequestEntity? _explicitNullValueRequest = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesRequestEntity Request { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesRequestEntity Request { get => _explicitNullValueRequest; set { _explicitNullValueRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("request"); else _explicitNullProperties?.Remove("request"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesRequestEntity _explicitNullValueRequest = default!;
 #endif
         /// <summary>The response property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesResponseEntity? Response { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesResponseEntity? Response { get => _explicitNullValueResponse; set { _explicitNullValueResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("response"); else _explicitNullProperties?.Remove("response"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesResponseEntity? _explicitNullValueResponse = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesResponseEntity Response { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesResponseEntity Response { get => _explicitNullValueResponse; set { _explicitNullValueResponse = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("response"); else _explicitNullProperties?.Remove("response"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesResponseEntity _explicitNullValueResponse = default!;
 #endif
         /// <summary>The scan property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Scan { get; set; }
+        public string? Scan { get => _explicitNullValueScan; set { _explicitNullValueScan = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scan"); else _explicitNullProperties?.Remove("scan"); } }
+        private string? _explicitNullValueScan = default!;
 #nullable restore
 #else
-        public string Scan { get; set; }
+        public string Scan { get => _explicitNullValueScan; set { _explicitNullValueScan = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scan"); else _explicitNullProperties?.Remove("scan"); } }
+        private string _explicitNullValueScan = default!;
 #endif
         /// <summary>The scanner property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesScannerEntity? Scanner { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesScannerEntity? Scanner { get => _explicitNullValueScanner; set { _explicitNullValueScanner = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scanner"); else _explicitNullProperties?.Remove("scanner"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesScannerEntity? _explicitNullValueScanner = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesScannerEntity Scanner { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesScannerEntity Scanner { get => _explicitNullValueScanner; set { _explicitNullValueScanner = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scanner"); else _explicitNullProperties?.Remove("scanner"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesScannerEntity _explicitNullValueScanner = default!;
 #endif
         /// <summary>The severity property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Severity { get; set; }
+        public string? Severity { get => _explicitNullValueSeverity; set { _explicitNullValueSeverity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("severity"); else _explicitNullProperties?.Remove("severity"); } }
+        private string? _explicitNullValueSeverity = default!;
 #nullable restore
 #else
-        public string Severity { get; set; }
+        public string Severity { get => _explicitNullValueSeverity; set { _explicitNullValueSeverity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("severity"); else _explicitNullProperties?.Remove("severity"); } }
+        private string _explicitNullValueSeverity = default!;
 #endif
         /// <summary>The solution property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Solution { get; set; }
+        public string? Solution { get => _explicitNullValueSolution; set { _explicitNullValueSolution = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("solution"); else _explicitNullProperties?.Remove("solution"); } }
+        private string? _explicitNullValueSolution = default!;
 #nullable restore
 #else
-        public string Solution { get; set; }
+        public string Solution { get => _explicitNullValueSolution; set { _explicitNullValueSolution = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("solution"); else _explicitNullProperties?.Remove("solution"); } }
+        private string _explicitNullValueSolution = default!;
 #endif
         /// <summary>The state property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? State { get; set; }
+        public string? State { get => _explicitNullValueState; set { _explicitNullValueState = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("state"); else _explicitNullProperties?.Remove("state"); } }
+        private string? _explicitNullValueState = default!;
 #nullable restore
 #else
-        public string State { get; set; }
+        public string State { get => _explicitNullValueState; set { _explicitNullValueState = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("state"); else _explicitNullProperties?.Remove("state"); } }
+        private string _explicitNullValueState = default!;
 #endif
         /// <summary>The state_transitions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesStateTransitionEntity? StateTransitions { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesStateTransitionEntity? StateTransitions { get => _explicitNullValueStateTransitions; set { _explicitNullValueStateTransitions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("state_transitions"); else _explicitNullProperties?.Remove("state_transitions"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesStateTransitionEntity? _explicitNullValueStateTransitions = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesStateTransitionEntity StateTransitions { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesStateTransitionEntity StateTransitions { get => _explicitNullValueStateTransitions; set { _explicitNullValueStateTransitions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("state_transitions"); else _explicitNullProperties?.Remove("state_transitions"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesStateTransitionEntity _explicitNullValueStateTransitions = default!;
 #endif
         /// <summary>The supporting_messages property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SupportingMessages { get; set; }
+        public string? SupportingMessages { get => _explicitNullValueSupportingMessages; set { _explicitNullValueSupportingMessages = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("supporting_messages"); else _explicitNullProperties?.Remove("supporting_messages"); } }
+        private string? _explicitNullValueSupportingMessages = default!;
 #nullable restore
 #else
-        public string SupportingMessages { get; set; }
+        public string SupportingMessages { get => _explicitNullValueSupportingMessages; set { _explicitNullValueSupportingMessages = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("supporting_messages"); else _explicitNullProperties?.Remove("supporting_messages"); } }
+        private string _explicitNullValueSupportingMessages = default!;
 #endif
         /// <summary>The unverified property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Unverified { get; set; }
+        public string? Unverified { get => _explicitNullValueUnverified; set { _explicitNullValueUnverified = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unverified"); else _explicitNullProperties?.Remove("unverified"); } }
+        private string? _explicitNullValueUnverified = default!;
 #nullable restore
 #else
-        public string Unverified { get; set; }
+        public string Unverified { get => _explicitNullValueUnverified; set { _explicitNullValueUnverified = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unverified"); else _explicitNullProperties?.Remove("unverified"); } }
+        private string _explicitNullValueUnverified = default!;
 #endif
         /// <summary>The uuid property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Uuid { get; set; }
+        public string? Uuid { get => _explicitNullValueUuid; set { _explicitNullValueUuid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uuid"); else _explicitNullProperties?.Remove("uuid"); } }
+        private string? _explicitNullValueUuid = default!;
 #nullable restore
 #else
-        public string Uuid { get; set; }
+        public string Uuid { get => _explicitNullValueUuid; set { _explicitNullValueUuid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uuid"); else _explicitNullProperties?.Remove("uuid"); } }
+        private string _explicitNullValueUuid = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFindingEntity"/> and sets the default values.
@@ -357,7 +487,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFindingEntity CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFindingEntity();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFindingEntity(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -458,6 +588,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("supporting_messages", SupportingMessages);
             writer.WriteStringValue("unverified", Unverified);
             writer.WriteStringValue("uuid", Uuid);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

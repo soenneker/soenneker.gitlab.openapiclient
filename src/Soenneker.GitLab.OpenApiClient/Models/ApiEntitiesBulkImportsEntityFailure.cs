@@ -11,56 +11,81 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ApiEntitiesBulkImportsEntityFailure : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("correlation_id_value") is { } nullNodeCorrelationIdValue && nullNodeCorrelationIdValue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CorrelationIdValue = null;
+            if (parseNode.GetChildNode("exception_class") is { } nullNodeExceptionClass && nullNodeExceptionClass.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExceptionClass = null;
+            if (parseNode.GetChildNode("exception_message") is { } nullNodeExceptionMessage && nullNodeExceptionMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExceptionMessage = null;
+            if (parseNode.GetChildNode("relation") is { } nullNodeRelation && nullNodeRelation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Relation = null;
+            if (parseNode.GetChildNode("source_title") is { } nullNodeSourceTitle && nullNodeSourceTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SourceTitle = null;
+            if (parseNode.GetChildNode("source_url") is { } nullNodeSourceUrl && nullNodeSourceUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SourceUrl = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The correlation_id_value property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CorrelationIdValue { get; set; }
+        public string? CorrelationIdValue { get => _explicitNullValueCorrelationIdValue; set { _explicitNullValueCorrelationIdValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("correlation_id_value"); else _explicitNullProperties?.Remove("correlation_id_value"); } }
+        private string? _explicitNullValueCorrelationIdValue = default!;
 #nullable restore
 #else
-        public string CorrelationIdValue { get; set; }
+        public string CorrelationIdValue { get => _explicitNullValueCorrelationIdValue; set { _explicitNullValueCorrelationIdValue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("correlation_id_value"); else _explicitNullProperties?.Remove("correlation_id_value"); } }
+        private string _explicitNullValueCorrelationIdValue = default!;
 #endif
         /// <summary>The exception_class property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExceptionClass { get; set; }
+        public string? ExceptionClass { get => _explicitNullValueExceptionClass; set { _explicitNullValueExceptionClass = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exception_class"); else _explicitNullProperties?.Remove("exception_class"); } }
+        private string? _explicitNullValueExceptionClass = default!;
 #nullable restore
 #else
-        public string ExceptionClass { get; set; }
+        public string ExceptionClass { get => _explicitNullValueExceptionClass; set { _explicitNullValueExceptionClass = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exception_class"); else _explicitNullProperties?.Remove("exception_class"); } }
+        private string _explicitNullValueExceptionClass = default!;
 #endif
         /// <summary>The exception_message property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExceptionMessage { get; set; }
+        public string? ExceptionMessage { get => _explicitNullValueExceptionMessage; set { _explicitNullValueExceptionMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exception_message"); else _explicitNullProperties?.Remove("exception_message"); } }
+        private string? _explicitNullValueExceptionMessage = default!;
 #nullable restore
 #else
-        public string ExceptionMessage { get; set; }
+        public string ExceptionMessage { get => _explicitNullValueExceptionMessage; set { _explicitNullValueExceptionMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exception_message"); else _explicitNullProperties?.Remove("exception_message"); } }
+        private string _explicitNullValueExceptionMessage = default!;
 #endif
         /// <summary>The relation property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Relation { get; set; }
+        public string? Relation { get => _explicitNullValueRelation; set { _explicitNullValueRelation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("relation"); else _explicitNullProperties?.Remove("relation"); } }
+        private string? _explicitNullValueRelation = default!;
 #nullable restore
 #else
-        public string Relation { get; set; }
+        public string Relation { get => _explicitNullValueRelation; set { _explicitNullValueRelation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("relation"); else _explicitNullProperties?.Remove("relation"); } }
+        private string _explicitNullValueRelation = default!;
 #endif
         /// <summary>The source_title property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SourceTitle { get; set; }
+        public string? SourceTitle { get => _explicitNullValueSourceTitle; set { _explicitNullValueSourceTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source_title"); else _explicitNullProperties?.Remove("source_title"); } }
+        private string? _explicitNullValueSourceTitle = default!;
 #nullable restore
 #else
-        public string SourceTitle { get; set; }
+        public string SourceTitle { get => _explicitNullValueSourceTitle; set { _explicitNullValueSourceTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source_title"); else _explicitNullProperties?.Remove("source_title"); } }
+        private string _explicitNullValueSourceTitle = default!;
 #endif
         /// <summary>The source_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SourceUrl { get; set; }
+        public string? SourceUrl { get => _explicitNullValueSourceUrl; set { _explicitNullValueSourceUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source_url"); else _explicitNullProperties?.Remove("source_url"); } }
+        private string? _explicitNullValueSourceUrl = default!;
 #nullable restore
 #else
-        public string SourceUrl { get; set; }
+        public string SourceUrl { get => _explicitNullValueSourceUrl; set { _explicitNullValueSourceUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source_url"); else _explicitNullProperties?.Remove("source_url"); } }
+        private string _explicitNullValueSourceUrl = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBulkImportsEntityFailure"/> and sets the default values.
@@ -77,7 +102,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBulkImportsEntityFailure CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBulkImportsEntityFailure();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBulkImportsEntityFailure(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -108,6 +133,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("relation", Relation);
             writer.WriteStringValue("source_title", SourceTitle);
             writer.WriteStringValue("source_url", SourceUrl);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

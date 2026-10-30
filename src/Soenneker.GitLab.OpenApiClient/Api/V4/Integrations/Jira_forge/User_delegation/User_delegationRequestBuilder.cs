@@ -51,7 +51,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Integrations.Jira_forge.User_del
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBasicSuccess>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBasicSuccess.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBasicSuccess>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBasicSuccess.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Mints a short-lived GitLab-signed token identifying the signed-in GitLab user, scoped to the Jira account and site it is minted for. Accepts only the OAuth token issued to the Forge app at sign-in. The Forge app stores it at config-page sign-in and presents it on the FIT-authenticated subscribe call, which cannot carry the user OAuth token (Forge attaches the FIT only to app-context calls); the scope claims must match that call&apos;s FIT.

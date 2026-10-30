@@ -12,24 +12,37 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PostApiV4OfflineExportsRequestGcsConfiguration : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("google_json_key_string") is { } nullNodeGoogleJsonKeyString && nullNodeGoogleJsonKeyString.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GoogleJsonKeyString = null;
+            if (parseNode.GetChildNode("google_project") is { } nullNodeGoogleProject && nullNodeGoogleProject.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GoogleProject = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Google Cloud service account JSON key contents.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? GoogleJsonKeyString { get; set; }
+        public string? GoogleJsonKeyString { get => _explicitNullValueGoogleJsonKeyString; set { _explicitNullValueGoogleJsonKeyString = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("google_json_key_string"); else _explicitNullProperties?.Remove("google_json_key_string"); } }
+        private string? _explicitNullValueGoogleJsonKeyString = default!;
 #nullable restore
 #else
-        public string GoogleJsonKeyString { get; set; }
+        public string GoogleJsonKeyString { get => _explicitNullValueGoogleJsonKeyString; set { _explicitNullValueGoogleJsonKeyString = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("google_json_key_string"); else _explicitNullProperties?.Remove("google_json_key_string"); } }
+        private string _explicitNullValueGoogleJsonKeyString = default!;
 #endif
         /// <summary>Google Cloud project ID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? GoogleProject { get; set; }
+        public string? GoogleProject { get => _explicitNullValueGoogleProject; set { _explicitNullValueGoogleProject = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("google_project"); else _explicitNullProperties?.Remove("google_project"); } }
+        private string? _explicitNullValueGoogleProject = default!;
 #nullable restore
 #else
-        public string GoogleProject { get; set; }
+        public string GoogleProject { get => _explicitNullValueGoogleProject; set { _explicitNullValueGoogleProject = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("google_project"); else _explicitNullProperties?.Remove("google_project"); } }
+        private string _explicitNullValueGoogleProject = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4OfflineExportsRequestGcsConfiguration"/> and sets the default values.
@@ -46,7 +59,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4OfflineExportsRequestGcsConfiguration CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4OfflineExportsRequestGcsConfiguration();
+            // Preserve a nullable root response.
+            if (parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) return null!;
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4OfflineExportsRequestGcsConfiguration(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,6 +84,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("google_json_key_string", GoogleJsonKeyString);
             writer.WriteStringValue("google_project", GoogleProject);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

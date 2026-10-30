@@ -11,35 +11,53 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ApiEntitiesProtectedEnvironment : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("approval_rules") is { } nullNodeApprovalRules && nullNodeApprovalRules.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApprovalRules = null;
+            if (parseNode.GetChildNode("deploy_access_levels") is { } nullNodeDeployAccessLevels && nullNodeDeployAccessLevels.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeployAccessLevels = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("required_approval_count") is { } nullNodeRequiredApprovalCount && nullNodeRequiredApprovalCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequiredApprovalCount = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The approval_rules property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedEnvironmentsApprovalRule? ApprovalRules { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedEnvironmentsApprovalRule? ApprovalRules { get => _explicitNullValueApprovalRules; set { _explicitNullValueApprovalRules = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approval_rules"); else _explicitNullProperties?.Remove("approval_rules"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedEnvironmentsApprovalRule? _explicitNullValueApprovalRules = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedEnvironmentsApprovalRule ApprovalRules { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedEnvironmentsApprovalRule ApprovalRules { get => _explicitNullValueApprovalRules; set { _explicitNullValueApprovalRules = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approval_rules"); else _explicitNullProperties?.Remove("approval_rules"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedEnvironmentsApprovalRule _explicitNullValueApprovalRules = default!;
 #endif
         /// <summary>The deploy_access_levels property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedEnvironmentsDeployAccessLevel? DeployAccessLevels { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedEnvironmentsDeployAccessLevel? DeployAccessLevels { get => _explicitNullValueDeployAccessLevels; set { _explicitNullValueDeployAccessLevels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deploy_access_levels"); else _explicitNullProperties?.Remove("deploy_access_levels"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedEnvironmentsDeployAccessLevel? _explicitNullValueDeployAccessLevels = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedEnvironmentsDeployAccessLevel DeployAccessLevels { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedEnvironmentsDeployAccessLevel DeployAccessLevels { get => _explicitNullValueDeployAccessLevels; set { _explicitNullValueDeployAccessLevels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deploy_access_levels"); else _explicitNullProperties?.Remove("deploy_access_levels"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedEnvironmentsDeployAccessLevel _explicitNullValueDeployAccessLevels = default!;
 #endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>The required_approval_count property</summary>
-        public int? RequiredApprovalCount { get; set; }
+        public int? RequiredApprovalCount { get => _explicitNullValueRequiredApprovalCount; set { _explicitNullValueRequiredApprovalCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("required_approval_count"); else _explicitNullProperties?.Remove("required_approval_count"); } }
+        private int? _explicitNullValueRequiredApprovalCount = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedEnvironment"/> and sets the default values.
         /// </summary>
@@ -55,7 +73,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedEnvironment CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedEnvironment();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedEnvironment(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -82,6 +100,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedEnvironmentsDeployAccessLevel>("deploy_access_levels", DeployAccessLevels);
             writer.WriteStringValue("name", Name);
             writer.WriteIntValue("required_approval_count", RequiredApprovalCount);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

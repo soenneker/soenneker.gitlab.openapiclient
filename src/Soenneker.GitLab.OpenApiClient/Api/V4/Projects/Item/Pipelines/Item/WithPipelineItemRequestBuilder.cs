@@ -27,6 +27,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines.Item
     public partial class WithPipelineItemRequestBuilder : BaseRequestBuilder
     {
         /// <summary>The bridges property</summary>
+        [Obsolete("")]
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines.Item.Bridges.BridgesRequestBuilder Bridges
         {
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines.Item.Bridges.BridgesRequestBuilder(PathParameters, RequestAdapter);
@@ -102,7 +103,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines.Item
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
-            await RequestAdapter.SendNoContentAsync(requestInfo, default, cancellationToken).ConfigureAwait(false);
+            await RequestAdapter.SendNoContentAsync(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieves a specified pipeline from a project. You can also get a child pipeline.
@@ -120,7 +121,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines.Item
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiPipelineWithMetadata>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiPipelineWithMetadata.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiPipelineWithMetadata>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiPipelineWithMetadata.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Deletes a specified pipeline for a project.

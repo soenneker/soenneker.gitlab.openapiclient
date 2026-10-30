@@ -11,34 +11,52 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostApiV4ProjectsIdMlMlflowApi20MlflowRunsSearchRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("experiment_ids") is { } nullNodeExperimentIds && nullNodeExperimentIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExperimentIds = null;
+            if (parseNode.GetChildNode("max_results") is { } nullNodeMaxResults && nullNodeMaxResults.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxResults = null;
+            if (parseNode.GetChildNode("order_by") is { } nullNodeOrderBy && nullNodeOrderBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrderBy = null;
+            if (parseNode.GetChildNode("page_token") is { } nullNodePageToken && nullNodePageToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PageToken = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>IDs of the experiments to search for runs, relative to the project.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? ExperimentIds { get; set; }
+        public UntypedNode? ExperimentIds { get => _explicitNullValueExperimentIds; set { _explicitNullValueExperimentIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("experiment_ids"); else _explicitNullProperties?.Remove("experiment_ids"); } }
+        private UntypedNode? _explicitNullValueExperimentIds = default!;
 #nullable restore
 #else
-        public UntypedNode ExperimentIds { get; set; }
+        public UntypedNode ExperimentIds { get => _explicitNullValueExperimentIds; set { _explicitNullValueExperimentIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("experiment_ids"); else _explicitNullProperties?.Remove("experiment_ids"); } }
+        private UntypedNode _explicitNullValueExperimentIds = default!;
 #endif
         /// <summary>Maximum number of runs to fetch in a page. The maximum is 1000.</summary>
-        public int? MaxResults { get; set; }
+        public int? MaxResults { get => _explicitNullValueMaxResults; set { _explicitNullValueMaxResults = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("max_results"); else _explicitNullProperties?.Remove("max_results"); } }
+        private int? _explicitNullValueMaxResults = default!;
         /// <summary>Order criteria. Can be by a column of the run/candidate (`created_at`, `name`) or by a metric if prefixed by `metrics`. Valid examples: `created_at`, `created_at DESC`, `metrics.my_metric DESC`. Sorting by candidate parameter or metadata is not supported.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OrderBy { get; set; }
+        public string? OrderBy { get => _explicitNullValueOrderBy; set { _explicitNullValueOrderBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("order_by"); else _explicitNullProperties?.Remove("order_by"); } }
+        private string? _explicitNullValueOrderBy = default!;
 #nullable restore
 #else
-        public string OrderBy { get; set; }
+        public string OrderBy { get => _explicitNullValueOrderBy; set { _explicitNullValueOrderBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("order_by"); else _explicitNullProperties?.Remove("order_by"); } }
+        private string _explicitNullValueOrderBy = default!;
 #endif
         /// <summary>Token for pagination.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PageToken { get; set; }
+        public string? PageToken { get => _explicitNullValuePageToken; set { _explicitNullValuePageToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("page_token"); else _explicitNullProperties?.Remove("page_token"); } }
+        private string? _explicitNullValuePageToken = default!;
 #nullable restore
 #else
-        public string PageToken { get; set; }
+        public string PageToken { get => _explicitNullValuePageToken; set { _explicitNullValuePageToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("page_token"); else _explicitNullProperties?.Remove("page_token"); } }
+        private string _explicitNullValuePageToken = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdMlMlflowApi20MlflowRunsSearchRequest"/> and sets the default values.
@@ -57,7 +75,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdMlMlflowApi20MlflowRunsSearchRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdMlMlflowApi20MlflowRunsSearchRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdMlMlflowApi20MlflowRunsSearchRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -84,6 +102,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteIntValue("max_results", MaxResults);
             writer.WriteStringValue("order_by", OrderBy);
             writer.WriteStringValue("page_token", PageToken);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

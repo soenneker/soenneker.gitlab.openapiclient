@@ -11,39 +11,61 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ApiEntitiesAdminModelChecksumInformation : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("checksum") is { } nullNodeChecksum && nullNodeChecksum.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Checksum = null;
+            if (parseNode.GetChildNode("checksum_failure") is { } nullNodeChecksumFailure && nullNodeChecksumFailure.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChecksumFailure = null;
+            if (parseNode.GetChildNode("checksum_retry_at") is { } nullNodeChecksumRetryAt && nullNodeChecksumRetryAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChecksumRetryAt = null;
+            if (parseNode.GetChildNode("checksum_retry_count") is { } nullNodeChecksumRetryCount && nullNodeChecksumRetryCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChecksumRetryCount = null;
+            if (parseNode.GetChildNode("checksum_state") is { } nullNodeChecksumState && nullNodeChecksumState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChecksumState = null;
+            if (parseNode.GetChildNode("last_checksum") is { } nullNodeLastChecksum && nullNodeLastChecksum.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastChecksum = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The checksum property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Checksum { get; set; }
+        public string? Checksum { get => _explicitNullValueChecksum; set { _explicitNullValueChecksum = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checksum"); else _explicitNullProperties?.Remove("checksum"); } }
+        private string? _explicitNullValueChecksum = default!;
 #nullable restore
 #else
-        public string Checksum { get; set; }
+        public string Checksum { get => _explicitNullValueChecksum; set { _explicitNullValueChecksum = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checksum"); else _explicitNullProperties?.Remove("checksum"); } }
+        private string _explicitNullValueChecksum = default!;
 #endif
         /// <summary>The checksum_failure property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ChecksumFailure { get; set; }
+        public string? ChecksumFailure { get => _explicitNullValueChecksumFailure; set { _explicitNullValueChecksumFailure = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checksum_failure"); else _explicitNullProperties?.Remove("checksum_failure"); } }
+        private string? _explicitNullValueChecksumFailure = default!;
 #nullable restore
 #else
-        public string ChecksumFailure { get; set; }
+        public string ChecksumFailure { get => _explicitNullValueChecksumFailure; set { _explicitNullValueChecksumFailure = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checksum_failure"); else _explicitNullProperties?.Remove("checksum_failure"); } }
+        private string _explicitNullValueChecksumFailure = default!;
 #endif
         /// <summary>The checksum_retry_at property</summary>
-        public DateTimeOffset? ChecksumRetryAt { get; set; }
+        public DateTimeOffset? ChecksumRetryAt { get => _explicitNullValueChecksumRetryAt; set { _explicitNullValueChecksumRetryAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checksum_retry_at"); else _explicitNullProperties?.Remove("checksum_retry_at"); } }
+        private DateTimeOffset? _explicitNullValueChecksumRetryAt = default!;
         /// <summary>The checksum_retry_count property</summary>
-        public int? ChecksumRetryCount { get; set; }
+        public int? ChecksumRetryCount { get => _explicitNullValueChecksumRetryCount; set { _explicitNullValueChecksumRetryCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checksum_retry_count"); else _explicitNullProperties?.Remove("checksum_retry_count"); } }
+        private int? _explicitNullValueChecksumRetryCount = default!;
         /// <summary>The checksum_state property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ChecksumState { get; set; }
+        public string? ChecksumState { get => _explicitNullValueChecksumState; set { _explicitNullValueChecksumState = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checksum_state"); else _explicitNullProperties?.Remove("checksum_state"); } }
+        private string? _explicitNullValueChecksumState = default!;
 #nullable restore
 #else
-        public string ChecksumState { get; set; }
+        public string ChecksumState { get => _explicitNullValueChecksumState; set { _explicitNullValueChecksumState = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checksum_state"); else _explicitNullProperties?.Remove("checksum_state"); } }
+        private string _explicitNullValueChecksumState = default!;
 #endif
         /// <summary>The last_checksum property</summary>
-        public DateTimeOffset? LastChecksum { get; set; }
+        public DateTimeOffset? LastChecksum { get => _explicitNullValueLastChecksum; set { _explicitNullValueLastChecksum = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_checksum"); else _explicitNullProperties?.Remove("last_checksum"); } }
+        private DateTimeOffset? _explicitNullValueLastChecksum = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAdminModelChecksumInformation"/> and sets the default values.
         /// </summary>
@@ -59,7 +81,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAdminModelChecksumInformation CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAdminModelChecksumInformation();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAdminModelChecksumInformation(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -90,6 +112,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteIntValue("checksum_retry_count", ChecksumRetryCount);
             writer.WriteStringValue("checksum_state", ChecksumState);
             writer.WriteDateTimeOffsetValue("last_checksum", LastChecksum);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

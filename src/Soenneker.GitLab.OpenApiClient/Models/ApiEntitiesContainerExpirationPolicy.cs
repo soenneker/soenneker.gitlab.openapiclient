@@ -11,64 +11,92 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ApiEntitiesContainerExpirationPolicy : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("cadence") is { } nullNodeCadence && nullNodeCadence.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cadence = null;
+            if (parseNode.GetChildNode("enabled") is { } nullNodeEnabled && nullNodeEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Enabled = null;
+            if (parseNode.GetChildNode("keep_n") is { } nullNodeKeepN && nullNodeKeepN.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) KeepN = null;
+            if (parseNode.GetChildNode("name_regex") is { } nullNodeNameRegex && nullNodeNameRegex.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NameRegex = null;
+            if (parseNode.GetChildNode("name_regex_keep") is { } nullNodeNameRegexKeep && nullNodeNameRegexKeep.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NameRegexKeep = null;
+            if (parseNode.GetChildNode("next_run_at") is { } nullNodeNextRunAt && nullNodeNextRunAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NextRunAt = null;
+            if (parseNode.GetChildNode("older_than") is { } nullNodeOlderThan && nullNodeOlderThan.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OlderThan = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The cadence property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Cadence { get; set; }
+        public string? Cadence { get => _explicitNullValueCadence; set { _explicitNullValueCadence = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cadence"); else _explicitNullProperties?.Remove("cadence"); } }
+        private string? _explicitNullValueCadence = default!;
 #nullable restore
 #else
-        public string Cadence { get; set; }
+        public string Cadence { get => _explicitNullValueCadence; set { _explicitNullValueCadence = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cadence"); else _explicitNullProperties?.Remove("cadence"); } }
+        private string _explicitNullValueCadence = default!;
 #endif
         /// <summary>The enabled property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Enabled { get; set; }
+        public string? Enabled { get => _explicitNullValueEnabled; set { _explicitNullValueEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enabled"); else _explicitNullProperties?.Remove("enabled"); } }
+        private string? _explicitNullValueEnabled = default!;
 #nullable restore
 #else
-        public string Enabled { get; set; }
+        public string Enabled { get => _explicitNullValueEnabled; set { _explicitNullValueEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enabled"); else _explicitNullProperties?.Remove("enabled"); } }
+        private string _explicitNullValueEnabled = default!;
 #endif
         /// <summary>The keep_n property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? KeepN { get; set; }
+        public string? KeepN { get => _explicitNullValueKeepN; set { _explicitNullValueKeepN = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("keep_n"); else _explicitNullProperties?.Remove("keep_n"); } }
+        private string? _explicitNullValueKeepN = default!;
 #nullable restore
 #else
-        public string KeepN { get; set; }
+        public string KeepN { get => _explicitNullValueKeepN; set { _explicitNullValueKeepN = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("keep_n"); else _explicitNullProperties?.Remove("keep_n"); } }
+        private string _explicitNullValueKeepN = default!;
 #endif
         /// <summary>The name_regex property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NameRegex { get; set; }
+        public string? NameRegex { get => _explicitNullValueNameRegex; set { _explicitNullValueNameRegex = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name_regex"); else _explicitNullProperties?.Remove("name_regex"); } }
+        private string? _explicitNullValueNameRegex = default!;
 #nullable restore
 #else
-        public string NameRegex { get; set; }
+        public string NameRegex { get => _explicitNullValueNameRegex; set { _explicitNullValueNameRegex = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name_regex"); else _explicitNullProperties?.Remove("name_regex"); } }
+        private string _explicitNullValueNameRegex = default!;
 #endif
         /// <summary>The name_regex_keep property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NameRegexKeep { get; set; }
+        public string? NameRegexKeep { get => _explicitNullValueNameRegexKeep; set { _explicitNullValueNameRegexKeep = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name_regex_keep"); else _explicitNullProperties?.Remove("name_regex_keep"); } }
+        private string? _explicitNullValueNameRegexKeep = default!;
 #nullable restore
 #else
-        public string NameRegexKeep { get; set; }
+        public string NameRegexKeep { get => _explicitNullValueNameRegexKeep; set { _explicitNullValueNameRegexKeep = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name_regex_keep"); else _explicitNullProperties?.Remove("name_regex_keep"); } }
+        private string _explicitNullValueNameRegexKeep = default!;
 #endif
         /// <summary>The next_run_at property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NextRunAt { get; set; }
+        public string? NextRunAt { get => _explicitNullValueNextRunAt; set { _explicitNullValueNextRunAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("next_run_at"); else _explicitNullProperties?.Remove("next_run_at"); } }
+        private string? _explicitNullValueNextRunAt = default!;
 #nullable restore
 #else
-        public string NextRunAt { get; set; }
+        public string NextRunAt { get => _explicitNullValueNextRunAt; set { _explicitNullValueNextRunAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("next_run_at"); else _explicitNullProperties?.Remove("next_run_at"); } }
+        private string _explicitNullValueNextRunAt = default!;
 #endif
         /// <summary>The older_than property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OlderThan { get; set; }
+        public string? OlderThan { get => _explicitNullValueOlderThan; set { _explicitNullValueOlderThan = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("older_than"); else _explicitNullProperties?.Remove("older_than"); } }
+        private string? _explicitNullValueOlderThan = default!;
 #nullable restore
 #else
-        public string OlderThan { get; set; }
+        public string OlderThan { get => _explicitNullValueOlderThan; set { _explicitNullValueOlderThan = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("older_than"); else _explicitNullProperties?.Remove("older_than"); } }
+        private string _explicitNullValueOlderThan = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesContainerExpirationPolicy"/> and sets the default values.
@@ -85,7 +113,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesContainerExpirationPolicy CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesContainerExpirationPolicy();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesContainerExpirationPolicy(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -118,6 +146,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("name_regex_keep", NameRegexKeep);
             writer.WriteStringValue("next_run_at", NextRunAt);
             writer.WriteStringValue("older_than", OlderThan);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

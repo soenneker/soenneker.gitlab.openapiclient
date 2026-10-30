@@ -12,34 +12,52 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PostApiV4OfflineExportsRequestGcsHmacConfiguration : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("google_storage_access_key_id") is { } nullNodeGoogleStorageAccessKeyId && nullNodeGoogleStorageAccessKeyId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GoogleStorageAccessKeyId = null;
+            if (parseNode.GetChildNode("google_storage_secret_access_key") is { } nullNodeGoogleStorageSecretAccessKey && nullNodeGoogleStorageSecretAccessKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GoogleStorageSecretAccessKey = null;
+            if (parseNode.GetChildNode("path_style") is { } nullNodePathStyle && nullNodePathStyle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PathStyle = null;
+            if (parseNode.GetChildNode("region") is { } nullNodeRegion && nullNodeRegion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Region = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>GCS HMAC access key ID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? GoogleStorageAccessKeyId { get; set; }
+        public string? GoogleStorageAccessKeyId { get => _explicitNullValueGoogleStorageAccessKeyId; set { _explicitNullValueGoogleStorageAccessKeyId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("google_storage_access_key_id"); else _explicitNullProperties?.Remove("google_storage_access_key_id"); } }
+        private string? _explicitNullValueGoogleStorageAccessKeyId = default!;
 #nullable restore
 #else
-        public string GoogleStorageAccessKeyId { get; set; }
+        public string GoogleStorageAccessKeyId { get => _explicitNullValueGoogleStorageAccessKeyId; set { _explicitNullValueGoogleStorageAccessKeyId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("google_storage_access_key_id"); else _explicitNullProperties?.Remove("google_storage_access_key_id"); } }
+        private string _explicitNullValueGoogleStorageAccessKeyId = default!;
 #endif
         /// <summary>GCS HMAC secret.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? GoogleStorageSecretAccessKey { get; set; }
+        public string? GoogleStorageSecretAccessKey { get => _explicitNullValueGoogleStorageSecretAccessKey; set { _explicitNullValueGoogleStorageSecretAccessKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("google_storage_secret_access_key"); else _explicitNullProperties?.Remove("google_storage_secret_access_key"); } }
+        private string? _explicitNullValueGoogleStorageSecretAccessKey = default!;
 #nullable restore
 #else
-        public string GoogleStorageSecretAccessKey { get; set; }
+        public string GoogleStorageSecretAccessKey { get => _explicitNullValueGoogleStorageSecretAccessKey; set { _explicitNullValueGoogleStorageSecretAccessKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("google_storage_secret_access_key"); else _explicitNullProperties?.Remove("google_storage_secret_access_key"); } }
+        private string _explicitNullValueGoogleStorageSecretAccessKey = default!;
 #endif
         /// <summary>If `true`, uses path-style URLs instead of virtual-hosted-style URLs.</summary>
-        public bool? PathStyle { get; set; }
+        public bool? PathStyle { get => _explicitNullValuePathStyle; set { _explicitNullValuePathStyle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("path_style"); else _explicitNullProperties?.Remove("path_style"); } }
+        private bool? _explicitNullValuePathStyle = default!;
         /// <summary>GCS bucket region.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Region { get; set; }
+        public string? Region { get => _explicitNullValueRegion; set { _explicitNullValueRegion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("region"); else _explicitNullProperties?.Remove("region"); } }
+        private string? _explicitNullValueRegion = default!;
 #nullable restore
 #else
-        public string Region { get; set; }
+        public string Region { get => _explicitNullValueRegion; set { _explicitNullValueRegion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("region"); else _explicitNullProperties?.Remove("region"); } }
+        private string _explicitNullValueRegion = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4OfflineExportsRequestGcsHmacConfiguration"/> and sets the default values.
@@ -57,7 +75,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4OfflineExportsRequestGcsHmacConfiguration CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4OfflineExportsRequestGcsHmacConfiguration();
+            // Preserve a nullable root response.
+            if (parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) return null!;
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4OfflineExportsRequestGcsHmacConfiguration(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -84,6 +104,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("google_storage_secret_access_key", GoogleStorageSecretAccessKey);
             writer.WriteBoolValue("path_style", PathStyle);
             writer.WriteStringValue("region", Region);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,126 +11,191 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PutApiV4ProjectsIdIntegrationsJiraRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("api_url") is { } nullNodeApiUrl && nullNodeApiUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApiUrl = null;
+            if (parseNode.GetChildNode("comment_on_event_enabled") is { } nullNodeCommentOnEventEnabled && nullNodeCommentOnEventEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommentOnEventEnabled = null;
+            if (parseNode.GetChildNode("commit_events") is { } nullNodeCommitEvents && nullNodeCommitEvents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommitEvents = null;
+            if (parseNode.GetChildNode("customize_jira_issue_enabled") is { } nullNodeCustomizeJiraIssueEnabled && nullNodeCustomizeJiraIssueEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomizeJiraIssueEnabled = null;
+            if (parseNode.GetChildNode("issues_enabled") is { } nullNodeIssuesEnabled && nullNodeIssuesEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssuesEnabled = null;
+            if (parseNode.GetChildNode("jira_allowed_statuses_as_string") is { } nullNodeJiraAllowedStatusesAsString && nullNodeJiraAllowedStatusesAsString.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) JiraAllowedStatusesAsString = null;
+            if (parseNode.GetChildNode("jira_assignee_check_enabled") is { } nullNodeJiraAssigneeCheckEnabled && nullNodeJiraAssigneeCheckEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) JiraAssigneeCheckEnabled = null;
+            if (parseNode.GetChildNode("jira_auth_type") is { } nullNodeJiraAuthType && nullNodeJiraAuthType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) JiraAuthType = null;
+            if (parseNode.GetChildNode("jira_check_enabled") is { } nullNodeJiraCheckEnabled && nullNodeJiraCheckEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) JiraCheckEnabled = null;
+            if (parseNode.GetChildNode("jira_exists_check_enabled") is { } nullNodeJiraExistsCheckEnabled && nullNodeJiraExistsCheckEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) JiraExistsCheckEnabled = null;
+            if (parseNode.GetChildNode("jira_issue_prefix") is { } nullNodeJiraIssuePrefix && nullNodeJiraIssuePrefix.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) JiraIssuePrefix = null;
+            if (parseNode.GetChildNode("jira_issue_regex") is { } nullNodeJiraIssueRegex && nullNodeJiraIssueRegex.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) JiraIssueRegex = null;
+            if (parseNode.GetChildNode("jira_issue_transition_id") is { } nullNodeJiraIssueTransitionId && nullNodeJiraIssueTransitionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) JiraIssueTransitionId = null;
+            if (parseNode.GetChildNode("jira_status_check_enabled") is { } nullNodeJiraStatusCheckEnabled && nullNodeJiraStatusCheckEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) JiraStatusCheckEnabled = null;
+            if (parseNode.GetChildNode("merge_requests_events") is { } nullNodeMergeRequestsEvents && nullNodeMergeRequestsEvents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MergeRequestsEvents = null;
+            if (parseNode.GetChildNode("password") is { } nullNodePassword && nullNodePassword.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Password = null;
+            if (parseNode.GetChildNode("project_key") is { } nullNodeProjectKey && nullNodeProjectKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProjectKey = null;
+            if (parseNode.GetChildNode("project_keys") is { } nullNodeProjectKeys && nullNodeProjectKeys.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProjectKeys = null;
+            if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
+            if (parseNode.GetChildNode("use_inherited_settings") is { } nullNodeUseInheritedSettings && nullNodeUseInheritedSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UseInheritedSettings = null;
+            if (parseNode.GetChildNode("username") is { } nullNodeUsername && nullNodeUsername.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Username = null;
+            if (parseNode.GetChildNode("vulnerabilities_enabled") is { } nullNodeVulnerabilitiesEnabled && nullNodeVulnerabilitiesEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VulnerabilitiesEnabled = null;
+            if (parseNode.GetChildNode("vulnerabilities_issuetype") is { } nullNodeVulnerabilitiesIssuetype && nullNodeVulnerabilitiesIssuetype.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VulnerabilitiesIssuetype = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The base URL to the Jira instance API. Web URL value is used if not set (for example, `https://jira-api.example.com`).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ApiUrl { get; set; }
+        public string? ApiUrl { get => _explicitNullValueApiUrl; set { _explicitNullValueApiUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("api_url"); else _explicitNullProperties?.Remove("api_url"); } }
+        private string? _explicitNullValueApiUrl = default!;
 #nullable restore
 #else
-        public string ApiUrl { get; set; }
+        public string ApiUrl { get => _explicitNullValueApiUrl; set { _explicitNullValueApiUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("api_url"); else _explicitNullProperties?.Remove("api_url"); } }
+        private string _explicitNullValueApiUrl = default!;
 #endif
         /// <summary>Enable comments inside Jira issues on each GitLab event (commit / merge request)</summary>
-        public bool? CommentOnEventEnabled { get; set; }
+        public bool? CommentOnEventEnabled { get => _explicitNullValueCommentOnEventEnabled; set { _explicitNullValueCommentOnEventEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("comment_on_event_enabled"); else _explicitNullProperties?.Remove("comment_on_event_enabled"); } }
+        private bool? _explicitNullValueCommentOnEventEnabled = default!;
         /// <summary>Trigger event when a commit is created or updated.</summary>
-        public bool? CommitEvents { get; set; }
+        public bool? CommitEvents { get => _explicitNullValueCommitEvents; set { _explicitNullValueCommitEvents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commit_events"); else _explicitNullProperties?.Remove("commit_events"); } }
+        private bool? _explicitNullValueCommitEvents = default!;
         /// <summary>When set to `true`, opens a prefilled form on the Jira instancewhen creating a Jira issue from a vulnerability.</summary>
-        public bool? CustomizeJiraIssueEnabled { get; set; }
+        public bool? CustomizeJiraIssueEnabled { get => _explicitNullValueCustomizeJiraIssueEnabled; set { _explicitNullValueCustomizeJiraIssueEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("customize_jira_issue_enabled"); else _explicitNullProperties?.Remove("customize_jira_issue_enabled"); } }
+        private bool? _explicitNullValueCustomizeJiraIssueEnabled = default!;
         /// <summary>Enable viewing Jira issues in GitLab.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IssuesEnabled { get; set; }
+        public string? IssuesEnabled { get => _explicitNullValueIssuesEnabled; set { _explicitNullValueIssuesEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issues_enabled"); else _explicitNullProperties?.Remove("issues_enabled"); } }
+        private string? _explicitNullValueIssuesEnabled = default!;
 #nullable restore
 #else
-        public string IssuesEnabled { get; set; }
+        public string IssuesEnabled { get => _explicitNullValueIssuesEnabled; set { _explicitNullValueIssuesEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issues_enabled"); else _explicitNullProperties?.Remove("issues_enabled"); } }
+        private string _explicitNullValueIssuesEnabled = default!;
 #endif
         /// <summary>Comma-separated list of allowed Jira issue statuses.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? JiraAllowedStatusesAsString { get; set; }
+        public string? JiraAllowedStatusesAsString { get => _explicitNullValueJiraAllowedStatusesAsString; set { _explicitNullValueJiraAllowedStatusesAsString = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("jira_allowed_statuses_as_string"); else _explicitNullProperties?.Remove("jira_allowed_statuses_as_string"); } }
+        private string? _explicitNullValueJiraAllowedStatusesAsString = default!;
 #nullable restore
 #else
-        public string JiraAllowedStatusesAsString { get; set; }
+        public string JiraAllowedStatusesAsString { get => _explicitNullValueJiraAllowedStatusesAsString; set { _explicitNullValueJiraAllowedStatusesAsString = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("jira_allowed_statuses_as_string"); else _explicitNullProperties?.Remove("jira_allowed_statuses_as_string"); } }
+        private string _explicitNullValueJiraAllowedStatusesAsString = default!;
 #endif
         /// <summary>Verify the committer is the assignee of the Jira issues referenced in commit messages.</summary>
-        public bool? JiraAssigneeCheckEnabled { get; set; }
+        public bool? JiraAssigneeCheckEnabled { get => _explicitNullValueJiraAssigneeCheckEnabled; set { _explicitNullValueJiraAssigneeCheckEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("jira_assignee_check_enabled"); else _explicitNullProperties?.Remove("jira_assignee_check_enabled"); } }
+        private bool? _explicitNullValueJiraAssigneeCheckEnabled = default!;
         /// <summary>The authentication method to use with Jira. Use `0` for basic authentication, `1` for Jira personal access token, and `2` for Jira Cloud service accounts. Defaults to `0`.</summary>
-        public int? JiraAuthType { get; set; }
+        public int? JiraAuthType { get => _explicitNullValueJiraAuthType; set { _explicitNullValueJiraAuthType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("jira_auth_type"); else _explicitNullProperties?.Remove("jira_auth_type"); } }
+        private int? _explicitNullValueJiraAuthType = default!;
         /// <summary>Verify Jira issues referenced in commit messages exist before allowing the push.</summary>
-        public bool? JiraCheckEnabled { get; set; }
+        public bool? JiraCheckEnabled { get => _explicitNullValueJiraCheckEnabled; set { _explicitNullValueJiraCheckEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("jira_check_enabled"); else _explicitNullProperties?.Remove("jira_check_enabled"); } }
+        private bool? _explicitNullValueJiraCheckEnabled = default!;
         /// <summary>Verify the Jira issues referenced in commit messages exist in Jira.</summary>
-        public bool? JiraExistsCheckEnabled { get; set; }
+        public bool? JiraExistsCheckEnabled { get => _explicitNullValueJiraExistsCheckEnabled; set { _explicitNullValueJiraExistsCheckEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("jira_exists_check_enabled"); else _explicitNullProperties?.Remove("jira_exists_check_enabled"); } }
+        private bool? _explicitNullValueJiraExistsCheckEnabled = default!;
         /// <summary>Prefix to match Jira issue keys.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? JiraIssuePrefix { get; set; }
+        public string? JiraIssuePrefix { get => _explicitNullValueJiraIssuePrefix; set { _explicitNullValueJiraIssuePrefix = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("jira_issue_prefix"); else _explicitNullProperties?.Remove("jira_issue_prefix"); } }
+        private string? _explicitNullValueJiraIssuePrefix = default!;
 #nullable restore
 #else
-        public string JiraIssuePrefix { get; set; }
+        public string JiraIssuePrefix { get => _explicitNullValueJiraIssuePrefix; set { _explicitNullValueJiraIssuePrefix = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("jira_issue_prefix"); else _explicitNullProperties?.Remove("jira_issue_prefix"); } }
+        private string _explicitNullValueJiraIssuePrefix = default!;
 #endif
         /// <summary>Regular expression to match Jira issue keys.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? JiraIssueRegex { get; set; }
+        public string? JiraIssueRegex { get => _explicitNullValueJiraIssueRegex; set { _explicitNullValueJiraIssueRegex = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("jira_issue_regex"); else _explicitNullProperties?.Remove("jira_issue_regex"); } }
+        private string? _explicitNullValueJiraIssueRegex = default!;
 #nullable restore
 #else
-        public string JiraIssueRegex { get; set; }
+        public string JiraIssueRegex { get => _explicitNullValueJiraIssueRegex; set { _explicitNullValueJiraIssueRegex = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("jira_issue_regex"); else _explicitNullProperties?.Remove("jira_issue_regex"); } }
+        private string _explicitNullValueJiraIssueRegex = default!;
 #endif
         /// <summary>The ID of one or more transitions for [custom issue transitions](../integration/jira/issues.md#custom-issue-transitions).Ignored when `jira_issue_transition_automatic` is enabled. Defaults to a blank string,which disables custom transitions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? JiraIssueTransitionId { get; set; }
+        public string? JiraIssueTransitionId { get => _explicitNullValueJiraIssueTransitionId; set { _explicitNullValueJiraIssueTransitionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("jira_issue_transition_id"); else _explicitNullProperties?.Remove("jira_issue_transition_id"); } }
+        private string? _explicitNullValueJiraIssueTransitionId = default!;
 #nullable restore
 #else
-        public string JiraIssueTransitionId { get; set; }
+        public string JiraIssueTransitionId { get => _explicitNullValueJiraIssueTransitionId; set { _explicitNullValueJiraIssueTransitionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("jira_issue_transition_id"); else _explicitNullProperties?.Remove("jira_issue_transition_id"); } }
+        private string _explicitNullValueJiraIssueTransitionId = default!;
 #endif
         /// <summary>Verify the status of Jira issues referenced in commit messages.</summary>
-        public bool? JiraStatusCheckEnabled { get; set; }
+        public bool? JiraStatusCheckEnabled { get => _explicitNullValueJiraStatusCheckEnabled; set { _explicitNullValueJiraStatusCheckEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("jira_status_check_enabled"); else _explicitNullProperties?.Remove("jira_status_check_enabled"); } }
+        private bool? _explicitNullValueJiraStatusCheckEnabled = default!;
         /// <summary>Trigger event when a merge request is created, updated, or merged.</summary>
-        public bool? MergeRequestsEvents { get; set; }
+        public bool? MergeRequestsEvents { get => _explicitNullValueMergeRequestsEvents; set { _explicitNullValueMergeRequestsEvents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_requests_events"); else _explicitNullProperties?.Remove("merge_requests_events"); } }
+        private bool? _explicitNullValueMergeRequestsEvents = default!;
         /// <summary>The Jira API token, password, or personal access token to use with Jira. When using Basic Authentication (`jira_auth_type` is `0`), use an API token for Jira Cloud, and a password for Jira Data Center or Jira Server. For a Jira personal access token (`jira_auth_type` is `1`), use the personal access token.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Password { get; set; }
+        public string? Password { get => _explicitNullValuePassword; set { _explicitNullValuePassword = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("password"); else _explicitNullProperties?.Remove("password"); } }
+        private string? _explicitNullValuePassword = default!;
 #nullable restore
 #else
-        public string Password { get; set; }
+        public string Password { get => _explicitNullValuePassword; set { _explicitNullValuePassword = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("password"); else _explicitNullProperties?.Remove("password"); } }
+        private string _explicitNullValuePassword = default!;
 #endif
         /// <summary>Key of the project to use when creating issues from vulnerabilities.This parameter is required if using the integration to create Jira issues from vulnerabilities.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ProjectKey { get; set; }
+        public string? ProjectKey { get => _explicitNullValueProjectKey; set { _explicitNullValueProjectKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_key"); else _explicitNullProperties?.Remove("project_key"); } }
+        private string? _explicitNullValueProjectKey = default!;
 #nullable restore
 #else
-        public string ProjectKey { get; set; }
+        public string ProjectKey { get => _explicitNullValueProjectKey; set { _explicitNullValueProjectKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_key"); else _explicitNullProperties?.Remove("project_key"); } }
+        private string _explicitNullValueProjectKey = default!;
 #endif
         /// <summary>Keys of Jira projects to display. When `issues_enabled` is `true`, this setting filters which Jira projects are shown in GitLab. It does not restrict the API token&apos;s access.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ProjectKeys { get; set; }
+        public List<string>? ProjectKeys { get => _explicitNullValueProjectKeys; set { _explicitNullValueProjectKeys = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_keys"); else _explicitNullProperties?.Remove("project_keys"); } }
+        private List<string>? _explicitNullValueProjectKeys = default!;
 #nullable restore
 #else
-        public List<string> ProjectKeys { get; set; }
+        public List<string> ProjectKeys { get => _explicitNullValueProjectKeys; set { _explicitNullValueProjectKeys = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_keys"); else _explicitNullProperties?.Remove("project_keys"); } }
+        private List<string> _explicitNullValueProjectKeys = default!;
 #endif
         /// <summary>The URL to the Jira project which is being linked to this GitLab project (for example, `https://jira.example.com`).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Url { get; set; }
+        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        private string? _explicitNullValueUrl = default!;
 #nullable restore
 #else
-        public string Url { get; set; }
+        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        private string _explicitNullValueUrl = default!;
 #endif
         /// <summary>Indicates whether to inherit the default settings. Defaults to `false`.</summary>
-        public bool? UseInheritedSettings { get; set; }
+        public bool? UseInheritedSettings { get => _explicitNullValueUseInheritedSettings; set { _explicitNullValueUseInheritedSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("use_inherited_settings"); else _explicitNullProperties?.Remove("use_inherited_settings"); } }
+        private bool? _explicitNullValueUseInheritedSettings = default!;
         /// <summary>The email or username to use with Jira. Use an email for Jira Cloud, and a username for Jira Data Center and Jira Server. Required when using basic authentication (`jira_auth_type` is `0`).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Username { get; set; }
+        public string? Username { get => _explicitNullValueUsername; set { _explicitNullValueUsername = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("username"); else _explicitNullProperties?.Remove("username"); } }
+        private string? _explicitNullValueUsername = default!;
 #nullable restore
 #else
-        public string Username { get; set; }
+        public string Username { get => _explicitNullValueUsername; set { _explicitNullValueUsername = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("username"); else _explicitNullProperties?.Remove("username"); } }
+        private string _explicitNullValueUsername = default!;
 #endif
         /// <summary>Turn on Jira issue creation for GitLab vulnerabilities.</summary>
-        public bool? VulnerabilitiesEnabled { get; set; }
+        public bool? VulnerabilitiesEnabled { get => _explicitNullValueVulnerabilitiesEnabled; set { _explicitNullValueVulnerabilitiesEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vulnerabilities_enabled"); else _explicitNullProperties?.Remove("vulnerabilities_enabled"); } }
+        private bool? _explicitNullValueVulnerabilitiesEnabled = default!;
         /// <summary>Jira issue type to use when creating issues from vulnerabilities.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? VulnerabilitiesIssuetype { get; set; }
+        public string? VulnerabilitiesIssuetype { get => _explicitNullValueVulnerabilitiesIssuetype; set { _explicitNullValueVulnerabilitiesIssuetype = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vulnerabilities_issuetype"); else _explicitNullProperties?.Remove("vulnerabilities_issuetype"); } }
+        private string? _explicitNullValueVulnerabilitiesIssuetype = default!;
 #nullable restore
 #else
-        public string VulnerabilitiesIssuetype { get; set; }
+        public string VulnerabilitiesIssuetype { get => _explicitNullValueVulnerabilitiesIssuetype; set { _explicitNullValueVulnerabilitiesIssuetype = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vulnerabilities_issuetype"); else _explicitNullProperties?.Remove("vulnerabilities_issuetype"); } }
+        private string _explicitNullValueVulnerabilitiesIssuetype = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdIntegrationsJiraRequest"/> and sets the default values.
@@ -147,7 +212,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdIntegrationsJiraRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdIntegrationsJiraRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdIntegrationsJiraRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -212,6 +277,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("username", Username);
             writer.WriteBoolValue("vulnerabilities_enabled", VulnerabilitiesEnabled);
             writer.WriteStringValue("vulnerabilities_issuetype", VulnerabilitiesIssuetype);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

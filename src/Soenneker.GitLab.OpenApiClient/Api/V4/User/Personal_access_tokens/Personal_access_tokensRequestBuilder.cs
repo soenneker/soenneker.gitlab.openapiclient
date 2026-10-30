@@ -51,7 +51,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.User.Personal_access_tokens
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPersonalAccessTokenWithToken>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPersonalAccessTokenWithToken.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPersonalAccessTokenWithToken>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPersonalAccessTokenWithToken.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Creates a personal access token for the currently authenticated user. For security purposes, the token is limited to the `k8s_proxy` and `self_rotate` scope. Token values are included with the response, but cannot be retrieved later. This feature was introduced in GitLab 16.5.

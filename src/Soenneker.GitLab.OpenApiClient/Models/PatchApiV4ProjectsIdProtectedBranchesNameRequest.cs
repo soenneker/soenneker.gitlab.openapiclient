@@ -11,39 +11,61 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PatchApiV4ProjectsIdProtectedBranchesNameRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("allowed_to_merge") is { } nullNodeAllowedToMerge && nullNodeAllowedToMerge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowedToMerge = null;
+            if (parseNode.GetChildNode("allowed_to_push") is { } nullNodeAllowedToPush && nullNodeAllowedToPush.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowedToPush = null;
+            if (parseNode.GetChildNode("allowed_to_unprotect") is { } nullNodeAllowedToUnprotect && nullNodeAllowedToUnprotect.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowedToUnprotect = null;
+            if (parseNode.GetChildNode("allow_force_push") is { } nullNodeAllowForcePush && nullNodeAllowForcePush.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowForcePush = null;
+            if (parseNode.GetChildNode("code_owner_approval_required") is { } nullNodeCodeOwnerApprovalRequired && nullNodeCodeOwnerApprovalRequired.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CodeOwnerApprovalRequired = null;
+            if (parseNode.GetChildNode("unprotect_access_level") is { } nullNodeUnprotectAccessLevel && nullNodeUnprotectAccessLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UnprotectAccessLevel = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Array of users, groups, or access levels allowed to merge protected branches</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.PatchApiV4ProjectsIdProtectedBranchesNameRequestAllowedToMergeItemProperty>? AllowedToMerge { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.PatchApiV4ProjectsIdProtectedBranchesNameRequestAllowedToMergeItemProperty>? AllowedToMerge { get => _explicitNullValueAllowedToMerge; set { _explicitNullValueAllowedToMerge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_to_merge"); else _explicitNullProperties?.Remove("allowed_to_merge"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.PatchApiV4ProjectsIdProtectedBranchesNameRequestAllowedToMergeItemProperty>? _explicitNullValueAllowedToMerge = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.PatchApiV4ProjectsIdProtectedBranchesNameRequestAllowedToMergeItemProperty> AllowedToMerge { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.PatchApiV4ProjectsIdProtectedBranchesNameRequestAllowedToMergeItemProperty> AllowedToMerge { get => _explicitNullValueAllowedToMerge; set { _explicitNullValueAllowedToMerge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_to_merge"); else _explicitNullProperties?.Remove("allowed_to_merge"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.PatchApiV4ProjectsIdProtectedBranchesNameRequestAllowedToMergeItemProperty> _explicitNullValueAllowedToMerge = default!;
 #endif
         /// <summary>Array of users, groups, deploy keys, or access levels allowed to push to protected branches</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.PatchApiV4ProjectsIdProtectedBranchesNameRequestAllowedToPushItemProperty>? AllowedToPush { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.PatchApiV4ProjectsIdProtectedBranchesNameRequestAllowedToPushItemProperty>? AllowedToPush { get => _explicitNullValueAllowedToPush; set { _explicitNullValueAllowedToPush = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_to_push"); else _explicitNullProperties?.Remove("allowed_to_push"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.PatchApiV4ProjectsIdProtectedBranchesNameRequestAllowedToPushItemProperty>? _explicitNullValueAllowedToPush = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.PatchApiV4ProjectsIdProtectedBranchesNameRequestAllowedToPushItemProperty> AllowedToPush { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.PatchApiV4ProjectsIdProtectedBranchesNameRequestAllowedToPushItemProperty> AllowedToPush { get => _explicitNullValueAllowedToPush; set { _explicitNullValueAllowedToPush = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_to_push"); else _explicitNullProperties?.Remove("allowed_to_push"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.PatchApiV4ProjectsIdProtectedBranchesNameRequestAllowedToPushItemProperty> _explicitNullValueAllowedToPush = default!;
 #endif
         /// <summary>Array of users, groups, or access levels allowed to unprotect protected branches</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.PatchApiV4ProjectsIdProtectedBranchesNameRequestAllowedToUnprotectItemProperty>? AllowedToUnprotect { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.PatchApiV4ProjectsIdProtectedBranchesNameRequestAllowedToUnprotectItemProperty>? AllowedToUnprotect { get => _explicitNullValueAllowedToUnprotect; set { _explicitNullValueAllowedToUnprotect = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_to_unprotect"); else _explicitNullProperties?.Remove("allowed_to_unprotect"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.PatchApiV4ProjectsIdProtectedBranchesNameRequestAllowedToUnprotectItemProperty>? _explicitNullValueAllowedToUnprotect = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.PatchApiV4ProjectsIdProtectedBranchesNameRequestAllowedToUnprotectItemProperty> AllowedToUnprotect { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.PatchApiV4ProjectsIdProtectedBranchesNameRequestAllowedToUnprotectItemProperty> AllowedToUnprotect { get => _explicitNullValueAllowedToUnprotect; set { _explicitNullValueAllowedToUnprotect = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_to_unprotect"); else _explicitNullProperties?.Remove("allowed_to_unprotect"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.PatchApiV4ProjectsIdProtectedBranchesNameRequestAllowedToUnprotectItemProperty> _explicitNullValueAllowedToUnprotect = default!;
 #endif
         /// <summary>If `true`, members who can push to this branch can also force push.</summary>
-        public bool? AllowForcePush { get; set; }
+        public bool? AllowForcePush { get => _explicitNullValueAllowForcePush; set { _explicitNullValueAllowForcePush = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allow_force_push"); else _explicitNullProperties?.Remove("allow_force_push"); } }
+        private bool? _explicitNullValueAllowForcePush = default!;
         /// <summary>Prevent pushes to this branch if it matches an item in CODEOWNERS</summary>
-        public bool? CodeOwnerApprovalRequired { get; set; }
+        public bool? CodeOwnerApprovalRequired { get => _explicitNullValueCodeOwnerApprovalRequired; set { _explicitNullValueCodeOwnerApprovalRequired = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("code_owner_approval_required"); else _explicitNullProperties?.Remove("code_owner_approval_required"); } }
+        private bool? _explicitNullValueCodeOwnerApprovalRequired = default!;
         /// <summary>Access level allowed to unprotect. Defaults to `40` (Maintainer role). Does not support custom roles. Use `allowed_to_unprotect` with `member_role_id` instead.</summary>
-        public int? UnprotectAccessLevel { get; set; }
+        public int? UnprotectAccessLevel { get => _explicitNullValueUnprotectAccessLevel; set { _explicitNullValueUnprotectAccessLevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unprotect_access_level"); else _explicitNullProperties?.Remove("unprotect_access_level"); } }
+        private int? _explicitNullValueUnprotectAccessLevel = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PatchApiV4ProjectsIdProtectedBranchesNameRequest"/> and sets the default values.
         /// </summary>
@@ -59,7 +81,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.PatchApiV4ProjectsIdProtectedBranchesNameRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.PatchApiV4ProjectsIdProtectedBranchesNameRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.PatchApiV4ProjectsIdProtectedBranchesNameRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -90,6 +112,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteBoolValue("allow_force_push", AllowForcePush);
             writer.WriteBoolValue("code_owner_approval_required", CodeOwnerApprovalRequired);
             writer.WriteIntValue("unprotect_access_level", UnprotectAccessLevel);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

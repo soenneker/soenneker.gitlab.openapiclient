@@ -11,114 +11,177 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ApiEntitiesGeoSite : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("blob_download_timeout") is { } nullNodeBlobDownloadTimeout && nullNodeBlobDownloadTimeout.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BlobDownloadTimeout = null;
+            if (parseNode.GetChildNode("checksum_mismatch_report_threshold") is { } nullNodeChecksumMismatchReportThreshold && nullNodeChecksumMismatchReportThreshold.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChecksumMismatchReportThreshold = null;
+            if (parseNode.GetChildNode("checksum_mismatch_self_heal_cooldown_minutes") is { } nullNodeChecksumMismatchSelfHealCooldownMinutes && nullNodeChecksumMismatchSelfHealCooldownMinutes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChecksumMismatchSelfHealCooldownMinutes = null;
+            if (parseNode.GetChildNode("container_repositories_max_capacity") is { } nullNodeContainerRepositoriesMaxCapacity && nullNodeContainerRepositoriesMaxCapacity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContainerRepositoriesMaxCapacity = null;
+            if (parseNode.GetChildNode("current") is { } nullNodeCurrent && nullNodeCurrent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Current = null;
+            if (parseNode.GetChildNode("enabled") is { } nullNodeEnabled && nullNodeEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Enabled = null;
+            if (parseNode.GetChildNode("files_max_capacity") is { } nullNodeFilesMaxCapacity && nullNodeFilesMaxCapacity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FilesMaxCapacity = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("internal_url") is { } nullNodeInternalUrl && nullNodeInternalUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InternalUrl = null;
+            if (parseNode.GetChildNode("_links") is { } nullNodeLinks && nullNodeLinks.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Links = null;
+            if (parseNode.GetChildNode("minimum_reverification_interval") is { } nullNodeMinimumReverificationInterval && nullNodeMinimumReverificationInterval.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinimumReverificationInterval = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("primary") is { } nullNodePrimary && nullNodePrimary.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Primary = null;
+            if (parseNode.GetChildNode("repos_max_capacity") is { } nullNodeReposMaxCapacity && nullNodeReposMaxCapacity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReposMaxCapacity = null;
+            if (parseNode.GetChildNode("selective_sync_namespace_ids") is { } nullNodeSelectiveSyncNamespaceIds && nullNodeSelectiveSyncNamespaceIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SelectiveSyncNamespaceIds = null;
+            if (parseNode.GetChildNode("selective_sync_organization_ids") is { } nullNodeSelectiveSyncOrganizationIds && nullNodeSelectiveSyncOrganizationIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SelectiveSyncOrganizationIds = null;
+            if (parseNode.GetChildNode("selective_sync_shards") is { } nullNodeSelectiveSyncShards && nullNodeSelectiveSyncShards.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SelectiveSyncShards = null;
+            if (parseNode.GetChildNode("selective_sync_type") is { } nullNodeSelectiveSyncType && nullNodeSelectiveSyncType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SelectiveSyncType = null;
+            if (parseNode.GetChildNode("sync_object_storage") is { } nullNodeSyncObjectStorage && nullNodeSyncObjectStorage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SyncObjectStorage = null;
+            if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
+            if (parseNode.GetChildNode("verification_max_capacity") is { } nullNodeVerificationMaxCapacity && nullNodeVerificationMaxCapacity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VerificationMaxCapacity = null;
+            if (parseNode.GetChildNode("web_edit_url") is { } nullNodeWebEditUrl && nullNodeWebEditUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebEditUrl = null;
+            if (parseNode.GetChildNode("web_geo_replication_details_url") is { } nullNodeWebGeoReplicationDetailsUrl && nullNodeWebGeoReplicationDetailsUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebGeoReplicationDetailsUrl = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The blob_download_timeout property</summary>
-        public int? BlobDownloadTimeout { get; set; }
+        public int? BlobDownloadTimeout { get => _explicitNullValueBlobDownloadTimeout; set { _explicitNullValueBlobDownloadTimeout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("blob_download_timeout"); else _explicitNullProperties?.Remove("blob_download_timeout"); } }
+        private int? _explicitNullValueBlobDownloadTimeout = default!;
         /// <summary>The checksum_mismatch_report_threshold property</summary>
-        public int? ChecksumMismatchReportThreshold { get; set; }
+        public int? ChecksumMismatchReportThreshold { get => _explicitNullValueChecksumMismatchReportThreshold; set { _explicitNullValueChecksumMismatchReportThreshold = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checksum_mismatch_report_threshold"); else _explicitNullProperties?.Remove("checksum_mismatch_report_threshold"); } }
+        private int? _explicitNullValueChecksumMismatchReportThreshold = default!;
         /// <summary>The checksum_mismatch_self_heal_cooldown_minutes property</summary>
-        public int? ChecksumMismatchSelfHealCooldownMinutes { get; set; }
+        public int? ChecksumMismatchSelfHealCooldownMinutes { get => _explicitNullValueChecksumMismatchSelfHealCooldownMinutes; set { _explicitNullValueChecksumMismatchSelfHealCooldownMinutes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checksum_mismatch_self_heal_cooldown_minutes"); else _explicitNullProperties?.Remove("checksum_mismatch_self_heal_cooldown_minutes"); } }
+        private int? _explicitNullValueChecksumMismatchSelfHealCooldownMinutes = default!;
         /// <summary>The container_repositories_max_capacity property</summary>
-        public int? ContainerRepositoriesMaxCapacity { get; set; }
+        public int? ContainerRepositoriesMaxCapacity { get => _explicitNullValueContainerRepositoriesMaxCapacity; set { _explicitNullValueContainerRepositoriesMaxCapacity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("container_repositories_max_capacity"); else _explicitNullProperties?.Remove("container_repositories_max_capacity"); } }
+        private int? _explicitNullValueContainerRepositoriesMaxCapacity = default!;
         /// <summary>The current property</summary>
-        public bool? Current { get; set; }
+        public bool? Current { get => _explicitNullValueCurrent; set { _explicitNullValueCurrent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("current"); else _explicitNullProperties?.Remove("current"); } }
+        private bool? _explicitNullValueCurrent = default!;
         /// <summary>The enabled property</summary>
-        public bool? Enabled { get; set; }
+        public bool? Enabled { get => _explicitNullValueEnabled; set { _explicitNullValueEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enabled"); else _explicitNullProperties?.Remove("enabled"); } }
+        private bool? _explicitNullValueEnabled = default!;
         /// <summary>The files_max_capacity property</summary>
-        public int? FilesMaxCapacity { get; set; }
+        public int? FilesMaxCapacity { get => _explicitNullValueFilesMaxCapacity; set { _explicitNullValueFilesMaxCapacity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("files_max_capacity"); else _explicitNullProperties?.Remove("files_max_capacity"); } }
+        private int? _explicitNullValueFilesMaxCapacity = default!;
         /// <summary>The id property</summary>
-        public long? Id { get; set; }
+        public long? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private long? _explicitNullValueId = default!;
         /// <summary>The internal_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? InternalUrl { get; set; }
+        public string? InternalUrl { get => _explicitNullValueInternalUrl; set { _explicitNullValueInternalUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("internal_url"); else _explicitNullProperties?.Remove("internal_url"); } }
+        private string? _explicitNullValueInternalUrl = default!;
 #nullable restore
 #else
-        public string InternalUrl { get; set; }
+        public string InternalUrl { get => _explicitNullValueInternalUrl; set { _explicitNullValueInternalUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("internal_url"); else _explicitNullProperties?.Remove("internal_url"); } }
+        private string _explicitNullValueInternalUrl = default!;
 #endif
         /// <summary>The links property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGeoSiteLinks? Links { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGeoSiteLinks? Links { get => _explicitNullValueLinks; set { _explicitNullValueLinks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("_links"); else _explicitNullProperties?.Remove("_links"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGeoSiteLinks? _explicitNullValueLinks = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGeoSiteLinks Links { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGeoSiteLinks Links { get => _explicitNullValueLinks; set { _explicitNullValueLinks = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("_links"); else _explicitNullProperties?.Remove("_links"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGeoSiteLinks _explicitNullValueLinks = default!;
 #endif
         /// <summary>The minimum_reverification_interval property</summary>
-        public int? MinimumReverificationInterval { get; set; }
+        public int? MinimumReverificationInterval { get => _explicitNullValueMinimumReverificationInterval; set { _explicitNullValueMinimumReverificationInterval = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minimum_reverification_interval"); else _explicitNullProperties?.Remove("minimum_reverification_interval"); } }
+        private int? _explicitNullValueMinimumReverificationInterval = default!;
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>The primary property</summary>
-        public bool? Primary { get; set; }
+        public bool? Primary { get => _explicitNullValuePrimary; set { _explicitNullValuePrimary = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primary"); else _explicitNullProperties?.Remove("primary"); } }
+        private bool? _explicitNullValuePrimary = default!;
         /// <summary>The repos_max_capacity property</summary>
-        public int? ReposMaxCapacity { get; set; }
+        public int? ReposMaxCapacity { get => _explicitNullValueReposMaxCapacity; set { _explicitNullValueReposMaxCapacity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("repos_max_capacity"); else _explicitNullProperties?.Remove("repos_max_capacity"); } }
+        private int? _explicitNullValueReposMaxCapacity = default!;
         /// <summary>The selective_sync_namespace_ids property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? SelectiveSyncNamespaceIds { get; set; }
+        public UntypedNode? SelectiveSyncNamespaceIds { get => _explicitNullValueSelectiveSyncNamespaceIds; set { _explicitNullValueSelectiveSyncNamespaceIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("selective_sync_namespace_ids"); else _explicitNullProperties?.Remove("selective_sync_namespace_ids"); } }
+        private UntypedNode? _explicitNullValueSelectiveSyncNamespaceIds = default!;
 #nullable restore
 #else
-        public UntypedNode SelectiveSyncNamespaceIds { get; set; }
+        public UntypedNode SelectiveSyncNamespaceIds { get => _explicitNullValueSelectiveSyncNamespaceIds; set { _explicitNullValueSelectiveSyncNamespaceIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("selective_sync_namespace_ids"); else _explicitNullProperties?.Remove("selective_sync_namespace_ids"); } }
+        private UntypedNode _explicitNullValueSelectiveSyncNamespaceIds = default!;
 #endif
         /// <summary>The selective_sync_organization_ids property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? SelectiveSyncOrganizationIds { get; set; }
+        public UntypedNode? SelectiveSyncOrganizationIds { get => _explicitNullValueSelectiveSyncOrganizationIds; set { _explicitNullValueSelectiveSyncOrganizationIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("selective_sync_organization_ids"); else _explicitNullProperties?.Remove("selective_sync_organization_ids"); } }
+        private UntypedNode? _explicitNullValueSelectiveSyncOrganizationIds = default!;
 #nullable restore
 #else
-        public UntypedNode SelectiveSyncOrganizationIds { get; set; }
+        public UntypedNode SelectiveSyncOrganizationIds { get => _explicitNullValueSelectiveSyncOrganizationIds; set { _explicitNullValueSelectiveSyncOrganizationIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("selective_sync_organization_ids"); else _explicitNullProperties?.Remove("selective_sync_organization_ids"); } }
+        private UntypedNode _explicitNullValueSelectiveSyncOrganizationIds = default!;
 #endif
         /// <summary>The selective_sync_shards property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? SelectiveSyncShards { get; set; }
+        public UntypedNode? SelectiveSyncShards { get => _explicitNullValueSelectiveSyncShards; set { _explicitNullValueSelectiveSyncShards = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("selective_sync_shards"); else _explicitNullProperties?.Remove("selective_sync_shards"); } }
+        private UntypedNode? _explicitNullValueSelectiveSyncShards = default!;
 #nullable restore
 #else
-        public UntypedNode SelectiveSyncShards { get; set; }
+        public UntypedNode SelectiveSyncShards { get => _explicitNullValueSelectiveSyncShards; set { _explicitNullValueSelectiveSyncShards = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("selective_sync_shards"); else _explicitNullProperties?.Remove("selective_sync_shards"); } }
+        private UntypedNode _explicitNullValueSelectiveSyncShards = default!;
 #endif
         /// <summary>The selective_sync_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SelectiveSyncType { get; set; }
+        public string? SelectiveSyncType { get => _explicitNullValueSelectiveSyncType; set { _explicitNullValueSelectiveSyncType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("selective_sync_type"); else _explicitNullProperties?.Remove("selective_sync_type"); } }
+        private string? _explicitNullValueSelectiveSyncType = default!;
 #nullable restore
 #else
-        public string SelectiveSyncType { get; set; }
+        public string SelectiveSyncType { get => _explicitNullValueSelectiveSyncType; set { _explicitNullValueSelectiveSyncType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("selective_sync_type"); else _explicitNullProperties?.Remove("selective_sync_type"); } }
+        private string _explicitNullValueSelectiveSyncType = default!;
 #endif
         /// <summary>The sync_object_storage property</summary>
-        public bool? SyncObjectStorage { get; set; }
+        public bool? SyncObjectStorage { get => _explicitNullValueSyncObjectStorage; set { _explicitNullValueSyncObjectStorage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sync_object_storage"); else _explicitNullProperties?.Remove("sync_object_storage"); } }
+        private bool? _explicitNullValueSyncObjectStorage = default!;
         /// <summary>The url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Url { get; set; }
+        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        private string? _explicitNullValueUrl = default!;
 #nullable restore
 #else
-        public string Url { get; set; }
+        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        private string _explicitNullValueUrl = default!;
 #endif
         /// <summary>The verification_max_capacity property</summary>
-        public int? VerificationMaxCapacity { get; set; }
+        public int? VerificationMaxCapacity { get => _explicitNullValueVerificationMaxCapacity; set { _explicitNullValueVerificationMaxCapacity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verification_max_capacity"); else _explicitNullProperties?.Remove("verification_max_capacity"); } }
+        private int? _explicitNullValueVerificationMaxCapacity = default!;
         /// <summary>The web_edit_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WebEditUrl { get; set; }
+        public string? WebEditUrl { get => _explicitNullValueWebEditUrl; set { _explicitNullValueWebEditUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("web_edit_url"); else _explicitNullProperties?.Remove("web_edit_url"); } }
+        private string? _explicitNullValueWebEditUrl = default!;
 #nullable restore
 #else
-        public string WebEditUrl { get; set; }
+        public string WebEditUrl { get => _explicitNullValueWebEditUrl; set { _explicitNullValueWebEditUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("web_edit_url"); else _explicitNullProperties?.Remove("web_edit_url"); } }
+        private string _explicitNullValueWebEditUrl = default!;
 #endif
         /// <summary>The web_geo_replication_details_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WebGeoReplicationDetailsUrl { get; set; }
+        public string? WebGeoReplicationDetailsUrl { get => _explicitNullValueWebGeoReplicationDetailsUrl; set { _explicitNullValueWebGeoReplicationDetailsUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("web_geo_replication_details_url"); else _explicitNullProperties?.Remove("web_geo_replication_details_url"); } }
+        private string? _explicitNullValueWebGeoReplicationDetailsUrl = default!;
 #nullable restore
 #else
-        public string WebGeoReplicationDetailsUrl { get; set; }
+        public string WebGeoReplicationDetailsUrl { get => _explicitNullValueWebGeoReplicationDetailsUrl; set { _explicitNullValueWebGeoReplicationDetailsUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("web_geo_replication_details_url"); else _explicitNullProperties?.Remove("web_geo_replication_details_url"); } }
+        private string _explicitNullValueWebGeoReplicationDetailsUrl = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGeoSite"/> and sets the default values.
@@ -135,7 +198,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGeoSite CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGeoSite();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGeoSite(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -200,6 +263,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteIntValue("verification_max_capacity", VerificationMaxCapacity);
             writer.WriteStringValue("web_edit_url", WebEditUrl);
             writer.WriteStringValue("web_geo_replication_details_url", WebGeoReplicationDetailsUrl);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

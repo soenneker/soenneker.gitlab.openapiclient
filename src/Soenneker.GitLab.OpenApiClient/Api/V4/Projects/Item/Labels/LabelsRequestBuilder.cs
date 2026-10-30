@@ -20,6 +20,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Labels
     public partial class LabelsRequestBuilder : BaseRequestBuilder
     {
         /// <summary>The promote property</summary>
+        [Obsolete("")]
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Labels.Promote.PromoteRequestBuilder Promote
         {
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Labels.Promote.PromoteRequestBuilder(PathParameters, RequestAdapter);
@@ -69,7 +70,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Labels
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectLabel>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectLabel.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectLabel>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectLabel.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Lists all labels for a specified project. By default, this request returns 20 results at a time because the API results are paginated.
@@ -87,7 +88,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Labels
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectLabel>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectLabel.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectLabel>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectLabel.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Creates a label for a specified project.
@@ -107,7 +108,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Labels
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectLabel>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectLabel.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectLabel>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectLabel.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Deprecated in GitLab 12.4. Use PUT /projects/:id/labels/:name instead.
@@ -128,7 +129,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Labels
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPutRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectLabel>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectLabel.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectLabel>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectLabel.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Deprecated in GitLab 12.4. Use DELETE /projects/:id/labels/:name instead.

@@ -11,32 +11,48 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class VulnerabilitiesFeedbackEntityCommentDetails : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("comment") is { } nullNodeComment && nullNodeComment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Comment = null;
+            if (parseNode.GetChildNode("comment_author") is { } nullNodeCommentAuthor && nullNodeCommentAuthor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommentAuthor = null;
+            if (parseNode.GetChildNode("comment_timestamp") is { } nullNodeCommentTimestamp && nullNodeCommentTimestamp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CommentTimestamp = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The comment property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Comment { get; set; }
+        public string? Comment { get => _explicitNullValueComment; set { _explicitNullValueComment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("comment"); else _explicitNullProperties?.Remove("comment"); } }
+        private string? _explicitNullValueComment = default!;
 #nullable restore
 #else
-        public string Comment { get; set; }
+        public string Comment { get => _explicitNullValueComment; set { _explicitNullValueComment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("comment"); else _explicitNullProperties?.Remove("comment"); } }
+        private string _explicitNullValueComment = default!;
 #endif
         /// <summary>The comment_author property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.UserEntity? CommentAuthor { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.UserEntity? CommentAuthor { get => _explicitNullValueCommentAuthor; set { _explicitNullValueCommentAuthor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("comment_author"); else _explicitNullProperties?.Remove("comment_author"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.UserEntity? _explicitNullValueCommentAuthor = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.UserEntity CommentAuthor { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.UserEntity CommentAuthor { get => _explicitNullValueCommentAuthor; set { _explicitNullValueCommentAuthor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("comment_author"); else _explicitNullProperties?.Remove("comment_author"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.UserEntity _explicitNullValueCommentAuthor = default!;
 #endif
         /// <summary>The comment_timestamp property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CommentTimestamp { get; set; }
+        public string? CommentTimestamp { get => _explicitNullValueCommentTimestamp; set { _explicitNullValueCommentTimestamp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("comment_timestamp"); else _explicitNullProperties?.Remove("comment_timestamp"); } }
+        private string? _explicitNullValueCommentTimestamp = default!;
 #nullable restore
 #else
-        public string CommentTimestamp { get; set; }
+        public string CommentTimestamp { get => _explicitNullValueCommentTimestamp; set { _explicitNullValueCommentTimestamp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("comment_timestamp"); else _explicitNullProperties?.Remove("comment_timestamp"); } }
+        private string _explicitNullValueCommentTimestamp = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFeedbackEntityCommentDetails"/> and sets the default values.
@@ -53,7 +69,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFeedbackEntityCommentDetails CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFeedbackEntityCommentDetails();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFeedbackEntityCommentDetails(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -78,6 +94,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("comment", Comment);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.UserEntity>("comment_author", CommentAuthor);
             writer.WriteStringValue("comment_timestamp", CommentTimestamp);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

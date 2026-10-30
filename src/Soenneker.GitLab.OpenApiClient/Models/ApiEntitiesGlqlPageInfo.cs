@@ -11,28 +11,45 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ApiEntitiesGlqlPageInfo : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("endCursor") is { } nullNodeEndCursor && nullNodeEndCursor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndCursor = null;
+            if (parseNode.GetChildNode("hasNextPage") is { } nullNodeHasNextPage && nullNodeHasNextPage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HasNextPage = null;
+            if (parseNode.GetChildNode("hasPreviousPage") is { } nullNodeHasPreviousPage && nullNodeHasPreviousPage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HasPreviousPage = null;
+            if (parseNode.GetChildNode("startCursor") is { } nullNodeStartCursor && nullNodeStartCursor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartCursor = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Cursor for the last item</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EndCursor { get; set; }
+        public string? EndCursor { get => _explicitNullValueEndCursor; set { _explicitNullValueEndCursor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endCursor"); else _explicitNullProperties?.Remove("endCursor"); } }
+        private string? _explicitNullValueEndCursor = default!;
 #nullable restore
 #else
-        public string EndCursor { get; set; }
+        public string EndCursor { get => _explicitNullValueEndCursor; set { _explicitNullValueEndCursor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endCursor"); else _explicitNullProperties?.Remove("endCursor"); } }
+        private string _explicitNullValueEndCursor = default!;
 #endif
         /// <summary>Whether there are more items</summary>
-        public bool? HasNextPage { get; set; }
+        public bool? HasNextPage { get => _explicitNullValueHasNextPage; set { _explicitNullValueHasNextPage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hasNextPage"); else _explicitNullProperties?.Remove("hasNextPage"); } }
+        private bool? _explicitNullValueHasNextPage = default!;
         /// <summary>Whether there are previous items</summary>
-        public bool? HasPreviousPage { get; set; }
+        public bool? HasPreviousPage { get => _explicitNullValueHasPreviousPage; set { _explicitNullValueHasPreviousPage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hasPreviousPage"); else _explicitNullProperties?.Remove("hasPreviousPage"); } }
+        private bool? _explicitNullValueHasPreviousPage = default!;
         /// <summary>Cursor for the first item</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StartCursor { get; set; }
+        public string? StartCursor { get => _explicitNullValueStartCursor; set { _explicitNullValueStartCursor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startCursor"); else _explicitNullProperties?.Remove("startCursor"); } }
+        private string? _explicitNullValueStartCursor = default!;
 #nullable restore
 #else
-        public string StartCursor { get; set; }
+        public string StartCursor { get => _explicitNullValueStartCursor; set { _explicitNullValueStartCursor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startCursor"); else _explicitNullProperties?.Remove("startCursor"); } }
+        private string _explicitNullValueStartCursor = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGlqlPageInfo"/> and sets the default values.
@@ -49,7 +66,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGlqlPageInfo CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGlqlPageInfo();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGlqlPageInfo(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -76,6 +93,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteBoolValue("hasNextPage", HasNextPage);
             writer.WriteBoolValue("hasPreviousPage", HasPreviousPage);
             writer.WriteStringValue("startCursor", StartCursor);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

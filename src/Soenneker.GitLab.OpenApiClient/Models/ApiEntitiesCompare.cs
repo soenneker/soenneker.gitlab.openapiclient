@@ -11,44 +11,67 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ApiEntitiesCompare : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("commit") is { } nullNodeCommit && nullNodeCommit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Commit = null;
+            if (parseNode.GetChildNode("commits") is { } nullNodeCommits && nullNodeCommits.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Commits = null;
+            if (parseNode.GetChildNode("compare_same_ref") is { } nullNodeCompareSameRef && nullNodeCompareSameRef.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CompareSameRef = null;
+            if (parseNode.GetChildNode("compare_timeout") is { } nullNodeCompareTimeout && nullNodeCompareTimeout.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CompareTimeout = null;
+            if (parseNode.GetChildNode("diffs") is { } nullNodeDiffs && nullNodeDiffs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Diffs = null;
+            if (parseNode.GetChildNode("web_url") is { } nullNodeWebUrl && nullNodeWebUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebUrl = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The commit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommit? Commit { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommit? Commit { get => _explicitNullValueCommit; set { _explicitNullValueCommit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commit"); else _explicitNullProperties?.Remove("commit"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommit? _explicitNullValueCommit = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommit Commit { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommit Commit { get => _explicitNullValueCommit; set { _explicitNullValueCommit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commit"); else _explicitNullProperties?.Remove("commit"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommit _explicitNullValueCommit = default!;
 #endif
         /// <summary>The commits property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommit>? Commits { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommit>? Commits { get => _explicitNullValueCommits; set { _explicitNullValueCommits = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commits"); else _explicitNullProperties?.Remove("commits"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommit>? _explicitNullValueCommits = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommit> Commits { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommit> Commits { get => _explicitNullValueCommits; set { _explicitNullValueCommits = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commits"); else _explicitNullProperties?.Remove("commits"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommit> _explicitNullValueCommits = default!;
 #endif
         /// <summary>The compare_same_ref property</summary>
-        public bool? CompareSameRef { get; set; }
+        public bool? CompareSameRef { get => _explicitNullValueCompareSameRef; set { _explicitNullValueCompareSameRef = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("compare_same_ref"); else _explicitNullProperties?.Remove("compare_same_ref"); } }
+        private bool? _explicitNullValueCompareSameRef = default!;
         /// <summary>The compare_timeout property</summary>
-        public bool? CompareTimeout { get; set; }
+        public bool? CompareTimeout { get => _explicitNullValueCompareTimeout; set { _explicitNullValueCompareTimeout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("compare_timeout"); else _explicitNullProperties?.Remove("compare_timeout"); } }
+        private bool? _explicitNullValueCompareTimeout = default!;
         /// <summary>The diffs property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDiff>? Diffs { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDiff>? Diffs { get => _explicitNullValueDiffs; set { _explicitNullValueDiffs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("diffs"); else _explicitNullProperties?.Remove("diffs"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDiff>? _explicitNullValueDiffs = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDiff> Diffs { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDiff> Diffs { get => _explicitNullValueDiffs; set { _explicitNullValueDiffs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("diffs"); else _explicitNullProperties?.Remove("diffs"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDiff> _explicitNullValueDiffs = default!;
 #endif
         /// <summary>The web_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WebUrl { get; set; }
+        public string? WebUrl { get => _explicitNullValueWebUrl; set { _explicitNullValueWebUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("web_url"); else _explicitNullProperties?.Remove("web_url"); } }
+        private string? _explicitNullValueWebUrl = default!;
 #nullable restore
 #else
-        public string WebUrl { get; set; }
+        public string WebUrl { get => _explicitNullValueWebUrl; set { _explicitNullValueWebUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("web_url"); else _explicitNullProperties?.Remove("web_url"); } }
+        private string _explicitNullValueWebUrl = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCompare"/> and sets the default values.
@@ -65,7 +88,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCompare CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCompare();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCompare(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -96,6 +119,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteBoolValue("compare_timeout", CompareTimeout);
             writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDiff>("diffs", Diffs);
             writer.WriteStringValue("web_url", WebUrl);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

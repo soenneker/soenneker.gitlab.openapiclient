@@ -11,69 +11,101 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostApiV4ProjectsIdMirrorPullRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("action") is { } nullNodeAction && nullNodeAction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Action = null;
+            if (parseNode.GetChildNode("force") is { } nullNodeForce && nullNodeForce.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Force = null;
+            if (parseNode.GetChildNode("pull_request.base.ref") is { } nullNodePullRequestBaseRef && nullNodePullRequestBaseRef.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PullRequestBaseRef = null;
+            if (parseNode.GetChildNode("pull_request.base.repo.full_name") is { } nullNodePullRequestBaseRepoFullName && nullNodePullRequestBaseRepoFullName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PullRequestBaseRepoFullName = null;
+            if (parseNode.GetChildNode("pull_request.base.sha") is { } nullNodePullRequestBaseSha && nullNodePullRequestBaseSha.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PullRequestBaseSha = null;
+            if (parseNode.GetChildNode("pull_request.head.ref") is { } nullNodePullRequestHeadRef && nullNodePullRequestHeadRef.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PullRequestHeadRef = null;
+            if (parseNode.GetChildNode("pull_request.head.repo.full_name") is { } nullNodePullRequestHeadRepoFullName && nullNodePullRequestHeadRepoFullName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PullRequestHeadRepoFullName = null;
+            if (parseNode.GetChildNode("pull_request.head.sha") is { } nullNodePullRequestHeadSha && nullNodePullRequestHeadSha.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PullRequestHeadSha = null;
+            if (parseNode.GetChildNode("pull_request.number") is { } nullNodePullRequestNumber && nullNodePullRequestNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PullRequestNumber = null;
+        }
+
         /// <summary>Action of the GitHub pull request event.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Action { get; set; }
+        public string? Action { get => _explicitNullValueAction; set { _explicitNullValueAction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("action"); else _explicitNullProperties?.Remove("action"); } }
+        private string? _explicitNullValueAction = default!;
 #nullable restore
 #else
-        public string Action { get; set; }
+        public string Action { get => _explicitNullValueAction; set { _explicitNullValueAction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("action"); else _explicitNullProperties?.Remove("action"); } }
+        private string _explicitNullValueAction = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>If `true`, resets a hard-failed mirror and retries the update. Ignored for requests authenticated with a GitHub webhook signature.</summary>
-        public bool? Force { get; set; }
+        public bool? Force { get => _explicitNullValueForce; set { _explicitNullValueForce = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("force"); else _explicitNullProperties?.Remove("force"); } }
+        private bool? _explicitNullValueForce = default!;
         /// <summary>Target branch</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PullRequestBaseRef { get; set; }
+        public string? PullRequestBaseRef { get => _explicitNullValuePullRequestBaseRef; set { _explicitNullValuePullRequestBaseRef = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pull_request.base.ref"); else _explicitNullProperties?.Remove("pull_request.base.ref"); } }
+        private string? _explicitNullValuePullRequestBaseRef = default!;
 #nullable restore
 #else
-        public string PullRequestBaseRef { get; set; }
+        public string PullRequestBaseRef { get => _explicitNullValuePullRequestBaseRef; set { _explicitNullValuePullRequestBaseRef = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pull_request.base.ref"); else _explicitNullProperties?.Remove("pull_request.base.ref"); } }
+        private string _explicitNullValuePullRequestBaseRef = default!;
 #endif
         /// <summary>Target repository</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PullRequestBaseRepoFullName { get; set; }
+        public string? PullRequestBaseRepoFullName { get => _explicitNullValuePullRequestBaseRepoFullName; set { _explicitNullValuePullRequestBaseRepoFullName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pull_request.base.repo.full_name"); else _explicitNullProperties?.Remove("pull_request.base.repo.full_name"); } }
+        private string? _explicitNullValuePullRequestBaseRepoFullName = default!;
 #nullable restore
 #else
-        public string PullRequestBaseRepoFullName { get; set; }
+        public string PullRequestBaseRepoFullName { get => _explicitNullValuePullRequestBaseRepoFullName; set { _explicitNullValuePullRequestBaseRepoFullName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pull_request.base.repo.full_name"); else _explicitNullProperties?.Remove("pull_request.base.repo.full_name"); } }
+        private string _explicitNullValuePullRequestBaseRepoFullName = default!;
 #endif
         /// <summary>Target sha</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PullRequestBaseSha { get; set; }
+        public string? PullRequestBaseSha { get => _explicitNullValuePullRequestBaseSha; set { _explicitNullValuePullRequestBaseSha = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pull_request.base.sha"); else _explicitNullProperties?.Remove("pull_request.base.sha"); } }
+        private string? _explicitNullValuePullRequestBaseSha = default!;
 #nullable restore
 #else
-        public string PullRequestBaseSha { get; set; }
+        public string PullRequestBaseSha { get => _explicitNullValuePullRequestBaseSha; set { _explicitNullValuePullRequestBaseSha = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pull_request.base.sha"); else _explicitNullProperties?.Remove("pull_request.base.sha"); } }
+        private string _explicitNullValuePullRequestBaseSha = default!;
 #endif
         /// <summary>Source branch</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PullRequestHeadRef { get; set; }
+        public string? PullRequestHeadRef { get => _explicitNullValuePullRequestHeadRef; set { _explicitNullValuePullRequestHeadRef = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pull_request.head.ref"); else _explicitNullProperties?.Remove("pull_request.head.ref"); } }
+        private string? _explicitNullValuePullRequestHeadRef = default!;
 #nullable restore
 #else
-        public string PullRequestHeadRef { get; set; }
+        public string PullRequestHeadRef { get => _explicitNullValuePullRequestHeadRef; set { _explicitNullValuePullRequestHeadRef = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pull_request.head.ref"); else _explicitNullProperties?.Remove("pull_request.head.ref"); } }
+        private string _explicitNullValuePullRequestHeadRef = default!;
 #endif
         /// <summary>Source repository</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PullRequestHeadRepoFullName { get; set; }
+        public string? PullRequestHeadRepoFullName { get => _explicitNullValuePullRequestHeadRepoFullName; set { _explicitNullValuePullRequestHeadRepoFullName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pull_request.head.repo.full_name"); else _explicitNullProperties?.Remove("pull_request.head.repo.full_name"); } }
+        private string? _explicitNullValuePullRequestHeadRepoFullName = default!;
 #nullable restore
 #else
-        public string PullRequestHeadRepoFullName { get; set; }
+        public string PullRequestHeadRepoFullName { get => _explicitNullValuePullRequestHeadRepoFullName; set { _explicitNullValuePullRequestHeadRepoFullName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pull_request.head.repo.full_name"); else _explicitNullProperties?.Remove("pull_request.head.repo.full_name"); } }
+        private string _explicitNullValuePullRequestHeadRepoFullName = default!;
 #endif
         /// <summary>Source sha</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PullRequestHeadSha { get; set; }
+        public string? PullRequestHeadSha { get => _explicitNullValuePullRequestHeadSha; set { _explicitNullValuePullRequestHeadSha = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pull_request.head.sha"); else _explicitNullProperties?.Remove("pull_request.head.sha"); } }
+        private string? _explicitNullValuePullRequestHeadSha = default!;
 #nullable restore
 #else
-        public string PullRequestHeadSha { get; set; }
+        public string PullRequestHeadSha { get => _explicitNullValuePullRequestHeadSha; set { _explicitNullValuePullRequestHeadSha = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pull_request.head.sha"); else _explicitNullProperties?.Remove("pull_request.head.sha"); } }
+        private string _explicitNullValuePullRequestHeadSha = default!;
 #endif
         /// <summary>Pull request IID</summary>
-        public int? PullRequestNumber { get; set; }
+        public int? PullRequestNumber { get => _explicitNullValuePullRequestNumber; set { _explicitNullValuePullRequestNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pull_request.number"); else _explicitNullProperties?.Remove("pull_request.number"); } }
+        private int? _explicitNullValuePullRequestNumber = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdMirrorPullRequest"/> and sets the default values.
         /// </summary>
@@ -89,7 +121,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdMirrorPullRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdMirrorPullRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdMirrorPullRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -126,6 +158,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("pull_request.head.repo.full_name", PullRequestHeadRepoFullName);
             writer.WriteStringValue("pull_request.head.sha", PullRequestHeadSha);
             writer.WriteIntValue("pull_request.number", PullRequestNumber);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

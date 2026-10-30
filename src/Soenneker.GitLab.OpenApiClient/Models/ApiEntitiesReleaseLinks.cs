@@ -11,64 +11,92 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ApiEntitiesReleaseLinks : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("closed_issues_url") is { } nullNodeClosedIssuesUrl && nullNodeClosedIssuesUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClosedIssuesUrl = null;
+            if (parseNode.GetChildNode("closed_merge_requests_url") is { } nullNodeClosedMergeRequestsUrl && nullNodeClosedMergeRequestsUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClosedMergeRequestsUrl = null;
+            if (parseNode.GetChildNode("edit_url") is { } nullNodeEditUrl && nullNodeEditUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EditUrl = null;
+            if (parseNode.GetChildNode("merged_merge_requests_url") is { } nullNodeMergedMergeRequestsUrl && nullNodeMergedMergeRequestsUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MergedMergeRequestsUrl = null;
+            if (parseNode.GetChildNode("opened_issues_url") is { } nullNodeOpenedIssuesUrl && nullNodeOpenedIssuesUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OpenedIssuesUrl = null;
+            if (parseNode.GetChildNode("opened_merge_requests_url") is { } nullNodeOpenedMergeRequestsUrl && nullNodeOpenedMergeRequestsUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OpenedMergeRequestsUrl = null;
+            if (parseNode.GetChildNode("self") is { } nullNodeSelf && nullNodeSelf.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Self = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The closed_issues_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ClosedIssuesUrl { get; set; }
+        public string? ClosedIssuesUrl { get => _explicitNullValueClosedIssuesUrl; set { _explicitNullValueClosedIssuesUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("closed_issues_url"); else _explicitNullProperties?.Remove("closed_issues_url"); } }
+        private string? _explicitNullValueClosedIssuesUrl = default!;
 #nullable restore
 #else
-        public string ClosedIssuesUrl { get; set; }
+        public string ClosedIssuesUrl { get => _explicitNullValueClosedIssuesUrl; set { _explicitNullValueClosedIssuesUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("closed_issues_url"); else _explicitNullProperties?.Remove("closed_issues_url"); } }
+        private string _explicitNullValueClosedIssuesUrl = default!;
 #endif
         /// <summary>The closed_merge_requests_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ClosedMergeRequestsUrl { get; set; }
+        public string? ClosedMergeRequestsUrl { get => _explicitNullValueClosedMergeRequestsUrl; set { _explicitNullValueClosedMergeRequestsUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("closed_merge_requests_url"); else _explicitNullProperties?.Remove("closed_merge_requests_url"); } }
+        private string? _explicitNullValueClosedMergeRequestsUrl = default!;
 #nullable restore
 #else
-        public string ClosedMergeRequestsUrl { get; set; }
+        public string ClosedMergeRequestsUrl { get => _explicitNullValueClosedMergeRequestsUrl; set { _explicitNullValueClosedMergeRequestsUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("closed_merge_requests_url"); else _explicitNullProperties?.Remove("closed_merge_requests_url"); } }
+        private string _explicitNullValueClosedMergeRequestsUrl = default!;
 #endif
         /// <summary>The edit_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EditUrl { get; set; }
+        public string? EditUrl { get => _explicitNullValueEditUrl; set { _explicitNullValueEditUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("edit_url"); else _explicitNullProperties?.Remove("edit_url"); } }
+        private string? _explicitNullValueEditUrl = default!;
 #nullable restore
 #else
-        public string EditUrl { get; set; }
+        public string EditUrl { get => _explicitNullValueEditUrl; set { _explicitNullValueEditUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("edit_url"); else _explicitNullProperties?.Remove("edit_url"); } }
+        private string _explicitNullValueEditUrl = default!;
 #endif
         /// <summary>The merged_merge_requests_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MergedMergeRequestsUrl { get; set; }
+        public string? MergedMergeRequestsUrl { get => _explicitNullValueMergedMergeRequestsUrl; set { _explicitNullValueMergedMergeRequestsUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merged_merge_requests_url"); else _explicitNullProperties?.Remove("merged_merge_requests_url"); } }
+        private string? _explicitNullValueMergedMergeRequestsUrl = default!;
 #nullable restore
 #else
-        public string MergedMergeRequestsUrl { get; set; }
+        public string MergedMergeRequestsUrl { get => _explicitNullValueMergedMergeRequestsUrl; set { _explicitNullValueMergedMergeRequestsUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merged_merge_requests_url"); else _explicitNullProperties?.Remove("merged_merge_requests_url"); } }
+        private string _explicitNullValueMergedMergeRequestsUrl = default!;
 #endif
         /// <summary>The opened_issues_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OpenedIssuesUrl { get; set; }
+        public string? OpenedIssuesUrl { get => _explicitNullValueOpenedIssuesUrl; set { _explicitNullValueOpenedIssuesUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("opened_issues_url"); else _explicitNullProperties?.Remove("opened_issues_url"); } }
+        private string? _explicitNullValueOpenedIssuesUrl = default!;
 #nullable restore
 #else
-        public string OpenedIssuesUrl { get; set; }
+        public string OpenedIssuesUrl { get => _explicitNullValueOpenedIssuesUrl; set { _explicitNullValueOpenedIssuesUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("opened_issues_url"); else _explicitNullProperties?.Remove("opened_issues_url"); } }
+        private string _explicitNullValueOpenedIssuesUrl = default!;
 #endif
         /// <summary>The opened_merge_requests_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OpenedMergeRequestsUrl { get; set; }
+        public string? OpenedMergeRequestsUrl { get => _explicitNullValueOpenedMergeRequestsUrl; set { _explicitNullValueOpenedMergeRequestsUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("opened_merge_requests_url"); else _explicitNullProperties?.Remove("opened_merge_requests_url"); } }
+        private string? _explicitNullValueOpenedMergeRequestsUrl = default!;
 #nullable restore
 #else
-        public string OpenedMergeRequestsUrl { get; set; }
+        public string OpenedMergeRequestsUrl { get => _explicitNullValueOpenedMergeRequestsUrl; set { _explicitNullValueOpenedMergeRequestsUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("opened_merge_requests_url"); else _explicitNullProperties?.Remove("opened_merge_requests_url"); } }
+        private string _explicitNullValueOpenedMergeRequestsUrl = default!;
 #endif
         /// <summary>The self property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Self { get; set; }
+        public string? Self { get => _explicitNullValueSelf; set { _explicitNullValueSelf = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("self"); else _explicitNullProperties?.Remove("self"); } }
+        private string? _explicitNullValueSelf = default!;
 #nullable restore
 #else
-        public string Self { get; set; }
+        public string Self { get => _explicitNullValueSelf; set { _explicitNullValueSelf = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("self"); else _explicitNullProperties?.Remove("self"); } }
+        private string _explicitNullValueSelf = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesReleaseLinks"/> and sets the default values.
@@ -85,7 +113,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesReleaseLinks CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesReleaseLinks();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesReleaseLinks(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -118,6 +146,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("opened_issues_url", OpenedIssuesUrl);
             writer.WriteStringValue("opened_merge_requests_url", OpenedMergeRequestsUrl);
             writer.WriteStringValue("self", Self);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

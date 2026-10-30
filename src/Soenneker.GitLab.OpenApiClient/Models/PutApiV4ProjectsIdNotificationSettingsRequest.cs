@@ -11,63 +11,119 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PutApiV4ProjectsIdNotificationSettingsRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("approver") is { } nullNodeApprover && nullNodeApprover.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Approver = null;
+            if (parseNode.GetChildNode("change_reviewer_merge_request") is { } nullNodeChangeReviewerMergeRequest && nullNodeChangeReviewerMergeRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ChangeReviewerMergeRequest = null;
+            if (parseNode.GetChildNode("close_issue") is { } nullNodeCloseIssue && nullNodeCloseIssue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CloseIssue = null;
+            if (parseNode.GetChildNode("close_merge_request") is { } nullNodeCloseMergeRequest && nullNodeCloseMergeRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CloseMergeRequest = null;
+            if (parseNode.GetChildNode("failed_pipeline") is { } nullNodeFailedPipeline && nullNodeFailedPipeline.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FailedPipeline = null;
+            if (parseNode.GetChildNode("fixed_pipeline") is { } nullNodeFixedPipeline && nullNodeFixedPipeline.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FixedPipeline = null;
+            if (parseNode.GetChildNode("issue_due") is { } nullNodeIssueDue && nullNodeIssueDue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssueDue = null;
+            if (parseNode.GetChildNode("level") is { } nullNodeLevel && nullNodeLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Level = null;
+            if (parseNode.GetChildNode("merge_merge_request") is { } nullNodeMergeMergeRequest && nullNodeMergeMergeRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MergeMergeRequest = null;
+            if (parseNode.GetChildNode("merge_when_pipeline_succeeds") is { } nullNodeMergeWhenPipelineSucceeds && nullNodeMergeWhenPipelineSucceeds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MergeWhenPipelineSucceeds = null;
+            if (parseNode.GetChildNode("moved_project") is { } nullNodeMovedProject && nullNodeMovedProject.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MovedProject = null;
+            if (parseNode.GetChildNode("new_issue") is { } nullNodeNewIssue && nullNodeNewIssue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewIssue = null;
+            if (parseNode.GetChildNode("new_merge_request") is { } nullNodeNewMergeRequest && nullNodeNewMergeRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewMergeRequest = null;
+            if (parseNode.GetChildNode("new_note") is { } nullNodeNewNote && nullNodeNewNote.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewNote = null;
+            if (parseNode.GetChildNode("new_release") is { } nullNodeNewRelease && nullNodeNewRelease.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewRelease = null;
+            if (parseNode.GetChildNode("push_to_merge_request") is { } nullNodePushToMergeRequest && nullNodePushToMergeRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PushToMergeRequest = null;
+            if (parseNode.GetChildNode("reassign_issue") is { } nullNodeReassignIssue && nullNodeReassignIssue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReassignIssue = null;
+            if (parseNode.GetChildNode("reassign_merge_request") is { } nullNodeReassignMergeRequest && nullNodeReassignMergeRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReassignMergeRequest = null;
+            if (parseNode.GetChildNode("reopen_issue") is { } nullNodeReopenIssue && nullNodeReopenIssue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReopenIssue = null;
+            if (parseNode.GetChildNode("reopen_merge_request") is { } nullNodeReopenMergeRequest && nullNodeReopenMergeRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReopenMergeRequest = null;
+            if (parseNode.GetChildNode("service_account_failed_pipeline") is { } nullNodeServiceAccountFailedPipeline && nullNodeServiceAccountFailedPipeline.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServiceAccountFailedPipeline = null;
+            if (parseNode.GetChildNode("service_account_fixed_pipeline") is { } nullNodeServiceAccountFixedPipeline && nullNodeServiceAccountFixedPipeline.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServiceAccountFixedPipeline = null;
+            if (parseNode.GetChildNode("service_account_success_pipeline") is { } nullNodeServiceAccountSuccessPipeline && nullNodeServiceAccountSuccessPipeline.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServiceAccountSuccessPipeline = null;
+            if (parseNode.GetChildNode("success_pipeline") is { } nullNodeSuccessPipeline && nullNodeSuccessPipeline.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SuccessPipeline = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Enable/disable this notification</summary>
-        public bool? Approver { get; set; }
+        public bool? Approver { get => _explicitNullValueApprover; set { _explicitNullValueApprover = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approver"); else _explicitNullProperties?.Remove("approver"); } }
+        private bool? _explicitNullValueApprover = default!;
         /// <summary>Enable/disable this notification</summary>
-        public bool? ChangeReviewerMergeRequest { get; set; }
+        public bool? ChangeReviewerMergeRequest { get => _explicitNullValueChangeReviewerMergeRequest; set { _explicitNullValueChangeReviewerMergeRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("change_reviewer_merge_request"); else _explicitNullProperties?.Remove("change_reviewer_merge_request"); } }
+        private bool? _explicitNullValueChangeReviewerMergeRequest = default!;
         /// <summary>Enable/disable this notification</summary>
-        public bool? CloseIssue { get; set; }
+        public bool? CloseIssue { get => _explicitNullValueCloseIssue; set { _explicitNullValueCloseIssue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("close_issue"); else _explicitNullProperties?.Remove("close_issue"); } }
+        private bool? _explicitNullValueCloseIssue = default!;
         /// <summary>Enable/disable this notification</summary>
-        public bool? CloseMergeRequest { get; set; }
+        public bool? CloseMergeRequest { get => _explicitNullValueCloseMergeRequest; set { _explicitNullValueCloseMergeRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("close_merge_request"); else _explicitNullProperties?.Remove("close_merge_request"); } }
+        private bool? _explicitNullValueCloseMergeRequest = default!;
         /// <summary>Enable/disable this notification</summary>
-        public bool? FailedPipeline { get; set; }
+        public bool? FailedPipeline { get => _explicitNullValueFailedPipeline; set { _explicitNullValueFailedPipeline = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failed_pipeline"); else _explicitNullProperties?.Remove("failed_pipeline"); } }
+        private bool? _explicitNullValueFailedPipeline = default!;
         /// <summary>Enable/disable this notification</summary>
-        public bool? FixedPipeline { get; set; }
+        public bool? FixedPipeline { get => _explicitNullValueFixedPipeline; set { _explicitNullValueFixedPipeline = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fixed_pipeline"); else _explicitNullProperties?.Remove("fixed_pipeline"); } }
+        private bool? _explicitNullValueFixedPipeline = default!;
         /// <summary>Enable/disable this notification</summary>
-        public bool? IssueDue { get; set; }
+        public bool? IssueDue { get => _explicitNullValueIssueDue; set { _explicitNullValueIssueDue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issue_due"); else _explicitNullProperties?.Remove("issue_due"); } }
+        private bool? _explicitNullValueIssueDue = default!;
         /// <summary>The project notification level</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Level { get; set; }
+        public string? Level { get => _explicitNullValueLevel; set { _explicitNullValueLevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("level"); else _explicitNullProperties?.Remove("level"); } }
+        private string? _explicitNullValueLevel = default!;
 #nullable restore
 #else
-        public string Level { get; set; }
+        public string Level { get => _explicitNullValueLevel; set { _explicitNullValueLevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("level"); else _explicitNullProperties?.Remove("level"); } }
+        private string _explicitNullValueLevel = default!;
 #endif
         /// <summary>Enable/disable this notification</summary>
-        public bool? MergeMergeRequest { get; set; }
+        public bool? MergeMergeRequest { get => _explicitNullValueMergeMergeRequest; set { _explicitNullValueMergeMergeRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_merge_request"); else _explicitNullProperties?.Remove("merge_merge_request"); } }
+        private bool? _explicitNullValueMergeMergeRequest = default!;
         /// <summary>Enable/disable this notification</summary>
-        public bool? MergeWhenPipelineSucceeds { get; set; }
+        public bool? MergeWhenPipelineSucceeds { get => _explicitNullValueMergeWhenPipelineSucceeds; set { _explicitNullValueMergeWhenPipelineSucceeds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_when_pipeline_succeeds"); else _explicitNullProperties?.Remove("merge_when_pipeline_succeeds"); } }
+        private bool? _explicitNullValueMergeWhenPipelineSucceeds = default!;
         /// <summary>Enable/disable this notification</summary>
-        public bool? MovedProject { get; set; }
+        public bool? MovedProject { get => _explicitNullValueMovedProject; set { _explicitNullValueMovedProject = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("moved_project"); else _explicitNullProperties?.Remove("moved_project"); } }
+        private bool? _explicitNullValueMovedProject = default!;
         /// <summary>Enable/disable this notification</summary>
-        public bool? NewIssue { get; set; }
+        public bool? NewIssue { get => _explicitNullValueNewIssue; set { _explicitNullValueNewIssue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_issue"); else _explicitNullProperties?.Remove("new_issue"); } }
+        private bool? _explicitNullValueNewIssue = default!;
         /// <summary>Enable/disable this notification</summary>
-        public bool? NewMergeRequest { get; set; }
+        public bool? NewMergeRequest { get => _explicitNullValueNewMergeRequest; set { _explicitNullValueNewMergeRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_merge_request"); else _explicitNullProperties?.Remove("new_merge_request"); } }
+        private bool? _explicitNullValueNewMergeRequest = default!;
         /// <summary>Enable/disable this notification</summary>
-        public bool? NewNote { get; set; }
+        public bool? NewNote { get => _explicitNullValueNewNote; set { _explicitNullValueNewNote = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_note"); else _explicitNullProperties?.Remove("new_note"); } }
+        private bool? _explicitNullValueNewNote = default!;
         /// <summary>Enable/disable this notification</summary>
-        public bool? NewRelease { get; set; }
+        public bool? NewRelease { get => _explicitNullValueNewRelease; set { _explicitNullValueNewRelease = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_release"); else _explicitNullProperties?.Remove("new_release"); } }
+        private bool? _explicitNullValueNewRelease = default!;
         /// <summary>Enable/disable this notification</summary>
-        public bool? PushToMergeRequest { get; set; }
+        public bool? PushToMergeRequest { get => _explicitNullValuePushToMergeRequest; set { _explicitNullValuePushToMergeRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("push_to_merge_request"); else _explicitNullProperties?.Remove("push_to_merge_request"); } }
+        private bool? _explicitNullValuePushToMergeRequest = default!;
         /// <summary>Enable/disable this notification</summary>
-        public bool? ReassignIssue { get; set; }
+        public bool? ReassignIssue { get => _explicitNullValueReassignIssue; set { _explicitNullValueReassignIssue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reassign_issue"); else _explicitNullProperties?.Remove("reassign_issue"); } }
+        private bool? _explicitNullValueReassignIssue = default!;
         /// <summary>Enable/disable this notification</summary>
-        public bool? ReassignMergeRequest { get; set; }
+        public bool? ReassignMergeRequest { get => _explicitNullValueReassignMergeRequest; set { _explicitNullValueReassignMergeRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reassign_merge_request"); else _explicitNullProperties?.Remove("reassign_merge_request"); } }
+        private bool? _explicitNullValueReassignMergeRequest = default!;
         /// <summary>Enable/disable this notification</summary>
-        public bool? ReopenIssue { get; set; }
+        public bool? ReopenIssue { get => _explicitNullValueReopenIssue; set { _explicitNullValueReopenIssue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reopen_issue"); else _explicitNullProperties?.Remove("reopen_issue"); } }
+        private bool? _explicitNullValueReopenIssue = default!;
         /// <summary>Enable/disable this notification</summary>
-        public bool? ReopenMergeRequest { get; set; }
+        public bool? ReopenMergeRequest { get => _explicitNullValueReopenMergeRequest; set { _explicitNullValueReopenMergeRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reopen_merge_request"); else _explicitNullProperties?.Remove("reopen_merge_request"); } }
+        private bool? _explicitNullValueReopenMergeRequest = default!;
         /// <summary>Enable/disable this notification</summary>
-        public bool? ServiceAccountFailedPipeline { get; set; }
+        public bool? ServiceAccountFailedPipeline { get => _explicitNullValueServiceAccountFailedPipeline; set { _explicitNullValueServiceAccountFailedPipeline = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("service_account_failed_pipeline"); else _explicitNullProperties?.Remove("service_account_failed_pipeline"); } }
+        private bool? _explicitNullValueServiceAccountFailedPipeline = default!;
         /// <summary>Enable/disable this notification</summary>
-        public bool? ServiceAccountFixedPipeline { get; set; }
+        public bool? ServiceAccountFixedPipeline { get => _explicitNullValueServiceAccountFixedPipeline; set { _explicitNullValueServiceAccountFixedPipeline = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("service_account_fixed_pipeline"); else _explicitNullProperties?.Remove("service_account_fixed_pipeline"); } }
+        private bool? _explicitNullValueServiceAccountFixedPipeline = default!;
         /// <summary>Enable/disable this notification</summary>
-        public bool? ServiceAccountSuccessPipeline { get; set; }
+        public bool? ServiceAccountSuccessPipeline { get => _explicitNullValueServiceAccountSuccessPipeline; set { _explicitNullValueServiceAccountSuccessPipeline = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("service_account_success_pipeline"); else _explicitNullProperties?.Remove("service_account_success_pipeline"); } }
+        private bool? _explicitNullValueServiceAccountSuccessPipeline = default!;
         /// <summary>Enable/disable this notification</summary>
-        public bool? SuccessPipeline { get; set; }
+        public bool? SuccessPipeline { get => _explicitNullValueSuccessPipeline; set { _explicitNullValueSuccessPipeline = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("success_pipeline"); else _explicitNullProperties?.Remove("success_pipeline"); } }
+        private bool? _explicitNullValueSuccessPipeline = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdNotificationSettingsRequest"/> and sets the default values.
         /// </summary>
@@ -83,7 +139,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdNotificationSettingsRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdNotificationSettingsRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdNotificationSettingsRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -150,6 +206,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteBoolValue("service_account_fixed_pipeline", ServiceAccountFixedPipeline);
             writer.WriteBoolValue("service_account_success_pipeline", ServiceAccountSuccessPipeline);
             writer.WriteBoolValue("success_pipeline", SuccessPipeline);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

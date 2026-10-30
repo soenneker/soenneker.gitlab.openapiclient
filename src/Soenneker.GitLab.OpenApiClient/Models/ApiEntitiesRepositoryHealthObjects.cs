@@ -11,31 +11,60 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ApiEntitiesRepositoryHealthObjects : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("cruft_count") is { } nullNodeCruftCount && nullNodeCruftCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CruftCount = null;
+            if (parseNode.GetChildNode("keep_count") is { } nullNodeKeepCount && nullNodeKeepCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) KeepCount = null;
+            if (parseNode.GetChildNode("keep_size") is { } nullNodeKeepSize && nullNodeKeepSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) KeepSize = null;
+            if (parseNode.GetChildNode("loose_objects_count") is { } nullNodeLooseObjectsCount && nullNodeLooseObjectsCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LooseObjectsCount = null;
+            if (parseNode.GetChildNode("loose_objects_garbage_count") is { } nullNodeLooseObjectsGarbageCount && nullNodeLooseObjectsGarbageCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LooseObjectsGarbageCount = null;
+            if (parseNode.GetChildNode("packfile_count") is { } nullNodePackfileCount && nullNodePackfileCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PackfileCount = null;
+            if (parseNode.GetChildNode("recent_size") is { } nullNodeRecentSize && nullNodeRecentSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecentSize = null;
+            if (parseNode.GetChildNode("reverse_index_count") is { } nullNodeReverseIndexCount && nullNodeReverseIndexCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReverseIndexCount = null;
+            if (parseNode.GetChildNode("size") is { } nullNodeSize && nullNodeSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Size = null;
+            if (parseNode.GetChildNode("stale_loose_objects_count") is { } nullNodeStaleLooseObjectsCount && nullNodeStaleLooseObjectsCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StaleLooseObjectsCount = null;
+            if (parseNode.GetChildNode("stale_size") is { } nullNodeStaleSize && nullNodeStaleSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StaleSize = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The cruft_count property</summary>
-        public int? CruftCount { get; set; }
+        public int? CruftCount { get => _explicitNullValueCruftCount; set { _explicitNullValueCruftCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cruft_count"); else _explicitNullProperties?.Remove("cruft_count"); } }
+        private int? _explicitNullValueCruftCount = default!;
         /// <summary>The keep_count property</summary>
-        public int? KeepCount { get; set; }
+        public int? KeepCount { get => _explicitNullValueKeepCount; set { _explicitNullValueKeepCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("keep_count"); else _explicitNullProperties?.Remove("keep_count"); } }
+        private int? _explicitNullValueKeepCount = default!;
         /// <summary>The keep_size property</summary>
-        public int? KeepSize { get; set; }
+        public int? KeepSize { get => _explicitNullValueKeepSize; set { _explicitNullValueKeepSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("keep_size"); else _explicitNullProperties?.Remove("keep_size"); } }
+        private int? _explicitNullValueKeepSize = default!;
         /// <summary>The loose_objects_count property</summary>
-        public int? LooseObjectsCount { get; set; }
+        public int? LooseObjectsCount { get => _explicitNullValueLooseObjectsCount; set { _explicitNullValueLooseObjectsCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("loose_objects_count"); else _explicitNullProperties?.Remove("loose_objects_count"); } }
+        private int? _explicitNullValueLooseObjectsCount = default!;
         /// <summary>The loose_objects_garbage_count property</summary>
-        public int? LooseObjectsGarbageCount { get; set; }
+        public int? LooseObjectsGarbageCount { get => _explicitNullValueLooseObjectsGarbageCount; set { _explicitNullValueLooseObjectsGarbageCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("loose_objects_garbage_count"); else _explicitNullProperties?.Remove("loose_objects_garbage_count"); } }
+        private int? _explicitNullValueLooseObjectsGarbageCount = default!;
         /// <summary>The packfile_count property</summary>
-        public int? PackfileCount { get; set; }
+        public int? PackfileCount { get => _explicitNullValuePackfileCount; set { _explicitNullValuePackfileCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("packfile_count"); else _explicitNullProperties?.Remove("packfile_count"); } }
+        private int? _explicitNullValuePackfileCount = default!;
         /// <summary>The recent_size property</summary>
-        public int? RecentSize { get; set; }
+        public int? RecentSize { get => _explicitNullValueRecentSize; set { _explicitNullValueRecentSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recent_size"); else _explicitNullProperties?.Remove("recent_size"); } }
+        private int? _explicitNullValueRecentSize = default!;
         /// <summary>The reverse_index_count property</summary>
-        public int? ReverseIndexCount { get; set; }
+        public int? ReverseIndexCount { get => _explicitNullValueReverseIndexCount; set { _explicitNullValueReverseIndexCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reverse_index_count"); else _explicitNullProperties?.Remove("reverse_index_count"); } }
+        private int? _explicitNullValueReverseIndexCount = default!;
         /// <summary>The size property</summary>
-        public int? Size { get; set; }
+        public int? Size { get => _explicitNullValueSize; set { _explicitNullValueSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("size"); else _explicitNullProperties?.Remove("size"); } }
+        private int? _explicitNullValueSize = default!;
         /// <summary>The stale_loose_objects_count property</summary>
-        public int? StaleLooseObjectsCount { get; set; }
+        public int? StaleLooseObjectsCount { get => _explicitNullValueStaleLooseObjectsCount; set { _explicitNullValueStaleLooseObjectsCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stale_loose_objects_count"); else _explicitNullProperties?.Remove("stale_loose_objects_count"); } }
+        private int? _explicitNullValueStaleLooseObjectsCount = default!;
         /// <summary>The stale_size property</summary>
-        public int? StaleSize { get; set; }
+        public int? StaleSize { get => _explicitNullValueStaleSize; set { _explicitNullValueStaleSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stale_size"); else _explicitNullProperties?.Remove("stale_size"); } }
+        private int? _explicitNullValueStaleSize = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRepositoryHealthObjects"/> and sets the default values.
         /// </summary>
@@ -51,7 +80,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRepositoryHealthObjects CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRepositoryHealthObjects();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRepositoryHealthObjects(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -92,6 +121,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteIntValue("size", Size);
             writer.WriteIntValue("stale_loose_objects_count", StaleLooseObjectsCount);
             writer.WriteIntValue("stale_size", StaleSize);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

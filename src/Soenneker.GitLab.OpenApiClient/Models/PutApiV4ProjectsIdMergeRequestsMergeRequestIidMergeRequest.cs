@@ -11,42 +11,68 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PutApiV4ProjectsIdMergeRequestsMergeRequestIidMergeRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("auto_merge") is { } nullNodeAutoMerge && nullNodeAutoMerge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutoMerge = null;
+            if (parseNode.GetChildNode("merge_commit_message") is { } nullNodeMergeCommitMessage && nullNodeMergeCommitMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MergeCommitMessage = null;
+            if (parseNode.GetChildNode("merge_when_pipeline_succeeds") is { } nullNodeMergeWhenPipelineSucceeds && nullNodeMergeWhenPipelineSucceeds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MergeWhenPipelineSucceeds = null;
+            if (parseNode.GetChildNode("sha") is { } nullNodeSha && nullNodeSha.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sha = null;
+            if (parseNode.GetChildNode("should_remove_source_branch") is { } nullNodeShouldRemoveSourceBranch && nullNodeShouldRemoveSourceBranch.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShouldRemoveSourceBranch = null;
+            if (parseNode.GetChildNode("skip_merge_train") is { } nullNodeSkipMergeTrain && nullNodeSkipMergeTrain.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SkipMergeTrain = null;
+            if (parseNode.GetChildNode("squash") is { } nullNodeSquash && nullNodeSquash.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Squash = null;
+            if (parseNode.GetChildNode("squash_commit_message") is { } nullNodeSquashCommitMessage && nullNodeSquashCommitMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SquashCommitMessage = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>If `true`, the merge request merges when checks pass.</summary>
-        public bool? AutoMerge { get; set; }
+        public bool? AutoMerge { get => _explicitNullValueAutoMerge; set { _explicitNullValueAutoMerge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auto_merge"); else _explicitNullProperties?.Remove("auto_merge"); } }
+        private bool? _explicitNullValueAutoMerge = default!;
         /// <summary>Custom merge commit message.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MergeCommitMessage { get; set; }
+        public string? MergeCommitMessage { get => _explicitNullValueMergeCommitMessage; set { _explicitNullValueMergeCommitMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_commit_message"); else _explicitNullProperties?.Remove("merge_commit_message"); } }
+        private string? _explicitNullValueMergeCommitMessage = default!;
 #nullable restore
 #else
-        public string MergeCommitMessage { get; set; }
+        public string MergeCommitMessage { get => _explicitNullValueMergeCommitMessage; set { _explicitNullValueMergeCommitMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_commit_message"); else _explicitNullProperties?.Remove("merge_commit_message"); } }
+        private string _explicitNullValueMergeCommitMessage = default!;
 #endif
         /// <summary>If `true`, merges the merge request automatically once the pipeline succeeds. [Deprecated](https://gitlab.com/gitlab-org/gitlab/-/issues/521291) in GitLab 17.11. Use `auto_merge` instead.</summary>
-        public bool? MergeWhenPipelineSucceeds { get; set; }
+        public bool? MergeWhenPipelineSucceeds { get => _explicitNullValueMergeWhenPipelineSucceeds; set { _explicitNullValueMergeWhenPipelineSucceeds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_when_pipeline_succeeds"); else _explicitNullProperties?.Remove("merge_when_pipeline_succeeds"); } }
+        private bool? _explicitNullValueMergeWhenPipelineSucceeds = default!;
         /// <summary>SHA that must match the HEAD of the source branch, otherwise the merge fails. Use to ensure that only reviewed commits are merged. Required if the [require a commit SHA on the merge requests API](https://docs.gitlab.com/user/group/manage/#require-a-commit-sha-on-the-merge-requests-api) setting is enabled for the group or instance.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Sha { get; set; }
+        public string? Sha { get => _explicitNullValueSha; set { _explicitNullValueSha = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sha"); else _explicitNullProperties?.Remove("sha"); } }
+        private string? _explicitNullValueSha = default!;
 #nullable restore
 #else
-        public string Sha { get; set; }
+        public string Sha { get => _explicitNullValueSha; set { _explicitNullValueSha = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sha"); else _explicitNullProperties?.Remove("sha"); } }
+        private string _explicitNullValueSha = default!;
 #endif
         /// <summary>If `true`, removes the source branch.</summary>
-        public bool? ShouldRemoveSourceBranch { get; set; }
+        public bool? ShouldRemoveSourceBranch { get => _explicitNullValueShouldRemoveSourceBranch; set { _explicitNullValueShouldRemoveSourceBranch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("should_remove_source_branch"); else _explicitNullProperties?.Remove("should_remove_source_branch"); } }
+        private bool? _explicitNullValueShouldRemoveSourceBranch = default!;
         /// <summary>If `true`, skips the merge train restart when merging immediately in a project configured for merge trains.</summary>
-        public bool? SkipMergeTrain { get; set; }
+        public bool? SkipMergeTrain { get => _explicitNullValueSkipMergeTrain; set { _explicitNullValueSkipMergeTrain = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("skip_merge_train"); else _explicitNullProperties?.Remove("skip_merge_train"); } }
+        private bool? _explicitNullValueSkipMergeTrain = default!;
         /// <summary>If `true`, squashes all commits into a single commit on merge.</summary>
-        public bool? Squash { get; set; }
+        public bool? Squash { get => _explicitNullValueSquash; set { _explicitNullValueSquash = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("squash"); else _explicitNullProperties?.Remove("squash"); } }
+        private bool? _explicitNullValueSquash = default!;
         /// <summary>Custom squash commit message.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SquashCommitMessage { get; set; }
+        public string? SquashCommitMessage { get => _explicitNullValueSquashCommitMessage; set { _explicitNullValueSquashCommitMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("squash_commit_message"); else _explicitNullProperties?.Remove("squash_commit_message"); } }
+        private string? _explicitNullValueSquashCommitMessage = default!;
 #nullable restore
 #else
-        public string SquashCommitMessage { get; set; }
+        public string SquashCommitMessage { get => _explicitNullValueSquashCommitMessage; set { _explicitNullValueSquashCommitMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("squash_commit_message"); else _explicitNullProperties?.Remove("squash_commit_message"); } }
+        private string _explicitNullValueSquashCommitMessage = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdMergeRequestsMergeRequestIidMergeRequest"/> and sets the default values.
@@ -63,7 +89,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdMergeRequestsMergeRequestIidMergeRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdMergeRequestsMergeRequestIidMergeRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdMergeRequestsMergeRequestIidMergeRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -98,6 +124,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteBoolValue("skip_merge_train", SkipMergeTrain);
             writer.WriteBoolValue("squash", Squash);
             writer.WriteStringValue("squash_commit_message", SquashCommitMessage);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

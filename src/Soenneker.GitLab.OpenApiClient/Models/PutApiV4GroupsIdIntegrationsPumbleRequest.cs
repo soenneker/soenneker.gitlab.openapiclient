@@ -11,53 +11,94 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PutApiV4GroupsIdIntegrationsPumbleRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("branches_to_be_notified") is { } nullNodeBranchesToBeNotified && nullNodeBranchesToBeNotified.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BranchesToBeNotified = null;
+            if (parseNode.GetChildNode("confidential_issues_events") is { } nullNodeConfidentialIssuesEvents && nullNodeConfidentialIssuesEvents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConfidentialIssuesEvents = null;
+            if (parseNode.GetChildNode("confidential_note_events") is { } nullNodeConfidentialNoteEvents && nullNodeConfidentialNoteEvents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConfidentialNoteEvents = null;
+            if (parseNode.GetChildNode("confidential_work_item_events") is { } nullNodeConfidentialWorkItemEvents && nullNodeConfidentialWorkItemEvents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConfidentialWorkItemEvents = null;
+            if (parseNode.GetChildNode("issues_events") is { } nullNodeIssuesEvents && nullNodeIssuesEvents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssuesEvents = null;
+            if (parseNode.GetChildNode("merge_requests_events") is { } nullNodeMergeRequestsEvents && nullNodeMergeRequestsEvents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MergeRequestsEvents = null;
+            if (parseNode.GetChildNode("note_events") is { } nullNodeNoteEvents && nullNodeNoteEvents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NoteEvents = null;
+            if (parseNode.GetChildNode("notify_only_broken_pipelines") is { } nullNodeNotifyOnlyBrokenPipelines && nullNodeNotifyOnlyBrokenPipelines.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotifyOnlyBrokenPipelines = null;
+            if (parseNode.GetChildNode("notify_only_when_pipeline_status_changes") is { } nullNodeNotifyOnlyWhenPipelineStatusChanges && nullNodeNotifyOnlyWhenPipelineStatusChanges.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotifyOnlyWhenPipelineStatusChanges = null;
+            if (parseNode.GetChildNode("pipeline_events") is { } nullNodePipelineEvents && nullNodePipelineEvents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PipelineEvents = null;
+            if (parseNode.GetChildNode("push_events") is { } nullNodePushEvents && nullNodePushEvents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PushEvents = null;
+            if (parseNode.GetChildNode("tag_push_events") is { } nullNodeTagPushEvents && nullNodeTagPushEvents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TagPushEvents = null;
+            if (parseNode.GetChildNode("use_inherited_settings") is { } nullNodeUseInheritedSettings && nullNodeUseInheritedSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UseInheritedSettings = null;
+            if (parseNode.GetChildNode("webhook") is { } nullNodeWebhook && nullNodeWebhook.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Webhook = null;
+            if (parseNode.GetChildNode("wiki_page_events") is { } nullNodeWikiPageEvents && nullNodeWikiPageEvents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WikiPageEvents = null;
+            if (parseNode.GetChildNode("work_item_events") is { } nullNodeWorkItemEvents && nullNodeWorkItemEvents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkItemEvents = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Branches to send notifications for. Valid options are `all`, `default`, `protected`, and `default_and_protected`. The default value is `default`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BranchesToBeNotified { get; set; }
+        public string? BranchesToBeNotified { get => _explicitNullValueBranchesToBeNotified; set { _explicitNullValueBranchesToBeNotified = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("branches_to_be_notified"); else _explicitNullProperties?.Remove("branches_to_be_notified"); } }
+        private string? _explicitNullValueBranchesToBeNotified = default!;
 #nullable restore
 #else
-        public string BranchesToBeNotified { get; set; }
+        public string BranchesToBeNotified { get => _explicitNullValueBranchesToBeNotified; set { _explicitNullValueBranchesToBeNotified = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("branches_to_be_notified"); else _explicitNullProperties?.Remove("branches_to_be_notified"); } }
+        private string _explicitNullValueBranchesToBeNotified = default!;
 #endif
         /// <summary>Trigger event when a confidential work item is created, updated, or closed.</summary>
-        public bool? ConfidentialIssuesEvents { get; set; }
+        public bool? ConfidentialIssuesEvents { get => _explicitNullValueConfidentialIssuesEvents; set { _explicitNullValueConfidentialIssuesEvents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("confidential_issues_events"); else _explicitNullProperties?.Remove("confidential_issues_events"); } }
+        private bool? _explicitNullValueConfidentialIssuesEvents = default!;
         /// <summary>Trigger event for new comments on confidential work items.</summary>
-        public bool? ConfidentialNoteEvents { get; set; }
+        public bool? ConfidentialNoteEvents { get => _explicitNullValueConfidentialNoteEvents; set { _explicitNullValueConfidentialNoteEvents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("confidential_note_events"); else _explicitNullProperties?.Remove("confidential_note_events"); } }
+        private bool? _explicitNullValueConfidentialNoteEvents = default!;
         /// <summary>The confidential_work_item_events property</summary>
-        public bool? ConfidentialWorkItemEvents { get; set; }
+        public bool? ConfidentialWorkItemEvents { get => _explicitNullValueConfidentialWorkItemEvents; set { _explicitNullValueConfidentialWorkItemEvents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("confidential_work_item_events"); else _explicitNullProperties?.Remove("confidential_work_item_events"); } }
+        private bool? _explicitNullValueConfidentialWorkItemEvents = default!;
         /// <summary>Trigger event when a work item is created, updated, or closed.</summary>
-        public bool? IssuesEvents { get; set; }
+        public bool? IssuesEvents { get => _explicitNullValueIssuesEvents; set { _explicitNullValueIssuesEvents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issues_events"); else _explicitNullProperties?.Remove("issues_events"); } }
+        private bool? _explicitNullValueIssuesEvents = default!;
         /// <summary>Trigger event when a merge request is created, updated, or merged.</summary>
-        public bool? MergeRequestsEvents { get; set; }
+        public bool? MergeRequestsEvents { get => _explicitNullValueMergeRequestsEvents; set { _explicitNullValueMergeRequestsEvents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_requests_events"); else _explicitNullProperties?.Remove("merge_requests_events"); } }
+        private bool? _explicitNullValueMergeRequestsEvents = default!;
         /// <summary>Trigger event for new comments.</summary>
-        public bool? NoteEvents { get; set; }
+        public bool? NoteEvents { get => _explicitNullValueNoteEvents; set { _explicitNullValueNoteEvents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("note_events"); else _explicitNullProperties?.Remove("note_events"); } }
+        private bool? _explicitNullValueNoteEvents = default!;
         /// <summary>Send notifications for broken pipelines.</summary>
-        public bool? NotifyOnlyBrokenPipelines { get; set; }
+        public bool? NotifyOnlyBrokenPipelines { get => _explicitNullValueNotifyOnlyBrokenPipelines; set { _explicitNullValueNotifyOnlyBrokenPipelines = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notify_only_broken_pipelines"); else _explicitNullProperties?.Remove("notify_only_broken_pipelines"); } }
+        private bool? _explicitNullValueNotifyOnlyBrokenPipelines = default!;
         /// <summary>Send notifications only when the pipeline status changes.</summary>
-        public bool? NotifyOnlyWhenPipelineStatusChanges { get; set; }
+        public bool? NotifyOnlyWhenPipelineStatusChanges { get => _explicitNullValueNotifyOnlyWhenPipelineStatusChanges; set { _explicitNullValueNotifyOnlyWhenPipelineStatusChanges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notify_only_when_pipeline_status_changes"); else _explicitNullProperties?.Remove("notify_only_when_pipeline_status_changes"); } }
+        private bool? _explicitNullValueNotifyOnlyWhenPipelineStatusChanges = default!;
         /// <summary>Trigger event when a pipeline status changes.</summary>
-        public bool? PipelineEvents { get; set; }
+        public bool? PipelineEvents { get => _explicitNullValuePipelineEvents; set { _explicitNullValuePipelineEvents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pipeline_events"); else _explicitNullProperties?.Remove("pipeline_events"); } }
+        private bool? _explicitNullValuePipelineEvents = default!;
         /// <summary>Trigger event for pushes to the repository.</summary>
-        public bool? PushEvents { get; set; }
+        public bool? PushEvents { get => _explicitNullValuePushEvents; set { _explicitNullValuePushEvents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("push_events"); else _explicitNullProperties?.Remove("push_events"); } }
+        private bool? _explicitNullValuePushEvents = default!;
         /// <summary>Trigger event for new tags pushed to the repository.</summary>
-        public bool? TagPushEvents { get; set; }
+        public bool? TagPushEvents { get => _explicitNullValueTagPushEvents; set { _explicitNullValueTagPushEvents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tag_push_events"); else _explicitNullProperties?.Remove("tag_push_events"); } }
+        private bool? _explicitNullValueTagPushEvents = default!;
         /// <summary>Indicates whether to inherit the default settings. Defaults to `false`.</summary>
-        public bool? UseInheritedSettings { get; set; }
+        public bool? UseInheritedSettings { get => _explicitNullValueUseInheritedSettings; set { _explicitNullValueUseInheritedSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("use_inherited_settings"); else _explicitNullProperties?.Remove("use_inherited_settings"); } }
+        private bool? _explicitNullValueUseInheritedSettings = default!;
         /// <summary>The Pumble webhook (for example, `https://api.pumble.com/workspaces/x/...`).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Webhook { get; set; }
+        public string? Webhook { get => _explicitNullValueWebhook; set { _explicitNullValueWebhook = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("webhook"); else _explicitNullProperties?.Remove("webhook"); } }
+        private string? _explicitNullValueWebhook = default!;
 #nullable restore
 #else
-        public string Webhook { get; set; }
+        public string Webhook { get => _explicitNullValueWebhook; set { _explicitNullValueWebhook = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("webhook"); else _explicitNullProperties?.Remove("webhook"); } }
+        private string _explicitNullValueWebhook = default!;
 #endif
         /// <summary>Trigger event when a wiki page is created or updated.</summary>
-        public bool? WikiPageEvents { get; set; }
+        public bool? WikiPageEvents { get => _explicitNullValueWikiPageEvents; set { _explicitNullValueWikiPageEvents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wiki_page_events"); else _explicitNullProperties?.Remove("wiki_page_events"); } }
+        private bool? _explicitNullValueWikiPageEvents = default!;
         /// <summary>The work_item_events property</summary>
-        public bool? WorkItemEvents { get; set; }
+        public bool? WorkItemEvents { get => _explicitNullValueWorkItemEvents; set { _explicitNullValueWorkItemEvents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("work_item_events"); else _explicitNullProperties?.Remove("work_item_events"); } }
+        private bool? _explicitNullValueWorkItemEvents = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdIntegrationsPumbleRequest"/> and sets the default values.
         /// </summary>
@@ -73,7 +114,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdIntegrationsPumbleRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdIntegrationsPumbleRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdIntegrationsPumbleRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -124,6 +165,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("webhook", Webhook);
             writer.WriteBoolValue("wiki_page_events", WikiPageEvents);
             writer.WriteBoolValue("work_item_events", WorkItemEvents);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

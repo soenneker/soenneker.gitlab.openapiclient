@@ -12,15 +12,28 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ApiEntitiesGitlabSubscriptionBilling : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("subscription_end_date") is { } nullNodeSubscriptionEndDate && nullNodeSubscriptionEndDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubscriptionEndDate = null;
+            if (parseNode.GetChildNode("subscription_start_date") is { } nullNodeSubscriptionStartDate && nullNodeSubscriptionStartDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubscriptionStartDate = null;
+            if (parseNode.GetChildNode("trial_ends_on") is { } nullNodeTrialEndsOn && nullNodeTrialEndsOn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrialEndsOn = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The subscription_end_date property</summary>
-        public Date? SubscriptionEndDate { get; set; }
+        public Date? SubscriptionEndDate { get => _explicitNullValueSubscriptionEndDate; set { _explicitNullValueSubscriptionEndDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscription_end_date"); else _explicitNullProperties?.Remove("subscription_end_date"); } }
+        private Date? _explicitNullValueSubscriptionEndDate = default!;
         /// <summary>The subscription_start_date property</summary>
-        public Date? SubscriptionStartDate { get; set; }
+        public Date? SubscriptionStartDate { get => _explicitNullValueSubscriptionStartDate; set { _explicitNullValueSubscriptionStartDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscription_start_date"); else _explicitNullProperties?.Remove("subscription_start_date"); } }
+        private Date? _explicitNullValueSubscriptionStartDate = default!;
         /// <summary>The trial_ends_on property</summary>
-        public Date? TrialEndsOn { get; set; }
+        public Date? TrialEndsOn { get => _explicitNullValueTrialEndsOn; set { _explicitNullValueTrialEndsOn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trial_ends_on"); else _explicitNullProperties?.Remove("trial_ends_on"); } }
+        private Date? _explicitNullValueTrialEndsOn = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGitlabSubscriptionBilling"/> and sets the default values.
         /// </summary>
@@ -36,7 +49,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGitlabSubscriptionBilling CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGitlabSubscriptionBilling();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGitlabSubscriptionBilling(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -61,6 +74,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteDateValue("subscription_end_date", SubscriptionEndDate);
             writer.WriteDateValue("subscription_start_date", SubscriptionStartDate);
             writer.WriteDateValue("trial_ends_on", TrialEndsOn);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

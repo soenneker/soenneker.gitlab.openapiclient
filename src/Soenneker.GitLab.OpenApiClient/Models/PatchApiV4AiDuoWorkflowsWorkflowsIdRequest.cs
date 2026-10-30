@@ -11,24 +11,37 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PatchApiV4AiDuoWorkflowsWorkflowsIdRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("drop_reason") is { } nullNodeDropReason && nullNodeDropReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DropReason = null;
+            if (parseNode.GetChildNode("status_event") is { } nullNodeStatusEvent && nullNodeStatusEvent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatusEvent = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Why the service dropped the session. Ignored unless status_event is drop; a value the service may not name is recorded as api_reported</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DropReason { get; set; }
+        public string? DropReason { get => _explicitNullValueDropReason; set { _explicitNullValueDropReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("drop_reason"); else _explicitNullProperties?.Remove("drop_reason"); } }
+        private string? _explicitNullValueDropReason = default!;
 #nullable restore
 #else
-        public string DropReason { get; set; }
+        public string DropReason { get => _explicitNullValueDropReason; set { _explicitNullValueDropReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("drop_reason"); else _explicitNullProperties?.Remove("drop_reason"); } }
+        private string _explicitNullValueDropReason = default!;
 #endif
         /// <summary>Status event to apply to the workflow, for example `finish`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StatusEvent { get; set; }
+        public string? StatusEvent { get => _explicitNullValueStatusEvent; set { _explicitNullValueStatusEvent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status_event"); else _explicitNullProperties?.Remove("status_event"); } }
+        private string? _explicitNullValueStatusEvent = default!;
 #nullable restore
 #else
-        public string StatusEvent { get; set; }
+        public string StatusEvent { get => _explicitNullValueStatusEvent; set { _explicitNullValueStatusEvent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status_event"); else _explicitNullProperties?.Remove("status_event"); } }
+        private string _explicitNullValueStatusEvent = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PatchApiV4AiDuoWorkflowsWorkflowsIdRequest"/> and sets the default values.
@@ -45,7 +58,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.PatchApiV4AiDuoWorkflowsWorkflowsIdRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.PatchApiV4AiDuoWorkflowsWorkflowsIdRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.PatchApiV4AiDuoWorkflowsWorkflowsIdRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +81,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("drop_reason", DropReason);
             writer.WriteStringValue("status_event", StatusEvent);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

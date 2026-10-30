@@ -11,78 +11,115 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ApiEntitiesMergeRequestDiffFull : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("base_commit_sha") is { } nullNodeBaseCommitSha && nullNodeBaseCommitSha.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BaseCommitSha = null;
+            if (parseNode.GetChildNode("commits") is { } nullNodeCommits && nullNodeCommits.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Commits = null;
+            if (parseNode.GetChildNode("created_at") is { } nullNodeCreatedAt && nullNodeCreatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedAt = null;
+            if (parseNode.GetChildNode("diffs") is { } nullNodeDiffs && nullNodeDiffs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Diffs = null;
+            if (parseNode.GetChildNode("head_commit_sha") is { } nullNodeHeadCommitSha && nullNodeHeadCommitSha.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HeadCommitSha = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("merge_request_id") is { } nullNodeMergeRequestId && nullNodeMergeRequestId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MergeRequestId = null;
+            if (parseNode.GetChildNode("patch_id_sha") is { } nullNodePatchIdSha && nullNodePatchIdSha.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PatchIdSha = null;
+            if (parseNode.GetChildNode("real_size") is { } nullNodeRealSize && nullNodeRealSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RealSize = null;
+            if (parseNode.GetChildNode("start_commit_sha") is { } nullNodeStartCommitSha && nullNodeStartCommitSha.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartCommitSha = null;
+            if (parseNode.GetChildNode("state") is { } nullNodeState && nullNodeState.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) State = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The base_commit_sha property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BaseCommitSha { get; set; }
+        public string? BaseCommitSha { get => _explicitNullValueBaseCommitSha; set { _explicitNullValueBaseCommitSha = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("base_commit_sha"); else _explicitNullProperties?.Remove("base_commit_sha"); } }
+        private string? _explicitNullValueBaseCommitSha = default!;
 #nullable restore
 #else
-        public string BaseCommitSha { get; set; }
+        public string BaseCommitSha { get => _explicitNullValueBaseCommitSha; set { _explicitNullValueBaseCommitSha = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("base_commit_sha"); else _explicitNullProperties?.Remove("base_commit_sha"); } }
+        private string _explicitNullValueBaseCommitSha = default!;
 #endif
         /// <summary>The commits property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommit>? Commits { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommit>? Commits { get => _explicitNullValueCommits; set { _explicitNullValueCommits = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commits"); else _explicitNullProperties?.Remove("commits"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommit>? _explicitNullValueCommits = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommit> Commits { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommit> Commits { get => _explicitNullValueCommits; set { _explicitNullValueCommits = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commits"); else _explicitNullProperties?.Remove("commits"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommit> _explicitNullValueCommits = default!;
 #endif
         /// <summary>The created_at property</summary>
-        public DateTimeOffset? CreatedAt { get; set; }
+        public DateTimeOffset? CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_at"); else _explicitNullProperties?.Remove("created_at"); } }
+        private DateTimeOffset? _explicitNullValueCreatedAt = default!;
         /// <summary>The diffs property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDiff>? Diffs { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDiff>? Diffs { get => _explicitNullValueDiffs; set { _explicitNullValueDiffs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("diffs"); else _explicitNullProperties?.Remove("diffs"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDiff>? _explicitNullValueDiffs = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDiff> Diffs { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDiff> Diffs { get => _explicitNullValueDiffs; set { _explicitNullValueDiffs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("diffs"); else _explicitNullProperties?.Remove("diffs"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDiff> _explicitNullValueDiffs = default!;
 #endif
         /// <summary>The head_commit_sha property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HeadCommitSha { get; set; }
+        public string? HeadCommitSha { get => _explicitNullValueHeadCommitSha; set { _explicitNullValueHeadCommitSha = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("head_commit_sha"); else _explicitNullProperties?.Remove("head_commit_sha"); } }
+        private string? _explicitNullValueHeadCommitSha = default!;
 #nullable restore
 #else
-        public string HeadCommitSha { get; set; }
+        public string HeadCommitSha { get => _explicitNullValueHeadCommitSha; set { _explicitNullValueHeadCommitSha = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("head_commit_sha"); else _explicitNullProperties?.Remove("head_commit_sha"); } }
+        private string _explicitNullValueHeadCommitSha = default!;
 #endif
         /// <summary>The id property</summary>
-        public long? Id { get; set; }
+        public long? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private long? _explicitNullValueId = default!;
         /// <summary>The merge_request_id property</summary>
-        public long? MergeRequestId { get; set; }
+        public long? MergeRequestId { get => _explicitNullValueMergeRequestId; set { _explicitNullValueMergeRequestId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_request_id"); else _explicitNullProperties?.Remove("merge_request_id"); } }
+        private long? _explicitNullValueMergeRequestId = default!;
         /// <summary>The patch_id_sha property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PatchIdSha { get; set; }
+        public string? PatchIdSha { get => _explicitNullValuePatchIdSha; set { _explicitNullValuePatchIdSha = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("patch_id_sha"); else _explicitNullProperties?.Remove("patch_id_sha"); } }
+        private string? _explicitNullValuePatchIdSha = default!;
 #nullable restore
 #else
-        public string PatchIdSha { get; set; }
+        public string PatchIdSha { get => _explicitNullValuePatchIdSha; set { _explicitNullValuePatchIdSha = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("patch_id_sha"); else _explicitNullProperties?.Remove("patch_id_sha"); } }
+        private string _explicitNullValuePatchIdSha = default!;
 #endif
         /// <summary>The real_size property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RealSize { get; set; }
+        public string? RealSize { get => _explicitNullValueRealSize; set { _explicitNullValueRealSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("real_size"); else _explicitNullProperties?.Remove("real_size"); } }
+        private string? _explicitNullValueRealSize = default!;
 #nullable restore
 #else
-        public string RealSize { get; set; }
+        public string RealSize { get => _explicitNullValueRealSize; set { _explicitNullValueRealSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("real_size"); else _explicitNullProperties?.Remove("real_size"); } }
+        private string _explicitNullValueRealSize = default!;
 #endif
         /// <summary>The start_commit_sha property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StartCommitSha { get; set; }
+        public string? StartCommitSha { get => _explicitNullValueStartCommitSha; set { _explicitNullValueStartCommitSha = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_commit_sha"); else _explicitNullProperties?.Remove("start_commit_sha"); } }
+        private string? _explicitNullValueStartCommitSha = default!;
 #nullable restore
 #else
-        public string StartCommitSha { get; set; }
+        public string StartCommitSha { get => _explicitNullValueStartCommitSha; set { _explicitNullValueStartCommitSha = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_commit_sha"); else _explicitNullProperties?.Remove("start_commit_sha"); } }
+        private string _explicitNullValueStartCommitSha = default!;
 #endif
         /// <summary>The state property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? State { get; set; }
+        public string? State { get => _explicitNullValueState; set { _explicitNullValueState = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("state"); else _explicitNullProperties?.Remove("state"); } }
+        private string? _explicitNullValueState = default!;
 #nullable restore
 #else
-        public string State { get; set; }
+        public string State { get => _explicitNullValueState; set { _explicitNullValueState = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("state"); else _explicitNullProperties?.Remove("state"); } }
+        private string _explicitNullValueState = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequestDiffFull"/> and sets the default values.
@@ -99,7 +136,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequestDiffFull CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequestDiffFull();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequestDiffFull(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -140,6 +177,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("real_size", RealSize);
             writer.WriteStringValue("start_commit_sha", StartCommitSha);
             writer.WriteStringValue("state", State);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

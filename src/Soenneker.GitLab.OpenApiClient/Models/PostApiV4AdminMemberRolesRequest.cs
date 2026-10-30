@@ -11,37 +11,62 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostApiV4AdminMemberRolesRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("read_admin_cicd") is { } nullNodeReadAdminCicd && nullNodeReadAdminCicd.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReadAdminCicd = null;
+            if (parseNode.GetChildNode("read_admin_groups") is { } nullNodeReadAdminGroups && nullNodeReadAdminGroups.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReadAdminGroups = null;
+            if (parseNode.GetChildNode("read_admin_monitoring") is { } nullNodeReadAdminMonitoring && nullNodeReadAdminMonitoring.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReadAdminMonitoring = null;
+            if (parseNode.GetChildNode("read_admin_projects") is { } nullNodeReadAdminProjects && nullNodeReadAdminProjects.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReadAdminProjects = null;
+            if (parseNode.GetChildNode("read_admin_subscription") is { } nullNodeReadAdminSubscription && nullNodeReadAdminSubscription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReadAdminSubscription = null;
+            if (parseNode.GetChildNode("read_admin_users") is { } nullNodeReadAdminUsers && nullNodeReadAdminUsers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReadAdminUsers = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Description for role.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get; set; }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get; set; }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>Name for the role. Defaults to `Admin role - custom`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>Read CI/CD details for runners and jobs in the Admin Area.</summary>
-        public bool? ReadAdminCicd { get; set; }
+        public bool? ReadAdminCicd { get => _explicitNullValueReadAdminCicd; set { _explicitNullValueReadAdminCicd = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("read_admin_cicd"); else _explicitNullProperties?.Remove("read_admin_cicd"); } }
+        private bool? _explicitNullValueReadAdminCicd = default!;
         /// <summary>Read group details in the Admin Area.</summary>
-        public bool? ReadAdminGroups { get; set; }
+        public bool? ReadAdminGroups { get => _explicitNullValueReadAdminGroups; set { _explicitNullValueReadAdminGroups = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("read_admin_groups"); else _explicitNullProperties?.Remove("read_admin_groups"); } }
+        private bool? _explicitNullValueReadAdminGroups = default!;
         /// <summary>Read system information such as background migrations, health checks, and Gitaly in the Admin Area.</summary>
-        public bool? ReadAdminMonitoring { get; set; }
+        public bool? ReadAdminMonitoring { get => _explicitNullValueReadAdminMonitoring; set { _explicitNullValueReadAdminMonitoring = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("read_admin_monitoring"); else _explicitNullProperties?.Remove("read_admin_monitoring"); } }
+        private bool? _explicitNullValueReadAdminMonitoring = default!;
         /// <summary>Read project details in the Admin Area.</summary>
-        public bool? ReadAdminProjects { get; set; }
+        public bool? ReadAdminProjects { get => _explicitNullValueReadAdminProjects; set { _explicitNullValueReadAdminProjects = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("read_admin_projects"); else _explicitNullProperties?.Remove("read_admin_projects"); } }
+        private bool? _explicitNullValueReadAdminProjects = default!;
         /// <summary>Read subscription details in the Admin area.</summary>
-        public bool? ReadAdminSubscription { get; set; }
+        public bool? ReadAdminSubscription { get => _explicitNullValueReadAdminSubscription; set { _explicitNullValueReadAdminSubscription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("read_admin_subscription"); else _explicitNullProperties?.Remove("read_admin_subscription"); } }
+        private bool? _explicitNullValueReadAdminSubscription = default!;
         /// <summary>Read the user list and user details in the Admin area.</summary>
-        public bool? ReadAdminUsers { get; set; }
+        public bool? ReadAdminUsers { get => _explicitNullValueReadAdminUsers; set { _explicitNullValueReadAdminUsers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("read_admin_users"); else _explicitNullProperties?.Remove("read_admin_users"); } }
+        private bool? _explicitNullValueReadAdminUsers = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4AdminMemberRolesRequest"/> and sets the default values.
         /// </summary>
@@ -63,7 +88,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4AdminMemberRolesRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4AdminMemberRolesRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4AdminMemberRolesRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -98,6 +123,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteBoolValue("read_admin_projects", ReadAdminProjects);
             writer.WriteBoolValue("read_admin_subscription", ReadAdminSubscription);
             writer.WriteBoolValue("read_admin_users", ReadAdminUsers);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

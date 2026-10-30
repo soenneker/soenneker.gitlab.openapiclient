@@ -11,20 +11,34 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostApiV4ProjectsIdRegistryProtectionTagRulesRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("minimum_access_level_for_delete") is { } nullNodeMinimumAccessLevelForDelete && nullNodeMinimumAccessLevelForDelete.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinimumAccessLevelForDelete = null;
+            if (parseNode.GetChildNode("minimum_access_level_for_push") is { } nullNodeMinimumAccessLevelForPush && nullNodeMinimumAccessLevelForPush.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinimumAccessLevelForPush = null;
+            if (parseNode.GetChildNode("tag_name_pattern") is { } nullNodeTagNamePattern && nullNodeTagNamePattern.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TagNamePattern = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Minimum GitLab access level required to delete container tags.</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdRegistryProtectionTagRulesRequestMinimumAccessLevelForDelete? MinimumAccessLevelForDelete { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdRegistryProtectionTagRulesRequestMinimumAccessLevelForDelete? MinimumAccessLevelForDelete { get => _explicitNullValueMinimumAccessLevelForDelete; set { _explicitNullValueMinimumAccessLevelForDelete = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minimum_access_level_for_delete"); else _explicitNullProperties?.Remove("minimum_access_level_for_delete"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdRegistryProtectionTagRulesRequestMinimumAccessLevelForDelete? _explicitNullValueMinimumAccessLevelForDelete = default!;
         /// <summary>Minimum GitLab access level required to push container tags.</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdRegistryProtectionTagRulesRequestMinimumAccessLevelForPush? MinimumAccessLevelForPush { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdRegistryProtectionTagRulesRequestMinimumAccessLevelForPush? MinimumAccessLevelForPush { get => _explicitNullValueMinimumAccessLevelForPush; set { _explicitNullValueMinimumAccessLevelForPush = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minimum_access_level_for_push"); else _explicitNullProperties?.Remove("minimum_access_level_for_push"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdRegistryProtectionTagRulesRequestMinimumAccessLevelForPush? _explicitNullValueMinimumAccessLevelForPush = default!;
         /// <summary>Container tag name pattern protected by the protection rule, for example `v*-release`. Wildcard character `*` is allowed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TagNamePattern { get; set; }
+        public string? TagNamePattern { get => _explicitNullValueTagNamePattern; set { _explicitNullValueTagNamePattern = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tag_name_pattern"); else _explicitNullProperties?.Remove("tag_name_pattern"); } }
+        private string? _explicitNullValueTagNamePattern = default!;
 #nullable restore
 #else
-        public string TagNamePattern { get; set; }
+        public string TagNamePattern { get => _explicitNullValueTagNamePattern; set { _explicitNullValueTagNamePattern = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tag_name_pattern"); else _explicitNullProperties?.Remove("tag_name_pattern"); } }
+        private string _explicitNullValueTagNamePattern = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdRegistryProtectionTagRulesRequest"/> and sets the default values.
@@ -41,7 +55,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdRegistryProtectionTagRulesRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdRegistryProtectionTagRulesRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdRegistryProtectionTagRulesRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -66,6 +80,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdRegistryProtectionTagRulesRequestMinimumAccessLevelForDelete>("minimum_access_level_for_delete", MinimumAccessLevelForDelete);
             writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdRegistryProtectionTagRulesRequestMinimumAccessLevelForPush>("minimum_access_level_for_push", MinimumAccessLevelForPush);
             writer.WriteStringValue("tag_name_pattern", TagNamePattern);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

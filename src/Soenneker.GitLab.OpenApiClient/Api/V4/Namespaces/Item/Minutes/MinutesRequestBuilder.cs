@@ -19,7 +19,6 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Namespaces.Item.Minutes
     public partial class MinutesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>The move property</summary>
-        [Obsolete("")]
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Namespaces.Item.Minutes.Move.MoveRequestBuilder Move
         {
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Namespaces.Item.Minutes.Move.MoveRequestBuilder(PathParameters, RequestAdapter);
@@ -59,7 +58,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Namespaces.Item.Minutes
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiMinutesAdditionalPack>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiMinutesAdditionalPack.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiMinutesAdditionalPack>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiMinutesAdditionalPack.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
             return collectionResult?.AsList();
         }
         /// <summary>

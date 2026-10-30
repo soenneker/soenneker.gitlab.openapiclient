@@ -11,25 +11,48 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostApiV4ProjectsIdApprovalsRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("approvals_before_merge") is { } nullNodeApprovalsBeforeMerge && nullNodeApprovalsBeforeMerge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApprovalsBeforeMerge = null;
+            if (parseNode.GetChildNode("disable_overriding_approvers_per_merge_request") is { } nullNodeDisableOverridingApproversPerMergeRequest && nullNodeDisableOverridingApproversPerMergeRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisableOverridingApproversPerMergeRequest = null;
+            if (parseNode.GetChildNode("merge_requests_author_approval") is { } nullNodeMergeRequestsAuthorApproval && nullNodeMergeRequestsAuthorApproval.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MergeRequestsAuthorApproval = null;
+            if (parseNode.GetChildNode("merge_requests_disable_committers_approval") is { } nullNodeMergeRequestsDisableCommittersApproval && nullNodeMergeRequestsDisableCommittersApproval.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MergeRequestsDisableCommittersApproval = null;
+            if (parseNode.GetChildNode("require_password_to_approve") is { } nullNodeRequirePasswordToApprove && nullNodeRequirePasswordToApprove.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequirePasswordToApprove = null;
+            if (parseNode.GetChildNode("require_reauthentication_to_approve") is { } nullNodeRequireReauthenticationToApprove && nullNodeRequireReauthenticationToApprove.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequireReauthenticationToApprove = null;
+            if (parseNode.GetChildNode("reset_approvals_on_push") is { } nullNodeResetApprovalsOnPush && nullNodeResetApprovalsOnPush.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResetApprovalsOnPush = null;
+            if (parseNode.GetChildNode("selective_code_owner_removals") is { } nullNodeSelectiveCodeOwnerRemovals && nullNodeSelectiveCodeOwnerRemovals.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SelectiveCodeOwnerRemovals = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Number of approvals required before a merge request can be merged. At least one of `approvals_before_merge`, `reset_approvals_on_push`, `selective_code_owner_removals`, `disable_overriding_approvers_per_merge_request`, `merge_requests_author_approval`, `merge_requests_disable_committers_approval`, `require_password_to_approve`, `require_reauthentication_to_approve` must be provided.</summary>
-        public int? ApprovalsBeforeMerge { get; set; }
+        public int? ApprovalsBeforeMerge { get => _explicitNullValueApprovalsBeforeMerge; set { _explicitNullValueApprovalsBeforeMerge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approvals_before_merge"); else _explicitNullProperties?.Remove("approvals_before_merge"); } }
+        private int? _explicitNullValueApprovalsBeforeMerge = default!;
         /// <summary>If `true`, prevents overrides of approvers in a merge request. At least one of `approvals_before_merge`, `reset_approvals_on_push`, `selective_code_owner_removals`, `disable_overriding_approvers_per_merge_request`, `merge_requests_author_approval`, `merge_requests_disable_committers_approval`, `require_password_to_approve`, `require_reauthentication_to_approve` must be provided.</summary>
-        public bool? DisableOverridingApproversPerMergeRequest { get; set; }
+        public bool? DisableOverridingApproversPerMergeRequest { get => _explicitNullValueDisableOverridingApproversPerMergeRequest; set { _explicitNullValueDisableOverridingApproversPerMergeRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("disable_overriding_approvers_per_merge_request"); else _explicitNullProperties?.Remove("disable_overriding_approvers_per_merge_request"); } }
+        private bool? _explicitNullValueDisableOverridingApproversPerMergeRequest = default!;
         /// <summary>If `true`, authors can self-approve merge requests. At least one of `approvals_before_merge`, `reset_approvals_on_push`, `selective_code_owner_removals`, `disable_overriding_approvers_per_merge_request`, `merge_requests_author_approval`, `merge_requests_disable_committers_approval`, `require_password_to_approve`, `require_reauthentication_to_approve` must be provided.</summary>
-        public bool? MergeRequestsAuthorApproval { get; set; }
+        public bool? MergeRequestsAuthorApproval { get => _explicitNullValueMergeRequestsAuthorApproval; set { _explicitNullValueMergeRequestsAuthorApproval = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_requests_author_approval"); else _explicitNullProperties?.Remove("merge_requests_author_approval"); } }
+        private bool? _explicitNullValueMergeRequestsAuthorApproval = default!;
         /// <summary>If `true`, users who commit on the merge request cannot approve it. At least one of `approvals_before_merge`, `reset_approvals_on_push`, `selective_code_owner_removals`, `disable_overriding_approvers_per_merge_request`, `merge_requests_author_approval`, `merge_requests_disable_committers_approval`, `require_password_to_approve`, `require_reauthentication_to_approve` must be provided.</summary>
-        public bool? MergeRequestsDisableCommittersApproval { get; set; }
+        public bool? MergeRequestsDisableCommittersApproval { get => _explicitNullValueMergeRequestsDisableCommittersApproval; set { _explicitNullValueMergeRequestsDisableCommittersApproval = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_requests_disable_committers_approval"); else _explicitNullProperties?.Remove("merge_requests_disable_committers_approval"); } }
+        private bool? _explicitNullValueMergeRequestsDisableCommittersApproval = default!;
         /// <summary>If `true`, requires approvers to authenticate before approving. Deprecated in GitLab 16.9. Use `require_reauthentication_to_approve` instead. At least one of `approvals_before_merge`, `reset_approvals_on_push`, `selective_code_owner_removals`, `disable_overriding_approvers_per_merge_request`, `merge_requests_author_approval`, `merge_requests_disable_committers_approval`, `require_password_to_approve`, `require_reauthentication_to_approve` must be provided.</summary>
-        public bool? RequirePasswordToApprove { get; set; }
+        public bool? RequirePasswordToApprove { get => _explicitNullValueRequirePasswordToApprove; set { _explicitNullValueRequirePasswordToApprove = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("require_password_to_approve"); else _explicitNullProperties?.Remove("require_password_to_approve"); } }
+        private bool? _explicitNullValueRequirePasswordToApprove = default!;
         /// <summary>If `true`, requires approvers to authenticate before approving. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/431346) in GitLab 17.1. At least one of `approvals_before_merge`, `reset_approvals_on_push`, `selective_code_owner_removals`, `disable_overriding_approvers_per_merge_request`, `merge_requests_author_approval`, `merge_requests_disable_committers_approval`, `require_password_to_approve`, `require_reauthentication_to_approve` must be provided.</summary>
-        public bool? RequireReauthenticationToApprove { get; set; }
+        public bool? RequireReauthenticationToApprove { get => _explicitNullValueRequireReauthenticationToApprove; set { _explicitNullValueRequireReauthenticationToApprove = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("require_reauthentication_to_approve"); else _explicitNullProperties?.Remove("require_reauthentication_to_approve"); } }
+        private bool? _explicitNullValueRequireReauthenticationToApprove = default!;
         /// <summary>If `true`, resets approvals on push. At least one of `approvals_before_merge`, `reset_approvals_on_push`, `selective_code_owner_removals`, `disable_overriding_approvers_per_merge_request`, `merge_requests_author_approval`, `merge_requests_disable_committers_approval`, `require_password_to_approve`, `require_reauthentication_to_approve` must be provided.</summary>
-        public bool? ResetApprovalsOnPush { get; set; }
+        public bool? ResetApprovalsOnPush { get => _explicitNullValueResetApprovalsOnPush; set { _explicitNullValueResetApprovalsOnPush = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reset_approvals_on_push"); else _explicitNullProperties?.Remove("reset_approvals_on_push"); } }
+        private bool? _explicitNullValueResetApprovalsOnPush = default!;
         /// <summary>If `true`, resets approvals from Code Owners if their files change. To use this field, `reset_approvals_on_push` must be `false`. At least one of `approvals_before_merge`, `reset_approvals_on_push`, `selective_code_owner_removals`, `disable_overriding_approvers_per_merge_request`, `merge_requests_author_approval`, `merge_requests_disable_committers_approval`, `require_password_to_approve`, `require_reauthentication_to_approve` must be provided.</summary>
-        public bool? SelectiveCodeOwnerRemovals { get; set; }
+        public bool? SelectiveCodeOwnerRemovals { get => _explicitNullValueSelectiveCodeOwnerRemovals; set { _explicitNullValueSelectiveCodeOwnerRemovals = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("selective_code_owner_removals"); else _explicitNullProperties?.Remove("selective_code_owner_removals"); } }
+        private bool? _explicitNullValueSelectiveCodeOwnerRemovals = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdApprovalsRequest"/> and sets the default values.
         /// </summary>
@@ -45,7 +68,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdApprovalsRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdApprovalsRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdApprovalsRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -80,6 +103,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteBoolValue("require_reauthentication_to_approve", RequireReauthenticationToApprove);
             writer.WriteBoolValue("reset_approvals_on_push", ResetApprovalsOnPush);
             writer.WriteBoolValue("selective_code_owner_removals", SelectiveCodeOwnerRemovals);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

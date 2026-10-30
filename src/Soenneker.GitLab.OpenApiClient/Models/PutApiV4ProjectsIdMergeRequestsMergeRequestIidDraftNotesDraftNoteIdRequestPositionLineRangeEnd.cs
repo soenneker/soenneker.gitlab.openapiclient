@@ -12,28 +12,45 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PutApiV4ProjectsIdMergeRequestsMergeRequestIidDraftNotesDraftNoteIdRequestPositionLineRangeEnd : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("line_code") is { } nullNodeLineCode && nullNodeLineCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LineCode = null;
+            if (parseNode.GetChildNode("new_line") is { } nullNodeNewLine && nullNodeNewLine.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewLine = null;
+            if (parseNode.GetChildNode("old_line") is { } nullNodeOldLine && nullNodeOldLine.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OldLine = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>End line code for a multi-line note.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LineCode { get; set; }
+        public string? LineCode { get => _explicitNullValueLineCode; set { _explicitNullValueLineCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("line_code"); else _explicitNullProperties?.Remove("line_code"); } }
+        private string? _explicitNullValueLineCode = default!;
 #nullable restore
 #else
-        public string LineCode { get; set; }
+        public string LineCode { get => _explicitNullValueLineCode; set { _explicitNullValueLineCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("line_code"); else _explicitNullProperties?.Remove("line_code"); } }
+        private string _explicitNullValueLineCode = default!;
 #endif
         /// <summary>Line number after the change at the end of the line range.</summary>
-        public int? NewLine { get; set; }
+        public int? NewLine { get => _explicitNullValueNewLine; set { _explicitNullValueNewLine = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_line"); else _explicitNullProperties?.Remove("new_line"); } }
+        private int? _explicitNullValueNewLine = default!;
         /// <summary>Line number before the change at the end of the line range.</summary>
-        public int? OldLine { get; set; }
+        public int? OldLine { get => _explicitNullValueOldLine; set { _explicitNullValueOldLine = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("old_line"); else _explicitNullProperties?.Remove("old_line"); } }
+        private int? _explicitNullValueOldLine = default!;
         /// <summary>End line type for a multi-line note.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Type { get; set; }
+        public string? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private string? _explicitNullValueType = default!;
 #nullable restore
 #else
-        public string Type { get; set; }
+        public string Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private string _explicitNullValueType = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdMergeRequestsMergeRequestIidDraftNotesDraftNoteIdRequestPositionLineRangeEnd"/> and sets the default values.
@@ -50,7 +67,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdMergeRequestsMergeRequestIidDraftNotesDraftNoteIdRequestPositionLineRangeEnd CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdMergeRequestsMergeRequestIidDraftNotesDraftNoteIdRequestPositionLineRangeEnd();
+            // Preserve a nullable root response.
+            if (parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) return null!;
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdMergeRequestsMergeRequestIidDraftNotesDraftNoteIdRequestPositionLineRangeEnd(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -77,6 +96,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteIntValue("new_line", NewLine);
             writer.WriteIntValue("old_line", OldLine);
             writer.WriteStringValue("type", Type);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

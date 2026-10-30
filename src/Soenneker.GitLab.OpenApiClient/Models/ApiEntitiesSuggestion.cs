@@ -11,35 +11,58 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ApiEntitiesSuggestion : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("appliable") is { } nullNodeAppliable && nullNodeAppliable.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Appliable = null;
+            if (parseNode.GetChildNode("applied") is { } nullNodeApplied && nullNodeApplied.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Applied = null;
+            if (parseNode.GetChildNode("from_content") is { } nullNodeFromContent && nullNodeFromContent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FromContent = null;
+            if (parseNode.GetChildNode("from_line") is { } nullNodeFromLine && nullNodeFromLine.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FromLine = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("to_content") is { } nullNodeToContent && nullNodeToContent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ToContent = null;
+            if (parseNode.GetChildNode("to_line") is { } nullNodeToLine && nullNodeToLine.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ToLine = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The appliable property</summary>
-        public bool? Appliable { get; set; }
+        public bool? Appliable { get => _explicitNullValueAppliable; set { _explicitNullValueAppliable = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("appliable"); else _explicitNullProperties?.Remove("appliable"); } }
+        private bool? _explicitNullValueAppliable = default!;
         /// <summary>The applied property</summary>
-        public bool? Applied { get; set; }
+        public bool? Applied { get => _explicitNullValueApplied; set { _explicitNullValueApplied = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("applied"); else _explicitNullProperties?.Remove("applied"); } }
+        private bool? _explicitNullValueApplied = default!;
         /// <summary>The from_content property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FromContent { get; set; }
+        public string? FromContent { get => _explicitNullValueFromContent; set { _explicitNullValueFromContent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("from_content"); else _explicitNullProperties?.Remove("from_content"); } }
+        private string? _explicitNullValueFromContent = default!;
 #nullable restore
 #else
-        public string FromContent { get; set; }
+        public string FromContent { get => _explicitNullValueFromContent; set { _explicitNullValueFromContent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("from_content"); else _explicitNullProperties?.Remove("from_content"); } }
+        private string _explicitNullValueFromContent = default!;
 #endif
         /// <summary>The from_line property</summary>
-        public int? FromLine { get; set; }
+        public int? FromLine { get => _explicitNullValueFromLine; set { _explicitNullValueFromLine = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("from_line"); else _explicitNullProperties?.Remove("from_line"); } }
+        private int? _explicitNullValueFromLine = default!;
         /// <summary>The id property</summary>
-        public long? Id { get; set; }
+        public long? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private long? _explicitNullValueId = default!;
         /// <summary>The to_content property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ToContent { get; set; }
+        public string? ToContent { get => _explicitNullValueToContent; set { _explicitNullValueToContent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("to_content"); else _explicitNullProperties?.Remove("to_content"); } }
+        private string? _explicitNullValueToContent = default!;
 #nullable restore
 #else
-        public string ToContent { get; set; }
+        public string ToContent { get => _explicitNullValueToContent; set { _explicitNullValueToContent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("to_content"); else _explicitNullProperties?.Remove("to_content"); } }
+        private string _explicitNullValueToContent = default!;
 #endif
         /// <summary>The to_line property</summary>
-        public int? ToLine { get; set; }
+        public int? ToLine { get => _explicitNullValueToLine; set { _explicitNullValueToLine = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("to_line"); else _explicitNullProperties?.Remove("to_line"); } }
+        private int? _explicitNullValueToLine = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSuggestion"/> and sets the default values.
         /// </summary>
@@ -55,7 +78,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSuggestion CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSuggestion();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSuggestion(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -88,6 +111,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteLongValue("id", Id);
             writer.WriteStringValue("to_content", ToContent);
             writer.WriteIntValue("to_line", ToLine);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

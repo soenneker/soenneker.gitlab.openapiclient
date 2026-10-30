@@ -12,20 +12,34 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostApiV4NamespacesIdMinutesRequestPacksItem : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("expires_at") is { } nullNodeExpiresAt && nullNodeExpiresAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExpiresAt = null;
+            if (parseNode.GetChildNode("number_of_minutes") is { } nullNodeNumberOfMinutes && nullNodeNumberOfMinutes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumberOfMinutes = null;
+            if (parseNode.GetChildNode("purchase_xid") is { } nullNodePurchaseXid && nullNodePurchaseXid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PurchaseXid = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Date when the purchase expires.</summary>
-        public Date? ExpiresAt { get; set; }
+        public Date? ExpiresAt { get => _explicitNullValueExpiresAt; set { _explicitNullValueExpiresAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expires_at"); else _explicitNullProperties?.Remove("expires_at"); } }
+        private Date? _explicitNullValueExpiresAt = default!;
         /// <summary>Number of additional minutes purchased.</summary>
-        public int? NumberOfMinutes { get; set; }
+        public int? NumberOfMinutes { get => _explicitNullValueNumberOfMinutes; set { _explicitNullValueNumberOfMinutes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("number_of_minutes"); else _explicitNullProperties?.Remove("number_of_minutes"); } }
+        private int? _explicitNullValueNumberOfMinutes = default!;
         /// <summary>Purchase ID for the additional minutes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PurchaseXid { get; set; }
+        public string? PurchaseXid { get => _explicitNullValuePurchaseXid; set { _explicitNullValuePurchaseXid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("purchase_xid"); else _explicitNullProperties?.Remove("purchase_xid"); } }
+        private string? _explicitNullValuePurchaseXid = default!;
 #nullable restore
 #else
-        public string PurchaseXid { get; set; }
+        public string PurchaseXid { get => _explicitNullValuePurchaseXid; set { _explicitNullValuePurchaseXid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("purchase_xid"); else _explicitNullProperties?.Remove("purchase_xid"); } }
+        private string _explicitNullValuePurchaseXid = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4NamespacesIdMinutesRequestPacksItem"/> and sets the default values.
@@ -42,7 +56,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4NamespacesIdMinutesRequestPacksItem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4NamespacesIdMinutesRequestPacksItem();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4NamespacesIdMinutesRequestPacksItem(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -67,6 +81,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteDateValue("expires_at", ExpiresAt);
             writer.WriteIntValue("number_of_minutes", NumberOfMinutes);
             writer.WriteStringValue("purchase_xid", PurchaseXid);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

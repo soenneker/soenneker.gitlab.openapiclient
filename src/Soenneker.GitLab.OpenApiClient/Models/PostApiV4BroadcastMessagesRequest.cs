@@ -11,59 +11,91 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostApiV4BroadcastMessagesRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("broadcast_type") is { } nullNodeBroadcastType && nullNodeBroadcastType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BroadcastType = null;
+            if (parseNode.GetChildNode("color") is { } nullNodeColor && nullNodeColor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Color = null;
+            if (parseNode.GetChildNode("dismissable") is { } nullNodeDismissable && nullNodeDismissable.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Dismissable = null;
+            if (parseNode.GetChildNode("ends_at") is { } nullNodeEndsAt && nullNodeEndsAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndsAt = null;
+            if (parseNode.GetChildNode("font") is { } nullNodeFont && nullNodeFont.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Font = null;
+            if (parseNode.GetChildNode("message") is { } nullNodeMessage && nullNodeMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Message = null;
+            if (parseNode.GetChildNode("starts_at") is { } nullNodeStartsAt && nullNodeStartsAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartsAt = null;
+            if (parseNode.GetChildNode("target_access_levels") is { } nullNodeTargetAccessLevels && nullNodeTargetAccessLevels.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetAccessLevels = null;
+            if (parseNode.GetChildNode("target_path") is { } nullNodeTargetPath && nullNodeTargetPath.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetPath = null;
+            if (parseNode.GetChildNode("theme") is { } nullNodeTheme && nullNodeTheme.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Theme = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Appearance type of the broadcast message.</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4BroadcastMessagesRequestBroadcastType? BroadcastType { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4BroadcastMessagesRequestBroadcastType? BroadcastType { get => _explicitNullValueBroadcastType; set { _explicitNullValueBroadcastType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("broadcast_type"); else _explicitNullProperties?.Remove("broadcast_type"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4BroadcastMessagesRequestBroadcastType? _explicitNullValueBroadcastType = default!;
         /// <summary>Background color hex code. Deprecated. Use `theme` instead.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Color { get; set; }
+        public string? Color { get => _explicitNullValueColor; set { _explicitNullValueColor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("color"); else _explicitNullProperties?.Remove("color"); } }
+        private string? _explicitNullValueColor = default!;
 #nullable restore
 #else
-        public string Color { get; set; }
+        public string Color { get => _explicitNullValueColor; set { _explicitNullValueColor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("color"); else _explicitNullProperties?.Remove("color"); } }
+        private string _explicitNullValueColor = default!;
 #endif
         /// <summary>If `true`, the user can dismiss the message.</summary>
-        public bool? Dismissable { get; set; }
+        public bool? Dismissable { get => _explicitNullValueDismissable; set { _explicitNullValueDismissable = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dismissable"); else _explicitNullProperties?.Remove("dismissable"); } }
+        private bool? _explicitNullValueDismissable = default!;
         /// <summary>Ending time, in UTC. When creating a message, defaults to one hour after the current time.</summary>
-        public DateTimeOffset? EndsAt { get; set; }
+        public DateTimeOffset? EndsAt { get => _explicitNullValueEndsAt; set { _explicitNullValueEndsAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ends_at"); else _explicitNullProperties?.Remove("ends_at"); } }
+        private DateTimeOffset? _explicitNullValueEndsAt = default!;
         /// <summary>Foreground color hex code. Deprecated. Use `theme` instead.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Font { get; set; }
+        public string? Font { get => _explicitNullValueFont; set { _explicitNullValueFont = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("font"); else _explicitNullProperties?.Remove("font"); } }
+        private string? _explicitNullValueFont = default!;
 #nullable restore
 #else
-        public string Font { get; set; }
+        public string Font { get => _explicitNullValueFont; set { _explicitNullValueFont = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("font"); else _explicitNullProperties?.Remove("font"); } }
+        private string _explicitNullValueFont = default!;
 #endif
         /// <summary>Message to display.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Message { get; set; }
+        public string? Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
+        private string? _explicitNullValueMessage = default!;
 #nullable restore
 #else
-        public string Message { get; set; }
+        public string Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
+        private string _explicitNullValueMessage = default!;
 #endif
         /// <summary>Starting time, in UTC. When creating a message, defaults to the current time.</summary>
-        public DateTimeOffset? StartsAt { get; set; }
+        public DateTimeOffset? StartsAt { get => _explicitNullValueStartsAt; set { _explicitNullValueStartsAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("starts_at"); else _explicitNullProperties?.Remove("starts_at"); } }
+        private DateTimeOffset? _explicitNullValueStartsAt = default!;
         /// <summary>Target access levels (roles) of the broadcast message.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<int?>? TargetAccessLevels { get; set; }
+        public List<int?>? TargetAccessLevels { get => _explicitNullValueTargetAccessLevels; set { _explicitNullValueTargetAccessLevels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_access_levels"); else _explicitNullProperties?.Remove("target_access_levels"); } }
+        private List<int?>? _explicitNullValueTargetAccessLevels = default!;
 #nullable restore
 #else
-        public List<int?> TargetAccessLevels { get; set; }
+        public List<int?> TargetAccessLevels { get => _explicitNullValueTargetAccessLevels; set { _explicitNullValueTargetAccessLevels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_access_levels"); else _explicitNullProperties?.Remove("target_access_levels"); } }
+        private List<int?> _explicitNullValueTargetAccessLevels = default!;
 #endif
         /// <summary>Target path of the broadcast message.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TargetPath { get; set; }
+        public string? TargetPath { get => _explicitNullValueTargetPath; set { _explicitNullValueTargetPath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_path"); else _explicitNullProperties?.Remove("target_path"); } }
+        private string? _explicitNullValueTargetPath = default!;
 #nullable restore
 #else
-        public string TargetPath { get; set; }
+        public string TargetPath { get => _explicitNullValueTargetPath; set { _explicitNullValueTargetPath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_path"); else _explicitNullProperties?.Remove("target_path"); } }
+        private string _explicitNullValueTargetPath = default!;
 #endif
         /// <summary>Color theme for the broadcast message. Applies only to banners.</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4BroadcastMessagesRequestTheme? Theme { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4BroadcastMessagesRequestTheme? Theme { get => _explicitNullValueTheme; set { _explicitNullValueTheme = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("theme"); else _explicitNullProperties?.Remove("theme"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4BroadcastMessagesRequestTheme? _explicitNullValueTheme = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4BroadcastMessagesRequest"/> and sets the default values.
         /// </summary>
@@ -79,7 +111,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4BroadcastMessagesRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4BroadcastMessagesRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4BroadcastMessagesRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -118,6 +150,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<int?>("target_access_levels", TargetAccessLevels);
             writer.WriteStringValue("target_path", TargetPath);
             writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4BroadcastMessagesRequestTheme>("theme", Theme);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

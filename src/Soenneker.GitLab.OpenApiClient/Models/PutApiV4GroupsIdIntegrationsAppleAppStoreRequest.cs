@@ -11,45 +11,68 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PutApiV4GroupsIdIntegrationsAppleAppStoreRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("app_store_issuer_id") is { } nullNodeAppStoreIssuerId && nullNodeAppStoreIssuerId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AppStoreIssuerId = null;
+            if (parseNode.GetChildNode("app_store_key_id") is { } nullNodeAppStoreKeyId && nullNodeAppStoreKeyId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AppStoreKeyId = null;
+            if (parseNode.GetChildNode("app_store_private_key") is { } nullNodeAppStorePrivateKey && nullNodeAppStorePrivateKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AppStorePrivateKey = null;
+            if (parseNode.GetChildNode("app_store_private_key_file_name") is { } nullNodeAppStorePrivateKeyFileName && nullNodeAppStorePrivateKeyFileName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AppStorePrivateKeyFileName = null;
+            if (parseNode.GetChildNode("app_store_protected_refs") is { } nullNodeAppStoreProtectedRefs && nullNodeAppStoreProtectedRefs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AppStoreProtectedRefs = null;
+            if (parseNode.GetChildNode("use_inherited_settings") is { } nullNodeUseInheritedSettings && nullNodeUseInheritedSettings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UseInheritedSettings = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Apple App Store Connect issuer ID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AppStoreIssuerId { get; set; }
+        public string? AppStoreIssuerId { get => _explicitNullValueAppStoreIssuerId; set { _explicitNullValueAppStoreIssuerId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("app_store_issuer_id"); else _explicitNullProperties?.Remove("app_store_issuer_id"); } }
+        private string? _explicitNullValueAppStoreIssuerId = default!;
 #nullable restore
 #else
-        public string AppStoreIssuerId { get; set; }
+        public string AppStoreIssuerId { get => _explicitNullValueAppStoreIssuerId; set { _explicitNullValueAppStoreIssuerId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("app_store_issuer_id"); else _explicitNullProperties?.Remove("app_store_issuer_id"); } }
+        private string _explicitNullValueAppStoreIssuerId = default!;
 #endif
         /// <summary>Apple App Store Connect key ID.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AppStoreKeyId { get; set; }
+        public string? AppStoreKeyId { get => _explicitNullValueAppStoreKeyId; set { _explicitNullValueAppStoreKeyId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("app_store_key_id"); else _explicitNullProperties?.Remove("app_store_key_id"); } }
+        private string? _explicitNullValueAppStoreKeyId = default!;
 #nullable restore
 #else
-        public string AppStoreKeyId { get; set; }
+        public string AppStoreKeyId { get => _explicitNullValueAppStoreKeyId; set { _explicitNullValueAppStoreKeyId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("app_store_key_id"); else _explicitNullProperties?.Remove("app_store_key_id"); } }
+        private string _explicitNullValueAppStoreKeyId = default!;
 #endif
         /// <summary>Apple App Store Connect private key.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AppStorePrivateKey { get; set; }
+        public string? AppStorePrivateKey { get => _explicitNullValueAppStorePrivateKey; set { _explicitNullValueAppStorePrivateKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("app_store_private_key"); else _explicitNullProperties?.Remove("app_store_private_key"); } }
+        private string? _explicitNullValueAppStorePrivateKey = default!;
 #nullable restore
 #else
-        public string AppStorePrivateKey { get; set; }
+        public string AppStorePrivateKey { get => _explicitNullValueAppStorePrivateKey; set { _explicitNullValueAppStorePrivateKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("app_store_private_key"); else _explicitNullProperties?.Remove("app_store_private_key"); } }
+        private string _explicitNullValueAppStorePrivateKey = default!;
 #endif
         /// <summary>Apple App Store Connect private key file name.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AppStorePrivateKeyFileName { get; set; }
+        public string? AppStorePrivateKeyFileName { get => _explicitNullValueAppStorePrivateKeyFileName; set { _explicitNullValueAppStorePrivateKeyFileName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("app_store_private_key_file_name"); else _explicitNullProperties?.Remove("app_store_private_key_file_name"); } }
+        private string? _explicitNullValueAppStorePrivateKeyFileName = default!;
 #nullable restore
 #else
-        public string AppStorePrivateKeyFileName { get; set; }
+        public string AppStorePrivateKeyFileName { get => _explicitNullValueAppStorePrivateKeyFileName; set { _explicitNullValueAppStorePrivateKeyFileName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("app_store_private_key_file_name"); else _explicitNullProperties?.Remove("app_store_private_key_file_name"); } }
+        private string _explicitNullValueAppStorePrivateKeyFileName = default!;
 #endif
         /// <summary>Set variables on protected branches and tags only.</summary>
-        public bool? AppStoreProtectedRefs { get; set; }
+        public bool? AppStoreProtectedRefs { get => _explicitNullValueAppStoreProtectedRefs; set { _explicitNullValueAppStoreProtectedRefs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("app_store_protected_refs"); else _explicitNullProperties?.Remove("app_store_protected_refs"); } }
+        private bool? _explicitNullValueAppStoreProtectedRefs = default!;
         /// <summary>Indicates whether to inherit the default settings. Defaults to `false`.</summary>
-        public bool? UseInheritedSettings { get; set; }
+        public bool? UseInheritedSettings { get => _explicitNullValueUseInheritedSettings; set { _explicitNullValueUseInheritedSettings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("use_inherited_settings"); else _explicitNullProperties?.Remove("use_inherited_settings"); } }
+        private bool? _explicitNullValueUseInheritedSettings = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdIntegrationsAppleAppStoreRequest"/> and sets the default values.
         /// </summary>
@@ -65,7 +88,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdIntegrationsAppleAppStoreRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdIntegrationsAppleAppStoreRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdIntegrationsAppleAppStoreRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -96,6 +119,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("app_store_private_key_file_name", AppStorePrivateKeyFileName);
             writer.WriteBoolValue("app_store_protected_refs", AppStoreProtectedRefs);
             writer.WriteBoolValue("use_inherited_settings", UseInheritedSettings);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -816,11 +816,19 @@
             "content": {
               "text/markdown": {
                 "schema": {
+                  "type": "string",
+                  "format": "binary"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/GetApiV4OrbitSkillsNamePath200MarkdownResponseSchema"
                 }
               },
               "text/plain": {
                 "schema": {
+                  "type": "string",
+                  "format": "binary"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/GetApiV4OrbitSkillsNamePath200PlainResponseSchema"
                 }
               }
@@ -2886,6 +2894,9 @@
           "404": {
             "description": "Not found"
           },
+          "429": {
+            "description": "Too many requests"
+          },
           "400": {
             "description": "Bad Request"
           }
@@ -3055,6 +3066,143 @@
           },
           "429": {
             "description": "Too many requests"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        },
+        "x-gitlab-lifecycle": "experiment"
+      }
+    },
+    "/api/v4/ai/duo_workflows/workflows/{id}/session_files/authorize": {
+      "post": {
+        "tags": [
+          "GitLab Duo workflows"
+        ],
+        "summary": "Workhorse authorize a session file upload",
+        "description": "Workhorse pre-authorization endpoint for uploading a session file.",
+        "operationId": "PostApiV4AiDuoWorkflowsWorkflowsWorkflowIdSessionFilesAuthorize",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID of the workflow.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        },
+        "x-gitlab-lifecycle": "experiment"
+      }
+    },
+    "/api/v4/ai/duo_workflows/workflows/{id}/session_files": {
+      "post": {
+        "tags": [
+          "GitLab Duo workflows"
+        ],
+        "summary": "Upload a session file",
+        "description": "Uploads an image the user attached to the session.",
+        "operationId": "PostApiV4AiDuoWorkflowsWorkflowsWorkflowIdSessionFiles",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID of the workflow.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "$ref": "#/components/schemas/PostApiV4AiDuoWorkflowsWorkflowsWorkflowIdSessionFilesRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "400": {
+            "description": "Validation failed"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
+          }
+        },
+        "x-gitlab-lifecycle": "experiment"
+      }
+    },
+    "/api/v4/ai/duo_workflows/workflows/{id}/session_files/{fileId}": {
+      "get": {
+        "tags": [
+          "GitLab Duo workflows"
+        ],
+        "summary": "Get a session file with its contents",
+        "description": "Returns a file the user attached to the session, with its contents base64 encoded.",
+        "operationId": "GetApiV4AiDuoWorkflowsWorkflowsWorkflowIdSessionFilesFileId",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID of the workflow.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fileId",
+            "in": "path",
+            "description": "ID of the session file.",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            },
+            "example": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
           },
           "400": {
             "description": "Bad Request"
@@ -11210,6 +11358,9 @@
             "content": {
               "application/json": {
                 "schema": {
+                  "$ref": "#/components/schemas/PostApiV4ProjectsIdMergeTrainsMergeRequestsMergeRequestIidSuccessResponse"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/PostApiV4ProjectsIdMergeTrainsMergeRequestsMergeRequestIid201ResponseSchema"
                 }
               }
@@ -11220,6 +11371,9 @@
             "content": {
               "application/json": {
                 "schema": {
+                  "$ref": "#/components/schemas/PostApiV4ProjectsIdMergeTrainsMergeRequestsMergeRequestIidSuccessResponse"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/PostApiV4ProjectsIdMergeTrainsMergeRequestsMergeRequestIid202ResponseSchema"
                 }
               }
@@ -55806,11 +55960,19 @@
             "content": {
               "application/octet-stream": {
                 "schema": {
+                  "type": "string",
+                  "format": "binary"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/GetApiV4ProjectsIdExportRelationsDownload200OctetStreamResponseSchema"
                 }
               },
               "application/gzip": {
                 "schema": {
+                  "type": "string",
+                  "format": "binary"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/GetApiV4ProjectsIdExportRelationsDownload200GzipResponseSchema"
                 }
               }
@@ -145419,6 +145581,20 @@
           }
         }
       },
+      "PostApiV4AiDuoWorkflowsWorkflowsWorkflowIdSessionFilesRequest": {
+        "required": [
+          "file"
+        ],
+        "type": "object",
+        "properties": {
+          "file": {
+            "type": "string",
+            "description": "The image file to upload",
+            "format": "binary",
+            "nullable": true
+          }
+        }
+      },
       "PostApiV4AiDuoWorkflowsWorkflowsWorkflowIdResumeRequest": {
         "required": [
           "human_approval"
@@ -148830,7 +149006,7 @@
           },
           "fast_dependency_paths_enabled": {
             "type": "boolean",
-            "description": "If \u0060true\u0060, enables fast mode for dependency path graph builds, recording one path per dependency instead of all possible paths to reduce memory and processing time for large dependency graphs. Requires the \u0060dependency_paths\u0060 feature flag to be enabled. At least one of \u0060secret_push_protection_enabled\u0060, \u0060pre_receive_secret_detection_enabled\u0060, \u0060fast_dependency_paths_enabled\u0060 must be provided.",
+            "description": "Deprecated. Has no effect; dependency graph builds always record direct edges only. At least one of \u0060secret_push_protection_enabled\u0060, \u0060pre_receive_secret_detection_enabled\u0060, \u0060fast_dependency_paths_enabled\u0060 must be provided.",
             "nullable": true
           }
         }
@@ -212001,6 +212177,16 @@
             }
           ]
         }
+      },
+      "PostApiV4ProjectsIdMergeTrainsMergeRequestsMergeRequestIidSuccessResponse": {
+        "anyOf": [
+          {
+            "$ref": "#/components/schemas/PostApiV4ProjectsIdMergeTrainsMergeRequestsMergeRequestIid201ResponseSchema"
+          },
+          {
+            "$ref": "#/components/schemas/PostApiV4ProjectsIdMergeTrainsMergeRequestsMergeRequestIid202ResponseSchema"
+          }
+        ]
       }
     },
     "securitySchemes": {

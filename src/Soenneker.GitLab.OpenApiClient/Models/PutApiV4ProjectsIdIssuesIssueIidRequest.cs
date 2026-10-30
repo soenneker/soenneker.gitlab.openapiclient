@@ -11,111 +11,170 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PutApiV4ProjectsIdIssuesIssueIidRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("add_labels") is { } nullNodeAddLabels && nullNodeAddLabels.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddLabels = null;
+            if (parseNode.GetChildNode("assignee_id") is { } nullNodeAssigneeId && nullNodeAssigneeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AssigneeId = null;
+            if (parseNode.GetChildNode("assignee_ids") is { } nullNodeAssigneeIds && nullNodeAssigneeIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AssigneeIds = null;
+            if (parseNode.GetChildNode("confidential") is { } nullNodeConfidential && nullNodeConfidential.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Confidential = null;
+            if (parseNode.GetChildNode("created_at") is { } nullNodeCreatedAt && nullNodeCreatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedAt = null;
+            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("discussion_locked") is { } nullNodeDiscussionLocked && nullNodeDiscussionLocked.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DiscussionLocked = null;
+            if (parseNode.GetChildNode("due_date") is { } nullNodeDueDate && nullNodeDueDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DueDate = null;
+            if (parseNode.GetChildNode("epic_id") is { } nullNodeEpicId && nullNodeEpicId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EpicId = null;
+            if (parseNode.GetChildNode("epic_iid") is { } nullNodeEpicIid && nullNodeEpicIid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EpicIid = null;
+            if (parseNode.GetChildNode("issue_type") is { } nullNodeIssueType && nullNodeIssueType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssueType = null;
+            if (parseNode.GetChildNode("labels") is { } nullNodeLabels && nullNodeLabels.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Labels = null;
+            if (parseNode.GetChildNode("milestone") is { } nullNodeMilestone && nullNodeMilestone.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Milestone = null;
+            if (parseNode.GetChildNode("milestone_id") is { } nullNodeMilestoneId && nullNodeMilestoneId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MilestoneId = null;
+            if (parseNode.GetChildNode("remove_labels") is { } nullNodeRemoveLabels && nullNodeRemoveLabels.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RemoveLabels = null;
+            if (parseNode.GetChildNode("severity") is { } nullNodeSeverity && nullNodeSeverity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Severity = null;
+            if (parseNode.GetChildNode("start_date") is { } nullNodeStartDate && nullNodeStartDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartDate = null;
+            if (parseNode.GetChildNode("state_event") is { } nullNodeStateEvent && nullNodeStateEvent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StateEvent = null;
+            if (parseNode.GetChildNode("title") is { } nullNodeTitle && nullNodeTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Title = null;
+            if (parseNode.GetChildNode("updated_at") is { } nullNodeUpdatedAt && nullNodeUpdatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdatedAt = null;
+            if (parseNode.GetChildNode("weight") is { } nullNodeWeight && nullNodeWeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Weight = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Comma-separated label names to add to the issue. If a label does not already exist, this creates a new project label and assigns it to the issue. At least one of `assignee_id`, `assignee_ids`, `confidential`, `created_at`, `description`, `discussion_locked`, `due_date`, `start_date`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `severity`, `state_event`, `title`, `issue_type`, `weight`, `epic_id`, `epic_iid` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? AddLabels { get; set; }
+        public List<string>? AddLabels { get => _explicitNullValueAddLabels; set { _explicitNullValueAddLabels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("add_labels"); else _explicitNullProperties?.Remove("add_labels"); } }
+        private List<string>? _explicitNullValueAddLabels = default!;
 #nullable restore
 #else
-        public List<string> AddLabels { get; set; }
+        public List<string> AddLabels { get => _explicitNullValueAddLabels; set { _explicitNullValueAddLabels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("add_labels"); else _explicitNullProperties?.Remove("add_labels"); } }
+        private List<string> _explicitNullValueAddLabels = default!;
 #endif
         /// <summary>ID of the user to assign the issue to. Available only on GitLab Free. Deprecated. Use `assignee_ids` instead. At least one of `assignee_id`, `assignee_ids`, `confidential`, `created_at`, `description`, `discussion_locked`, `due_date`, `start_date`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `severity`, `state_event`, `title`, `issue_type`, `weight`, `epic_id`, `epic_iid` must be provided.</summary>
-        public int? AssigneeId { get; set; }
+        public int? AssigneeId { get => _explicitNullValueAssigneeId; set { _explicitNullValueAssigneeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assignee_id"); else _explicitNullProperties?.Remove("assignee_id"); } }
+        private int? _explicitNullValueAssigneeId = default!;
         /// <summary>IDs of the users to assign to the issue. Set to `0` or leave empty to unassign all assignees. Assigning more than one user is Premium and Ultimate only. At least one of `assignee_id`, `assignee_ids`, `confidential`, `created_at`, `description`, `discussion_locked`, `due_date`, `start_date`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `severity`, `state_event`, `title`, `issue_type`, `weight`, `epic_id`, `epic_iid` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<int?>? AssigneeIds { get; set; }
+        public List<int?>? AssigneeIds { get => _explicitNullValueAssigneeIds; set { _explicitNullValueAssigneeIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assignee_ids"); else _explicitNullProperties?.Remove("assignee_ids"); } }
+        private List<int?>? _explicitNullValueAssigneeIds = default!;
 #nullable restore
 #else
-        public List<int?> AssigneeIds { get; set; }
+        public List<int?> AssigneeIds { get => _explicitNullValueAssigneeIds; set { _explicitNullValueAssigneeIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assignee_ids"); else _explicitNullProperties?.Remove("assignee_ids"); } }
+        private List<int?> _explicitNullValueAssigneeIds = default!;
 #endif
         /// <summary>If `true`, the issue is confidential. At least one of `assignee_id`, `assignee_ids`, `confidential`, `created_at`, `description`, `discussion_locked`, `due_date`, `start_date`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `severity`, `state_event`, `title`, `issue_type`, `weight`, `epic_id`, `epic_iid` must be provided.</summary>
-        public bool? Confidential { get; set; }
+        public bool? Confidential { get => _explicitNullValueConfidential; set { _explicitNullValueConfidential = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("confidential"); else _explicitNullProperties?.Remove("confidential"); } }
+        private bool? _explicitNullValueConfidential = default!;
         /// <summary>At least one of `assignee_id`, `assignee_ids`, `confidential`, `created_at`, `description`, `discussion_locked`, `due_date`, `start_date`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `severity`, `state_event`, `title`, `issue_type`, `weight`, `epic_id`, `epic_iid` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CreatedAt { get; set; }
+        public string? CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_at"); else _explicitNullProperties?.Remove("created_at"); } }
+        private string? _explicitNullValueCreatedAt = default!;
 #nullable restore
 #else
-        public string CreatedAt { get; set; }
+        public string CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_at"); else _explicitNullProperties?.Remove("created_at"); } }
+        private string _explicitNullValueCreatedAt = default!;
 #endif
         /// <summary>Description of the issue. Limited to 1,048,576 characters. At least one of `assignee_id`, `assignee_ids`, `confidential`, `created_at`, `description`, `discussion_locked`, `due_date`, `start_date`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `severity`, `state_event`, `title`, `issue_type`, `weight`, `epic_id`, `epic_iid` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get; set; }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get; set; }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>If `true`, locks the issue&apos;s discussion so only project members can add or edit comments. At least one of `assignee_id`, `assignee_ids`, `confidential`, `created_at`, `description`, `discussion_locked`, `due_date`, `start_date`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `severity`, `state_event`, `title`, `issue_type`, `weight`, `epic_id`, `epic_iid` must be provided.</summary>
-        public bool? DiscussionLocked { get; set; }
+        public bool? DiscussionLocked { get => _explicitNullValueDiscussionLocked; set { _explicitNullValueDiscussionLocked = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discussion_locked"); else _explicitNullProperties?.Remove("discussion_locked"); } }
+        private bool? _explicitNullValueDiscussionLocked = default!;
         /// <summary>Due date, in the format `YYYY-MM-DD`, for example `2016-03-11`. At least one of `assignee_id`, `assignee_ids`, `confidential`, `created_at`, `description`, `discussion_locked`, `due_date`, `start_date`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `severity`, `state_event`, `title`, `issue_type`, `weight`, `epic_id`, `epic_iid` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DueDate { get; set; }
+        public string? DueDate { get => _explicitNullValueDueDate; set { _explicitNullValueDueDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("due_date"); else _explicitNullProperties?.Remove("due_date"); } }
+        private string? _explicitNullValueDueDate = default!;
 #nullable restore
 #else
-        public string DueDate { get; set; }
+        public string DueDate { get => _explicitNullValueDueDate; set { _explicitNullValueDueDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("due_date"); else _explicitNullProperties?.Remove("due_date"); } }
+        private string _explicitNullValueDueDate = default!;
 #endif
         /// <summary>ID of an epic to associate the issue with. Must be `0` or greater. Premium and Ultimate only. Mutually exclusive with `epic_iid`. At least one of `assignee_id`, `assignee_ids`, `confidential`, `created_at`, `description`, `discussion_locked`, `due_date`, `start_date`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `severity`, `state_event`, `title`, `issue_type`, `weight`, `epic_id`, `epic_iid` must be provided.</summary>
-        public int? EpicId { get; set; }
+        public int? EpicId { get => _explicitNullValueEpicId; set { _explicitNullValueEpicId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("epic_id"); else _explicitNullProperties?.Remove("epic_id"); } }
+        private int? _explicitNullValueEpicId = default!;
         /// <summary>Internal ID of an epic to associate the issue with. Must be `0` or greater. Deprecated and [scheduled for removal](https://gitlab.com/gitlab-org/gitlab/-/issues/35157) in API version 5. Premium and Ultimate only. Mutually exclusive with `epic_id`. At least one of `assignee_id`, `assignee_ids`, `confidential`, `created_at`, `description`, `discussion_locked`, `due_date`, `start_date`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `severity`, `state_event`, `title`, `issue_type`, `weight`, `epic_id`, `epic_iid` must be provided.</summary>
-        public int? EpicIid { get; set; }
+        public int? EpicIid { get => _explicitNullValueEpicIid; set { _explicitNullValueEpicIid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("epic_iid"); else _explicitNullProperties?.Remove("epic_iid"); } }
+        private int? _explicitNullValueEpicIid = default!;
         /// <summary>The type of the issue. Accepts: issue, incident, test_case, requirement, task, ticket. At least one of `assignee_id`, `assignee_ids`, `confidential`, `created_at`, `description`, `discussion_locked`, `due_date`, `start_date`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `severity`, `state_event`, `title`, `issue_type`, `weight`, `epic_id`, `epic_iid` must be provided.</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdIssuesIssueIidRequestIssueType? IssueType { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdIssuesIssueIidRequestIssueType? IssueType { get => _explicitNullValueIssueType; set { _explicitNullValueIssueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issue_type"); else _explicitNullProperties?.Remove("issue_type"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdIssuesIssueIidRequestIssueType? _explicitNullValueIssueType = default!;
         /// <summary>Comma-separated list of label names. `None` means no labels are assigned. `Any` means at least one label is assigned. `No+Label` (deprecated) means no labels are assigned. Set to an empty string to unassign all labels. If a label does not already exist, this creates a new project label and assigns it to the issue. Predefined names are case-insensitive. At least one of `assignee_id`, `assignee_ids`, `confidential`, `created_at`, `description`, `discussion_locked`, `due_date`, `start_date`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `severity`, `state_event`, `title`, `issue_type`, `weight`, `epic_id`, `epic_iid` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Labels { get; set; }
+        public List<string>? Labels { get => _explicitNullValueLabels; set { _explicitNullValueLabels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("labels"); else _explicitNullProperties?.Remove("labels"); } }
+        private List<string>? _explicitNullValueLabels = default!;
 #nullable restore
 #else
-        public List<string> Labels { get; set; }
+        public List<string> Labels { get => _explicitNullValueLabels; set { _explicitNullValueLabels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("labels"); else _explicitNullProperties?.Remove("labels"); } }
+        private List<string> _explicitNullValueLabels = default!;
 #endif
         /// <summary>The title of a project or ancestor-group milestone to assign the issue to. Mutually exclusive with `milestone_id`. At least one of `assignee_id`, `assignee_ids`, `confidential`, `created_at`, `description`, `discussion_locked`, `due_date`, `start_date`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `severity`, `state_event`, `title`, `issue_type`, `weight`, `epic_id`, `epic_iid` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Milestone { get; set; }
+        public string? Milestone { get => _explicitNullValueMilestone; set { _explicitNullValueMilestone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("milestone"); else _explicitNullProperties?.Remove("milestone"); } }
+        private string? _explicitNullValueMilestone = default!;
 #nullable restore
 #else
-        public string Milestone { get; set; }
+        public string Milestone { get => _explicitNullValueMilestone; set { _explicitNullValueMilestone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("milestone"); else _explicitNullProperties?.Remove("milestone"); } }
+        private string _explicitNullValueMilestone = default!;
 #endif
         /// <summary>Global ID of a milestone to assign to the issue. Set to `0` or leave empty to unassign the milestone. Mutually exclusive with `milestone`. At least one of `assignee_id`, `assignee_ids`, `confidential`, `created_at`, `description`, `discussion_locked`, `due_date`, `start_date`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `severity`, `state_event`, `title`, `issue_type`, `weight`, `epic_id`, `epic_iid` must be provided.</summary>
-        public int? MilestoneId { get; set; }
+        public int? MilestoneId { get => _explicitNullValueMilestoneId; set { _explicitNullValueMilestoneId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("milestone_id"); else _explicitNullProperties?.Remove("milestone_id"); } }
+        private int? _explicitNullValueMilestoneId = default!;
         /// <summary>Comma-separated label names to remove from the issue. At least one of `assignee_id`, `assignee_ids`, `confidential`, `created_at`, `description`, `discussion_locked`, `due_date`, `start_date`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `severity`, `state_event`, `title`, `issue_type`, `weight`, `epic_id`, `epic_iid` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? RemoveLabels { get; set; }
+        public List<string>? RemoveLabels { get => _explicitNullValueRemoveLabels; set { _explicitNullValueRemoveLabels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("remove_labels"); else _explicitNullProperties?.Remove("remove_labels"); } }
+        private List<string>? _explicitNullValueRemoveLabels = default!;
 #nullable restore
 #else
-        public List<string> RemoveLabels { get; set; }
+        public List<string> RemoveLabels { get => _explicitNullValueRemoveLabels; set { _explicitNullValueRemoveLabels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("remove_labels"); else _explicitNullProperties?.Remove("remove_labels"); } }
+        private List<string> _explicitNullValueRemoveLabels = default!;
 #endif
         /// <summary>The severity of the issue. Only applies to incidents. Accepts: unknown, low, medium, high, critical. At least one of `assignee_id`, `assignee_ids`, `confidential`, `created_at`, `description`, `discussion_locked`, `due_date`, `start_date`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `severity`, `state_event`, `title`, `issue_type`, `weight`, `epic_id`, `epic_iid` must be provided.</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdIssuesIssueIidRequestSeverity? Severity { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdIssuesIssueIidRequestSeverity? Severity { get => _explicitNullValueSeverity; set { _explicitNullValueSeverity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("severity"); else _explicitNullProperties?.Remove("severity"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdIssuesIssueIidRequestSeverity? _explicitNullValueSeverity = default!;
         /// <summary>Start date, in the format `YYYY-MM-DD`, for example `2016-03-11`. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/238041) in GitLab 19.1. At least one of `assignee_id`, `assignee_ids`, `confidential`, `created_at`, `description`, `discussion_locked`, `due_date`, `start_date`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `severity`, `state_event`, `title`, `issue_type`, `weight`, `epic_id`, `epic_iid` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StartDate { get; set; }
+        public string? StartDate { get => _explicitNullValueStartDate; set { _explicitNullValueStartDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_date"); else _explicitNullProperties?.Remove("start_date"); } }
+        private string? _explicitNullValueStartDate = default!;
 #nullable restore
 #else
-        public string StartDate { get; set; }
+        public string StartDate { get => _explicitNullValueStartDate; set { _explicitNullValueStartDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_date"); else _explicitNullProperties?.Remove("start_date"); } }
+        private string _explicitNullValueStartDate = default!;
 #endif
         /// <summary>Event to change the state of the issue. At least one of `assignee_id`, `assignee_ids`, `confidential`, `created_at`, `description`, `discussion_locked`, `due_date`, `start_date`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `severity`, `state_event`, `title`, `issue_type`, `weight`, `epic_id`, `epic_iid` must be provided.</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdIssuesIssueIidRequestStateEvent? StateEvent { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdIssuesIssueIidRequestStateEvent? StateEvent { get => _explicitNullValueStateEvent; set { _explicitNullValueStateEvent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("state_event"); else _explicitNullProperties?.Remove("state_event"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdIssuesIssueIidRequestStateEvent? _explicitNullValueStateEvent = default!;
         /// <summary>Title of the issue. At least one of `assignee_id`, `assignee_ids`, `confidential`, `created_at`, `description`, `discussion_locked`, `due_date`, `start_date`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `severity`, `state_event`, `title`, `issue_type`, `weight`, `epic_id`, `epic_iid` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Title { get; set; }
+        public string? Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
+        private string? _explicitNullValueTitle = default!;
 #nullable restore
 #else
-        public string Title { get; set; }
+        public string Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
+        private string _explicitNullValueTitle = default!;
 #endif
         /// <summary>Date and time the issue was updated. Administrators or project owners only. Empty or null values are not accepted.</summary>
-        public DateTimeOffset? UpdatedAt { get; set; }
+        public DateTimeOffset? UpdatedAt { get => _explicitNullValueUpdatedAt; set { _explicitNullValueUpdatedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updated_at"); else _explicitNullProperties?.Remove("updated_at"); } }
+        private DateTimeOffset? _explicitNullValueUpdatedAt = default!;
         /// <summary>The weight of the issue. At least one of `assignee_id`, `assignee_ids`, `confidential`, `created_at`, `description`, `discussion_locked`, `due_date`, `start_date`, `labels`, `add_labels`, `remove_labels`, `milestone_id`, `milestone`, `severity`, `state_event`, `title`, `issue_type`, `weight`, `epic_id`, `epic_iid` must be provided.</summary>
-        public int? Weight { get; set; }
+        public int? Weight { get => _explicitNullValueWeight; set { _explicitNullValueWeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("weight"); else _explicitNullProperties?.Remove("weight"); } }
+        private int? _explicitNullValueWeight = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdIssuesIssueIidRequest"/> and sets the default values.
         /// </summary>
@@ -131,7 +190,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdIssuesIssueIidRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdIssuesIssueIidRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdIssuesIssueIidRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -192,6 +251,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("title", Title);
             writer.WriteDateTimeOffsetValue("updated_at", UpdatedAt);
             writer.WriteIntValue("weight", Weight);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

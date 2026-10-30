@@ -11,48 +11,70 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ApiEntitiesMlMlflowExperiment : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("artifact_location") is { } nullNodeArtifactLocation && nullNodeArtifactLocation.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ArtifactLocation = null;
+            if (parseNode.GetChildNode("experiment_id") is { } nullNodeExperimentId && nullNodeExperimentId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExperimentId = null;
+            if (parseNode.GetChildNode("lifecycle_stage") is { } nullNodeLifecycleStage && nullNodeLifecycleStage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LifecycleStage = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("tags") is { } nullNodeTags && nullNodeTags.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tags = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The artifact_location property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ArtifactLocation { get; set; }
+        public string? ArtifactLocation { get => _explicitNullValueArtifactLocation; set { _explicitNullValueArtifactLocation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("artifact_location"); else _explicitNullProperties?.Remove("artifact_location"); } }
+        private string? _explicitNullValueArtifactLocation = default!;
 #nullable restore
 #else
-        public string ArtifactLocation { get; set; }
+        public string ArtifactLocation { get => _explicitNullValueArtifactLocation; set { _explicitNullValueArtifactLocation = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("artifact_location"); else _explicitNullProperties?.Remove("artifact_location"); } }
+        private string _explicitNullValueArtifactLocation = default!;
 #endif
         /// <summary>The experiment_id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExperimentId { get; set; }
+        public string? ExperimentId { get => _explicitNullValueExperimentId; set { _explicitNullValueExperimentId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("experiment_id"); else _explicitNullProperties?.Remove("experiment_id"); } }
+        private string? _explicitNullValueExperimentId = default!;
 #nullable restore
 #else
-        public string ExperimentId { get; set; }
+        public string ExperimentId { get => _explicitNullValueExperimentId; set { _explicitNullValueExperimentId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("experiment_id"); else _explicitNullProperties?.Remove("experiment_id"); } }
+        private string _explicitNullValueExperimentId = default!;
 #endif
         /// <summary>The lifecycle_stage property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LifecycleStage { get; set; }
+        public string? LifecycleStage { get => _explicitNullValueLifecycleStage; set { _explicitNullValueLifecycleStage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lifecycle_stage"); else _explicitNullProperties?.Remove("lifecycle_stage"); } }
+        private string? _explicitNullValueLifecycleStage = default!;
 #nullable restore
 #else
-        public string LifecycleStage { get; set; }
+        public string LifecycleStage { get => _explicitNullValueLifecycleStage; set { _explicitNullValueLifecycleStage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lifecycle_stage"); else _explicitNullProperties?.Remove("lifecycle_stage"); } }
+        private string _explicitNullValueLifecycleStage = default!;
 #endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>The tags property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMlMlflowKeyValue>? Tags { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMlMlflowKeyValue>? Tags { get => _explicitNullValueTags; set { _explicitNullValueTags = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tags"); else _explicitNullProperties?.Remove("tags"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMlMlflowKeyValue>? _explicitNullValueTags = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMlMlflowKeyValue> Tags { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMlMlflowKeyValue> Tags { get => _explicitNullValueTags; set { _explicitNullValueTags = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tags"); else _explicitNullProperties?.Remove("tags"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMlMlflowKeyValue> _explicitNullValueTags = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMlMlflowExperiment"/> and sets the default values.
@@ -69,7 +91,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMlMlflowExperiment CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMlMlflowExperiment();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMlMlflowExperiment(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -98,6 +120,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("lifecycle_stage", LifecycleStage);
             writer.WriteStringValue("name", Name);
             writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMlMlflowKeyValue>("tags", Tags);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

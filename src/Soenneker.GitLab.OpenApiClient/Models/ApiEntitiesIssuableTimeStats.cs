@@ -11,29 +11,46 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ApiEntitiesIssuableTimeStats : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("human_time_estimate") is { } nullNodeHumanTimeEstimate && nullNodeHumanTimeEstimate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HumanTimeEstimate = null;
+            if (parseNode.GetChildNode("human_total_time_spent") is { } nullNodeHumanTotalTimeSpent && nullNodeHumanTotalTimeSpent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HumanTotalTimeSpent = null;
+            if (parseNode.GetChildNode("time_estimate") is { } nullNodeTimeEstimate && nullNodeTimeEstimate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimeEstimate = null;
+            if (parseNode.GetChildNode("total_time_spent") is { } nullNodeTotalTimeSpent && nullNodeTotalTimeSpent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalTimeSpent = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The human_time_estimate property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HumanTimeEstimate { get; set; }
+        public string? HumanTimeEstimate { get => _explicitNullValueHumanTimeEstimate; set { _explicitNullValueHumanTimeEstimate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("human_time_estimate"); else _explicitNullProperties?.Remove("human_time_estimate"); } }
+        private string? _explicitNullValueHumanTimeEstimate = default!;
 #nullable restore
 #else
-        public string HumanTimeEstimate { get; set; }
+        public string HumanTimeEstimate { get => _explicitNullValueHumanTimeEstimate; set { _explicitNullValueHumanTimeEstimate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("human_time_estimate"); else _explicitNullProperties?.Remove("human_time_estimate"); } }
+        private string _explicitNullValueHumanTimeEstimate = default!;
 #endif
         /// <summary>The human_total_time_spent property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HumanTotalTimeSpent { get; set; }
+        public string? HumanTotalTimeSpent { get => _explicitNullValueHumanTotalTimeSpent; set { _explicitNullValueHumanTotalTimeSpent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("human_total_time_spent"); else _explicitNullProperties?.Remove("human_total_time_spent"); } }
+        private string? _explicitNullValueHumanTotalTimeSpent = default!;
 #nullable restore
 #else
-        public string HumanTotalTimeSpent { get; set; }
+        public string HumanTotalTimeSpent { get => _explicitNullValueHumanTotalTimeSpent; set { _explicitNullValueHumanTotalTimeSpent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("human_total_time_spent"); else _explicitNullProperties?.Remove("human_total_time_spent"); } }
+        private string _explicitNullValueHumanTotalTimeSpent = default!;
 #endif
         /// <summary>The time_estimate property</summary>
-        public int? TimeEstimate { get; set; }
+        public int? TimeEstimate { get => _explicitNullValueTimeEstimate; set { _explicitNullValueTimeEstimate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("time_estimate"); else _explicitNullProperties?.Remove("time_estimate"); } }
+        private int? _explicitNullValueTimeEstimate = default!;
         /// <summary>The total_time_spent property</summary>
-        public int? TotalTimeSpent { get; set; }
+        public int? TotalTimeSpent { get => _explicitNullValueTotalTimeSpent; set { _explicitNullValueTotalTimeSpent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total_time_spent"); else _explicitNullProperties?.Remove("total_time_spent"); } }
+        private int? _explicitNullValueTotalTimeSpent = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesIssuableTimeStats"/> and sets the default values.
         /// </summary>
@@ -49,7 +66,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesIssuableTimeStats CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesIssuableTimeStats();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesIssuableTimeStats(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -76,6 +93,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("human_total_time_spent", HumanTotalTimeSpent);
             writer.WriteIntValue("time_estimate", TimeEstimate);
             writer.WriteIntValue("total_time_spent", TotalTimeSpent);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

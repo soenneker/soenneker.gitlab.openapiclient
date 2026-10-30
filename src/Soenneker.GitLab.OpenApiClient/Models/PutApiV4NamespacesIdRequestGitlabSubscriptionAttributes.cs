@@ -13,35 +13,63 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PutApiV4NamespacesIdRequestGitlabSubscriptionAttributes : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("auto_renew") is { } nullNodeAutoRenew && nullNodeAutoRenew.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutoRenew = null;
+            if (parseNode.GetChildNode("end_date") is { } nullNodeEndDate && nullNodeEndDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndDate = null;
+            if (parseNode.GetChildNode("max_seats_used") is { } nullNodeMaxSeatsUsed && nullNodeMaxSeatsUsed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxSeatsUsed = null;
+            if (parseNode.GetChildNode("plan_code") is { } nullNodePlanCode && nullNodePlanCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PlanCode = null;
+            if (parseNode.GetChildNode("seats") is { } nullNodeSeats && nullNodeSeats.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Seats = null;
+            if (parseNode.GetChildNode("start_date") is { } nullNodeStartDate && nullNodeStartDate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartDate = null;
+            if (parseNode.GetChildNode("trial") is { } nullNodeTrial && nullNodeTrial.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Trial = null;
+            if (parseNode.GetChildNode("trial_ends_on") is { } nullNodeTrialEndsOn && nullNodeTrialEndsOn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrialEndsOn = null;
+            if (parseNode.GetChildNode("trial_extension_type") is { } nullNodeTrialExtensionType && nullNodeTrialExtensionType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrialExtensionType = null;
+            if (parseNode.GetChildNode("trial_starts_on") is { } nullNodeTrialStartsOn && nullNodeTrialStartsOn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrialStartsOn = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>If `true`, the subscription renews automatically on the end date.</summary>
-        public bool? AutoRenew { get; set; }
+        public bool? AutoRenew { get => _explicitNullValueAutoRenew; set { _explicitNullValueAutoRenew = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auto_renew"); else _explicitNullProperties?.Remove("auto_renew"); } }
+        private bool? _explicitNullValueAutoRenew = default!;
         /// <summary>End date of the subscription.</summary>
-        public Date? EndDate { get; set; }
+        public Date? EndDate { get => _explicitNullValueEndDate; set { _explicitNullValueEndDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("end_date"); else _explicitNullProperties?.Remove("end_date"); } }
+        private Date? _explicitNullValueEndDate = default!;
         /// <summary>Highest number of active users in the last month.</summary>
-        public int? MaxSeatsUsed { get; set; }
+        public int? MaxSeatsUsed { get => _explicitNullValueMaxSeatsUsed; set { _explicitNullValueMaxSeatsUsed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("max_seats_used"); else _explicitNullProperties?.Remove("max_seats_used"); } }
+        private int? _explicitNullValueMaxSeatsUsed = default!;
         /// <summary>Subscription tier code.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PlanCode { get; set; }
+        public string? PlanCode { get => _explicitNullValuePlanCode; set { _explicitNullValuePlanCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("plan_code"); else _explicitNullProperties?.Remove("plan_code"); } }
+        private string? _explicitNullValuePlanCode = default!;
 #nullable restore
 #else
-        public string PlanCode { get; set; }
+        public string PlanCode { get => _explicitNullValuePlanCode; set { _explicitNullValuePlanCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("plan_code"); else _explicitNullProperties?.Remove("plan_code"); } }
+        private string _explicitNullValuePlanCode = default!;
 #endif
         /// <summary>Number of seats in the subscription.</summary>
-        public int? Seats { get; set; }
+        public int? Seats { get => _explicitNullValueSeats; set { _explicitNullValueSeats = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("seats"); else _explicitNullProperties?.Remove("seats"); } }
+        private int? _explicitNullValueSeats = default!;
         /// <summary>Start date of the subscription.</summary>
-        public Date? StartDate { get; set; }
+        public Date? StartDate { get => _explicitNullValueStartDate; set { _explicitNullValueStartDate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_date"); else _explicitNullProperties?.Remove("start_date"); } }
+        private Date? _explicitNullValueStartDate = default!;
         /// <summary>If `true`, the subscription is a trial.</summary>
-        public bool? Trial { get; set; }
+        public bool? Trial { get => _explicitNullValueTrial; set { _explicitNullValueTrial = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trial"); else _explicitNullProperties?.Remove("trial"); } }
+        private bool? _explicitNullValueTrial = default!;
         /// <summary>End date of the trial.</summary>
-        public Date? TrialEndsOn { get; set; }
+        public Date? TrialEndsOn { get => _explicitNullValueTrialEndsOn; set { _explicitNullValueTrialEndsOn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trial_ends_on"); else _explicitNullProperties?.Remove("trial_ends_on"); } }
+        private Date? _explicitNullValueTrialEndsOn = default!;
         /// <summary>Type of trial extension applied to the subscription. `1` means extended, `2` means reactivated.</summary>
-        public int? TrialExtensionType { get; set; }
+        public int? TrialExtensionType { get => _explicitNullValueTrialExtensionType; set { _explicitNullValueTrialExtensionType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trial_extension_type"); else _explicitNullProperties?.Remove("trial_extension_type"); } }
+        private int? _explicitNullValueTrialExtensionType = default!;
         /// <summary>Start date of the trial.</summary>
-        public Date? TrialStartsOn { get; set; }
+        public Date? TrialStartsOn { get => _explicitNullValueTrialStartsOn; set { _explicitNullValueTrialStartsOn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trial_starts_on"); else _explicitNullProperties?.Remove("trial_starts_on"); } }
+        private Date? _explicitNullValueTrialStartsOn = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4NamespacesIdRequestGitlabSubscriptionAttributes"/> and sets the default values.
         /// </summary>
@@ -57,7 +85,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4NamespacesIdRequestGitlabSubscriptionAttributes CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4NamespacesIdRequestGitlabSubscriptionAttributes();
+            // Preserve a nullable root response.
+            if (parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) return null!;
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4NamespacesIdRequestGitlabSubscriptionAttributes(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -96,6 +126,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteDateValue("trial_ends_on", TrialEndsOn);
             writer.WriteIntValue("trial_extension_type", TrialExtensionType);
             writer.WriteDateValue("trial_starts_on", TrialStartsOn);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

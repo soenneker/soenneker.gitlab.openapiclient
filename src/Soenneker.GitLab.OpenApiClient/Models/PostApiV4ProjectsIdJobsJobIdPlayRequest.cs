@@ -11,24 +11,37 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostApiV4ProjectsIdJobsJobIdPlayRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("job_inputs") is { } nullNodeJobInputs && nullNodeJobInputs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) JobInputs = null;
+            if (parseNode.GetChildNode("job_variables_attributes") is { } nullNodeJobVariablesAttributes && nullNodeJobVariablesAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) JobVariablesAttributes = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Hash of [job input](https://docs.gitlab.com/ci/jobs/job_inputs/) values to use when playing the job. [Introduced](https://gitlab.com/groups/gitlab-org/-/work_items/17833) in GitLab 18.10.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdJobsJobIdPlayRequestJobInputsProperty? JobInputs { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdJobsJobIdPlayRequestJobInputsProperty? JobInputs { get => _explicitNullValueJobInputs; set { _explicitNullValueJobInputs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("job_inputs"); else _explicitNullProperties?.Remove("job_inputs"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdJobsJobIdPlayRequestJobInputsProperty? _explicitNullValueJobInputs = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdJobsJobIdPlayRequestJobInputsProperty JobInputs { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdJobsJobIdPlayRequestJobInputsProperty JobInputs { get => _explicitNullValueJobInputs; set { _explicitNullValueJobInputs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("job_inputs"); else _explicitNullProperties?.Remove("job_inputs"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdJobsJobIdPlayRequestJobInputsProperty _explicitNullValueJobInputs = default!;
 #endif
         /// <summary>User-defined variables to include when running the job.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdJobsJobIdPlayRequestJobVariablesAttributesItem>? JobVariablesAttributes { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdJobsJobIdPlayRequestJobVariablesAttributesItem>? JobVariablesAttributes { get => _explicitNullValueJobVariablesAttributes; set { _explicitNullValueJobVariablesAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("job_variables_attributes"); else _explicitNullProperties?.Remove("job_variables_attributes"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdJobsJobIdPlayRequestJobVariablesAttributesItem>? _explicitNullValueJobVariablesAttributes = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdJobsJobIdPlayRequestJobVariablesAttributesItem> JobVariablesAttributes { get; set; }
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdJobsJobIdPlayRequestJobVariablesAttributesItem> JobVariablesAttributes { get => _explicitNullValueJobVariablesAttributes; set { _explicitNullValueJobVariablesAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("job_variables_attributes"); else _explicitNullProperties?.Remove("job_variables_attributes"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdJobsJobIdPlayRequestJobVariablesAttributesItem> _explicitNullValueJobVariablesAttributes = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdJobsJobIdPlayRequest"/> and sets the default values.
@@ -45,7 +58,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdJobsJobIdPlayRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdJobsJobIdPlayRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdJobsJobIdPlayRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +81,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdJobsJobIdPlayRequestJobInputsProperty>("job_inputs", JobInputs);
             writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdJobsJobIdPlayRequestJobVariablesAttributesItem>("job_variables_attributes", JobVariablesAttributes);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

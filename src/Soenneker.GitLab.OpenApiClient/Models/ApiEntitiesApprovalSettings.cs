@@ -11,41 +11,70 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ApiEntitiesApprovalSettings : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("approvals_before_merge") is { } nullNodeApprovalsBeforeMerge && nullNodeApprovalsBeforeMerge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApprovalsBeforeMerge = null;
+            if (parseNode.GetChildNode("approver_groups") is { } nullNodeApproverGroups && nullNodeApproverGroups.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApproverGroups = null;
+            if (parseNode.GetChildNode("approvers") is { } nullNodeApprovers && nullNodeApprovers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Approvers = null;
+            if (parseNode.GetChildNode("disable_overriding_approvers_per_merge_request") is { } nullNodeDisableOverridingApproversPerMergeRequest && nullNodeDisableOverridingApproversPerMergeRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisableOverridingApproversPerMergeRequest = null;
+            if (parseNode.GetChildNode("merge_requests_author_approval") is { } nullNodeMergeRequestsAuthorApproval && nullNodeMergeRequestsAuthorApproval.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MergeRequestsAuthorApproval = null;
+            if (parseNode.GetChildNode("merge_requests_disable_committers_approval") is { } nullNodeMergeRequestsDisableCommittersApproval && nullNodeMergeRequestsDisableCommittersApproval.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MergeRequestsDisableCommittersApproval = null;
+            if (parseNode.GetChildNode("require_password_to_approve") is { } nullNodeRequirePasswordToApprove && nullNodeRequirePasswordToApprove.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequirePasswordToApprove = null;
+            if (parseNode.GetChildNode("require_reauthentication_to_approve") is { } nullNodeRequireReauthenticationToApprove && nullNodeRequireReauthenticationToApprove.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequireReauthenticationToApprove = null;
+            if (parseNode.GetChildNode("reset_approvals_on_push") is { } nullNodeResetApprovalsOnPush && nullNodeResetApprovalsOnPush.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResetApprovalsOnPush = null;
+            if (parseNode.GetChildNode("selective_code_owner_removals") is { } nullNodeSelectiveCodeOwnerRemovals && nullNodeSelectiveCodeOwnerRemovals.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SelectiveCodeOwnerRemovals = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The approvals_before_merge property</summary>
-        public int? ApprovalsBeforeMerge { get; set; }
+        public int? ApprovalsBeforeMerge { get => _explicitNullValueApprovalsBeforeMerge; set { _explicitNullValueApprovalsBeforeMerge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approvals_before_merge"); else _explicitNullProperties?.Remove("approvals_before_merge"); } }
+        private int? _explicitNullValueApprovalsBeforeMerge = default!;
         /// <summary>The approver_groups property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApproverGroup? ApproverGroups { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApproverGroup? ApproverGroups { get => _explicitNullValueApproverGroups; set { _explicitNullValueApproverGroups = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approver_groups"); else _explicitNullProperties?.Remove("approver_groups"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApproverGroup? _explicitNullValueApproverGroups = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApproverGroup ApproverGroups { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApproverGroup ApproverGroups { get => _explicitNullValueApproverGroups; set { _explicitNullValueApproverGroups = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approver_groups"); else _explicitNullProperties?.Remove("approver_groups"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApproverGroup _explicitNullValueApproverGroups = default!;
 #endif
         /// <summary>The approvers property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApprover? Approvers { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApprover? Approvers { get => _explicitNullValueApprovers; set { _explicitNullValueApprovers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approvers"); else _explicitNullProperties?.Remove("approvers"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApprover? _explicitNullValueApprovers = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApprover Approvers { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApprover Approvers { get => _explicitNullValueApprovers; set { _explicitNullValueApprovers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approvers"); else _explicitNullProperties?.Remove("approvers"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApprover _explicitNullValueApprovers = default!;
 #endif
         /// <summary>The disable_overriding_approvers_per_merge_request property</summary>
-        public bool? DisableOverridingApproversPerMergeRequest { get; set; }
+        public bool? DisableOverridingApproversPerMergeRequest { get => _explicitNullValueDisableOverridingApproversPerMergeRequest; set { _explicitNullValueDisableOverridingApproversPerMergeRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("disable_overriding_approvers_per_merge_request"); else _explicitNullProperties?.Remove("disable_overriding_approvers_per_merge_request"); } }
+        private bool? _explicitNullValueDisableOverridingApproversPerMergeRequest = default!;
         /// <summary>The merge_requests_author_approval property</summary>
-        public bool? MergeRequestsAuthorApproval { get; set; }
+        public bool? MergeRequestsAuthorApproval { get => _explicitNullValueMergeRequestsAuthorApproval; set { _explicitNullValueMergeRequestsAuthorApproval = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_requests_author_approval"); else _explicitNullProperties?.Remove("merge_requests_author_approval"); } }
+        private bool? _explicitNullValueMergeRequestsAuthorApproval = default!;
         /// <summary>The merge_requests_disable_committers_approval property</summary>
-        public bool? MergeRequestsDisableCommittersApproval { get; set; }
+        public bool? MergeRequestsDisableCommittersApproval { get => _explicitNullValueMergeRequestsDisableCommittersApproval; set { _explicitNullValueMergeRequestsDisableCommittersApproval = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_requests_disable_committers_approval"); else _explicitNullProperties?.Remove("merge_requests_disable_committers_approval"); } }
+        private bool? _explicitNullValueMergeRequestsDisableCommittersApproval = default!;
         /// <summary>The require_password_to_approve property</summary>
-        public bool? RequirePasswordToApprove { get; set; }
+        public bool? RequirePasswordToApprove { get => _explicitNullValueRequirePasswordToApprove; set { _explicitNullValueRequirePasswordToApprove = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("require_password_to_approve"); else _explicitNullProperties?.Remove("require_password_to_approve"); } }
+        private bool? _explicitNullValueRequirePasswordToApprove = default!;
         /// <summary>The require_reauthentication_to_approve property</summary>
-        public bool? RequireReauthenticationToApprove { get; set; }
+        public bool? RequireReauthenticationToApprove { get => _explicitNullValueRequireReauthenticationToApprove; set { _explicitNullValueRequireReauthenticationToApprove = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("require_reauthentication_to_approve"); else _explicitNullProperties?.Remove("require_reauthentication_to_approve"); } }
+        private bool? _explicitNullValueRequireReauthenticationToApprove = default!;
         /// <summary>The reset_approvals_on_push property</summary>
-        public bool? ResetApprovalsOnPush { get; set; }
+        public bool? ResetApprovalsOnPush { get => _explicitNullValueResetApprovalsOnPush; set { _explicitNullValueResetApprovalsOnPush = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reset_approvals_on_push"); else _explicitNullProperties?.Remove("reset_approvals_on_push"); } }
+        private bool? _explicitNullValueResetApprovalsOnPush = default!;
         /// <summary>The selective_code_owner_removals property</summary>
-        public bool? SelectiveCodeOwnerRemovals { get; set; }
+        public bool? SelectiveCodeOwnerRemovals { get => _explicitNullValueSelectiveCodeOwnerRemovals; set { _explicitNullValueSelectiveCodeOwnerRemovals = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("selective_code_owner_removals"); else _explicitNullProperties?.Remove("selective_code_owner_removals"); } }
+        private bool? _explicitNullValueSelectiveCodeOwnerRemovals = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApprovalSettings"/> and sets the default values.
         /// </summary>
@@ -61,7 +90,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApprovalSettings CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApprovalSettings();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApprovalSettings(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -100,6 +129,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteBoolValue("require_reauthentication_to_approve", RequireReauthenticationToApprove);
             writer.WriteBoolValue("reset_approvals_on_push", ResetApprovalsOnPush);
             writer.WriteBoolValue("selective_code_owner_removals", SelectiveCodeOwnerRemovals);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -11,58 +11,85 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ApiEntitiesDependency : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("dependency_file_path") is { } nullNodeDependencyFilePath && nullNodeDependencyFilePath.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DependencyFilePath = null;
+            if (parseNode.GetChildNode("licenses") is { } nullNodeLicenses && nullNodeLicenses.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Licenses = null;
+            if (parseNode.GetChildNode("malware") is { } nullNodeMalware && nullNodeMalware.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Malware = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("package_manager") is { } nullNodePackageManager && nullNodePackageManager.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PackageManager = null;
+            if (parseNode.GetChildNode("version") is { } nullNodeVersion && nullNodeVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Version = null;
+            if (parseNode.GetChildNode("vulnerabilities") is { } nullNodeVulnerabilities && nullNodeVulnerabilities.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Vulnerabilities = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The dependency_file_path property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DependencyFilePath { get; set; }
+        public string? DependencyFilePath { get => _explicitNullValueDependencyFilePath; set { _explicitNullValueDependencyFilePath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dependency_file_path"); else _explicitNullProperties?.Remove("dependency_file_path"); } }
+        private string? _explicitNullValueDependencyFilePath = default!;
 #nullable restore
 #else
-        public string DependencyFilePath { get; set; }
+        public string DependencyFilePath { get => _explicitNullValueDependencyFilePath; set { _explicitNullValueDependencyFilePath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dependency_file_path"); else _explicitNullProperties?.Remove("dependency_file_path"); } }
+        private string _explicitNullValueDependencyFilePath = default!;
 #endif
         /// <summary>The licenses property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.DependencyEntityLicenseEntity? Licenses { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.DependencyEntityLicenseEntity? Licenses { get => _explicitNullValueLicenses; set { _explicitNullValueLicenses = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("licenses"); else _explicitNullProperties?.Remove("licenses"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.DependencyEntityLicenseEntity? _explicitNullValueLicenses = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.DependencyEntityLicenseEntity Licenses { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.DependencyEntityLicenseEntity Licenses { get => _explicitNullValueLicenses; set { _explicitNullValueLicenses = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("licenses"); else _explicitNullProperties?.Remove("licenses"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.DependencyEntityLicenseEntity _explicitNullValueLicenses = default!;
 #endif
         /// <summary>Malware status: true if the package version matches a malware advisory, false otherwise. Omitted when the user cannot read security resources.</summary>
-        public bool? Malware { get; set; }
+        public bool? Malware { get => _explicitNullValueMalware; set { _explicitNullValueMalware = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("malware"); else _explicitNullProperties?.Remove("malware"); } }
+        private bool? _explicitNullValueMalware = default!;
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>The package_manager property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PackageManager { get; set; }
+        public string? PackageManager { get => _explicitNullValuePackageManager; set { _explicitNullValuePackageManager = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("package_manager"); else _explicitNullProperties?.Remove("package_manager"); } }
+        private string? _explicitNullValuePackageManager = default!;
 #nullable restore
 #else
-        public string PackageManager { get; set; }
+        public string PackageManager { get => _explicitNullValuePackageManager; set { _explicitNullValuePackageManager = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("package_manager"); else _explicitNullProperties?.Remove("package_manager"); } }
+        private string _explicitNullValuePackageManager = default!;
 #endif
         /// <summary>The version property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Version { get; set; }
+        public string? Version { get => _explicitNullValueVersion; set { _explicitNullValueVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("version"); else _explicitNullProperties?.Remove("version"); } }
+        private string? _explicitNullValueVersion = default!;
 #nullable restore
 #else
-        public string Version { get; set; }
+        public string Version { get => _explicitNullValueVersion; set { _explicitNullValueVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("version"); else _explicitNullProperties?.Remove("version"); } }
+        private string _explicitNullValueVersion = default!;
 #endif
         /// <summary>The vulnerabilities property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.DependencyEntityVulnerabilityEntity? Vulnerabilities { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.DependencyEntityVulnerabilityEntity? Vulnerabilities { get => _explicitNullValueVulnerabilities; set { _explicitNullValueVulnerabilities = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vulnerabilities"); else _explicitNullProperties?.Remove("vulnerabilities"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.DependencyEntityVulnerabilityEntity? _explicitNullValueVulnerabilities = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.DependencyEntityVulnerabilityEntity Vulnerabilities { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.DependencyEntityVulnerabilityEntity Vulnerabilities { get => _explicitNullValueVulnerabilities; set { _explicitNullValueVulnerabilities = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vulnerabilities"); else _explicitNullProperties?.Remove("vulnerabilities"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.DependencyEntityVulnerabilityEntity _explicitNullValueVulnerabilities = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDependency"/> and sets the default values.
@@ -79,7 +106,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDependency CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDependency();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDependency(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -112,6 +139,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("package_manager", PackageManager);
             writer.WriteStringValue("version", Version);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.DependencyEntityVulnerabilityEntity>("vulnerabilities", Vulnerabilities);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

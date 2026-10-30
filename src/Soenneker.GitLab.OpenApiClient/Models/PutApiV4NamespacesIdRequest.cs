@@ -12,25 +12,43 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PutApiV4NamespacesIdRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("additional_purchased_storage_ends_on") is { } nullNodeAdditionalPurchasedStorageEndsOn && nullNodeAdditionalPurchasedStorageEndsOn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdditionalPurchasedStorageEndsOn = null;
+            if (parseNode.GetChildNode("additional_purchased_storage_size") is { } nullNodeAdditionalPurchasedStorageSize && nullNodeAdditionalPurchasedStorageSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdditionalPurchasedStorageSize = null;
+            if (parseNode.GetChildNode("extra_shared_runners_minutes_limit") is { } nullNodeExtraSharedRunnersMinutesLimit && nullNodeExtraSharedRunnersMinutesLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExtraSharedRunnersMinutesLimit = null;
+            if (parseNode.GetChildNode("gitlab_subscription_attributes") is { } nullNodeGitlabSubscriptionAttributes && nullNodeGitlabSubscriptionAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GitlabSubscriptionAttributes = null;
+            if (parseNode.GetChildNode("shared_runners_minutes_limit") is { } nullNodeSharedRunnersMinutesLimit && nullNodeSharedRunnersMinutesLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SharedRunnersMinutesLimit = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>End of subscription of the additional purchased storage.</summary>
-        public Date? AdditionalPurchasedStorageEndsOn { get; set; }
+        public Date? AdditionalPurchasedStorageEndsOn { get => _explicitNullValueAdditionalPurchasedStorageEndsOn; set { _explicitNullValueAdditionalPurchasedStorageEndsOn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("additional_purchased_storage_ends_on"); else _explicitNullProperties?.Remove("additional_purchased_storage_ends_on"); } }
+        private Date? _explicitNullValueAdditionalPurchasedStorageEndsOn = default!;
         /// <summary>Additional storage size purchased for the namespace.</summary>
-        public int? AdditionalPurchasedStorageSize { get; set; }
+        public int? AdditionalPurchasedStorageSize { get => _explicitNullValueAdditionalPurchasedStorageSize; set { _explicitNullValueAdditionalPurchasedStorageSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("additional_purchased_storage_size"); else _explicitNullProperties?.Remove("additional_purchased_storage_size"); } }
+        private int? _explicitNullValueAdditionalPurchasedStorageSize = default!;
         /// <summary>Extra compute minutes quota for the namespace.</summary>
-        public int? ExtraSharedRunnersMinutesLimit { get; set; }
+        public int? ExtraSharedRunnersMinutesLimit { get => _explicitNullValueExtraSharedRunnersMinutesLimit; set { _explicitNullValueExtraSharedRunnersMinutesLimit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extra_shared_runners_minutes_limit"); else _explicitNullProperties?.Remove("extra_shared_runners_minutes_limit"); } }
+        private int? _explicitNullValueExtraSharedRunnersMinutesLimit = default!;
         /// <summary>Object that contains information on the GitLab subscription.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4NamespacesIdRequestGitlabSubscriptionAttributes? GitlabSubscriptionAttributes { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4NamespacesIdRequestGitlabSubscriptionAttributes? GitlabSubscriptionAttributes { get => _explicitNullValueGitlabSubscriptionAttributes; set { _explicitNullValueGitlabSubscriptionAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gitlab_subscription_attributes"); else _explicitNullProperties?.Remove("gitlab_subscription_attributes"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4NamespacesIdRequestGitlabSubscriptionAttributes? _explicitNullValueGitlabSubscriptionAttributes = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4NamespacesIdRequestGitlabSubscriptionAttributes GitlabSubscriptionAttributes { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4NamespacesIdRequestGitlabSubscriptionAttributes GitlabSubscriptionAttributes { get => _explicitNullValueGitlabSubscriptionAttributes; set { _explicitNullValueGitlabSubscriptionAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gitlab_subscription_attributes"); else _explicitNullProperties?.Remove("gitlab_subscription_attributes"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4NamespacesIdRequestGitlabSubscriptionAttributes _explicitNullValueGitlabSubscriptionAttributes = default!;
 #endif
         /// <summary>Compute minutes quota for the namespace.</summary>
-        public int? SharedRunnersMinutesLimit { get; set; }
+        public int? SharedRunnersMinutesLimit { get => _explicitNullValueSharedRunnersMinutesLimit; set { _explicitNullValueSharedRunnersMinutesLimit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shared_runners_minutes_limit"); else _explicitNullProperties?.Remove("shared_runners_minutes_limit"); } }
+        private int? _explicitNullValueSharedRunnersMinutesLimit = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4NamespacesIdRequest"/> and sets the default values.
         /// </summary>
@@ -46,7 +64,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4NamespacesIdRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4NamespacesIdRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4NamespacesIdRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -75,6 +93,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteIntValue("extra_shared_runners_minutes_limit", ExtraSharedRunnersMinutesLimit);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4NamespacesIdRequestGitlabSubscriptionAttributes>("gitlab_subscription_attributes", GitlabSubscriptionAttributes);
             writer.WriteIntValue("shared_runners_minutes_limit", SharedRunnersMinutesLimit);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

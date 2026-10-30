@@ -11,29 +11,46 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PutApiV4GroupsIdDashEpicsEpicIidIssuesEpicIssueIdRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("move_after_id") is { } nullNodeMoveAfterId && nullNodeMoveAfterId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MoveAfterId = null;
+            if (parseNode.GetChildNode("move_before_id") is { } nullNodeMoveBeforeId && nullNodeMoveBeforeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MoveBeforeId = null;
+            if (parseNode.GetChildNode("page") is { } nullNodePage && nullNodePage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Page = null;
+            if (parseNode.GetChildNode("per_page") is { } nullNodePerPage && nullNodePerPage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PerPage = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>ID of the epic-issue association to position after the issue.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdDashEpicsEpicIidIssuesEpicIssueIdRequestMoveAfterId? MoveAfterId { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdDashEpicsEpicIidIssuesEpicIssueIdRequestMoveAfterId? MoveAfterId { get => _explicitNullValueMoveAfterId; set { _explicitNullValueMoveAfterId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("move_after_id"); else _explicitNullProperties?.Remove("move_after_id"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdDashEpicsEpicIidIssuesEpicIssueIdRequestMoveAfterId? _explicitNullValueMoveAfterId = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdDashEpicsEpicIidIssuesEpicIssueIdRequestMoveAfterId MoveAfterId { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdDashEpicsEpicIidIssuesEpicIssueIdRequestMoveAfterId MoveAfterId { get => _explicitNullValueMoveAfterId; set { _explicitNullValueMoveAfterId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("move_after_id"); else _explicitNullProperties?.Remove("move_after_id"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdDashEpicsEpicIidIssuesEpicIssueIdRequestMoveAfterId _explicitNullValueMoveAfterId = default!;
 #endif
         /// <summary>ID of the epic-issue association to position before the issue.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdDashEpicsEpicIidIssuesEpicIssueIdRequestMoveBeforeId? MoveBeforeId { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdDashEpicsEpicIidIssuesEpicIssueIdRequestMoveBeforeId? MoveBeforeId { get => _explicitNullValueMoveBeforeId; set { _explicitNullValueMoveBeforeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("move_before_id"); else _explicitNullProperties?.Remove("move_before_id"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdDashEpicsEpicIidIssuesEpicIssueIdRequestMoveBeforeId? _explicitNullValueMoveBeforeId = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdDashEpicsEpicIidIssuesEpicIssueIdRequestMoveBeforeId MoveBeforeId { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdDashEpicsEpicIidIssuesEpicIssueIdRequestMoveBeforeId MoveBeforeId { get => _explicitNullValueMoveBeforeId; set { _explicitNullValueMoveBeforeId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("move_before_id"); else _explicitNullProperties?.Remove("move_before_id"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdDashEpicsEpicIidIssuesEpicIssueIdRequestMoveBeforeId _explicitNullValueMoveBeforeId = default!;
 #endif
         /// <summary>Page number of results to retrieve.</summary>
-        public int? Page { get; set; }
+        public int? Page { get => _explicitNullValuePage; set { _explicitNullValuePage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("page"); else _explicitNullProperties?.Remove("page"); } }
+        private int? _explicitNullValuePage = default!;
         /// <summary>Number of items to list per page.</summary>
-        public int? PerPage { get; set; }
+        public int? PerPage { get => _explicitNullValuePerPage; set { _explicitNullValuePerPage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("per_page"); else _explicitNullProperties?.Remove("per_page"); } }
+        private int? _explicitNullValuePerPage = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdDashEpicsEpicIidIssuesEpicIssueIdRequest"/> and sets the default values.
         /// </summary>
@@ -51,7 +68,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdDashEpicsEpicIidIssuesEpicIssueIdRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdDashEpicsEpicIidIssuesEpicIssueIdRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdDashEpicsEpicIidIssuesEpicIssueIdRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -78,6 +95,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdDashEpicsEpicIidIssuesEpicIssueIdRequestMoveBeforeId>("move_before_id", MoveBeforeId);
             writer.WriteIntValue("page", Page);
             writer.WriteIntValue("per_page", PerPage);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

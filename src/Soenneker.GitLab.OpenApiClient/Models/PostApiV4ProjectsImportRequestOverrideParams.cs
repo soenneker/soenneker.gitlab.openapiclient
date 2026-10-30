@@ -12,271 +12,465 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PostApiV4ProjectsImportRequestOverrideParams : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("allow_merge_on_skipped_pipeline") is { } nullNodeAllowMergeOnSkippedPipeline && nullNodeAllowMergeOnSkippedPipeline.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowMergeOnSkippedPipeline = null;
+            if (parseNode.GetChildNode("analytics_access_level") is { } nullNodeAnalyticsAccessLevel && nullNodeAnalyticsAccessLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AnalyticsAccessLevel = null;
+            if (parseNode.GetChildNode("approvals_before_merge") is { } nullNodeApprovalsBeforeMerge && nullNodeApprovalsBeforeMerge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApprovalsBeforeMerge = null;
+            if (parseNode.GetChildNode("auto_cancel_pending_pipelines") is { } nullNodeAutoCancelPendingPipelines && nullNodeAutoCancelPendingPipelines.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutoCancelPendingPipelines = null;
+            if (parseNode.GetChildNode("autoclose_referenced_issues") is { } nullNodeAutocloseReferencedIssues && nullNodeAutocloseReferencedIssues.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutocloseReferencedIssues = null;
+            if (parseNode.GetChildNode("auto_devops_deploy_strategy") is { } nullNodeAutoDevopsDeployStrategy && nullNodeAutoDevopsDeployStrategy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutoDevopsDeployStrategy = null;
+            if (parseNode.GetChildNode("auto_devops_enabled") is { } nullNodeAutoDevopsEnabled && nullNodeAutoDevopsEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutoDevopsEnabled = null;
+            if (parseNode.GetChildNode("auto_duo_code_review_enabled") is { } nullNodeAutoDuoCodeReviewEnabled && nullNodeAutoDuoCodeReviewEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutoDuoCodeReviewEnabled = null;
+            if (parseNode.GetChildNode("avatar") is { } nullNodeAvatar && nullNodeAvatar.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Avatar = null;
+            if (parseNode.GetChildNode("build_git_strategy") is { } nullNodeBuildGitStrategy && nullNodeBuildGitStrategy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BuildGitStrategy = null;
+            if (parseNode.GetChildNode("builds_access_level") is { } nullNodeBuildsAccessLevel && nullNodeBuildsAccessLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BuildsAccessLevel = null;
+            if (parseNode.GetChildNode("build_timeout") is { } nullNodeBuildTimeout && nullNodeBuildTimeout.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BuildTimeout = null;
+            if (parseNode.GetChildNode("cicd_catalog_enabled") is { } nullNodeCicdCatalogEnabled && nullNodeCicdCatalogEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CicdCatalogEnabled = null;
+            if (parseNode.GetChildNode("ci_config_path") is { } nullNodeCiConfigPath && nullNodeCiConfigPath.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CiConfigPath = null;
+            if (parseNode.GetChildNode("container_expiration_policy_attributes") is { } nullNodeContainerExpirationPolicyAttributes && nullNodeContainerExpirationPolicyAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContainerExpirationPolicyAttributes = null;
+            if (parseNode.GetChildNode("container_registry_access_level") is { } nullNodeContainerRegistryAccessLevel && nullNodeContainerRegistryAccessLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContainerRegistryAccessLevel = null;
+            if (parseNode.GetChildNode("container_registry_enabled") is { } nullNodeContainerRegistryEnabled && nullNodeContainerRegistryEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContainerRegistryEnabled = null;
+            if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
+            if (parseNode.GetChildNode("duo_code_review_decisions_enabled") is { } nullNodeDuoCodeReviewDecisionsEnabled && nullNodeDuoCodeReviewDecisionsEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DuoCodeReviewDecisionsEnabled = null;
+            if (parseNode.GetChildNode("duo_dependency_bump_breaking_changes_enabled") is { } nullNodeDuoDependencyBumpBreakingChangesEnabled && nullNodeDuoDependencyBumpBreakingChangesEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DuoDependencyBumpBreakingChangesEnabled = null;
+            if (parseNode.GetChildNode("duo_remote_flows_enabled") is { } nullNodeDuoRemoteFlowsEnabled && nullNodeDuoRemoteFlowsEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DuoRemoteFlowsEnabled = null;
+            if (parseNode.GetChildNode("duo_sast_fp_detection_enabled") is { } nullNodeDuoSastFpDetectionEnabled && nullNodeDuoSastFpDetectionEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DuoSastFpDetectionEnabled = null;
+            if (parseNode.GetChildNode("duo_sast_vr_workflow_enabled") is { } nullNodeDuoSastVrWorkflowEnabled && nullNodeDuoSastVrWorkflowEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DuoSastVrWorkflowEnabled = null;
+            if (parseNode.GetChildNode("duo_secret_detection_fp_enabled") is { } nullNodeDuoSecretDetectionFpEnabled && nullNodeDuoSecretDetectionFpEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DuoSecretDetectionFpEnabled = null;
+            if (parseNode.GetChildNode("emails_disabled") is { } nullNodeEmailsDisabled && nullNodeEmailsDisabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailsDisabled = null;
+            if (parseNode.GetChildNode("emails_enabled") is { } nullNodeEmailsEnabled && nullNodeEmailsEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailsEnabled = null;
+            if (parseNode.GetChildNode("enforce_auth_checks_on_uploads") is { } nullNodeEnforceAuthChecksOnUploads && nullNodeEnforceAuthChecksOnUploads.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnforceAuthChecksOnUploads = null;
+            if (parseNode.GetChildNode("environments_access_level") is { } nullNodeEnvironmentsAccessLevel && nullNodeEnvironmentsAccessLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnvironmentsAccessLevel = null;
+            if (parseNode.GetChildNode("external_authorization_classification_label") is { } nullNodeExternalAuthorizationClassificationLabel && nullNodeExternalAuthorizationClassificationLabel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalAuthorizationClassificationLabel = null;
+            if (parseNode.GetChildNode("feature_flags_access_level") is { } nullNodeFeatureFlagsAccessLevel && nullNodeFeatureFlagsAccessLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FeatureFlagsAccessLevel = null;
+            if (parseNode.GetChildNode("forking_access_level") is { } nullNodeForkingAccessLevel && nullNodeForkingAccessLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ForkingAccessLevel = null;
+            if (parseNode.GetChildNode("group_runners_enabled") is { } nullNodeGroupRunnersEnabled && nullNodeGroupRunnersEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GroupRunnersEnabled = null;
+            if (parseNode.GetChildNode("infrastructure_access_level") is { } nullNodeInfrastructureAccessLevel && nullNodeInfrastructureAccessLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InfrastructureAccessLevel = null;
+            if (parseNode.GetChildNode("issue_branch_template") is { } nullNodeIssueBranchTemplate && nullNodeIssueBranchTemplate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssueBranchTemplate = null;
+            if (parseNode.GetChildNode("issues_access_level") is { } nullNodeIssuesAccessLevel && nullNodeIssuesAccessLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssuesAccessLevel = null;
+            if (parseNode.GetChildNode("issues_enabled") is { } nullNodeIssuesEnabled && nullNodeIssuesEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssuesEnabled = null;
+            if (parseNode.GetChildNode("jobs_enabled") is { } nullNodeJobsEnabled && nullNodeJobsEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) JobsEnabled = null;
+            if (parseNode.GetChildNode("lfs_enabled") is { } nullNodeLfsEnabled && nullNodeLfsEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LfsEnabled = null;
+            if (parseNode.GetChildNode("merge_commit_template") is { } nullNodeMergeCommitTemplate && nullNodeMergeCommitTemplate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MergeCommitTemplate = null;
+            if (parseNode.GetChildNode("merge_method") is { } nullNodeMergeMethod && nullNodeMergeMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MergeMethod = null;
+            if (parseNode.GetChildNode("merge_requests_access_level") is { } nullNodeMergeRequestsAccessLevel && nullNodeMergeRequestsAccessLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MergeRequestsAccessLevel = null;
+            if (parseNode.GetChildNode("merge_requests_enabled") is { } nullNodeMergeRequestsEnabled && nullNodeMergeRequestsEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MergeRequestsEnabled = null;
+            if (parseNode.GetChildNode("merge_request_title_regex") is { } nullNodeMergeRequestTitleRegex && nullNodeMergeRequestTitleRegex.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MergeRequestTitleRegex = null;
+            if (parseNode.GetChildNode("merge_request_title_regex_description") is { } nullNodeMergeRequestTitleRegexDescription && nullNodeMergeRequestTitleRegexDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MergeRequestTitleRegexDescription = null;
+            if (parseNode.GetChildNode("mirror") is { } nullNodeMirror && nullNodeMirror.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Mirror = null;
+            if (parseNode.GetChildNode("mirror_trigger_builds") is { } nullNodeMirrorTriggerBuilds && nullNodeMirrorTriggerBuilds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MirrorTriggerBuilds = null;
+            if (parseNode.GetChildNode("model_experiments_access_level") is { } nullNodeModelExperimentsAccessLevel && nullNodeModelExperimentsAccessLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ModelExperimentsAccessLevel = null;
+            if (parseNode.GetChildNode("model_registry_access_level") is { } nullNodeModelRegistryAccessLevel && nullNodeModelRegistryAccessLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ModelRegistryAccessLevel = null;
+            if (parseNode.GetChildNode("monitor_access_level") is { } nullNodeMonitorAccessLevel && nullNodeMonitorAccessLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MonitorAccessLevel = null;
+            if (parseNode.GetChildNode("mr_default_target_self") is { } nullNodeMrDefaultTargetSelf && nullNodeMrDefaultTargetSelf.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MrDefaultTargetSelf = null;
+            if (parseNode.GetChildNode("mr_default_title_template") is { } nullNodeMrDefaultTitleTemplate && nullNodeMrDefaultTitleTemplate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MrDefaultTitleTemplate = null;
+            if (parseNode.GetChildNode("only_allow_merge_if_all_discussions_are_resolved") is { } nullNodeOnlyAllowMergeIfAllDiscussionsAreResolved && nullNodeOnlyAllowMergeIfAllDiscussionsAreResolved.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OnlyAllowMergeIfAllDiscussionsAreResolved = null;
+            if (parseNode.GetChildNode("only_allow_merge_if_all_status_checks_passed") is { } nullNodeOnlyAllowMergeIfAllStatusChecksPassed && nullNodeOnlyAllowMergeIfAllStatusChecksPassed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OnlyAllowMergeIfAllStatusChecksPassed = null;
+            if (parseNode.GetChildNode("only_allow_merge_if_pipeline_succeeds") is { } nullNodeOnlyAllowMergeIfPipelineSucceeds && nullNodeOnlyAllowMergeIfPipelineSucceeds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OnlyAllowMergeIfPipelineSucceeds = null;
+            if (parseNode.GetChildNode("package_registry_access_level") is { } nullNodePackageRegistryAccessLevel && nullNodePackageRegistryAccessLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PackageRegistryAccessLevel = null;
+            if (parseNode.GetChildNode("packages_enabled") is { } nullNodePackagesEnabled && nullNodePackagesEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PackagesEnabled = null;
+            if (parseNode.GetChildNode("pages_access_level") is { } nullNodePagesAccessLevel && nullNodePagesAccessLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PagesAccessLevel = null;
+            if (parseNode.GetChildNode("prevent_merge_without_jira_issue") is { } nullNodePreventMergeWithoutJiraIssue && nullNodePreventMergeWithoutJiraIssue.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreventMergeWithoutJiraIssue = null;
+            if (parseNode.GetChildNode("printing_merge_request_link_enabled") is { } nullNodePrintingMergeRequestLinkEnabled && nullNodePrintingMergeRequestLinkEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrintingMergeRequestLinkEnabled = null;
+            if (parseNode.GetChildNode("public_builds") is { } nullNodePublicBuilds && nullNodePublicBuilds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PublicBuilds = null;
+            if (parseNode.GetChildNode("public_jobs") is { } nullNodePublicJobs && nullNodePublicJobs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PublicJobs = null;
+            if (parseNode.GetChildNode("releases_access_level") is { } nullNodeReleasesAccessLevel && nullNodeReleasesAccessLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReleasesAccessLevel = null;
+            if (parseNode.GetChildNode("remove_source_branch_after_merge") is { } nullNodeRemoveSourceBranchAfterMerge && nullNodeRemoveSourceBranchAfterMerge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RemoveSourceBranchAfterMerge = null;
+            if (parseNode.GetChildNode("repository_access_level") is { } nullNodeRepositoryAccessLevel && nullNodeRepositoryAccessLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RepositoryAccessLevel = null;
+            if (parseNode.GetChildNode("repository_storage") is { } nullNodeRepositoryStorage && nullNodeRepositoryStorage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RepositoryStorage = null;
+            if (parseNode.GetChildNode("request_access_enabled") is { } nullNodeRequestAccessEnabled && nullNodeRequestAccessEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestAccessEnabled = null;
+            if (parseNode.GetChildNode("requirements_access_level") is { } nullNodeRequirementsAccessLevel && nullNodeRequirementsAccessLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequirementsAccessLevel = null;
+            if (parseNode.GetChildNode("resolve_outdated_diff_discussions") is { } nullNodeResolveOutdatedDiffDiscussions && nullNodeResolveOutdatedDiffDiscussions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResolveOutdatedDiffDiscussions = null;
+            if (parseNode.GetChildNode("resource_group_default_process_mode") is { } nullNodeResourceGroupDefaultProcessMode && nullNodeResourceGroupDefaultProcessMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResourceGroupDefaultProcessMode = null;
+            if (parseNode.GetChildNode("security_and_compliance_access_level") is { } nullNodeSecurityAndComplianceAccessLevel && nullNodeSecurityAndComplianceAccessLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SecurityAndComplianceAccessLevel = null;
+            if (parseNode.GetChildNode("service_desk_enabled") is { } nullNodeServiceDeskEnabled && nullNodeServiceDeskEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServiceDeskEnabled = null;
+            if (parseNode.GetChildNode("shared_runners_enabled") is { } nullNodeSharedRunnersEnabled && nullNodeSharedRunnersEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SharedRunnersEnabled = null;
+            if (parseNode.GetChildNode("show_default_award_emojis") is { } nullNodeShowDefaultAwardEmojis && nullNodeShowDefaultAwardEmojis.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShowDefaultAwardEmojis = null;
+            if (parseNode.GetChildNode("show_diff_preview_in_email") is { } nullNodeShowDiffPreviewInEmail && nullNodeShowDiffPreviewInEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShowDiffPreviewInEmail = null;
+            if (parseNode.GetChildNode("snippets_access_level") is { } nullNodeSnippetsAccessLevel && nullNodeSnippetsAccessLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SnippetsAccessLevel = null;
+            if (parseNode.GetChildNode("snippets_enabled") is { } nullNodeSnippetsEnabled && nullNodeSnippetsEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SnippetsEnabled = null;
+            if (parseNode.GetChildNode("spp_repository_pipeline_access") is { } nullNodeSppRepositoryPipelineAccess && nullNodeSppRepositoryPipelineAccess.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SppRepositoryPipelineAccess = null;
+            if (parseNode.GetChildNode("squash_commit_template") is { } nullNodeSquashCommitTemplate && nullNodeSquashCommitTemplate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SquashCommitTemplate = null;
+            if (parseNode.GetChildNode("squash_option") is { } nullNodeSquashOption && nullNodeSquashOption.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SquashOption = null;
+            if (parseNode.GetChildNode("suggestion_commit_message") is { } nullNodeSuggestionCommitMessage && nullNodeSuggestionCommitMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SuggestionCommitMessage = null;
+            if (parseNode.GetChildNode("tag_list") is { } nullNodeTagList && nullNodeTagList.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TagList = null;
+            if (parseNode.GetChildNode("topics") is { } nullNodeTopics && nullNodeTopics.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Topics = null;
+            if (parseNode.GetChildNode("visibility") is { } nullNodeVisibility && nullNodeVisibility.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Visibility = null;
+            if (parseNode.GetChildNode("warn_about_potentially_unwanted_characters") is { } nullNodeWarnAboutPotentiallyUnwantedCharacters && nullNodeWarnAboutPotentiallyUnwantedCharacters.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WarnAboutPotentiallyUnwantedCharacters = null;
+            if (parseNode.GetChildNode("wiki_access_level") is { } nullNodeWikiAccessLevel && nullNodeWikiAccessLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WikiAccessLevel = null;
+            if (parseNode.GetChildNode("wiki_enabled") is { } nullNodeWikiEnabled && nullNodeWikiEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WikiEnabled = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Allow to merge if pipeline is skipped</summary>
-        public bool? AllowMergeOnSkippedPipeline { get; set; }
+        public bool? AllowMergeOnSkippedPipeline { get => _explicitNullValueAllowMergeOnSkippedPipeline; set { _explicitNullValueAllowMergeOnSkippedPipeline = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allow_merge_on_skipped_pipeline"); else _explicitNullProperties?.Remove("allow_merge_on_skipped_pipeline"); } }
+        private bool? _explicitNullValueAllowMergeOnSkippedPipeline = default!;
         /// <summary>Analytics access level. One of `disabled`, `private` or `enabled`</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsAnalyticsAccessLevel? AnalyticsAccessLevel { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsAnalyticsAccessLevel? AnalyticsAccessLevel { get => _explicitNullValueAnalyticsAccessLevel; set { _explicitNullValueAnalyticsAccessLevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("analytics_access_level"); else _explicitNullProperties?.Remove("analytics_access_level"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsAnalyticsAccessLevel? _explicitNullValueAnalyticsAccessLevel = default!;
         /// <summary>How many approvers should approve merge request by default</summary>
-        public int? ApprovalsBeforeMerge { get; set; }
+        public int? ApprovalsBeforeMerge { get => _explicitNullValueApprovalsBeforeMerge; set { _explicitNullValueApprovalsBeforeMerge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approvals_before_merge"); else _explicitNullProperties?.Remove("approvals_before_merge"); } }
+        private int? _explicitNullValueApprovalsBeforeMerge = default!;
         /// <summary>Auto-cancel pending pipelines</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsAutoCancelPendingPipelines? AutoCancelPendingPipelines { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsAutoCancelPendingPipelines? AutoCancelPendingPipelines { get => _explicitNullValueAutoCancelPendingPipelines; set { _explicitNullValueAutoCancelPendingPipelines = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auto_cancel_pending_pipelines"); else _explicitNullProperties?.Remove("auto_cancel_pending_pipelines"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsAutoCancelPendingPipelines? _explicitNullValueAutoCancelPendingPipelines = default!;
         /// <summary>Flag indication if referenced issues auto-closing is enabled</summary>
-        public bool? AutocloseReferencedIssues { get; set; }
+        public bool? AutocloseReferencedIssues { get => _explicitNullValueAutocloseReferencedIssues; set { _explicitNullValueAutocloseReferencedIssues = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("autoclose_referenced_issues"); else _explicitNullProperties?.Remove("autoclose_referenced_issues"); } }
+        private bool? _explicitNullValueAutocloseReferencedIssues = default!;
         /// <summary>Auto Deploy strategy</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsAutoDevopsDeployStrategy? AutoDevopsDeployStrategy { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsAutoDevopsDeployStrategy? AutoDevopsDeployStrategy { get => _explicitNullValueAutoDevopsDeployStrategy; set { _explicitNullValueAutoDevopsDeployStrategy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auto_devops_deploy_strategy"); else _explicitNullProperties?.Remove("auto_devops_deploy_strategy"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsAutoDevopsDeployStrategy? _explicitNullValueAutoDevopsDeployStrategy = default!;
         /// <summary>Flag indication if Auto DevOps is enabled</summary>
-        public bool? AutoDevopsEnabled { get; set; }
+        public bool? AutoDevopsEnabled { get => _explicitNullValueAutoDevopsEnabled; set { _explicitNullValueAutoDevopsEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auto_devops_enabled"); else _explicitNullProperties?.Remove("auto_devops_enabled"); } }
+        private bool? _explicitNullValueAutoDevopsEnabled = default!;
         /// <summary>Enable automatic reviews by GitLab Duo on merge requests</summary>
-        public bool? AutoDuoCodeReviewEnabled { get; set; }
+        public bool? AutoDuoCodeReviewEnabled { get => _explicitNullValueAutoDuoCodeReviewEnabled; set { _explicitNullValueAutoDuoCodeReviewEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auto_duo_code_review_enabled"); else _explicitNullProperties?.Remove("auto_duo_code_review_enabled"); } }
+        private bool? _explicitNullValueAutoDuoCodeReviewEnabled = default!;
         /// <summary>Avatar image for project</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public byte[]? Avatar { get; set; }
+        public byte[]? Avatar { get => _explicitNullValueAvatar; set { _explicitNullValueAvatar = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("avatar"); else _explicitNullProperties?.Remove("avatar"); } }
+        private byte[]? _explicitNullValueAvatar = default!;
 #nullable restore
 #else
-        public byte[] Avatar { get; set; }
+        public byte[] Avatar { get => _explicitNullValueAvatar; set { _explicitNullValueAvatar = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("avatar"); else _explicitNullProperties?.Remove("avatar"); } }
+        private byte[] _explicitNullValueAvatar = default!;
 #endif
         /// <summary>The Git strategy. Defaults to `fetch`</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsBuildGitStrategy? BuildGitStrategy { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsBuildGitStrategy? BuildGitStrategy { get => _explicitNullValueBuildGitStrategy; set { _explicitNullValueBuildGitStrategy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("build_git_strategy"); else _explicitNullProperties?.Remove("build_git_strategy"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsBuildGitStrategy? _explicitNullValueBuildGitStrategy = default!;
         /// <summary>Builds access level. One of `disabled`, `private` or `enabled`</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsBuildsAccessLevel? BuildsAccessLevel { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsBuildsAccessLevel? BuildsAccessLevel { get => _explicitNullValueBuildsAccessLevel; set { _explicitNullValueBuildsAccessLevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("builds_access_level"); else _explicitNullProperties?.Remove("builds_access_level"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsBuildsAccessLevel? _explicitNullValueBuildsAccessLevel = default!;
         /// <summary>Build timeout</summary>
-        public int? BuildTimeout { get; set; }
+        public int? BuildTimeout { get => _explicitNullValueBuildTimeout; set { _explicitNullValueBuildTimeout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("build_timeout"); else _explicitNullProperties?.Remove("build_timeout"); } }
+        private int? _explicitNullValueBuildTimeout = default!;
         /// <summary>Set whether the project is a CI/CD catalog project</summary>
-        public bool? CicdCatalogEnabled { get; set; }
+        public bool? CicdCatalogEnabled { get => _explicitNullValueCicdCatalogEnabled; set { _explicitNullValueCicdCatalogEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cicd_catalog_enabled"); else _explicitNullProperties?.Remove("cicd_catalog_enabled"); } }
+        private bool? _explicitNullValueCicdCatalogEnabled = default!;
         /// <summary>The path to CI config file. Defaults to `.gitlab-ci.yml`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CiConfigPath { get; set; }
+        public string? CiConfigPath { get => _explicitNullValueCiConfigPath; set { _explicitNullValueCiConfigPath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ci_config_path"); else _explicitNullProperties?.Remove("ci_config_path"); } }
+        private string? _explicitNullValueCiConfigPath = default!;
 #nullable restore
 #else
-        public string CiConfigPath { get; set; }
+        public string CiConfigPath { get => _explicitNullValueCiConfigPath; set { _explicitNullValueCiConfigPath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ci_config_path"); else _explicitNullProperties?.Remove("ci_config_path"); } }
+        private string _explicitNullValueCiConfigPath = default!;
 #endif
         /// <summary>Object that contains information on the container expiration policy</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsContainerExpirationPolicyAttributes? ContainerExpirationPolicyAttributes { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsContainerExpirationPolicyAttributes? ContainerExpirationPolicyAttributes { get => _explicitNullValueContainerExpirationPolicyAttributes; set { _explicitNullValueContainerExpirationPolicyAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("container_expiration_policy_attributes"); else _explicitNullProperties?.Remove("container_expiration_policy_attributes"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsContainerExpirationPolicyAttributes? _explicitNullValueContainerExpirationPolicyAttributes = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsContainerExpirationPolicyAttributes ContainerExpirationPolicyAttributes { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsContainerExpirationPolicyAttributes ContainerExpirationPolicyAttributes { get => _explicitNullValueContainerExpirationPolicyAttributes; set { _explicitNullValueContainerExpirationPolicyAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("container_expiration_policy_attributes"); else _explicitNullProperties?.Remove("container_expiration_policy_attributes"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsContainerExpirationPolicyAttributes _explicitNullValueContainerExpirationPolicyAttributes = default!;
 #endif
         /// <summary>Controls visibility of the container registry. One of `disabled`, `private` or `enabled`. `private` will make the container registry accessible only to project members (reporter role and above). `enabled` will make the container registry accessible to everyone who has access to the project. `disabled` will disable the container registry</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsContainerRegistryAccessLevel? ContainerRegistryAccessLevel { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsContainerRegistryAccessLevel? ContainerRegistryAccessLevel { get => _explicitNullValueContainerRegistryAccessLevel; set { _explicitNullValueContainerRegistryAccessLevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("container_registry_access_level"); else _explicitNullProperties?.Remove("container_registry_access_level"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsContainerRegistryAccessLevel? _explicitNullValueContainerRegistryAccessLevel = default!;
         /// <summary>Deprecated: Use :container_registry_access_level instead. Flag indication if the container registry is enabled for that project</summary>
-        public bool? ContainerRegistryEnabled { get; set; }
+        public bool? ContainerRegistryEnabled { get => _explicitNullValueContainerRegistryEnabled; set { _explicitNullValueContainerRegistryEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("container_registry_enabled"); else _explicitNullProperties?.Remove("container_registry_enabled"); } }
+        private bool? _explicitNullValueContainerRegistryEnabled = default!;
         /// <summary>The description of the project</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Description { get; set; }
+        public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string? _explicitNullValueDescription = default!;
 #nullable restore
 #else
-        public string Description { get; set; }
+        public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
+        private string _explicitNullValueDescription = default!;
 #endif
         /// <summary>Enable approval and change requests by GitLab Duo on merge requests</summary>
-        public bool? DuoCodeReviewDecisionsEnabled { get; set; }
+        public bool? DuoCodeReviewDecisionsEnabled { get => _explicitNullValueDuoCodeReviewDecisionsEnabled; set { _explicitNullValueDuoCodeReviewDecisionsEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duo_code_review_decisions_enabled"); else _explicitNullProperties?.Remove("duo_code_review_decisions_enabled"); } }
+        private bool? _explicitNullValueDuoCodeReviewDecisionsEnabled = default!;
         /// <summary>Turn on Agentic Breaking Change Resolution for this project</summary>
-        public bool? DuoDependencyBumpBreakingChangesEnabled { get; set; }
+        public bool? DuoDependencyBumpBreakingChangesEnabled { get => _explicitNullValueDuoDependencyBumpBreakingChangesEnabled; set { _explicitNullValueDuoDependencyBumpBreakingChangesEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duo_dependency_bump_breaking_changes_enabled"); else _explicitNullProperties?.Remove("duo_dependency_bump_breaking_changes_enabled"); } }
+        private bool? _explicitNullValueDuoDependencyBumpBreakingChangesEnabled = default!;
         /// <summary>Enable GitLab Duo remote flows for this project</summary>
-        public bool? DuoRemoteFlowsEnabled { get; set; }
+        public bool? DuoRemoteFlowsEnabled { get => _explicitNullValueDuoRemoteFlowsEnabled; set { _explicitNullValueDuoRemoteFlowsEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duo_remote_flows_enabled"); else _explicitNullProperties?.Remove("duo_remote_flows_enabled"); } }
+        private bool? _explicitNullValueDuoRemoteFlowsEnabled = default!;
         /// <summary>Enable GitLab Duo SAST false positive detection for this project</summary>
-        public bool? DuoSastFpDetectionEnabled { get; set; }
+        public bool? DuoSastFpDetectionEnabled { get => _explicitNullValueDuoSastFpDetectionEnabled; set { _explicitNullValueDuoSastFpDetectionEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duo_sast_fp_detection_enabled"); else _explicitNullProperties?.Remove("duo_sast_fp_detection_enabled"); } }
+        private bool? _explicitNullValueDuoSastFpDetectionEnabled = default!;
         /// <summary>Enable GitLab Duo SAST vulnerability resolution workflow for this project</summary>
-        public bool? DuoSastVrWorkflowEnabled { get; set; }
+        public bool? DuoSastVrWorkflowEnabled { get => _explicitNullValueDuoSastVrWorkflowEnabled; set { _explicitNullValueDuoSastVrWorkflowEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duo_sast_vr_workflow_enabled"); else _explicitNullProperties?.Remove("duo_sast_vr_workflow_enabled"); } }
+        private bool? _explicitNullValueDuoSastVrWorkflowEnabled = default!;
         /// <summary>Enable GitLab Duo Secret Detection false positive detection for this project</summary>
-        public bool? DuoSecretDetectionFpEnabled { get; set; }
+        public bool? DuoSecretDetectionFpEnabled { get => _explicitNullValueDuoSecretDetectionFpEnabled; set { _explicitNullValueDuoSecretDetectionFpEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duo_secret_detection_fp_enabled"); else _explicitNullProperties?.Remove("duo_secret_detection_fp_enabled"); } }
+        private bool? _explicitNullValueDuoSecretDetectionFpEnabled = default!;
         /// <summary>Deprecated: Use emails_enabled instead.</summary>
-        public bool? EmailsDisabled { get; set; }
+        public bool? EmailsDisabled { get => _explicitNullValueEmailsDisabled; set { _explicitNullValueEmailsDisabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emails_disabled"); else _explicitNullProperties?.Remove("emails_disabled"); } }
+        private bool? _explicitNullValueEmailsDisabled = default!;
         /// <summary>Enable email notifications</summary>
-        public bool? EmailsEnabled { get; set; }
+        public bool? EmailsEnabled { get => _explicitNullValueEmailsEnabled; set { _explicitNullValueEmailsEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emails_enabled"); else _explicitNullProperties?.Remove("emails_enabled"); } }
+        private bool? _explicitNullValueEmailsEnabled = default!;
         /// <summary>Enforce auth check on uploads</summary>
-        public bool? EnforceAuthChecksOnUploads { get; set; }
+        public bool? EnforceAuthChecksOnUploads { get => _explicitNullValueEnforceAuthChecksOnUploads; set { _explicitNullValueEnforceAuthChecksOnUploads = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enforce_auth_checks_on_uploads"); else _explicitNullProperties?.Remove("enforce_auth_checks_on_uploads"); } }
+        private bool? _explicitNullValueEnforceAuthChecksOnUploads = default!;
         /// <summary>Environments access level. One of `disabled`, `private` or `enabled`</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsEnvironmentsAccessLevel? EnvironmentsAccessLevel { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsEnvironmentsAccessLevel? EnvironmentsAccessLevel { get => _explicitNullValueEnvironmentsAccessLevel; set { _explicitNullValueEnvironmentsAccessLevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("environments_access_level"); else _explicitNullProperties?.Remove("environments_access_level"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsEnvironmentsAccessLevel? _explicitNullValueEnvironmentsAccessLevel = default!;
         /// <summary>The classification label for the project</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ExternalAuthorizationClassificationLabel { get; set; }
+        public string? ExternalAuthorizationClassificationLabel { get => _explicitNullValueExternalAuthorizationClassificationLabel; set { _explicitNullValueExternalAuthorizationClassificationLabel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_authorization_classification_label"); else _explicitNullProperties?.Remove("external_authorization_classification_label"); } }
+        private string? _explicitNullValueExternalAuthorizationClassificationLabel = default!;
 #nullable restore
 #else
-        public string ExternalAuthorizationClassificationLabel { get; set; }
+        public string ExternalAuthorizationClassificationLabel { get => _explicitNullValueExternalAuthorizationClassificationLabel; set { _explicitNullValueExternalAuthorizationClassificationLabel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_authorization_classification_label"); else _explicitNullProperties?.Remove("external_authorization_classification_label"); } }
+        private string _explicitNullValueExternalAuthorizationClassificationLabel = default!;
 #endif
         /// <summary>Feature flags access level. One of `disabled`, `private` or `enabled`</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsFeatureFlagsAccessLevel? FeatureFlagsAccessLevel { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsFeatureFlagsAccessLevel? FeatureFlagsAccessLevel { get => _explicitNullValueFeatureFlagsAccessLevel; set { _explicitNullValueFeatureFlagsAccessLevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("feature_flags_access_level"); else _explicitNullProperties?.Remove("feature_flags_access_level"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsFeatureFlagsAccessLevel? _explicitNullValueFeatureFlagsAccessLevel = default!;
         /// <summary>Forks access level. One of `disabled`, `private` or `enabled`</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsForkingAccessLevel? ForkingAccessLevel { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsForkingAccessLevel? ForkingAccessLevel { get => _explicitNullValueForkingAccessLevel; set { _explicitNullValueForkingAccessLevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("forking_access_level"); else _explicitNullProperties?.Remove("forking_access_level"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsForkingAccessLevel? _explicitNullValueForkingAccessLevel = default!;
         /// <summary>Flag indication if group runners are enabled for that project</summary>
-        public bool? GroupRunnersEnabled { get; set; }
+        public bool? GroupRunnersEnabled { get => _explicitNullValueGroupRunnersEnabled; set { _explicitNullValueGroupRunnersEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_runners_enabled"); else _explicitNullProperties?.Remove("group_runners_enabled"); } }
+        private bool? _explicitNullValueGroupRunnersEnabled = default!;
         /// <summary>Infrastructure access level. One of `disabled`, `private` or `enabled`</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsInfrastructureAccessLevel? InfrastructureAccessLevel { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsInfrastructureAccessLevel? InfrastructureAccessLevel { get => _explicitNullValueInfrastructureAccessLevel; set { _explicitNullValueInfrastructureAccessLevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("infrastructure_access_level"); else _explicitNullProperties?.Remove("infrastructure_access_level"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsInfrastructureAccessLevel? _explicitNullValueInfrastructureAccessLevel = default!;
         /// <summary>Template used to create a branch from an issue</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IssueBranchTemplate { get; set; }
+        public string? IssueBranchTemplate { get => _explicitNullValueIssueBranchTemplate; set { _explicitNullValueIssueBranchTemplate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issue_branch_template"); else _explicitNullProperties?.Remove("issue_branch_template"); } }
+        private string? _explicitNullValueIssueBranchTemplate = default!;
 #nullable restore
 #else
-        public string IssueBranchTemplate { get; set; }
+        public string IssueBranchTemplate { get => _explicitNullValueIssueBranchTemplate; set { _explicitNullValueIssueBranchTemplate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issue_branch_template"); else _explicitNullProperties?.Remove("issue_branch_template"); } }
+        private string _explicitNullValueIssueBranchTemplate = default!;
 #endif
         /// <summary>Issues access level. One of `disabled`, `private` or `enabled`</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsIssuesAccessLevel? IssuesAccessLevel { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsIssuesAccessLevel? IssuesAccessLevel { get => _explicitNullValueIssuesAccessLevel; set { _explicitNullValueIssuesAccessLevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issues_access_level"); else _explicitNullProperties?.Remove("issues_access_level"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsIssuesAccessLevel? _explicitNullValueIssuesAccessLevel = default!;
         /// <summary>Flag indication if the issue tracker is enabled</summary>
-        public bool? IssuesEnabled { get; set; }
+        public bool? IssuesEnabled { get => _explicitNullValueIssuesEnabled; set { _explicitNullValueIssuesEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issues_enabled"); else _explicitNullProperties?.Remove("issues_enabled"); } }
+        private bool? _explicitNullValueIssuesEnabled = default!;
         /// <summary>Flag indication if jobs are enabled</summary>
-        public bool? JobsEnabled { get; set; }
+        public bool? JobsEnabled { get => _explicitNullValueJobsEnabled; set { _explicitNullValueJobsEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("jobs_enabled"); else _explicitNullProperties?.Remove("jobs_enabled"); } }
+        private bool? _explicitNullValueJobsEnabled = default!;
         /// <summary>Flag indication if Git LFS is enabled for that project</summary>
-        public bool? LfsEnabled { get; set; }
+        public bool? LfsEnabled { get => _explicitNullValueLfsEnabled; set { _explicitNullValueLfsEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lfs_enabled"); else _explicitNullProperties?.Remove("lfs_enabled"); } }
+        private bool? _explicitNullValueLfsEnabled = default!;
         /// <summary>Template used to create merge commit message</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MergeCommitTemplate { get; set; }
+        public string? MergeCommitTemplate { get => _explicitNullValueMergeCommitTemplate; set { _explicitNullValueMergeCommitTemplate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_commit_template"); else _explicitNullProperties?.Remove("merge_commit_template"); } }
+        private string? _explicitNullValueMergeCommitTemplate = default!;
 #nullable restore
 #else
-        public string MergeCommitTemplate { get; set; }
+        public string MergeCommitTemplate { get => _explicitNullValueMergeCommitTemplate; set { _explicitNullValueMergeCommitTemplate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_commit_template"); else _explicitNullProperties?.Remove("merge_commit_template"); } }
+        private string _explicitNullValueMergeCommitTemplate = default!;
 #endif
         /// <summary>The merge method used when merging merge requests</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsMergeMethod? MergeMethod { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsMergeMethod? MergeMethod { get => _explicitNullValueMergeMethod; set { _explicitNullValueMergeMethod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_method"); else _explicitNullProperties?.Remove("merge_method"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsMergeMethod? _explicitNullValueMergeMethod = default!;
         /// <summary>Merge requests access level. One of `disabled`, `private` or `enabled`</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsMergeRequestsAccessLevel? MergeRequestsAccessLevel { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsMergeRequestsAccessLevel? MergeRequestsAccessLevel { get => _explicitNullValueMergeRequestsAccessLevel; set { _explicitNullValueMergeRequestsAccessLevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_requests_access_level"); else _explicitNullProperties?.Remove("merge_requests_access_level"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsMergeRequestsAccessLevel? _explicitNullValueMergeRequestsAccessLevel = default!;
         /// <summary>Flag indication if merge requests are enabled</summary>
-        public bool? MergeRequestsEnabled { get; set; }
+        public bool? MergeRequestsEnabled { get => _explicitNullValueMergeRequestsEnabled; set { _explicitNullValueMergeRequestsEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_requests_enabled"); else _explicitNullProperties?.Remove("merge_requests_enabled"); } }
+        private bool? _explicitNullValueMergeRequestsEnabled = default!;
         /// <summary>The regex the Merge Request must adhere to</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MergeRequestTitleRegex { get; set; }
+        public string? MergeRequestTitleRegex { get => _explicitNullValueMergeRequestTitleRegex; set { _explicitNullValueMergeRequestTitleRegex = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_request_title_regex"); else _explicitNullProperties?.Remove("merge_request_title_regex"); } }
+        private string? _explicitNullValueMergeRequestTitleRegex = default!;
 #nullable restore
 #else
-        public string MergeRequestTitleRegex { get; set; }
+        public string MergeRequestTitleRegex { get => _explicitNullValueMergeRequestTitleRegex; set { _explicitNullValueMergeRequestTitleRegex = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_request_title_regex"); else _explicitNullProperties?.Remove("merge_request_title_regex"); } }
+        private string _explicitNullValueMergeRequestTitleRegex = default!;
 #endif
         /// <summary>The description for the regex the Merge Request must adhere to</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MergeRequestTitleRegexDescription { get; set; }
+        public string? MergeRequestTitleRegexDescription { get => _explicitNullValueMergeRequestTitleRegexDescription; set { _explicitNullValueMergeRequestTitleRegexDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_request_title_regex_description"); else _explicitNullProperties?.Remove("merge_request_title_regex_description"); } }
+        private string? _explicitNullValueMergeRequestTitleRegexDescription = default!;
 #nullable restore
 #else
-        public string MergeRequestTitleRegexDescription { get; set; }
+        public string MergeRequestTitleRegexDescription { get => _explicitNullValueMergeRequestTitleRegexDescription; set { _explicitNullValueMergeRequestTitleRegexDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_request_title_regex_description"); else _explicitNullProperties?.Remove("merge_request_title_regex_description"); } }
+        private string _explicitNullValueMergeRequestTitleRegexDescription = default!;
 #endif
         /// <summary>[Deprecated] Enables pull mirroring in a project</summary>
-        public bool? Mirror { get; set; }
+        public bool? Mirror { get => _explicitNullValueMirror; set { _explicitNullValueMirror = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mirror"); else _explicitNullProperties?.Remove("mirror"); } }
+        private bool? _explicitNullValueMirror = default!;
         /// <summary>[Deprecated] Pull mirroring triggers builds</summary>
-        public bool? MirrorTriggerBuilds { get; set; }
+        public bool? MirrorTriggerBuilds { get => _explicitNullValueMirrorTriggerBuilds; set { _explicitNullValueMirrorTriggerBuilds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mirror_trigger_builds"); else _explicitNullProperties?.Remove("mirror_trigger_builds"); } }
+        private bool? _explicitNullValueMirrorTriggerBuilds = default!;
         /// <summary>Model experiments access level. One of `disabled`, `private` or `enabled`</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsModelExperimentsAccessLevel? ModelExperimentsAccessLevel { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsModelExperimentsAccessLevel? ModelExperimentsAccessLevel { get => _explicitNullValueModelExperimentsAccessLevel; set { _explicitNullValueModelExperimentsAccessLevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("model_experiments_access_level"); else _explicitNullProperties?.Remove("model_experiments_access_level"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsModelExperimentsAccessLevel? _explicitNullValueModelExperimentsAccessLevel = default!;
         /// <summary>Model registry access level. One of `disabled`, `private` or `enabled`</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsModelRegistryAccessLevel? ModelRegistryAccessLevel { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsModelRegistryAccessLevel? ModelRegistryAccessLevel { get => _explicitNullValueModelRegistryAccessLevel; set { _explicitNullValueModelRegistryAccessLevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("model_registry_access_level"); else _explicitNullProperties?.Remove("model_registry_access_level"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsModelRegistryAccessLevel? _explicitNullValueModelRegistryAccessLevel = default!;
         /// <summary>Monitor access level. One of `disabled`, `private` or `enabled`</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsMonitorAccessLevel? MonitorAccessLevel { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsMonitorAccessLevel? MonitorAccessLevel { get => _explicitNullValueMonitorAccessLevel; set { _explicitNullValueMonitorAccessLevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("monitor_access_level"); else _explicitNullProperties?.Remove("monitor_access_level"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsMonitorAccessLevel? _explicitNullValueMonitorAccessLevel = default!;
         /// <summary>Merge requests of this forked project targets itself by default</summary>
-        public bool? MrDefaultTargetSelf { get; set; }
+        public bool? MrDefaultTargetSelf { get => _explicitNullValueMrDefaultTargetSelf; set { _explicitNullValueMrDefaultTargetSelf = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mr_default_target_self"); else _explicitNullProperties?.Remove("mr_default_target_self"); } }
+        private bool? _explicitNullValueMrDefaultTargetSelf = default!;
         /// <summary>Template used to generate the default merge request title. Maximum 100 characters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MrDefaultTitleTemplate { get; set; }
+        public string? MrDefaultTitleTemplate { get => _explicitNullValueMrDefaultTitleTemplate; set { _explicitNullValueMrDefaultTitleTemplate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mr_default_title_template"); else _explicitNullProperties?.Remove("mr_default_title_template"); } }
+        private string? _explicitNullValueMrDefaultTitleTemplate = default!;
 #nullable restore
 #else
-        public string MrDefaultTitleTemplate { get; set; }
+        public string MrDefaultTitleTemplate { get => _explicitNullValueMrDefaultTitleTemplate; set { _explicitNullValueMrDefaultTitleTemplate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mr_default_title_template"); else _explicitNullProperties?.Remove("mr_default_title_template"); } }
+        private string _explicitNullValueMrDefaultTitleTemplate = default!;
 #endif
         /// <summary>Only allow to merge if all threads are resolved</summary>
-        public bool? OnlyAllowMergeIfAllDiscussionsAreResolved { get; set; }
+        public bool? OnlyAllowMergeIfAllDiscussionsAreResolved { get => _explicitNullValueOnlyAllowMergeIfAllDiscussionsAreResolved; set { _explicitNullValueOnlyAllowMergeIfAllDiscussionsAreResolved = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("only_allow_merge_if_all_discussions_are_resolved"); else _explicitNullProperties?.Remove("only_allow_merge_if_all_discussions_are_resolved"); } }
+        private bool? _explicitNullValueOnlyAllowMergeIfAllDiscussionsAreResolved = default!;
         /// <summary>Blocks merge requests from merging unless all status checks have passed</summary>
-        public bool? OnlyAllowMergeIfAllStatusChecksPassed { get; set; }
+        public bool? OnlyAllowMergeIfAllStatusChecksPassed { get => _explicitNullValueOnlyAllowMergeIfAllStatusChecksPassed; set { _explicitNullValueOnlyAllowMergeIfAllStatusChecksPassed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("only_allow_merge_if_all_status_checks_passed"); else _explicitNullProperties?.Remove("only_allow_merge_if_all_status_checks_passed"); } }
+        private bool? _explicitNullValueOnlyAllowMergeIfAllStatusChecksPassed = default!;
         /// <summary>Only allow to merge if builds succeed</summary>
-        public bool? OnlyAllowMergeIfPipelineSucceeds { get; set; }
+        public bool? OnlyAllowMergeIfPipelineSucceeds { get => _explicitNullValueOnlyAllowMergeIfPipelineSucceeds; set { _explicitNullValueOnlyAllowMergeIfPipelineSucceeds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("only_allow_merge_if_pipeline_succeeds"); else _explicitNullProperties?.Remove("only_allow_merge_if_pipeline_succeeds"); } }
+        private bool? _explicitNullValueOnlyAllowMergeIfPipelineSucceeds = default!;
         /// <summary>Controls visibility of the package registry. One of `disabled`, `private`, `enabled` or `public`. `private` will make the package registry accessible only to project members (reporter role and above). `enabled` will make the package registry accessible to everyone who has access to the project. `public` will make the package registry accessible to everyone. `disabled` will disable the package registry</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsPackageRegistryAccessLevel? PackageRegistryAccessLevel { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsPackageRegistryAccessLevel? PackageRegistryAccessLevel { get => _explicitNullValuePackageRegistryAccessLevel; set { _explicitNullValuePackageRegistryAccessLevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("package_registry_access_level"); else _explicitNullProperties?.Remove("package_registry_access_level"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsPackageRegistryAccessLevel? _explicitNullValuePackageRegistryAccessLevel = default!;
         /// <summary>Deprecated: Use :package_registry_access_level instead. Enable project packages feature</summary>
-        public bool? PackagesEnabled { get; set; }
+        public bool? PackagesEnabled { get => _explicitNullValuePackagesEnabled; set { _explicitNullValuePackagesEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("packages_enabled"); else _explicitNullProperties?.Remove("packages_enabled"); } }
+        private bool? _explicitNullValuePackagesEnabled = default!;
         /// <summary>Pages access level. One of `disabled`, `private`, `enabled` or `public`</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsPagesAccessLevel? PagesAccessLevel { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsPagesAccessLevel? PagesAccessLevel { get => _explicitNullValuePagesAccessLevel; set { _explicitNullValuePagesAccessLevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pages_access_level"); else _explicitNullProperties?.Remove("pages_access_level"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsPagesAccessLevel? _explicitNullValuePagesAccessLevel = default!;
         /// <summary>Require an associated issue from Jira</summary>
-        public bool? PreventMergeWithoutJiraIssue { get; set; }
+        public bool? PreventMergeWithoutJiraIssue { get => _explicitNullValuePreventMergeWithoutJiraIssue; set { _explicitNullValuePreventMergeWithoutJiraIssue = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prevent_merge_without_jira_issue"); else _explicitNullProperties?.Remove("prevent_merge_without_jira_issue"); } }
+        private bool? _explicitNullValuePreventMergeWithoutJiraIssue = default!;
         /// <summary>Show link to create/view merge request when pushing from the command line</summary>
-        public bool? PrintingMergeRequestLinkEnabled { get; set; }
+        public bool? PrintingMergeRequestLinkEnabled { get => _explicitNullValuePrintingMergeRequestLinkEnabled; set { _explicitNullValuePrintingMergeRequestLinkEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("printing_merge_request_link_enabled"); else _explicitNullProperties?.Remove("printing_merge_request_link_enabled"); } }
+        private bool? _explicitNullValuePrintingMergeRequestLinkEnabled = default!;
         /// <summary>Deprecated: Use public_jobs instead.</summary>
-        public bool? PublicBuilds { get; set; }
+        public bool? PublicBuilds { get => _explicitNullValuePublicBuilds; set { _explicitNullValuePublicBuilds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("public_builds"); else _explicitNullProperties?.Remove("public_builds"); } }
+        private bool? _explicitNullValuePublicBuilds = default!;
         /// <summary>Perform public builds</summary>
-        public bool? PublicJobs { get; set; }
+        public bool? PublicJobs { get => _explicitNullValuePublicJobs; set { _explicitNullValuePublicJobs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("public_jobs"); else _explicitNullProperties?.Remove("public_jobs"); } }
+        private bool? _explicitNullValuePublicJobs = default!;
         /// <summary>Releases access level. One of `disabled`, `private` or `enabled`</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsReleasesAccessLevel? ReleasesAccessLevel { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsReleasesAccessLevel? ReleasesAccessLevel { get => _explicitNullValueReleasesAccessLevel; set { _explicitNullValueReleasesAccessLevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("releases_access_level"); else _explicitNullProperties?.Remove("releases_access_level"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsReleasesAccessLevel? _explicitNullValueReleasesAccessLevel = default!;
         /// <summary>Remove the source branch by default after merge</summary>
-        public bool? RemoveSourceBranchAfterMerge { get; set; }
+        public bool? RemoveSourceBranchAfterMerge { get => _explicitNullValueRemoveSourceBranchAfterMerge; set { _explicitNullValueRemoveSourceBranchAfterMerge = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("remove_source_branch_after_merge"); else _explicitNullProperties?.Remove("remove_source_branch_after_merge"); } }
+        private bool? _explicitNullValueRemoveSourceBranchAfterMerge = default!;
         /// <summary>Repository access level. One of `disabled`, `private` or `enabled`</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsRepositoryAccessLevel? RepositoryAccessLevel { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsRepositoryAccessLevel? RepositoryAccessLevel { get => _explicitNullValueRepositoryAccessLevel; set { _explicitNullValueRepositoryAccessLevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("repository_access_level"); else _explicitNullProperties?.Remove("repository_access_level"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsRepositoryAccessLevel? _explicitNullValueRepositoryAccessLevel = default!;
         /// <summary>Which storage shard the repository is on. Available only to admins</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RepositoryStorage { get; set; }
+        public string? RepositoryStorage { get => _explicitNullValueRepositoryStorage; set { _explicitNullValueRepositoryStorage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("repository_storage"); else _explicitNullProperties?.Remove("repository_storage"); } }
+        private string? _explicitNullValueRepositoryStorage = default!;
 #nullable restore
 #else
-        public string RepositoryStorage { get; set; }
+        public string RepositoryStorage { get => _explicitNullValueRepositoryStorage; set { _explicitNullValueRepositoryStorage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("repository_storage"); else _explicitNullProperties?.Remove("repository_storage"); } }
+        private string _explicitNullValueRepositoryStorage = default!;
 #endif
         /// <summary>Allow users to request member access</summary>
-        public bool? RequestAccessEnabled { get; set; }
+        public bool? RequestAccessEnabled { get => _explicitNullValueRequestAccessEnabled; set { _explicitNullValueRequestAccessEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("request_access_enabled"); else _explicitNullProperties?.Remove("request_access_enabled"); } }
+        private bool? _explicitNullValueRequestAccessEnabled = default!;
         /// <summary>Requirements feature access level. One of `disabled`, `private` or `enabled`</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsRequirementsAccessLevel? RequirementsAccessLevel { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsRequirementsAccessLevel? RequirementsAccessLevel { get => _explicitNullValueRequirementsAccessLevel; set { _explicitNullValueRequirementsAccessLevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requirements_access_level"); else _explicitNullProperties?.Remove("requirements_access_level"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsRequirementsAccessLevel? _explicitNullValueRequirementsAccessLevel = default!;
         /// <summary>Automatically resolve merge request diff threads on lines changed with a push</summary>
-        public bool? ResolveOutdatedDiffDiscussions { get; set; }
+        public bool? ResolveOutdatedDiffDiscussions { get => _explicitNullValueResolveOutdatedDiffDiscussions; set { _explicitNullValueResolveOutdatedDiffDiscussions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resolve_outdated_diff_discussions"); else _explicitNullProperties?.Remove("resolve_outdated_diff_discussions"); } }
+        private bool? _explicitNullValueResolveOutdatedDiffDiscussions = default!;
         /// <summary>The process mode of the resource group</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsResourceGroupDefaultProcessMode? ResourceGroupDefaultProcessMode { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsResourceGroupDefaultProcessMode? ResourceGroupDefaultProcessMode { get => _explicitNullValueResourceGroupDefaultProcessMode; set { _explicitNullValueResourceGroupDefaultProcessMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resource_group_default_process_mode"); else _explicitNullProperties?.Remove("resource_group_default_process_mode"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsResourceGroupDefaultProcessMode? _explicitNullValueResourceGroupDefaultProcessMode = default!;
         /// <summary>Security and compliance access level. One of `disabled`, `private` or `enabled`</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsSecurityAndComplianceAccessLevel? SecurityAndComplianceAccessLevel { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsSecurityAndComplianceAccessLevel? SecurityAndComplianceAccessLevel { get => _explicitNullValueSecurityAndComplianceAccessLevel; set { _explicitNullValueSecurityAndComplianceAccessLevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("security_and_compliance_access_level"); else _explicitNullProperties?.Remove("security_and_compliance_access_level"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsSecurityAndComplianceAccessLevel? _explicitNullValueSecurityAndComplianceAccessLevel = default!;
         /// <summary>Disable or enable the service desk</summary>
-        public bool? ServiceDeskEnabled { get; set; }
+        public bool? ServiceDeskEnabled { get => _explicitNullValueServiceDeskEnabled; set { _explicitNullValueServiceDeskEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("service_desk_enabled"); else _explicitNullProperties?.Remove("service_desk_enabled"); } }
+        private bool? _explicitNullValueServiceDeskEnabled = default!;
         /// <summary>Flag indication if shared runners are enabled for that project</summary>
-        public bool? SharedRunnersEnabled { get; set; }
+        public bool? SharedRunnersEnabled { get => _explicitNullValueSharedRunnersEnabled; set { _explicitNullValueSharedRunnersEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shared_runners_enabled"); else _explicitNullProperties?.Remove("shared_runners_enabled"); } }
+        private bool? _explicitNullValueSharedRunnersEnabled = default!;
         /// <summary>Show default award emojis</summary>
-        public bool? ShowDefaultAwardEmojis { get; set; }
+        public bool? ShowDefaultAwardEmojis { get => _explicitNullValueShowDefaultAwardEmojis; set { _explicitNullValueShowDefaultAwardEmojis = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("show_default_award_emojis"); else _explicitNullProperties?.Remove("show_default_award_emojis"); } }
+        private bool? _explicitNullValueShowDefaultAwardEmojis = default!;
         /// <summary>Include the code diff preview in merge request notification emails</summary>
-        public bool? ShowDiffPreviewInEmail { get; set; }
+        public bool? ShowDiffPreviewInEmail { get => _explicitNullValueShowDiffPreviewInEmail; set { _explicitNullValueShowDiffPreviewInEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("show_diff_preview_in_email"); else _explicitNullProperties?.Remove("show_diff_preview_in_email"); } }
+        private bool? _explicitNullValueShowDiffPreviewInEmail = default!;
         /// <summary>Snippets access level. One of `disabled`, `private` or `enabled`</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsSnippetsAccessLevel? SnippetsAccessLevel { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsSnippetsAccessLevel? SnippetsAccessLevel { get => _explicitNullValueSnippetsAccessLevel; set { _explicitNullValueSnippetsAccessLevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("snippets_access_level"); else _explicitNullProperties?.Remove("snippets_access_level"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsSnippetsAccessLevel? _explicitNullValueSnippetsAccessLevel = default!;
         /// <summary>Flag indication if snippets are enabled</summary>
-        public bool? SnippetsEnabled { get; set; }
+        public bool? SnippetsEnabled { get => _explicitNullValueSnippetsEnabled; set { _explicitNullValueSnippetsEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("snippets_enabled"); else _explicitNullProperties?.Remove("snippets_enabled"); } }
+        private bool? _explicitNullValueSnippetsEnabled = default!;
         /// <summary>Grant read-only access to security policy configurations for enforcement in linked CI/CD projects</summary>
-        public bool? SppRepositoryPipelineAccess { get; set; }
+        public bool? SppRepositoryPipelineAccess { get => _explicitNullValueSppRepositoryPipelineAccess; set { _explicitNullValueSppRepositoryPipelineAccess = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("spp_repository_pipeline_access"); else _explicitNullProperties?.Remove("spp_repository_pipeline_access"); } }
+        private bool? _explicitNullValueSppRepositoryPipelineAccess = default!;
         /// <summary>Template used to create squash commit message</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SquashCommitTemplate { get; set; }
+        public string? SquashCommitTemplate { get => _explicitNullValueSquashCommitTemplate; set { _explicitNullValueSquashCommitTemplate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("squash_commit_template"); else _explicitNullProperties?.Remove("squash_commit_template"); } }
+        private string? _explicitNullValueSquashCommitTemplate = default!;
 #nullable restore
 #else
-        public string SquashCommitTemplate { get; set; }
+        public string SquashCommitTemplate { get => _explicitNullValueSquashCommitTemplate; set { _explicitNullValueSquashCommitTemplate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("squash_commit_template"); else _explicitNullProperties?.Remove("squash_commit_template"); } }
+        private string _explicitNullValueSquashCommitTemplate = default!;
 #endif
         /// <summary>Squash default for project. One of `never`, `always`, `default_on`, or `default_off`.</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsSquashOption? SquashOption { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsSquashOption? SquashOption { get => _explicitNullValueSquashOption; set { _explicitNullValueSquashOption = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("squash_option"); else _explicitNullProperties?.Remove("squash_option"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsSquashOption? _explicitNullValueSquashOption = default!;
         /// <summary>The commit message used to apply merge request suggestions</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SuggestionCommitMessage { get; set; }
+        public string? SuggestionCommitMessage { get => _explicitNullValueSuggestionCommitMessage; set { _explicitNullValueSuggestionCommitMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("suggestion_commit_message"); else _explicitNullProperties?.Remove("suggestion_commit_message"); } }
+        private string? _explicitNullValueSuggestionCommitMessage = default!;
 #nullable restore
 #else
-        public string SuggestionCommitMessage { get; set; }
+        public string SuggestionCommitMessage { get => _explicitNullValueSuggestionCommitMessage; set { _explicitNullValueSuggestionCommitMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("suggestion_commit_message"); else _explicitNullProperties?.Remove("suggestion_commit_message"); } }
+        private string _explicitNullValueSuggestionCommitMessage = default!;
 #endif
         /// <summary>Deprecated: Use :topics instead</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? TagList { get; set; }
+        public List<string>? TagList { get => _explicitNullValueTagList; set { _explicitNullValueTagList = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tag_list"); else _explicitNullProperties?.Remove("tag_list"); } }
+        private List<string>? _explicitNullValueTagList = default!;
 #nullable restore
 #else
-        public List<string> TagList { get; set; }
+        public List<string> TagList { get => _explicitNullValueTagList; set { _explicitNullValueTagList = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tag_list"); else _explicitNullProperties?.Remove("tag_list"); } }
+        private List<string> _explicitNullValueTagList = default!;
 #endif
         /// <summary>The list of topics for a project</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Topics { get; set; }
+        public List<string>? Topics { get => _explicitNullValueTopics; set { _explicitNullValueTopics = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("topics"); else _explicitNullProperties?.Remove("topics"); } }
+        private List<string>? _explicitNullValueTopics = default!;
 #nullable restore
 #else
-        public List<string> Topics { get; set; }
+        public List<string> Topics { get => _explicitNullValueTopics; set { _explicitNullValueTopics = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("topics"); else _explicitNullProperties?.Remove("topics"); } }
+        private List<string> _explicitNullValueTopics = default!;
 #endif
         /// <summary>The visibility of the project.</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsVisibility? Visibility { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsVisibility? Visibility { get => _explicitNullValueVisibility; set { _explicitNullValueVisibility = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visibility"); else _explicitNullProperties?.Remove("visibility"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsVisibility? _explicitNullValueVisibility = default!;
         /// <summary>Warn about potentially unwanted characters</summary>
-        public bool? WarnAboutPotentiallyUnwantedCharacters { get; set; }
+        public bool? WarnAboutPotentiallyUnwantedCharacters { get => _explicitNullValueWarnAboutPotentiallyUnwantedCharacters; set { _explicitNullValueWarnAboutPotentiallyUnwantedCharacters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("warn_about_potentially_unwanted_characters"); else _explicitNullProperties?.Remove("warn_about_potentially_unwanted_characters"); } }
+        private bool? _explicitNullValueWarnAboutPotentiallyUnwantedCharacters = default!;
         /// <summary>Wiki access level. One of `disabled`, `private` or `enabled`</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsWikiAccessLevel? WikiAccessLevel { get; set; }
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsWikiAccessLevel? WikiAccessLevel { get => _explicitNullValueWikiAccessLevel; set { _explicitNullValueWikiAccessLevel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wiki_access_level"); else _explicitNullProperties?.Remove("wiki_access_level"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsWikiAccessLevel? _explicitNullValueWikiAccessLevel = default!;
         /// <summary>Flag indication if the wiki is enabled</summary>
-        public bool? WikiEnabled { get; set; }
+        public bool? WikiEnabled { get => _explicitNullValueWikiEnabled; set { _explicitNullValueWikiEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wiki_enabled"); else _explicitNullProperties?.Remove("wiki_enabled"); } }
+        private bool? _explicitNullValueWikiEnabled = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParams"/> and sets the default values.
         /// </summary>
@@ -292,7 +486,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParams CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParams();
+            // Preserve a nullable root response.
+            if (parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) return null!;
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParams(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -483,6 +679,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteBoolValue("warn_about_potentially_unwanted_characters", WarnAboutPotentiallyUnwantedCharacters);
             writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsWikiAccessLevel>("wiki_access_level", WikiAccessLevel);
             writer.WriteBoolValue("wiki_enabled", WikiEnabled);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

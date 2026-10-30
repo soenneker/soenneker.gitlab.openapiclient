@@ -12,24 +12,37 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PostApiV4GeoProxyGitSshUploadPackRequestData : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("gl_id") is { } nullNodeGlId && nullNodeGlId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GlId = null;
+            if (parseNode.GetChildNode("primary_repo") is { } nullNodePrimaryRepo && nullNodePrimaryRepo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrimaryRepo = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>ID of the user performing the operation.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? GlId { get; set; }
+        public string? GlId { get => _explicitNullValueGlId; set { _explicitNullValueGlId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gl_id"); else _explicitNullProperties?.Remove("gl_id"); } }
+        private string? _explicitNullValueGlId = default!;
 #nullable restore
 #else
-        public string GlId { get; set; }
+        public string GlId { get => _explicitNullValueGlId; set { _explicitNullValueGlId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gl_id"); else _explicitNullProperties?.Remove("gl_id"); } }
+        private string _explicitNullValueGlId = default!;
 #endif
         /// <summary>Primary repository to clone or pull from.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PrimaryRepo { get; set; }
+        public string? PrimaryRepo { get => _explicitNullValuePrimaryRepo; set { _explicitNullValuePrimaryRepo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primary_repo"); else _explicitNullProperties?.Remove("primary_repo"); } }
+        private string? _explicitNullValuePrimaryRepo = default!;
 #nullable restore
 #else
-        public string PrimaryRepo { get; set; }
+        public string PrimaryRepo { get => _explicitNullValuePrimaryRepo; set { _explicitNullValuePrimaryRepo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primary_repo"); else _explicitNullProperties?.Remove("primary_repo"); } }
+        private string _explicitNullValuePrimaryRepo = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4GeoProxyGitSshUploadPackRequestData"/> and sets the default values.
@@ -46,7 +59,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4GeoProxyGitSshUploadPackRequestData CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4GeoProxyGitSshUploadPackRequestData();
+            // Preserve a nullable root response.
+            if (parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) return null!;
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4GeoProxyGitSshUploadPackRequestData(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,6 +84,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("gl_id", GlId);
             writer.WriteStringValue("primary_repo", PrimaryRepo);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

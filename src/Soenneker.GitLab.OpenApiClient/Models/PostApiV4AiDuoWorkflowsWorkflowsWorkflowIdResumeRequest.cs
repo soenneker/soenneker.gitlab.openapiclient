@@ -11,18 +11,30 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostApiV4AiDuoWorkflowsWorkflowsWorkflowIdResumeRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("human_approval") is { } nullNodeHumanApproval && nullNodeHumanApproval.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HumanApproval = null;
+            if (parseNode.GetChildNode("human_message") is { } nullNodeHumanMessage && nullNodeHumanMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HumanMessage = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>If `true`, the human approves resuming the workflow.</summary>
-        public bool? HumanApproval { get; set; }
+        public bool? HumanApproval { get => _explicitNullValueHumanApproval; set { _explicitNullValueHumanApproval = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("human_approval"); else _explicitNullProperties?.Remove("human_approval"); } }
+        private bool? _explicitNullValueHumanApproval = default!;
         /// <summary>Message accompanying the human decision.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HumanMessage { get; set; }
+        public string? HumanMessage { get => _explicitNullValueHumanMessage; set { _explicitNullValueHumanMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("human_message"); else _explicitNullProperties?.Remove("human_message"); } }
+        private string? _explicitNullValueHumanMessage = default!;
 #nullable restore
 #else
-        public string HumanMessage { get; set; }
+        public string HumanMessage { get => _explicitNullValueHumanMessage; set { _explicitNullValueHumanMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("human_message"); else _explicitNullProperties?.Remove("human_message"); } }
+        private string _explicitNullValueHumanMessage = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4AiDuoWorkflowsWorkflowsWorkflowIdResumeRequest"/> and sets the default values.
@@ -39,7 +51,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public static global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4AiDuoWorkflowsWorkflowsWorkflowIdResumeRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4AiDuoWorkflowsWorkflowsWorkflowIdResumeRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4AiDuoWorkflowsWorkflowsWorkflowIdResumeRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -62,6 +74,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("human_approval", HumanApproval);
             writer.WriteStringValue("human_message", HumanMessage);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }
