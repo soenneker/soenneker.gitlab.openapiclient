@@ -76,6 +76,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesGitlabSubscription"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "deprecated": true
@@ -224,6 +235,17 @@
           },
           "404": {
             "description": "Not found"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PostApiV4NamespacesIdMinutes201ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "deprecated": true
@@ -338,6 +360,17 @@
           },
           "404": {
             "description": "Not found"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesGitlabSubscriptionsAddOnPurchase"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "deprecated": true
@@ -584,6 +617,17 @@
           },
           "404": {
             "description": "Not Found"
+          },
+          "200": {
+            "description": "Accepted",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesCdRollout"
+                }
+              }
+            },
+            "x-client-success-response-status": "202"
           }
         }
       }
@@ -945,6 +989,17 @@
           },
           "404": {
             "description": "Not Found"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesSecurityVulnerabilityScanningSbomScan"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-gitlab-tier": "ultimate"
@@ -1010,6 +1065,17 @@
           },
           "410": {
             "description": "Result no longer available"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesSecurityVulnerabilityScanningSbomScan"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-gitlab-tier": "ultimate"
@@ -1628,6 +1694,17 @@
           },
           "429": {
             "description": "Too many requests"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesAiExternalAgentsSession"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-gitlab-lifecycle": "experiment",
@@ -1879,6 +1956,17 @@
           },
           "404": {
             "description": "Not found"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesAiExternalAgentsIdentity"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-gitlab-lifecycle": "experiment",
@@ -2343,6 +2431,17 @@
           },
           "404": {
             "description": "Not found"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesAiDuoWorkflowsBasicCheckpoint"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       },
@@ -2654,6 +2753,17 @@
           },
           "404": {
             "description": "Not found"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesAiDuoWorkflowsEvent"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       },
@@ -4056,6 +4166,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesGroupProtectedBranch"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-gitlab-tier": "premium"
@@ -4438,6 +4559,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesGroupsRepositoryStorageMove"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-gitlab-tier": "premium"
@@ -4910,6 +5042,17 @@
           },
           "422": {
             "description": "Unprocessable entity"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesSamlGroupLink"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-gitlab-tier": "premium"
@@ -5482,6 +5625,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesProtectedEnvironment"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-gitlab-tier": "premium"
@@ -5779,6 +5933,17 @@
           },
           "422": {
             "description": "Unprocessable entity"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesProtectedEnvironment"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-gitlab-tier": "premium"
@@ -6449,6 +6614,17 @@
           },
           "404": {
             "description": "Not found"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesProjectAlias"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-gitlab-tier": "premium"
@@ -6666,6 +6842,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesMergeRequestApprovalRule"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-gitlab-tier": "premium"
@@ -6915,6 +7102,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesVulnerabilityExport"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-gitlab-tier": "ultimate"
@@ -6964,6 +7162,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesVulnerabilityExport"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-gitlab-tier": "ultimate"
@@ -6999,6 +7208,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesVulnerabilityExport"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-gitlab-tier": "ultimate"
@@ -7136,6 +7356,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesVulnerabilityArchiveExport"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-gitlab-tier": "ultimate"
@@ -7304,6 +7535,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesVulnerabilityIssueLink"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-gitlab-tier": "ultimate"
@@ -7621,6 +7863,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesVulnerability"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-gitlab-tier": "ultimate"
@@ -7661,6 +7914,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesVulnerability"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-gitlab-tier": "ultimate"
@@ -7710,6 +7974,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesVulnerability"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-gitlab-tier": "ultimate"
@@ -7759,6 +8034,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesVulnerability"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-gitlab-tier": "ultimate"
@@ -7881,6 +8167,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesVulnerability"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-gitlab-tier": "ultimate"
@@ -8106,6 +8403,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesApprovalSettings"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-gitlab-tier": "premium"
@@ -8239,6 +8547,17 @@
           },
           "404": {
             "description": "Not found"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesManagedLicense"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -8677,6 +8996,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesPersonalAccessTokenWithToken"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-gitlab-tier": "ultimate"
@@ -9765,6 +10095,17 @@
           },
           "429": {
             "description": "Too many requests"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesGroupHook"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-gitlab-tier": "premium"
@@ -10898,6 +11239,17 @@
           },
           "404": {
             "description": "Not Found"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesMemberRole"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-gitlab-tier": "ultimate"
@@ -11013,6 +11365,17 @@
           },
           "401": {
             "description": "Unauthorized"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesMemberRole"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-gitlab-tier": "ultimate"
@@ -11393,6 +11756,20 @@
           },
           "403": {
             "description": "Forbidden"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PostApiV4ProjectsIdMergeTrainsMergeRequestsMergeRequestIidSuccessResponse"
+                },
+                "x-client-original-success-schema": {
+                  "$ref": "#/components/schemas/PostApiV4ProjectsIdMergeTrainsMergeRequestsMergeRequestIid201ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-gitlab-tier": "premium"
@@ -11483,6 +11860,17 @@
           },
           "422": {
             "description": "Unprocessable entity"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesGroupPushRule"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-gitlab-tier": "premium"
@@ -11747,6 +12135,17 @@
           },
           "422": {
             "description": "Unprocessable entity"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesProjectPushRule"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-gitlab-tier": "premium"
@@ -12059,6 +12458,17 @@
           },
           "400": {
             "description": "Bad request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesGitlabLicenseWithActiveUsers"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -12329,6 +12739,17 @@
           },
           "422": {
             "description": "Unprocessable entity"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesLdapGroupLink"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-gitlab-tier": "premium"
@@ -13869,6 +14290,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesRelatedEpicLink"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-gitlab-tier": "premium"
@@ -15045,6 +15477,17 @@
           },
           "429": {
             "description": "Too many requests"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesEpic"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-gitlab-tier": "premium"
@@ -15276,6 +15719,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesEpic"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-gitlab-tier": "ultimate"
@@ -15346,6 +15800,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesEpic"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-gitlab-tier": "ultimate"
@@ -15656,6 +16121,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesEpicIssueLink"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-gitlab-tier": "premium"
@@ -16218,6 +16694,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesProjectApprovalSettingRule"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-gitlab-tier": "premium"
@@ -16387,6 +16874,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesExternalStatusCheck"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-gitlab-tier": "ultimate"
@@ -16626,6 +17124,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesMergeRequestsStatusCheckResponse"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-gitlab-tier": "ultimate"
@@ -16843,6 +17352,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesGroupApprovalRule"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-gitlab-tier": "premium"
@@ -17160,6 +17680,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesProjectApprovalRule"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-gitlab-tier": "premium"
@@ -17446,6 +17977,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesClustersAgentUrlConfiguration"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-gitlab-tier": "ultimate"
@@ -17681,6 +18223,17 @@
           },
           "404": {
             "description": "Not found"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesCiRunnerControllerToken"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-gitlab-lifecycle": "experiment",
@@ -17831,6 +18384,17 @@
           },
           "404": {
             "description": "Not found"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesCiRunnerControllerTokenWithToken"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-gitlab-lifecycle": "experiment",
@@ -17915,6 +18479,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesCiRunnerControllerInstanceLevelScoping"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-gitlab-tier": "ultimate"
@@ -18007,6 +18582,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesCiRunnerControllerRunnerLevelScoping"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-gitlab-tier": "ultimate"
@@ -18138,6 +18724,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesCiRunnerController"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-gitlab-lifecycle": "experiment",
@@ -18480,6 +19077,17 @@
           },
           "429": {
             "description": "Too many requests"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PostApiV4ProjectsIdMergeRequestsMergeRequestIidSuggestedReviewers201ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-gitlab-lifecycle": "experiment"
@@ -19693,6 +20301,17 @@
           },
           "401": {
             "description": "Unauthorized"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesMemberRole"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-gitlab-tier": "ultimate"
@@ -19779,6 +20398,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesBoard"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-gitlab-tier": "premium"
@@ -20371,6 +21001,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesMlMlflowRegisteredModel"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -20539,6 +21180,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesMlMlflowModelVersion"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -20793,6 +21445,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesMlMlflowRun"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -20916,6 +21579,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesMlMlflowRun"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -20973,6 +21647,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesMlMlflowUpdateRun"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -21279,6 +21964,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesMlMlflowModelVersion"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -21787,6 +22483,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesMlMlflowListExperiment"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -21844,6 +22551,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesMlMlflowNewExperiment"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -22947,6 +23665,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesUserWithAdmin"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -23174,6 +23903,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesUser"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -23213,6 +23953,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesUser"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -23526,6 +24277,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesSshKey"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       },
@@ -23726,6 +24488,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesGpgKey"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       },
@@ -23960,6 +24733,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesEmail"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       },
@@ -24638,6 +25422,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesImpersonationTokenWithToken"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -24774,6 +25569,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesPersonalAccessTokenWithToken"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -24882,6 +25688,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesSshKey"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -25038,6 +25855,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesGpgKey"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -25219,6 +26047,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesEmail"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -25294,6 +26133,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesUserSupportPin"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       },
@@ -25672,6 +26522,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesPersonalAccessTokenWithToken"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -25707,6 +26568,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesApplicationWithSecret"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       },
@@ -25896,6 +26768,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesTodo"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -25944,6 +26827,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesTodo"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -26081,6 +26975,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesTodo"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -26147,6 +27052,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesTodo"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-gitlab-tier": "premium"
@@ -26567,6 +27483,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesMergeRequest"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -26615,6 +27542,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesMergeRequest"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -26663,6 +27601,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesIssue"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -26711,6 +27660,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesIssue"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -26759,6 +27719,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesProjectLabel"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -26807,6 +27778,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesProjectLabel"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -26855,6 +27837,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesGroupLabel"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -26903,6 +27896,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesGroupLabel"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -27120,6 +28124,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesSnippetsRepositoryStorageMove"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -27358,6 +28373,17 @@
           },
           "403": {
             "description": "403 Forbidden"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesServiceAccount"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       },
@@ -28336,6 +29362,17 @@
           },
           "404": {
             "description": "404 Project not found"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesServiceAccount"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       },
@@ -28863,6 +29900,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesPersonalAccessTokenWithToken"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -29001,6 +30049,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesPersonalAccessTokenWithToken"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -29232,6 +30291,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesProjectsRepositoryStorageMove"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -29531,6 +30601,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesMilestone"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -30331,6 +31412,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesNote"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -30655,6 +31747,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesNote"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -30979,6 +32082,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesNote"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -31303,6 +32417,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesNote"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -31628,6 +32753,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesNote"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-gitlab-tier": "premium"
@@ -31957,6 +33093,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesNote"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-gitlab-tier": "ultimate"
@@ -32286,6 +33433,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesNote"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-gitlab-tier": "premium"
@@ -32586,6 +33744,17 @@
           },
           "404": {
             "description": "404 Group not found"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesServiceAccount"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       },
@@ -33113,6 +34282,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesPersonalAccessTokenWithToken"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -33251,6 +34431,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesPersonalAccessTokenWithToken"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -33490,6 +34681,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesMilestone"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -33966,6 +35168,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesProjectLabel"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       },
@@ -34541,6 +35754,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesGroupLabel"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       },
@@ -34940,6 +36164,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesList"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -35241,6 +36476,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesDiscussion"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -35485,6 +36731,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesNote"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -35812,6 +37069,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesDiscussion"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -35991,6 +37259,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesNote"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -36318,6 +37597,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesDiscussion"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -36562,6 +37852,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesNote"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -36889,6 +38190,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesDiscussion"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -37068,6 +38380,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesNote"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -37395,6 +38718,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesDiscussion"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -37639,6 +38973,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesNote"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -37962,6 +39307,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesBoard"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -38269,6 +39625,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesList"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -38900,6 +40267,17 @@
           },
           "422": {
             "description": "Unprocessable entity"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesWikiPage"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-gitlab-tier": "premium"
@@ -39144,6 +40522,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesWikiAttachment"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-gitlab-tier": "premium"
@@ -39257,6 +40646,17 @@
           },
           "422": {
             "description": "Unprocessable entity"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesWikiPage"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -39497,6 +40897,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesWikiAttachment"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -39557,6 +40968,17 @@
           },
           "403": {
             "description": "Forbidden"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesCiRunnerRegistrationDetails"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -40112,6 +41534,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesProjectsTopic"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -40262,6 +41695,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesProjectsTopic"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -40502,6 +41946,17 @@
           },
           "422": {
             "description": "Unprocessable Entity"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesTerraformStateProtectionRule"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -41852,6 +43307,17 @@
           },
           "429": {
             "description": "Too many requests"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesTag"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -42286,6 +43752,17 @@
           },
           "429": {
             "description": "Too many requests"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesHook"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -42834,6 +44311,17 @@
           },
           "422": {
             "description": "Unprocessable entity"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesPersonalSnippet"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -45081,6 +46569,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesResourceAccessTokenWithToken"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -45431,6 +46930,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesResourceAccessTokenWithToken"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -46878,6 +48388,17 @@
           },
           "404": {
             "description": "Not found"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesRemoteMirror"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -47296,6 +48817,17 @@
           },
           "404": {
             "description": "Not Found"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesReleasesLink"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -47765,6 +49297,17 @@
           },
           "422": {
             "description": "Unprocessable entity"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesRelease"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -48171,6 +49714,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesRelease"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -48733,6 +50287,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesProtectedTag"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -48989,6 +50554,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesProtectedBranch"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -50235,6 +51811,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesProject"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -50622,6 +52209,17 @@
           },
           "400": {
             "description": "Bad request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesProject"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -50675,6 +52273,17 @@
           },
           "400": {
             "description": "Bad request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesProject"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -50963,6 +52572,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesProject"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       },
@@ -51465,6 +53085,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesProject"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -51514,6 +53145,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesProject"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -51566,6 +53208,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesProject"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -51618,6 +53271,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesProject"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -51798,6 +53462,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesProject"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -51857,6 +53532,17 @@
           },
           "404": {
             "description": "Not found"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesProjectGroupLink"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -53060,6 +54746,17 @@
           },
           "422": {
             "description": "Unprocessable entity"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesProjectSnippet"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -53582,6 +55279,17 @@
           },
           "422": {
             "description": "Unprocessable Entity"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesProjectsPackagesProtectionRule"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -54268,6 +55976,17 @@
           },
           "422": {
             "description": "Unprocessable entity"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesProjectScopeLink"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -54397,6 +56116,17 @@
           },
           "422": {
             "description": "Unprocessable entity"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesGroupScopeLink"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -54560,6 +56290,17 @@
           },
           "503": {
             "description": "Service unavailable"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesProjectImportStatus"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -54683,6 +56424,17 @@
           },
           "422": {
             "description": "Unprocessable Entity"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesProjectImportStatus"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -54733,6 +56485,17 @@
           },
           "503": {
             "description": "Service unavailable"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesProjectImportStatus"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -54798,6 +56561,17 @@
           },
           "503": {
             "description": "Service unavailable"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesRelationImportTracker"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -54903,6 +56677,17 @@
           },
           "503": {
             "description": "Service unavailable"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesProjectImportStatus"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -55277,6 +57062,17 @@
           },
           "429": {
             "description": "Too many requests"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesProjectHook"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -56235,6 +58031,17 @@
           },
           "404": {
             "description": "Not Found"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesPackagesDebianDistribution"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       },
@@ -56873,6 +58680,17 @@
           },
           "422": {
             "description": "Unprocessable Entity"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesProjectsContainerRegistryProtectionTagRule"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -57113,6 +58931,17 @@
           },
           "422": {
             "description": "Unprocessable Entity"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesProjectsContainerRegistryProtectionRule"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -58004,6 +59833,17 @@
           },
           "404": {
             "description": "Not found"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesClusterProject"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -58483,6 +60323,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesPersonalAccessTokenWithToken"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -58659,6 +60510,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesPagesDomain"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -59265,6 +61127,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesOrganizationsOrganization"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-gitlab-lifecycle": "experiment"
@@ -59350,6 +61223,17 @@
           },
           "404": {
             "description": "Not found"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesOrganizationsOrganization"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-gitlab-lifecycle": "experiment"
@@ -59512,6 +61396,17 @@
           },
           "429": {
             "description": "Too many requests"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesBulkImport"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -62249,6 +64144,17 @@
           },
           "404": {
             "description": "Not found"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesNamespacesStorageLimitExclusion"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       },
@@ -62535,6 +64441,17 @@
           },
           "404": {
             "description": "Not Found"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesMobilePushSubscription"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       },
@@ -63340,6 +65257,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesApprovalState"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "deprecated": true,
@@ -63409,6 +65337,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesMergeRequestApprovals"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -63467,6 +65406,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesMergeRequestApprovals"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -63631,6 +65581,17 @@
           },
           "422": {
             "description": "Unprocessable entity"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesMergeRequest"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -64827,6 +66788,17 @@
           },
           "404": {
             "description": "Not found"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesIssuableTimeStats"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -64885,6 +66857,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesIssuableTimeStats"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -64953,6 +66936,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesIssuableTimeStats"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -65011,6 +67005,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesIssuableTimeStats"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -65713,6 +67718,17 @@
           },
           "422": {
             "description": "Unprocessable entity"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesMergeRequest"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -66221,6 +68237,17 @@
           },
           "404": {
             "description": "Not found"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PostApiV4ProjectsIdMergeRequestsMergeRequestIidContextCommits201ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       },
@@ -66606,6 +68633,17 @@
           },
           "405": {
             "description": "Method not allowed"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesCiPipeline"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -66846,6 +68884,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesMergeRequest"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -67217,6 +69266,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesMember"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -67683,6 +69743,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesMember"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -68038,6 +70109,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesMember"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       },
@@ -68936,6 +71018,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesProjectUpload"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       },
@@ -69330,6 +71423,17 @@
           },
           "404": {
             "description": "Not found"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesGroupUpload"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       },
@@ -69667,6 +71771,17 @@
           },
           "401": {
             "description": "Unauthorized"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesMarkdown"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -71769,6 +73884,17 @@
           },
           "404": {
             "description": "Not found"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesIssuableTimeStats"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -71827,6 +73953,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesIssuableTimeStats"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -71895,6 +74032,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesIssuableTimeStats"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -71953,6 +74101,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesIssuableTimeStats"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -72564,6 +74723,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesIssue"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -73261,6 +75431,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesIssue"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -73326,6 +75507,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesIssue"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -73659,6 +75851,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesIssuableMetricImage"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       },
@@ -73971,6 +76174,17 @@
           },
           "404": {
             "description": "Not Found"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesIssueLink"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -74166,6 +76380,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesInvitation"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       },
@@ -74383,6 +76608,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesInvitation"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       },
@@ -74598,6 +76834,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesBasicSuccess"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-gitlab-lifecycle": "experiment"
@@ -74710,6 +76957,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesBasicSuccess"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-gitlab-lifecycle": "experiment"
@@ -74813,6 +77071,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesBasicSuccess"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-gitlab-lifecycle": "experiment"
@@ -74858,6 +77127,17 @@
           },
           "404": {
             "description": "Not found"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesBasicSuccess"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -85196,6 +87476,17 @@
           },
           "503": {
             "description": "Service unavailable"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProjectEntity"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -85330,6 +87621,17 @@
           },
           "503": {
             "description": "Service unavailable"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProjectEntity"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -85380,6 +87682,17 @@
           },
           "503": {
             "description": "Service unavailable"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProjectImportEntity"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -85802,6 +88115,17 @@
           },
           "404": {
             "description": "Not Found"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesCiVariable"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -86600,6 +88924,17 @@
           },
           "404": {
             "description": "Not Found"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesPackagesDebianDistribution"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       },
@@ -87464,6 +89799,17 @@
           },
           "404": {
             "description": "Not found"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesClusterGroup"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -88721,6 +91067,17 @@
           },
           "404": {
             "description": "Not Found"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesFreezePeriod"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -89534,6 +91891,17 @@
           },
           "404": {
             "description": "Not Found"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesFeature"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       },
@@ -89699,6 +92067,17 @@
           },
           "404": {
             "description": "Not found"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesFeatureFlagUserList"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -90032,6 +92411,17 @@
           },
           "404": {
             "description": "Not Found"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesFeatureFlag"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -90788,6 +93178,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesErrorTrackingClientKey"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -90998,6 +93399,17 @@
           },
           "404": {
             "description": "Not found"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesEnvironment"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -91325,6 +93737,17 @@
           },
           "404": {
             "description": "Not found"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesEnvironment"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -91487,6 +93910,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesDraftNote"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -91977,6 +94411,17 @@
           },
           "404": {
             "description": "Not found"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesDeploymentExtended"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -92741,6 +95186,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesDeploymentsApproval"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-gitlab-tier": "premium"
@@ -92942,6 +95398,17 @@
           },
           "404": {
             "description": "Not found"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesDeployTokenWithToken"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -93187,6 +95654,17 @@
           },
           "404": {
             "description": "Not found"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesDeployTokenWithToken"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -93395,6 +95873,17 @@
           },
           "403": {
             "description": "Forbidden"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesDeployKey"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -93521,6 +96010,17 @@
           },
           "404": {
             "description": "Not found"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesDeployKeysProject"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -93754,6 +96254,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesDeployKey"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -102769,6 +105280,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesClustersAgent"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -103008,6 +105530,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesClustersAgentTokenWithToken"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -103287,6 +105820,17 @@
           },
           "404": {
             "description": "Not Found"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesCiVariable"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -103556,6 +106100,17 @@
           },
           "404": {
             "description": "Not found"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesCiPipeline"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -103629,6 +106184,17 @@
           },
           "404": {
             "description": "Not found"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesCiPipeline"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -103763,6 +106329,17 @@
           },
           "404": {
             "description": "Not found"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesTrigger"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -104196,6 +106773,17 @@
           },
           "404": {
             "description": "Not found"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesCiPipelineScheduleDetails"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -104603,6 +107191,17 @@
           },
           "404": {
             "description": "Not found"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesCiPipelineScheduleDetails"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -104732,6 +107331,17 @@
           },
           "404": {
             "description": "Not found"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesCiVariable"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -104956,6 +107566,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Accepted",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesCiVariable"
+                }
+              }
+            },
+            "x-client-success-response-status": "202"
           }
         }
       }
@@ -105217,6 +107838,17 @@
           },
           "404": {
             "description": "Not found"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesCiPipeline"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -105979,6 +108611,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesCiPipeline"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -106038,6 +108681,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesCiPipeline"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -106158,6 +108812,17 @@
           },
           "404": {
             "description": "Not Found"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesCiSecureFile"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -106464,6 +109129,17 @@
           },
           "410": {
             "description": "Gone"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesCiRunnerRegistrationDetails"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       },
@@ -107019,6 +109695,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesCiResetTokenResult"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -107208,6 +109895,17 @@
           },
           "404": {
             "description": "Runner not found"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesCiRunner"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -107415,6 +110113,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesCiResetTokenResult"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -107461,6 +110170,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesCiResetTokenResult"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -107507,6 +110227,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesCiResetTokenResult"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -107635,6 +110366,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesCiResetTokenResult"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -107713,6 +110455,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Job was scheduled",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesCiJobRequestResponse"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -108709,6 +111462,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesCiJob"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -108784,6 +111548,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesCiJob"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -108853,6 +111628,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesCiJob"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -109425,6 +112211,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesGroup"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -110757,6 +113554,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesGroupDetail"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -110924,6 +113732,17 @@
           },
           "422": {
             "description": "Unprocessable entity"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesGroupDetail"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-gitlab-lifecycle": "experiment"
@@ -110974,6 +113793,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesGroupDetail"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -111623,6 +114453,17 @@
           },
           "404": {
             "description": "Not found"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesSshCertificate"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-gitlab-tier": "premium"
@@ -112255,6 +115096,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesCiJob"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -112368,6 +115220,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesCiCatalogResourcesVersion"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -112415,6 +115278,17 @@
           },
           "503": {
             "description": "Service unavailable"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesBulkImport"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       },
@@ -112986,6 +115860,17 @@
           },
           "404": {
             "description": "Not Found"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesBranch"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -113406,6 +116291,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesBadge"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -113722,6 +116618,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesBadge"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -114062,6 +116969,17 @@
           },
           "404": {
             "description": "Not Found"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesAwardEmoji"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -114344,6 +117262,17 @@
           },
           "404": {
             "description": "Not Found"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesAwardEmoji"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -114625,6 +117554,17 @@
           },
           "404": {
             "description": "Not Found"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesAwardEmoji"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -114907,6 +117847,17 @@
           },
           "404": {
             "description": "Not Found"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesAwardEmoji"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -115188,6 +118139,17 @@
           },
           "404": {
             "description": "Not Found"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesAwardEmoji"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -115470,6 +118432,17 @@
           },
           "404": {
             "description": "Not Found"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesAwardEmoji"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -115752,6 +118725,17 @@
           },
           "404": {
             "description": "Not Found"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesAwardEmoji"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-gitlab-tier": "premium"
@@ -116038,6 +119022,17 @@
           },
           "404": {
             "description": "Not Found"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesAwardEmoji"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-gitlab-tier": "premium"
@@ -116800,6 +119795,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "No Content",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesMetricImage"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         }
       }
@@ -117161,6 +120167,17 @@
           },
           "404": {
             "description": "Not found"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesCluster"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -117295,6 +120312,17 @@
           },
           "400": {
             "description": "400 Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesCiVariable"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -117497,6 +120525,17 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesSystemBroadcastMessage"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -118221,6 +121260,25 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesMember"
+                },
+                "example": {
+                  "id": 1,
+                  "username": "raymond_smith",
+                  "name": "Raymond Smith",
+                  "state": "active",
+                  "created_at": "2012-10-22T14:13:35Z",
+                  "access_level": "20"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -118430,6 +121488,25 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesMember"
+                },
+                "example": {
+                  "id": 1,
+                  "username": "raymond_smith",
+                  "name": "Raymond Smith",
+                  "state": "active",
+                  "created_at": "2012-10-22T14:13:35Z",
+                  "access_level": "20"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }

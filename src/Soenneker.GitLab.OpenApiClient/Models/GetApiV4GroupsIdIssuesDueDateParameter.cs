@@ -8,7 +8,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
     public enum GetApiV4GroupsIdIssuesDueDateParameter
     #pragma warning restore CS1591
     {
-        [EnumMember(Value = "")]
+        [global::System.Runtime.Serialization.EnumMember(Value = "")]
         EmptyString,
 
         [EnumMember(Value = "0")]
