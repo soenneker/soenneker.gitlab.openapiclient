@@ -49,6 +49,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             else if (parseNode.GetChildNode("scoped_user_id") is { } nullNodeScopedUserId && nullNodeScopedUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScopedUserId = null;
             if (parseNode.GetChildNode("stage") is null) { _explicitNullValueStage = default!; _explicitNullProperties?.Remove("stage"); }
             else if (parseNode.GetChildNode("stage") is { } nullNodeStage && nullNodeStage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Stage = null;
+            if (parseNode.GetChildNode("tag_list") is null) { _explicitNullValueTagList = default!; _explicitNullProperties?.Remove("tag_list"); }
+            else if (parseNode.GetChildNode("tag_list") is { } nullNodeTagList && nullNodeTagList.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TagList = null;
             if (parseNode.GetChildNode("time_in_queue_seconds") is null) { _explicitNullValueTimeInQueueSeconds = default!; _explicitNullProperties?.Remove("time_in_queue_seconds"); }
             else if (parseNode.GetChildNode("time_in_queue_seconds") is { } nullNodeTimeInQueueSeconds && nullNodeTimeInQueueSeconds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimeInQueueSeconds = null;
             if (parseNode.GetChildNode("user_id") is null) { _explicitNullValueUserId = default!; _explicitNullProperties?.Remove("user_id"); }
@@ -217,6 +219,16 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Stage { get => _explicitNullValueStage; set { _explicitNullValueStage = value; AdditionalData?.Remove("stage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stage"); else _explicitNullProperties?.Remove("stage"); } }
         private string _explicitNullValueStage = default!;
 #endif
+        /// <summary>The tag_list property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<string>? TagList { get => _explicitNullValueTagList; set { _explicitNullValueTagList = value; AdditionalData?.Remove("tag_list"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tag_list"); else _explicitNullProperties?.Remove("tag_list"); } }
+        private List<string>? _explicitNullValueTagList = default!;
+#nullable restore
+#else
+        public List<string> TagList { get => _explicitNullValueTagList; set { _explicitNullValueTagList = value; AdditionalData?.Remove("tag_list"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tag_list"); else _explicitNullProperties?.Remove("tag_list"); } }
+        private List<string> _explicitNullValueTagList = default!;
+#endif
         /// <summary>The time_in_queue_seconds property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -278,6 +290,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "root_namespace_id", n => { RootNamespaceId = n.GetStringValue(); } },
                 { "scoped_user_id", n => { ScopedUserId = n.GetStringValue(); } },
                 { "stage", n => { Stage = n.GetStringValue(); } },
+                { "tag_list", n => { TagList = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "time_in_queue_seconds", n => { TimeInQueueSeconds = n.GetStringValue(); } },
                 { "user_id", n => { UserId = n.GetStringValue(); } },
             };
@@ -305,6 +318,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("root_namespace_id", RootNamespaceId);
             writer.WriteStringValue("scoped_user_id", ScopedUserId);
             writer.WriteStringValue("stage", Stage);
+            writer.WriteCollectionOfPrimitiveValues<string>("tag_list", TagList);
             writer.WriteStringValue("time_in_queue_seconds", TimeInQueueSeconds);
             writer.WriteStringValue("user_id", UserId);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);

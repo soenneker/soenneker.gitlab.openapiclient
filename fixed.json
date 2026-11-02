@@ -115245,13 +115245,18 @@
         "operationId": "PostApiV4BulkImports",
         "requestBody": {
           "content": {
-            "application/x-www-form-urlencoded": {
+            "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/PostApiV4BulkImportsRequest"
               }
             }
           },
-          "required": true
+          "required": true,
+          "x-client-original-form-content": {
+            "schema": {
+              "$ref": "#/components/schemas/PostApiV4BulkImportsRequest"
+            }
+          }
         },
         "responses": {
           "201": {
@@ -126020,39 +126025,6 @@
           "achievement_uploads_oldest_unsynced_time": {
             "type": "string"
           },
-          "ai_vectorizable_file_uploads_count": {
-            "type": "string"
-          },
-          "ai_vectorizable_file_uploads_checksum_total_count": {
-            "type": "string"
-          },
-          "ai_vectorizable_file_uploads_checksummed_count": {
-            "type": "string"
-          },
-          "ai_vectorizable_file_uploads_checksum_failed_count": {
-            "type": "string"
-          },
-          "ai_vectorizable_file_uploads_synced_count": {
-            "type": "string"
-          },
-          "ai_vectorizable_file_uploads_failed_count": {
-            "type": "string"
-          },
-          "ai_vectorizable_file_uploads_registry_count": {
-            "type": "string"
-          },
-          "ai_vectorizable_file_uploads_verification_total_count": {
-            "type": "string"
-          },
-          "ai_vectorizable_file_uploads_verified_count": {
-            "type": "string"
-          },
-          "ai_vectorizable_file_uploads_verification_failed_count": {
-            "type": "string"
-          },
-          "ai_vectorizable_file_uploads_oldest_unsynced_time": {
-            "type": "string"
-          },
           "alert_management_metric_image_uploads_count": {
             "type": "string"
           },
@@ -127436,12 +127408,6 @@
           "achievement_uploads_verified_in_percentage": {
             "type": "string"
           },
-          "ai_vectorizable_file_uploads_synced_in_percentage": {
-            "type": "string"
-          },
-          "ai_vectorizable_file_uploads_verified_in_percentage": {
-            "type": "string"
-          },
           "alert_management_metric_image_uploads_synced_in_percentage": {
             "type": "string"
           },
@@ -127687,6 +127653,47 @@
           },
           "vulnerability_remediation_uploads_verified_in_percentage": {
             "type": "string"
+          },
+          "ai_vectorizable_file_uploads_count": {
+            "type": "integer"
+          },
+          "ai_vectorizable_file_uploads_checksum_total_count": {
+            "type": "integer"
+          },
+          "ai_vectorizable_file_uploads_checksummed_count": {
+            "type": "integer"
+          },
+          "ai_vectorizable_file_uploads_checksum_failed_count": {
+            "type": "integer"
+          },
+          "ai_vectorizable_file_uploads_synced_count": {
+            "type": "integer"
+          },
+          "ai_vectorizable_file_uploads_failed_count": {
+            "type": "integer"
+          },
+          "ai_vectorizable_file_uploads_registry_count": {
+            "type": "integer"
+          },
+          "ai_vectorizable_file_uploads_verification_total_count": {
+            "type": "integer"
+          },
+          "ai_vectorizable_file_uploads_verified_count": {
+            "type": "integer"
+          },
+          "ai_vectorizable_file_uploads_verification_failed_count": {
+            "type": "integer"
+          },
+          "ai_vectorizable_file_uploads_oldest_unsynced_time": {
+            "type": "integer"
+          },
+          "ai_vectorizable_file_uploads_synced_in_percentage": {
+            "type": "string",
+            "example": "0.00%"
+          },
+          "ai_vectorizable_file_uploads_verified_in_percentage": {
+            "type": "string",
+            "example": "0.00%"
           },
           "repositories_count": {
             "type": "string"
@@ -127924,39 +127931,6 @@
           "achievement_uploads_oldest_unsynced_time": {
             "type": "string"
           },
-          "ai_vectorizable_file_uploads_count": {
-            "type": "string"
-          },
-          "ai_vectorizable_file_uploads_checksum_total_count": {
-            "type": "string"
-          },
-          "ai_vectorizable_file_uploads_checksummed_count": {
-            "type": "string"
-          },
-          "ai_vectorizable_file_uploads_checksum_failed_count": {
-            "type": "string"
-          },
-          "ai_vectorizable_file_uploads_synced_count": {
-            "type": "string"
-          },
-          "ai_vectorizable_file_uploads_failed_count": {
-            "type": "string"
-          },
-          "ai_vectorizable_file_uploads_registry_count": {
-            "type": "string"
-          },
-          "ai_vectorizable_file_uploads_verification_total_count": {
-            "type": "string"
-          },
-          "ai_vectorizable_file_uploads_verified_count": {
-            "type": "string"
-          },
-          "ai_vectorizable_file_uploads_verification_failed_count": {
-            "type": "string"
-          },
-          "ai_vectorizable_file_uploads_oldest_unsynced_time": {
-            "type": "string"
-          },
           "alert_management_metric_image_uploads_count": {
             "type": "string"
           },
@@ -129340,12 +129314,6 @@
           "achievement_uploads_verified_in_percentage": {
             "type": "string"
           },
-          "ai_vectorizable_file_uploads_synced_in_percentage": {
-            "type": "string"
-          },
-          "ai_vectorizable_file_uploads_verified_in_percentage": {
-            "type": "string"
-          },
           "alert_management_metric_image_uploads_synced_in_percentage": {
             "type": "string"
           },
@@ -129591,6 +129559,47 @@
           },
           "vulnerability_remediation_uploads_verified_in_percentage": {
             "type": "string"
+          },
+          "ai_vectorizable_file_uploads_count": {
+            "type": "integer"
+          },
+          "ai_vectorizable_file_uploads_checksum_total_count": {
+            "type": "integer"
+          },
+          "ai_vectorizable_file_uploads_checksummed_count": {
+            "type": "integer"
+          },
+          "ai_vectorizable_file_uploads_checksum_failed_count": {
+            "type": "integer"
+          },
+          "ai_vectorizable_file_uploads_synced_count": {
+            "type": "integer"
+          },
+          "ai_vectorizable_file_uploads_failed_count": {
+            "type": "integer"
+          },
+          "ai_vectorizable_file_uploads_registry_count": {
+            "type": "integer"
+          },
+          "ai_vectorizable_file_uploads_verification_total_count": {
+            "type": "integer"
+          },
+          "ai_vectorizable_file_uploads_verified_count": {
+            "type": "integer"
+          },
+          "ai_vectorizable_file_uploads_verification_failed_count": {
+            "type": "integer"
+          },
+          "ai_vectorizable_file_uploads_oldest_unsynced_time": {
+            "type": "integer"
+          },
+          "ai_vectorizable_file_uploads_synced_in_percentage": {
+            "type": "string",
+            "example": "0.00%"
+          },
+          "ai_vectorizable_file_uploads_verified_in_percentage": {
+            "type": "string",
+            "example": "0.00%"
           },
           "repositories_count": {
             "type": "string"
@@ -145953,6 +145962,16 @@
           "stage": {
             "type": "string"
           },
+          "tag_list": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "example": [
+              "docker",
+              "ruby"
+            ]
+          },
           "pipeline_id": {
             "type": "string"
           },
@@ -147172,6 +147191,18 @@
           "ci_pipeline_size": {
             "type": "integer",
             "example": 0
+          },
+          "ci_pipeline_variables_count": {
+            "type": "integer",
+            "example": 1200
+          },
+          "ci_variable_value_size": {
+            "type": "integer",
+            "example": 131072
+          },
+          "ci_variable_file_value_size": {
+            "type": "integer",
+            "example": 1048576
           },
           "ci_active_jobs": {
             "type": "integer",
@@ -176958,6 +176989,21 @@
             "description": "Maximum number of jobs in a single pipeline.",
             "nullable": true
           },
+          "ci_pipeline_variables_count": {
+            "type": "integer",
+            "description": "Maximum number of pipeline variables in a single pipeline.",
+            "nullable": true
+          },
+          "ci_variable_value_size": {
+            "type": "integer",
+            "description": "Maximum size of a pipeline variable value in bytes.",
+            "nullable": true
+          },
+          "ci_variable_file_value_size": {
+            "type": "integer",
+            "description": "Maximum size of a file type pipeline variable value in bytes.",
+            "nullable": true
+          },
           "ci_active_jobs": {
             "type": "integer",
             "description": "Total number of jobs in currently active pipelines.",
@@ -177615,44 +177661,7 @@
         ],
         "description": "ID of each milestone the release is associated with. GitLab Premium customers can specify group milestones. Cannot be combined with the \u0060milestones\u0060 parameter. To remove all milestones from the release, specify \u0060[]\u0060. Mutually exclusive with \u0060milestones\u0060."
       },
-      "PostApiV4ProjectsIdPagesDomainsRequestCertificate": {
-        "type": "string",
-        "nullable": true,
-        "x-client-inline-scalar": true,
-        "description": "Certificate in PEM format with intermediates following in most specific to least specific order."
-      },
-      "PostApiV4ProjectsIdPagesDomainsRequestKey": {
-        "type": "string",
-        "nullable": true,
-        "x-client-inline-scalar": true,
-        "description": "Certificate key in PEM format."
-      },
-      "PutApiV4ProjectsIdPagesDomainsDomainRequestCertificate": {
-        "type": "string",
-        "nullable": true,
-        "x-client-inline-scalar": true,
-        "description": "Certificate in PEM format with intermediates following in most specific to least specific order."
-      },
-      "PutApiV4ProjectsIdPagesDomainsDomainRequestKey": {
-        "type": "string",
-        "nullable": true,
-        "x-client-inline-scalar": true,
-        "description": "Certificate key in PEM format."
-      },
       "PostApiV4GroupsIdMembersRequestUserId": {
-        "oneOf": [
-          {
-            "type": "integer",
-            "nullable": true
-          },
-          {
-            "type": "string",
-            "nullable": true
-          }
-        ],
-        "description": "User ID of the new member, or multiple IDs separated by commas. Required if \u0060username\u0060 is not provided. Mutually exclusive with \u0060username\u0060. At least one of \u0060user_id\u0060, \u0060username\u0060 must be provided."
-      },
-      "PostApiV4ProjectsIdMembersRequestUserId": {
         "oneOf": [
           {
             "type": "integer",
@@ -177705,27 +177714,6 @@
         "description": "Value to set for the feature flag. Use \u0060true\u0060 or \u0060false\u0060 to enable or disable it, or an integer for the percentage of time it should be enabled."
       },
       "PostApiV4ProjectsIdPipelineSchedulesRequestInputsItemValue": {
-        "oneOf": [
-          {
-            "type": "string",
-            "nullable": true
-          },
-          {
-            "type": "array",
-            "nullable": true
-          },
-          {
-            "type": "number",
-            "nullable": true
-          },
-          {
-            "type": "boolean",
-            "nullable": true
-          }
-        ],
-        "description": "Value of the input."
-      },
-      "PutApiV4ProjectsIdPipelineSchedulesPipelineScheduleIdRequestInputsItemValue": {
         "oneOf": [
           {
             "type": "string",
@@ -177803,27 +177791,6 @@
           }
         }
       },
-      "ApiEntitiesOrbitContextEntitySummary": {
-        "type": "object"
-      },
-      "ApiEntitiesOrbitContextEntityError": {
-        "type": "object"
-      },
-      "ApiEntitiesOrbitContextEntityExpansion": {
-        "type": "object"
-      },
-      "ApiEntitiesAiDuoWorkflowsWorkflowWorkload": {
-        "type": "object"
-      },
-      "ApiEntitiesAiDuoWorkflowsCheckpointCheckpoint": {
-        "type": "object"
-      },
-      "ApiEntitiesAiDuoWorkflowsCheckpointMetadata": {
-        "type": "object"
-      },
-      "ApiEntitiesAnalyticsCodeReviewMergeRequestDiffStats": {
-        "type": "object"
-      },
       "ApiEntitiesGroupStatistics": {
         "type": "object",
         "properties": {
@@ -177878,9 +177845,6 @@
           }
         }
       },
-      "ApiEntitiesVulnerabilityFinding": {
-        "type": "object"
-      },
       "VulnerabilitiesFeedbackEntityCommentDetails": {
         "type": "object",
         "properties": {
@@ -177912,41 +177876,6 @@
           "iid": {
             "type": "string"
           }
-        }
-      },
-      "ApiEntitiesGroupHookUrlVariablesItem": {
-        "type": "object"
-      },
-      "ApiEntitiesGroupHookCustomHeadersItem": {
-        "type": "object"
-      },
-      "ApiEntitiesGitlabLicenseWithActiveUsersLicensee": {
-        "type": "object",
-        "example": {
-          "Name": "John Doe1"
-        }
-      },
-      "ApiEntitiesGitlabLicenseWithActiveUsersAddOns": {
-        "type": "object",
-        "example": {
-          "GitLab_FileLocks": 1,
-          "GitLab_Auditor_User": 1
-        }
-      },
-      "ApiEntitiesBasicSuccessSuccess": {
-        "type": "object"
-      },
-      "ApiEntitiesGitlabLicenseLicensee": {
-        "type": "object",
-        "example": {
-          "Name": "John Doe1"
-        }
-      },
-      "ApiEntitiesGitlabLicenseAddOns": {
-        "type": "object",
-        "example": {
-          "GitLab_FileLocks": 1,
-          "GitLab_Auditor_User": 1
         }
       },
       "ApiEntitiesGeoSiteLinks": {
@@ -177999,9 +177928,6 @@
           }
         }
       },
-      "ApiEntitiesRelatedEpicReferencesItem": {
-        "type": "object"
-      },
       "ApiEntitiesRelatedEpicLinks": {
         "type": "object",
         "properties": {
@@ -178022,9 +177948,6 @@
             "example": "http://gitlab.example.com/api/v4/groups/7/epics/4"
           }
         }
-      },
-      "ApiEntitiesEpicReferencesItem": {
-        "type": "object"
       },
       "ApiEntitiesEpicLinks": {
         "type": "object",
@@ -178072,18 +177995,6 @@
           }
         }
       },
-      "ApiEntitiesEpicIssueLinkEpic": {
-        "type": "object"
-      },
-      "DetailedStatusEntityIllustration": {
-        "type": "object",
-        "example": {
-          "image": "illustrations/empty-state/empty-job-not-triggered-md.svg",
-          "size": "",
-          "title": "This job has not been triggered yet",
-          "content": "This job depends on upstream jobs that need to succeed in order for this job to be triggered"
-        }
-      },
       "DetailedStatusEntityAction": {
         "type": "object",
         "properties": {
@@ -178121,12 +178032,6 @@
           }
         }
       },
-      "ApiEntitiesAuditEventDetails": {
-        "type": "object"
-      },
-      "ApiEntitiesAiSuggestedReviewerApprovalRule": {
-        "type": "object"
-      },
       "ApiEntitiesAdminModelChecksumInformation": {
         "type": "object",
         "properties": {
@@ -178152,22 +178057,6 @@
           }
         }
       },
-      "ApiEntitiesSearchMigrationMigrationState": {
-        "type": "object",
-        "example": {
-          "task_id": "task_id"
-        }
-      },
-      "ApiEntitiesAiActiveContextCollectionOptions": {
-        "type": "object",
-        "example": {
-          "queue_shard_count": 24,
-          "queue_shard_limit": 1000
-        }
-      },
-      "ApiEntitiesBoardMilestone": {
-        "type": "object"
-      },
       "ApiEntitiesMlMlflowRunData": {
         "type": "object",
         "properties": {
@@ -178190,9 +178079,6 @@
             }
           }
         }
-      },
-      "ApiEntitiesTodoTarget": {
-        "type": "object"
       },
       "ApiEntitiesIssueLinks": {
         "type": "object",
@@ -178219,18 +178105,6 @@
           }
         }
       },
-      "ApiEntitiesNotePosition": {
-        "type": "object"
-      },
-      "ApiEntitiesNoteCommandsChanges": {
-        "type": "object"
-      },
-      "ApiEntitiesWikiPageFrontMatter": {
-        "type": "object",
-        "example": {
-          "title": "deploy"
-        }
-      },
       "ApiEntitiesWikiAttachmentLink": {
         "type": "object",
         "properties": {
@@ -178243,57 +178117,6 @@
             "example": "![dk](uploads/6a061c4cf9f1c28cb22c384b4b8d4e3c/dk.png)"
           }
         }
-      },
-      "ApiEntitiesCommitTrailers": {
-        "type": "object",
-        "example": {
-          "Merged-By": "Jane Doe janedoe@gitlab.com"
-        }
-      },
-      "ApiEntitiesCommitExtendedTrailers": {
-        "type": "object",
-        "example": {
-          "Signed-off-by": [
-            "John Doe \u003Cjohndoe@gitlab.com\u003E",
-            "Jane Doe \u003Cjanedoe@gitlab.com\u003E"
-          ]
-        }
-      },
-      "ApiEntitiesTagSignatureSignature": {
-        "type": "object"
-      },
-      "ApiEntitiesHookUrlVariablesItem": {
-        "type": "object"
-      },
-      "ApiEntitiesHookCustomHeadersItem": {
-        "type": "object"
-      },
-      "ApiEntitiesCommitDetailTrailers": {
-        "type": "object",
-        "example": {
-          "Merged-By": "Jane Doe janedoe@gitlab.com"
-        }
-      },
-      "ApiEntitiesCommitDetailExtendedTrailers": {
-        "type": "object",
-        "example": {
-          "Signed-off-by": [
-            "John Doe \u003Cjohndoe@gitlab.com\u003E",
-            "Jane Doe \u003Cjanedoe@gitlab.com\u003E"
-          ]
-        }
-      },
-      "ApiEntitiesCommitDetailLastPipeline": {
-        "type": "object"
-      },
-      "ApiEntitiesSnippetFilesItem": {
-        "type": "object"
-      },
-      "ApiEntitiesPersonalSnippetFilesItem": {
-        "type": "object"
-      },
-      "ApiEntitiesRepositoryHealthAlternates": {
-        "type": "object"
       },
       "ApiEntitiesMilestoneWithStatsIssueStats": {
         "type": "object",
@@ -178386,9 +178209,6 @@
           }
         }
       },
-      "ApiEntitiesProjectSharedWithGroupsItem": {
-        "type": "object"
-      },
       "ApiEntitiesProjectsWithAccessAndCatalogSettingLinks": {
         "type": "object",
         "properties": {
@@ -178425,9 +178245,6 @@
             "example": "https://gitlab.example.com/api/v4/projects/4/cluster_agents"
           }
         }
-      },
-      "ApiEntitiesProjectsWithAccessAndCatalogSettingSharedWithGroupsItem": {
-        "type": "object"
       },
       "ApiEntitiesProjectsWithAccessAndCatalogSettingPermissions": {
         "type": "object",
@@ -178477,9 +178294,6 @@
           }
         }
       },
-      "ApiEntitiesProjectsWithCatalogSettingSharedWithGroupsItem": {
-        "type": "object"
-      },
       "ApiEntitiesProjectDailyStatisticsFetches": {
         "type": "object",
         "properties": {
@@ -178495,9 +178309,6 @@
           }
         }
       },
-      "ApiEntitiesProjectSnippetFilesItem": {
-        "type": "object"
-      },
       "ApiEntitiesPackageLinks": {
         "type": "object",
         "properties": {
@@ -178508,15 +178319,6 @@
             "type": "string"
           }
         }
-      },
-      "ApiEntitiesProjectImportStatusStats": {
-        "type": "object"
-      },
-      "ApiEntitiesProjectHookUrlVariablesItem": {
-        "type": "object"
-      },
-      "ApiEntitiesProjectHookCustomHeadersItem": {
-        "type": "object"
       },
       "ApiEntitiesProjectExportStatusLinks": {
         "type": "object",
@@ -178529,34 +178331,6 @@
             "type": "string",
             "example": "https://gitlab.example.com/gitlab-org/gitlab-test/download_export"
           }
-        }
-      },
-      "ApiEntitiesNugetServiceIndexResourcesItem": {
-        "type": "object"
-      },
-      "ApiEntitiesNpmPackageTagDistTags": {
-        "type": "object",
-        "example": {
-          "latest": "1.0.1"
-        }
-      },
-      "ApiEntitiesNpmPackageVersions": {
-        "type": "object",
-        "example": {
-          "1.0.0": {
-            "name": "my_package",
-            "version": "1.0.0",
-            "dist": {
-              "shasum": "12345",
-              "tarball": "https://..."
-            }
-          }
-        }
-      },
-      "ApiEntitiesNpmPackageDistTags": {
-        "type": "object",
-        "example": {
-          "latest": "1.0.1"
         }
       },
       "ApiEntitiesMetadataKas": {
@@ -178577,33 +178351,6 @@
             "type": "string",
             "example": "15.0.0"
           }
-        }
-      },
-      "ApiEntitiesMergeRequestApprovalsApproversItem": {
-        "type": "object"
-      },
-      "ApiEntitiesMergeRequestApprovalsApproverGroupsItem": {
-        "type": "object"
-      },
-      "ApiEntitiesApprovalStateApproversItem": {
-        "type": "object"
-      },
-      "ApiEntitiesApprovalStateApproverGroupsItem": {
-        "type": "object"
-      },
-      "ApiEntitiesCommitWithLinkTrailers": {
-        "type": "object",
-        "example": {
-          "Merged-By": "Jane Doe janedoe@gitlab.com"
-        }
-      },
-      "ApiEntitiesCommitWithLinkExtendedTrailers": {
-        "type": "object",
-        "example": {
-          "Signed-off-by": [
-            "John Doe \u003Cjohndoe@gitlab.com\u003E",
-            "Jane Doe \u003Cjanedoe@gitlab.com\u003E"
-          ]
         }
       },
       "ApiEntitiesMergeRequestChangesUser": {
@@ -178627,17 +178374,6 @@
             "$ref": "#/components/schemas/ApiEntitiesBillableMembershipAccessLevelCustomRoleProperty"
           }
         }
-      },
-      "ApiEntitiesCiLintResultIncludeExtra": {
-        "type": "object",
-        "example": {
-          "job_name": "test",
-          "project": "gitlab-org/gitlab",
-          "ref": "master"
-        }
-      },
-      "ApiEntitiesCiLintResultJobsItem": {
-        "type": "object"
       },
       "ApiEntitiesRelatedIssueLinks": {
         "type": "object",
@@ -178664,19 +178400,6 @@
           }
         }
       },
-      "ApiEntitiesIntegrationProperties": {
-        "type": "object",
-        "example": {
-          "token": "secr3t"
-        }
-      },
-      "ApiEntitiesGlqlFieldParameters": {
-        "type": "object",
-        "description": "Resolved parameter metadata for parameterised fields, absent when the field has no parameters",
-        "example": {
-          "granularity": "weekly"
-        }
-      },
       "ApiEntitiesCiJobProject": {
         "type": "object",
         "properties": {
@@ -178686,80 +178409,6 @@
           }
         }
       },
-      "ApiEntitiesDraftNotePosition": {
-        "type": "object",
-        "example": {
-          "base_sha": "aa149113",
-          "start_sha": "b3a0a8c4",
-          "head_sha": "be3020c7",
-          "old_path": "example.md",
-          "new_path": "example.md",
-          "position_type": "text",
-          "old_line": 2,
-          "new_line": 4,
-          "line_range": {
-            "start": {
-              "line_code": "1c497fbb3a46b78edf04cc2a2fa33f67e3ffbe2a_2_4",
-              "type": null,
-              "old_line": 2,
-              "new_line": 4
-            },
-            "end": {
-              "line_code": "1c497fbb3a46b78edf04cc2a2fa33f67e3ffbe2a_2_4",
-              "type": null,
-              "old_line": 2,
-              "new_line": 4
-            }
-          }
-        }
-      },
-      "ApiEntitiesPackagesConanFilesListFiles": {
-        "type": "object",
-        "example": {
-          "conan_sources.tgz": {},
-          "conanmanifest.txt": {},
-          "conanfile.py": {}
-        }
-      },
-      "ApiEntitiesPackagesConanPackageSnapshotPackageSnapshot": {
-        "type": "object",
-        "example": {
-          "conan_package.tgz": "749b29bdf72587081ca03ec033ee59dc"
-        }
-      },
-      "ApiEntitiesPackagesConanRecipeSnapshotRecipeSnapshot": {
-        "type": "object",
-        "example": {
-          "conan_sources.tgz": "eadf19b33f4c3c7e113faabf26e76277"
-        }
-      },
-      "ApiEntitiesPackagesConanPackageManifestPackageUrls": {
-        "type": "object",
-        "example": {
-          "conan_package.tgz": "https://gitlab.example.com/api/v4/packages/conan/v1/files/my-package/1.0/my-group\u002Bmy-project/stable/packages/103f6067a947f366ef91fc1b7da351c588d1827f/0/conan_package.tgz"
-        }
-      },
-      "ApiEntitiesPackagesConanRecipeManifestRecipeUrls": {
-        "type": "object",
-        "example": {
-          "conan_sources.tgz": "https://gitlab.example.com/api/v4/packages/conan/v1/files/my-package/1.0/my-group\u002Bmy-project/stable/0/export/conan_sources.tgz"
-        }
-      },
-      "ApiEntitiesPackagesConanUploadUrlsUploadUrls": {
-        "type": "object",
-        "example": {
-          "conan_package.tgz": "https://gitlab.example.com/api/v4/packages/conan/v1/files/my-package/1.0/my-group\u002Bmy-project/stable/0/package/103f6067a947f366ef91fc1b7da351c588d1827f/0/conan_package.tgz"
-        }
-      },
-      "ApiEntitiesCommitSignatureSignature": {
-        "type": "object"
-      },
-      "ApiEntitiesDiscoveredClustersGroups": {
-        "type": "object"
-      },
-      "ApiEntitiesDiscoveredClustersProjects": {
-        "type": "object"
-      },
       "ApiEntitiesCiBridgeProject": {
         "type": "object",
         "properties": {
@@ -178767,31 +178416,6 @@
             "type": "string",
             "example": false
           }
-        }
-      },
-      "TestCaseEntityRecentFailures": {
-        "type": "object",
-        "example": {
-          "count": 3,
-          "base_branch": "develop"
-        }
-      },
-      "TestReportSummaryEntityTotal": {
-        "type": "object",
-        "example": {
-          "time": 0.42,
-          "count": 2,
-          "success": 2,
-          "failed": 0,
-          "skipped": 0,
-          "error": 0,
-          "suite_error": null
-        }
-      },
-      "ApiEntitiesCiSecureFileMetadata": {
-        "type": "object",
-        "example": {
-          "id": "75949910542696343243264405377658443914"
         }
       },
       "ApiEntitiesCiJobBasicProject": {
@@ -178833,33 +178457,6 @@
           "uploads_size": {
             "type": "string"
           }
-        }
-      },
-      "ApiEntitiesGroupDetailSharedWithGroupsItem": {
-        "type": "object"
-      },
-      "ApiEntitiesBulkImportsEntityStats": {
-        "type": "object"
-      },
-      "ApiEntitiesPlanLimitLimitsHistory": {
-        "type": "object",
-        "example": {
-          "enforcement_limit": [
-            {
-              "timestamp": 1686909124,
-              "user_id": 1,
-              "username": "x",
-              "value": 5
-            }
-          ],
-          "notification_limit": [
-            {
-              "timestamp": 1686909124,
-              "user_id": 2,
-              "username": "y",
-              "value": 7
-            }
-          ]
         }
       },
       "PostApiV4NamespacesIdMinutesRequestPacksItem": {
@@ -178945,11 +178542,6 @@
         "description": "The event payload. Exactly one of \u0060data\u0060, \u0060value\u0060 must be provided.",
         "nullable": true
       },
-      "PostApiV4RolloutsIdRequestValue": {
-        "type": "object",
-        "description": "AutoFlow Value (protojson), decoded into the same topic/type/data shape as \u0060data\u0060 above. Exactly one of \u0060data\u0060, \u0060value\u0060 must be provided.",
-        "nullable": true
-      },
       "PostApiV4RolloutsIdRequestChannelTokensItem": {
         "required": [
           "channel_name",
@@ -178970,15 +178562,6 @@
             "nullable": true
           }
         }
-      },
-      "PostApiV4OrbitQueryNameRequestParameters": {
-        "type": "object",
-        "description": "Named query parameters"
-      },
-      "PostApiV4DuoCodeReviewEvaluationsRequestFilesContent": {
-        "type": "object",
-        "description": "Full file contents, where keys are file paths and values are the file contents.",
-        "nullable": true
       },
       "PostApiV4ChatCompletionsRequestCurrentFile": {
         "type": "object",
@@ -179205,16 +178788,6 @@
           }
         }
       },
-      "PostApiV4AiDuoWorkflowsWorkflowsIdCheckpointsRequestCheckpoint": {
-        "type": "object",
-        "description": "Checkpoint content",
-        "nullable": true
-      },
-      "PostApiV4AiDuoWorkflowsWorkflowsIdCheckpointsRequestMetadata": {
-        "type": "object",
-        "description": "Checkpoint metadata.",
-        "nullable": true
-      },
       "PostApiV4AiDuoWorkflowsWorkflowsIdCheckpointsRequestChannelBlobsItem": {
         "required": [
           "channel",
@@ -179309,24 +178882,6 @@
             "nullable": true
           }
         }
-      },
-      "PostApiV4GroupsIdProtectedBranchesRequestAllowedToPushItem": {
-        "type": "object"
-      },
-      "PostApiV4GroupsIdProtectedBranchesRequestAllowedToMergeItem": {
-        "type": "object"
-      },
-      "PostApiV4GroupsIdProtectedBranchesRequestAllowedToUnprotectItem": {
-        "type": "object"
-      },
-      "PatchApiV4GroupsIdProtectedBranchesNameRequestAllowedToPushItem": {
-        "type": "object"
-      },
-      "PatchApiV4GroupsIdProtectedBranchesNameRequestAllowedToMergeItem": {
-        "type": "object"
-      },
-      "PatchApiV4GroupsIdProtectedBranchesNameRequestAllowedToUnprotectItem": {
-        "type": "object"
       },
       "PostApiV4ProjectsIdProtectedEnvironmentsRequestDeployAccessLevelsItem": {
         "type": "object",
@@ -179820,11 +179375,6 @@
           }
         }
       },
-      "PostApiV4ExperimentsExperimentNameAssignmentsRequestContext": {
-        "type": "object",
-        "description": "Context parameters (user, namespace, project). An actor context is resolved from the user. Defaults to current user.",
-        "nullable": true
-      },
       "PostApiV4ProjectsIdMergeRequestsMergeRequestIidSuggestedReviewersRequestSuggestionsItem": {
         "required": [
           "user_id",
@@ -180077,19 +179627,6 @@
           }
         },
         "description": "Dependency management settings. Set \u0060security_update_scheduler_max_concurrency\u0060 (integer) to cap the number of security update scheduler jobs that run concurrently across the Sidekiq fleet. Default: \u006030\u0060. Capped at \u0060200\u0060. Set to \u00600\u0060 to remove the concurrency limit. Ultimate only. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/239173) in GitLab 19.1.",
-        "nullable": true
-      },
-      "PutApiV4ApplicationSettingsRequestRepositoryStoragesWeighted": {
-        "type": "object",
-        "additionalProperties": {
-          "type": "integer"
-        },
-        "description": "Hash of names of storages taken from \u0060gitlab.yml\u0060 to [weights](https://docs.gitlab.com/administration/repository_storage_paths/#configure-where-new-repositories-are-stored) ranging from 0 to 100. New projects are created in one of these stores, chosen by a weighted random selection.",
-        "nullable": true
-      },
-      "PutApiV4ApplicationSettingsRequestResourceUsageLimits": {
-        "type": "object",
-        "description": "Definition for resource usage limits enforced in Sidekiq workers.",
         "nullable": true
       },
       "PutApiV4ApplicationSettingsRequestCodeDropdownCustomClientsItem": {
@@ -180347,9 +179884,6 @@
         "description": "YAML front matter of the wiki page.",
         "nullable": true
       },
-      "PostApiV4UsageDataTrackEventsRequestEventsItem": {
-        "type": "object"
-      },
       "PostApiV4HooksRequestUrlVariablesItem": {
         "required": [
           "key",
@@ -180513,27 +180047,6 @@
         },
         "description": "Object that contains assets for the release.",
         "nullable": true
-      },
-      "PostApiV4ProjectsIdProtectedTagsRequestAllowedToCreateItem": {
-        "type": "object"
-      },
-      "PostApiV4ProjectsIdProtectedBranchesRequestAllowedToPushItem": {
-        "type": "object"
-      },
-      "PostApiV4ProjectsIdProtectedBranchesRequestAllowedToMergeItem": {
-        "type": "object"
-      },
-      "PostApiV4ProjectsIdProtectedBranchesRequestAllowedToUnprotectItem": {
-        "type": "object"
-      },
-      "PatchApiV4ProjectsIdProtectedBranchesNameRequestAllowedToPushItem": {
-        "type": "object"
-      },
-      "PatchApiV4ProjectsIdProtectedBranchesNameRequestAllowedToMergeItem": {
-        "type": "object"
-      },
-      "PatchApiV4ProjectsIdProtectedBranchesNameRequestAllowedToUnprotectItem": {
-        "type": "object"
       },
       "PostApiV4ProjectsRequestContainerExpirationPolicyAttributes": {
         "type": "object",
@@ -182413,16 +181926,6 @@
         "description": "Object that contains information on the GitLab subscription.",
         "nullable": true
       },
-      "PostApiV4IntegrationsSlackEventsRequestEvent": {
-        "type": "object",
-        "description": "Event object with variable properties.",
-        "nullable": true
-      },
-      "PostApiV4ImportGithubRequestOptionalStages": {
-        "type": "object",
-        "description": "Additional items to import. For a list of items, see [select additional items to import](https://docs.gitlab.com/user/project/import/github/#select-additional-items-to-import).",
-        "nullable": true
-      },
       "PutApiV4GroupsIdClustersClusterIdRequestPlatformKubernetesAttributes": {
         "type": "object",
         "properties": {
@@ -182910,34 +182413,6 @@
         "description": "Filter results when multiple variables share the same key.",
         "nullable": true
       },
-      "PostApiV4ProjectsIdTriggerPipelineRequestVariables": {
-        "type": "object",
-        "description": "Map of pipeline variables, as key-value pairs, for example \u0060{ VAR1: \u0022value1\u0022, VAR2: \u0022value2\u0022 }\u0060.",
-        "nullable": true,
-        "example": {
-          "VAR1": "value1",
-          "VAR2": "value2"
-        }
-      },
-      "PostApiV4ProjectsIdTriggerPipelineRequestInputs": {
-        "type": "object",
-        "description": "Map of inputs, as key-value pairs, to use when creating the pipeline. [Generally available](https://gitlab.com/gitlab-org/gitlab/-/issues/536548) in GitLab 18.1. Feature flag \u0060ci_inputs_for_pipelines\u0060 removed.",
-        "nullable": true
-      },
-      "PostApiV4ProjectsIdRefRefTriggerPipelineRequestVariables": {
-        "type": "object",
-        "description": "Map of pipeline variables, as key-value pairs, for example \u0060{ VAR1: \u0022value1\u0022, VAR2: \u0022value2\u0022 }\u0060.",
-        "nullable": true,
-        "example": {
-          "VAR1": "value1",
-          "VAR2": "value2"
-        }
-      },
-      "PostApiV4ProjectsIdRefRefTriggerPipelineRequestInputs": {
-        "type": "object",
-        "description": "Map of inputs, as key-value pairs, to use when creating the pipeline. [Generally available](https://gitlab.com/gitlab-org/gitlab/-/issues/536548) in GitLab 18.1. Feature flag \u0060ci_inputs_for_pipelines\u0060 removed.",
-        "nullable": true
-      },
       "PostApiV4ProjectsIdPipelineSchedulesRequestInputsItem": {
         "required": [
           "name",
@@ -182998,11 +182473,6 @@
             "$ref": "#/components/schemas/PostApiV4ProjectsIdPipelineRequestVariablesItemVariableType"
           }
         }
-      },
-      "PostApiV4ProjectsIdPipelineRequestInputs": {
-        "type": "object",
-        "description": "Map of inputs, as key-value pairs, to use when creating the pipeline. [Generally available](https://gitlab.com/gitlab-org/gitlab/-/issues/536548) in GitLab 18.1. Feature flag \u0060ci_inputs_for_pipelines\u0060 removed.",
-        "nullable": true
       },
       "PostApiV4RunnersRequestInfo": {
         "type": "object",
@@ -183121,14 +182591,6 @@
         "description": "Build log state.",
         "nullable": true
       },
-      "PostApiV4ProjectsIdJobsJobIdRetryRequestInputs": {
-        "type": "object",
-        "description": "Input values for the job.",
-        "nullable": true,
-        "example": {
-          "environment": "production"
-        }
-      },
       "PostApiV4ProjectsIdJobsJobIdPlayRequestJobVariablesAttributesItem": {
         "required": [
           "key",
@@ -183148,14 +182610,6 @@
             "nullable": true,
             "example": "bar"
           }
-        }
-      },
-      "PostApiV4ProjectsIdJobsJobIdPlayRequestJobInputs": {
-        "type": "object",
-        "description": "Hash of [job input](https://docs.gitlab.com/ci/jobs/job_inputs/) values to use when playing the job. [Introduced](https://gitlab.com/groups/gitlab-org/-/work_items/17833) in GitLab 18.10.",
-        "nullable": true,
-        "example": {
-          "environment": "production"
         }
       },
       "PostApiV4GroupsRequestDefaultBranchProtectionDefaults": {
@@ -183435,11 +182889,6 @@
           }
         }
       },
-      "PostApiV4ProjectsIdCatalogPublishRequestMetadata": {
-        "type": "object",
-        "description": "Metadata for the release.",
-        "nullable": true
-      },
       "PostApiV4BulkImportsRequestConfiguration": {
         "required": [
           "url",
@@ -183605,62 +183054,6 @@
         "description": "Platform Kubernetes data.",
         "nullable": true
       },
-      "PostApiV4UsageDataTrackEventRequestAdditionalProperties": {
-        "type": "object",
-        "description": "Additional properties to be tracked.",
-        "nullable": true,
-        "example": {
-          "label": "login_button",
-          "value": 1
-        }
-      },
-      "ApiEntitiesBillableMembershipAccessLevelCustomRole": {
-        "type": "object"
-      },
-      "PostApiV4ChatCompletionsRequestAdditionalContextItemMetadata": {
-        "type": "object",
-        "description": "Metadata of the additional context.",
-        "nullable": true
-      },
-      "PostApiV4ProjectsIdAiAgentAuditEventsRequestEventsItemDetails": {
-        "type": "object",
-        "description": "Additional event details."
-      },
-      "PostApiV4AiDuoWorkflowsWorkflowsIdAuditEventsRequestEventsItemData": {
-        "type": "object",
-        "description": "Event-specific payload.",
-        "nullable": true
-      },
-      "PostApiV4SecurityProjectsIdVulnerabilityExportsRequestReportDataProjectVulnerabilitiesHistory": {
-        "type": "object",
-        "description": "Data for rendering the project vulnerabilities history in PDF reports. Must include an SVG asset.",
-        "nullable": true
-      },
-      "PostApiV4SecurityProjectsIdVulnerabilityExportsRequestReportDataGroupVulnerabilitiesOverTime": {
-        "type": "object",
-        "description": "Data for rendering the group vulnerabilities over time in PDF reports. Must include an SVG asset.",
-        "nullable": true
-      },
-      "PostApiV4SecurityProjectsIdVulnerabilityExportsRequestReportDataProjectSecurityStatus": {
-        "type": "object",
-        "description": "Data for rendering the project grades summary in PDF reports.",
-        "nullable": true
-      },
-      "PostApiV4SecurityProjectsIdVulnerabilityExportsRequestReportDataTotalRiskScore": {
-        "type": "object",
-        "description": "Data for rendering the total risk score in PDF reports.",
-        "nullable": true
-      },
-      "PostApiV4SecurityProjectsIdVulnerabilityExportsRequestReportDataOpenVulnerabilitiesOverTime": {
-        "type": "object",
-        "description": "Data for rendering the open vulnerabilities over time in PDF reports.",
-        "nullable": true
-      },
-      "PostApiV4SecurityProjectsIdVulnerabilityExportsRequestReportDataVulnerabilitiesByAge": {
-        "type": "object",
-        "description": "Data for rendering the vulnerabilities by age in PDF reports.",
-        "nullable": true
-      },
       "PostApiV4SecurityProjectsIdVulnerabilityExportsRequestReportDataVulnerabilitiesBySeverityCount": {
         "type": "object",
         "properties": {
@@ -183684,36 +183077,6 @@
           }
         },
         "description": "Data for rendering the vulnerabilities by severity count in PDF reports.",
-        "nullable": true
-      },
-      "PostApiV4SecurityGroupsIdVulnerabilityExportsRequestReportDataProjectVulnerabilitiesHistory": {
-        "type": "object",
-        "description": "Data for rendering the project vulnerabilities history in PDF reports. Must include an SVG asset.",
-        "nullable": true
-      },
-      "PostApiV4SecurityGroupsIdVulnerabilityExportsRequestReportDataGroupVulnerabilitiesOverTime": {
-        "type": "object",
-        "description": "Data for rendering the group vulnerabilities over time in PDF reports. Must include an SVG asset.",
-        "nullable": true
-      },
-      "PostApiV4SecurityGroupsIdVulnerabilityExportsRequestReportDataProjectSecurityStatus": {
-        "type": "object",
-        "description": "Data for rendering the project grades summary in PDF reports.",
-        "nullable": true
-      },
-      "PostApiV4SecurityGroupsIdVulnerabilityExportsRequestReportDataTotalRiskScore": {
-        "type": "object",
-        "description": "Data for rendering the total risk score in PDF reports.",
-        "nullable": true
-      },
-      "PostApiV4SecurityGroupsIdVulnerabilityExportsRequestReportDataOpenVulnerabilitiesOverTime": {
-        "type": "object",
-        "description": "Data for rendering the open vulnerabilities over time in PDF reports.",
-        "nullable": true
-      },
-      "PostApiV4SecurityGroupsIdVulnerabilityExportsRequestReportDataVulnerabilitiesByAge": {
-        "type": "object",
-        "description": "Data for rendering the vulnerabilities by age in PDF reports.",
         "nullable": true
       },
       "PostApiV4SecurityGroupsIdVulnerabilityExportsRequestReportDataVulnerabilitiesBySeverityCount": {
@@ -183762,11 +183125,6 @@
             "$ref": "#/components/schemas/PutApiV4ApplicationSettingsRequestDefaultBranchProtectionDefaultsAllowedToMergeItemAccessLevel"
           }
         }
-      },
-      "PutApiV4ApplicationSettingsRequestVscodeExtensionMarketplaceCustomValues": {
-        "type": "object",
-        "description": "VS Code Extension Marketplace URL\u0027s when preset is \u0027custom\u0027",
-        "nullable": true
       },
       "PutApiV4ApplicationSettingsRequestDuoNamespaceAccessRulesItemThroughNamespace": {
         "required": [
@@ -184636,16 +183994,6 @@
         "description": "Object that contains information on replication and verification status metrics for GitLab resources on Geo nodes.",
         "nullable": true
       },
-      "PostApiV4GeoFailuresRequestFailuresItemContext": {
-        "type": "object",
-        "description": "Additional error-type-specific data",
-        "nullable": true
-      },
-      "PostApiV4ProjectsIdFeatureFlagsRequestStrategiesItemParameters": {
-        "type": "object",
-        "description": "Strategy parameters as a JSON-formatted string, for example \u0060{\u0022userIds\u0022:\u0022user1\u0022}\u0060.",
-        "nullable": true
-      },
       "PostApiV4ProjectsIdFeatureFlagsRequestStrategiesItemScopesItem": {
         "required": [
           "environment_scope"
@@ -184658,11 +184006,6 @@
             "nullable": true
           }
         }
-      },
-      "PutApiV4ProjectsIdFeatureFlagsFeatureFlagNameRequestStrategiesItemParameters": {
-        "type": "object",
-        "description": "Strategy parameters as a JSON-formatted string, for example \u0060{\u0022userIds\u0022:\u0022user1\u0022}\u0060.",
-        "nullable": true
       },
       "PutApiV4ProjectsIdFeatureFlagsFeatureFlagNameRequestStrategiesItemScopesItem": {
         "type": "object",
@@ -184710,11 +184053,6 @@
         "description": "Line range for a multi-line note.",
         "nullable": true
       },
-      "PostApiV4JobsRequestRequestInfoFeatures": {
-        "type": "object",
-        "description": "Runner\u0027s features",
-        "nullable": true
-      },
       "PostApiV4JobsRequestRequestInfoConfig": {
         "type": "object",
         "properties": {
@@ -184725,11 +184063,6 @@
           }
         },
         "description": "Runner\u0027s config",
-        "nullable": true
-      },
-      "PostApiV4JobsRequestRequestInfoLabels": {
-        "type": "object",
-        "description": "Runner\u0027s labels",
         "nullable": true
       },
       "PostApiV4GroupsRequestDefaultBranchProtectionDefaultsAllowedToPushItem": {
@@ -185227,1485 +184560,11 @@
         "description": "End line for a multi-line note.",
         "nullable": true
       },
-      "PostApiV4NamespacesIdMinutes201Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesCiMinutesAdditionalPack"
-        }
-      },
-      "GetApiV4OrbitSkillsNamePath200MarkdownResponse": {
-        "type": "string"
-      },
-      "GetApiV4OrbitSkillsNamePath200PlainResponse": {
-        "type": "string"
-      },
-      "GetApiV4JobsIdSbomScansSbomScanId200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesSecurityVulnerabilityScanningSbomScan"
-        }
-      },
-      "GetApiV4AiDuoWorkflowsWorkflowsIdCheckpoints200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesAiDuoWorkflowsCheckpoint"
-        }
-      },
-      "GetApiV4AiDuoWorkflowsWorkflowsIdEvents200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesAiDuoWorkflowsEvent"
-        }
-      },
-      "GetApiV4GroupsIdEnterpriseUsers200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesUserPublic"
-        }
-      },
-      "GetApiV4DependencyListExportsExportIdDownload200OctetStreamResponse": {
-        "type": "string",
-        "format": "binary"
-      },
-      "GetApiV4GroupsIdProtectedBranches200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesGroupProtectedBranch"
-        }
-      },
-      "GetApiV4GroupRepositoryStorageMoves200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesGroupsRepositoryStorageMove"
-        }
-      },
-      "GetApiV4GroupsIdRepositoryStorageMoves200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesGroupsRepositoryStorageMove"
-        }
-      },
-      "GetApiV4ProjectsIdIterations200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesIteration"
-        }
-      },
-      "GetApiV4GroupsIdIterations200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesIteration"
-        }
-      },
-      "GetApiV4GroupsIdSamlGroupLinks200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesSamlGroupLink"
-        }
-      },
-      "GetApiV4ProjectsIdIssuesEventableIdResourceIterationEvents200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesResourceIterationEvent"
-        }
-      },
-      "GetApiV4ProjectsIdIssuesEventableIdResourceWeightEvents200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesResourceWeightEvent"
-        }
-      },
-      "GetApiV4ProjectsIdProtectedEnvironments200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesProtectedEnvironment"
-        }
-      },
-      "GetApiV4GroupsIdProtectedEnvironments200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesProtectedEnvironment"
-        }
-      },
-      "GetApiV4ProjectsIdAnalyticsDeploymentFrequency200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesAnalyticsDeploymentFrequency"
-        }
-      },
-      "GetApiV4SecurityVulnerabilityExportsIdDownload200OctetStreamResponse": {
-        "type": "string",
-        "format": "binary"
-      },
-      "GetApiV4SecurityVulnerabilityArchiveExportsIdDownload200OctetStreamResponse": {
-        "type": "string",
-        "format": "binary"
-      },
-      "GetApiV4VulnerabilitiesIdIssueLinks200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesVulnerabilityRelatedIssue"
-        }
-      },
-      "GetApiV4ProjectsIdVulnerabilityFindings200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/VulnerabilitiesFindingEntity"
-        }
-      },
-      "GetApiV4ProjectsIdGoogleCloudSetupIntegrationsSh200PlainResponse": {
-        "type": "string"
-      },
-      "GetApiV4ProjectsIdGoogleCloudSetupRunnerDeploymentProjectSh200PlainResponse": {
-        "type": "string"
-      },
-      "GetApiV4ProjectsIdManagedLicenses200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesManagedLicense"
-        }
-      },
-      "GetApiV4ProjectsIdMergeRequestsMergeRequestIidBlocks200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesMergeRequestDependency"
-        }
-      },
-      "GetApiV4ProjectsIdMergeRequestsMergeRequestIidBlockees200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesMergeRequestDependency"
-        }
-      },
-      "GetApiV4GroupsIdHooks200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesGroupHook"
-        }
-      },
-      "GetApiV4GroupsIdMemberRoles200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesMemberRole"
-        }
-      },
-      "GetApiV4MemberRoles200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesMemberRole"
-        }
-      },
-      "GetApiV4ProjectsIdMergeTrains200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesMergeTrainsCar"
-        }
-      },
-      "GetApiV4ProjectsIdMergeTrainsTargetBranch200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesMergeTrainsCar"
-        }
-      },
-      "PostApiV4ProjectsIdMergeTrainsMergeRequestsMergeRequestIid201Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesMergeTrainsCar"
-        }
-      },
-      "PostApiV4ProjectsIdMergeTrainsMergeRequestsMergeRequestIid202Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesMergeTrainsCar"
-        }
-      },
-      "GetApiV4Licenses200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesGitlabLicense"
-        }
-      },
-      "GetApiV4GroupsIdLdapGroupLinks200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesLdapGroupLink"
-        }
-      },
-      "GetApiV4LdapGroups200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesLdapGroup"
-        }
-      },
-      "GetApiV4LdapProviderGroups200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesLdapGroup"
-        }
-      },
-      "GetApiV4GeoSites200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesGeoSite"
-        }
-      },
-      "GetApiV4GeoSitesStatus200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesGeoSiteStatus"
-        }
-      },
-      "GetApiV4GeoNodes200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesGeoNode"
-        }
-      },
-      "GetApiV4GeoNodesStatus200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesGeoNodeStatus"
-        }
-      },
-      "GetApiV4Experiments200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesExperiment"
-        }
-      },
-      "GetApiV4GroupsIdRelatedEpicLinks200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesRelatedEpic"
-        }
-      },
-      "GetApiV4GroupsIdEpicsEpicIidRelatedEpics200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesRelatedEpic"
-        }
-      },
-      "GetApiV4ProjectsIdDependencyProxyPackagesMavenPathFileName200OctetStreamResponse": {
-        "type": "string",
-        "format": "binary"
-      },
-      "GetApiV4GroupsIdEpicBoards200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesEpicBoard"
-        }
-      },
-      "GetApiV4GroupsIdEpicBoardsBoardIdLists200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesEpicBoardsList"
-        }
-      },
-      "GetApiV4GroupsIdEpics200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesEpic"
-        }
-      },
-      "GetApiV4GroupsIdDashEpics200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesEpic"
-        }
-      },
-      "GetApiV4GroupsIdDashEpicsEpicIidEpics200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesEpic"
-        }
-      },
-      "PutApiV4GroupsIdDashEpicsEpicIidIssuesEpicIssueId200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesEpicIssue"
-        }
-      },
-      "GetApiV4GroupsIdEpicsEpicIidIssues200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesEpicIssue"
-        }
-      },
-      "GetApiV4GroupsIdDashEpicsEpicIidIssues200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesEpicIssue"
-        }
-      },
-      "GetApiV4ProjectsIdExternalStatusChecks200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesExternalStatusCheck"
-        }
-      },
-      "GetApiV4ProjectsIdMergeRequestsMergeRequestIidStatusChecks200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesMergeRequestsStatusCheck"
-        }
-      },
-      "GetApiV4RunnerControllersRunnerControllerIdTokens200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesCiRunnerControllerToken"
-        }
-      },
-      "GetApiV4RunnerControllers200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesCiRunnerController"
-        }
-      },
-      "GetApiV4AuditEvents200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesAuditEvent"
-        }
-      },
-      "PostApiV4ProjectsIdMergeRequestsMergeRequestIidSuggestedReviewers201Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesAiSuggestedReviewer"
-        }
-      },
-      "GetApiV4AdminDataManagementModelName200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesAdminModel"
-        }
-      },
-      "GetApiV4AdminMemberRoles200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesMemberRole"
-        }
-      },
-      "GetApiV4Users200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesUserBasic"
-        }
-      },
-      "GetApiV4UsersIdFollowing200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesUserBasic"
-        }
-      },
-      "GetApiV4UsersIdFollowers200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesUserBasic"
-        }
-      },
-      "GetApiV4UsersUserIdProjectDeployKeys200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesDeployKey"
-        }
-      },
-      "GetApiV4UsersUserIdKeys200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesSshKey"
-        }
-      },
-      "GetApiV4UsersIdGpgKeys200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesGpgKey"
-        }
-      },
-      "GetApiV4UsersIdEmails200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesEmail"
-        }
-      },
-      "GetApiV4UsersUserIdMemberships200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesMembership"
-        }
-      },
-      "GetApiV4UsersUserIdImpersonationTokens200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesImpersonationToken"
-        }
-      },
-      "GetApiV4UserKeys200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesSshKey"
-        }
-      },
-      "GetApiV4UserGpgKeys200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesGpgKey"
-        }
-      },
-      "GetApiV4UserEmails200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesEmail"
-        }
-      },
-      "GetApiV4UserActivities200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesUserActivity"
-        }
-      },
-      "GetApiV4UserApplications200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesApplication"
-        }
-      },
-      "GetApiV4SnippetRepositoryStorageMoves200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesSnippetsRepositoryStorageMove"
-        }
-      },
-      "GetApiV4SnippetsIdRepositoryStorageMoves200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesSnippetsRepositoryStorageMove"
-        }
-      },
-      "GetApiV4ProjectRepositoryStorageMoves200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesProjectsRepositoryStorageMove"
-        }
-      },
-      "GetApiV4ProjectsIdRepositoryStorageMoves200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesProjectsRepositoryStorageMove"
-        }
-      },
-      "GetApiV4GroupsIdWikis200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesWikiPageBasic"
-        }
-      },
-      "GetApiV4ProjectsIdWikis200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesWikiPageBasic"
-        }
-      },
-      "GetApiV4UsageDataMetricDefinitions200YamlResponse": {
-        "type": "string"
-      },
-      "GetApiV4ProjectsIdTerraformStateNameVersionsSerial200OctetStreamResponse": {
-        "type": "string",
-        "format": "binary"
-      },
-      "GetApiV4ProjectsIdTerraformStateProtectionRules200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesTerraformStateProtectionRule"
-        }
-      },
-      "GetApiV4PackagesTerraformModulesV1ModuleNamespaceModuleNameModuleSystemVersions200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesTerraformModuleVersions"
-        }
-      },
-      "GetApiV4PackagesTerraformModulesV1ModuleNamespaceModuleNameModuleSystemModuleVersionFile200OctetStreamResponse": {
-        "type": "string",
-        "format": "binary"
-      },
-      "GetApiV4ProjectsIdRepositoryTags200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesTag"
-        }
-      },
-      "GetApiV4Hooks200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesHook"
-        }
-      },
-      "GetApiV4Snippets200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesSnippet"
-        }
-      },
-      "GetApiV4SnippetsPublic200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesPersonalSnippet"
-        }
-      },
-      "GetApiV4SnippetsAll200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesSnippet"
-        }
-      },
-      "GetApiV4ProjectsIdPackagesRubygemsFileName200OctetStreamResponse": {
-        "type": "string",
-        "format": "binary"
-      },
-      "GetApiV4ProjectsIdPackagesRubygemsQuickMarshal48FileName200OctetStreamResponse": {
-        "type": "string",
-        "format": "binary"
-      },
-      "GetApiV4ProjectsIdPackagesRubygemsGemsFileName200OctetStreamResponse": {
-        "type": "string",
-        "format": "binary"
-      },
-      "GetApiV4ProjectsIdPackagesRubygemsApiV1Dependencies200OctetStreamResponse": {
-        "type": "string",
-        "format": "binary"
-      },
-      "GetApiV4ProjectsIdIssuesEventableIdResourceMilestoneEvents200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesResourceMilestoneEvent"
-        }
-      },
-      "GetApiV4ProjectsIdMergeRequestsEventableIdResourceMilestoneEvents200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesResourceMilestoneEvent"
-        }
-      },
-      "GetApiV4ProjectsIdAccessTokens200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesResourceAccessToken"
-        }
-      },
-      "GetApiV4GroupsIdAccessTokens200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesResourceAccessToken"
-        }
-      },
-      "PostApiV4ProjectsIdRepositoryBlobsBatch200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesBatchBlob"
-        }
-      },
-      "GetApiV4ProjectsIdRepositoryChangedPaths200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesChangedPath"
-        }
-      },
-      "GetApiV4ProjectsIdRepositoryDiffStats200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesDiffStat"
-        }
-      },
-      "GetApiV4ProjectsIdRemoteMirrors200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesRemoteMirror"
-        }
-      },
-      "GetApiV4ProjectsIdReleasesTagNameAssetsLinks200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesReleasesLink"
-        }
-      },
-      "GetApiV4GroupsIdReleases200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesRelease"
-        }
-      },
-      "GetApiV4ProjectsIdReleases200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesRelease"
-        }
-      },
-      "GetApiV4ProjectsIdProtectedTags200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesProtectedTag"
-        }
-      },
-      "GetApiV4ProjectsIdProtectedBranches200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesProtectedBranch"
-        }
-      },
-      "GetApiV4UsersUserIdProjects200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesBasicProjectDetails"
-        }
-      },
-      "GetApiV4UsersUserIdContributedProjects200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesBasicProjectDetails"
-        }
-      },
-      "GetApiV4UsersUserIdStarredProjects200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesBasicProjectDetails"
-        }
-      },
-      "GetApiV4Projects200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesBasicProjectDetails"
-        }
-      },
-      "GetApiV4ProjectsIdForks200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesProject"
-        }
-      },
-      "GetApiV4ProjectsIdStarrers200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesUserBasic"
-        }
-      },
-      "GetApiV4ProjectsIdUsers200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesUserBasic"
-        }
-      },
-      "GetApiV4ProjectsIdGroups200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesPublicGroupDetails"
-        }
-      },
-      "GetApiV4ProjectsIdInvitedGroups200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesPublicGroupDetails"
-        }
-      },
-      "GetApiV4ProjectsIdTransferLocations200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesPublicGroupDetails"
-        }
-      },
-      "GetApiV4ProjectsIdAuditEvents200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesAuditEvent"
-        }
-      },
-      "GetApiV4ProjectsIdTemplatesType200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesTemplatesList"
-        }
-      },
-      "GetApiV4ProjectsIdSnippets200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesProjectSnippet"
-        }
-      },
-      "GetApiV4ProjectsIdSnapshot200XTarResponse": {
-        "type": "string",
-        "format": "binary"
-      },
-      "GetApiV4ProjectsIdPackagesProtectionRules200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesProjectsPackagesProtectionRule"
-        }
-      },
-      "GetApiV4ProjectsIdPackages200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesPackage"
-        }
-      },
-      "GetApiV4ProjectsIdHooks200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesProjectHook"
-        }
-      },
-      "GetApiV4ProjectsIdExportDownload200OctetStreamResponse": {
-        "type": "string",
-        "format": "binary"
-      },
-      "GetApiV4ProjectsIdExportRelationsDownload200OctetStreamResponse": {
-        "type": "string",
-        "format": "binary"
-      },
-      "GetApiV4ProjectsIdExportRelationsDownload200GzipResponse": {
-        "type": "string",
-        "format": "binary"
-      },
-      "GetApiV4ProjectsIdExportRelationsStatus200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesBulkImportsExportStatus"
-        }
-      },
-      "GetApiV4ProjectsIdRegistryProtectionTagRules200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesProjectsContainerRegistryProtectionTagRule"
-        }
-      },
-      "GetApiV4ProjectsIdRegistryProtectionRepositoryRules200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesProjectsContainerRegistryProtectionRule"
-        }
-      },
-      "GetApiV4ProjectsIdRegistryRepositories200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesContainerRegistryRepository"
-        }
-      },
-      "GetApiV4ProjectsIdRegistryRepositoriesRepositoryIdTags200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesContainerRegistryTag"
-        }
-      },
-      "GetApiV4ProjectsIdClusters200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesCluster"
-        }
-      },
-      "GetApiV4ProjectsIdAvatar200OctetStreamResponse": {
-        "type": "string",
-        "format": "binary"
-      },
-      "GetApiV4PersonalAccessTokens200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesPersonalAccessToken"
-        }
-      },
-      "GetApiV4ProjectsIdPagesDomains200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesPagesDomain"
-        }
-      },
-      "GetApiV4ProjectsIdPackagesPackageIdPackageFiles200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesPackageFile"
-        }
-      },
-      "GetApiV4ProjectsIdPackagesPackageIdPackageFilesPackageFileIdDownload200OctetStreamResponse": {
-        "type": "string",
-        "format": "binary"
-      },
-      "GetApiV4Namespaces200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesNamespace"
-        }
-      },
-      "GetApiV4ProjectsIdMergeRequestsMergeRequestIidVersions200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesMergeRequestDiff"
-        }
-      },
-      "GetApiV4MergeRequests200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesMergeRequestBasic"
-        }
-      },
-      "GetApiV4GroupsIdMergeRequests200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesMergeRequestBasic"
-        }
-      },
-      "GetApiV4ProjectsIdMergeRequests200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesMergeRequestBasic"
-        }
-      },
-      "GetApiV4ProjectsIdMergeRequestsMergeRequestIidParticipants200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesUserBasic"
-        }
-      },
-      "GetApiV4ProjectsIdMergeRequestsMergeRequestIidReviewers200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesMergeRequestReviewer"
-        }
-      },
-      "GetApiV4ProjectsIdMergeRequestsMergeRequestIidCommits200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesCommit"
-        }
-      },
-      "GetApiV4ProjectsIdMergeRequestsMergeRequestIidContextCommits200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesCommitWithLink"
-        }
-      },
-      "PostApiV4ProjectsIdMergeRequestsMergeRequestIidContextCommits201Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesCommit"
-        }
-      },
-      "GetApiV4ProjectsIdMergeRequestsMergeRequestIidDiffs200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesDiff"
-        }
-      },
-      "GetApiV4ProjectsIdMergeRequestsMergeRequestIidPipelines200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesCiPipelineBasic"
-        }
-      },
-      "GetApiV4ProjectsIdMergeRequestsMergeRequestIidClosesIssues200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesMrNote"
-        }
-      },
-      "GetApiV4GroupsIdMembers200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesMember"
-        }
-      },
-      "GetApiV4GroupsIdMembersAll200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesMember"
-        }
-      },
-      "GetApiV4ProjectsIdMembers200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesMember"
-        }
-      },
-      "GetApiV4ProjectsIdMembersAll200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesMember"
-        }
-      },
-      "GetApiV4ProjectsIdUploads200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesMarkdownUploadAdmin"
-        }
-      },
-      "GetApiV4ProjectsIdUploadsUploadId200OctetStreamResponse": {
-        "type": "string",
-        "format": "binary"
-      },
-      "GetApiV4ProjectsIdUploadsSecretFilename200OctetStreamResponse": {
-        "type": "string",
-        "format": "binary"
-      },
-      "GetApiV4GroupsIdUploads200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesMarkdownUploadAdmin"
-        }
-      },
-      "GetApiV4GroupsIdUploadsUploadId200OctetStreamResponse": {
-        "type": "string",
-        "format": "binary"
-      },
-      "GetApiV4GroupsIdUploadsSecretFilename200OctetStreamResponse": {
-        "type": "string",
-        "format": "binary"
-      },
-      "GetApiV4ProjectsIdIssuesIssueIidLinks200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesRelatedIssue"
-        }
-      },
-      "GetApiV4GroupsIdInvitations200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesInvitation"
-        }
-      },
-      "GetApiV4ProjectsIdInvitations200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesInvitation"
-        }
-      },
-      "GetApiV4ProjectsIdServices200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesIntegrationBasic"
-        }
-      },
-      "GetApiV4ProjectsIdIntegrations200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesIntegrationBasic"
-        }
-      },
-      "GetApiV4GroupsIdIntegrations200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesIntegrationBasic"
-        }
-      },
-      "GetApiV4ProjectsIdPackagesHelmChannelChartsFileNameTgz200OctetStreamResponse": {
-        "type": "string",
-        "format": "binary"
-      },
-      "GetApiV4GroupsIdPlaceholderReassignments200CsvResponse": {
-        "type": "string"
-      },
-      "GetApiV4GroupsIdPackages200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesPackage"
-        }
-      },
-      "GetApiV4GroupsIdExportDownload200OctetStreamResponse": {
-        "type": "string",
-        "format": "binary"
-      },
-      "GetApiV4GroupsIdExportRelationsDownload200OctetStreamResponse": {
-        "type": "string",
-        "format": "binary"
-      },
-      "GetApiV4GroupsIdExportRelationsStatus200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesBulkImportsExportStatus"
-        }
-      },
-      "GetApiV4GroupsIdRegistryRepositories200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesContainerRegistryRepository"
-        }
-      },
-      "GetApiV4GroupsIdClusters200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesCluster"
-        }
-      },
-      "GetApiV4GroupsIdAvatar200OctetStreamResponse": {
-        "type": "string",
-        "format": "binary"
-      },
-      "GetApiV4GeoRepositoriesGlRepositoryPipelineRefs200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesGeoPipelineRefs"
-        }
-      },
-      "GetApiV4ProjectsIdFreezePeriods200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesFreezePeriod"
-        }
-      },
-      "GetApiV4ProjectsIdRepositoryFilesFilePathRaw200OctetStreamResponse": {
-        "type": "string",
-        "format": "binary"
-      },
-      "GetApiV4Features200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesFeature"
-        }
-      },
-      "GetApiV4FeaturesDefinitions200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesFeatureDefinition"
-        }
-      },
-      "GetApiV4ProjectsIdFeatureFlagsUserLists200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesFeatureFlagUserList"
-        }
-      },
-      "GetApiV4ProjectsIdFeatureFlags200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesFeatureFlag"
-        }
-      },
-      "GetApiV4Events200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesEvent"
-        }
-      },
-      "GetApiV4UsersIdEvents200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesEvent"
-        }
-      },
-      "GetApiV4ProjectsIdErrorTrackingClientKeys200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesErrorTrackingClientKey"
-        }
-      },
-      "GetApiV4ProjectsIdEnvironments200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesEnvironment"
-        }
-      },
-      "GetApiV4ProjectsIdMergeRequestsMergeRequestIidDraftNotes200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesDraftNote"
-        }
-      },
-      "GetApiV4ProjectsIdDeployments200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesDeployment"
-        }
-      },
-      "GetApiV4ProjectsIdDeploymentsDeploymentIdMergeRequests200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesMergeRequestBasic"
-        }
-      },
-      "GetApiV4DeployTokens200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesDeployToken"
-        }
-      },
-      "GetApiV4ProjectsIdDeployTokens200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesDeployToken"
-        }
-      },
-      "GetApiV4GroupsIdDeployTokens200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesDeployToken"
-        }
-      },
-      "GetApiV4DeployKeys200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesDeployKey"
-        }
-      },
-      "GetApiV4ProjectsIdDeployKeys200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesDeployKeysProject"
-        }
-      },
-      "GetApiV4GroupsIdDashPackagesDebianPoolDistributionProjectIdLetterPackageNamePackageVersionFileName200OctetStreamResponse": {
-        "type": "string",
-        "format": "binary"
-      },
-      "GetApiV4ProjectsIdPackagesDebianPoolDistributionLetterPackageNamePackageVersionFileName200OctetStreamResponse": {
-        "type": "string",
-        "format": "binary"
-      },
-      "GetApiV4DatabasesDatabaseNameDictionaryTables200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesDictionaryTable"
-        }
-      },
-      "GetApiV4ProjectsIdRepositoryCommitsShaStatuses200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesCommitStatus"
-        }
-      },
-      "GetApiV4ProjectsIdRepositoryCommits200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesCommit"
-        }
-      },
-      "GetApiV4ProjectsIdRepositoryCommitsShaDiff200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesDiff"
-        }
-      },
-      "GetApiV4ProjectsIdRepositoryCommitsShaComments200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesCommitNote"
-        }
-      },
-      "GetApiV4ProjectsIdRepositoryCommitsShaRefs200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesBasicRef"
-        }
-      },
-      "GetApiV4ProjectsIdRepositoryCommitsShaMergeRequests200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesMergeRequestBasic"
-        }
-      },
-      "GetApiV4ProjectsIdPackagesCargo1PackageName200PlainResponse": {
-        "type": "string"
-      },
-      "GetApiV4ProjectsIdPackagesCargo2PackageName200PlainResponse": {
-        "type": "string"
-      },
-      "GetApiV4ProjectsIdPackagesCargo3FirstCharPackageName200PlainResponse": {
-        "type": "string"
-      },
-      "GetApiV4ProjectsIdPackagesCargoPrefix1Prefix2PackageName200PlainResponse": {
-        "type": "string"
-      },
-      "GetApiV4ProjectsIdPackagesCargoPackageNamePackageVersionDownload200OctetStreamResponse": {
-        "type": "string",
-        "format": "binary"
-      },
-      "GetApiV4ProjectsIdTriggers200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesTrigger"
-        }
-      },
-      "GetApiV4Pipelines200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesCiUserPipeline"
-        }
-      },
-      "GetApiV4ProjectsIdPipelineSchedules200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesCiPipelineSchedule"
-        }
-      },
-      "GetApiV4ProjectsIdPipelineSchedulesPipelineScheduleIdPipelines200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesCiPipelineBasic"
-        }
-      },
-      "GetApiV4ProjectsIdPipelines200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesCiPipelineBasic"
-        }
-      },
-      "GetApiV4ProjectsIdPipelinesPipelineIdJobs200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesCiJob"
-        }
-      },
-      "GetApiV4ProjectsIdPipelinesPipelineIdBridges200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesCiBridge"
-        }
-      },
-      "GetApiV4ProjectsIdPipelinesPipelineIdTriggerJobs200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesCiBridge"
-        }
-      },
-      "GetApiV4ProjectsIdPipelinesPipelineIdVariables200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesCiVariable"
-        }
-      },
-      "GetApiV4ProjectsIdSecureFilesSecureFileIdDownload200OctetStreamResponse": {
-        "type": "string",
-        "format": "binary"
-      },
-      "GetApiV4JobsIdArtifacts200OctetStreamResponse": {
-        "type": "string",
-        "format": "binary"
-      },
-      "GetApiV4JobsIdArtifacts302OctetStreamResponse": {
-        "type": "string",
-        "format": "binary"
-      },
-      "GetApiV4ProjectsIdResourceGroups200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesCiResourceGroup"
-        }
-      },
-      "GetApiV4ProjectsIdResourceGroupsKeyUpcomingJobs200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesCiJobBasic"
-        }
-      },
-      "GetApiV4ProjectsIdJobs200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesCiJob"
-        }
-      },
-      "GetApiV4Groups200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesGroup"
-        }
-      },
-      "GetApiV4GroupsIdGroupsShared200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesGroup"
-        }
-      },
-      "GetApiV4GroupsIdInvitedGroups200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesGroup"
-        }
-      },
-      "GetApiV4GroupsIdProjects200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesProject"
-        }
-      },
-      "GetApiV4GroupsIdProjectsShared200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesProject"
-        }
-      },
-      "GetApiV4GroupsIdSubgroups200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesGroup"
-        }
-      },
-      "GetApiV4GroupsIdDescendantGroups200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesGroup"
-        }
-      },
-      "GetApiV4GroupsIdTransferLocations200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesGroup"
-        }
-      },
-      "GetApiV4GroupsIdAuditEvents200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesAuditEvent"
-        }
-      },
-      "GetApiV4GroupsIdSamlUsers200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesUserPublic"
-        }
-      },
-      "GetApiV4GroupsIdSshCertificates200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesSshCertificate"
-        }
-      },
-      "GetApiV4ProjectsIdJobsArtifactsRefNameDownload200OctetStreamResponse": {
-        "type": "string",
-        "format": "binary"
-      },
-      "GetApiV4ProjectsIdJobsJobIdArtifacts200OctetStreamResponse": {
-        "type": "string",
-        "format": "binary"
-      },
-      "GetApiV4ProjectsIdJobsJobIdArtifactsTree200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesCiJobArtifactEntry"
-        }
-      },
-      "GetApiV4BulkImports200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesBulkImport"
-        }
-      },
-      "GetApiV4BulkImportsEntities200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesBulkImportsEntity"
-        }
-      },
-      "GetApiV4BulkImportsImportIdEntities200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesBulkImportsEntity"
-        }
-      },
-      "GetApiV4ProjectsIdRepositoryBranches200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesBranch"
-        }
-      },
-      "GetApiV4GroupsIdBadges200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesBadge"
-        }
-      },
-      "GetApiV4ProjectsIdBadges200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesBadge"
-        }
-      },
-      "GetApiV4ProjectsIdIssuesIssueIidAwardEmoji200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesAwardEmoji"
-        }
-      },
-      "GetApiV4ProjectsIdIssuesIssueIidNotesNoteIdAwardEmoji200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesAwardEmoji"
-        }
-      },
-      "GetApiV4ProjectsIdMergeRequestsMergeRequestIidAwardEmoji200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesAwardEmoji"
-        }
-      },
-      "GetApiV4ProjectsIdMergeRequestsMergeRequestIidNotesNoteIdAwardEmoji200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesAwardEmoji"
-        }
-      },
-      "GetApiV4ProjectsIdSnippetsSnippetIdAwardEmoji200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesAwardEmoji"
-        }
-      },
-      "GetApiV4ProjectsIdSnippetsSnippetIdNotesNoteIdAwardEmoji200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesAwardEmoji"
-        }
-      },
-      "GetApiV4GroupsIdEpicsEpicIidAwardEmoji200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesAwardEmoji"
-        }
-      },
-      "GetApiV4GroupsIdEpicsEpicIidNotesNoteIdAwardEmoji200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesAwardEmoji"
-        }
-      },
-      "GetApiV4Applications200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesApplication"
-        }
-      },
-      "GetApiV4ProjectsIdAlertManagementAlertsAlertIidMetricImages200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesMetricImage"
-        }
-      },
-      "GetApiV4AdminClusters200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesCluster"
-        }
-      },
-      "GetApiV4AdminBatchedBackgroundOperations200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesBatchedBackgroundOperation"
-        }
-      },
-      "GetApiV4AdminBatchedBackgroundMigrations200Response": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesBatchedBackgroundMigration"
-        }
-      },
-      "ExamplePayload": {
-        "type": "object",
-        "description": "Placeholder schema for path example refs"
-      },
       "PostApiV4NamespacesIdMinutes201ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/ApiEntitiesCiMinutesAdditionalPack"
         }
-      },
-      "GetApiV4OrbitSkillsNamePath200MarkdownResponseSchema": {
-        "type": "string"
-      },
-      "GetApiV4OrbitSkillsNamePath200PlainResponseSchema": {
-        "type": "string"
       },
       "GetApiV4JobsIdSbomScansSbomScanId200ResponseSchema": {
         "type": "array",
@@ -187421,14 +185280,6 @@
         }
       },
       "GetApiV4ProjectsIdExportDownload200OctetStreamResponseSchema": {
-        "type": "string",
-        "format": "binary"
-      },
-      "GetApiV4ProjectsIdExportRelationsDownload200OctetStreamResponseSchema": {
-        "type": "string",
-        "format": "binary"
-      },
-      "GetApiV4ProjectsIdExportRelationsDownload200GzipResponseSchema": {
         "type": "string",
         "format": "binary"
       },
@@ -216627,5 +214478,2202 @@
       "description": "Use this API to retrieve agent information and authorize user access for the agent that runs\n[workspaces](https://docs.gitlab.com/user/workspace/).\n\nThese endpoints are internal and used by GitLab components.",
       "x-displayName": "Workspaces"
     }
-  ]
+  ],
+  "x-client-unused-schemas": {
+    "PostApiV4ProjectsIdPagesDomainsRequestCertificate": {
+      "type": "string",
+      "nullable": true,
+      "x-client-inline-scalar": true,
+      "description": "Certificate in PEM format with intermediates following in most specific to least specific order."
+    },
+    "PostApiV4ProjectsIdPagesDomainsRequestKey": {
+      "type": "string",
+      "nullable": true,
+      "x-client-inline-scalar": true,
+      "description": "Certificate key in PEM format."
+    },
+    "PutApiV4ProjectsIdPagesDomainsDomainRequestCertificate": {
+      "type": "string",
+      "nullable": true,
+      "x-client-inline-scalar": true,
+      "description": "Certificate in PEM format with intermediates following in most specific to least specific order."
+    },
+    "PutApiV4ProjectsIdPagesDomainsDomainRequestKey": {
+      "type": "string",
+      "nullable": true,
+      "x-client-inline-scalar": true,
+      "description": "Certificate key in PEM format."
+    },
+    "PostApiV4ProjectsIdMembersRequestUserId": {
+      "oneOf": [
+        {
+          "type": "integer",
+          "nullable": true
+        },
+        {
+          "type": "string",
+          "nullable": true
+        }
+      ],
+      "description": "User ID of the new member, or multiple IDs separated by commas. Required if \u0060username\u0060 is not provided. Mutually exclusive with \u0060username\u0060. At least one of \u0060user_id\u0060, \u0060username\u0060 must be provided."
+    },
+    "PutApiV4ProjectsIdPipelineSchedulesPipelineScheduleIdRequestInputsItemValue": {
+      "oneOf": [
+        {
+          "type": "string",
+          "nullable": true
+        },
+        {
+          "type": "array",
+          "nullable": true
+        },
+        {
+          "type": "number",
+          "nullable": true
+        },
+        {
+          "type": "boolean",
+          "nullable": true
+        }
+      ],
+      "description": "Value of the input."
+    },
+    "ApiEntitiesOrbitContextEntitySummary": {
+      "type": "object"
+    },
+    "ApiEntitiesOrbitContextEntityError": {
+      "type": "object"
+    },
+    "ApiEntitiesOrbitContextEntityExpansion": {
+      "type": "object"
+    },
+    "ApiEntitiesAiDuoWorkflowsWorkflowWorkload": {
+      "type": "object"
+    },
+    "ApiEntitiesAiDuoWorkflowsCheckpointCheckpoint": {
+      "type": "object"
+    },
+    "ApiEntitiesAiDuoWorkflowsCheckpointMetadata": {
+      "type": "object"
+    },
+    "ApiEntitiesAnalyticsCodeReviewMergeRequestDiffStats": {
+      "type": "object"
+    },
+    "ApiEntitiesVulnerabilityFinding": {
+      "type": "object"
+    },
+    "ApiEntitiesGroupHookUrlVariablesItem": {
+      "type": "object"
+    },
+    "ApiEntitiesGroupHookCustomHeadersItem": {
+      "type": "object"
+    },
+    "ApiEntitiesGitlabLicenseWithActiveUsersLicensee": {
+      "type": "object",
+      "example": {
+        "Name": "John Doe1"
+      }
+    },
+    "ApiEntitiesGitlabLicenseWithActiveUsersAddOns": {
+      "type": "object",
+      "example": {
+        "GitLab_FileLocks": 1,
+        "GitLab_Auditor_User": 1
+      }
+    },
+    "ApiEntitiesBasicSuccessSuccess": {
+      "type": "object"
+    },
+    "ApiEntitiesGitlabLicenseLicensee": {
+      "type": "object",
+      "example": {
+        "Name": "John Doe1"
+      }
+    },
+    "ApiEntitiesGitlabLicenseAddOns": {
+      "type": "object",
+      "example": {
+        "GitLab_FileLocks": 1,
+        "GitLab_Auditor_User": 1
+      }
+    },
+    "ApiEntitiesRelatedEpicReferencesItem": {
+      "type": "object"
+    },
+    "ApiEntitiesEpicReferencesItem": {
+      "type": "object"
+    },
+    "ApiEntitiesEpicIssueLinkEpic": {
+      "type": "object"
+    },
+    "DetailedStatusEntityIllustration": {
+      "type": "object",
+      "example": {
+        "image": "illustrations/empty-state/empty-job-not-triggered-md.svg",
+        "size": "",
+        "title": "This job has not been triggered yet",
+        "content": "This job depends on upstream jobs that need to succeed in order for this job to be triggered"
+      }
+    },
+    "ApiEntitiesAuditEventDetails": {
+      "type": "object"
+    },
+    "ApiEntitiesAiSuggestedReviewerApprovalRule": {
+      "type": "object"
+    },
+    "ApiEntitiesSearchMigrationMigrationState": {
+      "type": "object",
+      "example": {
+        "task_id": "task_id"
+      }
+    },
+    "ApiEntitiesAiActiveContextCollectionOptions": {
+      "type": "object",
+      "example": {
+        "queue_shard_count": 24,
+        "queue_shard_limit": 1000
+      }
+    },
+    "ApiEntitiesBoardMilestone": {
+      "type": "object"
+    },
+    "ApiEntitiesTodoTarget": {
+      "type": "object"
+    },
+    "ApiEntitiesNotePosition": {
+      "type": "object"
+    },
+    "ApiEntitiesNoteCommandsChanges": {
+      "type": "object"
+    },
+    "ApiEntitiesWikiPageFrontMatter": {
+      "type": "object",
+      "example": {
+        "title": "deploy"
+      }
+    },
+    "ApiEntitiesCommitTrailers": {
+      "type": "object",
+      "example": {
+        "Merged-By": "Jane Doe janedoe@gitlab.com"
+      }
+    },
+    "ApiEntitiesCommitExtendedTrailers": {
+      "type": "object",
+      "example": {
+        "Signed-off-by": [
+          "John Doe \u003Cjohndoe@gitlab.com\u003E",
+          "Jane Doe \u003Cjanedoe@gitlab.com\u003E"
+        ]
+      }
+    },
+    "ApiEntitiesTagSignatureSignature": {
+      "type": "object"
+    },
+    "ApiEntitiesHookUrlVariablesItem": {
+      "type": "object"
+    },
+    "ApiEntitiesHookCustomHeadersItem": {
+      "type": "object"
+    },
+    "ApiEntitiesCommitDetailTrailers": {
+      "type": "object",
+      "example": {
+        "Merged-By": "Jane Doe janedoe@gitlab.com"
+      }
+    },
+    "ApiEntitiesCommitDetailExtendedTrailers": {
+      "type": "object",
+      "example": {
+        "Signed-off-by": [
+          "John Doe \u003Cjohndoe@gitlab.com\u003E",
+          "Jane Doe \u003Cjanedoe@gitlab.com\u003E"
+        ]
+      }
+    },
+    "ApiEntitiesCommitDetailLastPipeline": {
+      "type": "object"
+    },
+    "ApiEntitiesSnippetFilesItem": {
+      "type": "object"
+    },
+    "ApiEntitiesPersonalSnippetFilesItem": {
+      "type": "object"
+    },
+    "ApiEntitiesRepositoryHealthAlternates": {
+      "type": "object"
+    },
+    "ApiEntitiesProjectSharedWithGroupsItem": {
+      "type": "object"
+    },
+    "ApiEntitiesProjectsWithAccessAndCatalogSettingSharedWithGroupsItem": {
+      "type": "object"
+    },
+    "ApiEntitiesProjectsWithCatalogSettingSharedWithGroupsItem": {
+      "type": "object"
+    },
+    "ApiEntitiesProjectSnippetFilesItem": {
+      "type": "object"
+    },
+    "ApiEntitiesProjectImportStatusStats": {
+      "type": "object"
+    },
+    "ApiEntitiesProjectHookUrlVariablesItem": {
+      "type": "object"
+    },
+    "ApiEntitiesProjectHookCustomHeadersItem": {
+      "type": "object"
+    },
+    "ApiEntitiesNugetServiceIndexResourcesItem": {
+      "type": "object"
+    },
+    "ApiEntitiesNpmPackageTagDistTags": {
+      "type": "object",
+      "example": {
+        "latest": "1.0.1"
+      }
+    },
+    "ApiEntitiesNpmPackageVersions": {
+      "type": "object",
+      "example": {
+        "1.0.0": {
+          "name": "my_package",
+          "version": "1.0.0",
+          "dist": {
+            "shasum": "12345",
+            "tarball": "https://..."
+          }
+        }
+      }
+    },
+    "ApiEntitiesNpmPackageDistTags": {
+      "type": "object",
+      "example": {
+        "latest": "1.0.1"
+      }
+    },
+    "ApiEntitiesMergeRequestApprovalsApproversItem": {
+      "type": "object"
+    },
+    "ApiEntitiesMergeRequestApprovalsApproverGroupsItem": {
+      "type": "object"
+    },
+    "ApiEntitiesApprovalStateApproversItem": {
+      "type": "object"
+    },
+    "ApiEntitiesApprovalStateApproverGroupsItem": {
+      "type": "object"
+    },
+    "ApiEntitiesCommitWithLinkTrailers": {
+      "type": "object",
+      "example": {
+        "Merged-By": "Jane Doe janedoe@gitlab.com"
+      }
+    },
+    "ApiEntitiesCommitWithLinkExtendedTrailers": {
+      "type": "object",
+      "example": {
+        "Signed-off-by": [
+          "John Doe \u003Cjohndoe@gitlab.com\u003E",
+          "Jane Doe \u003Cjanedoe@gitlab.com\u003E"
+        ]
+      }
+    },
+    "ApiEntitiesCiLintResultIncludeExtra": {
+      "type": "object",
+      "example": {
+        "job_name": "test",
+        "project": "gitlab-org/gitlab",
+        "ref": "master"
+      }
+    },
+    "ApiEntitiesCiLintResultJobsItem": {
+      "type": "object"
+    },
+    "ApiEntitiesIntegrationProperties": {
+      "type": "object",
+      "example": {
+        "token": "secr3t"
+      }
+    },
+    "ApiEntitiesGlqlFieldParameters": {
+      "type": "object",
+      "description": "Resolved parameter metadata for parameterised fields, absent when the field has no parameters",
+      "example": {
+        "granularity": "weekly"
+      }
+    },
+    "ApiEntitiesDraftNotePosition": {
+      "type": "object",
+      "example": {
+        "base_sha": "aa149113",
+        "start_sha": "b3a0a8c4",
+        "head_sha": "be3020c7",
+        "old_path": "example.md",
+        "new_path": "example.md",
+        "position_type": "text",
+        "old_line": 2,
+        "new_line": 4,
+        "line_range": {
+          "start": {
+            "line_code": "1c497fbb3a46b78edf04cc2a2fa33f67e3ffbe2a_2_4",
+            "type": null,
+            "old_line": 2,
+            "new_line": 4
+          },
+          "end": {
+            "line_code": "1c497fbb3a46b78edf04cc2a2fa33f67e3ffbe2a_2_4",
+            "type": null,
+            "old_line": 2,
+            "new_line": 4
+          }
+        }
+      }
+    },
+    "ApiEntitiesPackagesConanFilesListFiles": {
+      "type": "object",
+      "example": {
+        "conan_sources.tgz": {},
+        "conanmanifest.txt": {},
+        "conanfile.py": {}
+      }
+    },
+    "ApiEntitiesPackagesConanPackageSnapshotPackageSnapshot": {
+      "type": "object",
+      "example": {
+        "conan_package.tgz": "749b29bdf72587081ca03ec033ee59dc"
+      }
+    },
+    "ApiEntitiesPackagesConanRecipeSnapshotRecipeSnapshot": {
+      "type": "object",
+      "example": {
+        "conan_sources.tgz": "eadf19b33f4c3c7e113faabf26e76277"
+      }
+    },
+    "ApiEntitiesPackagesConanPackageManifestPackageUrls": {
+      "type": "object",
+      "example": {
+        "conan_package.tgz": "https://gitlab.example.com/api/v4/packages/conan/v1/files/my-package/1.0/my-group\u002Bmy-project/stable/packages/103f6067a947f366ef91fc1b7da351c588d1827f/0/conan_package.tgz"
+      }
+    },
+    "ApiEntitiesPackagesConanRecipeManifestRecipeUrls": {
+      "type": "object",
+      "example": {
+        "conan_sources.tgz": "https://gitlab.example.com/api/v4/packages/conan/v1/files/my-package/1.0/my-group\u002Bmy-project/stable/0/export/conan_sources.tgz"
+      }
+    },
+    "ApiEntitiesPackagesConanUploadUrlsUploadUrls": {
+      "type": "object",
+      "example": {
+        "conan_package.tgz": "https://gitlab.example.com/api/v4/packages/conan/v1/files/my-package/1.0/my-group\u002Bmy-project/stable/0/package/103f6067a947f366ef91fc1b7da351c588d1827f/0/conan_package.tgz"
+      }
+    },
+    "ApiEntitiesCommitSignatureSignature": {
+      "type": "object"
+    },
+    "ApiEntitiesDiscoveredClustersGroups": {
+      "type": "object"
+    },
+    "ApiEntitiesDiscoveredClustersProjects": {
+      "type": "object"
+    },
+    "TestCaseEntityRecentFailures": {
+      "type": "object",
+      "example": {
+        "count": 3,
+        "base_branch": "develop"
+      }
+    },
+    "TestReportSummaryEntityTotal": {
+      "type": "object",
+      "example": {
+        "time": 0.42,
+        "count": 2,
+        "success": 2,
+        "failed": 0,
+        "skipped": 0,
+        "error": 0,
+        "suite_error": null
+      }
+    },
+    "ApiEntitiesCiSecureFileMetadata": {
+      "type": "object",
+      "example": {
+        "id": "75949910542696343243264405377658443914"
+      }
+    },
+    "ApiEntitiesGroupDetailSharedWithGroupsItem": {
+      "type": "object"
+    },
+    "ApiEntitiesBulkImportsEntityStats": {
+      "type": "object"
+    },
+    "ApiEntitiesPlanLimitLimitsHistory": {
+      "type": "object",
+      "example": {
+        "enforcement_limit": [
+          {
+            "timestamp": 1686909124,
+            "user_id": 1,
+            "username": "x",
+            "value": 5
+          }
+        ],
+        "notification_limit": [
+          {
+            "timestamp": 1686909124,
+            "user_id": 2,
+            "username": "y",
+            "value": 7
+          }
+        ]
+      }
+    },
+    "PostApiV4RolloutsIdRequestValue": {
+      "type": "object",
+      "description": "AutoFlow Value (protojson), decoded into the same topic/type/data shape as \u0060data\u0060 above. Exactly one of \u0060data\u0060, \u0060value\u0060 must be provided.",
+      "nullable": true
+    },
+    "PostApiV4OrbitQueryNameRequestParameters": {
+      "type": "object",
+      "description": "Named query parameters"
+    },
+    "PostApiV4DuoCodeReviewEvaluationsRequestFilesContent": {
+      "type": "object",
+      "description": "Full file contents, where keys are file paths and values are the file contents.",
+      "nullable": true
+    },
+    "PostApiV4AiDuoWorkflowsWorkflowsIdCheckpointsRequestCheckpoint": {
+      "type": "object",
+      "description": "Checkpoint content",
+      "nullable": true
+    },
+    "PostApiV4AiDuoWorkflowsWorkflowsIdCheckpointsRequestMetadata": {
+      "type": "object",
+      "description": "Checkpoint metadata.",
+      "nullable": true
+    },
+    "PostApiV4GroupsIdProtectedBranchesRequestAllowedToPushItem": {
+      "type": "object"
+    },
+    "PostApiV4GroupsIdProtectedBranchesRequestAllowedToMergeItem": {
+      "type": "object"
+    },
+    "PostApiV4GroupsIdProtectedBranchesRequestAllowedToUnprotectItem": {
+      "type": "object"
+    },
+    "PatchApiV4GroupsIdProtectedBranchesNameRequestAllowedToPushItem": {
+      "type": "object"
+    },
+    "PatchApiV4GroupsIdProtectedBranchesNameRequestAllowedToMergeItem": {
+      "type": "object"
+    },
+    "PatchApiV4GroupsIdProtectedBranchesNameRequestAllowedToUnprotectItem": {
+      "type": "object"
+    },
+    "PostApiV4ExperimentsExperimentNameAssignmentsRequestContext": {
+      "type": "object",
+      "description": "Context parameters (user, namespace, project). An actor context is resolved from the user. Defaults to current user.",
+      "nullable": true
+    },
+    "PutApiV4ApplicationSettingsRequestRepositoryStoragesWeighted": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "integer"
+      },
+      "description": "Hash of names of storages taken from \u0060gitlab.yml\u0060 to [weights](https://docs.gitlab.com/administration/repository_storage_paths/#configure-where-new-repositories-are-stored) ranging from 0 to 100. New projects are created in one of these stores, chosen by a weighted random selection.",
+      "nullable": true
+    },
+    "PutApiV4ApplicationSettingsRequestResourceUsageLimits": {
+      "type": "object",
+      "description": "Definition for resource usage limits enforced in Sidekiq workers.",
+      "nullable": true
+    },
+    "PostApiV4UsageDataTrackEventsRequestEventsItem": {
+      "type": "object"
+    },
+    "PostApiV4ProjectsIdProtectedTagsRequestAllowedToCreateItem": {
+      "type": "object"
+    },
+    "PostApiV4ProjectsIdProtectedBranchesRequestAllowedToPushItem": {
+      "type": "object"
+    },
+    "PostApiV4ProjectsIdProtectedBranchesRequestAllowedToMergeItem": {
+      "type": "object"
+    },
+    "PostApiV4ProjectsIdProtectedBranchesRequestAllowedToUnprotectItem": {
+      "type": "object"
+    },
+    "PatchApiV4ProjectsIdProtectedBranchesNameRequestAllowedToPushItem": {
+      "type": "object"
+    },
+    "PatchApiV4ProjectsIdProtectedBranchesNameRequestAllowedToMergeItem": {
+      "type": "object"
+    },
+    "PatchApiV4ProjectsIdProtectedBranchesNameRequestAllowedToUnprotectItem": {
+      "type": "object"
+    },
+    "PostApiV4IntegrationsSlackEventsRequestEvent": {
+      "type": "object",
+      "description": "Event object with variable properties.",
+      "nullable": true
+    },
+    "PostApiV4ImportGithubRequestOptionalStages": {
+      "type": "object",
+      "description": "Additional items to import. For a list of items, see [select additional items to import](https://docs.gitlab.com/user/project/import/github/#select-additional-items-to-import).",
+      "nullable": true
+    },
+    "PostApiV4ProjectsIdTriggerPipelineRequestVariables": {
+      "type": "object",
+      "description": "Map of pipeline variables, as key-value pairs, for example \u0060{ VAR1: \u0022value1\u0022, VAR2: \u0022value2\u0022 }\u0060.",
+      "nullable": true,
+      "example": {
+        "VAR1": "value1",
+        "VAR2": "value2"
+      }
+    },
+    "PostApiV4ProjectsIdTriggerPipelineRequestInputs": {
+      "type": "object",
+      "description": "Map of inputs, as key-value pairs, to use when creating the pipeline. [Generally available](https://gitlab.com/gitlab-org/gitlab/-/issues/536548) in GitLab 18.1. Feature flag \u0060ci_inputs_for_pipelines\u0060 removed.",
+      "nullable": true
+    },
+    "PostApiV4ProjectsIdRefRefTriggerPipelineRequestVariables": {
+      "type": "object",
+      "description": "Map of pipeline variables, as key-value pairs, for example \u0060{ VAR1: \u0022value1\u0022, VAR2: \u0022value2\u0022 }\u0060.",
+      "nullable": true,
+      "example": {
+        "VAR1": "value1",
+        "VAR2": "value2"
+      }
+    },
+    "PostApiV4ProjectsIdRefRefTriggerPipelineRequestInputs": {
+      "type": "object",
+      "description": "Map of inputs, as key-value pairs, to use when creating the pipeline. [Generally available](https://gitlab.com/gitlab-org/gitlab/-/issues/536548) in GitLab 18.1. Feature flag \u0060ci_inputs_for_pipelines\u0060 removed.",
+      "nullable": true
+    },
+    "PostApiV4ProjectsIdPipelineRequestInputs": {
+      "type": "object",
+      "description": "Map of inputs, as key-value pairs, to use when creating the pipeline. [Generally available](https://gitlab.com/gitlab-org/gitlab/-/issues/536548) in GitLab 18.1. Feature flag \u0060ci_inputs_for_pipelines\u0060 removed.",
+      "nullable": true
+    },
+    "PostApiV4ProjectsIdJobsJobIdRetryRequestInputs": {
+      "type": "object",
+      "description": "Input values for the job.",
+      "nullable": true,
+      "example": {
+        "environment": "production"
+      }
+    },
+    "PostApiV4ProjectsIdJobsJobIdPlayRequestJobInputs": {
+      "type": "object",
+      "description": "Hash of [job input](https://docs.gitlab.com/ci/jobs/job_inputs/) values to use when playing the job. [Introduced](https://gitlab.com/groups/gitlab-org/-/work_items/17833) in GitLab 18.10.",
+      "nullable": true,
+      "example": {
+        "environment": "production"
+      }
+    },
+    "PostApiV4ProjectsIdCatalogPublishRequestMetadata": {
+      "type": "object",
+      "description": "Metadata for the release.",
+      "nullable": true
+    },
+    "PostApiV4UsageDataTrackEventRequestAdditionalProperties": {
+      "type": "object",
+      "description": "Additional properties to be tracked.",
+      "nullable": true,
+      "example": {
+        "label": "login_button",
+        "value": 1
+      }
+    },
+    "ApiEntitiesBillableMembershipAccessLevelCustomRole": {
+      "type": "object"
+    },
+    "PostApiV4ChatCompletionsRequestAdditionalContextItemMetadata": {
+      "type": "object",
+      "description": "Metadata of the additional context.",
+      "nullable": true
+    },
+    "PostApiV4ProjectsIdAiAgentAuditEventsRequestEventsItemDetails": {
+      "type": "object",
+      "description": "Additional event details."
+    },
+    "PostApiV4AiDuoWorkflowsWorkflowsIdAuditEventsRequestEventsItemData": {
+      "type": "object",
+      "description": "Event-specific payload.",
+      "nullable": true
+    },
+    "PostApiV4SecurityProjectsIdVulnerabilityExportsRequestReportDataProjectVulnerabilitiesHistory": {
+      "type": "object",
+      "description": "Data for rendering the project vulnerabilities history in PDF reports. Must include an SVG asset.",
+      "nullable": true
+    },
+    "PostApiV4SecurityProjectsIdVulnerabilityExportsRequestReportDataGroupVulnerabilitiesOverTime": {
+      "type": "object",
+      "description": "Data for rendering the group vulnerabilities over time in PDF reports. Must include an SVG asset.",
+      "nullable": true
+    },
+    "PostApiV4SecurityProjectsIdVulnerabilityExportsRequestReportDataProjectSecurityStatus": {
+      "type": "object",
+      "description": "Data for rendering the project grades summary in PDF reports.",
+      "nullable": true
+    },
+    "PostApiV4SecurityProjectsIdVulnerabilityExportsRequestReportDataTotalRiskScore": {
+      "type": "object",
+      "description": "Data for rendering the total risk score in PDF reports.",
+      "nullable": true
+    },
+    "PostApiV4SecurityProjectsIdVulnerabilityExportsRequestReportDataOpenVulnerabilitiesOverTime": {
+      "type": "object",
+      "description": "Data for rendering the open vulnerabilities over time in PDF reports.",
+      "nullable": true
+    },
+    "PostApiV4SecurityProjectsIdVulnerabilityExportsRequestReportDataVulnerabilitiesByAge": {
+      "type": "object",
+      "description": "Data for rendering the vulnerabilities by age in PDF reports.",
+      "nullable": true
+    },
+    "PostApiV4SecurityGroupsIdVulnerabilityExportsRequestReportDataProjectVulnerabilitiesHistory": {
+      "type": "object",
+      "description": "Data for rendering the project vulnerabilities history in PDF reports. Must include an SVG asset.",
+      "nullable": true
+    },
+    "PostApiV4SecurityGroupsIdVulnerabilityExportsRequestReportDataGroupVulnerabilitiesOverTime": {
+      "type": "object",
+      "description": "Data for rendering the group vulnerabilities over time in PDF reports. Must include an SVG asset.",
+      "nullable": true
+    },
+    "PostApiV4SecurityGroupsIdVulnerabilityExportsRequestReportDataProjectSecurityStatus": {
+      "type": "object",
+      "description": "Data for rendering the project grades summary in PDF reports.",
+      "nullable": true
+    },
+    "PostApiV4SecurityGroupsIdVulnerabilityExportsRequestReportDataTotalRiskScore": {
+      "type": "object",
+      "description": "Data for rendering the total risk score in PDF reports.",
+      "nullable": true
+    },
+    "PostApiV4SecurityGroupsIdVulnerabilityExportsRequestReportDataOpenVulnerabilitiesOverTime": {
+      "type": "object",
+      "description": "Data for rendering the open vulnerabilities over time in PDF reports.",
+      "nullable": true
+    },
+    "PostApiV4SecurityGroupsIdVulnerabilityExportsRequestReportDataVulnerabilitiesByAge": {
+      "type": "object",
+      "description": "Data for rendering the vulnerabilities by age in PDF reports.",
+      "nullable": true
+    },
+    "PutApiV4ApplicationSettingsRequestVscodeExtensionMarketplaceCustomValues": {
+      "type": "object",
+      "description": "VS Code Extension Marketplace URL\u0027s when preset is \u0027custom\u0027",
+      "nullable": true
+    },
+    "PostApiV4GeoFailuresRequestFailuresItemContext": {
+      "type": "object",
+      "description": "Additional error-type-specific data",
+      "nullable": true
+    },
+    "PostApiV4ProjectsIdFeatureFlagsRequestStrategiesItemParameters": {
+      "type": "object",
+      "description": "Strategy parameters as a JSON-formatted string, for example \u0060{\u0022userIds\u0022:\u0022user1\u0022}\u0060.",
+      "nullable": true
+    },
+    "PutApiV4ProjectsIdFeatureFlagsFeatureFlagNameRequestStrategiesItemParameters": {
+      "type": "object",
+      "description": "Strategy parameters as a JSON-formatted string, for example \u0060{\u0022userIds\u0022:\u0022user1\u0022}\u0060.",
+      "nullable": true
+    },
+    "PostApiV4JobsRequestRequestInfoFeatures": {
+      "type": "object",
+      "description": "Runner\u0027s features",
+      "nullable": true
+    },
+    "PostApiV4JobsRequestRequestInfoLabels": {
+      "type": "object",
+      "description": "Runner\u0027s labels",
+      "nullable": true
+    },
+    "PostApiV4NamespacesIdMinutes201Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesCiMinutesAdditionalPack"
+      }
+    },
+    "GetApiV4OrbitSkillsNamePath200MarkdownResponse": {
+      "type": "string"
+    },
+    "GetApiV4OrbitSkillsNamePath200PlainResponse": {
+      "type": "string"
+    },
+    "GetApiV4JobsIdSbomScansSbomScanId200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesSecurityVulnerabilityScanningSbomScan"
+      }
+    },
+    "GetApiV4AiDuoWorkflowsWorkflowsIdCheckpoints200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesAiDuoWorkflowsCheckpoint"
+      }
+    },
+    "GetApiV4AiDuoWorkflowsWorkflowsIdEvents200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesAiDuoWorkflowsEvent"
+      }
+    },
+    "GetApiV4GroupsIdEnterpriseUsers200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesUserPublic"
+      }
+    },
+    "GetApiV4DependencyListExportsExportIdDownload200OctetStreamResponse": {
+      "type": "string",
+      "format": "binary"
+    },
+    "GetApiV4GroupsIdProtectedBranches200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesGroupProtectedBranch"
+      }
+    },
+    "GetApiV4GroupRepositoryStorageMoves200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesGroupsRepositoryStorageMove"
+      }
+    },
+    "GetApiV4GroupsIdRepositoryStorageMoves200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesGroupsRepositoryStorageMove"
+      }
+    },
+    "GetApiV4ProjectsIdIterations200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesIteration"
+      }
+    },
+    "GetApiV4GroupsIdIterations200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesIteration"
+      }
+    },
+    "GetApiV4GroupsIdSamlGroupLinks200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesSamlGroupLink"
+      }
+    },
+    "GetApiV4ProjectsIdIssuesEventableIdResourceIterationEvents200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesResourceIterationEvent"
+      }
+    },
+    "GetApiV4ProjectsIdIssuesEventableIdResourceWeightEvents200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesResourceWeightEvent"
+      }
+    },
+    "GetApiV4ProjectsIdProtectedEnvironments200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesProtectedEnvironment"
+      }
+    },
+    "GetApiV4GroupsIdProtectedEnvironments200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesProtectedEnvironment"
+      }
+    },
+    "GetApiV4ProjectsIdAnalyticsDeploymentFrequency200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesAnalyticsDeploymentFrequency"
+      }
+    },
+    "GetApiV4SecurityVulnerabilityExportsIdDownload200OctetStreamResponse": {
+      "type": "string",
+      "format": "binary"
+    },
+    "GetApiV4SecurityVulnerabilityArchiveExportsIdDownload200OctetStreamResponse": {
+      "type": "string",
+      "format": "binary"
+    },
+    "GetApiV4VulnerabilitiesIdIssueLinks200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesVulnerabilityRelatedIssue"
+      }
+    },
+    "GetApiV4ProjectsIdVulnerabilityFindings200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/VulnerabilitiesFindingEntity"
+      }
+    },
+    "GetApiV4ProjectsIdGoogleCloudSetupIntegrationsSh200PlainResponse": {
+      "type": "string"
+    },
+    "GetApiV4ProjectsIdGoogleCloudSetupRunnerDeploymentProjectSh200PlainResponse": {
+      "type": "string"
+    },
+    "GetApiV4ProjectsIdManagedLicenses200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesManagedLicense"
+      }
+    },
+    "GetApiV4ProjectsIdMergeRequestsMergeRequestIidBlocks200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesMergeRequestDependency"
+      }
+    },
+    "GetApiV4ProjectsIdMergeRequestsMergeRequestIidBlockees200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesMergeRequestDependency"
+      }
+    },
+    "GetApiV4GroupsIdHooks200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesGroupHook"
+      }
+    },
+    "GetApiV4GroupsIdMemberRoles200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesMemberRole"
+      }
+    },
+    "GetApiV4MemberRoles200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesMemberRole"
+      }
+    },
+    "GetApiV4ProjectsIdMergeTrains200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesMergeTrainsCar"
+      }
+    },
+    "GetApiV4ProjectsIdMergeTrainsTargetBranch200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesMergeTrainsCar"
+      }
+    },
+    "PostApiV4ProjectsIdMergeTrainsMergeRequestsMergeRequestIid201Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesMergeTrainsCar"
+      }
+    },
+    "PostApiV4ProjectsIdMergeTrainsMergeRequestsMergeRequestIid202Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesMergeTrainsCar"
+      }
+    },
+    "GetApiV4Licenses200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesGitlabLicense"
+      }
+    },
+    "GetApiV4GroupsIdLdapGroupLinks200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesLdapGroupLink"
+      }
+    },
+    "GetApiV4LdapGroups200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesLdapGroup"
+      }
+    },
+    "GetApiV4LdapProviderGroups200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesLdapGroup"
+      }
+    },
+    "GetApiV4GeoSites200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesGeoSite"
+      }
+    },
+    "GetApiV4GeoSitesStatus200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesGeoSiteStatus"
+      }
+    },
+    "GetApiV4GeoNodes200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesGeoNode"
+      }
+    },
+    "GetApiV4GeoNodesStatus200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesGeoNodeStatus"
+      }
+    },
+    "GetApiV4Experiments200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesExperiment"
+      }
+    },
+    "GetApiV4GroupsIdRelatedEpicLinks200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesRelatedEpic"
+      }
+    },
+    "GetApiV4GroupsIdEpicsEpicIidRelatedEpics200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesRelatedEpic"
+      }
+    },
+    "GetApiV4ProjectsIdDependencyProxyPackagesMavenPathFileName200OctetStreamResponse": {
+      "type": "string",
+      "format": "binary"
+    },
+    "GetApiV4GroupsIdEpicBoards200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesEpicBoard"
+      }
+    },
+    "GetApiV4GroupsIdEpicBoardsBoardIdLists200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesEpicBoardsList"
+      }
+    },
+    "GetApiV4GroupsIdEpics200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesEpic"
+      }
+    },
+    "GetApiV4GroupsIdDashEpics200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesEpic"
+      }
+    },
+    "GetApiV4GroupsIdDashEpicsEpicIidEpics200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesEpic"
+      }
+    },
+    "PutApiV4GroupsIdDashEpicsEpicIidIssuesEpicIssueId200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesEpicIssue"
+      }
+    },
+    "GetApiV4GroupsIdEpicsEpicIidIssues200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesEpicIssue"
+      }
+    },
+    "GetApiV4GroupsIdDashEpicsEpicIidIssues200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesEpicIssue"
+      }
+    },
+    "GetApiV4ProjectsIdExternalStatusChecks200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesExternalStatusCheck"
+      }
+    },
+    "GetApiV4ProjectsIdMergeRequestsMergeRequestIidStatusChecks200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesMergeRequestsStatusCheck"
+      }
+    },
+    "GetApiV4RunnerControllersRunnerControllerIdTokens200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesCiRunnerControllerToken"
+      }
+    },
+    "GetApiV4RunnerControllers200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesCiRunnerController"
+      }
+    },
+    "GetApiV4AuditEvents200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesAuditEvent"
+      }
+    },
+    "PostApiV4ProjectsIdMergeRequestsMergeRequestIidSuggestedReviewers201Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesAiSuggestedReviewer"
+      }
+    },
+    "GetApiV4AdminDataManagementModelName200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesAdminModel"
+      }
+    },
+    "GetApiV4AdminMemberRoles200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesMemberRole"
+      }
+    },
+    "GetApiV4Users200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesUserBasic"
+      }
+    },
+    "GetApiV4UsersIdFollowing200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesUserBasic"
+      }
+    },
+    "GetApiV4UsersIdFollowers200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesUserBasic"
+      }
+    },
+    "GetApiV4UsersUserIdProjectDeployKeys200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesDeployKey"
+      }
+    },
+    "GetApiV4UsersUserIdKeys200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesSshKey"
+      }
+    },
+    "GetApiV4UsersIdGpgKeys200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesGpgKey"
+      }
+    },
+    "GetApiV4UsersIdEmails200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesEmail"
+      }
+    },
+    "GetApiV4UsersUserIdMemberships200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesMembership"
+      }
+    },
+    "GetApiV4UsersUserIdImpersonationTokens200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesImpersonationToken"
+      }
+    },
+    "GetApiV4UserKeys200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesSshKey"
+      }
+    },
+    "GetApiV4UserGpgKeys200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesGpgKey"
+      }
+    },
+    "GetApiV4UserEmails200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesEmail"
+      }
+    },
+    "GetApiV4UserActivities200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesUserActivity"
+      }
+    },
+    "GetApiV4UserApplications200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesApplication"
+      }
+    },
+    "GetApiV4SnippetRepositoryStorageMoves200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesSnippetsRepositoryStorageMove"
+      }
+    },
+    "GetApiV4SnippetsIdRepositoryStorageMoves200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesSnippetsRepositoryStorageMove"
+      }
+    },
+    "GetApiV4ProjectRepositoryStorageMoves200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesProjectsRepositoryStorageMove"
+      }
+    },
+    "GetApiV4ProjectsIdRepositoryStorageMoves200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesProjectsRepositoryStorageMove"
+      }
+    },
+    "GetApiV4GroupsIdWikis200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesWikiPageBasic"
+      }
+    },
+    "GetApiV4ProjectsIdWikis200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesWikiPageBasic"
+      }
+    },
+    "GetApiV4UsageDataMetricDefinitions200YamlResponse": {
+      "type": "string"
+    },
+    "GetApiV4ProjectsIdTerraformStateNameVersionsSerial200OctetStreamResponse": {
+      "type": "string",
+      "format": "binary"
+    },
+    "GetApiV4ProjectsIdTerraformStateProtectionRules200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesTerraformStateProtectionRule"
+      }
+    },
+    "GetApiV4PackagesTerraformModulesV1ModuleNamespaceModuleNameModuleSystemVersions200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesTerraformModuleVersions"
+      }
+    },
+    "GetApiV4PackagesTerraformModulesV1ModuleNamespaceModuleNameModuleSystemModuleVersionFile200OctetStreamResponse": {
+      "type": "string",
+      "format": "binary"
+    },
+    "GetApiV4ProjectsIdRepositoryTags200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesTag"
+      }
+    },
+    "GetApiV4Hooks200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesHook"
+      }
+    },
+    "GetApiV4Snippets200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesSnippet"
+      }
+    },
+    "GetApiV4SnippetsPublic200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesPersonalSnippet"
+      }
+    },
+    "GetApiV4SnippetsAll200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesSnippet"
+      }
+    },
+    "GetApiV4ProjectsIdPackagesRubygemsFileName200OctetStreamResponse": {
+      "type": "string",
+      "format": "binary"
+    },
+    "GetApiV4ProjectsIdPackagesRubygemsQuickMarshal48FileName200OctetStreamResponse": {
+      "type": "string",
+      "format": "binary"
+    },
+    "GetApiV4ProjectsIdPackagesRubygemsGemsFileName200OctetStreamResponse": {
+      "type": "string",
+      "format": "binary"
+    },
+    "GetApiV4ProjectsIdPackagesRubygemsApiV1Dependencies200OctetStreamResponse": {
+      "type": "string",
+      "format": "binary"
+    },
+    "GetApiV4ProjectsIdIssuesEventableIdResourceMilestoneEvents200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesResourceMilestoneEvent"
+      }
+    },
+    "GetApiV4ProjectsIdMergeRequestsEventableIdResourceMilestoneEvents200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesResourceMilestoneEvent"
+      }
+    },
+    "GetApiV4ProjectsIdAccessTokens200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesResourceAccessToken"
+      }
+    },
+    "GetApiV4GroupsIdAccessTokens200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesResourceAccessToken"
+      }
+    },
+    "PostApiV4ProjectsIdRepositoryBlobsBatch200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesBatchBlob"
+      }
+    },
+    "GetApiV4ProjectsIdRepositoryChangedPaths200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesChangedPath"
+      }
+    },
+    "GetApiV4ProjectsIdRepositoryDiffStats200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesDiffStat"
+      }
+    },
+    "GetApiV4ProjectsIdRemoteMirrors200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesRemoteMirror"
+      }
+    },
+    "GetApiV4ProjectsIdReleasesTagNameAssetsLinks200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesReleasesLink"
+      }
+    },
+    "GetApiV4GroupsIdReleases200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesRelease"
+      }
+    },
+    "GetApiV4ProjectsIdReleases200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesRelease"
+      }
+    },
+    "GetApiV4ProjectsIdProtectedTags200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesProtectedTag"
+      }
+    },
+    "GetApiV4ProjectsIdProtectedBranches200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesProtectedBranch"
+      }
+    },
+    "GetApiV4UsersUserIdProjects200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesBasicProjectDetails"
+      }
+    },
+    "GetApiV4UsersUserIdContributedProjects200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesBasicProjectDetails"
+      }
+    },
+    "GetApiV4UsersUserIdStarredProjects200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesBasicProjectDetails"
+      }
+    },
+    "GetApiV4Projects200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesBasicProjectDetails"
+      }
+    },
+    "GetApiV4ProjectsIdForks200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesProject"
+      }
+    },
+    "GetApiV4ProjectsIdStarrers200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesUserBasic"
+      }
+    },
+    "GetApiV4ProjectsIdUsers200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesUserBasic"
+      }
+    },
+    "GetApiV4ProjectsIdGroups200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesPublicGroupDetails"
+      }
+    },
+    "GetApiV4ProjectsIdInvitedGroups200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesPublicGroupDetails"
+      }
+    },
+    "GetApiV4ProjectsIdTransferLocations200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesPublicGroupDetails"
+      }
+    },
+    "GetApiV4ProjectsIdAuditEvents200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesAuditEvent"
+      }
+    },
+    "GetApiV4ProjectsIdTemplatesType200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesTemplatesList"
+      }
+    },
+    "GetApiV4ProjectsIdSnippets200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesProjectSnippet"
+      }
+    },
+    "GetApiV4ProjectsIdSnapshot200XTarResponse": {
+      "type": "string",
+      "format": "binary"
+    },
+    "GetApiV4ProjectsIdPackagesProtectionRules200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesProjectsPackagesProtectionRule"
+      }
+    },
+    "GetApiV4ProjectsIdPackages200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesPackage"
+      }
+    },
+    "GetApiV4ProjectsIdHooks200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesProjectHook"
+      }
+    },
+    "GetApiV4ProjectsIdExportDownload200OctetStreamResponse": {
+      "type": "string",
+      "format": "binary"
+    },
+    "GetApiV4ProjectsIdExportRelationsDownload200OctetStreamResponse": {
+      "type": "string",
+      "format": "binary"
+    },
+    "GetApiV4ProjectsIdExportRelationsDownload200GzipResponse": {
+      "type": "string",
+      "format": "binary"
+    },
+    "GetApiV4ProjectsIdExportRelationsStatus200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesBulkImportsExportStatus"
+      }
+    },
+    "GetApiV4ProjectsIdRegistryProtectionTagRules200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesProjectsContainerRegistryProtectionTagRule"
+      }
+    },
+    "GetApiV4ProjectsIdRegistryProtectionRepositoryRules200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesProjectsContainerRegistryProtectionRule"
+      }
+    },
+    "GetApiV4ProjectsIdRegistryRepositories200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesContainerRegistryRepository"
+      }
+    },
+    "GetApiV4ProjectsIdRegistryRepositoriesRepositoryIdTags200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesContainerRegistryTag"
+      }
+    },
+    "GetApiV4ProjectsIdClusters200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesCluster"
+      }
+    },
+    "GetApiV4ProjectsIdAvatar200OctetStreamResponse": {
+      "type": "string",
+      "format": "binary"
+    },
+    "GetApiV4PersonalAccessTokens200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesPersonalAccessToken"
+      }
+    },
+    "GetApiV4ProjectsIdPagesDomains200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesPagesDomain"
+      }
+    },
+    "GetApiV4ProjectsIdPackagesPackageIdPackageFiles200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesPackageFile"
+      }
+    },
+    "GetApiV4ProjectsIdPackagesPackageIdPackageFilesPackageFileIdDownload200OctetStreamResponse": {
+      "type": "string",
+      "format": "binary"
+    },
+    "GetApiV4Namespaces200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesNamespace"
+      }
+    },
+    "GetApiV4ProjectsIdMergeRequestsMergeRequestIidVersions200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesMergeRequestDiff"
+      }
+    },
+    "GetApiV4MergeRequests200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesMergeRequestBasic"
+      }
+    },
+    "GetApiV4GroupsIdMergeRequests200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesMergeRequestBasic"
+      }
+    },
+    "GetApiV4ProjectsIdMergeRequests200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesMergeRequestBasic"
+      }
+    },
+    "GetApiV4ProjectsIdMergeRequestsMergeRequestIidParticipants200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesUserBasic"
+      }
+    },
+    "GetApiV4ProjectsIdMergeRequestsMergeRequestIidReviewers200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesMergeRequestReviewer"
+      }
+    },
+    "GetApiV4ProjectsIdMergeRequestsMergeRequestIidCommits200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesCommit"
+      }
+    },
+    "GetApiV4ProjectsIdMergeRequestsMergeRequestIidContextCommits200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesCommitWithLink"
+      }
+    },
+    "PostApiV4ProjectsIdMergeRequestsMergeRequestIidContextCommits201Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesCommit"
+      }
+    },
+    "GetApiV4ProjectsIdMergeRequestsMergeRequestIidDiffs200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesDiff"
+      }
+    },
+    "GetApiV4ProjectsIdMergeRequestsMergeRequestIidPipelines200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesCiPipelineBasic"
+      }
+    },
+    "GetApiV4ProjectsIdMergeRequestsMergeRequestIidClosesIssues200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesMrNote"
+      }
+    },
+    "GetApiV4GroupsIdMembers200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesMember"
+      }
+    },
+    "GetApiV4GroupsIdMembersAll200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesMember"
+      }
+    },
+    "GetApiV4ProjectsIdMembers200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesMember"
+      }
+    },
+    "GetApiV4ProjectsIdMembersAll200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesMember"
+      }
+    },
+    "GetApiV4ProjectsIdUploads200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesMarkdownUploadAdmin"
+      }
+    },
+    "GetApiV4ProjectsIdUploadsUploadId200OctetStreamResponse": {
+      "type": "string",
+      "format": "binary"
+    },
+    "GetApiV4ProjectsIdUploadsSecretFilename200OctetStreamResponse": {
+      "type": "string",
+      "format": "binary"
+    },
+    "GetApiV4GroupsIdUploads200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesMarkdownUploadAdmin"
+      }
+    },
+    "GetApiV4GroupsIdUploadsUploadId200OctetStreamResponse": {
+      "type": "string",
+      "format": "binary"
+    },
+    "GetApiV4GroupsIdUploadsSecretFilename200OctetStreamResponse": {
+      "type": "string",
+      "format": "binary"
+    },
+    "GetApiV4ProjectsIdIssuesIssueIidLinks200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesRelatedIssue"
+      }
+    },
+    "GetApiV4GroupsIdInvitations200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesInvitation"
+      }
+    },
+    "GetApiV4ProjectsIdInvitations200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesInvitation"
+      }
+    },
+    "GetApiV4ProjectsIdServices200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesIntegrationBasic"
+      }
+    },
+    "GetApiV4ProjectsIdIntegrations200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesIntegrationBasic"
+      }
+    },
+    "GetApiV4GroupsIdIntegrations200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesIntegrationBasic"
+      }
+    },
+    "GetApiV4ProjectsIdPackagesHelmChannelChartsFileNameTgz200OctetStreamResponse": {
+      "type": "string",
+      "format": "binary"
+    },
+    "GetApiV4GroupsIdPlaceholderReassignments200CsvResponse": {
+      "type": "string"
+    },
+    "GetApiV4GroupsIdPackages200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesPackage"
+      }
+    },
+    "GetApiV4GroupsIdExportDownload200OctetStreamResponse": {
+      "type": "string",
+      "format": "binary"
+    },
+    "GetApiV4GroupsIdExportRelationsDownload200OctetStreamResponse": {
+      "type": "string",
+      "format": "binary"
+    },
+    "GetApiV4GroupsIdExportRelationsStatus200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesBulkImportsExportStatus"
+      }
+    },
+    "GetApiV4GroupsIdRegistryRepositories200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesContainerRegistryRepository"
+      }
+    },
+    "GetApiV4GroupsIdClusters200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesCluster"
+      }
+    },
+    "GetApiV4GroupsIdAvatar200OctetStreamResponse": {
+      "type": "string",
+      "format": "binary"
+    },
+    "GetApiV4GeoRepositoriesGlRepositoryPipelineRefs200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesGeoPipelineRefs"
+      }
+    },
+    "GetApiV4ProjectsIdFreezePeriods200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesFreezePeriod"
+      }
+    },
+    "GetApiV4ProjectsIdRepositoryFilesFilePathRaw200OctetStreamResponse": {
+      "type": "string",
+      "format": "binary"
+    },
+    "GetApiV4Features200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesFeature"
+      }
+    },
+    "GetApiV4FeaturesDefinitions200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesFeatureDefinition"
+      }
+    },
+    "GetApiV4ProjectsIdFeatureFlagsUserLists200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesFeatureFlagUserList"
+      }
+    },
+    "GetApiV4ProjectsIdFeatureFlags200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesFeatureFlag"
+      }
+    },
+    "GetApiV4Events200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesEvent"
+      }
+    },
+    "GetApiV4UsersIdEvents200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesEvent"
+      }
+    },
+    "GetApiV4ProjectsIdErrorTrackingClientKeys200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesErrorTrackingClientKey"
+      }
+    },
+    "GetApiV4ProjectsIdEnvironments200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesEnvironment"
+      }
+    },
+    "GetApiV4ProjectsIdMergeRequestsMergeRequestIidDraftNotes200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesDraftNote"
+      }
+    },
+    "GetApiV4ProjectsIdDeployments200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesDeployment"
+      }
+    },
+    "GetApiV4ProjectsIdDeploymentsDeploymentIdMergeRequests200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesMergeRequestBasic"
+      }
+    },
+    "GetApiV4DeployTokens200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesDeployToken"
+      }
+    },
+    "GetApiV4ProjectsIdDeployTokens200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesDeployToken"
+      }
+    },
+    "GetApiV4GroupsIdDeployTokens200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesDeployToken"
+      }
+    },
+    "GetApiV4DeployKeys200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesDeployKey"
+      }
+    },
+    "GetApiV4ProjectsIdDeployKeys200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesDeployKeysProject"
+      }
+    },
+    "GetApiV4GroupsIdDashPackagesDebianPoolDistributionProjectIdLetterPackageNamePackageVersionFileName200OctetStreamResponse": {
+      "type": "string",
+      "format": "binary"
+    },
+    "GetApiV4ProjectsIdPackagesDebianPoolDistributionLetterPackageNamePackageVersionFileName200OctetStreamResponse": {
+      "type": "string",
+      "format": "binary"
+    },
+    "GetApiV4DatabasesDatabaseNameDictionaryTables200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesDictionaryTable"
+      }
+    },
+    "GetApiV4ProjectsIdRepositoryCommitsShaStatuses200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesCommitStatus"
+      }
+    },
+    "GetApiV4ProjectsIdRepositoryCommits200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesCommit"
+      }
+    },
+    "GetApiV4ProjectsIdRepositoryCommitsShaDiff200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesDiff"
+      }
+    },
+    "GetApiV4ProjectsIdRepositoryCommitsShaComments200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesCommitNote"
+      }
+    },
+    "GetApiV4ProjectsIdRepositoryCommitsShaRefs200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesBasicRef"
+      }
+    },
+    "GetApiV4ProjectsIdRepositoryCommitsShaMergeRequests200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesMergeRequestBasic"
+      }
+    },
+    "GetApiV4ProjectsIdPackagesCargo1PackageName200PlainResponse": {
+      "type": "string"
+    },
+    "GetApiV4ProjectsIdPackagesCargo2PackageName200PlainResponse": {
+      "type": "string"
+    },
+    "GetApiV4ProjectsIdPackagesCargo3FirstCharPackageName200PlainResponse": {
+      "type": "string"
+    },
+    "GetApiV4ProjectsIdPackagesCargoPrefix1Prefix2PackageName200PlainResponse": {
+      "type": "string"
+    },
+    "GetApiV4ProjectsIdPackagesCargoPackageNamePackageVersionDownload200OctetStreamResponse": {
+      "type": "string",
+      "format": "binary"
+    },
+    "GetApiV4ProjectsIdTriggers200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesTrigger"
+      }
+    },
+    "GetApiV4Pipelines200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesCiUserPipeline"
+      }
+    },
+    "GetApiV4ProjectsIdPipelineSchedules200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesCiPipelineSchedule"
+      }
+    },
+    "GetApiV4ProjectsIdPipelineSchedulesPipelineScheduleIdPipelines200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesCiPipelineBasic"
+      }
+    },
+    "GetApiV4ProjectsIdPipelines200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesCiPipelineBasic"
+      }
+    },
+    "GetApiV4ProjectsIdPipelinesPipelineIdJobs200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesCiJob"
+      }
+    },
+    "GetApiV4ProjectsIdPipelinesPipelineIdBridges200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesCiBridge"
+      }
+    },
+    "GetApiV4ProjectsIdPipelinesPipelineIdTriggerJobs200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesCiBridge"
+      }
+    },
+    "GetApiV4ProjectsIdPipelinesPipelineIdVariables200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesCiVariable"
+      }
+    },
+    "GetApiV4ProjectsIdSecureFilesSecureFileIdDownload200OctetStreamResponse": {
+      "type": "string",
+      "format": "binary"
+    },
+    "GetApiV4JobsIdArtifacts200OctetStreamResponse": {
+      "type": "string",
+      "format": "binary"
+    },
+    "GetApiV4JobsIdArtifacts302OctetStreamResponse": {
+      "type": "string",
+      "format": "binary"
+    },
+    "GetApiV4ProjectsIdResourceGroups200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesCiResourceGroup"
+      }
+    },
+    "GetApiV4ProjectsIdResourceGroupsKeyUpcomingJobs200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesCiJobBasic"
+      }
+    },
+    "GetApiV4ProjectsIdJobs200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesCiJob"
+      }
+    },
+    "GetApiV4Groups200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesGroup"
+      }
+    },
+    "GetApiV4GroupsIdGroupsShared200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesGroup"
+      }
+    },
+    "GetApiV4GroupsIdInvitedGroups200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesGroup"
+      }
+    },
+    "GetApiV4GroupsIdProjects200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesProject"
+      }
+    },
+    "GetApiV4GroupsIdProjectsShared200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesProject"
+      }
+    },
+    "GetApiV4GroupsIdSubgroups200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesGroup"
+      }
+    },
+    "GetApiV4GroupsIdDescendantGroups200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesGroup"
+      }
+    },
+    "GetApiV4GroupsIdTransferLocations200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesGroup"
+      }
+    },
+    "GetApiV4GroupsIdAuditEvents200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesAuditEvent"
+      }
+    },
+    "GetApiV4GroupsIdSamlUsers200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesUserPublic"
+      }
+    },
+    "GetApiV4GroupsIdSshCertificates200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesSshCertificate"
+      }
+    },
+    "GetApiV4ProjectsIdJobsArtifactsRefNameDownload200OctetStreamResponse": {
+      "type": "string",
+      "format": "binary"
+    },
+    "GetApiV4ProjectsIdJobsJobIdArtifacts200OctetStreamResponse": {
+      "type": "string",
+      "format": "binary"
+    },
+    "GetApiV4ProjectsIdJobsJobIdArtifactsTree200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesCiJobArtifactEntry"
+      }
+    },
+    "GetApiV4BulkImports200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesBulkImport"
+      }
+    },
+    "GetApiV4BulkImportsEntities200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesBulkImportsEntity"
+      }
+    },
+    "GetApiV4BulkImportsImportIdEntities200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesBulkImportsEntity"
+      }
+    },
+    "GetApiV4ProjectsIdRepositoryBranches200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesBranch"
+      }
+    },
+    "GetApiV4GroupsIdBadges200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesBadge"
+      }
+    },
+    "GetApiV4ProjectsIdBadges200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesBadge"
+      }
+    },
+    "GetApiV4ProjectsIdIssuesIssueIidAwardEmoji200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesAwardEmoji"
+      }
+    },
+    "GetApiV4ProjectsIdIssuesIssueIidNotesNoteIdAwardEmoji200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesAwardEmoji"
+      }
+    },
+    "GetApiV4ProjectsIdMergeRequestsMergeRequestIidAwardEmoji200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesAwardEmoji"
+      }
+    },
+    "GetApiV4ProjectsIdMergeRequestsMergeRequestIidNotesNoteIdAwardEmoji200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesAwardEmoji"
+      }
+    },
+    "GetApiV4ProjectsIdSnippetsSnippetIdAwardEmoji200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesAwardEmoji"
+      }
+    },
+    "GetApiV4ProjectsIdSnippetsSnippetIdNotesNoteIdAwardEmoji200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesAwardEmoji"
+      }
+    },
+    "GetApiV4GroupsIdEpicsEpicIidAwardEmoji200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesAwardEmoji"
+      }
+    },
+    "GetApiV4GroupsIdEpicsEpicIidNotesNoteIdAwardEmoji200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesAwardEmoji"
+      }
+    },
+    "GetApiV4Applications200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesApplication"
+      }
+    },
+    "GetApiV4ProjectsIdAlertManagementAlertsAlertIidMetricImages200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesMetricImage"
+      }
+    },
+    "GetApiV4AdminClusters200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesCluster"
+      }
+    },
+    "GetApiV4AdminBatchedBackgroundOperations200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesBatchedBackgroundOperation"
+      }
+    },
+    "GetApiV4AdminBatchedBackgroundMigrations200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesBatchedBackgroundMigration"
+      }
+    },
+    "ExamplePayload": {
+      "type": "object",
+      "description": "Placeholder schema for path example refs"
+    },
+    "GetApiV4OrbitSkillsNamePath200MarkdownResponseSchema": {
+      "type": "string"
+    },
+    "GetApiV4OrbitSkillsNamePath200PlainResponseSchema": {
+      "type": "string"
+    },
+    "GetApiV4ProjectsIdExportRelationsDownload200OctetStreamResponseSchema": {
+      "type": "string",
+      "format": "binary"
+    },
+    "GetApiV4ProjectsIdExportRelationsDownload200GzipResponseSchema": {
+      "type": "string",
+      "format": "binary"
+    }
+  }
 }

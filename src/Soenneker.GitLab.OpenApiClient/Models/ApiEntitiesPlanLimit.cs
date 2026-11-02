@@ -29,12 +29,18 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             else if (parseNode.GetChildNode("ci_pipeline_schedules") is { } nullNodeCiPipelineSchedules && nullNodeCiPipelineSchedules.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CiPipelineSchedules = null;
             if (parseNode.GetChildNode("ci_pipeline_size") is null) { _explicitNullValueCiPipelineSize = default!; _explicitNullProperties?.Remove("ci_pipeline_size"); }
             else if (parseNode.GetChildNode("ci_pipeline_size") is { } nullNodeCiPipelineSize && nullNodeCiPipelineSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CiPipelineSize = null;
+            if (parseNode.GetChildNode("ci_pipeline_variables_count") is null) { _explicitNullValueCiPipelineVariablesCount = default!; _explicitNullProperties?.Remove("ci_pipeline_variables_count"); }
+            else if (parseNode.GetChildNode("ci_pipeline_variables_count") is { } nullNodeCiPipelineVariablesCount && nullNodeCiPipelineVariablesCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CiPipelineVariablesCount = null;
             if (parseNode.GetChildNode("ci_project_subscriptions") is null) { _explicitNullValueCiProjectSubscriptions = default!; _explicitNullProperties?.Remove("ci_project_subscriptions"); }
             else if (parseNode.GetChildNode("ci_project_subscriptions") is { } nullNodeCiProjectSubscriptions && nullNodeCiProjectSubscriptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CiProjectSubscriptions = null;
             if (parseNode.GetChildNode("ci_registered_group_runners") is null) { _explicitNullValueCiRegisteredGroupRunners = default!; _explicitNullProperties?.Remove("ci_registered_group_runners"); }
             else if (parseNode.GetChildNode("ci_registered_group_runners") is { } nullNodeCiRegisteredGroupRunners && nullNodeCiRegisteredGroupRunners.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CiRegisteredGroupRunners = null;
             if (parseNode.GetChildNode("ci_registered_project_runners") is null) { _explicitNullValueCiRegisteredProjectRunners = default!; _explicitNullProperties?.Remove("ci_registered_project_runners"); }
             else if (parseNode.GetChildNode("ci_registered_project_runners") is { } nullNodeCiRegisteredProjectRunners && nullNodeCiRegisteredProjectRunners.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CiRegisteredProjectRunners = null;
+            if (parseNode.GetChildNode("ci_variable_file_value_size") is null) { _explicitNullValueCiVariableFileValueSize = default!; _explicitNullProperties?.Remove("ci_variable_file_value_size"); }
+            else if (parseNode.GetChildNode("ci_variable_file_value_size") is { } nullNodeCiVariableFileValueSize && nullNodeCiVariableFileValueSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CiVariableFileValueSize = null;
+            if (parseNode.GetChildNode("ci_variable_value_size") is null) { _explicitNullValueCiVariableValueSize = default!; _explicitNullProperties?.Remove("ci_variable_value_size"); }
+            else if (parseNode.GetChildNode("ci_variable_value_size") is { } nullNodeCiVariableValueSize && nullNodeCiVariableValueSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CiVariableValueSize = null;
             if (parseNode.GetChildNode("conan_max_file_size") is null) { _explicitNullValueConanMaxFileSize = default!; _explicitNullProperties?.Remove("conan_max_file_size"); }
             else if (parseNode.GetChildNode("conan_max_file_size") is { } nullNodeConanMaxFileSize && nullNodeConanMaxFileSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ConanMaxFileSize = null;
             if (parseNode.GetChildNode("dotenv_size") is null) { _explicitNullValueDotenvSize = default!; _explicitNullProperties?.Remove("dotenv_size"); }
@@ -101,6 +107,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The ci_pipeline_size property</summary>
         public int? CiPipelineSize { get => _explicitNullValueCiPipelineSize; set { _explicitNullValueCiPipelineSize = value; AdditionalData?.Remove("ci_pipeline_size"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ci_pipeline_size"); else _explicitNullProperties?.Remove("ci_pipeline_size"); } }
         private int? _explicitNullValueCiPipelineSize = default!;
+        /// <summary>The ci_pipeline_variables_count property</summary>
+        public int? CiPipelineVariablesCount { get => _explicitNullValueCiPipelineVariablesCount; set { _explicitNullValueCiPipelineVariablesCount = value; AdditionalData?.Remove("ci_pipeline_variables_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ci_pipeline_variables_count"); else _explicitNullProperties?.Remove("ci_pipeline_variables_count"); } }
+        private int? _explicitNullValueCiPipelineVariablesCount = default!;
         /// <summary>The ci_project_subscriptions property</summary>
         public int? CiProjectSubscriptions { get => _explicitNullValueCiProjectSubscriptions; set { _explicitNullValueCiProjectSubscriptions = value; AdditionalData?.Remove("ci_project_subscriptions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ci_project_subscriptions"); else _explicitNullProperties?.Remove("ci_project_subscriptions"); } }
         private int? _explicitNullValueCiProjectSubscriptions = default!;
@@ -110,6 +119,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The ci_registered_project_runners property</summary>
         public int? CiRegisteredProjectRunners { get => _explicitNullValueCiRegisteredProjectRunners; set { _explicitNullValueCiRegisteredProjectRunners = value; AdditionalData?.Remove("ci_registered_project_runners"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ci_registered_project_runners"); else _explicitNullProperties?.Remove("ci_registered_project_runners"); } }
         private int? _explicitNullValueCiRegisteredProjectRunners = default!;
+        /// <summary>The ci_variable_file_value_size property</summary>
+        public int? CiVariableFileValueSize { get => _explicitNullValueCiVariableFileValueSize; set { _explicitNullValueCiVariableFileValueSize = value; AdditionalData?.Remove("ci_variable_file_value_size"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ci_variable_file_value_size"); else _explicitNullProperties?.Remove("ci_variable_file_value_size"); } }
+        private int? _explicitNullValueCiVariableFileValueSize = default!;
+        /// <summary>The ci_variable_value_size property</summary>
+        public int? CiVariableValueSize { get => _explicitNullValueCiVariableValueSize; set { _explicitNullValueCiVariableValueSize = value; AdditionalData?.Remove("ci_variable_value_size"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ci_variable_value_size"); else _explicitNullProperties?.Remove("ci_variable_value_size"); } }
+        private int? _explicitNullValueCiVariableValueSize = default!;
         /// <summary>The conan_max_file_size property</summary>
         public long? ConanMaxFileSize { get => _explicitNullValueConanMaxFileSize; set { _explicitNullValueConanMaxFileSize = value; AdditionalData?.Remove("conan_max_file_size"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("conan_max_file_size"); else _explicitNullProperties?.Remove("conan_max_file_size"); } }
         private long? _explicitNullValueConanMaxFileSize = default!;
@@ -214,9 +229,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "ci_needs_size_limit", n => { CiNeedsSizeLimit = n.GetIntValue(); } },
                 { "ci_pipeline_schedules", n => { CiPipelineSchedules = n.GetIntValue(); } },
                 { "ci_pipeline_size", n => { CiPipelineSize = n.GetIntValue(); } },
+                { "ci_pipeline_variables_count", n => { CiPipelineVariablesCount = n.GetIntValue(); } },
                 { "ci_project_subscriptions", n => { CiProjectSubscriptions = n.GetIntValue(); } },
                 { "ci_registered_group_runners", n => { CiRegisteredGroupRunners = n.GetIntValue(); } },
                 { "ci_registered_project_runners", n => { CiRegisteredProjectRunners = n.GetIntValue(); } },
+                { "ci_variable_file_value_size", n => { CiVariableFileValueSize = n.GetIntValue(); } },
+                { "ci_variable_value_size", n => { CiVariableValueSize = n.GetIntValue(); } },
                 { "conan_max_file_size", n => { ConanMaxFileSize = n.GetLongValue(); } },
                 { "dotenv_size", n => { DotenvSize = n.GetIntValue(); } },
                 { "dotenv_variables", n => { DotenvVariables = n.GetIntValue(); } },
@@ -254,9 +272,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteIntValue("ci_needs_size_limit", CiNeedsSizeLimit);
             writer.WriteIntValue("ci_pipeline_schedules", CiPipelineSchedules);
             writer.WriteIntValue("ci_pipeline_size", CiPipelineSize);
+            writer.WriteIntValue("ci_pipeline_variables_count", CiPipelineVariablesCount);
             writer.WriteIntValue("ci_project_subscriptions", CiProjectSubscriptions);
             writer.WriteIntValue("ci_registered_group_runners", CiRegisteredGroupRunners);
             writer.WriteIntValue("ci_registered_project_runners", CiRegisteredProjectRunners);
+            writer.WriteIntValue("ci_variable_file_value_size", CiVariableFileValueSize);
+            writer.WriteIntValue("ci_variable_value_size", CiVariableValueSize);
             writer.WriteLongValue("conan_max_file_size", ConanMaxFileSize);
             writer.WriteIntValue("dotenv_size", DotenvSize);
             writer.WriteIntValue("dotenv_variables", DotenvVariables);

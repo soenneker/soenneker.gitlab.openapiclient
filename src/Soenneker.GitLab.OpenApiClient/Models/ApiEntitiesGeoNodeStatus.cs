@@ -1492,85 +1492,29 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The ai_vectorizable_file_uploads_checksum_failed_count property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? AiVectorizableFileUploadsChecksumFailedCount { get => _explicitNullValueAiVectorizableFileUploadsChecksumFailedCount; set { _explicitNullValueAiVectorizableFileUploadsChecksumFailedCount = value; AdditionalData?.Remove("ai_vectorizable_file_uploads_checksum_failed_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ai_vectorizable_file_uploads_checksum_failed_count"); else _explicitNullProperties?.Remove("ai_vectorizable_file_uploads_checksum_failed_count"); } }
-        private string? _explicitNullValueAiVectorizableFileUploadsChecksumFailedCount = default!;
-#nullable restore
-#else
-        public string AiVectorizableFileUploadsChecksumFailedCount { get => _explicitNullValueAiVectorizableFileUploadsChecksumFailedCount; set { _explicitNullValueAiVectorizableFileUploadsChecksumFailedCount = value; AdditionalData?.Remove("ai_vectorizable_file_uploads_checksum_failed_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ai_vectorizable_file_uploads_checksum_failed_count"); else _explicitNullProperties?.Remove("ai_vectorizable_file_uploads_checksum_failed_count"); } }
-        private string _explicitNullValueAiVectorizableFileUploadsChecksumFailedCount = default!;
-#endif
+        public int? AiVectorizableFileUploadsChecksumFailedCount { get => _explicitNullValueAiVectorizableFileUploadsChecksumFailedCount; set { _explicitNullValueAiVectorizableFileUploadsChecksumFailedCount = value; AdditionalData?.Remove("ai_vectorizable_file_uploads_checksum_failed_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ai_vectorizable_file_uploads_checksum_failed_count"); else _explicitNullProperties?.Remove("ai_vectorizable_file_uploads_checksum_failed_count"); } }
+        private int? _explicitNullValueAiVectorizableFileUploadsChecksumFailedCount = default!;
         /// <summary>The ai_vectorizable_file_uploads_checksummed_count property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? AiVectorizableFileUploadsChecksummedCount { get => _explicitNullValueAiVectorizableFileUploadsChecksummedCount; set { _explicitNullValueAiVectorizableFileUploadsChecksummedCount = value; AdditionalData?.Remove("ai_vectorizable_file_uploads_checksummed_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ai_vectorizable_file_uploads_checksummed_count"); else _explicitNullProperties?.Remove("ai_vectorizable_file_uploads_checksummed_count"); } }
-        private string? _explicitNullValueAiVectorizableFileUploadsChecksummedCount = default!;
-#nullable restore
-#else
-        public string AiVectorizableFileUploadsChecksummedCount { get => _explicitNullValueAiVectorizableFileUploadsChecksummedCount; set { _explicitNullValueAiVectorizableFileUploadsChecksummedCount = value; AdditionalData?.Remove("ai_vectorizable_file_uploads_checksummed_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ai_vectorizable_file_uploads_checksummed_count"); else _explicitNullProperties?.Remove("ai_vectorizable_file_uploads_checksummed_count"); } }
-        private string _explicitNullValueAiVectorizableFileUploadsChecksummedCount = default!;
-#endif
+        public int? AiVectorizableFileUploadsChecksummedCount { get => _explicitNullValueAiVectorizableFileUploadsChecksummedCount; set { _explicitNullValueAiVectorizableFileUploadsChecksummedCount = value; AdditionalData?.Remove("ai_vectorizable_file_uploads_checksummed_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ai_vectorizable_file_uploads_checksummed_count"); else _explicitNullProperties?.Remove("ai_vectorizable_file_uploads_checksummed_count"); } }
+        private int? _explicitNullValueAiVectorizableFileUploadsChecksummedCount = default!;
         /// <summary>The ai_vectorizable_file_uploads_checksum_total_count property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? AiVectorizableFileUploadsChecksumTotalCount { get => _explicitNullValueAiVectorizableFileUploadsChecksumTotalCount; set { _explicitNullValueAiVectorizableFileUploadsChecksumTotalCount = value; AdditionalData?.Remove("ai_vectorizable_file_uploads_checksum_total_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ai_vectorizable_file_uploads_checksum_total_count"); else _explicitNullProperties?.Remove("ai_vectorizable_file_uploads_checksum_total_count"); } }
-        private string? _explicitNullValueAiVectorizableFileUploadsChecksumTotalCount = default!;
-#nullable restore
-#else
-        public string AiVectorizableFileUploadsChecksumTotalCount { get => _explicitNullValueAiVectorizableFileUploadsChecksumTotalCount; set { _explicitNullValueAiVectorizableFileUploadsChecksumTotalCount = value; AdditionalData?.Remove("ai_vectorizable_file_uploads_checksum_total_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ai_vectorizable_file_uploads_checksum_total_count"); else _explicitNullProperties?.Remove("ai_vectorizable_file_uploads_checksum_total_count"); } }
-        private string _explicitNullValueAiVectorizableFileUploadsChecksumTotalCount = default!;
-#endif
+        public int? AiVectorizableFileUploadsChecksumTotalCount { get => _explicitNullValueAiVectorizableFileUploadsChecksumTotalCount; set { _explicitNullValueAiVectorizableFileUploadsChecksumTotalCount = value; AdditionalData?.Remove("ai_vectorizable_file_uploads_checksum_total_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ai_vectorizable_file_uploads_checksum_total_count"); else _explicitNullProperties?.Remove("ai_vectorizable_file_uploads_checksum_total_count"); } }
+        private int? _explicitNullValueAiVectorizableFileUploadsChecksumTotalCount = default!;
         /// <summary>The ai_vectorizable_file_uploads_count property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? AiVectorizableFileUploadsCount { get => _explicitNullValueAiVectorizableFileUploadsCount; set { _explicitNullValueAiVectorizableFileUploadsCount = value; AdditionalData?.Remove("ai_vectorizable_file_uploads_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ai_vectorizable_file_uploads_count"); else _explicitNullProperties?.Remove("ai_vectorizable_file_uploads_count"); } }
-        private string? _explicitNullValueAiVectorizableFileUploadsCount = default!;
-#nullable restore
-#else
-        public string AiVectorizableFileUploadsCount { get => _explicitNullValueAiVectorizableFileUploadsCount; set { _explicitNullValueAiVectorizableFileUploadsCount = value; AdditionalData?.Remove("ai_vectorizable_file_uploads_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ai_vectorizable_file_uploads_count"); else _explicitNullProperties?.Remove("ai_vectorizable_file_uploads_count"); } }
-        private string _explicitNullValueAiVectorizableFileUploadsCount = default!;
-#endif
+        public int? AiVectorizableFileUploadsCount { get => _explicitNullValueAiVectorizableFileUploadsCount; set { _explicitNullValueAiVectorizableFileUploadsCount = value; AdditionalData?.Remove("ai_vectorizable_file_uploads_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ai_vectorizable_file_uploads_count"); else _explicitNullProperties?.Remove("ai_vectorizable_file_uploads_count"); } }
+        private int? _explicitNullValueAiVectorizableFileUploadsCount = default!;
         /// <summary>The ai_vectorizable_file_uploads_failed_count property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? AiVectorizableFileUploadsFailedCount { get => _explicitNullValueAiVectorizableFileUploadsFailedCount; set { _explicitNullValueAiVectorizableFileUploadsFailedCount = value; AdditionalData?.Remove("ai_vectorizable_file_uploads_failed_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ai_vectorizable_file_uploads_failed_count"); else _explicitNullProperties?.Remove("ai_vectorizable_file_uploads_failed_count"); } }
-        private string? _explicitNullValueAiVectorizableFileUploadsFailedCount = default!;
-#nullable restore
-#else
-        public string AiVectorizableFileUploadsFailedCount { get => _explicitNullValueAiVectorizableFileUploadsFailedCount; set { _explicitNullValueAiVectorizableFileUploadsFailedCount = value; AdditionalData?.Remove("ai_vectorizable_file_uploads_failed_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ai_vectorizable_file_uploads_failed_count"); else _explicitNullProperties?.Remove("ai_vectorizable_file_uploads_failed_count"); } }
-        private string _explicitNullValueAiVectorizableFileUploadsFailedCount = default!;
-#endif
+        public int? AiVectorizableFileUploadsFailedCount { get => _explicitNullValueAiVectorizableFileUploadsFailedCount; set { _explicitNullValueAiVectorizableFileUploadsFailedCount = value; AdditionalData?.Remove("ai_vectorizable_file_uploads_failed_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ai_vectorizable_file_uploads_failed_count"); else _explicitNullProperties?.Remove("ai_vectorizable_file_uploads_failed_count"); } }
+        private int? _explicitNullValueAiVectorizableFileUploadsFailedCount = default!;
         /// <summary>The ai_vectorizable_file_uploads_oldest_unsynced_time property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? AiVectorizableFileUploadsOldestUnsyncedTime { get => _explicitNullValueAiVectorizableFileUploadsOldestUnsyncedTime; set { _explicitNullValueAiVectorizableFileUploadsOldestUnsyncedTime = value; AdditionalData?.Remove("ai_vectorizable_file_uploads_oldest_unsynced_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ai_vectorizable_file_uploads_oldest_unsynced_time"); else _explicitNullProperties?.Remove("ai_vectorizable_file_uploads_oldest_unsynced_time"); } }
-        private string? _explicitNullValueAiVectorizableFileUploadsOldestUnsyncedTime = default!;
-#nullable restore
-#else
-        public string AiVectorizableFileUploadsOldestUnsyncedTime { get => _explicitNullValueAiVectorizableFileUploadsOldestUnsyncedTime; set { _explicitNullValueAiVectorizableFileUploadsOldestUnsyncedTime = value; AdditionalData?.Remove("ai_vectorizable_file_uploads_oldest_unsynced_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ai_vectorizable_file_uploads_oldest_unsynced_time"); else _explicitNullProperties?.Remove("ai_vectorizable_file_uploads_oldest_unsynced_time"); } }
-        private string _explicitNullValueAiVectorizableFileUploadsOldestUnsyncedTime = default!;
-#endif
+        public int? AiVectorizableFileUploadsOldestUnsyncedTime { get => _explicitNullValueAiVectorizableFileUploadsOldestUnsyncedTime; set { _explicitNullValueAiVectorizableFileUploadsOldestUnsyncedTime = value; AdditionalData?.Remove("ai_vectorizable_file_uploads_oldest_unsynced_time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ai_vectorizable_file_uploads_oldest_unsynced_time"); else _explicitNullProperties?.Remove("ai_vectorizable_file_uploads_oldest_unsynced_time"); } }
+        private int? _explicitNullValueAiVectorizableFileUploadsOldestUnsyncedTime = default!;
         /// <summary>The ai_vectorizable_file_uploads_registry_count property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? AiVectorizableFileUploadsRegistryCount { get => _explicitNullValueAiVectorizableFileUploadsRegistryCount; set { _explicitNullValueAiVectorizableFileUploadsRegistryCount = value; AdditionalData?.Remove("ai_vectorizable_file_uploads_registry_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ai_vectorizable_file_uploads_registry_count"); else _explicitNullProperties?.Remove("ai_vectorizable_file_uploads_registry_count"); } }
-        private string? _explicitNullValueAiVectorizableFileUploadsRegistryCount = default!;
-#nullable restore
-#else
-        public string AiVectorizableFileUploadsRegistryCount { get => _explicitNullValueAiVectorizableFileUploadsRegistryCount; set { _explicitNullValueAiVectorizableFileUploadsRegistryCount = value; AdditionalData?.Remove("ai_vectorizable_file_uploads_registry_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ai_vectorizable_file_uploads_registry_count"); else _explicitNullProperties?.Remove("ai_vectorizable_file_uploads_registry_count"); } }
-        private string _explicitNullValueAiVectorizableFileUploadsRegistryCount = default!;
-#endif
+        public int? AiVectorizableFileUploadsRegistryCount { get => _explicitNullValueAiVectorizableFileUploadsRegistryCount; set { _explicitNullValueAiVectorizableFileUploadsRegistryCount = value; AdditionalData?.Remove("ai_vectorizable_file_uploads_registry_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ai_vectorizable_file_uploads_registry_count"); else _explicitNullProperties?.Remove("ai_vectorizable_file_uploads_registry_count"); } }
+        private int? _explicitNullValueAiVectorizableFileUploadsRegistryCount = default!;
         /// <summary>The ai_vectorizable_file_uploads_synced_count property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? AiVectorizableFileUploadsSyncedCount { get => _explicitNullValueAiVectorizableFileUploadsSyncedCount; set { _explicitNullValueAiVectorizableFileUploadsSyncedCount = value; AdditionalData?.Remove("ai_vectorizable_file_uploads_synced_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ai_vectorizable_file_uploads_synced_count"); else _explicitNullProperties?.Remove("ai_vectorizable_file_uploads_synced_count"); } }
-        private string? _explicitNullValueAiVectorizableFileUploadsSyncedCount = default!;
-#nullable restore
-#else
-        public string AiVectorizableFileUploadsSyncedCount { get => _explicitNullValueAiVectorizableFileUploadsSyncedCount; set { _explicitNullValueAiVectorizableFileUploadsSyncedCount = value; AdditionalData?.Remove("ai_vectorizable_file_uploads_synced_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ai_vectorizable_file_uploads_synced_count"); else _explicitNullProperties?.Remove("ai_vectorizable_file_uploads_synced_count"); } }
-        private string _explicitNullValueAiVectorizableFileUploadsSyncedCount = default!;
-#endif
+        public int? AiVectorizableFileUploadsSyncedCount { get => _explicitNullValueAiVectorizableFileUploadsSyncedCount; set { _explicitNullValueAiVectorizableFileUploadsSyncedCount = value; AdditionalData?.Remove("ai_vectorizable_file_uploads_synced_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ai_vectorizable_file_uploads_synced_count"); else _explicitNullProperties?.Remove("ai_vectorizable_file_uploads_synced_count"); } }
+        private int? _explicitNullValueAiVectorizableFileUploadsSyncedCount = default!;
         /// <summary>The ai_vectorizable_file_uploads_synced_in_percentage property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -1582,35 +1526,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         private string _explicitNullValueAiVectorizableFileUploadsSyncedInPercentage = default!;
 #endif
         /// <summary>The ai_vectorizable_file_uploads_verification_failed_count property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? AiVectorizableFileUploadsVerificationFailedCount { get => _explicitNullValueAiVectorizableFileUploadsVerificationFailedCount; set { _explicitNullValueAiVectorizableFileUploadsVerificationFailedCount = value; AdditionalData?.Remove("ai_vectorizable_file_uploads_verification_failed_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ai_vectorizable_file_uploads_verification_failed_count"); else _explicitNullProperties?.Remove("ai_vectorizable_file_uploads_verification_failed_count"); } }
-        private string? _explicitNullValueAiVectorizableFileUploadsVerificationFailedCount = default!;
-#nullable restore
-#else
-        public string AiVectorizableFileUploadsVerificationFailedCount { get => _explicitNullValueAiVectorizableFileUploadsVerificationFailedCount; set { _explicitNullValueAiVectorizableFileUploadsVerificationFailedCount = value; AdditionalData?.Remove("ai_vectorizable_file_uploads_verification_failed_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ai_vectorizable_file_uploads_verification_failed_count"); else _explicitNullProperties?.Remove("ai_vectorizable_file_uploads_verification_failed_count"); } }
-        private string _explicitNullValueAiVectorizableFileUploadsVerificationFailedCount = default!;
-#endif
+        public int? AiVectorizableFileUploadsVerificationFailedCount { get => _explicitNullValueAiVectorizableFileUploadsVerificationFailedCount; set { _explicitNullValueAiVectorizableFileUploadsVerificationFailedCount = value; AdditionalData?.Remove("ai_vectorizable_file_uploads_verification_failed_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ai_vectorizable_file_uploads_verification_failed_count"); else _explicitNullProperties?.Remove("ai_vectorizable_file_uploads_verification_failed_count"); } }
+        private int? _explicitNullValueAiVectorizableFileUploadsVerificationFailedCount = default!;
         /// <summary>The ai_vectorizable_file_uploads_verification_total_count property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? AiVectorizableFileUploadsVerificationTotalCount { get => _explicitNullValueAiVectorizableFileUploadsVerificationTotalCount; set { _explicitNullValueAiVectorizableFileUploadsVerificationTotalCount = value; AdditionalData?.Remove("ai_vectorizable_file_uploads_verification_total_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ai_vectorizable_file_uploads_verification_total_count"); else _explicitNullProperties?.Remove("ai_vectorizable_file_uploads_verification_total_count"); } }
-        private string? _explicitNullValueAiVectorizableFileUploadsVerificationTotalCount = default!;
-#nullable restore
-#else
-        public string AiVectorizableFileUploadsVerificationTotalCount { get => _explicitNullValueAiVectorizableFileUploadsVerificationTotalCount; set { _explicitNullValueAiVectorizableFileUploadsVerificationTotalCount = value; AdditionalData?.Remove("ai_vectorizable_file_uploads_verification_total_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ai_vectorizable_file_uploads_verification_total_count"); else _explicitNullProperties?.Remove("ai_vectorizable_file_uploads_verification_total_count"); } }
-        private string _explicitNullValueAiVectorizableFileUploadsVerificationTotalCount = default!;
-#endif
+        public int? AiVectorizableFileUploadsVerificationTotalCount { get => _explicitNullValueAiVectorizableFileUploadsVerificationTotalCount; set { _explicitNullValueAiVectorizableFileUploadsVerificationTotalCount = value; AdditionalData?.Remove("ai_vectorizable_file_uploads_verification_total_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ai_vectorizable_file_uploads_verification_total_count"); else _explicitNullProperties?.Remove("ai_vectorizable_file_uploads_verification_total_count"); } }
+        private int? _explicitNullValueAiVectorizableFileUploadsVerificationTotalCount = default!;
         /// <summary>The ai_vectorizable_file_uploads_verified_count property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? AiVectorizableFileUploadsVerifiedCount { get => _explicitNullValueAiVectorizableFileUploadsVerifiedCount; set { _explicitNullValueAiVectorizableFileUploadsVerifiedCount = value; AdditionalData?.Remove("ai_vectorizable_file_uploads_verified_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ai_vectorizable_file_uploads_verified_count"); else _explicitNullProperties?.Remove("ai_vectorizable_file_uploads_verified_count"); } }
-        private string? _explicitNullValueAiVectorizableFileUploadsVerifiedCount = default!;
-#nullable restore
-#else
-        public string AiVectorizableFileUploadsVerifiedCount { get => _explicitNullValueAiVectorizableFileUploadsVerifiedCount; set { _explicitNullValueAiVectorizableFileUploadsVerifiedCount = value; AdditionalData?.Remove("ai_vectorizable_file_uploads_verified_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ai_vectorizable_file_uploads_verified_count"); else _explicitNullProperties?.Remove("ai_vectorizable_file_uploads_verified_count"); } }
-        private string _explicitNullValueAiVectorizableFileUploadsVerifiedCount = default!;
-#endif
+        public int? AiVectorizableFileUploadsVerifiedCount { get => _explicitNullValueAiVectorizableFileUploadsVerifiedCount; set { _explicitNullValueAiVectorizableFileUploadsVerifiedCount = value; AdditionalData?.Remove("ai_vectorizable_file_uploads_verified_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ai_vectorizable_file_uploads_verified_count"); else _explicitNullProperties?.Remove("ai_vectorizable_file_uploads_verified_count"); } }
+        private int? _explicitNullValueAiVectorizableFileUploadsVerifiedCount = default!;
         /// <summary>The ai_vectorizable_file_uploads_verified_in_percentage property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -7332,18 +7255,18 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "achievement_uploads_verification_total_count", n => { AchievementUploadsVerificationTotalCount = n.GetStringValue(); } },
                 { "achievement_uploads_verified_count", n => { AchievementUploadsVerifiedCount = n.GetStringValue(); } },
                 { "achievement_uploads_verified_in_percentage", n => { AchievementUploadsVerifiedInPercentage = n.GetStringValue(); } },
-                { "ai_vectorizable_file_uploads_checksum_failed_count", n => { AiVectorizableFileUploadsChecksumFailedCount = n.GetStringValue(); } },
-                { "ai_vectorizable_file_uploads_checksum_total_count", n => { AiVectorizableFileUploadsChecksumTotalCount = n.GetStringValue(); } },
-                { "ai_vectorizable_file_uploads_checksummed_count", n => { AiVectorizableFileUploadsChecksummedCount = n.GetStringValue(); } },
-                { "ai_vectorizable_file_uploads_count", n => { AiVectorizableFileUploadsCount = n.GetStringValue(); } },
-                { "ai_vectorizable_file_uploads_failed_count", n => { AiVectorizableFileUploadsFailedCount = n.GetStringValue(); } },
-                { "ai_vectorizable_file_uploads_oldest_unsynced_time", n => { AiVectorizableFileUploadsOldestUnsyncedTime = n.GetStringValue(); } },
-                { "ai_vectorizable_file_uploads_registry_count", n => { AiVectorizableFileUploadsRegistryCount = n.GetStringValue(); } },
-                { "ai_vectorizable_file_uploads_synced_count", n => { AiVectorizableFileUploadsSyncedCount = n.GetStringValue(); } },
+                { "ai_vectorizable_file_uploads_checksum_failed_count", n => { AiVectorizableFileUploadsChecksumFailedCount = n.GetIntValue(); } },
+                { "ai_vectorizable_file_uploads_checksum_total_count", n => { AiVectorizableFileUploadsChecksumTotalCount = n.GetIntValue(); } },
+                { "ai_vectorizable_file_uploads_checksummed_count", n => { AiVectorizableFileUploadsChecksummedCount = n.GetIntValue(); } },
+                { "ai_vectorizable_file_uploads_count", n => { AiVectorizableFileUploadsCount = n.GetIntValue(); } },
+                { "ai_vectorizable_file_uploads_failed_count", n => { AiVectorizableFileUploadsFailedCount = n.GetIntValue(); } },
+                { "ai_vectorizable_file_uploads_oldest_unsynced_time", n => { AiVectorizableFileUploadsOldestUnsyncedTime = n.GetIntValue(); } },
+                { "ai_vectorizable_file_uploads_registry_count", n => { AiVectorizableFileUploadsRegistryCount = n.GetIntValue(); } },
+                { "ai_vectorizable_file_uploads_synced_count", n => { AiVectorizableFileUploadsSyncedCount = n.GetIntValue(); } },
                 { "ai_vectorizable_file_uploads_synced_in_percentage", n => { AiVectorizableFileUploadsSyncedInPercentage = n.GetStringValue(); } },
-                { "ai_vectorizable_file_uploads_verification_failed_count", n => { AiVectorizableFileUploadsVerificationFailedCount = n.GetStringValue(); } },
-                { "ai_vectorizable_file_uploads_verification_total_count", n => { AiVectorizableFileUploadsVerificationTotalCount = n.GetStringValue(); } },
-                { "ai_vectorizable_file_uploads_verified_count", n => { AiVectorizableFileUploadsVerifiedCount = n.GetStringValue(); } },
+                { "ai_vectorizable_file_uploads_verification_failed_count", n => { AiVectorizableFileUploadsVerificationFailedCount = n.GetIntValue(); } },
+                { "ai_vectorizable_file_uploads_verification_total_count", n => { AiVectorizableFileUploadsVerificationTotalCount = n.GetIntValue(); } },
+                { "ai_vectorizable_file_uploads_verified_count", n => { AiVectorizableFileUploadsVerifiedCount = n.GetIntValue(); } },
                 { "ai_vectorizable_file_uploads_verified_in_percentage", n => { AiVectorizableFileUploadsVerifiedInPercentage = n.GetStringValue(); } },
                 { "alert_management_metric_image_uploads_checksum_failed_count", n => { AlertManagementMetricImageUploadsChecksumFailedCount = n.GetStringValue(); } },
                 { "alert_management_metric_image_uploads_checksum_total_count", n => { AlertManagementMetricImageUploadsChecksumTotalCount = n.GetStringValue(); } },
@@ -7946,18 +7869,18 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("achievement_uploads_verification_total_count", AchievementUploadsVerificationTotalCount);
             writer.WriteStringValue("achievement_uploads_verified_count", AchievementUploadsVerifiedCount);
             writer.WriteStringValue("achievement_uploads_verified_in_percentage", AchievementUploadsVerifiedInPercentage);
-            writer.WriteStringValue("ai_vectorizable_file_uploads_checksum_failed_count", AiVectorizableFileUploadsChecksumFailedCount);
-            writer.WriteStringValue("ai_vectorizable_file_uploads_checksummed_count", AiVectorizableFileUploadsChecksummedCount);
-            writer.WriteStringValue("ai_vectorizable_file_uploads_checksum_total_count", AiVectorizableFileUploadsChecksumTotalCount);
-            writer.WriteStringValue("ai_vectorizable_file_uploads_count", AiVectorizableFileUploadsCount);
-            writer.WriteStringValue("ai_vectorizable_file_uploads_failed_count", AiVectorizableFileUploadsFailedCount);
-            writer.WriteStringValue("ai_vectorizable_file_uploads_oldest_unsynced_time", AiVectorizableFileUploadsOldestUnsyncedTime);
-            writer.WriteStringValue("ai_vectorizable_file_uploads_registry_count", AiVectorizableFileUploadsRegistryCount);
-            writer.WriteStringValue("ai_vectorizable_file_uploads_synced_count", AiVectorizableFileUploadsSyncedCount);
+            writer.WriteIntValue("ai_vectorizable_file_uploads_checksum_failed_count", AiVectorizableFileUploadsChecksumFailedCount);
+            writer.WriteIntValue("ai_vectorizable_file_uploads_checksummed_count", AiVectorizableFileUploadsChecksummedCount);
+            writer.WriteIntValue("ai_vectorizable_file_uploads_checksum_total_count", AiVectorizableFileUploadsChecksumTotalCount);
+            writer.WriteIntValue("ai_vectorizable_file_uploads_count", AiVectorizableFileUploadsCount);
+            writer.WriteIntValue("ai_vectorizable_file_uploads_failed_count", AiVectorizableFileUploadsFailedCount);
+            writer.WriteIntValue("ai_vectorizable_file_uploads_oldest_unsynced_time", AiVectorizableFileUploadsOldestUnsyncedTime);
+            writer.WriteIntValue("ai_vectorizable_file_uploads_registry_count", AiVectorizableFileUploadsRegistryCount);
+            writer.WriteIntValue("ai_vectorizable_file_uploads_synced_count", AiVectorizableFileUploadsSyncedCount);
             writer.WriteStringValue("ai_vectorizable_file_uploads_synced_in_percentage", AiVectorizableFileUploadsSyncedInPercentage);
-            writer.WriteStringValue("ai_vectorizable_file_uploads_verification_failed_count", AiVectorizableFileUploadsVerificationFailedCount);
-            writer.WriteStringValue("ai_vectorizable_file_uploads_verification_total_count", AiVectorizableFileUploadsVerificationTotalCount);
-            writer.WriteStringValue("ai_vectorizable_file_uploads_verified_count", AiVectorizableFileUploadsVerifiedCount);
+            writer.WriteIntValue("ai_vectorizable_file_uploads_verification_failed_count", AiVectorizableFileUploadsVerificationFailedCount);
+            writer.WriteIntValue("ai_vectorizable_file_uploads_verification_total_count", AiVectorizableFileUploadsVerificationTotalCount);
+            writer.WriteIntValue("ai_vectorizable_file_uploads_verified_count", AiVectorizableFileUploadsVerifiedCount);
             writer.WriteStringValue("ai_vectorizable_file_uploads_verified_in_percentage", AiVectorizableFileUploadsVerifiedInPercentage);
             writer.WriteStringValue("alert_management_metric_image_uploads_checksum_failed_count", AlertManagementMetricImageUploadsChecksumFailedCount);
             writer.WriteStringValue("alert_management_metric_image_uploads_checksummed_count", AlertManagementMetricImageUploadsChecksummedCount);

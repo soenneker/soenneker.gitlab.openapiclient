@@ -87700,28 +87700,6 @@ components:
           type: string
         achievement_uploads_oldest_unsynced_time:
           type: string
-        ai_vectorizable_file_uploads_count:
-          type: string
-        ai_vectorizable_file_uploads_checksum_total_count:
-          type: string
-        ai_vectorizable_file_uploads_checksummed_count:
-          type: string
-        ai_vectorizable_file_uploads_checksum_failed_count:
-          type: string
-        ai_vectorizable_file_uploads_synced_count:
-          type: string
-        ai_vectorizable_file_uploads_failed_count:
-          type: string
-        ai_vectorizable_file_uploads_registry_count:
-          type: string
-        ai_vectorizable_file_uploads_verification_total_count:
-          type: string
-        ai_vectorizable_file_uploads_verified_count:
-          type: string
-        ai_vectorizable_file_uploads_verification_failed_count:
-          type: string
-        ai_vectorizable_file_uploads_oldest_unsynced_time:
-          type: string
         alert_management_metric_image_uploads_count:
           type: string
         alert_management_metric_image_uploads_checksum_total_count:
@@ -88644,10 +88622,6 @@ components:
           type: string
         achievement_uploads_verified_in_percentage:
           type: string
-        ai_vectorizable_file_uploads_synced_in_percentage:
-          type: string
-        ai_vectorizable_file_uploads_verified_in_percentage:
-          type: string
         alert_management_metric_image_uploads_synced_in_percentage:
           type: string
         alert_management_metric_image_uploads_verified_in_percentage:
@@ -88812,6 +88786,34 @@ components:
           type: string
         vulnerability_remediation_uploads_verified_in_percentage:
           type: string
+        ai_vectorizable_file_uploads_count:
+          type: integer
+        ai_vectorizable_file_uploads_checksum_total_count:
+          type: integer
+        ai_vectorizable_file_uploads_checksummed_count:
+          type: integer
+        ai_vectorizable_file_uploads_checksum_failed_count:
+          type: integer
+        ai_vectorizable_file_uploads_synced_count:
+          type: integer
+        ai_vectorizable_file_uploads_failed_count:
+          type: integer
+        ai_vectorizable_file_uploads_registry_count:
+          type: integer
+        ai_vectorizable_file_uploads_verification_total_count:
+          type: integer
+        ai_vectorizable_file_uploads_verified_count:
+          type: integer
+        ai_vectorizable_file_uploads_verification_failed_count:
+          type: integer
+        ai_vectorizable_file_uploads_oldest_unsynced_time:
+          type: integer
+        ai_vectorizable_file_uploads_synced_in_percentage:
+          type: string
+          example: 0.00%
+        ai_vectorizable_file_uploads_verified_in_percentage:
+          type: string
+          example: 0.00%
         repositories_count:
           type: string
         replication_slots_count:
@@ -88975,28 +88977,6 @@ components:
           type: string
         achievement_uploads_oldest_unsynced_time:
           type: string
-        ai_vectorizable_file_uploads_count:
-          type: string
-        ai_vectorizable_file_uploads_checksum_total_count:
-          type: string
-        ai_vectorizable_file_uploads_checksummed_count:
-          type: string
-        ai_vectorizable_file_uploads_checksum_failed_count:
-          type: string
-        ai_vectorizable_file_uploads_synced_count:
-          type: string
-        ai_vectorizable_file_uploads_failed_count:
-          type: string
-        ai_vectorizable_file_uploads_registry_count:
-          type: string
-        ai_vectorizable_file_uploads_verification_total_count:
-          type: string
-        ai_vectorizable_file_uploads_verified_count:
-          type: string
-        ai_vectorizable_file_uploads_verification_failed_count:
-          type: string
-        ai_vectorizable_file_uploads_oldest_unsynced_time:
-          type: string
         alert_management_metric_image_uploads_count:
           type: string
         alert_management_metric_image_uploads_checksum_total_count:
@@ -89919,10 +89899,6 @@ components:
           type: string
         achievement_uploads_verified_in_percentage:
           type: string
-        ai_vectorizable_file_uploads_synced_in_percentage:
-          type: string
-        ai_vectorizable_file_uploads_verified_in_percentage:
-          type: string
         alert_management_metric_image_uploads_synced_in_percentage:
           type: string
         alert_management_metric_image_uploads_verified_in_percentage:
@@ -90087,6 +90063,34 @@ components:
           type: string
         vulnerability_remediation_uploads_verified_in_percentage:
           type: string
+        ai_vectorizable_file_uploads_count:
+          type: integer
+        ai_vectorizable_file_uploads_checksum_total_count:
+          type: integer
+        ai_vectorizable_file_uploads_checksummed_count:
+          type: integer
+        ai_vectorizable_file_uploads_checksum_failed_count:
+          type: integer
+        ai_vectorizable_file_uploads_synced_count:
+          type: integer
+        ai_vectorizable_file_uploads_failed_count:
+          type: integer
+        ai_vectorizable_file_uploads_registry_count:
+          type: integer
+        ai_vectorizable_file_uploads_verification_total_count:
+          type: integer
+        ai_vectorizable_file_uploads_verified_count:
+          type: integer
+        ai_vectorizable_file_uploads_verification_failed_count:
+          type: integer
+        ai_vectorizable_file_uploads_oldest_unsynced_time:
+          type: integer
+        ai_vectorizable_file_uploads_synced_in_percentage:
+          type: string
+          example: 0.00%
+        ai_vectorizable_file_uploads_verified_in_percentage:
+          type: string
+          example: 0.00%
         repositories_count:
           type: string
         replication_slots_count:
@@ -102248,6 +102252,13 @@ components:
           type: string
         stage:
           type: string
+        tag_list:
+          type: array
+          example:
+          - docker
+          - ruby
+          items:
+            type: string
         pipeline_id:
           type: string
         project_id:
@@ -103145,6 +103156,15 @@ components:
         ci_pipeline_size:
           type: integer
           example: 0
+        ci_pipeline_variables_count:
+          type: integer
+          example: 1200
+        ci_variable_value_size:
+          type: integer
+          example: 131072
+        ci_variable_file_value_size:
+          type: integer
+          example: 1048576
         ci_active_jobs:
           type: integer
           example: 0
@@ -136627,6 +136647,18 @@ components:
         ci_pipeline_size:
           type: integer
           description: Maximum number of jobs in a single pipeline.
+          nullable: true
+        ci_pipeline_variables_count:
+          type: integer
+          description: Maximum number of pipeline variables in a single pipeline.
+          nullable: true
+        ci_variable_value_size:
+          type: integer
+          description: Maximum size of a pipeline variable value in bytes.
+          nullable: true
+        ci_variable_file_value_size:
+          type: integer
+          description: Maximum size of a file type pipeline variable value in bytes.
           nullable: true
         ci_active_jobs:
           type: integer
