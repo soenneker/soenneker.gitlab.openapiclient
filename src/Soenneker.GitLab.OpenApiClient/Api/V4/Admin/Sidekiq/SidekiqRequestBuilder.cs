@@ -2,6 +2,7 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Sidekiq.Concurrency_limits;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Sidekiq.Queues;
 using System.Collections.Generic;
 using System.IO;
@@ -15,6 +16,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Sidekiq
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SidekiqRequestBuilder : BaseRequestBuilder
     {
+        /// <summary>The concurrency_limits property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Sidekiq.Concurrency_limits.Concurrency_limitsRequestBuilder Concurrency_limits
+        {
+            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Sidekiq.Concurrency_limits.Concurrency_limitsRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The queues property</summary>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Sidekiq.Queues.QueuesRequestBuilder Queues
         {

@@ -39838,6 +39838,147 @@
         }
       }
     },
+    "/api/v4/admin/sidekiq/concurrency_limits/{workerClass}": {
+      "get": {
+        "tags": [
+          "Sidekiq"
+        ],
+        "summary": "Get a Sidekiq worker concurrency limit",
+        "description": "Returns concurrency limits, override expiry and job counts.",
+        "operationId": "GetApiV4AdminSidekiqConcurrencyLimitsWorkerClass",
+        "parameters": [
+          {
+            "name": "workerClass",
+            "in": "path",
+            "description": "Registered Sidekiq worker class name.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesSidekiqConcurrencyLimit"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Administrator access required"
+          },
+          "404": {
+            "description": "Worker not found"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Sidekiq"
+        ],
+        "summary": "Update a Sidekiq worker concurrency limit override",
+        "description": "Overrides adaptive throttling until the TTL expires or the override is deleted.",
+        "operationId": "PutApiV4AdminSidekiqConcurrencyLimitsWorkerClass",
+        "parameters": [
+          {
+            "name": "workerClass",
+            "in": "path",
+            "description": "Registered Sidekiq worker class name.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PutApiV4AdminSidekiqConcurrencyLimitsWorkerClassRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesSidekiqConcurrencyLimit"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid override"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Administrator access required"
+          },
+          "404": {
+            "description": "Worker not found"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Sidekiq"
+        ],
+        "summary": "Delete a Sidekiq worker concurrency limit override",
+        "description": "Restores the adaptive limit if present, otherwise the worker default.",
+        "operationId": "DeleteApiV4AdminSidekiqConcurrencyLimitsWorkerClass",
+        "parameters": [
+          {
+            "name": "workerClass",
+            "in": "path",
+            "description": "Registered Sidekiq worker class name.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesSidekiqConcurrencyLimit"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Administrator access required"
+          },
+          "404": {
+            "description": "Worker not found"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      }
+    },
     "/api/v4/admin/sidekiq/queues/{queueName}": {
       "delete": {
         "tags": [
@@ -136202,6 +136343,60 @@
           }
         }
       },
+      "ApiEntitiesSidekiqConcurrencyLimit": {
+        "type": "object",
+        "properties": {
+          "worker_class": {
+            "type": "string",
+            "example": "AuthorizedProjectsWorker"
+          },
+          "class_limit": {
+            "type": "integer",
+            "description": "Explicit class limit. null when the worker has no explicit limit.",
+            "example": 10
+          },
+          "effective_limit": {
+            "type": "integer",
+            "description": "Effective limit. Zero means unlimited. Negative values mean paused. null means unknown without shard context.",
+            "example": 20
+          },
+          "adaptive_limit": {
+            "type": "integer",
+            "description": "Stored adaptive limit, or null when absent.",
+            "example": 5
+          },
+          "default_limit_requires_shard_context": {
+            "type": "boolean",
+            "example": false
+          },
+          "middleware_enabled": {
+            "type": "boolean",
+            "example": true
+          },
+          "disabled_for_worker": {
+            "type": "boolean",
+            "example": false
+          },
+          "override_limit": {
+            "type": "integer",
+            "description": "Temporary override, or null when absent.",
+            "example": 20
+          },
+          "override_ttl": {
+            "type": "integer",
+            "description": "Remaining override lifetime in seconds, or null when absent.",
+            "example": 1800
+          },
+          "running_jobs": {
+            "type": "integer",
+            "example": 8
+          },
+          "deferred_jobs": {
+            "type": "integer",
+            "example": 1000
+          }
+        }
+      },
       "ApiEntitiesWikiPageBasic": {
         "type": "object",
         "properties": {
@@ -158990,6 +159185,26 @@
             "type": "integer",
             "description": "Position of the list.",
             "nullable": true
+          }
+        }
+      },
+      "PutApiV4AdminSidekiqConcurrencyLimitsWorkerClassRequest": {
+        "required": [
+          "limit"
+        ],
+        "type": "object",
+        "properties": {
+          "limit": {
+            "type": "integer",
+            "description": "Positive concurrency limit.",
+            "nullable": true
+          },
+          "ttl": {
+            "maximum": 86400,
+            "minimum": 1,
+            "type": "integer",
+            "description": "Override lifetime in seconds.",
+            "default": 1800
           }
         }
       },
