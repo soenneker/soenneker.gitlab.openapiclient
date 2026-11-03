@@ -1047,12 +1047,6 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             else if (parseNode.GetChildNode("scan_execution_policies_per_configuration_limit") is { } nullNodeScanExecutionPoliciesPerConfigurationLimit && nullNodeScanExecutionPoliciesPerConfigurationLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScanExecutionPoliciesPerConfigurationLimit = null;
             if (parseNode.GetChildNode("scan_execution_policies_schedule_limit") is null) { _explicitNullValueScanExecutionPoliciesScheduleLimit = default!; _explicitNullProperties?.Remove("scan_execution_policies_schedule_limit"); }
             else if (parseNode.GetChildNode("scan_execution_policies_schedule_limit") is { } nullNodeScanExecutionPoliciesScheduleLimit && nullNodeScanExecutionPoliciesScheduleLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScanExecutionPoliciesScheduleLimit = null;
-            if (parseNode.GetChildNode("search_max_docs_denominator") is null) { _explicitNullValueSearchMaxDocsDenominator = default!; _explicitNullProperties?.Remove("search_max_docs_denominator"); }
-            else if (parseNode.GetChildNode("search_max_docs_denominator") is { } nullNodeSearchMaxDocsDenominator && nullNodeSearchMaxDocsDenominator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SearchMaxDocsDenominator = null;
-            if (parseNode.GetChildNode("search_max_shard_size_gb") is null) { _explicitNullValueSearchMaxShardSizeGb = default!; _explicitNullProperties?.Remove("search_max_shard_size_gb"); }
-            else if (parseNode.GetChildNode("search_max_shard_size_gb") is { } nullNodeSearchMaxShardSizeGb && nullNodeSearchMaxShardSizeGb.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SearchMaxShardSizeGb = null;
-            if (parseNode.GetChildNode("search_min_docs_before_rollover") is null) { _explicitNullValueSearchMinDocsBeforeRollover = default!; _explicitNullProperties?.Remove("search_min_docs_before_rollover"); }
-            else if (parseNode.GetChildNode("search_min_docs_before_rollover") is { } nullNodeSearchMinDocsBeforeRollover && nullNodeSearchMinDocsBeforeRollover.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SearchMinDocsBeforeRollover = null;
             if (parseNode.GetChildNode("search_rate_limit") is null) { _explicitNullValueSearchRateLimit = default!; _explicitNullProperties?.Remove("search_rate_limit"); }
             else if (parseNode.GetChildNode("search_rate_limit") is { } nullNodeSearchRateLimit && nullNodeSearchRateLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SearchRateLimit = null;
             if (parseNode.GetChildNode("search_rate_limit_allowlist_raw") is null) { _explicitNullValueSearchRateLimitAllowlistRaw = default!; _explicitNullProperties?.Remove("search_rate_limit_allowlist_raw"); }
@@ -5353,36 +5347,6 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string ScanExecutionPoliciesScheduleLimit { get => _explicitNullValueScanExecutionPoliciesScheduleLimit; set { _explicitNullValueScanExecutionPoliciesScheduleLimit = value; AdditionalData?.Remove("scan_execution_policies_schedule_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scan_execution_policies_schedule_limit"); else _explicitNullProperties?.Remove("scan_execution_policies_schedule_limit"); } }
         private string _explicitNullValueScanExecutionPoliciesScheduleLimit = default!;
 #endif
-        /// <summary>The search_max_docs_denominator property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? SearchMaxDocsDenominator { get => _explicitNullValueSearchMaxDocsDenominator; set { _explicitNullValueSearchMaxDocsDenominator = value; AdditionalData?.Remove("search_max_docs_denominator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("search_max_docs_denominator"); else _explicitNullProperties?.Remove("search_max_docs_denominator"); } }
-        private string? _explicitNullValueSearchMaxDocsDenominator = default!;
-#nullable restore
-#else
-        public string SearchMaxDocsDenominator { get => _explicitNullValueSearchMaxDocsDenominator; set { _explicitNullValueSearchMaxDocsDenominator = value; AdditionalData?.Remove("search_max_docs_denominator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("search_max_docs_denominator"); else _explicitNullProperties?.Remove("search_max_docs_denominator"); } }
-        private string _explicitNullValueSearchMaxDocsDenominator = default!;
-#endif
-        /// <summary>The search_max_shard_size_gb property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? SearchMaxShardSizeGb { get => _explicitNullValueSearchMaxShardSizeGb; set { _explicitNullValueSearchMaxShardSizeGb = value; AdditionalData?.Remove("search_max_shard_size_gb"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("search_max_shard_size_gb"); else _explicitNullProperties?.Remove("search_max_shard_size_gb"); } }
-        private string? _explicitNullValueSearchMaxShardSizeGb = default!;
-#nullable restore
-#else
-        public string SearchMaxShardSizeGb { get => _explicitNullValueSearchMaxShardSizeGb; set { _explicitNullValueSearchMaxShardSizeGb = value; AdditionalData?.Remove("search_max_shard_size_gb"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("search_max_shard_size_gb"); else _explicitNullProperties?.Remove("search_max_shard_size_gb"); } }
-        private string _explicitNullValueSearchMaxShardSizeGb = default!;
-#endif
-        /// <summary>The search_min_docs_before_rollover property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? SearchMinDocsBeforeRollover { get => _explicitNullValueSearchMinDocsBeforeRollover; set { _explicitNullValueSearchMinDocsBeforeRollover = value; AdditionalData?.Remove("search_min_docs_before_rollover"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("search_min_docs_before_rollover"); else _explicitNullProperties?.Remove("search_min_docs_before_rollover"); } }
-        private string? _explicitNullValueSearchMinDocsBeforeRollover = default!;
-#nullable restore
-#else
-        public string SearchMinDocsBeforeRollover { get => _explicitNullValueSearchMinDocsBeforeRollover; set { _explicitNullValueSearchMinDocsBeforeRollover = value; AdditionalData?.Remove("search_min_docs_before_rollover"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("search_min_docs_before_rollover"); else _explicitNullProperties?.Remove("search_min_docs_before_rollover"); } }
-        private string _explicitNullValueSearchMinDocsBeforeRollover = default!;
-#endif
         /// <summary>Maximum number of requests per minute for performing a search while authenticated. Default: `30`. To disable throttling, set to `0`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -7547,9 +7511,6 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "scan_execution_policies_action_limit", n => { ScanExecutionPoliciesActionLimit = n.GetStringValue(); } },
                 { "scan_execution_policies_per_configuration_limit", n => { ScanExecutionPoliciesPerConfigurationLimit = n.GetStringValue(); } },
                 { "scan_execution_policies_schedule_limit", n => { ScanExecutionPoliciesScheduleLimit = n.GetStringValue(); } },
-                { "search_max_docs_denominator", n => { SearchMaxDocsDenominator = n.GetStringValue(); } },
-                { "search_max_shard_size_gb", n => { SearchMaxShardSizeGb = n.GetStringValue(); } },
-                { "search_min_docs_before_rollover", n => { SearchMinDocsBeforeRollover = n.GetStringValue(); } },
                 { "search_rate_limit", n => { SearchRateLimit = n.GetStringValue(); } },
                 { "search_rate_limit_allowlist_raw", n => { SearchRateLimitAllowlistRaw = n.GetStringValue(); } },
                 { "search_rate_limit_unauthenticated", n => { SearchRateLimitUnauthenticated = n.GetStringValue(); } },
@@ -8256,9 +8217,6 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("scan_execution_policies_action_limit", ScanExecutionPoliciesActionLimit);
             writer.WriteStringValue("scan_execution_policies_per_configuration_limit", ScanExecutionPoliciesPerConfigurationLimit);
             writer.WriteStringValue("scan_execution_policies_schedule_limit", ScanExecutionPoliciesScheduleLimit);
-            writer.WriteStringValue("search_max_docs_denominator", SearchMaxDocsDenominator);
-            writer.WriteStringValue("search_max_shard_size_gb", SearchMaxShardSizeGb);
-            writer.WriteStringValue("search_min_docs_before_rollover", SearchMinDocsBeforeRollover);
             writer.WriteStringValue("search_rate_limit", SearchRateLimit);
             writer.WriteStringValue("search_rate_limit_allowlist_raw", SearchRateLimitAllowlistRaw);
             writer.WriteStringValue("search_rate_limit_unauthenticated", SearchRateLimitUnauthenticated);

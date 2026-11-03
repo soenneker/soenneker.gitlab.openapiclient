@@ -135412,15 +135412,6 @@
           "repository_size_limit": {
             "type": "string"
           },
-          "search_max_shard_size_gb": {
-            "type": "string"
-          },
-          "search_max_docs_denominator": {
-            "type": "string"
-          },
-          "search_min_docs_before_rollover": {
-            "type": "string"
-          },
           "secret_detection_token_revocation_enabled": {
             "type": "string"
           },
@@ -157133,18 +157124,6 @@
             "type": "string",
             "nullable": true
           },
-          "search_max_shard_size_gb": {
-            "type": "string",
-            "nullable": true
-          },
-          "search_max_docs_denominator": {
-            "type": "string",
-            "nullable": true
-          },
-          "search_min_docs_before_rollover": {
-            "type": "string",
-            "nullable": true
-          },
           "secret_detection_token_revocation_token": {
             "type": "string",
             "nullable": true
@@ -173944,7 +173923,8 @@
           },
           "organization_id": {
             "type": "integer",
-            "description": "The ID of the organization that the group will be part of. "
+            "description": "The ID of the organization that the group will be part of. Defaults to the organization of the parent group if \u0060parent_id\u0060 is provided, otherwise the current organization.",
+            "nullable": true
           }
         }
       },
@@ -176076,7 +176056,8 @@
           },
           "organization_id": {
             "type": "integer",
-            "description": "The organization id for the group"
+            "description": "The organization id for the group. Defaults to the organization of the parent group if \u0060parent_id\u0060 is provided, otherwise the current organization.",
+            "nullable": true
           },
           "description": {
             "type": "string",

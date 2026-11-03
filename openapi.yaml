@@ -94309,12 +94309,6 @@ components:
           type: string
         repository_size_limit:
           type: string
-        search_max_shard_size_gb:
-          type: string
-        search_max_docs_denominator:
-          type: string
-        search_min_docs_before_rollover:
-          type: string
         secret_detection_token_revocation_enabled:
           type: string
         secret_detection_token_revocation_url:
@@ -114126,15 +114120,6 @@ components:
         model_prompt_cache_enabled:
           type: string
           nullable: true
-        search_max_shard_size_gb:
-          type: string
-          nullable: true
-        search_max_docs_denominator:
-          type: string
-          nullable: true
-        search_min_docs_before_rollover:
-          type: string
-          nullable: true
         secret_detection_token_revocation_token:
           type: string
           nullable: true
@@ -132060,7 +132045,10 @@ components:
           nullable: true
         organization_id:
           type: integer
-          description: 'The ID of the organization that the group will be part of. '
+          description: The ID of the organization that the group will be part of.
+            Defaults to the organization of the parent group if `parent_id` is provided,
+            otherwise the current organization.
+          nullable: true
       required:
       - path
       - name
@@ -135312,7 +135300,10 @@ components:
           nullable: true
         organization_id:
           type: integer
-          description: The organization id for the group
+          description: The organization id for the group. Defaults to the organization
+            of the parent group if `parent_id` is provided, otherwise the current
+            organization.
+          nullable: true
         description:
           type: string
           description: The description of the group
