@@ -295,10 +295,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Merge_requests
             [QueryParameter("not%5Bmy_reaction_emoji%5D")]
             public string NotmyReactionEmoji { get; set; }
 #endif
-            /// <summary>`&lt;Negated&gt;` Returns merge requests which have the user as a reviewer with the given user `id`. `None` returns merge requests with no reviewers. `Any` returns merge requests with any reviewer. Mutually exclusive with `not[reviewer_username]`.</summary>
+            /// <summary>`&lt;Negated&gt;` Returns merge requests which have the user as a reviewer with the given user `id`. Mutually exclusive with `not[reviewer_username]`.</summary>
             [QueryParameter("not%5Breviewer_id%5D")]
             public int? NotreviewerId { get; set; }
-            /// <summary>`&lt;Negated&gt;` Returns merge requests which have the user as a reviewer with the given `username`. `None` returns merge requests with no reviewers. `Any` returns merge requests with any reviewer. Introduced in GitLab 13.8. Mutually exclusive with `not[reviewer_id]`.</summary>
+            /// <summary>`&lt;Negated&gt;` Returns merge requests which have the user as a reviewer with the given `username`. Introduced in GitLab 13.8. Mutually exclusive with `not[reviewer_id]`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("not%5Breviewer_username%5D")]
@@ -320,7 +320,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Merge_requests
             /// <summary>Returns merge requests which have the user as a reviewer with the given user `id`. `None` returns merge requests with no reviewers. `Any` returns merge requests with any reviewer. Mutually exclusive with `reviewer_username`.</summary>
             [QueryParameter("reviewer_id")]
             public int? ReviewerId { get; set; }
-            /// <summary>Returns merge requests which have the user as a reviewer with the given `username`. `None` returns merge requests with no reviewers. `Any` returns merge requests with any reviewer. Introduced in GitLab 13.8. Mutually exclusive with `reviewer_id`.</summary>
+            /// <summary>Returns merge requests which have the user as a reviewer with the given `username`. Introduced in GitLab 13.8. Mutually exclusive with `reviewer_id`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("reviewer_username")]

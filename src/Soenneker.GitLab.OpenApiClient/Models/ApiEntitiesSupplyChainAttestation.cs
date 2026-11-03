@@ -35,6 +35,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             else if (parseNode.GetChildNode("predicate_type") is { } nullNodePredicateType && nullNodePredicateType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PredicateType = null;
             if (parseNode.GetChildNode("project_id") is null) { _explicitNullValueProjectId = default!; _explicitNullProperties?.Remove("project_id"); }
             else if (parseNode.GetChildNode("project_id") is { } nullNodeProjectId && nullNodeProjectId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProjectId = null;
+            if (parseNode.GetChildNode("signing_method") is null) { _explicitNullValueSigningMethod = default!; _explicitNullProperties?.Remove("signing_method"); }
+            else if (parseNode.GetChildNode("signing_method") is { } nullNodeSigningMethod && nullNodeSigningMethod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SigningMethod = null;
             if (parseNode.GetChildNode("status") is null) { _explicitNullValueStatus = default!; _explicitNullProperties?.Remove("status"); }
             else if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
             if (parseNode.GetChildNode("subject_digest") is null) { _explicitNullValueSubjectDigest = default!; _explicitNullProperties?.Remove("subject_digest"); }
@@ -93,6 +95,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The project_id property</summary>
         public long? ProjectId { get => _explicitNullValueProjectId; set { _explicitNullValueProjectId = value; AdditionalData?.Remove("project_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_id"); else _explicitNullProperties?.Remove("project_id"); } }
         private long? _explicitNullValueProjectId = default!;
+        /// <summary>The signing_method property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSupplyChainAttestationSigningMethod? SigningMethod { get => _explicitNullValueSigningMethod; set { _explicitNullValueSigningMethod = value; AdditionalData?.Remove("signing_method"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signing_method"); else _explicitNullProperties?.Remove("signing_method"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSupplyChainAttestationSigningMethod? _explicitNullValueSigningMethod = default!;
         /// <summary>The status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -150,6 +155,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "predicate_kind", n => { PredicateKind = n.GetStringValue(); } },
                 { "predicate_type", n => { PredicateType = n.GetStringValue(); } },
                 { "project_id", n => { ProjectId = n.GetLongValue(); } },
+                { "signing_method", n => { var parsed = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSupplyChainAttestationSigningMethod>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueSigningMethod = default; _explicitNullProperties?.Remove("signing_method"); AdditionalData["signing_method"] = unknown; } else { SigningMethod = parsed; AdditionalData.Remove("signing_method"); } } },
                 { "status", n => { Status = n.GetStringValue(); } },
                 { "subject_digest", n => { SubjectDigest = n.GetStringValue(); } },
                 { "updated_at", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
@@ -171,6 +177,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("predicate_kind", PredicateKind);
             writer.WriteStringValue("predicate_type", PredicateType);
             writer.WriteLongValue("project_id", ProjectId);
+            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSupplyChainAttestationSigningMethod>("signing_method", SigningMethod);
             writer.WriteStringValue("status", Status);
             writer.WriteStringValue("subject_digest", SubjectDigest);
             writer.WriteDateTimeOffsetValue("updated_at", UpdatedAt);

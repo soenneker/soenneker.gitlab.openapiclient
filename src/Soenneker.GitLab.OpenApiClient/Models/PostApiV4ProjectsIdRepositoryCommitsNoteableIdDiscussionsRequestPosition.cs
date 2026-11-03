@@ -24,6 +24,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             else if (parseNode.GetChildNode("head_sha") is { } nullNodeHeadSha && nullNodeHeadSha.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HeadSha = null;
             if (parseNode.GetChildNode("height") is null) { _explicitNullValueHeight = default!; _explicitNullProperties?.Remove("height"); }
             else if (parseNode.GetChildNode("height") is { } nullNodeHeight && nullNodeHeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Height = null;
+            if (parseNode.GetChildNode("line_range") is null) { _explicitNullValueLineRange = default!; _explicitNullProperties?.Remove("line_range"); }
+            else if (parseNode.GetChildNode("line_range") is { } nullNodeLineRange && nullNodeLineRange.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LineRange = null;
             if (parseNode.GetChildNode("new_line") is null) { _explicitNullValueNewLine = default!; _explicitNullProperties?.Remove("new_line"); }
             else if (parseNode.GetChildNode("new_line") is { } nullNodeNewLine && nullNodeNewLine.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewLine = null;
             if (parseNode.GetChildNode("new_path") is null) { _explicitNullValueNewPath = default!; _explicitNullProperties?.Remove("new_path"); }
@@ -69,6 +71,16 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Height of the image</summary>
         public int? Height { get => _explicitNullValueHeight; set { _explicitNullValueHeight = value; AdditionalData?.Remove("height"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("height"); else _explicitNullProperties?.Remove("height"); } }
         private int? _explicitNullValueHeight = default!;
+        /// <summary>Multi-line start and end</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdRepositoryCommitsNoteableIdDiscussionsRequestPositionLineRange? LineRange { get => _explicitNullValueLineRange; set { _explicitNullValueLineRange = value; AdditionalData?.Remove("line_range"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("line_range"); else _explicitNullProperties?.Remove("line_range"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdRepositoryCommitsNoteableIdDiscussionsRequestPositionLineRange? _explicitNullValueLineRange = default!;
+#nullable restore
+#else
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdRepositoryCommitsNoteableIdDiscussionsRequestPositionLineRange LineRange { get => _explicitNullValueLineRange; set { _explicitNullValueLineRange = value; AdditionalData?.Remove("line_range"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("line_range"); else _explicitNullProperties?.Remove("line_range"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdRepositoryCommitsNoteableIdDiscussionsRequestPositionLineRange _explicitNullValueLineRange = default!;
+#endif
         /// <summary>Line number after change</summary>
         public int? NewLine { get => _explicitNullValueNewLine; set { _explicitNullValueNewLine = value; AdditionalData?.Remove("new_line"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_line"); else _explicitNullProperties?.Remove("new_line"); } }
         private int? _explicitNullValueNewLine = default!;
@@ -147,6 +159,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "base_sha", n => { BaseSha = n.GetStringValue(); } },
                 { "head_sha", n => { HeadSha = n.GetStringValue(); } },
                 { "height", n => { Height = n.GetIntValue(); } },
+                { "line_range", n => { LineRange = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdRepositoryCommitsNoteableIdDiscussionsRequestPositionLineRange>(global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdRepositoryCommitsNoteableIdDiscussionsRequestPositionLineRange.CreateFromDiscriminatorValue); } },
                 { "new_line", n => { NewLine = n.GetIntValue(); } },
                 { "new_path", n => { NewPath = n.GetStringValue(); } },
                 { "old_line", n => { OldLine = n.GetIntValue(); } },
@@ -168,6 +181,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("base_sha", BaseSha);
             writer.WriteStringValue("head_sha", HeadSha);
             writer.WriteIntValue("height", Height);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdRepositoryCommitsNoteableIdDiscussionsRequestPositionLineRange>("line_range", LineRange);
             writer.WriteIntValue("new_line", NewLine);
             writer.WriteStringValue("new_path", NewPath);
             writer.WriteIntValue("old_line", OldLine);

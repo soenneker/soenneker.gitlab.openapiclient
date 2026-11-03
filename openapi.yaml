@@ -3364,6 +3364,32 @@ paths:
           application/json:
             schema:
               "$ref": "#/components/schemas/patchApiV4AiDuoWorkflowsWorkflowsIdRequest"
+  "/api/v4/ai/duo_workflows/workflows/{id}/catalog_items":
+    get:
+      operationId: getApiV4AiDuoWorkflowsWorkflowsIdCatalogItems
+      summary: Get the AI Catalog item a workflow runs, with its sub-items
+      description: Returns the saved AI Catalog item this session runs and its resolved
+        subagents. A subagent the user cannot use has an error instead of a definition.
+      tags:
+      - GitLab Duo workflows
+      - Internal operations
+      responses:
+        '200':
+          description: OK
+        '404':
+          description: The flow was not found or the user cannot read it
+        '422':
+          description: Workflow does not run a saved AI Catalog item
+        '400':
+          description: Bad Request
+      parameters:
+      - name: id
+        required: true
+        description: The ID of the workflow
+        schema:
+          type: integer
+        in: path
+        example: 1
   "/api/v4/ai/duo_workflows/workflows/{id}/checkpoints":
     post:
       operationId: postApiV4AiDuoWorkflowsWorkflowsIdCheckpoints
@@ -43111,6 +43137,40 @@ paths:
           type: integer
         in: path
       x-gitlab-lifecycle: experiment
+  "/api/v4/organizations/{id}/transfer_users":
+    post:
+      operationId: postApiV4OrganizationsIdTransferUsers
+      summary: Transfer users to an organization
+      description: Transfers ownership of users to the organization, including their
+        personal namespaces and projects. All users must currently belong to the same
+        organization. This feature was introduced in GitLab 19.6.
+      tags:
+      - Organizations
+      responses:
+        '202':
+          description: Accepted
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not found
+      parameters:
+      - name: id
+        required: true
+        description: The ID of the organization to transfer the users to.
+        schema:
+          type: integer
+        in: path
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              "$ref": "#/components/schemas/postApiV4OrganizationsIdTransferUsersRequest"
+      x-gitlab-lifecycle: experiment
   "/api/v4/offline_exports":
     post:
       operationId: postApiV4OfflineExports
@@ -45918,9 +45978,8 @@ paths:
       - name: reviewer_username
         required: false
         description: Returns merge requests which have the user as a reviewer with
-          the given `username`. `None` returns merge requests with no reviewers. `Any`
-          returns merge requests with any reviewer. Introduced in GitLab 13.8. Mutually
-          exclusive with `reviewer_id`.
+          the given `username`. Introduced in GitLab 13.8. Mutually exclusive with
+          `reviewer_id`.
         schema:
           type: string
           nullable: true
@@ -46217,9 +46276,8 @@ paths:
       - name: not[reviewer_username]
         required: false
         description: "`<Negated>` Returns merge requests which have the user as a
-          reviewer with the given `username`. `None` returns merge requests with no
-          reviewers. `Any` returns merge requests with any reviewer. Introduced in
-          GitLab 13.8. Mutually exclusive with `not[reviewer_id]`."
+          reviewer with the given `username`. Introduced in GitLab 13.8. Mutually
+          exclusive with `not[reviewer_id]`."
         schema:
           type: string
           nullable: true
@@ -46256,9 +46314,7 @@ paths:
       - name: not[reviewer_id]
         required: false
         description: "`<Negated>` Returns merge requests which have the user as a
-          reviewer with the given user `id`. `None` returns merge requests with no
-          reviewers. `Any` returns merge requests with any reviewer. Mutually exclusive
-          with `not[reviewer_username]`."
+          reviewer with the given user `id`. Mutually exclusive with `not[reviewer_username]`."
         schema:
           type: integer
           nullable: true
@@ -46439,9 +46495,8 @@ paths:
       - name: reviewer_username
         required: false
         description: Returns merge requests which have the user as a reviewer with
-          the given `username`. `None` returns merge requests with no reviewers. `Any`
-          returns merge requests with any reviewer. Introduced in GitLab 13.8. Mutually
-          exclusive with `reviewer_id`.
+          the given `username`. Introduced in GitLab 13.8. Mutually exclusive with
+          `reviewer_id`.
         schema:
           type: string
           nullable: true
@@ -46738,9 +46793,8 @@ paths:
       - name: not[reviewer_username]
         required: false
         description: "`<Negated>` Returns merge requests which have the user as a
-          reviewer with the given `username`. `None` returns merge requests with no
-          reviewers. `Any` returns merge requests with any reviewer. Introduced in
-          GitLab 13.8. Mutually exclusive with `not[reviewer_id]`."
+          reviewer with the given `username`. Introduced in GitLab 13.8. Mutually
+          exclusive with `not[reviewer_id]`."
         schema:
           type: string
           nullable: true
@@ -46777,9 +46831,7 @@ paths:
       - name: not[reviewer_id]
         required: false
         description: "`<Negated>` Returns merge requests which have the user as a
-          reviewer with the given user `id`. `None` returns merge requests with no
-          reviewers. `Any` returns merge requests with any reviewer. Mutually exclusive
-          with `not[reviewer_username]`."
+          reviewer with the given user `id`. Mutually exclusive with `not[reviewer_username]`."
         schema:
           type: integer
           nullable: true
@@ -47153,9 +47205,8 @@ paths:
       - name: reviewer_username
         required: false
         description: Returns merge requests which have the user as a reviewer with
-          the given `username`. `None` returns merge requests with no reviewers. `Any`
-          returns merge requests with any reviewer. Introduced in GitLab 13.8. Mutually
-          exclusive with `reviewer_id`.
+          the given `username`. Introduced in GitLab 13.8. Mutually exclusive with
+          `reviewer_id`.
         schema:
           type: string
           nullable: true
@@ -47452,9 +47503,8 @@ paths:
       - name: not[reviewer_username]
         required: false
         description: "`<Negated>` Returns merge requests which have the user as a
-          reviewer with the given `username`. `None` returns merge requests with no
-          reviewers. `Any` returns merge requests with any reviewer. Introduced in
-          GitLab 13.8. Mutually exclusive with `not[reviewer_id]`."
+          reviewer with the given `username`. Introduced in GitLab 13.8. Mutually
+          exclusive with `not[reviewer_id]`."
         schema:
           type: string
           nullable: true
@@ -47491,9 +47541,7 @@ paths:
       - name: not[reviewer_id]
         required: false
         description: "`<Negated>` Returns merge requests which have the user as a
-          reviewer with the given user `id`. `None` returns merge requests with no
-          reviewers. `Any` returns merge requests with any reviewer. Mutually exclusive
-          with `not[reviewer_username]`."
+          reviewer with the given user `id`. Mutually exclusive with `not[reviewer_username]`."
         schema:
           type: integer
           nullable: true
@@ -61329,6 +61377,8 @@ paths:
           description: Too Many Requests
         '500':
           description: Internal server error
+        '503':
+          description: Service unavailable
       requestBody:
         required: true
         content:
@@ -65861,9 +65911,8 @@ paths:
       - name: reviewer_username
         required: false
         description: Returns merge requests which have the user as a reviewer with
-          the given `username`. `None` returns merge requests with no reviewers. `Any`
-          returns merge requests with any reviewer. Introduced in GitLab 13.8. Mutually
-          exclusive with `reviewer_id`.
+          the given `username`. Introduced in GitLab 13.8. Mutually exclusive with
+          `reviewer_id`.
         schema:
           type: string
           nullable: true
@@ -66160,9 +66209,8 @@ paths:
       - name: not[reviewer_username]
         required: false
         description: "`<Negated>` Returns merge requests which have the user as a
-          reviewer with the given `username`. `None` returns merge requests with no
-          reviewers. `Any` returns merge requests with any reviewer. Introduced in
-          GitLab 13.8. Mutually exclusive with `not[reviewer_id]`."
+          reviewer with the given `username`. Introduced in GitLab 13.8. Mutually
+          exclusive with `not[reviewer_id]`."
         schema:
           type: string
           nullable: true
@@ -66199,9 +66247,7 @@ paths:
       - name: not[reviewer_id]
         required: false
         description: "`<Negated>` Returns merge requests which have the user as a
-          reviewer with the given user `id`. `None` returns merge requests with no
-          reviewers. `Any` returns merge requests with any reviewer. Mutually exclusive
-          with `not[reviewer_username]`."
+          reviewer with the given user `id`. Mutually exclusive with `not[reviewer_username]`."
         schema:
           type: integer
           nullable: true
@@ -80637,8 +80683,10 @@ paths:
     post:
       operationId: postApiV4BulkImportsImportIdCancel
       summary: Cancel a migration
-      description: Cancels a direct transfer migration. This feature was introduced
-        in GitLab 17.1.
+      description: Cancels a direct transfer or offline transfer migration. Migrations
+        that already finished, failed, timed out, or were canceled keep their status,
+        but any entities still running are canceled. This feature was introduced in
+        GitLab 17.1.
       tags:
       - Imports
       responses:
@@ -95361,6 +95409,12 @@ components:
         subject_digest:
           type: string
           example: 5db1fee4b5703808c48078a76768b155b421b210c0761cd6a5d223f4d99f1eaa
+        signing_method:
+          type: string
+          enum:
+          - sigstore
+          - local_ca
+          example: local_ca
         download_url:
           type: string
     APIEntitiesCommitStats:
@@ -115917,6 +115971,53 @@ components:
               type: integer
               description: Y coordinate in the image
               nullable: true
+            line_range:
+              type: object
+              description: Multi-line start and end
+              properties:
+                start:
+                  type: object
+                  description: Start line for a multi-line note
+                  properties:
+                    line_code:
+                      type: string
+                      description: Start line code for multi-line note
+                      nullable: true
+                    type:
+                      type: string
+                      description: Start line type for multi-line note
+                      nullable: true
+                    old_line:
+                      type: integer
+                      description: Start old_line line number
+                      nullable: true
+                    new_line:
+                      type: integer
+                      description: Start new_line line number
+                      nullable: true
+                  nullable: true
+                end:
+                  type: object
+                  description: End line for a multi-line note
+                  properties:
+                    line_code:
+                      type: string
+                      description: End line code for multi-line note
+                      nullable: true
+                    type:
+                      type: string
+                      description: End line type for multi-line note
+                      nullable: true
+                    old_line:
+                      type: integer
+                      description: End old_line line number
+                      nullable: true
+                    new_line:
+                      type: integer
+                      description: End new_line line number
+                      nullable: true
+                  nullable: true
+              nullable: true
           required:
           - base_sha
           - start_sha
@@ -119424,7 +119525,7 @@ components:
           nullable: true
         ci_default_git_depth:
           type: integer
-          description: Default number of revisions for shallow cloning
+          description: Default Git depth for shallow cloning
           nullable: true
         keep_latest_artifact:
           type: boolean
@@ -122712,6 +122813,17 @@ components:
       required:
       - name
       - path
+    postApiV4OrganizationsIdTransferUsersRequest:
+      type: object
+      properties:
+        user_ids:
+          type: array
+          items:
+            type: integer
+          description: The IDs of the users to transfer. Maximum 50.
+          nullable: true
+      required:
+      - user_ids
     postApiV4OfflineExportsRequest:
       type: object
       properties:

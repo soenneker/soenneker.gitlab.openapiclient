@@ -4,6 +4,7 @@ using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Organizations.Item.Restore;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Organizations.Item.Transfer_users;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -21,6 +22,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Organizations.Item
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Organizations.Item.Restore.RestoreRequestBuilder Restore
         {
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Organizations.Item.Restore.RestoreRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The transfer_users property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Organizations.Item.Transfer_users.Transfer_usersRequestBuilder Transfer_users
+        {
+            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Organizations.Item.Transfer_users.Transfer_usersRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Organizations.Item.OrganizationsItemRequestBuilder"/> and sets the default values.

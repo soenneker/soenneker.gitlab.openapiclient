@@ -2379,6 +2379,43 @@
         }
       }
     },
+    "/api/v4/ai/duo_workflows/workflows/{id}/catalog_items": {
+      "get": {
+        "tags": [
+          "GitLab Duo workflows",
+          "Internal operations"
+        ],
+        "summary": "Get the AI Catalog item a workflow runs, with its sub-items",
+        "description": "Returns the saved AI Catalog item this session runs and its resolved subagents. A subagent the user cannot use has an error instead of a definition.",
+        "operationId": "GetApiV4AiDuoWorkflowsWorkflowsIdCatalogItems",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The ID of the workflow",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            },
+            "example": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "The flow was not found or the user cannot read it"
+          },
+          "422": {
+            "description": "Workflow does not run a saved AI Catalog item"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      }
+    },
     "/api/v4/ai/duo_workflows/workflows/{id}/checkpoints": {
       "post": {
         "tags": [
@@ -61380,6 +61417,55 @@
         "x-gitlab-lifecycle": "experiment"
       }
     },
+    "/api/v4/organizations/{id}/transfer_users": {
+      "post": {
+        "tags": [
+          "Organizations"
+        ],
+        "summary": "Transfer users to an organization",
+        "description": "Transfers ownership of users to the organization, including their personal namespaces and projects. All users must currently belong to the same organization. This feature was introduced in GitLab 19.6.",
+        "operationId": "PostApiV4OrganizationsIdTransferUsers",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The ID of the organization to transfer the users to.",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PostApiV4OrganizationsIdTransferUsersRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "202": {
+            "description": "Accepted"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
+          }
+        },
+        "x-gitlab-lifecycle": "experiment"
+      }
+    },
     "/api/v4/offline_exports": {
       "post": {
         "tags": [
@@ -65796,7 +65882,7 @@
           {
             "name": "reviewer_username",
             "in": "query",
-            "description": "Returns merge requests which have the user as a reviewer with the given \u0060username\u0060. \u0060None\u0060 returns merge requests with no reviewers. \u0060Any\u0060 returns merge requests with any reviewer. Introduced in GitLab 13.8. Mutually exclusive with \u0060reviewer_id\u0060.",
+            "description": "Returns merge requests which have the user as a reviewer with the given \u0060username\u0060. Introduced in GitLab 13.8. Mutually exclusive with \u0060reviewer_id\u0060.",
             "schema": {
               "type": "string",
               "nullable": true
@@ -66096,7 +66182,7 @@
           {
             "name": "not[reviewer_username]",
             "in": "query",
-            "description": "\u0060\u003CNegated\u003E\u0060 Returns merge requests which have the user as a reviewer with the given \u0060username\u0060. \u0060None\u0060 returns merge requests with no reviewers. \u0060Any\u0060 returns merge requests with any reviewer. Introduced in GitLab 13.8. Mutually exclusive with \u0060not[reviewer_id]\u0060.",
+            "description": "\u0060\u003CNegated\u003E\u0060 Returns merge requests which have the user as a reviewer with the given \u0060username\u0060. Introduced in GitLab 13.8. Mutually exclusive with \u0060not[reviewer_id]\u0060.",
             "schema": {
               "type": "string",
               "nullable": true
@@ -66135,7 +66221,7 @@
           {
             "name": "not[reviewer_id]",
             "in": "query",
-            "description": "\u0060\u003CNegated\u003E\u0060 Returns merge requests which have the user as a reviewer with the given user \u0060id\u0060. \u0060None\u0060 returns merge requests with no reviewers. \u0060Any\u0060 returns merge requests with any reviewer. Mutually exclusive with \u0060not[reviewer_username]\u0060.",
+            "description": "\u0060\u003CNegated\u003E\u0060 Returns merge requests which have the user as a reviewer with the given user \u0060id\u0060. Mutually exclusive with \u0060not[reviewer_username]\u0060.",
             "schema": {
               "type": "integer",
               "nullable": true
@@ -66363,7 +66449,7 @@
           {
             "name": "reviewer_username",
             "in": "query",
-            "description": "Returns merge requests which have the user as a reviewer with the given \u0060username\u0060. \u0060None\u0060 returns merge requests with no reviewers. \u0060Any\u0060 returns merge requests with any reviewer. Introduced in GitLab 13.8. Mutually exclusive with \u0060reviewer_id\u0060.",
+            "description": "Returns merge requests which have the user as a reviewer with the given \u0060username\u0060. Introduced in GitLab 13.8. Mutually exclusive with \u0060reviewer_id\u0060.",
             "schema": {
               "type": "string",
               "nullable": true
@@ -66663,7 +66749,7 @@
           {
             "name": "not[reviewer_username]",
             "in": "query",
-            "description": "\u0060\u003CNegated\u003E\u0060 Returns merge requests which have the user as a reviewer with the given \u0060username\u0060. \u0060None\u0060 returns merge requests with no reviewers. \u0060Any\u0060 returns merge requests with any reviewer. Introduced in GitLab 13.8. Mutually exclusive with \u0060not[reviewer_id]\u0060.",
+            "description": "\u0060\u003CNegated\u003E\u0060 Returns merge requests which have the user as a reviewer with the given \u0060username\u0060. Introduced in GitLab 13.8. Mutually exclusive with \u0060not[reviewer_id]\u0060.",
             "schema": {
               "type": "string",
               "nullable": true
@@ -66702,7 +66788,7 @@
           {
             "name": "not[reviewer_id]",
             "in": "query",
-            "description": "\u0060\u003CNegated\u003E\u0060 Returns merge requests which have the user as a reviewer with the given user \u0060id\u0060. \u0060None\u0060 returns merge requests with no reviewers. \u0060Any\u0060 returns merge requests with any reviewer. Mutually exclusive with \u0060not[reviewer_username]\u0060.",
+            "description": "\u0060\u003CNegated\u003E\u0060 Returns merge requests which have the user as a reviewer with the given user \u0060id\u0060. Mutually exclusive with \u0060not[reviewer_username]\u0060.",
             "schema": {
               "type": "integer",
               "nullable": true
@@ -67294,7 +67380,7 @@
           {
             "name": "reviewer_username",
             "in": "query",
-            "description": "Returns merge requests which have the user as a reviewer with the given \u0060username\u0060. \u0060None\u0060 returns merge requests with no reviewers. \u0060Any\u0060 returns merge requests with any reviewer. Introduced in GitLab 13.8. Mutually exclusive with \u0060reviewer_id\u0060.",
+            "description": "Returns merge requests which have the user as a reviewer with the given \u0060username\u0060. Introduced in GitLab 13.8. Mutually exclusive with \u0060reviewer_id\u0060.",
             "schema": {
               "type": "string",
               "nullable": true
@@ -67594,7 +67680,7 @@
           {
             "name": "not[reviewer_username]",
             "in": "query",
-            "description": "\u0060\u003CNegated\u003E\u0060 Returns merge requests which have the user as a reviewer with the given \u0060username\u0060. \u0060None\u0060 returns merge requests with no reviewers. \u0060Any\u0060 returns merge requests with any reviewer. Introduced in GitLab 13.8. Mutually exclusive with \u0060not[reviewer_id]\u0060.",
+            "description": "\u0060\u003CNegated\u003E\u0060 Returns merge requests which have the user as a reviewer with the given \u0060username\u0060. Introduced in GitLab 13.8. Mutually exclusive with \u0060not[reviewer_id]\u0060.",
             "schema": {
               "type": "string",
               "nullable": true
@@ -67633,7 +67719,7 @@
           {
             "name": "not[reviewer_id]",
             "in": "query",
-            "description": "\u0060\u003CNegated\u003E\u0060 Returns merge requests which have the user as a reviewer with the given user \u0060id\u0060. \u0060None\u0060 returns merge requests with no reviewers. \u0060Any\u0060 returns merge requests with any reviewer. Mutually exclusive with \u0060not[reviewer_username]\u0060.",
+            "description": "\u0060\u003CNegated\u003E\u0060 Returns merge requests which have the user as a reviewer with the given user \u0060id\u0060. Mutually exclusive with \u0060not[reviewer_username]\u0060.",
             "schema": {
               "type": "integer",
               "nullable": true
@@ -88132,6 +88218,9 @@
           },
           "500": {
             "description": "Internal server error"
+          },
+          "503": {
+            "description": "Service unavailable"
           }
         }
       }
@@ -94847,7 +94936,7 @@
           {
             "name": "reviewer_username",
             "in": "query",
-            "description": "Returns merge requests which have the user as a reviewer with the given \u0060username\u0060. \u0060None\u0060 returns merge requests with no reviewers. \u0060Any\u0060 returns merge requests with any reviewer. Introduced in GitLab 13.8. Mutually exclusive with \u0060reviewer_id\u0060.",
+            "description": "Returns merge requests which have the user as a reviewer with the given \u0060username\u0060. Introduced in GitLab 13.8. Mutually exclusive with \u0060reviewer_id\u0060.",
             "schema": {
               "type": "string",
               "nullable": true
@@ -95147,7 +95236,7 @@
           {
             "name": "not[reviewer_username]",
             "in": "query",
-            "description": "\u0060\u003CNegated\u003E\u0060 Returns merge requests which have the user as a reviewer with the given \u0060username\u0060. \u0060None\u0060 returns merge requests with no reviewers. \u0060Any\u0060 returns merge requests with any reviewer. Introduced in GitLab 13.8. Mutually exclusive with \u0060not[reviewer_id]\u0060.",
+            "description": "\u0060\u003CNegated\u003E\u0060 Returns merge requests which have the user as a reviewer with the given \u0060username\u0060. Introduced in GitLab 13.8. Mutually exclusive with \u0060not[reviewer_id]\u0060.",
             "schema": {
               "type": "string",
               "nullable": true
@@ -95186,7 +95275,7 @@
           {
             "name": "not[reviewer_id]",
             "in": "query",
-            "description": "\u0060\u003CNegated\u003E\u0060 Returns merge requests which have the user as a reviewer with the given user \u0060id\u0060. \u0060None\u0060 returns merge requests with no reviewers. \u0060Any\u0060 returns merge requests with any reviewer. Mutually exclusive with \u0060not[reviewer_username]\u0060.",
+            "description": "\u0060\u003CNegated\u003E\u0060 Returns merge requests which have the user as a reviewer with the given user \u0060id\u0060. Mutually exclusive with \u0060not[reviewer_username]\u0060.",
             "schema": {
               "type": "integer",
               "nullable": true
@@ -115813,7 +115902,7 @@
           "Imports"
         ],
         "summary": "Cancel a migration",
-        "description": "Cancels a direct transfer migration. This feature was introduced in GitLab 17.1.",
+        "description": "Cancels a direct transfer or offline transfer migration. Migrations that already finished, failed, timed out, or were canceled keep their status, but any entities still running are canceled. This feature was introduced in GitLab 17.1.",
         "operationId": "PostApiV4BulkImportsImportIdCancel",
         "parameters": [
           {
@@ -136878,6 +136967,9 @@
           "subject_digest": {
             "type": "string",
             "example": "5db1fee4b5703808c48078a76768b155b421b210c0761cd6a5d223f4d99f1eaa"
+          },
+          "signing_method": {
+            "$ref": "#/components/schemas/ApiEntitiesSupplyChainAttestationSigningMethod"
           },
           "download_url": {
             "type": "string"
@@ -161976,7 +162068,7 @@
           },
           "ci_default_git_depth": {
             "type": "integer",
-            "description": "Default number of revisions for shallow cloning",
+            "description": "Default Git depth for shallow cloning",
             "nullable": true
           },
           "keep_latest_artifact": {
@@ -163524,6 +163616,22 @@
             "type": "string",
             "description": "The avatar image for the organization",
             "format": "binary",
+            "nullable": true
+          }
+        }
+      },
+      "PostApiV4OrganizationsIdTransferUsersRequest": {
+        "required": [
+          "user_ids"
+        ],
+        "type": "object",
+        "properties": {
+          "user_ids": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            },
+            "description": "The IDs of the users to transfer. Maximum 50.",
             "nullable": true
           }
         }
@@ -180027,6 +180135,9 @@
             "type": "integer",
             "description": "Y coordinate in the image",
             "nullable": true
+          },
+          "line_range": {
+            "$ref": "#/components/schemas/PostApiV4ProjectsIdRepositoryCommitsNoteableIdDiscussionsRequestPositionLineRange"
           }
         },
         "description": "Position when creating a note",
@@ -183360,6 +183471,19 @@
         "description": "Multi-line start and end",
         "nullable": true
       },
+      "PostApiV4ProjectsIdRepositoryCommitsNoteableIdDiscussionsRequestPositionLineRange": {
+        "type": "object",
+        "properties": {
+          "start": {
+            "$ref": "#/components/schemas/PostApiV4ProjectsIdRepositoryCommitsNoteableIdDiscussionsRequestPositionLineRangeStart"
+          },
+          "end": {
+            "$ref": "#/components/schemas/PostApiV4ProjectsIdRepositoryCommitsNoteableIdDiscussionsRequestPositionLineRangeEnd"
+          }
+        },
+        "description": "Multi-line start and end",
+        "nullable": true
+      },
       "PostApiV4ProjectsIdReleasesRequestAssetsLinksItem": {
         "required": [
           "name",
@@ -184622,6 +184746,60 @@
         "nullable": true
       },
       "PostApiV4ProjectsIdMergeRequestsNoteableIdDiscussionsRequestPositionLineRangeEnd": {
+        "type": "object",
+        "properties": {
+          "line_code": {
+            "type": "string",
+            "description": "End line code for multi-line note",
+            "nullable": true
+          },
+          "type": {
+            "type": "string",
+            "description": "End line type for multi-line note",
+            "nullable": true
+          },
+          "old_line": {
+            "type": "integer",
+            "description": "End old_line line number",
+            "nullable": true
+          },
+          "new_line": {
+            "type": "integer",
+            "description": "End new_line line number",
+            "nullable": true
+          }
+        },
+        "description": "End line for a multi-line note",
+        "nullable": true
+      },
+      "PostApiV4ProjectsIdRepositoryCommitsNoteableIdDiscussionsRequestPositionLineRangeStart": {
+        "type": "object",
+        "properties": {
+          "line_code": {
+            "type": "string",
+            "description": "Start line code for multi-line note",
+            "nullable": true
+          },
+          "type": {
+            "type": "string",
+            "description": "Start line type for multi-line note",
+            "nullable": true
+          },
+          "old_line": {
+            "type": "integer",
+            "description": "Start old_line line number",
+            "nullable": true
+          },
+          "new_line": {
+            "type": "integer",
+            "description": "Start new_line line number",
+            "nullable": true
+          }
+        },
+        "description": "Start line for a multi-line note",
+        "nullable": true
+      },
+      "PostApiV4ProjectsIdRepositoryCommitsNoteableIdDiscussionsRequestPositionLineRangeEnd": {
         "type": "object",
         "properties": {
           "line_code": {
@@ -187158,6 +187336,28 @@
             {
               "value": "CRITICAL",
               "name": "Critical"
+            }
+          ]
+        }
+      },
+      "ApiEntitiesSupplyChainAttestationSigningMethod": {
+        "enum": [
+          "sigstore",
+          "local_ca"
+        ],
+        "type": "string",
+        "example": "local_ca",
+        "x-ms-enum": {
+          "name": "ApiEntitiesSupplyChainAttestationSigningMethod",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "sigstore",
+              "name": "Sigstore"
+            },
+            {
+              "value": "local_ca",
+              "name": "LocalCa"
             }
           ]
         }
