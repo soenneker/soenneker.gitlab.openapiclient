@@ -38,12 +38,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The script property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Script { get => _explicitNullValueScript; set { _explicitNullValueScript = value; AdditionalData?.Remove("script"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("script"); else _explicitNullProperties?.Remove("script"); } }
-        private string? _explicitNullValueScript = default!;
+        public List<string>? Script { get => _explicitNullValueScript; set { _explicitNullValueScript = value; AdditionalData?.Remove("script"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("script"); else _explicitNullProperties?.Remove("script"); } }
+        private List<string>? _explicitNullValueScript = default!;
 #nullable restore
 #else
-        public string Script { get => _explicitNullValueScript; set { _explicitNullValueScript = value; AdditionalData?.Remove("script"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("script"); else _explicitNullProperties?.Remove("script"); } }
-        private string _explicitNullValueScript = default!;
+        public List<string> Script { get => _explicitNullValueScript; set { _explicitNullValueScript = value; AdditionalData?.Remove("script"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("script"); else _explicitNullProperties?.Remove("script"); } }
+        private List<string> _explicitNullValueScript = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestHook"/> and sets the default values.
@@ -71,7 +71,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "script", n => { Script = n.GetStringValue(); } },
+                { "script", n => { Script = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
             };
         }
         /// <summary>
@@ -82,7 +82,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("name", Name);
-            writer.WriteStringValue("script", Script);
+            writer.WriteCollectionOfPrimitiveValues<string>("script", Script);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

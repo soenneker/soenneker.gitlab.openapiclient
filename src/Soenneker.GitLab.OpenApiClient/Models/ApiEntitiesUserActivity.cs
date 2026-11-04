@@ -2,6 +2,7 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
+using Microsoft.Kiota.Abstractions;
 using System.Collections.Generic;
 using System.IO;
 using System;
@@ -28,25 +29,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The last_activity_at property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? LastActivityAt { get => _explicitNullValueLastActivityAt; set { _explicitNullValueLastActivityAt = value; AdditionalData?.Remove("last_activity_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_activity_at"); else _explicitNullProperties?.Remove("last_activity_at"); } }
-        private string? _explicitNullValueLastActivityAt = default!;
-#nullable restore
-#else
-        public string LastActivityAt { get => _explicitNullValueLastActivityAt; set { _explicitNullValueLastActivityAt = value; AdditionalData?.Remove("last_activity_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_activity_at"); else _explicitNullProperties?.Remove("last_activity_at"); } }
-        private string _explicitNullValueLastActivityAt = default!;
-#endif
+        public Date? LastActivityAt { get => _explicitNullValueLastActivityAt; set { _explicitNullValueLastActivityAt = value; AdditionalData?.Remove("last_activity_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_activity_at"); else _explicitNullProperties?.Remove("last_activity_at"); } }
+        private Date? _explicitNullValueLastActivityAt = default!;
         /// <summary>The last_activity_on property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? LastActivityOn { get => _explicitNullValueLastActivityOn; set { _explicitNullValueLastActivityOn = value; AdditionalData?.Remove("last_activity_on"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_activity_on"); else _explicitNullProperties?.Remove("last_activity_on"); } }
-        private string? _explicitNullValueLastActivityOn = default!;
-#nullable restore
-#else
-        public string LastActivityOn { get => _explicitNullValueLastActivityOn; set { _explicitNullValueLastActivityOn = value; AdditionalData?.Remove("last_activity_on"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_activity_on"); else _explicitNullProperties?.Remove("last_activity_on"); } }
-        private string _explicitNullValueLastActivityOn = default!;
-#endif
+        public Date? LastActivityOn { get => _explicitNullValueLastActivityOn; set { _explicitNullValueLastActivityOn = value; AdditionalData?.Remove("last_activity_on"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_activity_on"); else _explicitNullProperties?.Remove("last_activity_on"); } }
+        private Date? _explicitNullValueLastActivityOn = default!;
         /// <summary>The username property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -82,8 +69,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "last_activity_at", n => { LastActivityAt = n.GetStringValue(); } },
-                { "last_activity_on", n => { LastActivityOn = n.GetStringValue(); } },
+                { "last_activity_at", n => { LastActivityAt = n.GetDateValue(); } },
+                { "last_activity_on", n => { LastActivityOn = n.GetDateValue(); } },
                 { "username", n => { Username = n.GetStringValue(); } },
             };
         }
@@ -94,8 +81,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("last_activity_at", LastActivityAt);
-            writer.WriteStringValue("last_activity_on", LastActivityOn);
+            writer.WriteDateValue("last_activity_at", LastActivityAt);
+            writer.WriteDateValue("last_activity_on", LastActivityOn);
             writer.WriteStringValue("username", Username);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

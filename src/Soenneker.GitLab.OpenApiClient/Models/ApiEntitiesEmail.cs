@@ -28,15 +28,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The confirmed_at property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? ConfirmedAt { get => _explicitNullValueConfirmedAt; set { _explicitNullValueConfirmedAt = value; AdditionalData?.Remove("confirmed_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("confirmed_at"); else _explicitNullProperties?.Remove("confirmed_at"); } }
-        private string? _explicitNullValueConfirmedAt = default!;
-#nullable restore
-#else
-        public string ConfirmedAt { get => _explicitNullValueConfirmedAt; set { _explicitNullValueConfirmedAt = value; AdditionalData?.Remove("confirmed_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("confirmed_at"); else _explicitNullProperties?.Remove("confirmed_at"); } }
-        private string _explicitNullValueConfirmedAt = default!;
-#endif
+        public DateTimeOffset? ConfirmedAt { get => _explicitNullValueConfirmedAt; set { _explicitNullValueConfirmedAt = value; AdditionalData?.Remove("confirmed_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("confirmed_at"); else _explicitNullProperties?.Remove("confirmed_at"); } }
+        private DateTimeOffset? _explicitNullValueConfirmedAt = default!;
         /// <summary>The email property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -48,15 +41,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         private string _explicitNullValueEmail = default!;
 #endif
         /// <summary>The id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
-        private string? _explicitNullValueId = default!;
-#nullable restore
-#else
-        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
-        private string _explicitNullValueId = default!;
-#endif
+        public long? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private long? _explicitNullValueId = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesEmail"/> and sets the default values.
         /// </summary>
@@ -82,9 +68,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "confirmed_at", n => { ConfirmedAt = n.GetStringValue(); } },
+                { "confirmed_at", n => { ConfirmedAt = n.GetDateTimeOffsetValue(); } },
                 { "email", n => { Email = n.GetStringValue(); } },
-                { "id", n => { Id = n.GetStringValue(); } },
+                { "id", n => { Id = n.GetLongValue(); } },
             };
         }
         /// <summary>
@@ -94,9 +80,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("confirmed_at", ConfirmedAt);
+            writer.WriteDateTimeOffsetValue("confirmed_at", ConfirmedAt);
             writer.WriteStringValue("email", Email);
-            writer.WriteStringValue("id", Id);
+            writer.WriteLongValue("id", Id);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

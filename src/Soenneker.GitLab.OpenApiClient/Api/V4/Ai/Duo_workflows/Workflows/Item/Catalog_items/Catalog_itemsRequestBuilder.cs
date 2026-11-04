@@ -33,7 +33,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Workflows.Item.
         {
         }
         /// <summary>
-        /// Returns the saved AI Catalog item this session runs and its resolved subagents. A subagent the user cannot use has an error instead of a definition.
+        /// Returns the saved AI Catalog item this session runs and its resolved subagents. A subagent the user cannot use has an error instead of a definition. When a setting turns subagents off, sub_items is empty and sub_items_skipped_reason says which setting.
         /// </summary>
         /// <returns>A <see cref="Stream"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -51,7 +51,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Workflows.Item.
             return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Returns the saved AI Catalog item this session runs and its resolved subagents. A subagent the user cannot use has an error instead of a definition.
+        /// Returns the saved AI Catalog item this session runs and its resolved subagents. A subagent the user cannot use has an error instead of a definition. When a setting turns subagents off, sub_items is empty and sub_items_skipped_reason says which setting.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

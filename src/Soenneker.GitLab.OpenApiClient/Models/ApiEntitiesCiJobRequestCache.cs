@@ -36,12 +36,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The fallback_keys property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FallbackKeys { get => _explicitNullValueFallbackKeys; set { _explicitNullValueFallbackKeys = value; AdditionalData?.Remove("fallback_keys"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fallback_keys"); else _explicitNullProperties?.Remove("fallback_keys"); } }
-        private string? _explicitNullValueFallbackKeys = default!;
+        public List<string>? FallbackKeys { get => _explicitNullValueFallbackKeys; set { _explicitNullValueFallbackKeys = value; AdditionalData?.Remove("fallback_keys"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fallback_keys"); else _explicitNullProperties?.Remove("fallback_keys"); } }
+        private List<string>? _explicitNullValueFallbackKeys = default!;
 #nullable restore
 #else
-        public string FallbackKeys { get => _explicitNullValueFallbackKeys; set { _explicitNullValueFallbackKeys = value; AdditionalData?.Remove("fallback_keys"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fallback_keys"); else _explicitNullProperties?.Remove("fallback_keys"); } }
-        private string _explicitNullValueFallbackKeys = default!;
+        public List<string> FallbackKeys { get => _explicitNullValueFallbackKeys; set { _explicitNullValueFallbackKeys = value; AdditionalData?.Remove("fallback_keys"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fallback_keys"); else _explicitNullProperties?.Remove("fallback_keys"); } }
+        private List<string> _explicitNullValueFallbackKeys = default!;
 #endif
         /// <summary>The key property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -56,12 +56,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The paths property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Paths { get => _explicitNullValuePaths; set { _explicitNullValuePaths = value; AdditionalData?.Remove("paths"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paths"); else _explicitNullProperties?.Remove("paths"); } }
-        private string? _explicitNullValuePaths = default!;
+        public List<string>? Paths { get => _explicitNullValuePaths; set { _explicitNullValuePaths = value; AdditionalData?.Remove("paths"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paths"); else _explicitNullProperties?.Remove("paths"); } }
+        private List<string>? _explicitNullValuePaths = default!;
 #nullable restore
 #else
-        public string Paths { get => _explicitNullValuePaths; set { _explicitNullValuePaths = value; AdditionalData?.Remove("paths"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paths"); else _explicitNullProperties?.Remove("paths"); } }
-        private string _explicitNullValuePaths = default!;
+        public List<string> Paths { get => _explicitNullValuePaths; set { _explicitNullValuePaths = value; AdditionalData?.Remove("paths"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paths"); else _explicitNullProperties?.Remove("paths"); } }
+        private List<string> _explicitNullValuePaths = default!;
 #endif
         /// <summary>The policy property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -74,15 +74,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         private string _explicitNullValuePolicy = default!;
 #endif
         /// <summary>The untracked property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Untracked { get => _explicitNullValueUntracked; set { _explicitNullValueUntracked = value; AdditionalData?.Remove("untracked"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("untracked"); else _explicitNullProperties?.Remove("untracked"); } }
-        private string? _explicitNullValueUntracked = default!;
-#nullable restore
-#else
-        public string Untracked { get => _explicitNullValueUntracked; set { _explicitNullValueUntracked = value; AdditionalData?.Remove("untracked"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("untracked"); else _explicitNullProperties?.Remove("untracked"); } }
-        private string _explicitNullValueUntracked = default!;
-#endif
+        public bool? Untracked { get => _explicitNullValueUntracked; set { _explicitNullValueUntracked = value; AdditionalData?.Remove("untracked"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("untracked"); else _explicitNullProperties?.Remove("untracked"); } }
+        private bool? _explicitNullValueUntracked = default!;
         /// <summary>The when property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -118,11 +111,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "fallback_keys", n => { FallbackKeys = n.GetStringValue(); } },
+                { "fallback_keys", n => { FallbackKeys = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "key", n => { Key = n.GetStringValue(); } },
-                { "paths", n => { Paths = n.GetStringValue(); } },
+                { "paths", n => { Paths = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "policy", n => { Policy = n.GetStringValue(); } },
-                { "untracked", n => { Untracked = n.GetStringValue(); } },
+                { "untracked", n => { Untracked = n.GetBoolValue(); } },
                 { "when", n => { When = n.GetStringValue(); } },
             };
         }
@@ -133,11 +126,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("fallback_keys", FallbackKeys);
+            writer.WriteCollectionOfPrimitiveValues<string>("fallback_keys", FallbackKeys);
             writer.WriteStringValue("key", Key);
-            writer.WriteStringValue("paths", Paths);
+            writer.WriteCollectionOfPrimitiveValues<string>("paths", Paths);
             writer.WriteStringValue("policy", Policy);
-            writer.WriteStringValue("untracked", Untracked);
+            writer.WriteBoolValue("untracked", Untracked);
             writer.WriteStringValue("when", When);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

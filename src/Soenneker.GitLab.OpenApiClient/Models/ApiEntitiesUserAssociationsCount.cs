@@ -30,45 +30,17 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The groups_count property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? GroupsCount { get => _explicitNullValueGroupsCount; set { _explicitNullValueGroupsCount = value; AdditionalData?.Remove("groups_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("groups_count"); else _explicitNullProperties?.Remove("groups_count"); } }
-        private string? _explicitNullValueGroupsCount = default!;
-#nullable restore
-#else
-        public string GroupsCount { get => _explicitNullValueGroupsCount; set { _explicitNullValueGroupsCount = value; AdditionalData?.Remove("groups_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("groups_count"); else _explicitNullProperties?.Remove("groups_count"); } }
-        private string _explicitNullValueGroupsCount = default!;
-#endif
+        public int? GroupsCount { get => _explicitNullValueGroupsCount; set { _explicitNullValueGroupsCount = value; AdditionalData?.Remove("groups_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("groups_count"); else _explicitNullProperties?.Remove("groups_count"); } }
+        private int? _explicitNullValueGroupsCount = default!;
         /// <summary>The issues_count property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? IssuesCount { get => _explicitNullValueIssuesCount; set { _explicitNullValueIssuesCount = value; AdditionalData?.Remove("issues_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issues_count"); else _explicitNullProperties?.Remove("issues_count"); } }
-        private string? _explicitNullValueIssuesCount = default!;
-#nullable restore
-#else
-        public string IssuesCount { get => _explicitNullValueIssuesCount; set { _explicitNullValueIssuesCount = value; AdditionalData?.Remove("issues_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issues_count"); else _explicitNullProperties?.Remove("issues_count"); } }
-        private string _explicitNullValueIssuesCount = default!;
-#endif
+        public int? IssuesCount { get => _explicitNullValueIssuesCount; set { _explicitNullValueIssuesCount = value; AdditionalData?.Remove("issues_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issues_count"); else _explicitNullProperties?.Remove("issues_count"); } }
+        private int? _explicitNullValueIssuesCount = default!;
         /// <summary>The merge_requests_count property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? MergeRequestsCount { get => _explicitNullValueMergeRequestsCount; set { _explicitNullValueMergeRequestsCount = value; AdditionalData?.Remove("merge_requests_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_requests_count"); else _explicitNullProperties?.Remove("merge_requests_count"); } }
-        private string? _explicitNullValueMergeRequestsCount = default!;
-#nullable restore
-#else
-        public string MergeRequestsCount { get => _explicitNullValueMergeRequestsCount; set { _explicitNullValueMergeRequestsCount = value; AdditionalData?.Remove("merge_requests_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_requests_count"); else _explicitNullProperties?.Remove("merge_requests_count"); } }
-        private string _explicitNullValueMergeRequestsCount = default!;
-#endif
+        public int? MergeRequestsCount { get => _explicitNullValueMergeRequestsCount; set { _explicitNullValueMergeRequestsCount = value; AdditionalData?.Remove("merge_requests_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_requests_count"); else _explicitNullProperties?.Remove("merge_requests_count"); } }
+        private int? _explicitNullValueMergeRequestsCount = default!;
         /// <summary>The projects_count property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? ProjectsCount { get => _explicitNullValueProjectsCount; set { _explicitNullValueProjectsCount = value; AdditionalData?.Remove("projects_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("projects_count"); else _explicitNullProperties?.Remove("projects_count"); } }
-        private string? _explicitNullValueProjectsCount = default!;
-#nullable restore
-#else
-        public string ProjectsCount { get => _explicitNullValueProjectsCount; set { _explicitNullValueProjectsCount = value; AdditionalData?.Remove("projects_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("projects_count"); else _explicitNullProperties?.Remove("projects_count"); } }
-        private string _explicitNullValueProjectsCount = default!;
-#endif
+        public int? ProjectsCount { get => _explicitNullValueProjectsCount; set { _explicitNullValueProjectsCount = value; AdditionalData?.Remove("projects_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("projects_count"); else _explicitNullProperties?.Remove("projects_count"); } }
+        private int? _explicitNullValueProjectsCount = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserAssociationsCount"/> and sets the default values.
         /// </summary>
@@ -94,10 +66,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "groups_count", n => { GroupsCount = n.GetStringValue(); } },
-                { "issues_count", n => { IssuesCount = n.GetStringValue(); } },
-                { "merge_requests_count", n => { MergeRequestsCount = n.GetStringValue(); } },
-                { "projects_count", n => { ProjectsCount = n.GetStringValue(); } },
+                { "groups_count", n => { GroupsCount = n.GetIntValue(); } },
+                { "issues_count", n => { IssuesCount = n.GetIntValue(); } },
+                { "merge_requests_count", n => { MergeRequestsCount = n.GetIntValue(); } },
+                { "projects_count", n => { ProjectsCount = n.GetIntValue(); } },
             };
         }
         /// <summary>
@@ -107,10 +79,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("groups_count", GroupsCount);
-            writer.WriteStringValue("issues_count", IssuesCount);
-            writer.WriteStringValue("merge_requests_count", MergeRequestsCount);
-            writer.WriteStringValue("projects_count", ProjectsCount);
+            writer.WriteIntValue("groups_count", GroupsCount);
+            writer.WriteIntValue("issues_count", IssuesCount);
+            writer.WriteIntValue("merge_requests_count", MergeRequestsCount);
+            writer.WriteIntValue("projects_count", ProjectsCount);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

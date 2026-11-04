@@ -53,6 +53,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             else if (parseNode.GetChildNode("generic_packages_max_file_size") is { } nullNodeGenericPackagesMaxFileSize && nullNodeGenericPackagesMaxFileSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GenericPackagesMaxFileSize = null;
             if (parseNode.GetChildNode("helm_max_file_size") is null) { _explicitNullValueHelmMaxFileSize = default!; _explicitNullProperties?.Remove("helm_max_file_size"); }
             else if (parseNode.GetChildNode("helm_max_file_size") is { } nullNodeHelmMaxFileSize && nullNodeHelmMaxFileSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HelmMaxFileSize = null;
+            if (parseNode.GetChildNode("integration_executions") is null) { _explicitNullValueIntegrationExecutions = default!; _explicitNullProperties?.Remove("integration_executions"); }
+            else if (parseNode.GetChildNode("integration_executions") is { } nullNodeIntegrationExecutions && nullNodeIntegrationExecutions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IntegrationExecutions = null;
+            if (parseNode.GetChildNode("integration_executions_datadog") is null) { _explicitNullValueIntegrationExecutionsDatadog = default!; _explicitNullProperties?.Remove("integration_executions_datadog"); }
+            else if (parseNode.GetChildNode("integration_executions_datadog") is { } nullNodeIntegrationExecutionsDatadog && nullNodeIntegrationExecutionsDatadog.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IntegrationExecutionsDatadog = null;
             if (parseNode.GetChildNode("limits_history") is null) { _explicitNullValueLimitsHistory = default!; _explicitNullProperties?.Remove("limits_history"); }
             else if (parseNode.GetChildNode("limits_history") is { } nullNodeLimitsHistory && nullNodeLimitsHistory.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LimitsHistory = null;
             if (parseNode.GetChildNode("maven_max_file_size") is null) { _explicitNullValueMavenMaxFileSize = default!; _explicitNullProperties?.Remove("maven_max_file_size"); }
@@ -143,6 +147,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The helm_max_file_size property</summary>
         public int? HelmMaxFileSize { get => _explicitNullValueHelmMaxFileSize; set { _explicitNullValueHelmMaxFileSize = value; AdditionalData?.Remove("helm_max_file_size"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("helm_max_file_size"); else _explicitNullProperties?.Remove("helm_max_file_size"); } }
         private int? _explicitNullValueHelmMaxFileSize = default!;
+        /// <summary>The integration_executions property</summary>
+        public int? IntegrationExecutions { get => _explicitNullValueIntegrationExecutions; set { _explicitNullValueIntegrationExecutions = value; AdditionalData?.Remove("integration_executions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("integration_executions"); else _explicitNullProperties?.Remove("integration_executions"); } }
+        private int? _explicitNullValueIntegrationExecutions = default!;
+        /// <summary>The integration_executions_datadog property</summary>
+        public int? IntegrationExecutionsDatadog { get => _explicitNullValueIntegrationExecutionsDatadog; set { _explicitNullValueIntegrationExecutionsDatadog = value; AdditionalData?.Remove("integration_executions_datadog"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("integration_executions_datadog"); else _explicitNullProperties?.Remove("integration_executions_datadog"); } }
+        private int? _explicitNullValueIntegrationExecutionsDatadog = default!;
         /// <summary>The limits_history property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -241,6 +251,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "enforcement_limit", n => { EnforcementLimit = n.GetIntValue(); } },
                 { "generic_packages_max_file_size", n => { GenericPackagesMaxFileSize = n.GetLongValue(); } },
                 { "helm_max_file_size", n => { HelmMaxFileSize = n.GetIntValue(); } },
+                { "integration_executions", n => { IntegrationExecutions = n.GetIntValue(); } },
+                { "integration_executions_datadog", n => { IntegrationExecutionsDatadog = n.GetIntValue(); } },
                 { "limits_history", n => { LimitsHistory = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPlanLimitLimitsHistoryProperty>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPlanLimitLimitsHistoryProperty.CreateFromDiscriminatorValue); } },
                 { "maven_max_file_size", n => { MavenMaxFileSize = n.GetLongValue(); } },
                 { "max_pipelines_per_merge_train", n => { MaxPipelinesPerMergeTrain = n.GetIntValue(); } },
@@ -284,6 +296,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteIntValue("enforcement_limit", EnforcementLimit);
             writer.WriteLongValue("generic_packages_max_file_size", GenericPackagesMaxFileSize);
             writer.WriteIntValue("helm_max_file_size", HelmMaxFileSize);
+            writer.WriteIntValue("integration_executions", IntegrationExecutions);
+            writer.WriteIntValue("integration_executions_datadog", IntegrationExecutionsDatadog);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPlanLimitLimitsHistoryProperty>("limits_history", LimitsHistory);
             writer.WriteLongValue("maven_max_file_size", MavenMaxFileSize);
             writer.WriteIntValue("max_pipelines_per_merge_train", MaxPipelinesPerMergeTrain);

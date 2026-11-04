@@ -679,12 +679,18 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             else if (parseNode.GetChildNode("invisible_captcha_enabled") is { } nullNodeInvisibleCaptchaEnabled && nullNodeInvisibleCaptchaEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InvisibleCaptchaEnabled = null;
             if (parseNode.GetChildNode("invitation_flow_enforcement") is null) { _explicitNullValueInvitationFlowEnforcement = default!; _explicitNullProperties?.Remove("invitation_flow_enforcement"); }
             else if (parseNode.GetChildNode("invitation_flow_enforcement") is { } nullNodeInvitationFlowEnforcement && nullNodeInvitationFlowEnforcement.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InvitationFlowEnforcement = null;
+            if (parseNode.GetChildNode("issuable_csv_import_limit") is null) { _explicitNullValueIssuableCsvImportLimit = default!; _explicitNullProperties?.Remove("issuable_csv_import_limit"); }
+            else if (parseNode.GetChildNode("issuable_csv_import_limit") is { } nullNodeIssuableCsvImportLimit && nullNodeIssuableCsvImportLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssuableCsvImportLimit = null;
             if (parseNode.GetChildNode("issues_create_limit") is null) { _explicitNullValueIssuesCreateLimit = default!; _explicitNullProperties?.Remove("issues_create_limit"); }
             else if (parseNode.GetChildNode("issues_create_limit") is { } nullNodeIssuesCreateLimit && nullNodeIssuesCreateLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssuesCreateLimit = null;
             if (parseNode.GetChildNode("jira_connect_additional_audience_url") is null) { _explicitNullValueJiraConnectAdditionalAudienceUrl = default!; _explicitNullProperties?.Remove("jira_connect_additional_audience_url"); }
             else if (parseNode.GetChildNode("jira_connect_additional_audience_url") is { } nullNodeJiraConnectAdditionalAudienceUrl && nullNodeJiraConnectAdditionalAudienceUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) JiraConnectAdditionalAudienceUrl = null;
             if (parseNode.GetChildNode("jira_connect_application_key") is null) { _explicitNullValueJiraConnectApplicationKey = default!; _explicitNullProperties?.Remove("jira_connect_application_key"); }
             else if (parseNode.GetChildNode("jira_connect_application_key") is { } nullNodeJiraConnectApplicationKey && nullNodeJiraConnectApplicationKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) JiraConnectApplicationKey = null;
+            if (parseNode.GetChildNode("jira_connect_domain_allowlist") is null) { _explicitNullValueJiraConnectDomainAllowlist = default!; _explicitNullProperties?.Remove("jira_connect_domain_allowlist"); }
+            else if (parseNode.GetChildNode("jira_connect_domain_allowlist") is { } nullNodeJiraConnectDomainAllowlist && nullNodeJiraConnectDomainAllowlist.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) JiraConnectDomainAllowlist = null;
+            if (parseNode.GetChildNode("jira_connect_domain_allowlist_raw") is null) { _explicitNullValueJiraConnectDomainAllowlistRaw = default!; _explicitNullProperties?.Remove("jira_connect_domain_allowlist_raw"); }
+            else if (parseNode.GetChildNode("jira_connect_domain_allowlist_raw") is { } nullNodeJiraConnectDomainAllowlistRaw && nullNodeJiraConnectDomainAllowlistRaw.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) JiraConnectDomainAllowlistRaw = null;
             if (parseNode.GetChildNode("jira_connect_proxy_url") is null) { _explicitNullValueJiraConnectProxyUrl = default!; _explicitNullProperties?.Remove("jira_connect_proxy_url"); }
             else if (parseNode.GetChildNode("jira_connect_proxy_url") is { } nullNodeJiraConnectProxyUrl && nullNodeJiraConnectProxyUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) JiraConnectProxyUrl = null;
             if (parseNode.GetChildNode("jira_connect_public_key_storage_enabled") is null) { _explicitNullValueJiraConnectPublicKeyStorageEnabled = default!; _explicitNullProperties?.Remove("jira_connect_public_key_storage_enabled"); }
@@ -1377,6 +1383,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             else if (parseNode.GetChildNode("wiki_asciidoc_allow_uri_includes") is { } nullNodeWikiAsciidocAllowUriIncludes && nullNodeWikiAsciidocAllowUriIncludes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WikiAsciidocAllowUriIncludes = null;
             if (parseNode.GetChildNode("wiki_page_max_content_bytes") is null) { _explicitNullValueWikiPageMaxContentBytes = default!; _explicitNullProperties?.Remove("wiki_page_max_content_bytes"); }
             else if (parseNode.GetChildNode("wiki_page_max_content_bytes") is { } nullNodeWikiPageMaxContentBytes && nullNodeWikiPageMaxContentBytes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WikiPageMaxContentBytes = null;
+            if (parseNode.GetChildNode("wiki_read_request_limit_unauthenticated") is null) { _explicitNullValueWikiReadRequestLimitUnauthenticated = default!; _explicitNullProperties?.Remove("wiki_read_request_limit_unauthenticated"); }
+            else if (parseNode.GetChildNode("wiki_read_request_limit_unauthenticated") is { } nullNodeWikiReadRequestLimitUnauthenticated && nullNodeWikiReadRequestLimitUnauthenticated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WikiReadRequestLimitUnauthenticated = null;
             if (parseNode.GetChildNode("zoekt_auto_index_root_namespace") is null) { _explicitNullValueZoektAutoIndexRootNamespace = default!; _explicitNullProperties?.Remove("zoekt_auto_index_root_namespace"); }
             else if (parseNode.GetChildNode("zoekt_auto_index_root_namespace") is { } nullNodeZoektAutoIndexRootNamespace && nullNodeZoektAutoIndexRootNamespace.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ZoektAutoIndexRootNamespace = null;
             if (parseNode.GetChildNode("zoekt_cache_response") is null) { _explicitNullValueZoektCacheResponse = default!; _explicitNullProperties?.Remove("zoekt_cache_response"); }
@@ -4673,6 +4681,16 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string InvitationFlowEnforcement { get => _explicitNullValueInvitationFlowEnforcement; set { _explicitNullValueInvitationFlowEnforcement = value; AdditionalData?.Remove("invitation_flow_enforcement"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invitation_flow_enforcement"); else _explicitNullProperties?.Remove("invitation_flow_enforcement"); } }
         private string _explicitNullValueInvitationFlowEnforcement = default!;
 #endif
+        /// <summary>The issuable_csv_import_limit property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? IssuableCsvImportLimit { get => _explicitNullValueIssuableCsvImportLimit; set { _explicitNullValueIssuableCsvImportLimit = value; AdditionalData?.Remove("issuable_csv_import_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issuable_csv_import_limit"); else _explicitNullProperties?.Remove("issuable_csv_import_limit"); } }
+        private string? _explicitNullValueIssuableCsvImportLimit = default!;
+#nullable restore
+#else
+        public string IssuableCsvImportLimit { get => _explicitNullValueIssuableCsvImportLimit; set { _explicitNullValueIssuableCsvImportLimit = value; AdditionalData?.Remove("issuable_csv_import_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issuable_csv_import_limit"); else _explicitNullProperties?.Remove("issuable_csv_import_limit"); } }
+        private string _explicitNullValueIssuableCsvImportLimit = default!;
+#endif
         /// <summary>The issues_create_limit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -4702,6 +4720,26 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string JiraConnectApplicationKey { get => _explicitNullValueJiraConnectApplicationKey; set { _explicitNullValueJiraConnectApplicationKey = value; AdditionalData?.Remove("jira_connect_application_key"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("jira_connect_application_key"); else _explicitNullProperties?.Remove("jira_connect_application_key"); } }
         private string _explicitNullValueJiraConnectApplicationKey = default!;
+#endif
+        /// <summary>The jira_connect_domain_allowlist property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? JiraConnectDomainAllowlist { get => _explicitNullValueJiraConnectDomainAllowlist; set { _explicitNullValueJiraConnectDomainAllowlist = value; AdditionalData?.Remove("jira_connect_domain_allowlist"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("jira_connect_domain_allowlist"); else _explicitNullProperties?.Remove("jira_connect_domain_allowlist"); } }
+        private string? _explicitNullValueJiraConnectDomainAllowlist = default!;
+#nullable restore
+#else
+        public string JiraConnectDomainAllowlist { get => _explicitNullValueJiraConnectDomainAllowlist; set { _explicitNullValueJiraConnectDomainAllowlist = value; AdditionalData?.Remove("jira_connect_domain_allowlist"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("jira_connect_domain_allowlist"); else _explicitNullProperties?.Remove("jira_connect_domain_allowlist"); } }
+        private string _explicitNullValueJiraConnectDomainAllowlist = default!;
+#endif
+        /// <summary>The jira_connect_domain_allowlist_raw property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? JiraConnectDomainAllowlistRaw { get => _explicitNullValueJiraConnectDomainAllowlistRaw; set { _explicitNullValueJiraConnectDomainAllowlistRaw = value; AdditionalData?.Remove("jira_connect_domain_allowlist_raw"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("jira_connect_domain_allowlist_raw"); else _explicitNullProperties?.Remove("jira_connect_domain_allowlist_raw"); } }
+        private string? _explicitNullValueJiraConnectDomainAllowlistRaw = default!;
+#nullable restore
+#else
+        public string JiraConnectDomainAllowlistRaw { get => _explicitNullValueJiraConnectDomainAllowlistRaw; set { _explicitNullValueJiraConnectDomainAllowlistRaw = value; AdditionalData?.Remove("jira_connect_domain_allowlist_raw"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("jira_connect_domain_allowlist_raw"); else _explicitNullProperties?.Remove("jira_connect_domain_allowlist_raw"); } }
+        private string _explicitNullValueJiraConnectDomainAllowlistRaw = default!;
 #endif
         /// <summary>The jira_connect_proxy_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -8114,6 +8152,16 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string WikiPageMaxContentBytes { get => _explicitNullValueWikiPageMaxContentBytes; set { _explicitNullValueWikiPageMaxContentBytes = value; AdditionalData?.Remove("wiki_page_max_content_bytes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wiki_page_max_content_bytes"); else _explicitNullProperties?.Remove("wiki_page_max_content_bytes"); } }
         private string _explicitNullValueWikiPageMaxContentBytes = default!;
 #endif
+        /// <summary>The wiki_read_request_limit_unauthenticated property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? WikiReadRequestLimitUnauthenticated { get => _explicitNullValueWikiReadRequestLimitUnauthenticated; set { _explicitNullValueWikiReadRequestLimitUnauthenticated = value; AdditionalData?.Remove("wiki_read_request_limit_unauthenticated"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wiki_read_request_limit_unauthenticated"); else _explicitNullProperties?.Remove("wiki_read_request_limit_unauthenticated"); } }
+        private string? _explicitNullValueWikiReadRequestLimitUnauthenticated = default!;
+#nullable restore
+#else
+        public string WikiReadRequestLimitUnauthenticated { get => _explicitNullValueWikiReadRequestLimitUnauthenticated; set { _explicitNullValueWikiReadRequestLimitUnauthenticated = value; AdditionalData?.Remove("wiki_read_request_limit_unauthenticated"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wiki_read_request_limit_unauthenticated"); else _explicitNullProperties?.Remove("wiki_read_request_limit_unauthenticated"); } }
+        private string _explicitNullValueWikiReadRequestLimitUnauthenticated = default!;
+#endif
         /// <summary>The zoekt_auto_index_root_namespace property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -8660,9 +8708,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "instance_token_prefix", n => { InstanceTokenPrefix = n.GetStringValue(); } },
                 { "invisible_captcha_enabled", n => { InvisibleCaptchaEnabled = n.GetStringValue(); } },
                 { "invitation_flow_enforcement", n => { InvitationFlowEnforcement = n.GetStringValue(); } },
+                { "issuable_csv_import_limit", n => { IssuableCsvImportLimit = n.GetStringValue(); } },
                 { "issues_create_limit", n => { IssuesCreateLimit = n.GetStringValue(); } },
                 { "jira_connect_additional_audience_url", n => { JiraConnectAdditionalAudienceUrl = n.GetStringValue(); } },
                 { "jira_connect_application_key", n => { JiraConnectApplicationKey = n.GetStringValue(); } },
+                { "jira_connect_domain_allowlist", n => { JiraConnectDomainAllowlist = n.GetStringValue(); } },
+                { "jira_connect_domain_allowlist_raw", n => { JiraConnectDomainAllowlistRaw = n.GetStringValue(); } },
                 { "jira_connect_proxy_url", n => { JiraConnectProxyUrl = n.GetStringValue(); } },
                 { "jira_connect_public_key_storage_enabled", n => { JiraConnectPublicKeyStorageEnabled = n.GetStringValue(); } },
                 { "jira_forge_app_id", n => { JiraForgeAppId = n.GetStringValue(); } },
@@ -9009,6 +9060,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "whats_new_variant", n => { WhatsNewVariant = n.GetStringValue(); } },
                 { "wiki_asciidoc_allow_uri_includes", n => { WikiAsciidocAllowUriIncludes = n.GetStringValue(); } },
                 { "wiki_page_max_content_bytes", n => { WikiPageMaxContentBytes = n.GetStringValue(); } },
+                { "wiki_read_request_limit_unauthenticated", n => { WikiReadRequestLimitUnauthenticated = n.GetStringValue(); } },
                 { "zoekt_auto_index_root_namespace", n => { ZoektAutoIndexRootNamespace = n.GetStringValue(); } },
                 { "zoekt_cache_response", n => { ZoektCacheResponse = n.GetStringValue(); } },
                 { "zoekt_cpu_to_tasks_ratio", n => { ZoektCpuToTasksRatio = n.GetStringValue(); } },
@@ -9368,9 +9420,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("instance_token_prefix", InstanceTokenPrefix);
             writer.WriteStringValue("invisible_captcha_enabled", InvisibleCaptchaEnabled);
             writer.WriteStringValue("invitation_flow_enforcement", InvitationFlowEnforcement);
+            writer.WriteStringValue("issuable_csv_import_limit", IssuableCsvImportLimit);
             writer.WriteStringValue("issues_create_limit", IssuesCreateLimit);
             writer.WriteStringValue("jira_connect_additional_audience_url", JiraConnectAdditionalAudienceUrl);
             writer.WriteStringValue("jira_connect_application_key", JiraConnectApplicationKey);
+            writer.WriteStringValue("jira_connect_domain_allowlist", JiraConnectDomainAllowlist);
+            writer.WriteStringValue("jira_connect_domain_allowlist_raw", JiraConnectDomainAllowlistRaw);
             writer.WriteStringValue("jira_connect_proxy_url", JiraConnectProxyUrl);
             writer.WriteStringValue("jira_connect_public_key_storage_enabled", JiraConnectPublicKeyStorageEnabled);
             writer.WriteStringValue("jira_forge_app_id", JiraForgeAppId);
@@ -9717,6 +9772,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("whats_new_variant", WhatsNewVariant);
             writer.WriteStringValue("wiki_asciidoc_allow_uri_includes", WikiAsciidocAllowUriIncludes);
             writer.WriteStringValue("wiki_page_max_content_bytes", WikiPageMaxContentBytes);
+            writer.WriteStringValue("wiki_read_request_limit_unauthenticated", WikiReadRequestLimitUnauthenticated);
             writer.WriteStringValue("zoekt_auto_index_root_namespace", ZoektAutoIndexRootNamespace);
             writer.WriteStringValue("zoekt_cache_response", ZoektCacheResponse);
             writer.WriteStringValue("zoekt_cpu_to_tasks_ratio", ZoektCpuToTasksRatio);

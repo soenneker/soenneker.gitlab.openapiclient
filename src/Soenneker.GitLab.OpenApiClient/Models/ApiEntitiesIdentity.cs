@@ -48,15 +48,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         private string _explicitNullValueProvider = default!;
 #endif
         /// <summary>The saml_provider_id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? SamlProviderId { get => _explicitNullValueSamlProviderId; set { _explicitNullValueSamlProviderId = value; AdditionalData?.Remove("saml_provider_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("saml_provider_id"); else _explicitNullProperties?.Remove("saml_provider_id"); } }
-        private string? _explicitNullValueSamlProviderId = default!;
-#nullable restore
-#else
-        public string SamlProviderId { get => _explicitNullValueSamlProviderId; set { _explicitNullValueSamlProviderId = value; AdditionalData?.Remove("saml_provider_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("saml_provider_id"); else _explicitNullProperties?.Remove("saml_provider_id"); } }
-        private string _explicitNullValueSamlProviderId = default!;
-#endif
+        public int? SamlProviderId { get => _explicitNullValueSamlProviderId; set { _explicitNullValueSamlProviderId = value; AdditionalData?.Remove("saml_provider_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("saml_provider_id"); else _explicitNullProperties?.Remove("saml_provider_id"); } }
+        private int? _explicitNullValueSamlProviderId = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesIdentity"/> and sets the default values.
         /// </summary>
@@ -84,7 +77,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             {
                 { "extern_uid", n => { ExternUid = n.GetStringValue(); } },
                 { "provider", n => { Provider = n.GetStringValue(); } },
-                { "saml_provider_id", n => { SamlProviderId = n.GetStringValue(); } },
+                { "saml_provider_id", n => { SamlProviderId = n.GetIntValue(); } },
             };
         }
         /// <summary>
@@ -96,7 +89,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("extern_uid", ExternUid);
             writer.WriteStringValue("provider", Provider);
-            writer.WriteStringValue("saml_provider_id", SamlProviderId);
+            writer.WriteIntValue("saml_provider_id", SamlProviderId);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

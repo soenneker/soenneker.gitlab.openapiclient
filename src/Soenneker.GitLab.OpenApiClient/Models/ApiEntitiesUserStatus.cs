@@ -42,15 +42,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         private string _explicitNullValueAvailability = default!;
 #endif
         /// <summary>The clear_status_at property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? ClearStatusAt { get => _explicitNullValueClearStatusAt; set { _explicitNullValueClearStatusAt = value; AdditionalData?.Remove("clear_status_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("clear_status_at"); else _explicitNullProperties?.Remove("clear_status_at"); } }
-        private string? _explicitNullValueClearStatusAt = default!;
-#nullable restore
-#else
-        public string ClearStatusAt { get => _explicitNullValueClearStatusAt; set { _explicitNullValueClearStatusAt = value; AdditionalData?.Remove("clear_status_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("clear_status_at"); else _explicitNullProperties?.Remove("clear_status_at"); } }
-        private string _explicitNullValueClearStatusAt = default!;
-#endif
+        public DateTimeOffset? ClearStatusAt { get => _explicitNullValueClearStatusAt; set { _explicitNullValueClearStatusAt = value; AdditionalData?.Remove("clear_status_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("clear_status_at"); else _explicitNullProperties?.Remove("clear_status_at"); } }
+        private DateTimeOffset? _explicitNullValueClearStatusAt = default!;
         /// <summary>The emoji property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -107,7 +100,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "availability", n => { Availability = n.GetStringValue(); } },
-                { "clear_status_at", n => { ClearStatusAt = n.GetStringValue(); } },
+                { "clear_status_at", n => { ClearStatusAt = n.GetDateTimeOffsetValue(); } },
                 { "emoji", n => { Emoji = n.GetStringValue(); } },
                 { "message", n => { Message = n.GetStringValue(); } },
                 { "message_html", n => { MessageHtml = n.GetStringValue(); } },
@@ -121,7 +114,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("availability", Availability);
-            writer.WriteStringValue("clear_status_at", ClearStatusAt);
+            writer.WriteDateTimeOffsetValue("clear_status_at", ClearStatusAt);
             writer.WriteStringValue("emoji", Emoji);
             writer.WriteStringValue("message", Message);
             writer.WriteStringValue("message_html", MessageHtml);

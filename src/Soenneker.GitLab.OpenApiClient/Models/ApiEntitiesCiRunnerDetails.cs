@@ -69,6 +69,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             else if (parseNode.GetChildNode("tag_list") is { } nullNodeTagList && nullNodeTagList.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TagList = null;
             if (parseNode.GetChildNode("token_expires_at") is null) { _explicitNullValueTokenExpiresAt = default!; _explicitNullProperties?.Remove("token_expires_at"); }
             else if (parseNode.GetChildNode("token_expires_at") is { } nullNodeTokenExpiresAt && nullNodeTokenExpiresAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TokenExpiresAt = null;
+            if (parseNode.GetChildNode("uuid") is null) { _explicitNullValueUuid = default!; _explicitNullProperties?.Remove("uuid"); }
+            else if (parseNode.GetChildNode("uuid") is { } nullNodeUuid && nullNodeUuid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Uuid = null;
             if (parseNode.GetChildNode("version") is null) { _explicitNullValueVersion = default!; _explicitNullProperties?.Remove("version"); }
             else if (parseNode.GetChildNode("version") is { } nullNodeVersion && nullNodeVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Version = null;
         }
@@ -272,6 +274,16 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The token_expires_at property</summary>
         public DateTimeOffset? TokenExpiresAt { get => _explicitNullValueTokenExpiresAt; set { _explicitNullValueTokenExpiresAt = value; AdditionalData?.Remove("token_expires_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token_expires_at"); else _explicitNullProperties?.Remove("token_expires_at"); } }
         private DateTimeOffset? _explicitNullValueTokenExpiresAt = default!;
+        /// <summary>The uuid property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Uuid { get => _explicitNullValueUuid; set { _explicitNullValueUuid = value; AdditionalData?.Remove("uuid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uuid"); else _explicitNullProperties?.Remove("uuid"); } }
+        private string? _explicitNullValueUuid = default!;
+#nullable restore
+#else
+        public string Uuid { get => _explicitNullValueUuid; set { _explicitNullValueUuid = value; AdditionalData?.Remove("uuid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uuid"); else _explicitNullProperties?.Remove("uuid"); } }
+        private string _explicitNullValueUuid = default!;
+#endif
         /// <summary>The version property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -333,6 +345,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "status", n => { Status = n.GetStringValue(); } },
                 { "tag_list", n => { TagList = n.GetStringValue(); } },
                 { "token_expires_at", n => { TokenExpiresAt = n.GetDateTimeOffsetValue(); } },
+                { "uuid", n => { Uuid = n.GetStringValue(); } },
                 { "version", n => { Version = n.GetStringValue(); } },
             };
         }
@@ -369,6 +382,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("status", Status);
             writer.WriteStringValue("tag_list", TagList);
             writer.WriteDateTimeOffsetValue("token_expires_at", TokenExpiresAt);
+            writer.WriteStringValue("uuid", Uuid);
             writer.WriteStringValue("version", Version);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

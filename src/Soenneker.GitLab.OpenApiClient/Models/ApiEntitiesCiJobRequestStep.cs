@@ -32,15 +32,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The allow_failure property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? AllowFailure { get => _explicitNullValueAllowFailure; set { _explicitNullValueAllowFailure = value; AdditionalData?.Remove("allow_failure"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allow_failure"); else _explicitNullProperties?.Remove("allow_failure"); } }
-        private string? _explicitNullValueAllowFailure = default!;
-#nullable restore
-#else
-        public string AllowFailure { get => _explicitNullValueAllowFailure; set { _explicitNullValueAllowFailure = value; AdditionalData?.Remove("allow_failure"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allow_failure"); else _explicitNullProperties?.Remove("allow_failure"); } }
-        private string _explicitNullValueAllowFailure = default!;
-#endif
+        public bool? AllowFailure { get => _explicitNullValueAllowFailure; set { _explicitNullValueAllowFailure = value; AdditionalData?.Remove("allow_failure"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allow_failure"); else _explicitNullProperties?.Remove("allow_failure"); } }
+        private bool? _explicitNullValueAllowFailure = default!;
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -54,23 +47,16 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The script property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Script { get => _explicitNullValueScript; set { _explicitNullValueScript = value; AdditionalData?.Remove("script"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("script"); else _explicitNullProperties?.Remove("script"); } }
-        private string? _explicitNullValueScript = default!;
+        public List<string>? Script { get => _explicitNullValueScript; set { _explicitNullValueScript = value; AdditionalData?.Remove("script"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("script"); else _explicitNullProperties?.Remove("script"); } }
+        private List<string>? _explicitNullValueScript = default!;
 #nullable restore
 #else
-        public string Script { get => _explicitNullValueScript; set { _explicitNullValueScript = value; AdditionalData?.Remove("script"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("script"); else _explicitNullProperties?.Remove("script"); } }
-        private string _explicitNullValueScript = default!;
+        public List<string> Script { get => _explicitNullValueScript; set { _explicitNullValueScript = value; AdditionalData?.Remove("script"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("script"); else _explicitNullProperties?.Remove("script"); } }
+        private List<string> _explicitNullValueScript = default!;
 #endif
         /// <summary>The timeout property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Timeout { get => _explicitNullValueTimeout; set { _explicitNullValueTimeout = value; AdditionalData?.Remove("timeout"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timeout"); else _explicitNullProperties?.Remove("timeout"); } }
-        private string? _explicitNullValueTimeout = default!;
-#nullable restore
-#else
-        public string Timeout { get => _explicitNullValueTimeout; set { _explicitNullValueTimeout = value; AdditionalData?.Remove("timeout"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timeout"); else _explicitNullProperties?.Remove("timeout"); } }
-        private string _explicitNullValueTimeout = default!;
-#endif
+        public int? Timeout { get => _explicitNullValueTimeout; set { _explicitNullValueTimeout = value; AdditionalData?.Remove("timeout"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timeout"); else _explicitNullProperties?.Remove("timeout"); } }
+        private int? _explicitNullValueTimeout = default!;
         /// <summary>The when property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -106,10 +92,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "allow_failure", n => { AllowFailure = n.GetStringValue(); } },
+                { "allow_failure", n => { AllowFailure = n.GetBoolValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "script", n => { Script = n.GetStringValue(); } },
-                { "timeout", n => { Timeout = n.GetStringValue(); } },
+                { "script", n => { Script = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "timeout", n => { Timeout = n.GetIntValue(); } },
                 { "when", n => { When = n.GetStringValue(); } },
             };
         }
@@ -120,10 +106,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("allow_failure", AllowFailure);
+            writer.WriteBoolValue("allow_failure", AllowFailure);
             writer.WriteStringValue("name", Name);
-            writer.WriteStringValue("script", Script);
-            writer.WriteStringValue("timeout", Timeout);
+            writer.WriteCollectionOfPrimitiveValues<string>("script", Script);
+            writer.WriteIntValue("timeout", Timeout);
             writer.WriteStringValue("when", When);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

@@ -2241,6 +2241,9 @@
           },
           "404": {
             "description": "Not found"
+          },
+          "422": {
+            "description": "Unprocessable entity"
           }
         },
         "x-gitlab-lifecycle": "experiment"
@@ -2379,6 +2382,56 @@
         }
       }
     },
+    "/api/v4/ai/duo_workflows/workflows/{id}/tool_access_policies": {
+      "get": {
+        "tags": [
+          "GitLab Duo workflows",
+          "Internal operations"
+        ],
+        "summary": "Get the tool access policy for a workflow",
+        "description": "Returns the tool access policy for a workflow, for DWS to use when its token carries none.",
+        "operationId": "GetApiV4AiDuoWorkflowsWorkflowsIdToolAccessPolicies",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID of the workflow.",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            },
+            "example": 1
+          },
+          {
+            "name": "project_id",
+            "in": "query",
+            "description": "ID of the project the session runs in. It can only make the policy stricter.",
+            "schema": {
+              "type": "integer",
+              "nullable": true
+            },
+            "example": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
+          }
+        }
+      }
+    },
     "/api/v4/ai/duo_workflows/workflows/{id}/catalog_items": {
       "get": {
         "tags": [
@@ -2386,7 +2439,7 @@
           "Internal operations"
         ],
         "summary": "Get the AI Catalog item a workflow runs, with its sub-items",
-        "description": "Returns the saved AI Catalog item this session runs and its resolved subagents. A subagent the user cannot use has an error instead of a definition.",
+        "description": "Returns the saved AI Catalog item this session runs and its resolved subagents. A subagent the user cannot use has an error instead of a definition. When a setting turns subagents off, sub_items is empty and sub_items_skipped_reason says which setting.",
         "operationId": "GetApiV4AiDuoWorkflowsWorkflowsIdCatalogItems",
         "parameters": [
           {
@@ -3143,6 +3196,9 @@
           },
           "404": {
             "description": "Not found"
+          },
+          "422": {
+            "description": "Unprocessable entity"
           },
           "429": {
             "description": "Too many requests"
@@ -12644,6 +12700,9 @@
           },
           "401": {
             "description": "Unauthorized"
+          },
+          "429": {
+            "description": "Too many requests"
           },
           "400": {
             "description": "Bad Request"
@@ -106745,6 +106804,9 @@
           "204": {
             "description": "No Content"
           },
+          "400": {
+            "description": "Bad request"
+          },
           "401": {
             "description": "Unauthorized"
           },
@@ -106756,9 +106818,6 @@
           },
           "412": {
             "description": "Precondition Failed"
-          },
-          "400": {
-            "description": "Bad Request"
           }
         }
       }
@@ -107485,6 +107544,9 @@
           },
           "404": {
             "description": "Not found"
+          },
+          "429": {
+            "description": "Too Many Requests"
           },
           "400": {
             "description": "Bad Request"
@@ -109310,7 +109372,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ApiEntitiesCiRunner"
+                  "$ref": "#/components/schemas/ApiEntitiesCiRunnerWithUuid"
                 }
               }
             }
@@ -109502,7 +109564,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ApiEntitiesCiRunner"
+                  "$ref": "#/components/schemas/ApiEntitiesCiRunnerWithUuid"
                 }
               }
             }
@@ -110054,7 +110116,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ApiEntitiesCiRunner"
+                  "$ref": "#/components/schemas/ApiEntitiesCiRunnerWithUuid"
                 }
               }
             }
@@ -110112,7 +110174,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ApiEntitiesCiRunner"
+                  "$ref": "#/components/schemas/ApiEntitiesCiRunnerWithUuid"
                 }
               }
             }
@@ -110131,7 +110193,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ApiEntitiesCiRunner"
+                  "$ref": "#/components/schemas/ApiEntitiesCiRunnerWithUuid"
                 }
               }
             },
@@ -110301,7 +110363,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ApiEntitiesCiRunner"
+                  "$ref": "#/components/schemas/ApiEntitiesCiRunnerWithUuid"
                 }
               }
             }
@@ -122498,7 +122560,7 @@
             "type": "string"
           },
           "saml_provider_id": {
-            "type": "string"
+            "type": "integer"
           }
         }
       },
@@ -132612,19 +132674,25 @@
         "type": "object",
         "properties": {
           "emoji": {
-            "type": "string"
+            "type": "string",
+            "example": "coffee"
           },
           "message": {
-            "type": "string"
+            "type": "string",
+            "example": "I crave coffee"
           },
           "availability": {
-            "type": "string"
+            "type": "string",
+            "example": "busy"
           },
           "message_html": {
-            "type": "string"
+            "type": "string",
+            "example": "\u003Cp dir=\u0022auto\u0022\u003EI crave coffee\u003C/p\u003E"
           },
           "clear_status_at": {
-            "type": "string"
+            "type": "string",
+            "format": "date-time",
+            "example": "2026-10-28T10:00:00.000Z"
           }
         }
       },
@@ -133039,13 +133107,18 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "string"
+            "type": "integer",
+            "format": "int64",
+            "example": 1
           },
           "email": {
-            "type": "string"
+            "type": "string",
+            "example": "user@example.com"
           },
           "confirmed_at": {
-            "type": "string"
+            "type": "string",
+            "format": "date-time",
+            "example": "2015-12-24T15:51:21.880Z"
           }
         }
       },
@@ -133070,16 +133143,20 @@
         "type": "object",
         "properties": {
           "groups_count": {
-            "type": "string"
+            "type": "integer",
+            "example": 1
           },
           "projects_count": {
-            "type": "string"
+            "type": "integer",
+            "example": 1
           },
           "issues_count": {
-            "type": "string"
+            "type": "integer",
+            "example": 1
           },
           "merge_requests_count": {
-            "type": "string"
+            "type": "integer",
+            "example": 1
           }
         }
       },
@@ -133279,13 +133356,18 @@
         "type": "object",
         "properties": {
           "username": {
-            "type": "string"
+            "type": "string",
+            "example": "johndoe"
           },
           "last_activity_on": {
-            "type": "string"
+            "type": "string",
+            "format": "date",
+            "example": "2015-12-24"
           },
           "last_activity_at": {
-            "type": "string"
+            "type": "string",
+            "format": "date",
+            "example": "2015-12-24"
           }
         }
       },
@@ -133293,7 +133375,8 @@
         "type": "object",
         "properties": {
           "avatar_url": {
-            "type": "string"
+            "type": "string",
+            "example": "https://example.com/avatar.png"
           }
         }
       },
@@ -134322,6 +134405,12 @@
           "jira_connect_additional_audience_url": {
             "type": "string"
           },
+          "jira_connect_domain_allowlist": {
+            "type": "string"
+          },
+          "jira_connect_domain_allowlist_raw": {
+            "type": "string"
+          },
           "jira_forge_app_id": {
             "type": "string"
           },
@@ -135075,6 +135164,9 @@
           "groups_api_limit": {
             "type": "string"
           },
+          "issuable_csv_import_limit": {
+            "type": "string"
+          },
           "project_api_limit": {
             "type": "string"
           },
@@ -135148,6 +135240,9 @@
             "type": "string"
           },
           "web_hook_test_limit": {
+            "type": "string"
+          },
+          "wiki_read_request_limit_unauthenticated": {
             "type": "string"
           },
           "github_gists_import_limit": {
@@ -146019,6 +146114,66 @@
           }
         }
       },
+      "ApiEntitiesCiRunnerWithUuid": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64",
+            "example": 8
+          },
+          "description": {
+            "type": "string",
+            "example": "test-1-20150125"
+          },
+          "ip_address": {
+            "type": "string",
+            "example": "127.0.0.1"
+          },
+          "active": {
+            "type": "boolean",
+            "example": true
+          },
+          "paused": {
+            "type": "boolean",
+            "example": false
+          },
+          "is_shared": {
+            "type": "boolean",
+            "example": true
+          },
+          "runner_type": {
+            "$ref": "#/components/schemas/ApiEntitiesCiRunnerWithUuidRunnerType"
+          },
+          "name": {
+            "type": "string",
+            "example": "test"
+          },
+          "online": {
+            "type": "boolean",
+            "example": true
+          },
+          "created_by": {
+            "$ref": "#/components/schemas/ApiEntitiesUserBasic"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2025-05-03T00:00:00.000Z"
+          },
+          "status": {
+            "type": "string",
+            "example": "online"
+          },
+          "job_execution_status": {
+            "$ref": "#/components/schemas/ApiEntitiesCiRunnerWithUuidJobExecutionStatus"
+          },
+          "uuid": {
+            "type": "string",
+            "example": "01966aa0-f383-7a6b-b694-cd4f2f96cca1"
+          }
+        }
+      },
       "ApiEntitiesCiRunnerDetails": {
         "type": "object",
         "properties": {
@@ -146072,6 +146227,10 @@
           },
           "job_execution_status": {
             "$ref": "#/components/schemas/ApiEntitiesCiRunnerDetailsJobExecutionStatus"
+          },
+          "uuid": {
+            "type": "string",
+            "example": "01966aa0-f383-7a6b-b694-cd4f2f96cca1"
           },
           "tag_list": {
             "type": "string"
@@ -146350,16 +146509,19 @@
             "type": "string"
           },
           "script": {
-            "type": "string"
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "timeout": {
-            "type": "string"
+            "type": "integer"
           },
           "when": {
             "type": "string"
           },
           "allow_failure": {
-            "type": "string"
+            "type": "boolean"
           }
         }
       },
@@ -146370,7 +146532,10 @@
             "type": "string"
           },
           "script": {
-            "type": "string"
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           }
         }
       },
@@ -146378,7 +146543,7 @@
         "type": "object",
         "properties": {
           "number": {
-            "type": "string"
+            "type": "integer"
           },
           "protocol": {
             "type": "string"
@@ -146444,13 +146609,19 @@
             "type": "string"
           },
           "untracked": {
-            "type": "string"
+            "type": "boolean"
           },
           "paths": {
-            "type": "string"
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "exclude": {
-            "type": "string"
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "when": {
             "type": "string"
@@ -146473,10 +146644,13 @@
             "type": "string"
           },
           "untracked": {
-            "type": "string"
+            "type": "boolean"
           },
           "paths": {
-            "type": "string"
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "policy": {
             "type": "string"
@@ -146485,7 +146659,10 @@
             "type": "string"
           },
           "fallback_keys": {
-            "type": "string"
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           }
         }
       },
@@ -147592,6 +147769,14 @@
           "web_hook_calls_mid": {
             "type": "integer",
             "example": 500
+          },
+          "integration_executions": {
+            "type": "integer",
+            "example": 500
+          },
+          "integration_executions_datadog": {
+            "type": "integer",
+            "example": 3000
           },
           "max_pipelines_per_merge_train": {
             "type": "integer",
@@ -154988,6 +155173,19 @@
             "description": "URL of the GitLab instance used as a proxy for the GitLab for Jira Cloud app.",
             "nullable": true
           },
+          "jira_connect_domain_allowlist": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "List of Jira domains that can install the GitLab for Jira Cloud app. Applies to the Connect app only. If empty, all domains are allowed.",
+            "nullable": true
+          },
+          "jira_connect_domain_allowlist_raw": {
+            "type": "string",
+            "description": "Raw newline- or comma-separated list of Jira domains that can install the GitLab for Jira Cloud app. Applies to the Connect app only.",
+            "nullable": true
+          },
           "jira_forge_app_id": {
             "type": "string",
             "description": "Atlassian Forge app ID (ARI) of the GitLab for Jira Cloud app, used to verify inbound Forge Invocation Tokens.",
@@ -156988,6 +157186,10 @@
             "type": "string",
             "nullable": true
           },
+          "issuable_csv_import_limit": {
+            "type": "string",
+            "nullable": true
+          },
           "project_api_limit": {
             "type": "string",
             "nullable": true
@@ -157045,6 +157247,10 @@
             "nullable": true
           },
           "todos_list_api_limit": {
+            "type": "string",
+            "nullable": true
+          },
+          "wiki_read_request_limit_unauthenticated": {
             "type": "string",
             "nullable": true
           },
@@ -177438,6 +177644,16 @@
             "description": "Maximum number of times a webhook can be called per minute, per top-level namespace. Set to \u00600\u0060 for unlimited. GitLab.com only.",
             "nullable": true
           },
+          "integration_executions": {
+            "type": "integer",
+            "description": "Maximum number of integration executions that can be enqueued per minute, per top-level namespace, excluding Datadog. Set to \u00600\u0060 for unlimited.",
+            "nullable": true
+          },
+          "integration_executions_datadog": {
+            "type": "integer",
+            "description": "Maximum number of Datadog integration executions that can be enqueued per minute, per top-level namespace. Set to \u00600\u0060 for unlimited.",
+            "nullable": true
+          },
           "max_pipelines_per_merge_train": {
             "type": "integer",
             "description": "Maximum number of parallel pipelines per merge train. The default is \u006020\u0060 and the minimum is \u00601\u0060. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/374188) in GitLab 19.0.",
@@ -187935,6 +188151,55 @@
         "example": "idle",
         "x-ms-enum": {
           "name": "ApiEntitiesCiRunnerManagerJobExecutionStatus",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "active",
+              "name": "Active"
+            },
+            {
+              "value": "idle",
+              "name": "Idle"
+            }
+          ]
+        }
+      },
+      "ApiEntitiesCiRunnerWithUuidRunnerType": {
+        "enum": [
+          "instance_type",
+          "group_type",
+          "project_type"
+        ],
+        "type": "string",
+        "example": "instance_type",
+        "x-ms-enum": {
+          "name": "ApiEntitiesCiRunnerWithUuidRunnerType",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "instance_type",
+              "name": "InstanceType"
+            },
+            {
+              "value": "group_type",
+              "name": "GroupType"
+            },
+            {
+              "value": "project_type",
+              "name": "ProjectType"
+            }
+          ]
+        }
+      },
+      "ApiEntitiesCiRunnerWithUuidJobExecutionStatus": {
+        "enum": [
+          "active",
+          "idle"
+        ],
+        "type": "string",
+        "example": "idle",
+        "x-ms-enum": {
+          "name": "ApiEntitiesCiRunnerWithUuidJobExecutionStatus",
           "modelAsString": false,
           "values": [
             {
@@ -214716,6 +214981,10 @@
         "url": "https://docs.gitlab.com/api/service_accounts/"
       },
       "x-displayName": "Service accounts"
+    },
+    {
+      "name": "Service ping",
+      "description": "Operations related to service ping."
     },
     {
       "name": "Sidekiq",

@@ -60,12 +60,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The exclude property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Exclude { get => _explicitNullValueExclude; set { _explicitNullValueExclude = value; AdditionalData?.Remove("exclude"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exclude"); else _explicitNullProperties?.Remove("exclude"); } }
-        private string? _explicitNullValueExclude = default!;
+        public List<string>? Exclude { get => _explicitNullValueExclude; set { _explicitNullValueExclude = value; AdditionalData?.Remove("exclude"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exclude"); else _explicitNullProperties?.Remove("exclude"); } }
+        private List<string>? _explicitNullValueExclude = default!;
 #nullable restore
 #else
-        public string Exclude { get => _explicitNullValueExclude; set { _explicitNullValueExclude = value; AdditionalData?.Remove("exclude"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exclude"); else _explicitNullProperties?.Remove("exclude"); } }
-        private string _explicitNullValueExclude = default!;
+        public List<string> Exclude { get => _explicitNullValueExclude; set { _explicitNullValueExclude = value; AdditionalData?.Remove("exclude"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exclude"); else _explicitNullProperties?.Remove("exclude"); } }
+        private List<string> _explicitNullValueExclude = default!;
 #endif
         /// <summary>The expire_in property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -90,23 +90,16 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The paths property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Paths { get => _explicitNullValuePaths; set { _explicitNullValuePaths = value; AdditionalData?.Remove("paths"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paths"); else _explicitNullProperties?.Remove("paths"); } }
-        private string? _explicitNullValuePaths = default!;
+        public List<string>? Paths { get => _explicitNullValuePaths; set { _explicitNullValuePaths = value; AdditionalData?.Remove("paths"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paths"); else _explicitNullProperties?.Remove("paths"); } }
+        private List<string>? _explicitNullValuePaths = default!;
 #nullable restore
 #else
-        public string Paths { get => _explicitNullValuePaths; set { _explicitNullValuePaths = value; AdditionalData?.Remove("paths"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paths"); else _explicitNullProperties?.Remove("paths"); } }
-        private string _explicitNullValuePaths = default!;
+        public List<string> Paths { get => _explicitNullValuePaths; set { _explicitNullValuePaths = value; AdditionalData?.Remove("paths"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paths"); else _explicitNullProperties?.Remove("paths"); } }
+        private List<string> _explicitNullValuePaths = default!;
 #endif
         /// <summary>The untracked property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Untracked { get => _explicitNullValueUntracked; set { _explicitNullValueUntracked = value; AdditionalData?.Remove("untracked"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("untracked"); else _explicitNullProperties?.Remove("untracked"); } }
-        private string? _explicitNullValueUntracked = default!;
-#nullable restore
-#else
-        public string Untracked { get => _explicitNullValueUntracked; set { _explicitNullValueUntracked = value; AdditionalData?.Remove("untracked"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("untracked"); else _explicitNullProperties?.Remove("untracked"); } }
-        private string _explicitNullValueUntracked = default!;
-#endif
+        public bool? Untracked { get => _explicitNullValueUntracked; set { _explicitNullValueUntracked = value; AdditionalData?.Remove("untracked"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("untracked"); else _explicitNullProperties?.Remove("untracked"); } }
+        private bool? _explicitNullValueUntracked = default!;
         /// <summary>The when property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -144,11 +137,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             {
                 { "artifact_format", n => { ArtifactFormat = n.GetStringValue(); } },
                 { "artifact_type", n => { ArtifactType = n.GetStringValue(); } },
-                { "exclude", n => { Exclude = n.GetStringValue(); } },
+                { "exclude", n => { Exclude = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "expire_in", n => { ExpireIn = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "paths", n => { Paths = n.GetStringValue(); } },
-                { "untracked", n => { Untracked = n.GetStringValue(); } },
+                { "paths", n => { Paths = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "untracked", n => { Untracked = n.GetBoolValue(); } },
                 { "when", n => { When = n.GetStringValue(); } },
             };
         }
@@ -161,11 +154,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("artifact_format", ArtifactFormat);
             writer.WriteStringValue("artifact_type", ArtifactType);
-            writer.WriteStringValue("exclude", Exclude);
+            writer.WriteCollectionOfPrimitiveValues<string>("exclude", Exclude);
             writer.WriteStringValue("expire_in", ExpireIn);
             writer.WriteStringValue("name", Name);
-            writer.WriteStringValue("paths", Paths);
-            writer.WriteStringValue("untracked", Untracked);
+            writer.WriteCollectionOfPrimitiveValues<string>("paths", Paths);
+            writer.WriteBoolValue("untracked", Untracked);
             writer.WriteStringValue("when", When);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
