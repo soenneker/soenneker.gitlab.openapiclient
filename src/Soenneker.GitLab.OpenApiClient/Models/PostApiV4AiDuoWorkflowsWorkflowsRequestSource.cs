@@ -59,5 +59,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         #pragma warning disable CS1591
         WebChat,
         #pragma warning restore CS1591
+        [EnumMember(Value = "vulnerability_leaked_token_rotation")]
+        #pragma warning disable CS1591
+        VulnerabilityLeakedTokenRotation,
+        #pragma warning restore CS1591
     }
 }

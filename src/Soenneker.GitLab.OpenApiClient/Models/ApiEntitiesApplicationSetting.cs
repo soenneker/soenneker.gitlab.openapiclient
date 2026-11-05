@@ -135,6 +135,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             else if (parseNode.GetChildNode("ci_job_trace_update_interval") is { } nullNodeCiJobTraceUpdateInterval && nullNodeCiJobTraceUpdateInterval.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CiJobTraceUpdateInterval = null;
             if (parseNode.GetChildNode("ci_job_trace_update_interval_when_being_watched") is null) { _explicitNullValueCiJobTraceUpdateIntervalWhenBeingWatched = default!; _explicitNullProperties?.Remove("ci_job_trace_update_interval_when_being_watched"); }
             else if (parseNode.GetChildNode("ci_job_trace_update_interval_when_being_watched") is { } nullNodeCiJobTraceUpdateIntervalWhenBeingWatched && nullNodeCiJobTraceUpdateIntervalWhenBeingWatched.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CiJobTraceUpdateIntervalWhenBeingWatched = null;
+            if (parseNode.GetChildNode("ci_lint_api_require_authentication") is null) { _explicitNullValueCiLintApiRequireAuthentication = default!; _explicitNullProperties?.Remove("ci_lint_api_require_authentication"); }
+            else if (parseNode.GetChildNode("ci_lint_api_require_authentication") is { } nullNodeCiLintApiRequireAuthentication && nullNodeCiLintApiRequireAuthentication.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CiLintApiRequireAuthentication = null;
             if (parseNode.GetChildNode("ci_lint_limit_per_user") is null) { _explicitNullValueCiLintLimitPerUser = default!; _explicitNullProperties?.Remove("ci_lint_limit_per_user"); }
             else if (parseNode.GetChildNode("ci_lint_limit_per_user") is { } nullNodeCiLintLimitPerUser && nullNodeCiLintLimitPerUser.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CiLintLimitPerUser = null;
             if (parseNode.GetChildNode("ci_max_caches_per_job") is null) { _explicitNullValueCiMaxCachesPerJob = default!; _explicitNullProperties?.Remove("ci_max_caches_per_job"); }
@@ -671,6 +673,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             else if (parseNode.GetChildNode("inactive_resource_access_tokens_delete_after_days") is { } nullNodeInactiveResourceAccessTokensDeleteAfterDays && nullNodeInactiveResourceAccessTokensDeleteAfterDays.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InactiveResourceAccessTokensDeleteAfterDays = null;
             if (parseNode.GetChildNode("include_optional_metrics_in_service_ping") is null) { _explicitNullValueIncludeOptionalMetricsInServicePing = default!; _explicitNullProperties?.Remove("include_optional_metrics_in_service_ping"); }
             else if (parseNode.GetChildNode("include_optional_metrics_in_service_ping") is { } nullNodeIncludeOptionalMetricsInServicePing && nullNodeIncludeOptionalMetricsInServicePing.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IncludeOptionalMetricsInServicePing = null;
+            if (parseNode.GetChildNode("insights_query_limit") is null) { _explicitNullValueInsightsQueryLimit = default!; _explicitNullProperties?.Remove("insights_query_limit"); }
+            else if (parseNode.GetChildNode("insights_query_limit") is { } nullNodeInsightsQueryLimit && nullNodeInsightsQueryLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InsightsQueryLimit = null;
             if (parseNode.GetChildNode("instance_level_ai_beta_features_enabled") is null) { _explicitNullValueInstanceLevelAiBetaFeaturesEnabled = default!; _explicitNullProperties?.Remove("instance_level_ai_beta_features_enabled"); }
             else if (parseNode.GetChildNode("instance_level_ai_beta_features_enabled") is { } nullNodeInstanceLevelAiBetaFeaturesEnabled && nullNodeInstanceLevelAiBetaFeaturesEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InstanceLevelAiBetaFeaturesEnabled = null;
             if (parseNode.GetChildNode("instance_token_prefix") is null) { _explicitNullValueInstanceTokenPrefix = default!; _explicitNullProperties?.Remove("instance_token_prefix"); }
@@ -715,6 +719,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             else if (parseNode.GetChildNode("kroki_formats") is { } nullNodeKrokiFormats && nullNodeKrokiFormats.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) KrokiFormats = null;
             if (parseNode.GetChildNode("kroki_url") is null) { _explicitNullValueKrokiUrl = default!; _explicitNullProperties?.Remove("kroki_url"); }
             else if (parseNode.GetChildNode("kroki_url") is { } nullNodeKrokiUrl && nullNodeKrokiUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) KrokiUrl = null;
+            if (parseNode.GetChildNode("label_delete_limit") is null) { _explicitNullValueLabelDeleteLimit = default!; _explicitNullProperties?.Remove("label_delete_limit"); }
+            else if (parseNode.GetChildNode("label_delete_limit") is { } nullNodeLabelDeleteLimit && nullNodeLabelDeleteLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LabelDeleteLimit = null;
             if (parseNode.GetChildNode("local_markdown_version") is null) { _explicitNullValueLocalMarkdownVersion = default!; _explicitNullProperties?.Remove("local_markdown_version"); }
             else if (parseNode.GetChildNode("local_markdown_version") is { } nullNodeLocalMarkdownVersion && nullNodeLocalMarkdownVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocalMarkdownVersion = null;
             if (parseNode.GetChildNode("lock_built_in_project_templates_enabled") is null) { _explicitNullValueLockBuiltInProjectTemplatesEnabled = default!; _explicitNullProperties?.Remove("lock_built_in_project_templates_enabled"); }
@@ -1043,6 +1049,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             else if (parseNode.GetChildNode("rsa_key_restriction") is { } nullNodeRsaKeyRestriction && nullNodeRsaKeyRestriction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RsaKeyRestriction = null;
             if (parseNode.GetChildNode("rubygems_package_requests_forwarding") is null) { _explicitNullValueRubygemsPackageRequestsForwarding = default!; _explicitNullProperties?.Remove("rubygems_package_requests_forwarding"); }
             else if (parseNode.GetChildNode("rubygems_package_requests_forwarding") is { } nullNodeRubygemsPackageRequestsForwarding && nullNodeRubygemsPackageRequestsForwarding.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RubygemsPackageRequestsForwarding = null;
+            if (parseNode.GetChildNode("runner_job_list_completed_statuses_limit_per_user") is null) { _explicitNullValueRunnerJobListCompletedStatusesLimitPerUser = default!; _explicitNullProperties?.Remove("runner_job_list_completed_statuses_limit_per_user"); }
+            else if (parseNode.GetChildNode("runner_job_list_completed_statuses_limit_per_user") is { } nullNodeRunnerJobListCompletedStatusesLimitPerUser && nullNodeRunnerJobListCompletedStatusesLimitPerUser.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RunnerJobListCompletedStatusesLimitPerUser = null;
             if (parseNode.GetChildNode("runner_jobs_endpoints_api_limit") is null) { _explicitNullValueRunnerJobsEndpointsApiLimit = default!; _explicitNullProperties?.Remove("runner_jobs_endpoints_api_limit"); }
             else if (parseNode.GetChildNode("runner_jobs_endpoints_api_limit") is { } nullNodeRunnerJobsEndpointsApiLimit && nullNodeRunnerJobsEndpointsApiLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RunnerJobsEndpointsApiLimit = null;
             if (parseNode.GetChildNode("runner_jobs_patch_trace_api_limit") is null) { _explicitNullValueRunnerJobsPatchTraceApiLimit = default!; _explicitNullProperties?.Remove("runner_jobs_patch_trace_api_limit"); }
@@ -1385,6 +1393,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             else if (parseNode.GetChildNode("wiki_page_max_content_bytes") is { } nullNodeWikiPageMaxContentBytes && nullNodeWikiPageMaxContentBytes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WikiPageMaxContentBytes = null;
             if (parseNode.GetChildNode("wiki_read_request_limit_unauthenticated") is null) { _explicitNullValueWikiReadRequestLimitUnauthenticated = default!; _explicitNullProperties?.Remove("wiki_read_request_limit_unauthenticated"); }
             else if (parseNode.GetChildNode("wiki_read_request_limit_unauthenticated") is { } nullNodeWikiReadRequestLimitUnauthenticated && nullNodeWikiReadRequestLimitUnauthenticated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WikiReadRequestLimitUnauthenticated = null;
+            if (parseNode.GetChildNode("work_item_hierarchy_add_children_limit") is null) { _explicitNullValueWorkItemHierarchyAddChildrenLimit = default!; _explicitNullProperties?.Remove("work_item_hierarchy_add_children_limit"); }
+            else if (parseNode.GetChildNode("work_item_hierarchy_add_children_limit") is { } nullNodeWorkItemHierarchyAddChildrenLimit && nullNodeWorkItemHierarchyAddChildrenLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WorkItemHierarchyAddChildrenLimit = null;
             if (parseNode.GetChildNode("zoekt_auto_index_root_namespace") is null) { _explicitNullValueZoektAutoIndexRootNamespace = default!; _explicitNullProperties?.Remove("zoekt_auto_index_root_namespace"); }
             else if (parseNode.GetChildNode("zoekt_auto_index_root_namespace") is { } nullNodeZoektAutoIndexRootNamespace && nullNodeZoektAutoIndexRootNamespace.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ZoektAutoIndexRootNamespace = null;
             if (parseNode.GetChildNode("zoekt_cache_response") is null) { _explicitNullValueZoektCacheResponse = default!; _explicitNullProperties?.Remove("zoekt_cache_response"); }
@@ -1989,6 +1999,16 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The ci_job_trace_update_interval_when_being_watched property</summary>
         public int? CiJobTraceUpdateIntervalWhenBeingWatched { get => _explicitNullValueCiJobTraceUpdateIntervalWhenBeingWatched; set { _explicitNullValueCiJobTraceUpdateIntervalWhenBeingWatched = value; AdditionalData?.Remove("ci_job_trace_update_interval_when_being_watched"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ci_job_trace_update_interval_when_being_watched"); else _explicitNullProperties?.Remove("ci_job_trace_update_interval_when_being_watched"); } }
         private int? _explicitNullValueCiJobTraceUpdateIntervalWhenBeingWatched = default!;
+        /// <summary>The ci_lint_api_require_authentication property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CiLintApiRequireAuthentication { get => _explicitNullValueCiLintApiRequireAuthentication; set { _explicitNullValueCiLintApiRequireAuthentication = value; AdditionalData?.Remove("ci_lint_api_require_authentication"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ci_lint_api_require_authentication"); else _explicitNullProperties?.Remove("ci_lint_api_require_authentication"); } }
+        private string? _explicitNullValueCiLintApiRequireAuthentication = default!;
+#nullable restore
+#else
+        public string CiLintApiRequireAuthentication { get => _explicitNullValueCiLintApiRequireAuthentication; set { _explicitNullValueCiLintApiRequireAuthentication = value; AdditionalData?.Remove("ci_lint_api_require_authentication"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ci_lint_api_require_authentication"); else _explicitNullProperties?.Remove("ci_lint_api_require_authentication"); } }
+        private string _explicitNullValueCiLintApiRequireAuthentication = default!;
+#endif
         /// <summary>The ci_lint_limit_per_user property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -4641,6 +4661,16 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string IncludeOptionalMetricsInServicePing { get => _explicitNullValueIncludeOptionalMetricsInServicePing; set { _explicitNullValueIncludeOptionalMetricsInServicePing = value; AdditionalData?.Remove("include_optional_metrics_in_service_ping"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("include_optional_metrics_in_service_ping"); else _explicitNullProperties?.Remove("include_optional_metrics_in_service_ping"); } }
         private string _explicitNullValueIncludeOptionalMetricsInServicePing = default!;
 #endif
+        /// <summary>The insights_query_limit property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? InsightsQueryLimit { get => _explicitNullValueInsightsQueryLimit; set { _explicitNullValueInsightsQueryLimit = value; AdditionalData?.Remove("insights_query_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("insights_query_limit"); else _explicitNullProperties?.Remove("insights_query_limit"); } }
+        private string? _explicitNullValueInsightsQueryLimit = default!;
+#nullable restore
+#else
+        public string InsightsQueryLimit { get => _explicitNullValueInsightsQueryLimit; set { _explicitNullValueInsightsQueryLimit = value; AdditionalData?.Remove("insights_query_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("insights_query_limit"); else _explicitNullProperties?.Remove("insights_query_limit"); } }
+        private string _explicitNullValueInsightsQueryLimit = default!;
+#endif
         /// <summary>The instance_level_ai_beta_features_enabled property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -4860,6 +4890,16 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string KrokiUrl { get => _explicitNullValueKrokiUrl; set { _explicitNullValueKrokiUrl = value; AdditionalData?.Remove("kroki_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("kroki_url"); else _explicitNullProperties?.Remove("kroki_url"); } }
         private string _explicitNullValueKrokiUrl = default!;
+#endif
+        /// <summary>The label_delete_limit property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? LabelDeleteLimit { get => _explicitNullValueLabelDeleteLimit; set { _explicitNullValueLabelDeleteLimit = value; AdditionalData?.Remove("label_delete_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label_delete_limit"); else _explicitNullProperties?.Remove("label_delete_limit"); } }
+        private string? _explicitNullValueLabelDeleteLimit = default!;
+#nullable restore
+#else
+        public string LabelDeleteLimit { get => _explicitNullValueLabelDeleteLimit; set { _explicitNullValueLabelDeleteLimit = value; AdditionalData?.Remove("label_delete_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label_delete_limit"); else _explicitNullProperties?.Remove("label_delete_limit"); } }
+        private string _explicitNullValueLabelDeleteLimit = default!;
 #endif
         /// <summary>The local_markdown_version property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -6458,6 +6498,16 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string RubygemsPackageRequestsForwarding { get => _explicitNullValueRubygemsPackageRequestsForwarding; set { _explicitNullValueRubygemsPackageRequestsForwarding = value; AdditionalData?.Remove("rubygems_package_requests_forwarding"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rubygems_package_requests_forwarding"); else _explicitNullProperties?.Remove("rubygems_package_requests_forwarding"); } }
         private string _explicitNullValueRubygemsPackageRequestsForwarding = default!;
+#endif
+        /// <summary>The runner_job_list_completed_statuses_limit_per_user property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? RunnerJobListCompletedStatusesLimitPerUser { get => _explicitNullValueRunnerJobListCompletedStatusesLimitPerUser; set { _explicitNullValueRunnerJobListCompletedStatusesLimitPerUser = value; AdditionalData?.Remove("runner_job_list_completed_statuses_limit_per_user"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("runner_job_list_completed_statuses_limit_per_user"); else _explicitNullProperties?.Remove("runner_job_list_completed_statuses_limit_per_user"); } }
+        private string? _explicitNullValueRunnerJobListCompletedStatusesLimitPerUser = default!;
+#nullable restore
+#else
+        public string RunnerJobListCompletedStatusesLimitPerUser { get => _explicitNullValueRunnerJobListCompletedStatusesLimitPerUser; set { _explicitNullValueRunnerJobListCompletedStatusesLimitPerUser = value; AdditionalData?.Remove("runner_job_list_completed_statuses_limit_per_user"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("runner_job_list_completed_statuses_limit_per_user"); else _explicitNullProperties?.Remove("runner_job_list_completed_statuses_limit_per_user"); } }
+        private string _explicitNullValueRunnerJobListCompletedStatusesLimitPerUser = default!;
 #endif
         /// <summary>The runner_jobs_endpoints_api_limit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -8162,6 +8212,16 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string WikiReadRequestLimitUnauthenticated { get => _explicitNullValueWikiReadRequestLimitUnauthenticated; set { _explicitNullValueWikiReadRequestLimitUnauthenticated = value; AdditionalData?.Remove("wiki_read_request_limit_unauthenticated"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wiki_read_request_limit_unauthenticated"); else _explicitNullProperties?.Remove("wiki_read_request_limit_unauthenticated"); } }
         private string _explicitNullValueWikiReadRequestLimitUnauthenticated = default!;
 #endif
+        /// <summary>The work_item_hierarchy_add_children_limit property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? WorkItemHierarchyAddChildrenLimit { get => _explicitNullValueWorkItemHierarchyAddChildrenLimit; set { _explicitNullValueWorkItemHierarchyAddChildrenLimit = value; AdditionalData?.Remove("work_item_hierarchy_add_children_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("work_item_hierarchy_add_children_limit"); else _explicitNullProperties?.Remove("work_item_hierarchy_add_children_limit"); } }
+        private string? _explicitNullValueWorkItemHierarchyAddChildrenLimit = default!;
+#nullable restore
+#else
+        public string WorkItemHierarchyAddChildrenLimit { get => _explicitNullValueWorkItemHierarchyAddChildrenLimit; set { _explicitNullValueWorkItemHierarchyAddChildrenLimit = value; AdditionalData?.Remove("work_item_hierarchy_add_children_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("work_item_hierarchy_add_children_limit"); else _explicitNullProperties?.Remove("work_item_hierarchy_add_children_limit"); } }
+        private string _explicitNullValueWorkItemHierarchyAddChildrenLimit = default!;
+#endif
         /// <summary>The zoekt_auto_index_root_namespace property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -8436,6 +8496,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "ci_job_telemetry_sampling_rate", n => { CiJobTelemetrySamplingRate = n.GetStringValue(); } },
                 { "ci_job_trace_update_interval", n => { CiJobTraceUpdateInterval = n.GetIntValue(); } },
                 { "ci_job_trace_update_interval_when_being_watched", n => { CiJobTraceUpdateIntervalWhenBeingWatched = n.GetIntValue(); } },
+                { "ci_lint_api_require_authentication", n => { CiLintApiRequireAuthentication = n.GetStringValue(); } },
                 { "ci_lint_limit_per_user", n => { CiLintLimitPerUser = n.GetStringValue(); } },
                 { "ci_max_caches_per_job", n => { CiMaxCachesPerJob = n.GetStringValue(); } },
                 { "ci_max_includes", n => { CiMaxIncludes = n.GetStringValue(); } },
@@ -8704,6 +8765,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "inactive_projects_send_warning_email_after_months", n => { InactiveProjectsSendWarningEmailAfterMonths = n.GetStringValue(); } },
                 { "inactive_resource_access_tokens_delete_after_days", n => { InactiveResourceAccessTokensDeleteAfterDays = n.GetStringValue(); } },
                 { "include_optional_metrics_in_service_ping", n => { IncludeOptionalMetricsInServicePing = n.GetStringValue(); } },
+                { "insights_query_limit", n => { InsightsQueryLimit = n.GetStringValue(); } },
                 { "instance_level_ai_beta_features_enabled", n => { InstanceLevelAiBetaFeaturesEnabled = n.GetStringValue(); } },
                 { "instance_token_prefix", n => { InstanceTokenPrefix = n.GetStringValue(); } },
                 { "invisible_captcha_enabled", n => { InvisibleCaptchaEnabled = n.GetStringValue(); } },
@@ -8726,6 +8788,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "kroki_enabled", n => { KrokiEnabled = n.GetStringValue(); } },
                 { "kroki_formats", n => { KrokiFormats = n.GetStringValue(); } },
                 { "kroki_url", n => { KrokiUrl = n.GetStringValue(); } },
+                { "label_delete_limit", n => { LabelDeleteLimit = n.GetStringValue(); } },
                 { "local_markdown_version", n => { LocalMarkdownVersion = n.GetStringValue(); } },
                 { "lock_built_in_project_templates_enabled", n => { LockBuiltInProjectTemplatesEnabled = n.GetBoolValue(); } },
                 { "lock_duo_custom_agents_enabled", n => { LockDuoCustomAgentsEnabled = n.GetBoolValue(); } },
@@ -8890,6 +8953,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "root_moved_permanently_redirection", n => { RootMovedPermanentlyRedirection = n.GetStringValue(); } },
                 { "rsa_key_restriction", n => { RsaKeyRestriction = n.GetStringValue(); } },
                 { "rubygems_package_requests_forwarding", n => { RubygemsPackageRequestsForwarding = n.GetStringValue(); } },
+                { "runner_job_list_completed_statuses_limit_per_user", n => { RunnerJobListCompletedStatusesLimitPerUser = n.GetStringValue(); } },
                 { "runner_jobs_endpoints_api_limit", n => { RunnerJobsEndpointsApiLimit = n.GetStringValue(); } },
                 { "runner_jobs_patch_trace_api_limit", n => { RunnerJobsPatchTraceApiLimit = n.GetStringValue(); } },
                 { "runner_jobs_request_api_limit", n => { RunnerJobsRequestApiLimit = n.GetStringValue(); } },
@@ -9061,6 +9125,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "wiki_asciidoc_allow_uri_includes", n => { WikiAsciidocAllowUriIncludes = n.GetStringValue(); } },
                 { "wiki_page_max_content_bytes", n => { WikiPageMaxContentBytes = n.GetStringValue(); } },
                 { "wiki_read_request_limit_unauthenticated", n => { WikiReadRequestLimitUnauthenticated = n.GetStringValue(); } },
+                { "work_item_hierarchy_add_children_limit", n => { WorkItemHierarchyAddChildrenLimit = n.GetStringValue(); } },
                 { "zoekt_auto_index_root_namespace", n => { ZoektAutoIndexRootNamespace = n.GetStringValue(); } },
                 { "zoekt_cache_response", n => { ZoektCacheResponse = n.GetStringValue(); } },
                 { "zoekt_cpu_to_tasks_ratio", n => { ZoektCpuToTasksRatio = n.GetStringValue(); } },
@@ -9148,6 +9213,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("ci_job_telemetry_sampling_rate", CiJobTelemetrySamplingRate);
             writer.WriteIntValue("ci_job_trace_update_interval", CiJobTraceUpdateInterval);
             writer.WriteIntValue("ci_job_trace_update_interval_when_being_watched", CiJobTraceUpdateIntervalWhenBeingWatched);
+            writer.WriteStringValue("ci_lint_api_require_authentication", CiLintApiRequireAuthentication);
             writer.WriteStringValue("ci_lint_limit_per_user", CiLintLimitPerUser);
             writer.WriteStringValue("ci_max_caches_per_job", CiMaxCachesPerJob);
             writer.WriteStringValue("ci_max_includes", CiMaxIncludes);
@@ -9416,6 +9482,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("inactive_projects_send_warning_email_after_months", InactiveProjectsSendWarningEmailAfterMonths);
             writer.WriteStringValue("inactive_resource_access_tokens_delete_after_days", InactiveResourceAccessTokensDeleteAfterDays);
             writer.WriteStringValue("include_optional_metrics_in_service_ping", IncludeOptionalMetricsInServicePing);
+            writer.WriteStringValue("insights_query_limit", InsightsQueryLimit);
             writer.WriteStringValue("instance_level_ai_beta_features_enabled", InstanceLevelAiBetaFeaturesEnabled);
             writer.WriteStringValue("instance_token_prefix", InstanceTokenPrefix);
             writer.WriteStringValue("invisible_captcha_enabled", InvisibleCaptchaEnabled);
@@ -9438,6 +9505,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("kroki_enabled", KrokiEnabled);
             writer.WriteStringValue("kroki_formats", KrokiFormats);
             writer.WriteStringValue("kroki_url", KrokiUrl);
+            writer.WriteStringValue("label_delete_limit", LabelDeleteLimit);
             writer.WriteStringValue("local_markdown_version", LocalMarkdownVersion);
             writer.WriteBoolValue("lock_built_in_project_templates_enabled", LockBuiltInProjectTemplatesEnabled);
             writer.WriteBoolValue("lock_duo_custom_agents_enabled", LockDuoCustomAgentsEnabled);
@@ -9602,6 +9670,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("root_moved_permanently_redirection", RootMovedPermanentlyRedirection);
             writer.WriteStringValue("rsa_key_restriction", RsaKeyRestriction);
             writer.WriteStringValue("rubygems_package_requests_forwarding", RubygemsPackageRequestsForwarding);
+            writer.WriteStringValue("runner_job_list_completed_statuses_limit_per_user", RunnerJobListCompletedStatusesLimitPerUser);
             writer.WriteStringValue("runner_jobs_endpoints_api_limit", RunnerJobsEndpointsApiLimit);
             writer.WriteStringValue("runner_jobs_patch_trace_api_limit", RunnerJobsPatchTraceApiLimit);
             writer.WriteStringValue("runner_jobs_request_api_limit", RunnerJobsRequestApiLimit);
@@ -9773,6 +9842,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("wiki_asciidoc_allow_uri_includes", WikiAsciidocAllowUriIncludes);
             writer.WriteStringValue("wiki_page_max_content_bytes", WikiPageMaxContentBytes);
             writer.WriteStringValue("wiki_read_request_limit_unauthenticated", WikiReadRequestLimitUnauthenticated);
+            writer.WriteStringValue("work_item_hierarchy_add_children_limit", WorkItemHierarchyAddChildrenLimit);
             writer.WriteStringValue("zoekt_auto_index_root_namespace", ZoektAutoIndexRootNamespace);
             writer.WriteStringValue("zoekt_cache_response", ZoektCacheResponse);
             writer.WriteStringValue("zoekt_cpu_to_tasks_ratio", ZoektCpuToTasksRatio);

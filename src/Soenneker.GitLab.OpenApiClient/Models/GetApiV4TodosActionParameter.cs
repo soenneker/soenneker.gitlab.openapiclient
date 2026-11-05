@@ -88,5 +88,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         #pragma warning disable CS1591
         DuoWorkflowInputRequired,
         #pragma warning restore CS1591
+        [EnumMember(Value = "orbit_access_granted")]
+        #pragma warning disable CS1591
+        OrbitAccessGranted,
+        #pragma warning restore CS1591
     }
 }

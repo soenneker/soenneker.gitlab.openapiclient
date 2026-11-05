@@ -1615,8 +1615,17 @@
           "401": {
             "description": "Unauthorized"
           },
+          "402": {
+            "description": "Payment required"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
           "404": {
             "description": "Not found"
+          },
+          "422": {
+            "description": "Unprocessable entity"
           },
           "429": {
             "description": "Too many requests"
@@ -2079,6 +2088,9 @@
           },
           "404": {
             "description": "Not found"
+          },
+          "429": {
+            "description": "Too many requests"
           }
         }
       }
@@ -72163,6 +72175,9 @@
               }
             }
           },
+          "401": {
+            "description": "Unauthorized"
+          },
           "404": {
             "description": "Not found"
           },
@@ -121003,6 +121018,9 @@
           "403": {
             "description": "403 Forbidden"
           },
+          "404": {
+            "description": "404 Not found"
+          },
           "400": {
             "description": "Bad Request"
           }
@@ -121272,6 +121290,9 @@
           },
           "403": {
             "description": "403 Forbidden"
+          },
+          "404": {
+            "description": "404 Not found"
           },
           "400": {
             "description": "Bad Request"
@@ -134096,6 +134117,9 @@
           "ci_job_trace_update_interval_when_being_watched": {
             "type": "integer"
           },
+          "ci_lint_api_require_authentication": {
+            "type": "string"
+          },
           "ci_partitions_in_seconds_limit_human_readable": {
             "type": "string"
           },
@@ -135167,6 +135191,9 @@
           "issuable_csv_import_limit": {
             "type": "string"
           },
+          "label_delete_limit": {
+            "type": "string"
+          },
           "project_api_limit": {
             "type": "string"
           },
@@ -135245,6 +135272,9 @@
           "wiki_read_request_limit_unauthenticated": {
             "type": "string"
           },
+          "work_item_hierarchy_add_children_limit": {
+            "type": "string"
+          },
           "github_gists_import_limit": {
             "type": "string"
           },
@@ -135288,6 +135318,9 @@
             "type": "string"
           },
           "pipeline_retry_limit_per_user_project": {
+            "type": "string"
+          },
+          "runner_job_list_completed_statuses_limit_per_user": {
             "type": "string"
           },
           "job_retry_limit_per_user_project": {
@@ -135786,6 +135819,9 @@
             "type": "string"
           },
           "orbit_dap_enabled_by_default": {
+            "type": "string"
+          },
+          "insights_query_limit": {
             "type": "string"
           },
           "orbit_query_limit": {
@@ -148643,7 +148679,7 @@
             "items": {
               "$ref": "#/components/schemas/PostApiV4AiDuoWorkflowsWorkflowsIdAuditEventsRequestEventsItem"
             },
-            "description": "Array of CloudEvents v1.0 envelopes.",
+            "description": "Array of CloudEvents v1.0 envelopes. Maximum 500.",
             "nullable": true
           }
         }
@@ -155276,6 +155312,11 @@
             "description": "Maximum number of caches that can be defined in a single CI/CD job.",
             "nullable": true
           },
+          "ci_lint_api_require_authentication": {
+            "type": "boolean",
+            "description": "If \u0060true\u0060, \u0060GET /projects/:id/ci/lint\u0060 requires authentication, including for public projects.",
+            "nullable": true
+          },
           "ci_job_live_trace_enabled": {
             "type": "boolean",
             "description": "If \u0060true\u0060, turns on incremental logging for job logs. Archived job logs are incrementally uploaded to object storage, which must be configured.",
@@ -155354,6 +155395,11 @@
           "pipeline_retry_limit_per_user_project": {
             "type": "integer",
             "description": "Maximum number of pipeline retries allowed per minute for a given project.",
+            "nullable": true
+          },
+          "runner_job_list_completed_statuses_limit_per_user": {
+            "type": "integer",
+            "description": "Maximum number of runner job list requests filtered by a completed status allowed per minute for a given user.",
             "nullable": true
           },
           "job_retry_limit_per_user_project": {
@@ -156484,6 +156530,11 @@
             "description": "Maximum number of requests per minute per user per group to the group audit events API.",
             "nullable": true
           },
+          "insights_query_limit": {
+            "type": "integer",
+            "description": "Maximum number of Insights chart queries per minute for each user or IP address, for each group or project. Default: \u006060\u0060. Set to \u00600\u0060 to disable the rate limit.",
+            "nullable": true
+          },
           "orbit_query_limit": {
             "type": "integer",
             "description": "Maximum number of GitLab Orbit queries per minute per user. Default: \u006060\u0060. Set to \u00600\u0060 to disable the rate limit.",
@@ -156638,6 +156689,16 @@
           "lock_duo_remote_flows_enabled": {
             "type": "boolean",
             "description": "If \u0060true\u0060, enforces the GitLab Duo remote flows enabled setting for all subgroups.",
+            "nullable": true
+          },
+          "duo_scheduled_triggers_enabled": {
+            "type": "boolean",
+            "description": "If \u0060true\u0060, allows GitLab Duo flows to run on a schedule for the instance. Defaults to \u0060true\u0060.",
+            "nullable": true
+          },
+          "lock_duo_scheduled_triggers_enabled": {
+            "type": "boolean",
+            "description": "If \u0060true\u0060, enforces the scheduled triggers enabled setting for all groups.",
             "nullable": true
           },
           "duo_workflows_default_image_registry": {
@@ -157190,6 +157251,10 @@
             "type": "string",
             "nullable": true
           },
+          "label_delete_limit": {
+            "type": "string",
+            "nullable": true
+          },
           "project_api_limit": {
             "type": "string",
             "nullable": true
@@ -157251,6 +157316,10 @@
             "nullable": true
           },
           "wiki_read_request_limit_unauthenticated": {
+            "type": "string",
+            "nullable": true
+          },
+          "work_item_hierarchy_add_children_limit": {
             "type": "string",
             "nullable": true
           },
@@ -157487,10 +157556,6 @@
             "nullable": true
           },
           "duo_foundational_flows_availability": {
-            "type": "string",
-            "nullable": true
-          },
-          "duo_scheduled_triggers_enabled": {
             "type": "string",
             "nullable": true
           },
@@ -176514,6 +176579,11 @@
             "description": "Enable GitLab foundational Duo flows for this group",
             "nullable": true
           },
+          "duo_scheduled_triggers_availability": {
+            "type": "boolean",
+            "description": "Allow GitLab Duo flows in this group to run on a schedule",
+            "nullable": true
+          },
           "duo_custom_agents_availability": {
             "type": "boolean",
             "description": "Enable GitLab Duo custom agents for this group",
@@ -176718,6 +176788,11 @@
           "duo_foundational_flows_availability": {
             "type": "boolean",
             "description": "Enable GitLab foundational Duo flows for this group",
+            "nullable": true
+          },
+          "duo_scheduled_triggers_availability": {
+            "type": "boolean",
+            "description": "Allow GitLab Duo flows in this group to run on a schedule",
             "nullable": true
           },
           "duo_custom_agents_availability": {
@@ -188847,7 +188922,8 @@
           "duo_cli_acp",
           "ide_extension",
           "work_item_plan_to_merge_request",
-          "web_chat"
+          "web_chat",
+          "vulnerability_leaked_token_rotation"
         ],
         "type": "string",
         "description": "Where the session was triggered from in the UI.",
@@ -188907,6 +188983,10 @@
             {
               "value": "web_chat",
               "name": "WebChat"
+            },
+            {
+              "value": "vulnerability_leaked_token_rotation",
+              "name": "VulnerabilityLeakedTokenRotation"
             }
           ]
         }
@@ -202687,7 +202767,8 @@
           "duo_pro_access_granted",
           "duo_enterprise_access_granted",
           "duo_core_access_granted",
-          "duo_workflow_input_required"
+          "duo_workflow_input_required",
+          "orbit_access_granted"
         ],
         "type": "string",
         "nullable": true,
@@ -202774,6 +202855,10 @@
             {
               "value": "duo_workflow_input_required",
               "name": "DuoWorkflowInputRequired"
+            },
+            {
+              "value": "orbit_access_granted",
+              "name": "OrbitAccessGranted"
             }
           ]
         }
