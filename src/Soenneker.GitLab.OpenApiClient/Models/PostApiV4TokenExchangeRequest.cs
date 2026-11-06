@@ -26,8 +26,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Target service audience.</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Models.GitlabArtifactRegistryAudience? Audience { get => _explicitNullValueAudience; set { _explicitNullValueAudience = value; AdditionalData?.Remove("audience"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audience"); else _explicitNullProperties?.Remove("audience"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.GitlabArtifactRegistryAudience? _explicitNullValueAudience = default!;
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4TokenExchangeRequestAudience? Audience { get => _explicitNullValueAudience; set { _explicitNullValueAudience = value; AdditionalData?.Remove("audience"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audience"); else _explicitNullProperties?.Remove("audience"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4TokenExchangeRequestAudience? _explicitNullValueAudience = default!;
         /// <summary>Requested token lifetime in seconds. The granted lifetime may be shorter than requested depending on the authentication method used to call this endpoint.</summary>
         public int? ExpiresIn { get => _explicitNullValueExpiresIn; set { _explicitNullValueExpiresIn = value; AdditionalData?.Remove("expires_in"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expires_in"); else _explicitNullProperties?.Remove("expires_in"); } }
         private int? _explicitNullValueExpiresIn = default!;
@@ -57,7 +57,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "audience", n => { var parsed = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.GitlabArtifactRegistryAudience>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAudience = default; _explicitNullProperties?.Remove("audience"); AdditionalData["audience"] = unknown; } else { Audience = parsed; AdditionalData.Remove("audience"); } } },
+                { "audience", n => { var parsed = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4TokenExchangeRequestAudience>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAudience = default; _explicitNullProperties?.Remove("audience"); AdditionalData["audience"] = unknown; } else { Audience = parsed; AdditionalData.Remove("audience"); } } },
                 { "expires_in", n => { ExpiresIn = n.GetIntValue(); } },
             };
         }
@@ -68,7 +68,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.GitlabArtifactRegistryAudience>("audience", Audience);
+            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4TokenExchangeRequestAudience>("audience", Audience);
             writer.WriteIntValue("expires_in", ExpiresIn);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

@@ -7,6 +7,7 @@ using Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Org_mover.Confirm_maintenan
 using Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Org_mover.Exit_maintenance;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Org_mover.Maintenance_readiness;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Org_mover.Maintenance_state;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Org_mover.Manifest;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Org_mover.Start_maintenance;
 using System.Collections.Generic;
 using System.IO;
@@ -44,6 +45,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Org_mover
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Org_mover.Maintenance_state.Maintenance_stateRequestBuilder Maintenance_state
         {
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Org_mover.Maintenance_state.Maintenance_stateRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The manifest property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Org_mover.Manifest.ManifestRequestBuilder Manifest
+        {
+            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Org_mover.Manifest.ManifestRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The start_maintenance property</summary>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Internal.Org_mover.Start_maintenance.Start_maintenanceRequestBuilder Start_maintenance

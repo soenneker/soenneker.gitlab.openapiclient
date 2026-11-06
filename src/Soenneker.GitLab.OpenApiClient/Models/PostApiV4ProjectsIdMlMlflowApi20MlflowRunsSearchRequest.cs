@@ -42,15 +42,15 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Maximum number of runs to fetch in a page. The maximum is 1000.</summary>
         public int? MaxResults { get => _explicitNullValueMaxResults; set { _explicitNullValueMaxResults = value; AdditionalData?.Remove("max_results"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("max_results"); else _explicitNullProperties?.Remove("max_results"); } }
         private int? _explicitNullValueMaxResults = default!;
-        /// <summary>Order criteria. Can be by a column of the run/candidate (`created_at`, `name`) or by a metric if prefixed by `metrics`. Valid examples: `created_at`, `created_at DESC`, `metrics.my_metric DESC`. Sorting by candidate parameter or metadata is not supported.</summary>
+        /// <summary>Order criteria. Can be by a column of the run/candidate (`created_at`, `name`) or by a metric if prefixed by `metrics`. Valid examples: `created_at`, `created_at DESC`, `metrics.my_metric DESC`. A list uses its first entry. Sorting by candidate parameter or metadata is not supported.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OrderBy { get => _explicitNullValueOrderBy; set { _explicitNullValueOrderBy = value; AdditionalData?.Remove("order_by"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("order_by"); else _explicitNullProperties?.Remove("order_by"); } }
-        private string? _explicitNullValueOrderBy = default!;
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdMlMlflowApi20MlflowRunsSearchRequestOrderBy? OrderBy { get => _explicitNullValueOrderBy; set { _explicitNullValueOrderBy = value; AdditionalData?.Remove("order_by"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("order_by"); else _explicitNullProperties?.Remove("order_by"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdMlMlflowApi20MlflowRunsSearchRequestOrderBy? _explicitNullValueOrderBy = default!;
 #nullable restore
 #else
-        public string OrderBy { get => _explicitNullValueOrderBy; set { _explicitNullValueOrderBy = value; AdditionalData?.Remove("order_by"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("order_by"); else _explicitNullProperties?.Remove("order_by"); } }
-        private string _explicitNullValueOrderBy = default!;
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdMlMlflowApi20MlflowRunsSearchRequestOrderBy OrderBy { get => _explicitNullValueOrderBy; set { _explicitNullValueOrderBy = value; AdditionalData?.Remove("order_by"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("order_by"); else _explicitNullProperties?.Remove("order_by"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdMlMlflowApi20MlflowRunsSearchRequestOrderBy _explicitNullValueOrderBy = default!;
 #endif
         /// <summary>Token for pagination.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -69,7 +69,6 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             AdditionalData = new Dictionary<string, object>();
             MaxResults = 200;
-            OrderBy = "created_at DESC";
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -91,7 +90,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             {
                 { "experiment_ids", n => { ExperimentIds = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "max_results", n => { MaxResults = n.GetIntValue(); } },
-                { "order_by", n => { OrderBy = n.GetStringValue(); } },
+                { "order_by", n => { OrderBy = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdMlMlflowApi20MlflowRunsSearchRequestOrderBy>(global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdMlMlflowApi20MlflowRunsSearchRequestOrderBy.CreateFromDiscriminatorValue); } },
                 { "page_token", n => { PageToken = n.GetStringValue(); } },
             };
         }
@@ -104,7 +103,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<UntypedNode>("experiment_ids", ExperimentIds);
             writer.WriteIntValue("max_results", MaxResults);
-            writer.WriteStringValue("order_by", OrderBy);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdMlMlflowApi20MlflowRunsSearchRequestOrderBy>("order_by", OrderBy);
             writer.WriteStringValue("page_token", PageToken);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

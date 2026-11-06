@@ -2394,56 +2394,6 @@
         }
       }
     },
-    "/api/v4/ai/duo_workflows/workflows/{id}/tool_access_policies": {
-      "get": {
-        "tags": [
-          "GitLab Duo workflows",
-          "Internal operations"
-        ],
-        "summary": "Get the tool access policy for a workflow",
-        "description": "Returns the tool access policy for a workflow, for DWS to use when its token carries none.",
-        "operationId": "GetApiV4AiDuoWorkflowsWorkflowsIdToolAccessPolicies",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "ID of the workflow.",
-            "required": true,
-            "schema": {
-              "type": "integer"
-            },
-            "example": 1
-          },
-          {
-            "name": "project_id",
-            "in": "query",
-            "description": "ID of the project the session runs in. It can only make the policy stricter.",
-            "schema": {
-              "type": "integer",
-              "nullable": true
-            },
-            "example": 1
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "400": {
-            "description": "Bad request"
-          },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not found"
-          }
-        }
-      }
-    },
     "/api/v4/ai/duo_workflows/workflows/{id}/catalog_items": {
       "get": {
         "tags": [
@@ -20952,6 +20902,27 @@
         }
       }
     },
+    "/api/v4/internal/org_mover/manifest": {
+      "get": {
+        "tags": [
+          "Organizations"
+        ],
+        "summary": "Describe this cell\u0027s Org Mover manifest",
+        "description": "Returns the manifest of databases, tables and asset sources that moving an organization off this cell must carry, generated for the running GitLab version.",
+        "operationId": "GetApiV4InternalOrgMoverManifest",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not found"
+          }
+        }
+      }
+    },
     "/api/v4/projects/{id}/ml/mlflow/api/2.0/mlflow-artifacts/artifacts": {
       "get": {
         "tags": [
@@ -21389,10 +21360,20 @@
           {
             "name": "order_by",
             "in": "query",
-            "description": "Column and direction to sort registered models by, for example \u0060name\u0060, \u0060name DESC\u0060, or \u0060last_updated_timestamp DESC\u0060. Supported columns are \u0060name\u0060 and \u0060last_updated_timestamp\u0060. Sorting by model metadata is not supported.",
+            "description": "Column and direction to sort registered models by, for example \u0060name\u0060, \u0060name DESC\u0060, or \u0060last_updated_timestamp DESC\u0060. Supported columns are \u0060name\u0060, \u0060created_at\u0060, \u0060updated_at\u0060, \u0060last_updated_timestamp\u0060 and \u0060id\u0060. A list uses its first entry. Sorting by model metadata is not supported.",
             "schema": {
-              "type": "string",
-              "default": "name ASC"
+              "oneOf": [
+                {
+                  "type": "string",
+                  "default": "name ASC"
+                },
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              ]
             }
           },
           {
@@ -41333,6 +41314,9 @@
           "404": {
             "description": "Not found"
           },
+          "429": {
+            "description": "Too many requests"
+          },
           "400": {
             "description": "Bad Request"
           }
@@ -41367,6 +41351,9 @@
           "404": {
             "description": "Not found"
           },
+          "429": {
+            "description": "Too many requests"
+          },
           "400": {
             "description": "Bad Request"
           }
@@ -41400,6 +41387,9 @@
           },
           "401": {
             "description": "Unauthorized"
+          },
+          "429": {
+            "description": "Too many requests"
           }
         }
       }
@@ -64758,7 +64748,7 @@
           "Mobile push subscriptions"
         ],
         "summary": "Unregister a mobile device from push notifications",
-        "description": "Removes the calling user\u0027s push subscriptions for the given device token.",
+        "description": "Deletes every push subscription for the given device token, including subscriptions that other users registered.",
         "operationId": "DeleteApiV4UserPushSubscriptions",
         "parameters": [
           {
@@ -121898,6 +121888,9 @@
           "404": {
             "description": "Not found"
           },
+          "429": {
+            "description": "Too many requests"
+          },
           "400": {
             "description": "Bad Request"
           }
@@ -132158,7 +132151,7 @@
         "properties": {
           "id": {
             "type": "integer",
-            "description": "ID of the status.",
+            "description": "ID of the status. Default and custom statuses are numbered separately.",
             "example": 1
           },
           "name": {
@@ -132167,28 +132160,24 @@
             "example": "To do"
           },
           "icon_name": {
-            "type": "string",
-            "description": "Icon name of the status.",
-            "example": "status-waiting"
+            "$ref": "#/components/schemas/ApiEntitiesWorkItemsStatusIconName"
           },
           "color": {
             "type": "string",
-            "description": "Color of the status.",
+            "description": "Color of the status as a hex code.",
             "example": "#737278"
           },
           "position": {
             "type": "integer",
-            "description": "Position of the status within its category.",
+            "description": "Position of the status in its category. Always 0 for custom statuses.",
             "example": 0
           },
           "description": {
             "type": "string",
-            "description": "Description of the status."
+            "description": "Description of the status. Always null for default statuses."
           },
           "category": {
-            "type": "string",
-            "description": "Category of the status.",
-            "example": "to_do"
+            "$ref": "#/components/schemas/ApiEntitiesWorkItemsStatusCategory"
           }
         }
       },
@@ -135420,6 +135409,9 @@
             "type": "string"
           },
           "runner_jobs_endpoints_api_limit": {
+            "type": "string"
+          },
+          "runner_manager_creation_limit": {
             "type": "string"
           },
           "background_operations_max_jobs": {
@@ -148477,7 +148469,7 @@
         "type": "object",
         "properties": {
           "audience": {
-            "$ref": "#/components/schemas/GitlabArtifactRegistryAudience"
+            "$ref": "#/components/schemas/PostApiV4TokenExchangeRequestAudience"
           },
           "expires_in": {
             "maximum": 43200,
@@ -153301,9 +153293,7 @@
             "default": 200
           },
           "order_by": {
-            "type": "string",
-            "description": "Order criteria. Can be by a column of the run/candidate (\u0060created_at\u0060, \u0060name\u0060) or by a metric if prefixed by \u0060metrics\u0060. Valid examples: \u0060created_at\u0060, \u0060created_at DESC\u0060, \u0060metrics.my_metric DESC\u0060. Sorting by candidate parameter or metadata is not supported.",
-            "default": "created_at DESC"
+            "$ref": "#/components/schemas/PostApiV4ProjectsIdMlMlflowApi20MlflowRunsSearchRequestOrderBy"
           },
           "page_token": {
             "type": "string",
@@ -153518,9 +153508,7 @@
             "default": 200
           },
           "order_by": {
-            "type": "string",
-            "description": "Column and direction to sort experiments by, for example \u0060created_at DESC\u0060 or \u0060name\u0060. Supported columns are \u0060created_at\u0060 and \u0060name\u0060.",
-            "default": "created_at DESC"
+            "$ref": "#/components/schemas/PostApiV4ProjectsIdMlMlflowApi20MlflowExperimentsSearchRequestOrderBy"
           },
           "page_token": {
             "type": "string",
@@ -156004,6 +155992,11 @@
           "runner_jobs_request_api_limit": {
             "type": "string",
             "description": "Maximum number of requests per minute per runner token for requests to the \u0060/jobs/request\u0060 runner jobs API endpoint. Default: \u00602000\u0060. To disable throttling, set to \u00600\u0060. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/462537) in GitLab 18.5.",
+            "nullable": true
+          },
+          "runner_manager_creation_limit": {
+            "type": "string",
+            "description": "Maximum number of runner managers each runner can create every 10 minutes. Applies only when the \u0060log_runner_manager_creation_limit\u0060 or \u0060enforce_runner_manager_creation_limit\u0060 feature flag is enabled. Default: \u00601000\u0060. To disable the limit, set to \u00600\u0060.",
             "nullable": true
           },
           "search_rate_limit": {
@@ -178204,6 +178197,36 @@
         ],
         "description": "ID or path of the namespace."
       },
+      "PostApiV4ProjectsIdMlMlflowApi20MlflowRunsSearchRequestOrderBy": {
+        "oneOf": [
+          {
+            "type": "string",
+            "default": "created_at DESC"
+          },
+          {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        ],
+        "description": "Order criteria. Can be by a column of the run/candidate (\u0060created_at\u0060, \u0060name\u0060) or by a metric if prefixed by \u0060metrics\u0060. Valid examples: \u0060created_at\u0060, \u0060created_at DESC\u0060, \u0060metrics.my_metric DESC\u0060. A list uses its first entry. Sorting by candidate parameter or metadata is not supported."
+      },
+      "PostApiV4ProjectsIdMlMlflowApi20MlflowExperimentsSearchRequestOrderBy": {
+        "oneOf": [
+          {
+            "type": "string",
+            "default": "created_at DESC"
+          },
+          {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        ],
+        "description": "Column and direction to sort experiments by, for example \u0060created_at DESC\u0060 or \u0060name\u0060. Supported columns are \u0060name\u0060, \u0060created_at\u0060, \u0060updated_at\u0060, \u0060last_updated_timestamp\u0060 and \u0060id\u0060. A list uses its first entry."
+      },
       "PostApiV4McpRequestId": {
         "oneOf": [
           {
@@ -187551,6 +187574,82 @@
           ]
         }
       },
+      "ApiEntitiesWorkItemsStatusIconName": {
+        "enum": [
+          "status-neutral",
+          "status-waiting",
+          "status-running",
+          "status-success",
+          "status-cancelled"
+        ],
+        "type": "string",
+        "description": "Name of the icon for the status, set by its category.",
+        "example": "status-waiting",
+        "x-ms-enum": {
+          "name": "ApiEntitiesWorkItemsStatusIconName",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "status-neutral",
+              "name": "StatusNeutral"
+            },
+            {
+              "value": "status-waiting",
+              "name": "StatusWaiting"
+            },
+            {
+              "value": "status-running",
+              "name": "StatusRunning"
+            },
+            {
+              "value": "status-success",
+              "name": "StatusSuccess"
+            },
+            {
+              "value": "status-cancelled",
+              "name": "StatusCancelled"
+            }
+          ]
+        }
+      },
+      "ApiEntitiesWorkItemsStatusCategory": {
+        "enum": [
+          "triage",
+          "to_do",
+          "in_progress",
+          "done",
+          "canceled"
+        ],
+        "type": "string",
+        "description": "Category of the status. Open categories are \u0060triage\u0060, \u0060to_do\u0060, and \u0060in_progress\u0060. Closed categories are \u0060done\u0060 and \u0060canceled\u0060.",
+        "example": "to_do",
+        "x-ms-enum": {
+          "name": "ApiEntitiesWorkItemsStatusCategory",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "triage",
+              "name": "Triage"
+            },
+            {
+              "value": "to_do",
+              "name": "ToDo"
+            },
+            {
+              "value": "in_progress",
+              "name": "InProgress"
+            },
+            {
+              "value": "done",
+              "name": "Done"
+            },
+            {
+              "value": "canceled",
+              "name": "Canceled"
+            }
+          ]
+        }
+      },
       "ApiEntitiesIssueType": {
         "enum": [
           "ISSUE",
@@ -188575,20 +188674,25 @@
           ]
         }
       },
-      "GitlabArtifactRegistryAudience": {
+      "PostApiV4TokenExchangeRequestAudience": {
         "minLength": 1,
         "enum": [
-          "gitlab-artifact-registry"
+          "gitlab-artifact-registry",
+          "gitlab-autoflow"
         ],
         "type": "string",
         "description": "Target service audience.",
         "x-ms-enum": {
-          "name": "GitlabArtifactRegistryAudience",
+          "name": "PostApiV4TokenExchangeRequestAudience",
           "modelAsString": false,
           "values": [
             {
               "value": "gitlab-artifact-registry",
               "name": "GitlabArtifactRegistry"
+            },
+            {
+              "value": "gitlab-autoflow",
+              "name": "GitlabAutoflow"
             }
           ]
         }

@@ -1057,6 +1057,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             else if (parseNode.GetChildNode("runner_jobs_patch_trace_api_limit") is { } nullNodeRunnerJobsPatchTraceApiLimit && nullNodeRunnerJobsPatchTraceApiLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RunnerJobsPatchTraceApiLimit = null;
             if (parseNode.GetChildNode("runner_jobs_request_api_limit") is null) { _explicitNullValueRunnerJobsRequestApiLimit = default!; _explicitNullProperties?.Remove("runner_jobs_request_api_limit"); }
             else if (parseNode.GetChildNode("runner_jobs_request_api_limit") is { } nullNodeRunnerJobsRequestApiLimit && nullNodeRunnerJobsRequestApiLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RunnerJobsRequestApiLimit = null;
+            if (parseNode.GetChildNode("runner_manager_creation_limit") is null) { _explicitNullValueRunnerManagerCreationLimit = default!; _explicitNullProperties?.Remove("runner_manager_creation_limit"); }
+            else if (parseNode.GetChildNode("runner_manager_creation_limit") is { } nullNodeRunnerManagerCreationLimit && nullNodeRunnerManagerCreationLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RunnerManagerCreationLimit = null;
             if (parseNode.GetChildNode("runner_token_expiration_interval") is null) { _explicitNullValueRunnerTokenExpirationInterval = default!; _explicitNullProperties?.Remove("runner_token_expiration_interval"); }
             else if (parseNode.GetChildNode("runner_token_expiration_interval") is { } nullNodeRunnerTokenExpirationInterval && nullNodeRunnerTokenExpirationInterval.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RunnerTokenExpirationInterval = null;
             if (parseNode.GetChildNode("scan_execution_policies_action_limit") is null) { _explicitNullValueScanExecutionPoliciesActionLimit = default!; _explicitNullProperties?.Remove("scan_execution_policies_action_limit"); }
@@ -6539,6 +6541,16 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string RunnerJobsRequestApiLimit { get => _explicitNullValueRunnerJobsRequestApiLimit; set { _explicitNullValueRunnerJobsRequestApiLimit = value; AdditionalData?.Remove("runner_jobs_request_api_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("runner_jobs_request_api_limit"); else _explicitNullProperties?.Remove("runner_jobs_request_api_limit"); } }
         private string _explicitNullValueRunnerJobsRequestApiLimit = default!;
 #endif
+        /// <summary>The runner_manager_creation_limit property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? RunnerManagerCreationLimit { get => _explicitNullValueRunnerManagerCreationLimit; set { _explicitNullValueRunnerManagerCreationLimit = value; AdditionalData?.Remove("runner_manager_creation_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("runner_manager_creation_limit"); else _explicitNullProperties?.Remove("runner_manager_creation_limit"); } }
+        private string? _explicitNullValueRunnerManagerCreationLimit = default!;
+#nullable restore
+#else
+        public string RunnerManagerCreationLimit { get => _explicitNullValueRunnerManagerCreationLimit; set { _explicitNullValueRunnerManagerCreationLimit = value; AdditionalData?.Remove("runner_manager_creation_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("runner_manager_creation_limit"); else _explicitNullProperties?.Remove("runner_manager_creation_limit"); } }
+        private string _explicitNullValueRunnerManagerCreationLimit = default!;
+#endif
         /// <summary>The runner_token_expiration_interval property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -8957,6 +8969,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "runner_jobs_endpoints_api_limit", n => { RunnerJobsEndpointsApiLimit = n.GetStringValue(); } },
                 { "runner_jobs_patch_trace_api_limit", n => { RunnerJobsPatchTraceApiLimit = n.GetStringValue(); } },
                 { "runner_jobs_request_api_limit", n => { RunnerJobsRequestApiLimit = n.GetStringValue(); } },
+                { "runner_manager_creation_limit", n => { RunnerManagerCreationLimit = n.GetStringValue(); } },
                 { "runner_token_expiration_interval", n => { RunnerTokenExpirationInterval = n.GetStringValue(); } },
                 { "scan_execution_policies_action_limit", n => { ScanExecutionPoliciesActionLimit = n.GetStringValue(); } },
                 { "scan_execution_policies_per_configuration_limit", n => { ScanExecutionPoliciesPerConfigurationLimit = n.GetStringValue(); } },
@@ -9674,6 +9687,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("runner_jobs_endpoints_api_limit", RunnerJobsEndpointsApiLimit);
             writer.WriteStringValue("runner_jobs_patch_trace_api_limit", RunnerJobsPatchTraceApiLimit);
             writer.WriteStringValue("runner_jobs_request_api_limit", RunnerJobsRequestApiLimit);
+            writer.WriteStringValue("runner_manager_creation_limit", RunnerManagerCreationLimit);
             writer.WriteStringValue("runner_token_expiration_interval", RunnerTokenExpirationInterval);
             writer.WriteStringValue("scan_execution_policies_action_limit", ScanExecutionPoliciesActionLimit);
             writer.WriteStringValue("scan_execution_policies_per_configuration_limit", ScanExecutionPoliciesPerConfigurationLimit);

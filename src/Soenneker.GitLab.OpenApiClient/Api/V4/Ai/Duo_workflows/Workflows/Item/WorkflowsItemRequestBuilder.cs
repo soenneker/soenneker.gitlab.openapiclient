@@ -12,7 +12,6 @@ using Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Workflows.Item.Exec
 using Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Workflows.Item.Restart;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Workflows.Item.Resume;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Workflows.Item.Session_files;
-using Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Workflows.Item.Tool_access_policies;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Workflows.Item.TraceJsonl;
 using Soenneker.GitLab.OpenApiClient.Models;
 using System.Collections.Generic;
@@ -72,11 +71,6 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Workflows.Item
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Workflows.Item.Session_files.Session_filesRequestBuilder Session_files
         {
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Workflows.Item.Session_files.Session_filesRequestBuilder(PathParameters, RequestAdapter);
-        }
-        /// <summary>The tool_access_policies property</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Workflows.Item.Tool_access_policies.Tool_access_policiesRequestBuilder Tool_access_policies
-        {
-            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Workflows.Item.Tool_access_policies.Tool_access_policiesRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The traceJsonl property</summary>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Workflows.Item.TraceJsonl.TraceJsonlRequestBuilder TraceJsonl

@@ -35,17 +35,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Category of the status.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Category { get => _explicitNullValueCategory; set { _explicitNullValueCategory = value; AdditionalData?.Remove("category"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("category"); else _explicitNullProperties?.Remove("category"); } }
-        private string? _explicitNullValueCategory = default!;
-#nullable restore
-#else
-        public string Category { get => _explicitNullValueCategory; set { _explicitNullValueCategory = value; AdditionalData?.Remove("category"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("category"); else _explicitNullProperties?.Remove("category"); } }
-        private string _explicitNullValueCategory = default!;
-#endif
-        /// <summary>Color of the status.</summary>
+        /// <summary>Category of the status. Open categories are `triage`, `to_do`, and `in_progress`. Closed categories are `done` and `canceled`.</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesWorkItemsStatusCategory? Category { get => _explicitNullValueCategory; set { _explicitNullValueCategory = value; AdditionalData?.Remove("category"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("category"); else _explicitNullProperties?.Remove("category"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesWorkItemsStatusCategory? _explicitNullValueCategory = default!;
+        /// <summary>Color of the status as a hex code.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Color { get => _explicitNullValueColor; set { _explicitNullValueColor = value; AdditionalData?.Remove("color"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("color"); else _explicitNullProperties?.Remove("color"); } }
@@ -55,7 +48,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Color { get => _explicitNullValueColor; set { _explicitNullValueColor = value; AdditionalData?.Remove("color"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("color"); else _explicitNullProperties?.Remove("color"); } }
         private string _explicitNullValueColor = default!;
 #endif
-        /// <summary>Description of the status.</summary>
+        /// <summary>Description of the status. Always null for default statuses.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
@@ -65,17 +58,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
         private string _explicitNullValueDescription = default!;
 #endif
-        /// <summary>Icon name of the status.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? IconName { get => _explicitNullValueIconName; set { _explicitNullValueIconName = value; AdditionalData?.Remove("icon_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("icon_name"); else _explicitNullProperties?.Remove("icon_name"); } }
-        private string? _explicitNullValueIconName = default!;
-#nullable restore
-#else
-        public string IconName { get => _explicitNullValueIconName; set { _explicitNullValueIconName = value; AdditionalData?.Remove("icon_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("icon_name"); else _explicitNullProperties?.Remove("icon_name"); } }
-        private string _explicitNullValueIconName = default!;
-#endif
-        /// <summary>ID of the status.</summary>
+        /// <summary>Name of the icon for the status, set by its category.</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesWorkItemsStatusIconName? IconName { get => _explicitNullValueIconName; set { _explicitNullValueIconName = value; AdditionalData?.Remove("icon_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("icon_name"); else _explicitNullProperties?.Remove("icon_name"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesWorkItemsStatusIconName? _explicitNullValueIconName = default!;
+        /// <summary>ID of the status. Default and custom statuses are numbered separately.</summary>
         public int? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private int? _explicitNullValueId = default!;
         /// <summary>Name of the status.</summary>
@@ -88,7 +74,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string _explicitNullValueName = default!;
 #endif
-        /// <summary>Position of the status within its category.</summary>
+        /// <summary>Position of the status in its category. Always 0 for custom statuses.</summary>
         public int? Position { get => _explicitNullValuePosition; set { _explicitNullValuePosition = value; AdditionalData?.Remove("position"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("position"); else _explicitNullProperties?.Remove("position"); } }
         private int? _explicitNullValuePosition = default!;
         /// <summary>
@@ -116,10 +102,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "category", n => { Category = n.GetStringValue(); } },
+                { "category", n => { var parsed = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesWorkItemsStatusCategory>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueCategory = default; _explicitNullProperties?.Remove("category"); AdditionalData["category"] = unknown; } else { Category = parsed; AdditionalData.Remove("category"); } } },
                 { "color", n => { Color = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
-                { "icon_name", n => { IconName = n.GetStringValue(); } },
+                { "icon_name", n => { var parsed = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesWorkItemsStatusIconName>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueIconName = default; _explicitNullProperties?.Remove("icon_name"); AdditionalData["icon_name"] = unknown; } else { IconName = parsed; AdditionalData.Remove("icon_name"); } } },
                 { "id", n => { Id = n.GetIntValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "position", n => { Position = n.GetIntValue(); } },
@@ -132,10 +118,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("category", Category);
+            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesWorkItemsStatusCategory>("category", Category);
             writer.WriteStringValue("color", Color);
             writer.WriteStringValue("description", Description);
-            writer.WriteStringValue("icon_name", IconName);
+            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesWorkItemsStatusIconName>("icon_name", IconName);
             writer.WriteIntValue("id", Id);
             writer.WriteStringValue("name", Name);
             writer.WriteIntValue("position", Position);

@@ -5,11 +5,15 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 {
     /// <summary>Target service audience.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum GitlabArtifactRegistryAudience
+    public enum PostApiV4TokenExchangeRequestAudience
     {
         [EnumMember(Value = "gitlab-artifact-registry")]
         #pragma warning disable CS1591
         GitlabArtifactRegistry,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "gitlab-autoflow")]
+        #pragma warning disable CS1591
+        GitlabAutoflow,
         #pragma warning restore CS1591
     }
 }
