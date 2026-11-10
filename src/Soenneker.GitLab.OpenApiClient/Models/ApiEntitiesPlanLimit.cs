@@ -23,6 +23,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             else if (parseNode.GetChildNode("ci_active_jobs") is { } nullNodeCiActiveJobs && nullNodeCiActiveJobs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CiActiveJobs = null;
             if (parseNode.GetChildNode("ci_instance_level_variables") is null) { _explicitNullValueCiInstanceLevelVariables = default!; _explicitNullProperties?.Remove("ci_instance_level_variables"); }
             else if (parseNode.GetChildNode("ci_instance_level_variables") is { } nullNodeCiInstanceLevelVariables && nullNodeCiInstanceLevelVariables.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CiInstanceLevelVariables = null;
+            if (parseNode.GetChildNode("ci_job_variables_count") is null) { _explicitNullValueCiJobVariablesCount = default!; _explicitNullProperties?.Remove("ci_job_variables_count"); }
+            else if (parseNode.GetChildNode("ci_job_variables_count") is { } nullNodeCiJobVariablesCount && nullNodeCiJobVariablesCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CiJobVariablesCount = null;
             if (parseNode.GetChildNode("ci_needs_size_limit") is null) { _explicitNullValueCiNeedsSizeLimit = default!; _explicitNullProperties?.Remove("ci_needs_size_limit"); }
             else if (parseNode.GetChildNode("ci_needs_size_limit") is { } nullNodeCiNeedsSizeLimit && nullNodeCiNeedsSizeLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CiNeedsSizeLimit = null;
             if (parseNode.GetChildNode("ci_pipeline_schedules") is null) { _explicitNullValueCiPipelineSchedules = default!; _explicitNullProperties?.Remove("ci_pipeline_schedules"); }
@@ -81,6 +83,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             else if (parseNode.GetChildNode("service_desk_outbound_emails_per_hour") is { } nullNodeServiceDeskOutboundEmailsPerHour && nullNodeServiceDeskOutboundEmailsPerHour.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServiceDeskOutboundEmailsPerHour = null;
             if (parseNode.GetChildNode("storage_size_limit") is null) { _explicitNullValueStorageSizeLimit = default!; _explicitNullProperties?.Remove("storage_size_limit"); }
             else if (parseNode.GetChildNode("storage_size_limit") is { } nullNodeStorageSizeLimit && nullNodeStorageSizeLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StorageSizeLimit = null;
+            if (parseNode.GetChildNode("swift_max_file_size") is null) { _explicitNullValueSwiftMaxFileSize = default!; _explicitNullProperties?.Remove("swift_max_file_size"); }
+            else if (parseNode.GetChildNode("swift_max_file_size") is { } nullNodeSwiftMaxFileSize && nullNodeSwiftMaxFileSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SwiftMaxFileSize = null;
             if (parseNode.GetChildNode("terraform_module_max_file_size") is null) { _explicitNullValueTerraformModuleMaxFileSize = default!; _explicitNullProperties?.Remove("terraform_module_max_file_size"); }
             else if (parseNode.GetChildNode("terraform_module_max_file_size") is { } nullNodeTerraformModuleMaxFileSize && nullNodeTerraformModuleMaxFileSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TerraformModuleMaxFileSize = null;
             if (parseNode.GetChildNode("web_hook_calls") is null) { _explicitNullValueWebHookCalls = default!; _explicitNullProperties?.Remove("web_hook_calls"); }
@@ -102,6 +106,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The ci_instance_level_variables property</summary>
         public int? CiInstanceLevelVariables { get => _explicitNullValueCiInstanceLevelVariables; set { _explicitNullValueCiInstanceLevelVariables = value; AdditionalData?.Remove("ci_instance_level_variables"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ci_instance_level_variables"); else _explicitNullProperties?.Remove("ci_instance_level_variables"); } }
         private int? _explicitNullValueCiInstanceLevelVariables = default!;
+        /// <summary>The ci_job_variables_count property</summary>
+        public int? CiJobVariablesCount { get => _explicitNullValueCiJobVariablesCount; set { _explicitNullValueCiJobVariablesCount = value; AdditionalData?.Remove("ci_job_variables_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ci_job_variables_count"); else _explicitNullProperties?.Remove("ci_job_variables_count"); } }
+        private int? _explicitNullValueCiJobVariablesCount = default!;
         /// <summary>The ci_needs_size_limit property</summary>
         public int? CiNeedsSizeLimit { get => _explicitNullValueCiNeedsSizeLimit; set { _explicitNullValueCiNeedsSizeLimit = value; AdditionalData?.Remove("ci_needs_size_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ci_needs_size_limit"); else _explicitNullProperties?.Remove("ci_needs_size_limit"); } }
         private int? _explicitNullValueCiNeedsSizeLimit = default!;
@@ -196,6 +203,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The storage_size_limit property</summary>
         public int? StorageSizeLimit { get => _explicitNullValueStorageSizeLimit; set { _explicitNullValueStorageSizeLimit = value; AdditionalData?.Remove("storage_size_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("storage_size_limit"); else _explicitNullProperties?.Remove("storage_size_limit"); } }
         private int? _explicitNullValueStorageSizeLimit = default!;
+        /// <summary>The swift_max_file_size property</summary>
+        public int? SwiftMaxFileSize { get => _explicitNullValueSwiftMaxFileSize; set { _explicitNullValueSwiftMaxFileSize = value; AdditionalData?.Remove("swift_max_file_size"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("swift_max_file_size"); else _explicitNullProperties?.Remove("swift_max_file_size"); } }
+        private int? _explicitNullValueSwiftMaxFileSize = default!;
         /// <summary>The terraform_module_max_file_size property</summary>
         public int? TerraformModuleMaxFileSize { get => _explicitNullValueTerraformModuleMaxFileSize; set { _explicitNullValueTerraformModuleMaxFileSize = value; AdditionalData?.Remove("terraform_module_max_file_size"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("terraform_module_max_file_size"); else _explicitNullProperties?.Remove("terraform_module_max_file_size"); } }
         private int? _explicitNullValueTerraformModuleMaxFileSize = default!;
@@ -236,6 +246,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "cargo_max_file_size", n => { CargoMaxFileSize = n.GetLongValue(); } },
                 { "ci_active_jobs", n => { CiActiveJobs = n.GetIntValue(); } },
                 { "ci_instance_level_variables", n => { CiInstanceLevelVariables = n.GetIntValue(); } },
+                { "ci_job_variables_count", n => { CiJobVariablesCount = n.GetIntValue(); } },
                 { "ci_needs_size_limit", n => { CiNeedsSizeLimit = n.GetIntValue(); } },
                 { "ci_pipeline_schedules", n => { CiPipelineSchedules = n.GetIntValue(); } },
                 { "ci_pipeline_size", n => { CiPipelineSize = n.GetIntValue(); } },
@@ -265,6 +276,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "service_desk_outbound_emails_per_day", n => { ServiceDeskOutboundEmailsPerDay = n.GetIntValue(); } },
                 { "service_desk_outbound_emails_per_hour", n => { ServiceDeskOutboundEmailsPerHour = n.GetIntValue(); } },
                 { "storage_size_limit", n => { StorageSizeLimit = n.GetIntValue(); } },
+                { "swift_max_file_size", n => { SwiftMaxFileSize = n.GetIntValue(); } },
                 { "terraform_module_max_file_size", n => { TerraformModuleMaxFileSize = n.GetIntValue(); } },
                 { "web_hook_calls", n => { WebHookCalls = n.GetIntValue(); } },
                 { "web_hook_calls_low", n => { WebHookCallsLow = n.GetIntValue(); } },
@@ -281,6 +293,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteLongValue("cargo_max_file_size", CargoMaxFileSize);
             writer.WriteIntValue("ci_active_jobs", CiActiveJobs);
             writer.WriteIntValue("ci_instance_level_variables", CiInstanceLevelVariables);
+            writer.WriteIntValue("ci_job_variables_count", CiJobVariablesCount);
             writer.WriteIntValue("ci_needs_size_limit", CiNeedsSizeLimit);
             writer.WriteIntValue("ci_pipeline_schedules", CiPipelineSchedules);
             writer.WriteIntValue("ci_pipeline_size", CiPipelineSize);
@@ -310,6 +323,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteIntValue("service_desk_outbound_emails_per_day", ServiceDeskOutboundEmailsPerDay);
             writer.WriteIntValue("service_desk_outbound_emails_per_hour", ServiceDeskOutboundEmailsPerHour);
             writer.WriteIntValue("storage_size_limit", StorageSizeLimit);
+            writer.WriteIntValue("swift_max_file_size", SwiftMaxFileSize);
             writer.WriteIntValue("terraform_module_max_file_size", TerraformModuleMaxFileSize);
             writer.WriteIntValue("web_hook_calls", WebHookCalls);
             writer.WriteIntValue("web_hook_calls_low", WebHookCallsLow);

@@ -354,7 +354,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Deployments.Item.M
             /// <summary>If `true`, the response returns more details for each label in the labels field: `name`, `color`, `description`, `description_html`, `text_color`.</summary>
             [QueryParameter("with_labels_details")]
             public bool? WithLabelsDetails { get; set; }
-            /// <summary>If `true`, this projection requests (but does not guarantee) an asynchronous recalculation of the `merge_status` field. Enable the `restrict_merge_status_recheck` [feature flag](https://docs.gitlab.com/administration/feature_flags/) to ignore this attribute when requested by users without the Developer, Maintainer, or Owner role.</summary>
+            /// <summary>If `true`, this projection requests (but does not guarantee) an asynchronous recalculation of the `merge_status` field. GitLab ignores this attribute when it is requested by users without the Developer, Maintainer, or Owner role.</summary>
             [QueryParameter("with_merge_status_recheck")]
             public bool? WithMergeStatusRecheck { get; set; }
         }

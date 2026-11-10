@@ -19,6 +19,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         #pragma warning disable CS1591
         Sec,
         #pragma warning restore CS1591
+        [EnumMember(Value = "mr_diff")]
+        #pragma warning disable CS1591
+        MrDiff,
+        #pragma warning restore CS1591
         [EnumMember(Value = "embedding")]
         #pragma warning disable CS1591
         Embedding,

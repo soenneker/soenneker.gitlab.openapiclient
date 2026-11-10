@@ -63,5 +63,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         #pragma warning disable CS1591
         VulnerabilityLeakedTokenRotation,
         #pragma warning restore CS1591
+        [EnumMember(Value = "mobile_chat")]
+        #pragma warning disable CS1591
+        MobileChat,
+        #pragma warning restore CS1591
     }
 }

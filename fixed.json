@@ -652,7 +652,14 @@
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrbitQueryResponse"
+                }
+              }
+            }
           },
           "400": {
             "description": "Bad Request"
@@ -691,7 +698,14 @@
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrbitQueryResponse"
+                }
+              }
+            }
           },
           "404": {
             "description": "Not Found"
@@ -66033,7 +66047,7 @@
           {
             "name": "with_merge_status_recheck",
             "in": "query",
-            "description": "If \u0060true\u0060, this projection requests (but does not guarantee) an asynchronous recalculation of the \u0060merge_status\u0060 field. Enable the \u0060restrict_merge_status_recheck\u0060 [feature flag](https://docs.gitlab.com/administration/feature_flags/) to ignore this attribute when requested by users without the Developer, Maintainer, or Owner role.",
+            "description": "If \u0060true\u0060, this projection requests (but does not guarantee) an asynchronous recalculation of the \u0060merge_status\u0060 field. GitLab ignores this attribute when it is requested by users without the Developer, Maintainer, or Owner role.",
             "schema": {
               "type": "boolean",
               "default": false
@@ -66600,7 +66614,7 @@
           {
             "name": "with_merge_status_recheck",
             "in": "query",
-            "description": "If \u0060true\u0060, this projection requests (but does not guarantee) an asynchronous recalculation of the \u0060merge_status\u0060 field. Enable the \u0060restrict_merge_status_recheck\u0060 [feature flag](https://docs.gitlab.com/administration/feature_flags/) to ignore this attribute when requested by users without the Developer, Maintainer, or Owner role.",
+            "description": "If \u0060true\u0060, this projection requests (but does not guarantee) an asynchronous recalculation of the \u0060merge_status\u0060 field. GitLab ignores this attribute when it is requested by users without the Developer, Maintainer, or Owner role.",
             "schema": {
               "type": "boolean",
               "default": false
@@ -67531,7 +67545,7 @@
           {
             "name": "with_merge_status_recheck",
             "in": "query",
-            "description": "If \u0060true\u0060, this projection requests (but does not guarantee) an asynchronous recalculation of the \u0060merge_status\u0060 field. Enable the \u0060restrict_merge_status_recheck\u0060 [feature flag](https://docs.gitlab.com/administration/feature_flags/) to ignore this attribute when requested by users without the Developer, Maintainer, or Owner role.",
+            "description": "If \u0060true\u0060, this projection requests (but does not guarantee) an asynchronous recalculation of the \u0060merge_status\u0060 field. GitLab ignores this attribute when it is requested by users without the Developer, Maintainer, or Owner role.",
             "schema": {
               "type": "boolean",
               "default": false
@@ -95090,7 +95104,7 @@
           {
             "name": "with_merge_status_recheck",
             "in": "query",
-            "description": "If \u0060true\u0060, this projection requests (but does not guarantee) an asynchronous recalculation of the \u0060merge_status\u0060 field. Enable the \u0060restrict_merge_status_recheck\u0060 [feature flag](https://docs.gitlab.com/administration/feature_flags/) to ignore this attribute when requested by users without the Developer, Maintainer, or Owner role.",
+            "description": "If \u0060true\u0060, this projection requests (but does not guarantee) an asynchronous recalculation of the \u0060merge_status\u0060 field. GitLab ignores this attribute when it is requested by users without the Developer, Maintainer, or Owner role.",
             "schema": {
               "type": "boolean",
               "default": false
@@ -107254,6 +107268,9 @@
           "204": {
             "description": "No Content"
           },
+          "400": {
+            "description": "Bad request"
+          },
           "401": {
             "description": "Unauthorized"
           },
@@ -107265,9 +107282,6 @@
           },
           "412": {
             "description": "Precondition Failed"
-          },
-          "400": {
-            "description": "Bad Request"
           }
         }
       }
@@ -109850,7 +109864,7 @@
           "Jobs"
         ],
         "summary": "List all jobs processed by a runner",
-        "description": "Lists all jobs that are being processed or were processed by a specified runner. The list of jobs is limited to projects where the user has the Reporter, Developer, Maintainer, or Owner role.",
+        "description": "Lists all jobs that are being processed or were processed by a specified runner. The list of jobs is limited to projects where the user has the Reporter, Developer, Maintainer, or Owner role. When the \u0060ci_rate_limit_rest_runner_job_list_completed_statuses\u0060 feature flag is enabled, requests filtered by \u0060success\u0060, \u0060failed\u0060, or \u0060canceled\u0060 are rate limited per user (\u0060runner_job_list_completed_statuses_limit_per_user\u0060 application setting), and statuses a runner\u0027s jobs cannot have, such as \u0060pending\u0060, match no jobs. Until the \u0060ci_enforce_runner_job_list_completed_statuses_limit\u0060 feature flag is enabled, requests over this limit are logged but not blocked.",
         "operationId": "GetApiV4RunnersIdJobs",
         "parameters": [
           {
@@ -109944,6 +109958,9 @@
           },
           "404": {
             "description": "Runner not found"
+          },
+          "429": {
+            "description": "Too Many Requests"
           },
           "400": {
             "description": "Bad Request"
@@ -122086,6 +122103,37 @@
           }
         }
       },
+      "OrbitQueryResponse": {
+        "required": [
+          "result",
+          "query_type",
+          "row_count"
+        ],
+        "type": "object",
+        "properties": {
+          "result": {
+            "$ref": "#/components/schemas/OrbitQueryResponseResult"
+          },
+          "query_type": {
+            "type": "string",
+            "description": "The type of query that was run.",
+            "example": "traversal"
+          },
+          "raw_query_strings": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "The compiled queries, for debugging. Present only when the Orbit service returns them."
+          },
+          "row_count": {
+            "type": "integer",
+            "description": "The number of rows in the returned page.",
+            "example": 2
+          }
+        },
+        "additionalProperties": false
+      },
       "ApiEntitiesOrbitContextEntity": {
         "type": "object",
         "properties": {
@@ -125586,6 +125634,14 @@
             "default": false
           },
           "admin_web_hook": {
+            "type": "boolean",
+            "default": false
+          },
+          "pull_container_image": {
+            "type": "boolean",
+            "default": false
+          },
+          "push_container_image": {
             "type": "boolean",
             "default": false
           },
@@ -134958,6 +135014,9 @@
           "discussions_resolve_limit": {
             "type": "string"
           },
+          "merge_requests_create_limit": {
+            "type": "string"
+          },
           "members_delete_limit": {
             "type": "string"
           },
@@ -135183,6 +135242,9 @@
           "label_delete_limit": {
             "type": "string"
           },
+          "pages_deployments_api_limit": {
+            "type": "string"
+          },
           "project_api_limit": {
             "type": "string"
           },
@@ -135279,10 +135341,22 @@
           "ci_max_caches_per_job": {
             "type": "string"
           },
+          "ci_max_runner_managers_per_runner": {
+            "type": "string"
+          },
+          "ci_runner_manager_cap_deletions_per_run": {
+            "type": "string"
+          },
+          "ci_runner_manager_cap_cleanup_backlog_limit": {
+            "type": "string"
+          },
           "allow_account_deletion": {
             "type": "string"
           },
           "gitlab_shell_operation_limit": {
+            "type": "string"
+          },
+          "gitlab_shell_operation_per_actor_limit": {
             "type": "string"
           },
           "namespace_aggregation_schedule_lease_duration_in_seconds": {
@@ -135690,6 +135764,9 @@
           "duo_token_usage_tracking_enabled": {
             "type": "boolean"
           },
+          "duo_workflow_file_attachments_enabled": {
+            "type": "boolean"
+          },
           "duo_namespace_access_rules": {
             "type": "string"
           },
@@ -135826,6 +135903,24 @@
             "type": "string"
           },
           "orbit_rate_limit_allowlist_raw": {
+            "type": "string"
+          },
+          "subscription_usage_per_minute_limit": {
+            "type": "string"
+          },
+          "subscription_usage_per_hour_limit": {
+            "type": "string"
+          },
+          "subscription_usage_per_day_limit": {
+            "type": "string"
+          },
+          "budget_cap_update_per_minute_limit": {
+            "type": "string"
+          },
+          "budget_cap_update_per_hour_limit": {
+            "type": "string"
+          },
+          "budget_cap_update_per_day_limit": {
             "type": "string"
           },
           "duo_workflow_oauth_application_id": {
@@ -138903,6 +138998,9 @@
           "duo_foundational_flows_enabled": {
             "type": "string"
           },
+          "duo_scheduled_triggers_enabled": {
+            "type": "string"
+          },
           "duo_sast_fp_detection_enabled": {
             "type": "string"
           },
@@ -139542,6 +139640,9 @@
           "duo_foundational_flows_enabled": {
             "type": "string"
           },
+          "duo_scheduled_triggers_enabled": {
+            "type": "string"
+          },
           "duo_sast_fp_detection_enabled": {
             "type": "string"
           },
@@ -140134,6 +140235,9 @@
             "type": "string"
           },
           "duo_foundational_flows_enabled": {
+            "type": "string"
+          },
+          "duo_scheduled_triggers_enabled": {
             "type": "string"
           },
           "duo_sast_fp_detection_enabled": {
@@ -147703,6 +147807,10 @@
             "type": "integer",
             "example": 50
           },
+          "ci_job_variables_count": {
+            "type": "integer",
+            "example": 1000
+          },
           "ci_registered_group_runners": {
             "type": "integer",
             "example": 1000
@@ -147777,6 +147885,10 @@
           "service_desk_outbound_emails_per_day": {
             "type": "integer",
             "example": 700
+          },
+          "swift_max_file_size": {
+            "type": "integer",
+            "example": 104857600
           },
           "terraform_module_max_file_size": {
             "type": "integer",
@@ -150596,6 +150708,16 @@
             "description": "Manage webhooks",
             "default": false
           },
+          "pull_container_image": {
+            "type": "boolean",
+            "description": "Grants the ability to pull images from the container registry",
+            "default": false
+          },
+          "push_container_image": {
+            "type": "boolean",
+            "description": "Grants the ability to push images to the container registry",
+            "default": false
+          },
           "read_agent_artifacts": {
             "type": "boolean",
             "description": "Read GitLab Duo Agent Platform artifacts, including audit events and session metadata, that are exposed through the agent artifacts dashboard.",
@@ -150845,6 +150967,16 @@
           "admin_web_hook": {
             "type": "boolean",
             "description": "Manage webhooks",
+            "default": false
+          },
+          "pull_container_image": {
+            "type": "boolean",
+            "description": "Grants the ability to pull images from the container registry",
+            "default": false
+          },
+          "push_container_image": {
+            "type": "boolean",
+            "description": "Grants the ability to push images to the container registry",
             "default": false
           },
           "read_agent_artifacts": {
@@ -154818,6 +154950,11 @@
             "description": "Maximum size of the Terraform state file in bytes. Set to \u00600\u0060 for unlimited size.",
             "nullable": true
           },
+          "merge_requests_create_limit": {
+            "type": "integer",
+            "description": "Maximum number of merge requests a user can create per minute. Default: \u0060150\u0060. Set to \u00600\u0060 to disable the rate limit. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/work_items/606714) in GitLab 19.6.",
+            "nullable": true
+          },
           "metrics_method_call_threshold": {
             "type": "integer",
             "description": "Method call is only tracked if it takes longer than this threshold, in milliseconds.",
@@ -155300,6 +155437,21 @@
             "description": "Maximum number of caches that can be defined in a single CI/CD job.",
             "nullable": true
           },
+          "ci_max_runner_managers_per_runner": {
+            "type": "integer",
+            "description": "Maximum number of runner managers for each runner. If a runner exceeds this limit, GitLab brings it back to the limit by deleting managers that have not contacted GitLab for at least two hours, starting with the most stale. Applies only when the \u0060log_runner_manager_cap\u0060 or \u0060enforce_runner_manager_cap\u0060 feature flag is enabled. Default: \u0060100000\u0060. To disable the limit, set to \u00600\u0060.",
+            "nullable": true
+          },
+          "ci_runner_manager_cap_deletions_per_run": {
+            "type": "integer",
+            "description": "Maximum number of runner managers deleted by each run of the runner manager cap. Default: \u00601000\u0060.",
+            "nullable": true
+          },
+          "ci_runner_manager_cap_cleanup_backlog_limit": {
+            "type": "integer",
+            "description": "Number of deleted runner manager records still waiting for background cleanup, above which the runner manager cap stops deleting. Default: \u006010000\u0060.",
+            "nullable": true
+          },
           "ci_lint_api_require_authentication": {
             "type": "boolean",
             "description": "If \u0060true\u0060, \u0060GET /projects/:id/ci/lint\u0060 requires authentication, including for public projects.",
@@ -155772,6 +155924,11 @@
           "gitlab_shell_operation_limit": {
             "type": "string",
             "description": "Maximum number of Git operations per minute a user can perform. Default: \u0060600\u0060.",
+            "nullable": true
+          },
+          "gitlab_shell_operation_per_actor_limit": {
+            "type": "integer",
+            "description": "Maximum number of Git operations one user or deploy key can perform every minute across all repositories. Default: \u00606000\u0060. Set to \u00600\u0060 to disable the limit. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/267274) in GitLab 19.6. This attribute is in beta and might be changed or removed without notice.",
             "nullable": true
           },
           "group_hooks_create_limit": {
@@ -156339,7 +156496,7 @@
           },
           "web_hook_test_limit": {
             "type": "string",
-            "description": "Maximum number of webhook test requests per minute, per user, for a given project or group. Default: \u00605\u0060. Set to \u00600\u0060 to disable limits. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/587887) in GitLab 19.3.",
+            "description": "Maximum number of webhook test requests per minute, per user, for a given project, group, or organization. Default: \u00605\u0060. Set to \u00600\u0060 to disable limits. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/587887) in GitLab 19.3.",
             "nullable": true
           },
           "elasticsearch_aws": {
@@ -156546,6 +156703,36 @@
           "orbit_rate_limit_allowlist_raw": {
             "type": "string",
             "description": "Raw newline-, comma-, or whitespace-separated list of usernames excluded from the GitLab Orbit rate limits. Maximum: 100 usernames.",
+            "nullable": true
+          },
+          "subscription_usage_per_minute_limit": {
+            "type": "integer",
+            "description": "Maximum number of \u0060subscriptionUsage\u0060 and \u0060trialUsage\u0060 GraphQL requests per minute per user. Default: \u0060300\u0060. Set to \u00600\u0060 to disable the rate limit.",
+            "nullable": true
+          },
+          "subscription_usage_per_hour_limit": {
+            "type": "integer",
+            "description": "Maximum number of \u0060subscriptionUsage\u0060 and \u0060trialUsage\u0060 GraphQL requests per hour per user. Default: \u006010000\u0060. Set to \u00600\u0060 to disable the rate limit.",
+            "nullable": true
+          },
+          "subscription_usage_per_day_limit": {
+            "type": "integer",
+            "description": "Maximum number of \u0060subscriptionUsage\u0060 and \u0060trialUsage\u0060 GraphQL requests per day per user. Default: \u006040000\u0060. Set to \u00600\u0060 to disable the rate limit.",
+            "nullable": true
+          },
+          "budget_cap_update_per_minute_limit": {
+            "type": "integer",
+            "description": "Maximum number of \u0060upsertUserBudgetCapOverrides\u0060 and \u0060upsertFlatUserCap\u0060 GraphQL mutation calls per minute per user. Default: \u0060150\u0060. Set to \u00600\u0060 to disable the rate limit.",
+            "nullable": true
+          },
+          "budget_cap_update_per_hour_limit": {
+            "type": "integer",
+            "description": "Maximum number of \u0060upsertUserBudgetCapOverrides\u0060 and \u0060upsertFlatUserCap\u0060 GraphQL mutation calls per hour per user. Default: \u00601000\u0060. Set to \u00600\u0060 to disable the rate limit.",
+            "nullable": true
+          },
+          "budget_cap_update_per_day_limit": {
+            "type": "integer",
+            "description": "Maximum number of \u0060upsertUserBudgetCapOverrides\u0060 and \u0060upsertFlatUserCap\u0060 GraphQL mutation calls per day per user. Default: \u006020000\u0060. Set to \u00600\u0060 to disable the rate limit.",
             "nullable": true
           },
           "group_owners_can_manage_default_branch_protection": {
@@ -157248,6 +157435,10 @@
             "type": "string",
             "nullable": true
           },
+          "pages_deployments_api_limit": {
+            "type": "string",
+            "nullable": true
+          },
           "project_api_limit": {
             "type": "string",
             "nullable": true
@@ -157537,6 +157728,10 @@
             "nullable": true
           },
           "duo_token_usage_tracking_enabled": {
+            "type": "string",
+            "nullable": true
+          },
+          "duo_workflow_file_attachments_enabled": {
             "type": "string",
             "nullable": true
           },
@@ -177574,12 +177769,12 @@
           },
           "ci_variable_value_size": {
             "type": "integer",
-            "description": "Maximum size of a pipeline variable value in bytes.",
+            "description": "Maximum size of a CI/CD variable value in bytes.",
             "nullable": true
           },
           "ci_variable_file_value_size": {
             "type": "integer",
-            "description": "Maximum size of a file type pipeline variable value in bytes.",
+            "description": "Maximum size of a file type CI/CD variable value in bytes.",
             "nullable": true
           },
           "ci_active_jobs": {
@@ -177600,6 +177795,11 @@
           "ci_needs_size_limit": {
             "type": "integer",
             "description": "Maximum number of \u0060needs\u0060 dependencies that a job can have.",
+            "nullable": true
+          },
+          "ci_job_variables_count": {
+            "type": "integer",
+            "description": "Maximum number of job variables in a single job.",
             "nullable": true
           },
           "ci_registered_group_runners": {
@@ -177680,6 +177880,11 @@
           "service_desk_outbound_emails_per_day": {
             "type": "integer",
             "description": "Maximum number of outbound Service Desk emails per day, per top-level namespace. Set to \u00600\u0060 for unlimited. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/253087) in GitLab 19.4.",
+            "nullable": true
+          },
+          "swift_max_file_size": {
+            "type": "integer",
+            "description": "Maximum Swift package file size in bytes. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/12233) in GitLab 19.6.",
             "nullable": true
           },
           "terraform_module_max_file_size": {
@@ -178407,6 +178612,21 @@
             "type": "string",
             "format": "date"
           }
+        }
+      },
+      "OrbitQueryResponseResult": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "object"
+          }
+        ],
+        "description": "The query result built by the Orbit service. Its shape is set by the Orbit query response schema and versioned by its \u0060format_version\u0060 field. An empty string when the Orbit service returns no result.",
+        "externalDocs": {
+          "description": "Orbit query response schema",
+          "url": "https://gitlab.com/gitlab-org/orbit/knowledge-graph/-/raw/main/config/schemas/query_response.json"
         }
       },
       "ApiEntitiesGroupStatistics": {
@@ -189027,7 +189247,8 @@
           "ide_extension",
           "work_item_plan_to_merge_request",
           "web_chat",
-          "vulnerability_leaked_token_rotation"
+          "vulnerability_leaked_token_rotation",
+          "mobile_chat"
         ],
         "type": "string",
         "description": "Where the session was triggered from in the UI.",
@@ -189091,6 +189312,10 @@
             {
               "value": "vulnerability_leaked_token_rotation",
               "name": "VulnerabilityLeakedTokenRotation"
+            },
+            {
+              "value": "mobile_chat",
+              "name": "MobileChat"
             }
           ]
         }
@@ -197097,6 +197322,7 @@
           "main",
           "ci",
           "sec",
+          "mr_diff",
           "embedding",
           "geo"
         ],
@@ -197117,6 +197343,10 @@
             {
               "value": "sec",
               "name": "Sec"
+            },
+            {
+              "value": "mr_diff",
+              "name": "MrDiff"
             },
             {
               "value": "embedding",
@@ -197372,6 +197602,7 @@
           "main",
           "ci",
           "sec",
+          "mr_diff",
           "embedding",
           "geo"
         ],
@@ -197394,6 +197625,10 @@
               "name": "Sec"
             },
             {
+              "value": "mr_diff",
+              "name": "MrDiff"
+            },
+            {
               "value": "embedding",
               "name": "Embedding"
             },
@@ -197409,6 +197644,7 @@
           "main",
           "ci",
           "sec",
+          "mr_diff",
           "embedding",
           "geo"
         ],
@@ -197431,6 +197667,10 @@
               "name": "Sec"
             },
             {
+              "value": "mr_diff",
+              "name": "MrDiff"
+            },
+            {
               "value": "embedding",
               "name": "Embedding"
             },
@@ -197446,6 +197686,7 @@
           "main",
           "ci",
           "sec",
+          "mr_diff",
           "embedding",
           "geo"
         ],
@@ -197468,6 +197709,10 @@
               "name": "Sec"
             },
             {
+              "value": "mr_diff",
+              "name": "MrDiff"
+            },
+            {
               "value": "embedding",
               "name": "Embedding"
             },
@@ -197483,6 +197728,7 @@
           "main",
           "ci",
           "sec",
+          "mr_diff",
           "embedding",
           "geo"
         ],
@@ -197503,6 +197749,10 @@
             {
               "value": "sec",
               "name": "Sec"
+            },
+            {
+              "value": "mr_diff",
+              "name": "MrDiff"
             },
             {
               "value": "embedding",
@@ -205300,7 +205550,8 @@
           "terraform_module",
           "rpm",
           "ml_model",
-          "cargo"
+          "cargo",
+          "swift"
         ],
         "type": "string",
         "nullable": true,
@@ -205367,6 +205618,10 @@
             {
               "value": "cargo",
               "name": "Cargo"
+            },
+            {
+              "value": "swift",
+              "name": "Swift"
             }
           ]
         }
@@ -209626,7 +209881,8 @@
           "terraform_module",
           "rpm",
           "ml_model",
-          "cargo"
+          "cargo",
+          "swift"
         ],
         "type": "string",
         "nullable": true,
@@ -209693,6 +209949,10 @@
             {
               "value": "cargo",
               "name": "Cargo"
+            },
+            {
+              "value": "swift",
+              "name": "Swift"
             }
           ]
         }
@@ -210270,6 +210530,7 @@
           "main",
           "ci",
           "sec",
+          "mr_diff",
           "embedding",
           "geo"
         ],
@@ -210289,6 +210550,10 @@
             {
               "value": "sec",
               "name": "Sec"
+            },
+            {
+              "value": "mr_diff",
+              "name": "MrDiff"
             },
             {
               "value": "embedding",
@@ -213767,6 +214032,7 @@
           "main",
           "ci",
           "sec",
+          "mr_diff",
           "embedding",
           "geo"
         ],
@@ -213786,6 +214052,10 @@
             {
               "value": "sec",
               "name": "Sec"
+            },
+            {
+              "value": "mr_diff",
+              "name": "MrDiff"
             },
             {
               "value": "embedding",
@@ -213825,6 +214095,7 @@
           "main",
           "ci",
           "sec",
+          "mr_diff",
           "embedding",
           "geo"
         ],
@@ -213846,6 +214117,10 @@
               "name": "Sec"
             },
             {
+              "value": "mr_diff",
+              "name": "MrDiff"
+            },
+            {
               "value": "embedding",
               "name": "Embedding"
             },
@@ -213861,6 +214136,7 @@
           "main",
           "ci",
           "sec",
+          "mr_diff",
           "embedding",
           "geo"
         ],
@@ -213882,6 +214158,10 @@
               "name": "Sec"
             },
             {
+              "value": "mr_diff",
+              "name": "MrDiff"
+            },
+            {
               "value": "embedding",
               "name": "Embedding"
             },
@@ -213897,6 +214177,7 @@
           "main",
           "ci",
           "sec",
+          "mr_diff",
           "embedding",
           "geo"
         ],
@@ -213918,6 +214199,10 @@
               "name": "Sec"
             },
             {
+              "value": "mr_diff",
+              "name": "MrDiff"
+            },
+            {
               "value": "embedding",
               "name": "Embedding"
             },
@@ -213933,6 +214218,7 @@
           "main",
           "ci",
           "sec",
+          "mr_diff",
           "embedding",
           "geo"
         ],
@@ -213952,6 +214238,10 @@
             {
               "value": "sec",
               "name": "Sec"
+            },
+            {
+              "value": "mr_diff",
+              "name": "MrDiff"
             },
             {
               "value": "embedding",
@@ -215146,6 +215436,10 @@
         "url": "https://docs.gitlab.com/api/search/"
       },
       "x-displayName": "Search"
+    },
+    {
+      "name": "Secrets manager",
+      "description": "Operations related to secrets manager."
     },
     {
       "name": "Secure files",

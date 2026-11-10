@@ -75,6 +75,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             else if (parseNode.GetChildNode("manage_security_policy_link") is { } nullNodeManageSecurityPolicyLink && nullNodeManageSecurityPolicyLink.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ManageSecurityPolicyLink = null;
             if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
             else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("pull_container_image") is null) { _explicitNullValuePullContainerImage = default!; _explicitNullProperties?.Remove("pull_container_image"); }
+            else if (parseNode.GetChildNode("pull_container_image") is { } nullNodePullContainerImage && nullNodePullContainerImage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PullContainerImage = null;
+            if (parseNode.GetChildNode("push_container_image") is null) { _explicitNullValuePushContainerImage = default!; _explicitNullProperties?.Remove("push_container_image"); }
+            else if (parseNode.GetChildNode("push_container_image") is { } nullNodePushContainerImage && nullNodePushContainerImage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PushContainerImage = null;
             if (parseNode.GetChildNode("read_admin_cicd") is null) { _explicitNullValueReadAdminCicd = default!; _explicitNullProperties?.Remove("read_admin_cicd"); }
             else if (parseNode.GetChildNode("read_admin_cicd") is { } nullNodeReadAdminCicd && nullNodeReadAdminCicd.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReadAdminCicd = null;
             if (parseNode.GetChildNode("read_admin_groups") is null) { _explicitNullValueReadAdminGroups = default!; _explicitNullProperties?.Remove("read_admin_groups"); }
@@ -220,6 +224,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string _explicitNullValueName = default!;
 #endif
+        /// <summary>Grants the ability to pull images from the container registry</summary>
+        public bool? PullContainerImage { get => _explicitNullValuePullContainerImage; set { _explicitNullValuePullContainerImage = value; AdditionalData?.Remove("pull_container_image"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pull_container_image"); else _explicitNullProperties?.Remove("pull_container_image"); } }
+        private bool? _explicitNullValuePullContainerImage = default!;
+        /// <summary>Grants the ability to push images to the container registry</summary>
+        public bool? PushContainerImage { get => _explicitNullValuePushContainerImage; set { _explicitNullValuePushContainerImage = value; AdditionalData?.Remove("push_container_image"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("push_container_image"); else _explicitNullProperties?.Remove("push_container_image"); } }
+        private bool? _explicitNullValuePushContainerImage = default!;
         /// <summary>Read CI/CD details for runners and jobs in the Admin Area.</summary>
         public bool? ReadAdminCicd { get => _explicitNullValueReadAdminCicd; set { _explicitNullValueReadAdminCicd = value; AdditionalData?.Remove("read_admin_cicd"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("read_admin_cicd"); else _explicitNullProperties?.Remove("read_admin_cicd"); } }
         private bool? _explicitNullValueReadAdminCicd = default!;
@@ -312,6 +322,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             ManageMergeRequestSettings = false;
             ManageProjectAccessTokens = false;
             ManageSecurityPolicyLink = false;
+            PullContainerImage = false;
+            PushContainerImage = false;
             ReadAdminCicd = false;
             ReadAdminGroups = false;
             ReadAdminMonitoring = false;
@@ -380,6 +392,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "manage_project_access_tokens", n => { ManageProjectAccessTokens = n.GetBoolValue(); } },
                 { "manage_security_policy_link", n => { ManageSecurityPolicyLink = n.GetBoolValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
+                { "pull_container_image", n => { PullContainerImage = n.GetBoolValue(); } },
+                { "push_container_image", n => { PushContainerImage = n.GetBoolValue(); } },
                 { "read_admin_cicd", n => { ReadAdminCicd = n.GetBoolValue(); } },
                 { "read_admin_groups", n => { ReadAdminGroups = n.GetBoolValue(); } },
                 { "read_admin_monitoring", n => { ReadAdminMonitoring = n.GetBoolValue(); } },
@@ -438,6 +452,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteBoolValue("manage_project_access_tokens", ManageProjectAccessTokens);
             writer.WriteBoolValue("manage_security_policy_link", ManageSecurityPolicyLink);
             writer.WriteStringValue("name", Name);
+            writer.WriteBoolValue("pull_container_image", PullContainerImage);
+            writer.WriteBoolValue("push_container_image", PushContainerImage);
             writer.WriteBoolValue("read_admin_cicd", ReadAdminCicd);
             writer.WriteBoolValue("read_admin_groups", ReadAdminGroups);
             writer.WriteBoolValue("read_admin_monitoring", ReadAdminMonitoring);

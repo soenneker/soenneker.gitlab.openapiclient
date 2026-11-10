@@ -113,6 +113,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             else if (parseNode.GetChildNode("duo_sast_fp_detection_enabled") is { } nullNodeDuoSastFpDetectionEnabled && nullNodeDuoSastFpDetectionEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DuoSastFpDetectionEnabled = null;
             if (parseNode.GetChildNode("duo_sast_vr_workflow_enabled") is null) { _explicitNullValueDuoSastVrWorkflowEnabled = default!; _explicitNullProperties?.Remove("duo_sast_vr_workflow_enabled"); }
             else if (parseNode.GetChildNode("duo_sast_vr_workflow_enabled") is { } nullNodeDuoSastVrWorkflowEnabled && nullNodeDuoSastVrWorkflowEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DuoSastVrWorkflowEnabled = null;
+            if (parseNode.GetChildNode("duo_scheduled_triggers_enabled") is null) { _explicitNullValueDuoScheduledTriggersEnabled = default!; _explicitNullProperties?.Remove("duo_scheduled_triggers_enabled"); }
+            else if (parseNode.GetChildNode("duo_scheduled_triggers_enabled") is { } nullNodeDuoScheduledTriggersEnabled && nullNodeDuoScheduledTriggersEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DuoScheduledTriggersEnabled = null;
             if (parseNode.GetChildNode("duo_secret_detection_fp_enabled") is null) { _explicitNullValueDuoSecretDetectionFpEnabled = default!; _explicitNullProperties?.Remove("duo_secret_detection_fp_enabled"); }
             else if (parseNode.GetChildNode("duo_secret_detection_fp_enabled") is { } nullNodeDuoSecretDetectionFpEnabled && nullNodeDuoSecretDetectionFpEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DuoSecretDetectionFpEnabled = null;
             if (parseNode.GetChildNode("emails_disabled") is null) { _explicitNullValueEmailsDisabled = default!; _explicitNullProperties?.Remove("emails_disabled"); }
@@ -672,6 +674,16 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string DuoSastVrWorkflowEnabled { get => _explicitNullValueDuoSastVrWorkflowEnabled; set { _explicitNullValueDuoSastVrWorkflowEnabled = value; AdditionalData?.Remove("duo_sast_vr_workflow_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duo_sast_vr_workflow_enabled"); else _explicitNullProperties?.Remove("duo_sast_vr_workflow_enabled"); } }
         private string _explicitNullValueDuoSastVrWorkflowEnabled = default!;
+#endif
+        /// <summary>The duo_scheduled_triggers_enabled property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? DuoScheduledTriggersEnabled { get => _explicitNullValueDuoScheduledTriggersEnabled; set { _explicitNullValueDuoScheduledTriggersEnabled = value; AdditionalData?.Remove("duo_scheduled_triggers_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duo_scheduled_triggers_enabled"); else _explicitNullProperties?.Remove("duo_scheduled_triggers_enabled"); } }
+        private string? _explicitNullValueDuoScheduledTriggersEnabled = default!;
+#nullable restore
+#else
+        public string DuoScheduledTriggersEnabled { get => _explicitNullValueDuoScheduledTriggersEnabled; set { _explicitNullValueDuoScheduledTriggersEnabled = value; AdditionalData?.Remove("duo_scheduled_triggers_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duo_scheduled_triggers_enabled"); else _explicitNullProperties?.Remove("duo_scheduled_triggers_enabled"); } }
+        private string _explicitNullValueDuoScheduledTriggersEnabled = default!;
 #endif
         /// <summary>The duo_secret_detection_fp_enabled property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -1609,6 +1621,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "duo_remote_flows_enabled", n => { DuoRemoteFlowsEnabled = n.GetStringValue(); } },
                 { "duo_sast_fp_detection_enabled", n => { DuoSastFpDetectionEnabled = n.GetStringValue(); } },
                 { "duo_sast_vr_workflow_enabled", n => { DuoSastVrWorkflowEnabled = n.GetStringValue(); } },
+                { "duo_scheduled_triggers_enabled", n => { DuoScheduledTriggersEnabled = n.GetStringValue(); } },
                 { "duo_secret_detection_fp_enabled", n => { DuoSecretDetectionFpEnabled = n.GetStringValue(); } },
                 { "emails_disabled", n => { EmailsDisabled = n.GetBoolValue(); } },
                 { "emails_enabled", n => { EmailsEnabled = n.GetBoolValue(); } },
@@ -1781,6 +1794,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("duo_remote_flows_enabled", DuoRemoteFlowsEnabled);
             writer.WriteStringValue("duo_sast_fp_detection_enabled", DuoSastFpDetectionEnabled);
             writer.WriteStringValue("duo_sast_vr_workflow_enabled", DuoSastVrWorkflowEnabled);
+            writer.WriteStringValue("duo_scheduled_triggers_enabled", DuoScheduledTriggersEnabled);
             writer.WriteStringValue("duo_secret_detection_fp_enabled", DuoSecretDetectionFpEnabled);
             writer.WriteBoolValue("emails_disabled", EmailsDisabled);
             writer.WriteBoolValue("emails_enabled", EmailsEnabled);

@@ -68,5 +68,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         #pragma warning disable CS1591
         Cargo,
         #pragma warning restore CS1591
+        [EnumMember(Value = "swift")]
+        #pragma warning disable CS1591
+        Swift,
+        #pragma warning restore CS1591
     }
 }

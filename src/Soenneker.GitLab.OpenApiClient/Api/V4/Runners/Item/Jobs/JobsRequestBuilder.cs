@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Runners.Item.Jobs
         {
         }
         /// <summary>
-        /// Lists all jobs that are being processed or were processed by a specified runner. The list of jobs is limited to projects where the user has the Reporter, Developer, Maintainer, or Owner role.
+        /// Lists all jobs that are being processed or were processed by a specified runner. The list of jobs is limited to projects where the user has the Reporter, Developer, Maintainer, or Owner role. When the `ci_rate_limit_rest_runner_job_list_completed_statuses` feature flag is enabled, requests filtered by `success`, `failed`, or `canceled` are rate limited per user (`runner_job_list_completed_statuses_limit_per_user` application setting), and statuses a runner&apos;s jobs cannot have, such as `pending`, match no jobs. Until the `ci_enforce_runner_job_list_completed_statuses_limit` feature flag is enabled, requests over this limit are logged but not blocked.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobBasicWithProject"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Runners.Item.Jobs
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobBasicWithProject>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobBasicWithProject.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Lists all jobs that are being processed or were processed by a specified runner. The list of jobs is limited to projects where the user has the Reporter, Developer, Maintainer, or Owner role.
+        /// Lists all jobs that are being processed or were processed by a specified runner. The list of jobs is limited to projects where the user has the Reporter, Developer, Maintainer, or Owner role. When the `ci_rate_limit_rest_runner_job_list_completed_statuses` feature flag is enabled, requests filtered by `success`, `failed`, or `canceled` are rate limited per user (`runner_job_list_completed_statuses_limit_per_user` application setting), and statuses a runner&apos;s jobs cannot have, such as `pending`, match no jobs. Until the `ci_enforce_runner_job_list_completed_statuses_limit` feature flag is enabled, requests over this limit are logged but not blocked.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -80,7 +80,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Runners.Item.Jobs
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Runners.Item.Jobs.JobsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Lists all jobs that are being processed or were processed by a specified runner. The list of jobs is limited to projects where the user has the Reporter, Developer, Maintainer, or Owner role.
+        /// Lists all jobs that are being processed or were processed by a specified runner. The list of jobs is limited to projects where the user has the Reporter, Developer, Maintainer, or Owner role. When the `ci_rate_limit_rest_runner_job_list_completed_statuses` feature flag is enabled, requests filtered by `success`, `failed`, or `canceled` are rate limited per user (`runner_job_list_completed_statuses_limit_per_user` application setting), and statuses a runner&apos;s jobs cannot have, such as `pending`, match no jobs. Until the `ci_enforce_runner_job_list_completed_statuses_limit` feature flag is enabled, requests over this limit are logged but not blocked.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class JobsRequestBuilderGetQueryParameters 
