@@ -113,12 +113,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The tags property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesContainerRegistryTag? Tags { get => _explicitNullValueTags; set { _explicitNullValueTags = value; AdditionalData?.Remove("tags"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tags"); else _explicitNullProperties?.Remove("tags"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesContainerRegistryTag? _explicitNullValueTags = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesContainerRegistryTag>? Tags { get => _explicitNullValueTags; set { _explicitNullValueTags = value; AdditionalData?.Remove("tags"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tags"); else _explicitNullProperties?.Remove("tags"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesContainerRegistryTag>? _explicitNullValueTags = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesContainerRegistryTag Tags { get => _explicitNullValueTags; set { _explicitNullValueTags = value; AdditionalData?.Remove("tags"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tags"); else _explicitNullProperties?.Remove("tags"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesContainerRegistryTag _explicitNullValueTags = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesContainerRegistryTag> Tags { get => _explicitNullValueTags; set { _explicitNullValueTags = value; AdditionalData?.Remove("tags"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tags"); else _explicitNullProperties?.Remove("tags"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesContainerRegistryTag> _explicitNullValueTags = default!;
 #endif
         /// <summary>The tags_count property</summary>
         public int? TagsCount { get => _explicitNullValueTagsCount; set { _explicitNullValueTagsCount = value; AdditionalData?.Remove("tags_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tags_count"); else _explicitNullProperties?.Remove("tags_count"); } }
@@ -158,7 +158,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "project_id", n => { ProjectId = n.GetLongValue(); } },
                 { "size", n => { Size = n.GetIntValue(); } },
                 { "status", n => { Status = n.GetStringValue(); } },
-                { "tags", n => { Tags = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesContainerRegistryTag>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesContainerRegistryTag.CreateFromDiscriminatorValue); } },
+                { "tags", n => { Tags = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesContainerRegistryTag>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesContainerRegistryTag.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "tags_count", n => { TagsCount = n.GetIntValue(); } },
             };
         }
@@ -179,7 +179,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteLongValue("project_id", ProjectId);
             writer.WriteIntValue("size", Size);
             writer.WriteStringValue("status", Status);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesContainerRegistryTag>("tags", Tags);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesContainerRegistryTag>("tags", Tags);
             writer.WriteIntValue("tags_count", TagsCount);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

@@ -28,7 +28,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Target service audience.</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4TokenExchangeRequestAudience? Audience { get => _explicitNullValueAudience; set { _explicitNullValueAudience = value; AdditionalData?.Remove("audience"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audience"); else _explicitNullProperties?.Remove("audience"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4TokenExchangeRequestAudience? _explicitNullValueAudience = default!;
-        /// <summary>Requested token lifetime in seconds. The granted lifetime may be shorter than requested depending on the authentication method used to call this endpoint.</summary>
+        /// <summary>Requested token lifetime in seconds. The granted lifetime may be shorter than requested depending on the authentication method used to call this endpoint or the audience.</summary>
         public int? ExpiresIn { get => _explicitNullValueExpiresIn; set { _explicitNullValueExpiresIn = value; AdditionalData?.Remove("expires_in"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expires_in"); else _explicitNullProperties?.Remove("expires_in"); } }
         private int? _explicitNullValueExpiresIn = default!;
         /// <summary>

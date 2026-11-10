@@ -57,12 +57,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The scopes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFeatureFlagScope? Scopes { get => _explicitNullValueScopes; set { _explicitNullValueScopes = value; AdditionalData?.Remove("scopes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scopes"); else _explicitNullProperties?.Remove("scopes"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFeatureFlagScope? _explicitNullValueScopes = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFeatureFlagScope>? Scopes { get => _explicitNullValueScopes; set { _explicitNullValueScopes = value; AdditionalData?.Remove("scopes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scopes"); else _explicitNullProperties?.Remove("scopes"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFeatureFlagScope>? _explicitNullValueScopes = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFeatureFlagScope Scopes { get => _explicitNullValueScopes; set { _explicitNullValueScopes = value; AdditionalData?.Remove("scopes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scopes"); else _explicitNullProperties?.Remove("scopes"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFeatureFlagScope _explicitNullValueScopes = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFeatureFlagScope> Scopes { get => _explicitNullValueScopes; set { _explicitNullValueScopes = value; AdditionalData?.Remove("scopes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scopes"); else _explicitNullProperties?.Remove("scopes"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFeatureFlagScope> _explicitNullValueScopes = default!;
 #endif
         /// <summary>The user_list property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -102,7 +102,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "id", n => { Id = n.GetLongValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "parameters", n => { Parameters = n.GetStringValue(); } },
-                { "scopes", n => { Scopes = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFeatureFlagScope>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFeatureFlagScope.CreateFromDiscriminatorValue); } },
+                { "scopes", n => { Scopes = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFeatureFlagScope>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFeatureFlagScope.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "user_list", n => { UserList = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFeatureFlagBasicUserList>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFeatureFlagBasicUserList.CreateFromDiscriminatorValue); } },
             };
         }
@@ -116,7 +116,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteLongValue("id", Id);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("parameters", Parameters);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFeatureFlagScope>("scopes", Scopes);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFeatureFlagScope>("scopes", Scopes);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFeatureFlagBasicUserList>("user_list", UserList);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

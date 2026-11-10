@@ -85,12 +85,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The inputs property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiInput? Inputs { get => _explicitNullValueInputs; set { _explicitNullValueInputs = value; AdditionalData?.Remove("inputs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inputs"); else _explicitNullProperties?.Remove("inputs"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiInput? _explicitNullValueInputs = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiInput>? Inputs { get => _explicitNullValueInputs; set { _explicitNullValueInputs = value; AdditionalData?.Remove("inputs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inputs"); else _explicitNullProperties?.Remove("inputs"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiInput>? _explicitNullValueInputs = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiInput Inputs { get => _explicitNullValueInputs; set { _explicitNullValueInputs = value; AdditionalData?.Remove("inputs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inputs"); else _explicitNullProperties?.Remove("inputs"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiInput _explicitNullValueInputs = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiInput> Inputs { get => _explicitNullValueInputs; set { _explicitNullValueInputs = value; AdditionalData?.Remove("inputs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inputs"); else _explicitNullProperties?.Remove("inputs"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiInput> _explicitNullValueInputs = default!;
 #endif
         /// <summary>The next_run_at property</summary>
         public DateTimeOffset? NextRunAt { get => _explicitNullValueNextRunAt; set { _explicitNullValueNextRunAt = value; AdditionalData?.Remove("next_run_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("next_run_at"); else _explicitNullProperties?.Remove("next_run_at"); } }
@@ -149,7 +149,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "cron_timezone", n => { CronTimezone = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetLongValue(); } },
-                { "inputs", n => { Inputs = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiInput>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiInput.CreateFromDiscriminatorValue); } },
+                { "inputs", n => { Inputs = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiInput>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiInput.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "next_run_at", n => { NextRunAt = n.GetDateTimeOffsetValue(); } },
                 { "owner", n => { Owner = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic.CreateFromDiscriminatorValue); } },
                 { "ref", n => { Ref = n.GetStringValue(); } },
@@ -169,7 +169,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("cron_timezone", CronTimezone);
             writer.WriteStringValue("description", Description);
             writer.WriteLongValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiInput>("inputs", Inputs);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiInput>("inputs", Inputs);
             writer.WriteDateTimeOffsetValue("next_run_at", NextRunAt);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic>("owner", Owner);
             writer.WriteStringValue("ref", Ref);

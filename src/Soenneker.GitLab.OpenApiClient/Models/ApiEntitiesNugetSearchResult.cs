@@ -168,12 +168,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The versions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNugetSearchResultVersion? Versions { get => _explicitNullValueVersions; set { _explicitNullValueVersions = value; AdditionalData?.Remove("versions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("versions"); else _explicitNullProperties?.Remove("versions"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNugetSearchResultVersion? _explicitNullValueVersions = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNugetSearchResultVersion>? Versions { get => _explicitNullValueVersions; set { _explicitNullValueVersions = value; AdditionalData?.Remove("versions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("versions"); else _explicitNullProperties?.Remove("versions"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNugetSearchResultVersion>? _explicitNullValueVersions = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNugetSearchResultVersion Versions { get => _explicitNullValueVersions; set { _explicitNullValueVersions = value; AdditionalData?.Remove("versions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("versions"); else _explicitNullProperties?.Remove("versions"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNugetSearchResultVersion _explicitNullValueVersions = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNugetSearchResultVersion> Versions { get => _explicitNullValueVersions; set { _explicitNullValueVersions = value; AdditionalData?.Remove("versions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("versions"); else _explicitNullProperties?.Remove("versions"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNugetSearchResultVersion> _explicitNullValueVersions = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNugetSearchResult"/> and sets the default values.
@@ -213,7 +213,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "@type", n => { Type = n.GetStringValue(); } },
                 { "verified", n => { Verified = n.GetBoolValue(); } },
                 { "version", n => { Version = n.GetStringValue(); } },
-                { "versions", n => { Versions = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNugetSearchResultVersion>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNugetSearchResultVersion.CreateFromDiscriminatorValue); } },
+                { "versions", n => { Versions = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNugetSearchResultVersion>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNugetSearchResultVersion.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -236,7 +236,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("@type", Type);
             writer.WriteBoolValue("verified", Verified);
             writer.WriteStringValue("version", Version);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNugetSearchResultVersion>("versions", Versions);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNugetSearchResultVersion>("versions", Versions);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

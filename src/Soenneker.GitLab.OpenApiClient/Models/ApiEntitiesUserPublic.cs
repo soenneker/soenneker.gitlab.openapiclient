@@ -260,12 +260,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The identities property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesIdentity? Identities { get => _explicitNullValueIdentities; set { _explicitNullValueIdentities = value; AdditionalData?.Remove("identities"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("identities"); else _explicitNullProperties?.Remove("identities"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesIdentity? _explicitNullValueIdentities = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesIdentity>? Identities { get => _explicitNullValueIdentities; set { _explicitNullValueIdentities = value; AdditionalData?.Remove("identities"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("identities"); else _explicitNullProperties?.Remove("identities"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesIdentity>? _explicitNullValueIdentities = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesIdentity Identities { get => _explicitNullValueIdentities; set { _explicitNullValueIdentities = value; AdditionalData?.Remove("identities"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("identities"); else _explicitNullProperties?.Remove("identities"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesIdentity _explicitNullValueIdentities = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesIdentity> Identities { get => _explicitNullValueIdentities; set { _explicitNullValueIdentities = value; AdditionalData?.Remove("identities"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("identities"); else _explicitNullProperties?.Remove("identities"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesIdentity> _explicitNullValueIdentities = default!;
 #endif
         /// <summary>The is_followed property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -513,7 +513,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "following", n => { Following = n.GetStringValue(); } },
                 { "github", n => { Github = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetLongValue(); } },
-                { "identities", n => { Identities = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesIdentity>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesIdentity.CreateFromDiscriminatorValue); } },
+                { "identities", n => { Identities = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesIdentity>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesIdentity.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "is_followed", n => { IsFollowed = n.GetStringValue(); } },
                 { "job_title", n => { JobTitle = n.GetStringValue(); } },
                 { "last_activity_on", n => { LastActivityOn = n.GetDateTimeOffsetValue(); } },
@@ -568,7 +568,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("following", Following);
             writer.WriteStringValue("github", Github);
             writer.WriteLongValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesIdentity>("identities", Identities);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesIdentity>("identities", Identities);
             writer.WriteStringValue("is_followed", IsFollowed);
             writer.WriteStringValue("job_title", JobTitle);
             writer.WriteDateTimeOffsetValue("last_activity_on", LastActivityOn);

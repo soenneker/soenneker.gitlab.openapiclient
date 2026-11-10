@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
-    /// <summary>Default skin tone for emoji that have skin tone variants. One of `default`, `light`, `medium_light`, `medium`, `medium_dark`, or `dark`. At least one of `view_diffs_file_by_file`, `show_whitespace_in_diffs`, `pass_user_identities_to_ci_jwt`, `policy_advanced_editor`, `emoji_skin_tone` must be provided.</summary>
+    /// <summary>Default skin tone for emoji that have skin tone variants. One of `default`, `light`, `medium_light`, `medium`, `medium_dark`, or `dark`. At least one of `view_diffs_file_by_file`, `show_whitespace_in_diffs`, `pass_user_identities_to_ci_jwt`, `policy_advanced_editor`, `emoji_skin_tone`, `mobile_push_working_hours_enabled`, `mobile_push_working_hours_start`, `mobile_push_working_hours_end`, `mobile_push_working_days`, `mobile_push_working_hours_time_zone` must be provided.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum PutApiV4UserPreferencesRequestEmojiSkinTone
     {

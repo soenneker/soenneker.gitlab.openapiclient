@@ -72,7 +72,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Releases
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// Creates a release. Developer level access to the project is required to create a release.
+        /// Creates a release. Developer level access to the project is required to create a release. Release creates and updates are rate limited per project (`release_writes_limit_per_project` application setting) and per user (`release_writes_limit_per_user` application setting). Requests over a limit are blocked when its feature flag (`rate_limit_release_writes_per_project` or `rate_limit_release_writes_per_user`) is enabled, and only logged otherwise.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRelease"/></returns>
         /// <param name="body">The request body</param>
@@ -111,7 +111,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Releases
             return requestInfo;
         }
         /// <summary>
-        /// Creates a release. Developer level access to the project is required to create a release.
+        /// Creates a release. Developer level access to the project is required to create a release. Release creates and updates are rate limited per project (`release_writes_limit_per_project` application setting) and per user (`release_writes_limit_per_user` application setting). Requests over a limit are blocked when its feature flag (`rate_limit_release_writes_per_project` or `rate_limit_release_writes_per_user`) is enabled, and only logged otherwise.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

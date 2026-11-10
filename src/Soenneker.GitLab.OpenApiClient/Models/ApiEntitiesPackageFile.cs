@@ -91,12 +91,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The pipelines property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackagePipeline? Pipelines { get => _explicitNullValuePipelines; set { _explicitNullValuePipelines = value; AdditionalData?.Remove("pipelines"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pipelines"); else _explicitNullProperties?.Remove("pipelines"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackagePipeline? _explicitNullValuePipelines = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackagePipeline>? Pipelines { get => _explicitNullValuePipelines; set { _explicitNullValuePipelines = value; AdditionalData?.Remove("pipelines"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pipelines"); else _explicitNullProperties?.Remove("pipelines"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackagePipeline>? _explicitNullValuePipelines = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackagePipeline Pipelines { get => _explicitNullValuePipelines; set { _explicitNullValuePipelines = value; AdditionalData?.Remove("pipelines"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pipelines"); else _explicitNullProperties?.Remove("pipelines"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackagePipeline _explicitNullValuePipelines = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackagePipeline> Pipelines { get => _explicitNullValuePipelines; set { _explicitNullValuePipelines = value; AdditionalData?.Remove("pipelines"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pipelines"); else _explicitNullProperties?.Remove("pipelines"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackagePipeline> _explicitNullValuePipelines = default!;
 #endif
         /// <summary>The size property</summary>
         public int? Size { get => _explicitNullValueSize; set { _explicitNullValueSize = value; AdditionalData?.Remove("size"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("size"); else _explicitNullProperties?.Remove("size"); } }
@@ -133,7 +133,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "file_sha256", n => { FileSha256 = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetLongValue(); } },
                 { "package_id", n => { PackageId = n.GetLongValue(); } },
-                { "pipelines", n => { Pipelines = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackagePipeline>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackagePipeline.CreateFromDiscriminatorValue); } },
+                { "pipelines", n => { Pipelines = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackagePipeline>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackagePipeline.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "size", n => { Size = n.GetIntValue(); } },
             };
         }
@@ -151,7 +151,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("file_sha256", FileSha256);
             writer.WriteLongValue("id", Id);
             writer.WriteLongValue("package_id", PackageId);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackagePipeline>("pipelines", Pipelines);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackagePipeline>("pipelines", Pipelines);
             writer.WriteIntValue("size", Size);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

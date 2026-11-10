@@ -3,29 +3,26 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
-    /// <summary>The reason for entering maintenance</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum PostApiV4InternalOrgMoverStartMaintenanceRequestMaintenanceReason
+    #pragma warning disable CS1591
+    public enum ApiEntitiesImportOfflineExportStatus
+    #pragma warning restore CS1591
     {
-        [EnumMember(Value = "migration")]
+        [EnumMember(Value = "created")]
         #pragma warning disable CS1591
-        Migration,
+        Created,
         #pragma warning restore CS1591
-        [EnumMember(Value = "isolation")]
+        [EnumMember(Value = "started")]
         #pragma warning disable CS1591
-        Isolation,
+        Started,
         #pragma warning restore CS1591
-        [EnumMember(Value = "incident")]
+        [EnumMember(Value = "finished")]
         #pragma warning disable CS1591
-        Incident,
+        Finished,
         #pragma warning restore CS1591
-        [EnumMember(Value = "billing")]
+        [EnumMember(Value = "failed")]
         #pragma warning disable CS1591
-        Billing,
-        #pragma warning restore CS1591
-        [EnumMember(Value = "legal")]
-        #pragma warning disable CS1591
-        Legal,
+        Failed,
         #pragma warning restore CS1591
     }
 }

@@ -76,12 +76,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The strategies property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFeatureFlagStrategy? Strategies { get => _explicitNullValueStrategies; set { _explicitNullValueStrategies = value; AdditionalData?.Remove("strategies"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("strategies"); else _explicitNullProperties?.Remove("strategies"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFeatureFlagStrategy? _explicitNullValueStrategies = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFeatureFlagStrategy>? Strategies { get => _explicitNullValueStrategies; set { _explicitNullValueStrategies = value; AdditionalData?.Remove("strategies"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("strategies"); else _explicitNullProperties?.Remove("strategies"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFeatureFlagStrategy>? _explicitNullValueStrategies = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFeatureFlagStrategy Strategies { get => _explicitNullValueStrategies; set { _explicitNullValueStrategies = value; AdditionalData?.Remove("strategies"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("strategies"); else _explicitNullProperties?.Remove("strategies"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFeatureFlagStrategy _explicitNullValueStrategies = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFeatureFlagStrategy> Strategies { get => _explicitNullValueStrategies; set { _explicitNullValueStrategies = value; AdditionalData?.Remove("strategies"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("strategies"); else _explicitNullProperties?.Remove("strategies"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFeatureFlagStrategy> _explicitNullValueStrategies = default!;
 #endif
         /// <summary>The updated_at property</summary>
         public DateTimeOffset? UpdatedAt { get => _explicitNullValueUpdatedAt; set { _explicitNullValueUpdatedAt = value; AdditionalData?.Remove("updated_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updated_at"); else _explicitNullProperties?.Remove("updated_at"); } }
@@ -126,7 +126,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "scopes", n => { Scopes = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
-                { "strategies", n => { Strategies = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFeatureFlagStrategy>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFeatureFlagStrategy.CreateFromDiscriminatorValue); } },
+                { "strategies", n => { Strategies = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFeatureFlagStrategy>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFeatureFlagStrategy.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "updated_at", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
                 { "version", n => { Version = n.GetStringValue(); } },
             };
@@ -143,7 +143,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("name", Name);
             writer.WriteObjectValue<UntypedNode>("scopes", Scopes);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFeatureFlagStrategy>("strategies", Strategies);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFeatureFlagStrategy>("strategies", Strategies);
             writer.WriteDateTimeOffsetValue("updated_at", UpdatedAt);
             writer.WriteStringValue("version", Version);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);

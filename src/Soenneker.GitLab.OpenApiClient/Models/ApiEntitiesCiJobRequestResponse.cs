@@ -76,32 +76,32 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The artifacts property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestArtifacts? Artifacts { get => _explicitNullValueArtifacts; set { _explicitNullValueArtifacts = value; AdditionalData?.Remove("artifacts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("artifacts"); else _explicitNullProperties?.Remove("artifacts"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestArtifacts? _explicitNullValueArtifacts = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestArtifacts>? Artifacts { get => _explicitNullValueArtifacts; set { _explicitNullValueArtifacts = value; AdditionalData?.Remove("artifacts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("artifacts"); else _explicitNullProperties?.Remove("artifacts"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestArtifacts>? _explicitNullValueArtifacts = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestArtifacts Artifacts { get => _explicitNullValueArtifacts; set { _explicitNullValueArtifacts = value; AdditionalData?.Remove("artifacts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("artifacts"); else _explicitNullProperties?.Remove("artifacts"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestArtifacts _explicitNullValueArtifacts = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestArtifacts> Artifacts { get => _explicitNullValueArtifacts; set { _explicitNullValueArtifacts = value; AdditionalData?.Remove("artifacts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("artifacts"); else _explicitNullProperties?.Remove("artifacts"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestArtifacts> _explicitNullValueArtifacts = default!;
 #endif
         /// <summary>The cache property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestCache? Cache { get => _explicitNullValueCache; set { _explicitNullValueCache = value; AdditionalData?.Remove("cache"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cache"); else _explicitNullProperties?.Remove("cache"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestCache? _explicitNullValueCache = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestCache>? Cache { get => _explicitNullValueCache; set { _explicitNullValueCache = value; AdditionalData?.Remove("cache"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cache"); else _explicitNullProperties?.Remove("cache"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestCache>? _explicitNullValueCache = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestCache Cache { get => _explicitNullValueCache; set { _explicitNullValueCache = value; AdditionalData?.Remove("cache"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cache"); else _explicitNullProperties?.Remove("cache"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestCache _explicitNullValueCache = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestCache> Cache { get => _explicitNullValueCache; set { _explicitNullValueCache = value; AdditionalData?.Remove("cache"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cache"); else _explicitNullProperties?.Remove("cache"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestCache> _explicitNullValueCache = default!;
 #endif
         /// <summary>The credentials property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestCredentials? Credentials { get => _explicitNullValueCredentials; set { _explicitNullValueCredentials = value; AdditionalData?.Remove("credentials"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credentials"); else _explicitNullProperties?.Remove("credentials"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestCredentials? _explicitNullValueCredentials = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestCredentials>? Credentials { get => _explicitNullValueCredentials; set { _explicitNullValueCredentials = value; AdditionalData?.Remove("credentials"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credentials"); else _explicitNullProperties?.Remove("credentials"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestCredentials>? _explicitNullValueCredentials = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestCredentials Credentials { get => _explicitNullValueCredentials; set { _explicitNullValueCredentials = value; AdditionalData?.Remove("credentials"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credentials"); else _explicitNullProperties?.Remove("credentials"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestCredentials _explicitNullValueCredentials = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestCredentials> Credentials { get => _explicitNullValueCredentials; set { _explicitNullValueCredentials = value; AdditionalData?.Remove("credentials"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credentials"); else _explicitNullProperties?.Remove("credentials"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestCredentials> _explicitNullValueCredentials = default!;
 #endif
         /// <summary>The dependencies property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -136,12 +136,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The hooks property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestHook? Hooks { get => _explicitNullValueHooks; set { _explicitNullValueHooks = value; AdditionalData?.Remove("hooks"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hooks"); else _explicitNullProperties?.Remove("hooks"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestHook? _explicitNullValueHooks = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestHook>? Hooks { get => _explicitNullValueHooks; set { _explicitNullValueHooks = value; AdditionalData?.Remove("hooks"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hooks"); else _explicitNullProperties?.Remove("hooks"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestHook>? _explicitNullValueHooks = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestHook Hooks { get => _explicitNullValueHooks; set { _explicitNullValueHooks = value; AdditionalData?.Remove("hooks"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hooks"); else _explicitNullProperties?.Remove("hooks"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestHook _explicitNullValueHooks = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestHook> Hooks { get => _explicitNullValueHooks; set { _explicitNullValueHooks = value; AdditionalData?.Remove("hooks"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hooks"); else _explicitNullProperties?.Remove("hooks"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestHook> _explicitNullValueHooks = default!;
 #endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -226,22 +226,22 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The services property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestService? Services { get => _explicitNullValueServices; set { _explicitNullValueServices = value; AdditionalData?.Remove("services"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("services"); else _explicitNullProperties?.Remove("services"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestService? _explicitNullValueServices = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestService>? Services { get => _explicitNullValueServices; set { _explicitNullValueServices = value; AdditionalData?.Remove("services"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("services"); else _explicitNullProperties?.Remove("services"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestService>? _explicitNullValueServices = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestService Services { get => _explicitNullValueServices; set { _explicitNullValueServices = value; AdditionalData?.Remove("services"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("services"); else _explicitNullProperties?.Remove("services"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestService _explicitNullValueServices = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestService> Services { get => _explicitNullValueServices; set { _explicitNullValueServices = value; AdditionalData?.Remove("services"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("services"); else _explicitNullProperties?.Remove("services"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestService> _explicitNullValueServices = default!;
 #endif
         /// <summary>The steps property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestStep? Steps { get => _explicitNullValueSteps; set { _explicitNullValueSteps = value; AdditionalData?.Remove("steps"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("steps"); else _explicitNullProperties?.Remove("steps"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestStep? _explicitNullValueSteps = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestStep>? Steps { get => _explicitNullValueSteps; set { _explicitNullValueSteps = value; AdditionalData?.Remove("steps"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("steps"); else _explicitNullProperties?.Remove("steps"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestStep>? _explicitNullValueSteps = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestStep Steps { get => _explicitNullValueSteps; set { _explicitNullValueSteps = value; AdditionalData?.Remove("steps"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("steps"); else _explicitNullProperties?.Remove("steps"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestStep _explicitNullValueSteps = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestStep> Steps { get => _explicitNullValueSteps; set { _explicitNullValueSteps = value; AdditionalData?.Remove("steps"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("steps"); else _explicitNullProperties?.Remove("steps"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestStep> _explicitNullValueSteps = default!;
 #endif
         /// <summary>The suspend_options property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -299,13 +299,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "allow_git_fetch", n => { AllowGitFetch = n.GetStringValue(); } },
-                { "artifacts", n => { Artifacts = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestArtifacts>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestArtifacts.CreateFromDiscriminatorValue); } },
-                { "cache", n => { Cache = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestCache>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestCache.CreateFromDiscriminatorValue); } },
-                { "credentials", n => { Credentials = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestCredentials>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestCredentials.CreateFromDiscriminatorValue); } },
+                { "artifacts", n => { Artifacts = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestArtifacts>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestArtifacts.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "cache", n => { Cache = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestCache>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestCache.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "credentials", n => { Credentials = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestCredentials>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestCredentials.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "dependencies", n => { Dependencies = n.GetStringValue(); } },
                 { "features", n => { Features = n.GetStringValue(); } },
                 { "git_info", n => { GitInfo = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestGitInfo>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestGitInfo.CreateFromDiscriminatorValue); } },
-                { "hooks", n => { Hooks = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestHook>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestHook.CreateFromDiscriminatorValue); } },
+                { "hooks", n => { Hooks = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestHook>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestHook.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "image", n => { Image = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestImage>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestImage.CreateFromDiscriminatorValue); } },
                 { "inputs", n => { Inputs = n.GetStringValue(); } },
@@ -314,8 +314,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "run", n => { Run = n.GetStringValue(); } },
                 { "runner_info", n => { RunnerInfo = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestRunnerInfo>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestRunnerInfo.CreateFromDiscriminatorValue); } },
                 { "secrets", n => { Secrets = n.GetStringValue(); } },
-                { "services", n => { Services = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestService>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestService.CreateFromDiscriminatorValue); } },
-                { "steps", n => { Steps = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestStep>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestStep.CreateFromDiscriminatorValue); } },
+                { "services", n => { Services = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestService>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestService.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "steps", n => { Steps = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestStep>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestStep.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "suspend_options", n => { SuspendOptions = n.GetStringValue(); } },
                 { "token", n => { Token = n.GetStringValue(); } },
                 { "variables", n => { Variables = n.GetStringValue(); } },
@@ -329,13 +329,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("allow_git_fetch", AllowGitFetch);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestArtifacts>("artifacts", Artifacts);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestCache>("cache", Cache);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestCredentials>("credentials", Credentials);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestArtifacts>("artifacts", Artifacts);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestCache>("cache", Cache);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestCredentials>("credentials", Credentials);
             writer.WriteStringValue("dependencies", Dependencies);
             writer.WriteStringValue("features", Features);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestGitInfo>("git_info", GitInfo);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestHook>("hooks", Hooks);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestHook>("hooks", Hooks);
             writer.WriteStringValue("id", Id);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestImage>("image", Image);
             writer.WriteStringValue("inputs", Inputs);
@@ -344,8 +344,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("run", Run);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestRunnerInfo>("runner_info", RunnerInfo);
             writer.WriteStringValue("secrets", Secrets);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestService>("services", Services);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestStep>("steps", Steps);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestService>("services", Services);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestStep>("steps", Steps);
             writer.WriteStringValue("suspend_options", SuspendOptions);
             writer.WriteStringValue("token", Token);
             writer.WriteStringValue("variables", Variables);

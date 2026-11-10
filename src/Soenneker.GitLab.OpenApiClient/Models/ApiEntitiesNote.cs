@@ -183,12 +183,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The suggestions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSuggestion? Suggestions { get => _explicitNullValueSuggestions; set { _explicitNullValueSuggestions = value; AdditionalData?.Remove("suggestions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("suggestions"); else _explicitNullProperties?.Remove("suggestions"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSuggestion? _explicitNullValueSuggestions = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSuggestion>? Suggestions { get => _explicitNullValueSuggestions; set { _explicitNullValueSuggestions = value; AdditionalData?.Remove("suggestions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("suggestions"); else _explicitNullProperties?.Remove("suggestions"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSuggestion>? _explicitNullValueSuggestions = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSuggestion Suggestions { get => _explicitNullValueSuggestions; set { _explicitNullValueSuggestions = value; AdditionalData?.Remove("suggestions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("suggestions"); else _explicitNullProperties?.Remove("suggestions"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSuggestion _explicitNullValueSuggestions = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSuggestion> Suggestions { get => _explicitNullValueSuggestions; set { _explicitNullValueSuggestions = value; AdditionalData?.Remove("suggestions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("suggestions"); else _explicitNullProperties?.Remove("suggestions"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSuggestion> _explicitNullValueSuggestions = default!;
 #endif
         /// <summary>The system property</summary>
         public bool? System { get => _explicitNullValueSystem; set { _explicitNullValueSystem = value; AdditionalData?.Remove("system"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("system"); else _explicitNullProperties?.Remove("system"); } }
@@ -250,7 +250,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "resolved", n => { Resolved = n.GetBoolValue(); } },
                 { "resolved_at", n => { ResolvedAt = n.GetDateTimeOffsetValue(); } },
                 { "resolved_by", n => { ResolvedBy = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic.CreateFromDiscriminatorValue); } },
-                { "suggestions", n => { Suggestions = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSuggestion>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSuggestion.CreateFromDiscriminatorValue); } },
+                { "suggestions", n => { Suggestions = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSuggestion>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSuggestion.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "system", n => { System = n.GetBoolValue(); } },
                 { "type", n => { Type = n.GetStringValue(); } },
                 { "updated_at", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
@@ -282,7 +282,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteBoolValue("resolved", Resolved);
             writer.WriteDateTimeOffsetValue("resolved_at", ResolvedAt);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic>("resolved_by", ResolvedBy);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSuggestion>("suggestions", Suggestions);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSuggestion>("suggestions", Suggestions);
             writer.WriteBoolValue("system", System);
             writer.WriteStringValue("type", Type);
             writer.WriteDateTimeOffsetValue("updated_at", UpdatedAt);

@@ -88,7 +88,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Releases.Item
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRelease>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRelease.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Updates a release. Developer level access to the project is required to update a release.
+        /// Updates a release. Developer level access to the project is required to update a release. Release creates and updates are rate limited per project (`release_writes_limit_per_project` application setting) and per user (`release_writes_limit_per_user` application setting). Requests over a limit are blocked when its feature flag (`rate_limit_release_writes_per_project` or `rate_limit_release_writes_per_user`) is enabled, and only logged otherwise.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRelease"/></returns>
         /// <param name="body">The request body</param>
@@ -146,7 +146,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Releases.Item
             return requestInfo;
         }
         /// <summary>
-        /// Updates a release. Developer level access to the project is required to update a release.
+        /// Updates a release. Developer level access to the project is required to update a release. Release creates and updates are rate limited per project (`release_writes_limit_per_project` application setting) and per user (`release_writes_limit_per_user` application setting). Requests over a limit are blocked when its feature flag (`rate_limit_release_writes_per_project` or `rate_limit_release_writes_per_user`) is enabled, and only logged otherwise.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

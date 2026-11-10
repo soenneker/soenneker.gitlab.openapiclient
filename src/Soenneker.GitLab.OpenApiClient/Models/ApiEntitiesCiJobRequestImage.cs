@@ -64,12 +64,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The ports property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestPort? Ports { get => _explicitNullValuePorts; set { _explicitNullValuePorts = value; AdditionalData?.Remove("ports"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ports"); else _explicitNullProperties?.Remove("ports"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestPort? _explicitNullValuePorts = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestPort>? Ports { get => _explicitNullValuePorts; set { _explicitNullValuePorts = value; AdditionalData?.Remove("ports"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ports"); else _explicitNullProperties?.Remove("ports"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestPort>? _explicitNullValuePorts = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestPort Ports { get => _explicitNullValuePorts; set { _explicitNullValuePorts = value; AdditionalData?.Remove("ports"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ports"); else _explicitNullProperties?.Remove("ports"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestPort _explicitNullValuePorts = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestPort> Ports { get => _explicitNullValuePorts; set { _explicitNullValuePorts = value; AdditionalData?.Remove("ports"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ports"); else _explicitNullProperties?.Remove("ports"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestPort> _explicitNullValuePorts = default!;
 #endif
         /// <summary>The pull_policy property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -109,7 +109,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "entrypoint", n => { Entrypoint = n.GetStringValue(); } },
                 { "executor_opts", n => { ExecutorOpts = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "ports", n => { Ports = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestPort>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestPort.CreateFromDiscriminatorValue); } },
+                { "ports", n => { Ports = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestPort>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestPort.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "pull_policy", n => { PullPolicy = n.GetStringValue(); } },
             };
         }
@@ -123,7 +123,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("entrypoint", Entrypoint);
             writer.WriteStringValue("executor_opts", ExecutorOpts);
             writer.WriteStringValue("name", Name);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestPort>("ports", Ports);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestPort>("ports", Ports);
             writer.WriteStringValue("pull_policy", PullPolicy);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

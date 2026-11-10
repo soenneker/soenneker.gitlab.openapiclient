@@ -37,7 +37,6 @@ using Soenneker.GitLab.OpenApiClient.Api.V4.Hooks;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Iam;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Import;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Integrations;
-using Soenneker.GitLab.OpenApiClient.Api.V4.Internal;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Issues;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Issues_statistics;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Job;
@@ -275,11 +274,6 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Integrations.IntegrationsRequestBuilder Integrations
         {
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Integrations.IntegrationsRequestBuilder(PathParameters, RequestAdapter);
-        }
-        /// <summary>The internal property</summary>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Internal.InternalRequestBuilder Internal
-        {
-            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Internal.InternalRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The issues property</summary>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Issues.IssuesRequestBuilder Issues

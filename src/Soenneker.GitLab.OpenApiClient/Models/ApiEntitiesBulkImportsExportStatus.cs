@@ -43,12 +43,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The batches property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBulkImportsExportBatchStatus? Batches { get => _explicitNullValueBatches; set { _explicitNullValueBatches = value; AdditionalData?.Remove("batches"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("batches"); else _explicitNullProperties?.Remove("batches"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBulkImportsExportBatchStatus? _explicitNullValueBatches = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBulkImportsExportBatchStatus>? Batches { get => _explicitNullValueBatches; set { _explicitNullValueBatches = value; AdditionalData?.Remove("batches"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("batches"); else _explicitNullProperties?.Remove("batches"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBulkImportsExportBatchStatus>? _explicitNullValueBatches = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBulkImportsExportBatchStatus Batches { get => _explicitNullValueBatches; set { _explicitNullValueBatches = value; AdditionalData?.Remove("batches"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("batches"); else _explicitNullProperties?.Remove("batches"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBulkImportsExportBatchStatus _explicitNullValueBatches = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBulkImportsExportBatchStatus> Batches { get => _explicitNullValueBatches; set { _explicitNullValueBatches = value; AdditionalData?.Remove("batches"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("batches"); else _explicitNullProperties?.Remove("batches"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBulkImportsExportBatchStatus> _explicitNullValueBatches = default!;
 #endif
         /// <summary>The batches_count property</summary>
         public int? BatchesCount { get => _explicitNullValueBatchesCount; set { _explicitNullValueBatchesCount = value; AdditionalData?.Remove("batches_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("batches_count"); else _explicitNullProperties?.Remove("batches_count"); } }
@@ -108,7 +108,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "batched", n => { Batched = n.GetBoolValue(); } },
-                { "batches", n => { Batches = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBulkImportsExportBatchStatus>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBulkImportsExportBatchStatus.CreateFromDiscriminatorValue); } },
+                { "batches", n => { Batches = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBulkImportsExportBatchStatus>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBulkImportsExportBatchStatus.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "batches_count", n => { BatchesCount = n.GetIntValue(); } },
                 { "error", n => { Error = n.GetStringValue(); } },
                 { "relation", n => { Relation = n.GetStringValue(); } },
@@ -125,7 +125,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("batched", Batched);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBulkImportsExportBatchStatus>("batches", Batches);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBulkImportsExportBatchStatus>("batches", Batches);
             writer.WriteIntValue("batches_count", BatchesCount);
             writer.WriteStringValue("error", Error);
             writer.WriteStringValue("relation", Relation);

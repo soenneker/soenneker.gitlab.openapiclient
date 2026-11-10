@@ -118,12 +118,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The pipelines property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackagePipeline? Pipelines { get => _explicitNullValuePipelines; set { _explicitNullValuePipelines = value; AdditionalData?.Remove("pipelines"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pipelines"); else _explicitNullProperties?.Remove("pipelines"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackagePipeline? _explicitNullValuePipelines = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackagePipeline>? Pipelines { get => _explicitNullValuePipelines; set { _explicitNullValuePipelines = value; AdditionalData?.Remove("pipelines"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pipelines"); else _explicitNullProperties?.Remove("pipelines"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackagePipeline>? _explicitNullValuePipelines = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackagePipeline Pipelines { get => _explicitNullValuePipelines; set { _explicitNullValuePipelines = value; AdditionalData?.Remove("pipelines"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pipelines"); else _explicitNullProperties?.Remove("pipelines"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackagePipeline _explicitNullValuePipelines = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackagePipeline> Pipelines { get => _explicitNullValuePipelines; set { _explicitNullValuePipelines = value; AdditionalData?.Remove("pipelines"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pipelines"); else _explicitNullProperties?.Remove("pipelines"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackagePipeline> _explicitNullValuePipelines = default!;
 #endif
         /// <summary>The project_id property</summary>
         public long? ProjectId { get => _explicitNullValueProjectId; set { _explicitNullValueProjectId = value; AdditionalData?.Remove("project_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_id"); else _explicitNullProperties?.Remove("project_id"); } }
@@ -171,12 +171,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The versions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackageVersion? Versions { get => _explicitNullValueVersions; set { _explicitNullValueVersions = value; AdditionalData?.Remove("versions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("versions"); else _explicitNullProperties?.Remove("versions"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackageVersion? _explicitNullValueVersions = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackageVersion>? Versions { get => _explicitNullValueVersions; set { _explicitNullValueVersions = value; AdditionalData?.Remove("versions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("versions"); else _explicitNullProperties?.Remove("versions"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackageVersion>? _explicitNullValueVersions = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackageVersion Versions { get => _explicitNullValueVersions; set { _explicitNullValueVersions = value; AdditionalData?.Remove("versions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("versions"); else _explicitNullProperties?.Remove("versions"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackageVersion _explicitNullValueVersions = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackageVersion> Versions { get => _explicitNullValueVersions; set { _explicitNullValueVersions = value; AdditionalData?.Remove("versions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("versions"); else _explicitNullProperties?.Remove("versions"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackageVersion> _explicitNullValueVersions = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackage"/> and sets the default values.
@@ -212,13 +212,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "package_type", n => { PackageType = n.GetStringValue(); } },
                 { "pipeline", n => { Pipeline = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackagePipeline>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackagePipeline.CreateFromDiscriminatorValue); } },
-                { "pipelines", n => { Pipelines = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackagePipeline>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackagePipeline.CreateFromDiscriminatorValue); } },
+                { "pipelines", n => { Pipelines = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackagePipeline>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackagePipeline.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "project_id", n => { ProjectId = n.GetLongValue(); } },
                 { "project_path", n => { ProjectPath = n.GetStringValue(); } },
                 { "status", n => { Status = n.GetStringValue(); } },
                 { "tags", n => { Tags = n.GetStringValue(); } },
                 { "version", n => { Version = n.GetStringValue(); } },
-                { "versions", n => { Versions = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackageVersion>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackageVersion.CreateFromDiscriminatorValue); } },
+                { "versions", n => { Versions = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackageVersion>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackageVersion.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -237,13 +237,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("package_type", PackageType);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackagePipeline>("pipeline", Pipeline);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackagePipeline>("pipelines", Pipelines);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackagePipeline>("pipelines", Pipelines);
             writer.WriteLongValue("project_id", ProjectId);
             writer.WriteStringValue("project_path", ProjectPath);
             writer.WriteStringValue("status", Status);
             writer.WriteStringValue("tags", Tags);
             writer.WriteStringValue("version", Version);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackageVersion>("versions", Versions);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackageVersion>("versions", Versions);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -47,12 +47,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The notes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNote? Notes { get => _explicitNullValueNotes; set { _explicitNullValueNotes = value; AdditionalData?.Remove("notes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notes"); else _explicitNullProperties?.Remove("notes"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNote? _explicitNullValueNotes = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNote>? Notes { get => _explicitNullValueNotes; set { _explicitNullValueNotes = value; AdditionalData?.Remove("notes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notes"); else _explicitNullProperties?.Remove("notes"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNote>? _explicitNullValueNotes = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNote Notes { get => _explicitNullValueNotes; set { _explicitNullValueNotes = value; AdditionalData?.Remove("notes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notes"); else _explicitNullProperties?.Remove("notes"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNote _explicitNullValueNotes = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNote> Notes { get => _explicitNullValueNotes; set { _explicitNullValueNotes = value; AdditionalData?.Remove("notes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notes"); else _explicitNullProperties?.Remove("notes"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNote> _explicitNullValueNotes = default!;
 #endif
         /// <summary>The resolvable property</summary>
         public bool? Resolvable { get => _explicitNullValueResolvable; set { _explicitNullValueResolvable = value; AdditionalData?.Remove("resolvable"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resolvable"); else _explicitNullProperties?.Remove("resolvable"); } }
@@ -87,7 +87,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             {
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "individual_note", n => { IndividualNote = n.GetBoolValue(); } },
-                { "notes", n => { Notes = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNote>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNote.CreateFromDiscriminatorValue); } },
+                { "notes", n => { Notes = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNote>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNote.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "resolvable", n => { Resolvable = n.GetBoolValue(); } },
                 { "resolved", n => { Resolved = n.GetBoolValue(); } },
             };
@@ -101,7 +101,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("id", Id);
             writer.WriteBoolValue("individual_note", IndividualNote);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNote>("notes", Notes);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNote>("notes", Notes);
             writer.WriteBoolValue("resolvable", Resolvable);
             writer.WriteBoolValue("resolved", Resolved);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);

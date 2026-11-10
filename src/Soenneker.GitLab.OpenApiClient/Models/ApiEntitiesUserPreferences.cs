@@ -21,6 +21,16 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             else if (parseNode.GetChildNode("emoji_skin_tone") is { } nullNodeEmojiSkinTone && nullNodeEmojiSkinTone.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmojiSkinTone = null;
             if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
             else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("mobile_push_working_days") is null) { _explicitNullValueMobilePushWorkingDays = default!; _explicitNullProperties?.Remove("mobile_push_working_days"); }
+            else if (parseNode.GetChildNode("mobile_push_working_days") is { } nullNodeMobilePushWorkingDays && nullNodeMobilePushWorkingDays.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MobilePushWorkingDays = null;
+            if (parseNode.GetChildNode("mobile_push_working_hours_enabled") is null) { _explicitNullValueMobilePushWorkingHoursEnabled = default!; _explicitNullProperties?.Remove("mobile_push_working_hours_enabled"); }
+            else if (parseNode.GetChildNode("mobile_push_working_hours_enabled") is { } nullNodeMobilePushWorkingHoursEnabled && nullNodeMobilePushWorkingHoursEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MobilePushWorkingHoursEnabled = null;
+            if (parseNode.GetChildNode("mobile_push_working_hours_end") is null) { _explicitNullValueMobilePushWorkingHoursEnd = default!; _explicitNullProperties?.Remove("mobile_push_working_hours_end"); }
+            else if (parseNode.GetChildNode("mobile_push_working_hours_end") is { } nullNodeMobilePushWorkingHoursEnd && nullNodeMobilePushWorkingHoursEnd.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MobilePushWorkingHoursEnd = null;
+            if (parseNode.GetChildNode("mobile_push_working_hours_start") is null) { _explicitNullValueMobilePushWorkingHoursStart = default!; _explicitNullProperties?.Remove("mobile_push_working_hours_start"); }
+            else if (parseNode.GetChildNode("mobile_push_working_hours_start") is { } nullNodeMobilePushWorkingHoursStart && nullNodeMobilePushWorkingHoursStart.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MobilePushWorkingHoursStart = null;
+            if (parseNode.GetChildNode("mobile_push_working_hours_time_zone") is null) { _explicitNullValueMobilePushWorkingHoursTimeZone = default!; _explicitNullProperties?.Remove("mobile_push_working_hours_time_zone"); }
+            else if (parseNode.GetChildNode("mobile_push_working_hours_time_zone") is { } nullNodeMobilePushWorkingHoursTimeZone && nullNodeMobilePushWorkingHoursTimeZone.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MobilePushWorkingHoursTimeZone = null;
             if (parseNode.GetChildNode("pass_user_identities_to_ci_jwt") is null) { _explicitNullValuePassUserIdentitiesToCiJwt = default!; _explicitNullProperties?.Remove("pass_user_identities_to_ci_jwt"); }
             else if (parseNode.GetChildNode("pass_user_identities_to_ci_jwt") is { } nullNodePassUserIdentitiesToCiJwt && nullNodePassUserIdentitiesToCiJwt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PassUserIdentitiesToCiJwt = null;
             if (parseNode.GetChildNode("policy_advanced_editor") is null) { _explicitNullValuePolicyAdvancedEditor = default!; _explicitNullProperties?.Remove("policy_advanced_editor"); }
@@ -54,6 +64,35 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string _explicitNullValueId = default!;
+#endif
+        /// <summary>The mobile_push_working_days property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<string>? MobilePushWorkingDays { get => _explicitNullValueMobilePushWorkingDays; set { _explicitNullValueMobilePushWorkingDays = value; AdditionalData?.Remove("mobile_push_working_days"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mobile_push_working_days"); else _explicitNullProperties?.Remove("mobile_push_working_days"); } }
+        private List<string>? _explicitNullValueMobilePushWorkingDays = default!;
+#nullable restore
+#else
+        public List<string> MobilePushWorkingDays { get => _explicitNullValueMobilePushWorkingDays; set { _explicitNullValueMobilePushWorkingDays = value; AdditionalData?.Remove("mobile_push_working_days"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mobile_push_working_days"); else _explicitNullProperties?.Remove("mobile_push_working_days"); } }
+        private List<string> _explicitNullValueMobilePushWorkingDays = default!;
+#endif
+        /// <summary>The mobile_push_working_hours_enabled property</summary>
+        public bool? MobilePushWorkingHoursEnabled { get => _explicitNullValueMobilePushWorkingHoursEnabled; set { _explicitNullValueMobilePushWorkingHoursEnabled = value; AdditionalData?.Remove("mobile_push_working_hours_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mobile_push_working_hours_enabled"); else _explicitNullProperties?.Remove("mobile_push_working_hours_enabled"); } }
+        private bool? _explicitNullValueMobilePushWorkingHoursEnabled = default!;
+        /// <summary>The mobile_push_working_hours_end property</summary>
+        public int? MobilePushWorkingHoursEnd { get => _explicitNullValueMobilePushWorkingHoursEnd; set { _explicitNullValueMobilePushWorkingHoursEnd = value; AdditionalData?.Remove("mobile_push_working_hours_end"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mobile_push_working_hours_end"); else _explicitNullProperties?.Remove("mobile_push_working_hours_end"); } }
+        private int? _explicitNullValueMobilePushWorkingHoursEnd = default!;
+        /// <summary>The mobile_push_working_hours_start property</summary>
+        public int? MobilePushWorkingHoursStart { get => _explicitNullValueMobilePushWorkingHoursStart; set { _explicitNullValueMobilePushWorkingHoursStart = value; AdditionalData?.Remove("mobile_push_working_hours_start"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mobile_push_working_hours_start"); else _explicitNullProperties?.Remove("mobile_push_working_hours_start"); } }
+        private int? _explicitNullValueMobilePushWorkingHoursStart = default!;
+        /// <summary>The mobile_push_working_hours_time_zone property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? MobilePushWorkingHoursTimeZone { get => _explicitNullValueMobilePushWorkingHoursTimeZone; set { _explicitNullValueMobilePushWorkingHoursTimeZone = value; AdditionalData?.Remove("mobile_push_working_hours_time_zone"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mobile_push_working_hours_time_zone"); else _explicitNullProperties?.Remove("mobile_push_working_hours_time_zone"); } }
+        private string? _explicitNullValueMobilePushWorkingHoursTimeZone = default!;
+#nullable restore
+#else
+        public string MobilePushWorkingHoursTimeZone { get => _explicitNullValueMobilePushWorkingHoursTimeZone; set { _explicitNullValueMobilePushWorkingHoursTimeZone = value; AdditionalData?.Remove("mobile_push_working_hours_time_zone"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mobile_push_working_hours_time_zone"); else _explicitNullProperties?.Remove("mobile_push_working_hours_time_zone"); } }
+        private string _explicitNullValueMobilePushWorkingHoursTimeZone = default!;
 #endif
         /// <summary>The pass_user_identities_to_ci_jwt property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -132,6 +171,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             {
                 { "emoji_skin_tone", n => { EmojiSkinTone = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
+                { "mobile_push_working_days", n => { MobilePushWorkingDays = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "mobile_push_working_hours_enabled", n => { MobilePushWorkingHoursEnabled = n.GetBoolValue(); } },
+                { "mobile_push_working_hours_end", n => { MobilePushWorkingHoursEnd = n.GetIntValue(); } },
+                { "mobile_push_working_hours_start", n => { MobilePushWorkingHoursStart = n.GetIntValue(); } },
+                { "mobile_push_working_hours_time_zone", n => { MobilePushWorkingHoursTimeZone = n.GetStringValue(); } },
                 { "pass_user_identities_to_ci_jwt", n => { PassUserIdentitiesToCiJwt = n.GetStringValue(); } },
                 { "policy_advanced_editor", n => { PolicyAdvancedEditor = n.GetStringValue(); } },
                 { "show_whitespace_in_diffs", n => { ShowWhitespaceInDiffs = n.GetStringValue(); } },
@@ -148,6 +192,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("emoji_skin_tone", EmojiSkinTone);
             writer.WriteStringValue("id", Id);
+            writer.WriteCollectionOfPrimitiveValues<string>("mobile_push_working_days", MobilePushWorkingDays);
+            writer.WriteBoolValue("mobile_push_working_hours_enabled", MobilePushWorkingHoursEnabled);
+            writer.WriteIntValue("mobile_push_working_hours_end", MobilePushWorkingHoursEnd);
+            writer.WriteIntValue("mobile_push_working_hours_start", MobilePushWorkingHoursStart);
+            writer.WriteStringValue("mobile_push_working_hours_time_zone", MobilePushWorkingHoursTimeZone);
             writer.WriteStringValue("pass_user_identities_to_ci_jwt", PassUserIdentitiesToCiJwt);
             writer.WriteStringValue("policy_advanced_editor", PolicyAdvancedEditor);
             writer.WriteStringValue("show_whitespace_in_diffs", ShowWhitespaceInDiffs);

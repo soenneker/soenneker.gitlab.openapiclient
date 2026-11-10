@@ -88,22 +88,22 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The projects_with_readonly_access property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectIdentity? ProjectsWithReadonlyAccess { get => _explicitNullValueProjectsWithReadonlyAccess; set { _explicitNullValueProjectsWithReadonlyAccess = value; AdditionalData?.Remove("projects_with_readonly_access"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("projects_with_readonly_access"); else _explicitNullProperties?.Remove("projects_with_readonly_access"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectIdentity? _explicitNullValueProjectsWithReadonlyAccess = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectIdentity>? ProjectsWithReadonlyAccess { get => _explicitNullValueProjectsWithReadonlyAccess; set { _explicitNullValueProjectsWithReadonlyAccess = value; AdditionalData?.Remove("projects_with_readonly_access"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("projects_with_readonly_access"); else _explicitNullProperties?.Remove("projects_with_readonly_access"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectIdentity>? _explicitNullValueProjectsWithReadonlyAccess = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectIdentity ProjectsWithReadonlyAccess { get => _explicitNullValueProjectsWithReadonlyAccess; set { _explicitNullValueProjectsWithReadonlyAccess = value; AdditionalData?.Remove("projects_with_readonly_access"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("projects_with_readonly_access"); else _explicitNullProperties?.Remove("projects_with_readonly_access"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectIdentity _explicitNullValueProjectsWithReadonlyAccess = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectIdentity> ProjectsWithReadonlyAccess { get => _explicitNullValueProjectsWithReadonlyAccess; set { _explicitNullValueProjectsWithReadonlyAccess = value; AdditionalData?.Remove("projects_with_readonly_access"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("projects_with_readonly_access"); else _explicitNullProperties?.Remove("projects_with_readonly_access"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectIdentity> _explicitNullValueProjectsWithReadonlyAccess = default!;
 #endif
         /// <summary>The projects_with_write_access property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectIdentity? ProjectsWithWriteAccess { get => _explicitNullValueProjectsWithWriteAccess; set { _explicitNullValueProjectsWithWriteAccess = value; AdditionalData?.Remove("projects_with_write_access"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("projects_with_write_access"); else _explicitNullProperties?.Remove("projects_with_write_access"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectIdentity? _explicitNullValueProjectsWithWriteAccess = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectIdentity>? ProjectsWithWriteAccess { get => _explicitNullValueProjectsWithWriteAccess; set { _explicitNullValueProjectsWithWriteAccess = value; AdditionalData?.Remove("projects_with_write_access"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("projects_with_write_access"); else _explicitNullProperties?.Remove("projects_with_write_access"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectIdentity>? _explicitNullValueProjectsWithWriteAccess = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectIdentity ProjectsWithWriteAccess { get => _explicitNullValueProjectsWithWriteAccess; set { _explicitNullValueProjectsWithWriteAccess = value; AdditionalData?.Remove("projects_with_write_access"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("projects_with_write_access"); else _explicitNullProperties?.Remove("projects_with_write_access"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectIdentity _explicitNullValueProjectsWithWriteAccess = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectIdentity> ProjectsWithWriteAccess { get => _explicitNullValueProjectsWithWriteAccess; set { _explicitNullValueProjectsWithWriteAccess = value; AdditionalData?.Remove("projects_with_write_access"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("projects_with_write_access"); else _explicitNullProperties?.Remove("projects_with_write_access"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectIdentity> _explicitNullValueProjectsWithWriteAccess = default!;
 #endif
         /// <summary>The title property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -157,8 +157,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "id", n => { Id = n.GetLongValue(); } },
                 { "key", n => { Key = n.GetStringValue(); } },
                 { "last_used_at", n => { LastUsedAt = n.GetDateTimeOffsetValue(); } },
-                { "projects_with_readonly_access", n => { ProjectsWithReadonlyAccess = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectIdentity>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectIdentity.CreateFromDiscriminatorValue); } },
-                { "projects_with_write_access", n => { ProjectsWithWriteAccess = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectIdentity>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectIdentity.CreateFromDiscriminatorValue); } },
+                { "projects_with_readonly_access", n => { ProjectsWithReadonlyAccess = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectIdentity>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectIdentity.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "projects_with_write_access", n => { ProjectsWithWriteAccess = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectIdentity>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectIdentity.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "title", n => { Title = n.GetStringValue(); } },
                 { "usage_type", n => { UsageType = n.GetStringValue(); } },
             };
@@ -177,8 +177,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteLongValue("id", Id);
             writer.WriteStringValue("key", Key);
             writer.WriteDateTimeOffsetValue("last_used_at", LastUsedAt);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectIdentity>("projects_with_readonly_access", ProjectsWithReadonlyAccess);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectIdentity>("projects_with_write_access", ProjectsWithWriteAccess);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectIdentity>("projects_with_readonly_access", ProjectsWithReadonlyAccess);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectIdentity>("projects_with_write_access", ProjectsWithWriteAccess);
             writer.WriteStringValue("title", Title);
             writer.WriteStringValue("usage_type", UsageType);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);

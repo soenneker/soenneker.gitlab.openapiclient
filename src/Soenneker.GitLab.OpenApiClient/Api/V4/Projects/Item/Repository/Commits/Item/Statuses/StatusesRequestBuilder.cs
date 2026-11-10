@@ -99,7 +99,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Commits
             [QueryParameter("name")]
             public string Name { get; set; }
 #endif
-            /// <summary>Sort results by the specified field.</summary>
+            /// <summary>Sort results by the specified field. With `pipeline_id`, statuses of the same pipeline are also sorted by `id` in the `sort` direction.</summary>
             [QueryParameter("order_by")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdRepositoryCommitsShaStatusesOrderByParameter? OrderBy { get; set; }
             /// <summary>Page number of results to retrieve.</summary>

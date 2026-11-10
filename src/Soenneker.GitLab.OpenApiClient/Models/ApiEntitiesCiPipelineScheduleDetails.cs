@@ -89,12 +89,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The inputs property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiInput? Inputs { get => _explicitNullValueInputs; set { _explicitNullValueInputs = value; AdditionalData?.Remove("inputs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inputs"); else _explicitNullProperties?.Remove("inputs"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiInput? _explicitNullValueInputs = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiInput>? Inputs { get => _explicitNullValueInputs; set { _explicitNullValueInputs = value; AdditionalData?.Remove("inputs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inputs"); else _explicitNullProperties?.Remove("inputs"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiInput>? _explicitNullValueInputs = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiInput Inputs { get => _explicitNullValueInputs; set { _explicitNullValueInputs = value; AdditionalData?.Remove("inputs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inputs"); else _explicitNullProperties?.Remove("inputs"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiInput _explicitNullValueInputs = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiInput> Inputs { get => _explicitNullValueInputs; set { _explicitNullValueInputs = value; AdditionalData?.Remove("inputs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inputs"); else _explicitNullProperties?.Remove("inputs"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiInput> _explicitNullValueInputs = default!;
 #endif
         /// <summary>The last_pipeline property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -135,12 +135,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The variables property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiVariable? Variables { get => _explicitNullValueVariables; set { _explicitNullValueVariables = value; AdditionalData?.Remove("variables"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variables"); else _explicitNullProperties?.Remove("variables"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiVariable? _explicitNullValueVariables = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiVariable>? Variables { get => _explicitNullValueVariables; set { _explicitNullValueVariables = value; AdditionalData?.Remove("variables"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variables"); else _explicitNullProperties?.Remove("variables"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiVariable>? _explicitNullValueVariables = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiVariable Variables { get => _explicitNullValueVariables; set { _explicitNullValueVariables = value; AdditionalData?.Remove("variables"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variables"); else _explicitNullProperties?.Remove("variables"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiVariable _explicitNullValueVariables = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiVariable> Variables { get => _explicitNullValueVariables; set { _explicitNullValueVariables = value; AdditionalData?.Remove("variables"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variables"); else _explicitNullProperties?.Remove("variables"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiVariable> _explicitNullValueVariables = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiPipelineScheduleDetails"/> and sets the default values.
@@ -173,13 +173,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "cron_timezone", n => { CronTimezone = n.GetStringValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetLongValue(); } },
-                { "inputs", n => { Inputs = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiInput>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiInput.CreateFromDiscriminatorValue); } },
+                { "inputs", n => { Inputs = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiInput>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiInput.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "last_pipeline", n => { LastPipeline = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiPipelineBasic>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiPipelineBasic.CreateFromDiscriminatorValue); } },
                 { "next_run_at", n => { NextRunAt = n.GetDateTimeOffsetValue(); } },
                 { "owner", n => { Owner = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic.CreateFromDiscriminatorValue); } },
                 { "ref", n => { Ref = n.GetStringValue(); } },
                 { "updated_at", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
-                { "variables", n => { Variables = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiVariable>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiVariable.CreateFromDiscriminatorValue); } },
+                { "variables", n => { Variables = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiVariable>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiVariable.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -195,13 +195,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("cron_timezone", CronTimezone);
             writer.WriteStringValue("description", Description);
             writer.WriteLongValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiInput>("inputs", Inputs);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiInput>("inputs", Inputs);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiPipelineBasic>("last_pipeline", LastPipeline);
             writer.WriteDateTimeOffsetValue("next_run_at", NextRunAt);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic>("owner", Owner);
             writer.WriteStringValue("ref", Ref);
             writer.WriteDateTimeOffsetValue("updated_at", UpdatedAt);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiVariable>("variables", Variables);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiVariable>("variables", Variables);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

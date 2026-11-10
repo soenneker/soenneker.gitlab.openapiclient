@@ -33,22 +33,22 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The links property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesReleasesLink? Links { get => _explicitNullValueLinks; set { _explicitNullValueLinks = value; AdditionalData?.Remove("links"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("links"); else _explicitNullProperties?.Remove("links"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesReleasesLink? _explicitNullValueLinks = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesReleasesLink>? Links { get => _explicitNullValueLinks; set { _explicitNullValueLinks = value; AdditionalData?.Remove("links"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("links"); else _explicitNullProperties?.Remove("links"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesReleasesLink>? _explicitNullValueLinks = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesReleasesLink Links { get => _explicitNullValueLinks; set { _explicitNullValueLinks = value; AdditionalData?.Remove("links"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("links"); else _explicitNullProperties?.Remove("links"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesReleasesLink _explicitNullValueLinks = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesReleasesLink> Links { get => _explicitNullValueLinks; set { _explicitNullValueLinks = value; AdditionalData?.Remove("links"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("links"); else _explicitNullProperties?.Remove("links"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesReleasesLink> _explicitNullValueLinks = default!;
 #endif
         /// <summary>The sources property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesReleasesSource? Sources { get => _explicitNullValueSources; set { _explicitNullValueSources = value; AdditionalData?.Remove("sources"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sources"); else _explicitNullProperties?.Remove("sources"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesReleasesSource? _explicitNullValueSources = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesReleasesSource>? Sources { get => _explicitNullValueSources; set { _explicitNullValueSources = value; AdditionalData?.Remove("sources"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sources"); else _explicitNullProperties?.Remove("sources"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesReleasesSource>? _explicitNullValueSources = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesReleasesSource Sources { get => _explicitNullValueSources; set { _explicitNullValueSources = value; AdditionalData?.Remove("sources"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sources"); else _explicitNullProperties?.Remove("sources"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesReleasesSource _explicitNullValueSources = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesReleasesSource> Sources { get => _explicitNullValueSources; set { _explicitNullValueSources = value; AdditionalData?.Remove("sources"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sources"); else _explicitNullProperties?.Remove("sources"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesReleasesSource> _explicitNullValueSources = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesReleaseAssets"/> and sets the default values.
@@ -76,8 +76,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "count", n => { Count = n.GetIntValue(); } },
-                { "links", n => { Links = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesReleasesLink>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesReleasesLink.CreateFromDiscriminatorValue); } },
-                { "sources", n => { Sources = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesReleasesSource>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesReleasesSource.CreateFromDiscriminatorValue); } },
+                { "links", n => { Links = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesReleasesLink>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesReleasesLink.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "sources", n => { Sources = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesReleasesSource>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesReleasesSource.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -88,8 +88,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("count", Count);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesReleasesLink>("links", Links);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesReleasesSource>("sources", Sources);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesReleasesLink>("links", Links);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesReleasesSource>("sources", Sources);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

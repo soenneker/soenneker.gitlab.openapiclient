@@ -289,12 +289,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The custom_attributes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCustomAttribute? CustomAttributes { get => _explicitNullValueCustomAttributes; set { _explicitNullValueCustomAttributes = value; AdditionalData?.Remove("custom_attributes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_attributes"); else _explicitNullProperties?.Remove("custom_attributes"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCustomAttribute? _explicitNullValueCustomAttributes = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCustomAttribute>? CustomAttributes { get => _explicitNullValueCustomAttributes; set { _explicitNullValueCustomAttributes = value; AdditionalData?.Remove("custom_attributes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_attributes"); else _explicitNullProperties?.Remove("custom_attributes"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCustomAttribute>? _explicitNullValueCustomAttributes = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCustomAttribute CustomAttributes { get => _explicitNullValueCustomAttributes; set { _explicitNullValueCustomAttributes = value; AdditionalData?.Remove("custom_attributes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_attributes"); else _explicitNullProperties?.Remove("custom_attributes"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCustomAttribute _explicitNullValueCustomAttributes = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCustomAttribute> CustomAttributes { get => _explicitNullValueCustomAttributes; set { _explicitNullValueCustomAttributes = value; AdditionalData?.Remove("custom_attributes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_attributes"); else _explicitNullProperties?.Remove("custom_attributes"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCustomAttribute> _explicitNullValueCustomAttributes = default!;
 #endif
         /// <summary>The default_branch property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -611,12 +611,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The projects property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProject? Projects { get => _explicitNullValueProjects; set { _explicitNullValueProjects = value; AdditionalData?.Remove("projects"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("projects"); else _explicitNullProperties?.Remove("projects"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProject? _explicitNullValueProjects = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProject>? Projects { get => _explicitNullValueProjects; set { _explicitNullValueProjects = value; AdditionalData?.Remove("projects"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("projects"); else _explicitNullProperties?.Remove("projects"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProject>? _explicitNullValueProjects = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProject Projects { get => _explicitNullValueProjects; set { _explicitNullValueProjects = value; AdditionalData?.Remove("projects"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("projects"); else _explicitNullProperties?.Remove("projects"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProject _explicitNullValueProjects = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProject> Projects { get => _explicitNullValueProjects; set { _explicitNullValueProjects = value; AdditionalData?.Remove("projects"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("projects"); else _explicitNullProperties?.Remove("projects"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProject> _explicitNullValueProjects = default!;
 #endif
         /// <summary>The repository_storage property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -686,12 +686,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The shared_projects property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProject? SharedProjects { get => _explicitNullValueSharedProjects; set { _explicitNullValueSharedProjects = value; AdditionalData?.Remove("shared_projects"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shared_projects"); else _explicitNullProperties?.Remove("shared_projects"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProject? _explicitNullValueSharedProjects = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProject>? SharedProjects { get => _explicitNullValueSharedProjects; set { _explicitNullValueSharedProjects = value; AdditionalData?.Remove("shared_projects"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shared_projects"); else _explicitNullProperties?.Remove("shared_projects"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProject>? _explicitNullValueSharedProjects = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProject SharedProjects { get => _explicitNullValueSharedProjects; set { _explicitNullValueSharedProjects = value; AdditionalData?.Remove("shared_projects"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shared_projects"); else _explicitNullProperties?.Remove("shared_projects"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProject _explicitNullValueSharedProjects = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProject> SharedProjects { get => _explicitNullValueSharedProjects; set { _explicitNullValueSharedProjects = value; AdditionalData?.Remove("shared_projects"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shared_projects"); else _explicitNullProperties?.Remove("shared_projects"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProject> _explicitNullValueSharedProjects = default!;
 #endif
         /// <summary>The shared_runners_minutes_limit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -879,7 +879,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "built_in_project_templates_enabled", n => { BuiltInProjectTemplatesEnabled = n.GetBoolValue(); } },
                 { "created_at", n => { CreatedAt = n.GetStringValue(); } },
                 { "crm_enabled", n => { CrmEnabled = n.GetBoolValue(); } },
-                { "custom_attributes", n => { CustomAttributes = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCustomAttribute>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCustomAttribute.CreateFromDiscriminatorValue); } },
+                { "custom_attributes", n => { CustomAttributes = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCustomAttribute>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCustomAttribute.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "default_branch", n => { DefaultBranch = n.GetStringValue(); } },
                 { "default_branch_protection", n => { DefaultBranchProtection = n.GetIntValue(); } },
                 { "default_branch_protection_defaults", n => { DefaultBranchProtectionDefaults = n.GetStringValue(); } },
@@ -921,7 +921,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "prevent_forking_outside_group", n => { PreventForkingOutsideGroup = n.GetStringValue(); } },
                 { "prevent_sharing_groups_outside_hierarchy", n => { PreventSharingGroupsOutsideHierarchy = n.GetBoolValue(); } },
                 { "project_creation_level", n => { ProjectCreationLevel = n.GetStringValue(); } },
-                { "projects", n => { Projects = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProject>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProject.CreateFromDiscriminatorValue); } },
+                { "projects", n => { Projects = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProject>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProject.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "repository_storage", n => { RepositoryStorage = n.GetStringValue(); } },
                 { "request_access_enabled", n => { RequestAccessEnabled = n.GetBoolValue(); } },
                 { "require_sha_for_merge", n => { RequireShaForMerge = n.GetBoolValue(); } },
@@ -933,7 +933,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "saml_group_links", n => { SamlGroupLinks = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSamlGroupLink>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSamlGroupLink.CreateFromDiscriminatorValue); } },
                 { "service_access_tokens_expiration_enforced", n => { ServiceAccessTokensExpirationEnforced = n.GetStringValue(); } },
                 { "share_with_group_lock", n => { ShareWithGroupLock = n.GetBoolValue(); } },
-                { "shared_projects", n => { SharedProjects = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProject>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProject.CreateFromDiscriminatorValue); } },
+                { "shared_projects", n => { SharedProjects = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProject>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProject.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "shared_runners_minutes_limit", n => { SharedRunnersMinutesLimit = n.GetStringValue(); } },
                 { "shared_runners_setting", n => { SharedRunnersSetting = n.GetStringValue(); } },
                 { "shared_with_groups", n => { SharedWithGroups = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroupDetailSharedWithGroupsItemProperty>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroupDetailSharedWithGroupsItemProperty.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -971,7 +971,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteBoolValue("built_in_project_templates_enabled", BuiltInProjectTemplatesEnabled);
             writer.WriteStringValue("created_at", CreatedAt);
             writer.WriteBoolValue("crm_enabled", CrmEnabled);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCustomAttribute>("custom_attributes", CustomAttributes);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCustomAttribute>("custom_attributes", CustomAttributes);
             writer.WriteStringValue("default_branch", DefaultBranch);
             writer.WriteIntValue("default_branch_protection", DefaultBranchProtection);
             writer.WriteStringValue("default_branch_protection_defaults", DefaultBranchProtectionDefaults);
@@ -1013,7 +1013,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("prevent_forking_outside_group", PreventForkingOutsideGroup);
             writer.WriteBoolValue("prevent_sharing_groups_outside_hierarchy", PreventSharingGroupsOutsideHierarchy);
             writer.WriteStringValue("project_creation_level", ProjectCreationLevel);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProject>("projects", Projects);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProject>("projects", Projects);
             writer.WriteStringValue("repository_storage", RepositoryStorage);
             writer.WriteBoolValue("request_access_enabled", RequestAccessEnabled);
             writer.WriteBoolValue("require_sha_for_merge", RequireShaForMerge);
@@ -1024,7 +1024,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("runners_token", RunnersToken);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSamlGroupLink>("saml_group_links", SamlGroupLinks);
             writer.WriteStringValue("service_access_tokens_expiration_enforced", ServiceAccessTokensExpirationEnforced);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProject>("shared_projects", SharedProjects);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProject>("shared_projects", SharedProjects);
             writer.WriteStringValue("shared_runners_minutes_limit", SharedRunnersMinutesLimit);
             writer.WriteStringValue("shared_runners_setting", SharedRunnersSetting);
             writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroupDetailSharedWithGroupsItemProperty>("shared_with_groups", SharedWithGroups);

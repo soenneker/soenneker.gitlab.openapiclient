@@ -117,12 +117,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The evidences property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesReleasesEvidence? Evidences { get => _explicitNullValueEvidences; set { _explicitNullValueEvidences = value; AdditionalData?.Remove("evidences"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("evidences"); else _explicitNullProperties?.Remove("evidences"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesReleasesEvidence? _explicitNullValueEvidences = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesReleasesEvidence>? Evidences { get => _explicitNullValueEvidences; set { _explicitNullValueEvidences = value; AdditionalData?.Remove("evidences"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("evidences"); else _explicitNullProperties?.Remove("evidences"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesReleasesEvidence>? _explicitNullValueEvidences = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesReleasesEvidence Evidences { get => _explicitNullValueEvidences; set { _explicitNullValueEvidences = value; AdditionalData?.Remove("evidences"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("evidences"); else _explicitNullProperties?.Remove("evidences"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesReleasesEvidence _explicitNullValueEvidences = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesReleasesEvidence> Evidences { get => _explicitNullValueEvidences; set { _explicitNullValueEvidences = value; AdditionalData?.Remove("evidences"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("evidences"); else _explicitNullProperties?.Remove("evidences"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesReleasesEvidence> _explicitNullValueEvidences = default!;
 #endif
         /// <summary>The links property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -137,12 +137,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The milestones property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMilestoneWithStats? Milestones { get => _explicitNullValueMilestones; set { _explicitNullValueMilestones = value; AdditionalData?.Remove("milestones"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("milestones"); else _explicitNullProperties?.Remove("milestones"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMilestoneWithStats? _explicitNullValueMilestones = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMilestoneWithStats>? Milestones { get => _explicitNullValueMilestones; set { _explicitNullValueMilestones = value; AdditionalData?.Remove("milestones"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("milestones"); else _explicitNullProperties?.Remove("milestones"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMilestoneWithStats>? _explicitNullValueMilestones = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMilestoneWithStats Milestones { get => _explicitNullValueMilestones; set { _explicitNullValueMilestones = value; AdditionalData?.Remove("milestones"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("milestones"); else _explicitNullProperties?.Remove("milestones"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMilestoneWithStats _explicitNullValueMilestones = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMilestoneWithStats> Milestones { get => _explicitNullValueMilestones; set { _explicitNullValueMilestones = value; AdditionalData?.Remove("milestones"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("milestones"); else _explicitNullProperties?.Remove("milestones"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMilestoneWithStats> _explicitNullValueMilestones = default!;
 #endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -212,9 +212,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "created_at", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "description_html", n => { DescriptionHtml = n.GetStringValue(); } },
-                { "evidences", n => { Evidences = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesReleasesEvidence>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesReleasesEvidence.CreateFromDiscriminatorValue); } },
+                { "evidences", n => { Evidences = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesReleasesEvidence>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesReleasesEvidence.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "_links", n => { Links = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesReleaseLinks>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesReleaseLinks.CreateFromDiscriminatorValue); } },
-                { "milestones", n => { Milestones = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMilestoneWithStats>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMilestoneWithStats.CreateFromDiscriminatorValue); } },
+                { "milestones", n => { Milestones = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMilestoneWithStats>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMilestoneWithStats.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "released_at", n => { ReleasedAt = n.GetDateTimeOffsetValue(); } },
                 { "tag_name", n => { TagName = n.GetStringValue(); } },
@@ -236,9 +236,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("created_at", CreatedAt);
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("description_html", DescriptionHtml);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesReleasesEvidence>("evidences", Evidences);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesReleasesEvidence>("evidences", Evidences);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesReleaseLinks>("_links", Links);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMilestoneWithStats>("milestones", Milestones);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMilestoneWithStats>("milestones", Milestones);
             writer.WriteStringValue("name", Name);
             writer.WriteDateTimeOffsetValue("released_at", ReleasedAt);
             writer.WriteStringValue("tag_name", TagName);
