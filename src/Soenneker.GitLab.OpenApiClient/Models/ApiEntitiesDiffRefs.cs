@@ -27,7 +27,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The base_sha property</summary>
+        /// <summary>SHA of the merge base commit where the source and target branches diverged.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? BaseSha { get => _explicitNullValueBaseSha; set { _explicitNullValueBaseSha = value; AdditionalData?.Remove("base_sha"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("base_sha"); else _explicitNullProperties?.Remove("base_sha"); } }
@@ -37,7 +37,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string BaseSha { get => _explicitNullValueBaseSha; set { _explicitNullValueBaseSha = value; AdditionalData?.Remove("base_sha"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("base_sha"); else _explicitNullProperties?.Remove("base_sha"); } }
         private string _explicitNullValueBaseSha = default!;
 #endif
-        /// <summary>The head_sha property</summary>
+        /// <summary>SHA of the head commit of the source branch.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? HeadSha { get => _explicitNullValueHeadSha; set { _explicitNullValueHeadSha = value; AdditionalData?.Remove("head_sha"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("head_sha"); else _explicitNullProperties?.Remove("head_sha"); } }
@@ -47,7 +47,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string HeadSha { get => _explicitNullValueHeadSha; set { _explicitNullValueHeadSha = value; AdditionalData?.Remove("head_sha"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("head_sha"); else _explicitNullProperties?.Remove("head_sha"); } }
         private string _explicitNullValueHeadSha = default!;
 #endif
-        /// <summary>The start_sha property</summary>
+        /// <summary>SHA of the target branch commit the diff starts from. Usually the same as `base_sha`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? StartSha { get => _explicitNullValueStartSha; set { _explicitNullValueStartSha = value; AdditionalData?.Remove("start_sha"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_sha"); else _explicitNullProperties?.Remove("start_sha"); } }

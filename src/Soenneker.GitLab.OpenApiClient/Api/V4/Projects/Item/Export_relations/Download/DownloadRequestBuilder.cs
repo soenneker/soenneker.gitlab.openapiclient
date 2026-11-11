@@ -33,7 +33,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Export_relations.D
         {
         }
         /// <summary>
-        /// Downloads a project relations export file.
+        /// Downloads a project relations export file. By default, this endpoint is limited to 100 requests per minute for each user and project. The instance must meet the direct transfer prerequisites, including the `bulk_import_enabled` application setting. If the setting is disabled, a `404` is returned. This endpoint cannot be used with the file-based group import and export API.
         /// </summary>
         /// <returns>A <see cref="Stream"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -51,7 +51,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Export_relations.D
             return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Downloads a project relations export file.
+        /// Downloads a project relations export file. By default, this endpoint is limited to 100 requests per minute for each user and project. The instance must meet the direct transfer prerequisites, including the `bulk_import_enabled` application setting. If the setting is disabled, a `404` is returned. This endpoint cannot be used with the file-based group import and export API.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -79,7 +79,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Export_relations.D
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Export_relations.Download.DownloadRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Downloads a project relations export file.
+        /// Downloads a project relations export file. By default, this endpoint is limited to 100 requests per minute for each user and project. The instance must meet the direct transfer prerequisites, including the `bulk_import_enabled` application setting. If the setting is disabled, a `404` is returned. This endpoint cannot be used with the file-based group import and export API.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class DownloadRequestBuilderGetQueryParameters 

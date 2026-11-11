@@ -33,7 +33,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Shared_projects.Item
         {
         }
         /// <summary>
-        /// Removes a shared project targeting this group. The group Owner can remove a shared project without access to the source project.
+        /// Removes a shared project targeting this group. The group Owner can remove a shared project without access to the source project. You must be an administrator or have the Owner role for the group.
         /// </summary>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -50,7 +50,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Shared_projects.Item
             await RequestAdapter.SendNoContentAsync(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Removes a shared project targeting this group. The group Owner can remove a shared project without access to the source project.
+        /// Removes a shared project targeting this group. The group Owner can remove a shared project without access to the source project. You must be an administrator or have the Owner role for the group.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

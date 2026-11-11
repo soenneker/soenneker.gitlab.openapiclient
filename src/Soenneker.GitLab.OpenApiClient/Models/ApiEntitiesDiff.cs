@@ -43,7 +43,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The a_mode property</summary>
+        /// <summary>Old file mode of the file.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? AMode { get => _explicitNullValueAMode; set { _explicitNullValueAMode = value; AdditionalData?.Remove("a_mode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("a_mode"); else _explicitNullProperties?.Remove("a_mode"); } }
@@ -53,7 +53,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string AMode { get => _explicitNullValueAMode; set { _explicitNullValueAMode = value; AdditionalData?.Remove("a_mode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("a_mode"); else _explicitNullProperties?.Remove("a_mode"); } }
         private string _explicitNullValueAMode = default!;
 #endif
-        /// <summary>The b_mode property</summary>
+        /// <summary>New file mode of the file.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? BMode { get => _explicitNullValueBMode; set { _explicitNullValueBMode = value; AdditionalData?.Remove("b_mode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("b_mode"); else _explicitNullProperties?.Remove("b_mode"); } }
@@ -63,13 +63,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string BMode { get => _explicitNullValueBMode; set { _explicitNullValueBMode = value; AdditionalData?.Remove("b_mode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("b_mode"); else _explicitNullProperties?.Remove("b_mode"); } }
         private string _explicitNullValueBMode = default!;
 #endif
-        /// <summary>The collapsed property</summary>
+        /// <summary>If `true`, the file diff is excluded but can be fetched on request. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/199633) in GitLab 18.4.</summary>
         public bool? Collapsed { get => _explicitNullValueCollapsed; set { _explicitNullValueCollapsed = value; AdditionalData?.Remove("collapsed"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("collapsed"); else _explicitNullProperties?.Remove("collapsed"); } }
         private bool? _explicitNullValueCollapsed = default!;
-        /// <summary>The deleted_file property</summary>
+        /// <summary>If `true`, the file was removed.</summary>
         public bool? DeletedFile { get => _explicitNullValueDeletedFile; set { _explicitNullValueDeletedFile = value; AdditionalData?.Remove("deleted_file"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deleted_file"); else _explicitNullProperties?.Remove("deleted_file"); } }
         private bool? _explicitNullValueDeletedFile = default!;
-        /// <summary>The diff property</summary>
+        /// <summary>Diff of the changes made to the file.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Diff { get => _explicitNullValueDiff; set { _explicitNullValueDiff = value; AdditionalData?.Remove("diff"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("diff"); else _explicitNullProperties?.Remove("diff"); } }
@@ -79,13 +79,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Diff { get => _explicitNullValueDiff; set { _explicitNullValueDiff = value; AdditionalData?.Remove("diff"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("diff"); else _explicitNullProperties?.Remove("diff"); } }
         private string _explicitNullValueDiff = default!;
 #endif
-        /// <summary>The generated_file property</summary>
+        /// <summary>If `true`, the file is marked as generated.</summary>
         public bool? GeneratedFile { get => _explicitNullValueGeneratedFile; set { _explicitNullValueGeneratedFile = value; AdditionalData?.Remove("generated_file"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("generated_file"); else _explicitNullProperties?.Remove("generated_file"); } }
         private bool? _explicitNullValueGeneratedFile = default!;
-        /// <summary>The new_file property</summary>
+        /// <summary>If `true`, the file was added.</summary>
         public bool? NewFile { get => _explicitNullValueNewFile; set { _explicitNullValueNewFile = value; AdditionalData?.Remove("new_file"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_file"); else _explicitNullProperties?.Remove("new_file"); } }
         private bool? _explicitNullValueNewFile = default!;
-        /// <summary>The new_path property</summary>
+        /// <summary>New path of the file.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? NewPath { get => _explicitNullValueNewPath; set { _explicitNullValueNewPath = value; AdditionalData?.Remove("new_path"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_path"); else _explicitNullProperties?.Remove("new_path"); } }
@@ -95,7 +95,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string NewPath { get => _explicitNullValueNewPath; set { _explicitNullValueNewPath = value; AdditionalData?.Remove("new_path"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_path"); else _explicitNullProperties?.Remove("new_path"); } }
         private string _explicitNullValueNewPath = default!;
 #endif
-        /// <summary>The old_path property</summary>
+        /// <summary>Old path of the file.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? OldPath { get => _explicitNullValueOldPath; set { _explicitNullValueOldPath = value; AdditionalData?.Remove("old_path"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("old_path"); else _explicitNullProperties?.Remove("old_path"); } }
@@ -105,10 +105,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string OldPath { get => _explicitNullValueOldPath; set { _explicitNullValueOldPath = value; AdditionalData?.Remove("old_path"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("old_path"); else _explicitNullProperties?.Remove("old_path"); } }
         private string _explicitNullValueOldPath = default!;
 #endif
-        /// <summary>The renamed_file property</summary>
+        /// <summary>If `true`, the file was renamed.</summary>
         public bool? RenamedFile { get => _explicitNullValueRenamedFile; set { _explicitNullValueRenamedFile = value; AdditionalData?.Remove("renamed_file"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("renamed_file"); else _explicitNullProperties?.Remove("renamed_file"); } }
         private bool? _explicitNullValueRenamedFile = default!;
-        /// <summary>The too_large property</summary>
+        /// <summary>If `true`, the file diff is excluded and cannot be retrieved. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/199633) in GitLab 18.4.</summary>
         public bool? TooLarge { get => _explicitNullValueTooLarge; set { _explicitNullValueTooLarge = value; AdditionalData?.Remove("too_large"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("too_large"); else _explicitNullProperties?.Remove("too_large"); } }
         private bool? _explicitNullValueTooLarge = default!;
         /// <summary>

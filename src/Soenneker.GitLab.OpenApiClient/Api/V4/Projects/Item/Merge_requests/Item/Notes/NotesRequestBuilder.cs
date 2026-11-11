@@ -66,7 +66,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Ite
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// Creates a note for a merge request.
+        /// Creates a note for a merge request. The note is not attached to a specific line of the merge request. To comment on a line, create a discussion thread or comment on a commit instead.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNote"/></returns>
         /// <param name="body">The request body</param>
@@ -105,7 +105,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Ite
             return requestInfo;
         }
         /// <summary>
-        /// Creates a note for a merge request.
+        /// Creates a note for a merge request. The note is not attached to a specific line of the merge request. To comment on a line, create a discussion thread or comment on a commit instead.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

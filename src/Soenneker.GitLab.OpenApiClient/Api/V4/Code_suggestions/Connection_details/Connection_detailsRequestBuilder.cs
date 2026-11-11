@@ -33,7 +33,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Code_suggestions.Connection_deta
         {
         }
         /// <summary>
-        /// Retrieves user-specific connection details which can be used by IDEs or clients for telemetry, including an instance-specific application ID, application access token, and clickhouse data plane URL.
+        /// Retrieves user-specific connection details which can be used by IDEs or clients for telemetry, including the instance ID, instance version, realm, global user ID, host name, feature enablement type, and the IDs of namespaces with GitLab Duo access (GitLab.com only, empty elsewhere). This endpoint has a rate limit of 10 requests per minute for each user. This feature was introduced in GitLab 18.3.
         /// </summary>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -50,7 +50,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Code_suggestions.Connection_deta
             await RequestAdapter.SendNoContentAsync(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Retrieves user-specific connection details which can be used by IDEs or clients for telemetry, including an instance-specific application ID, application access token, and clickhouse data plane URL.
+        /// Retrieves user-specific connection details which can be used by IDEs or clients for telemetry, including the instance ID, instance version, realm, global user ID, host name, feature enablement type, and the IDs of namespaces with GitLab Duo access (GitLab.com only, empty elsewhere). This endpoint has a rate limit of 10 requests per minute for each user. This feature was introduced in GitLab 18.3.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

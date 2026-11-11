@@ -70,7 +70,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Variables.Item
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiVariable>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiVariable.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Updates a specified group variable. If there are multiple variables with the same key, use `filter` to select the correct `environment_scope`.
+        /// Updates a specified group variable. If there are multiple variables with the same key, use `filter` to select the correct `environment_scope`. If the `environment_scope` in `filter` does not exist, the endpoint updates a variable with the same key but a different environment scope.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiVariable"/></returns>
         /// <param name="body">The request body</param>
@@ -128,7 +128,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Variables.Item
             return requestInfo;
         }
         /// <summary>
-        /// Updates a specified group variable. If there are multiple variables with the same key, use `filter` to select the correct `environment_scope`.
+        /// Updates a specified group variable. If there are multiple variables with the same key, use `filter` to select the correct `environment_scope`. If the `environment_scope` in `filter` does not exist, the endpoint updates a variable with the same key but a different environment scope.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

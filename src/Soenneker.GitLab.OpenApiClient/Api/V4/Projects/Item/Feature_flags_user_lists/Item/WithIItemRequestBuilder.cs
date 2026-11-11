@@ -69,7 +69,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Feature_flags_user
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFeatureFlagUserList>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFeatureFlagUserList.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Updates a specified feature flag user list.
+        /// Updates a specified feature flag user list. The bytes of `user_xids` written count toward a per-user rate limit (`feature_flag_user_list_write_bytes_limit_per_user` application setting). Until the `rate_limit_feature_flag_user_list_write_bytes` feature flag is enabled, requests over this limit are logged but not blocked.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFeatureFlagUserList"/></returns>
         /// <param name="body">The request body</param>
@@ -126,7 +126,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Feature_flags_user
             return requestInfo;
         }
         /// <summary>
-        /// Updates a specified feature flag user list.
+        /// Updates a specified feature flag user list. The bytes of `user_xids` written count toward a per-user rate limit (`feature_flag_user_list_write_bytes_limit_per_user` application setting). Until the `rate_limit_feature_flag_user_list_write_bytes` feature flag is enabled, requests over this limit are logged but not blocked.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

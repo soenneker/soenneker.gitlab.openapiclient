@@ -66,7 +66,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Registry.Protectio
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// Creates a container repository protection rule for a specified project to control who can push or delete container images.
+        /// Creates a container repository protection rule for a specified project to control who can push or delete container images. This feature was introduced in GitLab 17.2.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectsContainerRegistryProtectionRule"/></returns>
         /// <param name="body">The request body</param>
@@ -105,7 +105,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Registry.Protectio
             return requestInfo;
         }
         /// <summary>
-        /// Creates a container repository protection rule for a specified project to control who can push or delete container images.
+        /// Creates a container repository protection rule for a specified project to control who can push or delete container images. This feature was introduced in GitLab 17.2.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

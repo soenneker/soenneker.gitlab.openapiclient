@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
-    /// <summary>Strategy used to automatically assign reviewers to merge requests. One of `disabled` or `code_owners`.</summary>
+    /// <summary>Strategy used to automatically assign reviewers to merge requests. One of `disabled` or `code_owners`. Responses can also return `dap_powered` for projects configured before GitLab 19.4. Premium and Ultimate only. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/601621) in GitLab 19.2.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum PutApiV4ProjectsIdRequestReviewerAssignmentStrategy
     {

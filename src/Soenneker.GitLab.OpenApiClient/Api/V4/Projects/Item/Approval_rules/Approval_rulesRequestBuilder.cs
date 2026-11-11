@@ -47,7 +47,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Approval_rules
         {
         }
         /// <summary>
-        /// Lists all approval rules and any associated details for a specified project. To restrict the list of approval rules, use the `page` and `per_page` pagination parameters.
+        /// Lists all approval rules and any associated details for a specified project. To restrict the list of approval rules, use the `page` and `per_page` pagination parameters. Each rule in the response includes `eligible_approvers`, the users who can approve a merge request the rule applies to. Eligible approvers depend on the rule configuration and on project and group membership.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectApprovalRule"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -65,7 +65,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Approval_rules
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectApprovalRule>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectApprovalRule.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Creates an approval rule for a specified project.
+        /// Creates an approval rule for a specified project. The `rule_type` field supports these rule types: `any_approver`, a pre-configured default rule with `approvals_required` set to `0`; `regular`, for regular merge request approval rules; and `report_approver`, used when GitLab creates an approval rule from configured and enabled merge request approval policies. Do not use `report_approver` when creating approval rules with this API.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectApprovalRule"/></returns>
         /// <param name="body">The request body</param>
@@ -85,7 +85,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Approval_rules
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectApprovalRule>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectApprovalRule.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Lists all approval rules and any associated details for a specified project. To restrict the list of approval rules, use the `page` and `per_page` pagination parameters.
+        /// Lists all approval rules and any associated details for a specified project. To restrict the list of approval rules, use the `page` and `per_page` pagination parameters. Each rule in the response includes `eligible_approvers`, the users who can approve a merge request the rule applies to. Eligible approvers depend on the rule configuration and on project and group membership.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -104,7 +104,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Approval_rules
             return requestInfo;
         }
         /// <summary>
-        /// Creates an approval rule for a specified project.
+        /// Creates an approval rule for a specified project. The `rule_type` field supports these rule types: `any_approver`, a pre-configured default rule with `approvals_required` set to `0`; `regular`, for regular merge request approval rules; and `report_approver`, used when GitLab creates an approval rule from configured and enabled merge request approval policies. Do not use `report_approver` when creating approval rules with this API.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -135,7 +135,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Approval_rules
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Approval_rules.Approval_rulesRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Lists all approval rules and any associated details for a specified project. To restrict the list of approval rules, use the `page` and `per_page` pagination parameters.
+        /// Lists all approval rules and any associated details for a specified project. To restrict the list of approval rules, use the `page` and `per_page` pagination parameters. Each rule in the response includes `eligible_approvers`, the users who can approve a merge request the rule applies to. Eligible approvers depend on the rule configuration and on project and group membership.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Approval_rulesRequestBuilderGetQueryParameters 

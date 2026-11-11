@@ -39,7 +39,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Description of the variable. Limited to 255 characters.</summary>
+        /// <summary>Description of the variable. Limited to 255 characters. Default is `null`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
@@ -72,7 +72,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>If `true`, the variable is masked.</summary>
         public bool? Masked { get => _explicitNullValueMasked; set { _explicitNullValueMasked = value; AdditionalData?.Remove("masked"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("masked"); else _explicitNullProperties?.Remove("masked"); } }
         private bool? _explicitNullValueMasked = default!;
-        /// <summary>If `true`, the variable is masked and hidden.</summary>
+        /// <summary>If `true`, the variable is masked and hidden. Default is `false`. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/29674) in GitLab 17.4.</summary>
         public bool? MaskedAndHidden { get => _explicitNullValueMaskedAndHidden; set { _explicitNullValueMaskedAndHidden = value; AdditionalData?.Remove("masked_and_hidden"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("masked_and_hidden"); else _explicitNullProperties?.Remove("masked_and_hidden"); } }
         private bool? _explicitNullValueMaskedAndHidden = default!;
         /// <summary>If `true`, the variable is protected.</summary>

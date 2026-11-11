@@ -35,7 +35,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Body { get => _explicitNullValueBody; set { _explicitNullValueBody = value; AdditionalData?.Remove("body"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("body"); else _explicitNullProperties?.Remove("body"); } }
         private string _explicitNullValueBody = default!;
 #endif
-        /// <summary>If `true`, resolves the note. If `false`, reopens the note. Exactly one of `body`, `resolved` must be provided.</summary>
+        /// <summary>If `true`, resolves the note. If `false`, reopens the note. If empty, the note is returned unchanged. Exactly one of `body`, `resolved` must be provided.</summary>
         public bool? Resolved { get => _explicitNullValueResolved; set { _explicitNullValueResolved = value; AdditionalData?.Remove("resolved"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resolved"); else _explicitNullProperties?.Remove("resolved"); } }
         private bool? _explicitNullValueResolved = default!;
         /// <summary>

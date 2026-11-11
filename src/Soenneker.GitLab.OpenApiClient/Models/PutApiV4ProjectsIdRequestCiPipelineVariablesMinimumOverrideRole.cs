@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
-    /// <summary>Limit ability to override CI/CD variables when triggering a pipeline to only users with at least the set minimum role</summary>
+    /// <summary>Limit ability to override CI/CD variables when triggering a pipeline to only users with at least the set minimum role. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/440338) in GitLab 17.1.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum PutApiV4ProjectsIdRequestCiPipelineVariablesMinimumOverrideRole
     {

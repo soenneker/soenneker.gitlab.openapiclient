@@ -45,7 +45,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string DestinationName { get => _explicitNullValueDestinationName; set { _explicitNullValueDestinationName = value; AdditionalData?.Remove("destination_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("destination_name"); else _explicitNullProperties?.Remove("destination_name"); } }
         private string _explicitNullValueDestinationName = default!;
 #endif
-        /// <summary>Destination namespace for the entity</summary>
+        /// <summary>Destination namespace for the entity. Full path of an existing group on the destination instance. For `group_entity`, an empty string `&quot;&quot;` creates a top-level group instead. Personal namespaces are not supported.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? DestinationNamespace { get => _explicitNullValueDestinationNamespace; set { _explicitNullValueDestinationNamespace = value; AdditionalData?.Remove("destination_namespace"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("destination_namespace"); else _explicitNullProperties?.Remove("destination_namespace"); } }
@@ -55,7 +55,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string DestinationNamespace { get => _explicitNullValueDestinationNamespace; set { _explicitNullValueDestinationNamespace = value; AdditionalData?.Remove("destination_namespace"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("destination_namespace"); else _explicitNullProperties?.Remove("destination_namespace"); } }
         private string _explicitNullValueDestinationNamespace = default!;
 #endif
-        /// <summary>Destination slug for the entity</summary>
+        /// <summary>Destination slug for the entity. GitLab uses the slug as the URL path to the entity. The name of the imported entity is copied from the name of the source entity, not the slug. Required unless the deprecated `destination_name` is set.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? DestinationSlug { get => _explicitNullValueDestinationSlug; set { _explicitNullValueDestinationSlug = value; AdditionalData?.Remove("destination_slug"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("destination_slug"); else _explicitNullProperties?.Remove("destination_slug"); } }

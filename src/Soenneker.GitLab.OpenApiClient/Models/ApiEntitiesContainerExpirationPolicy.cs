@@ -35,7 +35,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The cadence property</summary>
+        /// <summary>How often the cleanup policy runs, such as `1d` or `7d`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Cadence { get => _explicitNullValueCadence; set { _explicitNullValueCadence = value; AdditionalData?.Remove("cadence"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cadence"); else _explicitNullProperties?.Remove("cadence"); } }
@@ -45,27 +45,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Cadence { get => _explicitNullValueCadence; set { _explicitNullValueCadence = value; AdditionalData?.Remove("cadence"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cadence"); else _explicitNullProperties?.Remove("cadence"); } }
         private string _explicitNullValueCadence = default!;
 #endif
-        /// <summary>The enabled property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Enabled { get => _explicitNullValueEnabled; set { _explicitNullValueEnabled = value; AdditionalData?.Remove("enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enabled"); else _explicitNullProperties?.Remove("enabled"); } }
-        private string? _explicitNullValueEnabled = default!;
-#nullable restore
-#else
-        public string Enabled { get => _explicitNullValueEnabled; set { _explicitNullValueEnabled = value; AdditionalData?.Remove("enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enabled"); else _explicitNullProperties?.Remove("enabled"); } }
-        private string _explicitNullValueEnabled = default!;
-#endif
-        /// <summary>The keep_n property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? KeepN { get => _explicitNullValueKeepN; set { _explicitNullValueKeepN = value; AdditionalData?.Remove("keep_n"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("keep_n"); else _explicitNullProperties?.Remove("keep_n"); } }
-        private string? _explicitNullValueKeepN = default!;
-#nullable restore
-#else
-        public string KeepN { get => _explicitNullValueKeepN; set { _explicitNullValueKeepN = value; AdditionalData?.Remove("keep_n"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("keep_n"); else _explicitNullProperties?.Remove("keep_n"); } }
-        private string _explicitNullValueKeepN = default!;
-#endif
-        /// <summary>The name_regex property</summary>
+        /// <summary>If `true`, the cleanup policy is enabled.</summary>
+        public bool? Enabled { get => _explicitNullValueEnabled; set { _explicitNullValueEnabled = value; AdditionalData?.Remove("enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enabled"); else _explicitNullProperties?.Remove("enabled"); } }
+        private bool? _explicitNullValueEnabled = default!;
+        /// <summary>Number of tags to keep for each image.</summary>
+        public int? KeepN { get => _explicitNullValueKeepN; set { _explicitNullValueKeepN = value; AdditionalData?.Remove("keep_n"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("keep_n"); else _explicitNullProperties?.Remove("keep_n"); } }
+        private int? _explicitNullValueKeepN = default!;
+        /// <summary>Regular expression of tag names to remove.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? NameRegex { get => _explicitNullValueNameRegex; set { _explicitNullValueNameRegex = value; AdditionalData?.Remove("name_regex"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name_regex"); else _explicitNullProperties?.Remove("name_regex"); } }
@@ -75,7 +61,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string NameRegex { get => _explicitNullValueNameRegex; set { _explicitNullValueNameRegex = value; AdditionalData?.Remove("name_regex"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name_regex"); else _explicitNullProperties?.Remove("name_regex"); } }
         private string _explicitNullValueNameRegex = default!;
 #endif
-        /// <summary>The name_regex_keep property</summary>
+        /// <summary>Regular expression of tag names to keep.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? NameRegexKeep { get => _explicitNullValueNameRegexKeep; set { _explicitNullValueNameRegexKeep = value; AdditionalData?.Remove("name_regex_keep"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name_regex_keep"); else _explicitNullProperties?.Remove("name_regex_keep"); } }
@@ -85,17 +71,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string NameRegexKeep { get => _explicitNullValueNameRegexKeep; set { _explicitNullValueNameRegexKeep = value; AdditionalData?.Remove("name_regex_keep"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name_regex_keep"); else _explicitNullProperties?.Remove("name_regex_keep"); } }
         private string _explicitNullValueNameRegexKeep = default!;
 #endif
-        /// <summary>The next_run_at property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? NextRunAt { get => _explicitNullValueNextRunAt; set { _explicitNullValueNextRunAt = value; AdditionalData?.Remove("next_run_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("next_run_at"); else _explicitNullProperties?.Remove("next_run_at"); } }
-        private string? _explicitNullValueNextRunAt = default!;
-#nullable restore
-#else
-        public string NextRunAt { get => _explicitNullValueNextRunAt; set { _explicitNullValueNextRunAt = value; AdditionalData?.Remove("next_run_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("next_run_at"); else _explicitNullProperties?.Remove("next_run_at"); } }
-        private string _explicitNullValueNextRunAt = default!;
-#endif
-        /// <summary>The older_than property</summary>
+        /// <summary>Date and time of the next scheduled policy run.</summary>
+        public DateTimeOffset? NextRunAt { get => _explicitNullValueNextRunAt; set { _explicitNullValueNextRunAt = value; AdditionalData?.Remove("next_run_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("next_run_at"); else _explicitNullProperties?.Remove("next_run_at"); } }
+        private DateTimeOffset? _explicitNullValueNextRunAt = default!;
+        /// <summary>Tags older than this value are removed, such as `90d`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? OlderThan { get => _explicitNullValueOlderThan; set { _explicitNullValueOlderThan = value; AdditionalData?.Remove("older_than"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("older_than"); else _explicitNullProperties?.Remove("older_than"); } }
@@ -131,11 +110,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "cadence", n => { Cadence = n.GetStringValue(); } },
-                { "enabled", n => { Enabled = n.GetStringValue(); } },
-                { "keep_n", n => { KeepN = n.GetStringValue(); } },
+                { "enabled", n => { Enabled = n.GetBoolValue(); } },
+                { "keep_n", n => { KeepN = n.GetIntValue(); } },
                 { "name_regex", n => { NameRegex = n.GetStringValue(); } },
                 { "name_regex_keep", n => { NameRegexKeep = n.GetStringValue(); } },
-                { "next_run_at", n => { NextRunAt = n.GetStringValue(); } },
+                { "next_run_at", n => { NextRunAt = n.GetDateTimeOffsetValue(); } },
                 { "older_than", n => { OlderThan = n.GetStringValue(); } },
             };
         }
@@ -147,11 +126,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("cadence", Cadence);
-            writer.WriteStringValue("enabled", Enabled);
-            writer.WriteStringValue("keep_n", KeepN);
+            writer.WriteBoolValue("enabled", Enabled);
+            writer.WriteIntValue("keep_n", KeepN);
             writer.WriteStringValue("name_regex", NameRegex);
             writer.WriteStringValue("name_regex_keep", NameRegexKeep);
-            writer.WriteStringValue("next_run_at", NextRunAt);
+            writer.WriteDateTimeOffsetValue("next_run_at", NextRunAt);
             writer.WriteStringValue("older_than", OlderThan);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

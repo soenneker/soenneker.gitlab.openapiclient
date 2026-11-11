@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
-    /// <summary>Wiki access level. One of `disabled`, `private` or `enabled`</summary>
+    /// <summary>Wiki access level. One of `disabled`, `private` or `enabled`. Premium and Ultimate only.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum PutApiV4GroupsIdRequestWikiAccessLevel
     {

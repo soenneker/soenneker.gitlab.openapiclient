@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Export_relations.S
         {
         }
         /// <summary>
-        /// Retrieves the status of a relations export for a project.
+        /// Retrieves the status of a relations export for a project. The `status` is one of `-2` (pending), `0` (started), `1` (finished), or `-1` (failed). The instance must meet the direct transfer prerequisites, including the `bulk_import_enabled` application setting. If the setting is disabled, a `404` is returned. This endpoint cannot be used with the file-based group import and export API.
         /// </summary>
         /// <returns>A List&lt;global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBulkImportsExportStatus&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -53,7 +53,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Export_relations.S
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// Retrieves the status of a relations export for a project.
+        /// Retrieves the status of a relations export for a project. The `status` is one of `-2` (pending), `0` (started), `1` (finished), or `-1` (failed). The instance must meet the direct transfer prerequisites, including the `bulk_import_enabled` application setting. If the setting is disabled, a `404` is returned. This endpoint cannot be used with the file-based group import and export API.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -81,7 +81,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Export_relations.S
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Export_relations.Status.StatusRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Retrieves the status of a relations export for a project.
+        /// Retrieves the status of a relations export for a project. The `status` is one of `-2` (pending), `0` (started), `1` (finished), or `-1` (failed). The instance must meet the direct transfer prerequisites, including the `bulk_import_enabled` application setting. If the setting is disabled, a `404` is returned. This endpoint cannot be used with the file-based group import and export API.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class StatusRequestBuilderGetQueryParameters 

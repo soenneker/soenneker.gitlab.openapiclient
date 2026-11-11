@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Packages
         {
         }
         /// <summary>
-        /// Lists all packages for a specified group. When accessed without authentication, only packages of public projects are returned. By default, packages with `default`, `deprecated`, and `error` status are returned. Use the `status` parameter to view other packages.
+        /// Lists all packages for a specified group. When accessed without authentication, only packages of public projects are returned. By default, packages with `default`, `deprecated`, and `error` status are returned. Use the `status` parameter to view other packages. Packages of non-public projects are returned only for projects where you have at least the Reporter role. Packages with `processing` status can contain malformed data or be broken. In the response, `creator_id` is the ID of the user who created the package, and is `null` when a deploy token created the package. For a Conan package, `name` contains the recipe, and `conan_package_name` contains the package name. Other package types do not have this field. In `_links`, `web_path` is the path to the package details page in GitLab, returned only if the package has status `default` or `deprecated`, and `delete_api_path` is the API path to delete the package, returned only if you have permission to delete it.
         /// </summary>
         /// <returns>A List&lt;global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackage&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -53,7 +53,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Packages
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// Lists all packages for a specified group. When accessed without authentication, only packages of public projects are returned. By default, packages with `default`, `deprecated`, and `error` status are returned. Use the `status` parameter to view other packages.
+        /// Lists all packages for a specified group. When accessed without authentication, only packages of public projects are returned. By default, packages with `default`, `deprecated`, and `error` status are returned. Use the `status` parameter to view other packages. Packages of non-public projects are returned only for projects where you have at least the Reporter role. Packages with `processing` status can contain malformed data or be broken. In the response, `creator_id` is the ID of the user who created the package, and is `null` when a deploy token created the package. For a Conan package, `name` contains the recipe, and `conan_package_name` contains the package name. Other package types do not have this field. In `_links`, `web_path` is the path to the package details page in GitLab, returned only if the package has status `default` or `deprecated`, and `delete_api_path` is the API path to delete the package, returned only if you have permission to delete it.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -81,7 +81,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Packages
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Packages.PackagesRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Lists all packages for a specified group. When accessed without authentication, only packages of public projects are returned. By default, packages with `default`, `deprecated`, and `error` status are returned. Use the `status` parameter to view other packages.
+        /// Lists all packages for a specified group. When accessed without authentication, only packages of public projects are returned. By default, packages with `default`, `deprecated`, and `error` status are returned. Use the `status` parameter to view other packages. Packages of non-public projects are returned only for projects where you have at least the Reporter role. Packages with `processing` status can contain malformed data or be broken. In the response, `creator_id` is the ID of the user who created the package, and is `null` when a deploy token created the package. For a Conan package, `name` contains the recipe, and `conan_package_name` contains the package name. Other package types do not have this field. In `_links`, `web_path` is the path to the package details page in GitLab, returned only if the package has status `default` or `deprecated`, and `delete_api_path` is the API path to delete the package, returned only if you have permission to delete it.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class PackagesRequestBuilderGetQueryParameters 

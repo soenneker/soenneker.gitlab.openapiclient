@@ -33,7 +33,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Snapshot
         {
         }
         /// <summary>
-        /// Downloads snapshot of a Git repository.
+        /// Downloads a snapshot of the project Git repository, or of the wiki repository if `wiki` is `true`. The snapshot is always in uncompressed tar format. If a repository is corrupted so that `git clone` does not work, the snapshot might allow some of the data to be retrieved. Requires administrator or auditor access.
         /// </summary>
         /// <returns>A <see cref="Stream"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -51,7 +51,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Snapshot
             return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Downloads snapshot of a Git repository.
+        /// Downloads a snapshot of the project Git repository, or of the wiki repository if `wiki` is `true`. The snapshot is always in uncompressed tar format. If a repository is corrupted so that `git clone` does not work, the snapshot might allow some of the data to be retrieved. Requires administrator or auditor access.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -79,7 +79,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Snapshot
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Snapshot.SnapshotRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Downloads snapshot of a Git repository.
+        /// Downloads a snapshot of the project Git repository, or of the wiki repository if `wiki` is `true`. The snapshot is always in uncompressed tar format. If a repository is corrupted so that `git clone` does not work, the snapshot might allow some of the data to be retrieved. Requires administrator or auditor access.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class SnapshotRequestBuilderGetQueryParameters 

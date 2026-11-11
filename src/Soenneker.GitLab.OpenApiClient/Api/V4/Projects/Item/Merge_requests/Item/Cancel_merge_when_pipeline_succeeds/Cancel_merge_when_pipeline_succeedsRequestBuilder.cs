@@ -33,7 +33,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Ite
         {
         }
         /// <summary>
-        /// Cancels an automatic merge for a merge request that has been set to merge when the pipeline succeeds. This endpoint does not return the merge request. Deprecated in GitLab 19.5. Use POST /projects/:id/merge_requests/:merge_request_iid/cancel_auto_merge instead.
+        /// Cancels an automatic merge for a merge request that has been set to merge when the pipeline succeeds. If the merge request is on a merge train, it is also removed from the train. This endpoint does not return the merge request. When the merge request is not set to auto-merge, the response has `status` `error` and an `http_status` field that is not the status code of the response. Deprecated in GitLab 19.5. Use POST /projects/:id/merge_requests/:merge_request_iid/cancel_auto_merge instead.
         /// </summary>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -51,7 +51,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Ite
             await RequestAdapter.SendNoContentAsync(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Cancels an automatic merge for a merge request that has been set to merge when the pipeline succeeds. This endpoint does not return the merge request. Deprecated in GitLab 19.5. Use POST /projects/:id/merge_requests/:merge_request_iid/cancel_auto_merge instead.
+        /// Cancels an automatic merge for a merge request that has been set to merge when the pipeline succeeds. If the merge request is on a merge train, it is also removed from the train. This endpoint does not return the merge request. When the merge request is not set to auto-merge, the response has `status` `error` and an `http_status` field that is not the status code of the response. Deprecated in GitLab 19.5. Use POST /projects/:id/merge_requests/:merge_request_iid/cancel_auto_merge instead.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

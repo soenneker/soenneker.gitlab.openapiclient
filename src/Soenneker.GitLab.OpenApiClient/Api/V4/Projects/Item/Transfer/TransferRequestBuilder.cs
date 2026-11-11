@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Transfer
         {
         }
         /// <summary>
-        /// Transfers a project to another namespace.
+        /// Transfers a project to another namespace. The transfer runs asynchronously. To confirm it succeeded, retrieve the project until its `namespace.id` matches the ID of the new namespace. If the transfer fails, the user who requested it gets a to-do item with the `transfer_failed` action.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProject"/></returns>
         /// <param name="body">The request body</param>
@@ -54,7 +54,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Transfer
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProject>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProject.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Transfers a project to another namespace.
+        /// Transfers a project to another namespace. The transfer runs asynchronously. To confirm it succeeded, retrieve the project until its `namespace.id` matches the ID of the new namespace. If the transfer fails, the user who requested it gets a to-do item with the `transfer_failed` action.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Transfer
         {
         }
         /// <summary>
-        /// Transfers a group to another parent group or transforms a subgroup into a top-level group. You must be an administrator or have the Owner role for the group.
+        /// Transfers a group to another parent group or transforms a subgroup into a top-level group. You must be an administrator or have the Owner role for the group. To transfer the group to a new parent group, you must be able to create subgroups in it. To make a subgroup a top-level group, you must be able to create top-level groups. The transfer runs asynchronously. To confirm it, retrieve the group until its `parent_id` matches the ID of the new parent group, or is `null` for a top-level group. If the transfer fails, the user who requested it gets a to-do item with the `transfer_failed` action.
         /// </summary>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -53,7 +53,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Transfer
             await RequestAdapter.SendNoContentAsync(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Transfers a group to another parent group or transforms a subgroup into a top-level group. You must be an administrator or have the Owner role for the group.
+        /// Transfers a group to another parent group or transforms a subgroup into a top-level group. You must be an administrator or have the Owner role for the group. To transfer the group to a new parent group, you must be able to create subgroups in it. To make a subgroup a top-level group, you must be able to create top-level groups. The transfer runs asynchronously. To confirm it, retrieve the group until its `parent_id` matches the ID of the new parent group, or is `null` for a top-level group. If the transfer fails, the user who requested it gets a to-do item with the `transfer_failed` action.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

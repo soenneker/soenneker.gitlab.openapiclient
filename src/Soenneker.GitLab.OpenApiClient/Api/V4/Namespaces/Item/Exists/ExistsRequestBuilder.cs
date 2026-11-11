@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Namespaces.Item.Exists
         {
         }
         /// <summary>
-        /// Verifies that a namespace is available for use.
+        /// Verifies that a namespace is available for use. If the namespace exists, the response suggests an alternate name in `suggests`.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNamespaceExistence"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Namespaces.Item.Exists
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNamespaceExistence>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNamespaceExistence.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Verifies that a namespace is available for use.
+        /// Verifies that a namespace is available for use. If the namespace exists, the response suggests an alternate name in `suggests`.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -80,7 +80,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Namespaces.Item.Exists
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Namespaces.Item.Exists.ExistsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Verifies that a namespace is available for use.
+        /// Verifies that a namespace is available for use. If the namespace exists, the response suggests an alternate name in `suggests`.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ExistsRequestBuilderGetQueryParameters 

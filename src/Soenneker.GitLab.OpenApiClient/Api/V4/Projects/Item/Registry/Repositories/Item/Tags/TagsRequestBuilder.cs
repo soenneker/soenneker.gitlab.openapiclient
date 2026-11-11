@@ -47,7 +47,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Registry.Repositor
         {
         }
         /// <summary>
-        /// Deletes multiple registry repository tags based on the specified criteria.
+        /// Deletes multiple registry repository tags based on the specified criteria. The request is accepted and the tags are deleted asynchronously in the background. Tags that match `name_regex_delete` (or the deprecated `name_regex`) are deleted, except tags that match `name_regex_keep`, the `keep_n` most recent matching tags, tags newer than `older_than`, protected tags, and the tag named `latest`. You can run this at most once an hour for a given container repository. The number of tags deleted by one request is limited, so if the repository has many tags to delete, you might need to call this endpoint more than once. This operation does not delete blobs. To reclaim disk space, run garbage collection.
         /// </summary>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -64,7 +64,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Registry.Repositor
             await RequestAdapter.SendNoContentAsync(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Lists all tags for a specified registry repository. Responses are paginated and return 20 results by default.
+        /// Lists all tags for a specified registry repository. Responses are paginated and return 20 results by default. Offset pagination is deprecated. Use keyset pagination instead. Keyset pagination requires the container registry metadata database. Otherwise, `405 Method Not Allowed` is returned.
         /// </summary>
         /// <returns>A List&lt;global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesContainerRegistryTag&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -83,7 +83,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Registry.Repositor
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// Deletes multiple registry repository tags based on the specified criteria.
+        /// Deletes multiple registry repository tags based on the specified criteria. The request is accepted and the tags are deleted asynchronously in the background. Tags that match `name_regex_delete` (or the deprecated `name_regex`) are deleted, except tags that match `name_regex_keep`, the `keep_n` most recent matching tags, tags newer than `older_than`, protected tags, and the tag named `latest`. You can run this at most once an hour for a given container repository. The number of tags deleted by one request is limited, so if the repository has many tags to delete, you might need to call this endpoint more than once. This operation does not delete blobs. To reclaim disk space, run garbage collection.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -101,7 +101,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Registry.Repositor
             return requestInfo;
         }
         /// <summary>
-        /// Lists all tags for a specified registry repository. Responses are paginated and return 20 results by default.
+        /// Lists all tags for a specified registry repository. Responses are paginated and return 20 results by default. Offset pagination is deprecated. Use keyset pagination instead. Keyset pagination requires the container registry metadata database. Otherwise, `405 Method Not Allowed` is returned.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -129,7 +129,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Registry.Repositor
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Registry.Repositories.Item.Tags.TagsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Deletes multiple registry repository tags based on the specified criteria.
+        /// Deletes multiple registry repository tags based on the specified criteria. The request is accepted and the tags are deleted asynchronously in the background. Tags that match `name_regex_delete` (or the deprecated `name_regex`) are deleted, except tags that match `name_regex_keep`, the `keep_n` most recent matching tags, tags newer than `older_than`, protected tags, and the tag named `latest`. You can run this at most once an hour for a given container repository. The number of tags deleted by one request is limited, so if the repository has many tags to delete, you might need to call this endpoint more than once. This operation does not delete blobs. To reclaim disk space, run garbage collection.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class TagsRequestBuilderDeleteQueryParameters 
@@ -179,12 +179,12 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Registry.Repositor
 #endif
         }
         /// <summary>
-        /// Lists all tags for a specified registry repository. Responses are paginated and return 20 results by default.
+        /// Lists all tags for a specified registry repository. Responses are paginated and return 20 results by default. Offset pagination is deprecated. Use keyset pagination instead. Keyset pagination requires the container registry metadata database. Otherwise, `405 Method Not Allowed` is returned.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class TagsRequestBuilderGetQueryParameters 
         {
-            /// <summary>Field to order tags by. `published_at` requires keyset pagination.</summary>
+            /// <summary>Field to order tags by. `published_at` requires keyset pagination. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/work_items/573326) in GitLab 19.5.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("order_by")]
@@ -200,7 +200,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Registry.Repositor
             /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
-            /// <summary>Direction to sort tags in. Only applies to keyset pagination.</summary>
+            /// <summary>Direction to sort tags in, `asc` or `desc`. Default is `asc`. Only applies to keyset pagination.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("sort")]

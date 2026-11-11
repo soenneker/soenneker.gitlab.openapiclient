@@ -747,7 +747,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item
         {
         }
         /// <summary>
-        /// Deletes a specified project.
+        /// Marks a specified project for deletion. Projects are deleted at the end of the retention period, which is 30 days on GitLab.com and set in the instance settings on GitLab Self-Managed. You must be an administrator or be assigned the Owner role on the project.
         /// </summary>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -782,7 +782,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectsWithAccessAndCatalogSetting>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectsWithAccessAndCatalogSetting.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Updates an existing project. If your HTTP repository is not publicly accessible, add authentication information to the URL `https://username:password@gitlab.company.com/group/project.git`, where `password` is a public access key with the `api` scope. At least one project attribute must be updated.
+        /// Updates an existing project. If your HTTP repository is not publicly accessible, add authentication information to the URL `https://username:password@gitlab.company.com/group/project.git`, where `password` is a public access key with the `api` scope. You must have the Maintainer or Owner role for the project. At least one project attribute must be updated.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectsWithCatalogSetting"/></returns>
         /// <param name="body">The request body</param>
@@ -802,7 +802,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectsWithCatalogSetting>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectsWithCatalogSetting.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Deletes a specified project.
+        /// Marks a specified project for deletion. Projects are deleted at the end of the retention period, which is 30 days on GitLab.com and set in the instance settings on GitLab Self-Managed. You must be an administrator or be assigned the Owner role on the project.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -839,7 +839,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item
             return requestInfo;
         }
         /// <summary>
-        /// Updates an existing project. If your HTTP repository is not publicly accessible, add authentication information to the URL `https://username:password@gitlab.company.com/group/project.git`, where `password` is a public access key with the `api` scope. At least one project attribute must be updated.
+        /// Updates an existing project. If your HTTP repository is not publicly accessible, add authentication information to the URL `https://username:password@gitlab.company.com/group/project.git`, where `password` is a public access key with the `api` scope. You must have the Maintainer or Owner role for the project. At least one project attribute must be updated.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

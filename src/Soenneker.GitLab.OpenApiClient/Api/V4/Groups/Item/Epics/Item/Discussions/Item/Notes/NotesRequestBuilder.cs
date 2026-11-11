@@ -66,7 +66,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Epics.Item.Discussio
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// Adds a comment to a specified epic discussion.
+        /// Adds a comment to a specified epic discussion. If the discussion is a single comment, the comment becomes a thread.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNote"/></returns>
         /// <param name="body">The request body</param>
@@ -105,7 +105,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Epics.Item.Discussio
             return requestInfo;
         }
         /// <summary>
-        /// Adds a comment to a specified epic discussion.
+        /// Adds a comment to a specified epic discussion. If the discussion is a single comment, the comment becomes a thread.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

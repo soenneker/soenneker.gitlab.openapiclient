@@ -46,7 +46,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Import.Github
         {
         }
         /// <summary>
-        /// Imports a repository from GitHub to GitLab.
+        /// Imports a repository from GitHub to GitLab. This endpoint shares a rate limit with starting imports from the UI and with file-based project imports. By default, the limit is six requests per minute for each user. An administrator can change this limit in the application settings. The namespace set in `target_namespace` must exist, and must be your user namespace or a group you have the Maintainer or Owner role for. The `optional_stages` hash accepts the keys `attachments_import`, to import Markdown attachments, and `collaborators_import`, to import direct repository collaborators who are not outside collaborators. A private GitHub repository is imported as a private project. A public GitHub repository takes the visibility of the target namespace. If that visibility level is restricted, the project uses the default project visibility instead.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ProjectEntity"/></returns>
         /// <param name="body">The request body</param>
@@ -66,7 +66,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Import.Github
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ProjectEntity>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ProjectEntity.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Imports a repository from GitHub to GitLab.
+        /// Imports a repository from GitHub to GitLab. This endpoint shares a rate limit with starting imports from the UI and with file-based project imports. By default, the limit is six requests per minute for each user. An administrator can change this limit in the application settings. The namespace set in `target_namespace` must exist, and must be your user namespace or a group you have the Maintainer or Owner role for. The `optional_stages` hash accepts the keys `attachments_import`, to import Markdown attachments, and `collaborators_import`, to import direct repository collaborators who are not outside collaborators. A private GitHub repository is imported as a private project. A public GitHub repository takes the visibility of the target namespace. If that visibility level is restricted, the project uses the default project visibility instead.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

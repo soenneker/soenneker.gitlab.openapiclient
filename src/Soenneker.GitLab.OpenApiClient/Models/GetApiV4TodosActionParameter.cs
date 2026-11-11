@@ -48,6 +48,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         #pragma warning disable CS1591
         ReviewSubmitted,
         #pragma warning restore CS1591
+        [EnumMember(Value = "review_approved")]
+        #pragma warning disable CS1591
+        ReviewApproved,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "review_changes_requested")]
+        #pragma warning disable CS1591
+        ReviewChangesRequested,
+        #pragma warning restore CS1591
         [EnumMember(Value = "ssh_key_expired")]
         #pragma warning disable CS1591
         SshKeyExpired,

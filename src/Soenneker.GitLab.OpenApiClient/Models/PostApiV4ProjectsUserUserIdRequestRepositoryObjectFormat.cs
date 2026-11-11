@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
-    /// <summary>The object format of the project repository</summary>
+    /// <summary>The object format of the project repository. Default is `sha1`.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum PostApiV4ProjectsUserUserIdRequestRepositoryObjectFormat
     {

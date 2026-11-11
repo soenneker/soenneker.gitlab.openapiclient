@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Ite
         {
         }
         /// <summary>
-        /// Lists all merge request diffs.
+        /// Lists all merge request diffs. This endpoint is subject to merge request diff limits. Merge requests that exceed the diff limits return limited results.
         /// </summary>
         /// <returns>A List&lt;global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDiff&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -53,7 +53,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Ite
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// Lists all merge request diffs.
+        /// Lists all merge request diffs. This endpoint is subject to merge request diff limits. Merge requests that exceed the diff limits return limited results.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -81,7 +81,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Ite
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Item.Diffs.DiffsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Lists all merge request diffs.
+        /// Lists all merge request diffs. This endpoint is subject to merge request diff limits. Merge requests that exceed the diff limits return limited results.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class DiffsRequestBuilderGetQueryParameters 

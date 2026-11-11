@@ -105,7 +105,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Path { get => _explicitNullValuePath; set { _explicitNullValuePath = value; AdditionalData?.Remove("path"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("path"); else _explicitNullProperties?.Remove("path"); } }
         private string _explicitNullValuePath = default!;
 #endif
-        /// <summary>[Visibility level](https://docs.gitlab.com/api/projects/#project-visibility-level) assigned to the new project after forking.</summary>
+        /// <summary>[Visibility level](https://docs.gitlab.com/api/projects/#project-visibility-level) assigned to the new project after forking. The resulting visibility is never less restrictive than the upstream project or the target namespace. A less restrictive value is replaced with a more restrictive one.</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdForkRequestVisibility? Visibility { get => _explicitNullValueVisibility; set { _explicitNullValueVisibility = value; AdditionalData?.Remove("visibility"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visibility"); else _explicitNullProperties?.Remove("visibility"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdForkRequestVisibility? _explicitNullValueVisibility = default!;
         /// <summary>

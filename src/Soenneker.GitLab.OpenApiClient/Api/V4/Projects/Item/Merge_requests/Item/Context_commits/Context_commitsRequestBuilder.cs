@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Ite
         {
         }
         /// <summary>
-        /// Deletes specified context commits from a merge request.
+        /// Deletes specified context commits from a merge request. This endpoint has a rate limit of 10 requests per minute for each user. Requests to create context commits count toward the same limit. Exceeding the limit returns `429 Too Many Requests`. The rate limit is behind a feature flag named `rate_limit_context_commits_write`, disabled by default.
         /// </summary>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -70,7 +70,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Ite
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// Creates context commits for a specified merge request.
+        /// Creates context commits for a specified merge request. This endpoint has a rate limit of 10 requests per minute for each user. Requests to delete context commits count toward the same limit. Exceeding the limit returns `429 Too Many Requests`. The rate limit is behind a feature flag named `rate_limit_context_commits_write`, disabled by default.
         /// </summary>
         /// <returns>A List&lt;global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommit&gt;</returns>
         /// <param name="body">The request body</param>
@@ -91,7 +91,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Ite
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// Deletes specified context commits from a merge request.
+        /// Deletes specified context commits from a merge request. This endpoint has a rate limit of 10 requests per minute for each user. Requests to create context commits count toward the same limit. Exceeding the limit returns `429 Too Many Requests`. The rate limit is behind a feature flag named `rate_limit_context_commits_write`, disabled by default.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -128,7 +128,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Ite
             return requestInfo;
         }
         /// <summary>
-        /// Creates context commits for a specified merge request.
+        /// Creates context commits for a specified merge request. This endpoint has a rate limit of 10 requests per minute for each user. Requests to delete context commits count toward the same limit. Exceeding the limit returns `429 Too Many Requests`. The rate limit is behind a feature flag named `rate_limit_context_commits_write`, disabled by default.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -159,7 +159,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Ite
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Item.Context_commits.Context_commitsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Deletes specified context commits from a merge request.
+        /// Deletes specified context commits from a merge request. This endpoint has a rate limit of 10 requests per minute for each user. Requests to create context commits count toward the same limit. Exceeding the limit returns `429 Too Many Requests`. The rate limit is behind a feature flag named `rate_limit_context_commits_write`, disabled by default.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Context_commitsRequestBuilderDeleteQueryParameters 

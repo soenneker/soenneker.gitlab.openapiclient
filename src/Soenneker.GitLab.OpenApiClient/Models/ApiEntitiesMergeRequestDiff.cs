@@ -39,7 +39,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The base_commit_sha property</summary>
+        /// <summary>SHA of the merge-base commit of the source and target branches.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? BaseCommitSha { get => _explicitNullValueBaseCommitSha; set { _explicitNullValueBaseCommitSha = value; AdditionalData?.Remove("base_commit_sha"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("base_commit_sha"); else _explicitNullProperties?.Remove("base_commit_sha"); } }
@@ -49,10 +49,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string BaseCommitSha { get => _explicitNullValueBaseCommitSha; set { _explicitNullValueBaseCommitSha = value; AdditionalData?.Remove("base_commit_sha"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("base_commit_sha"); else _explicitNullProperties?.Remove("base_commit_sha"); } }
         private string _explicitNullValueBaseCommitSha = default!;
 #endif
-        /// <summary>The created_at property</summary>
+        /// <summary>Timestamp of when the diff version was created.</summary>
         public DateTimeOffset? CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; AdditionalData?.Remove("created_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_at"); else _explicitNullProperties?.Remove("created_at"); } }
         private DateTimeOffset? _explicitNullValueCreatedAt = default!;
-        /// <summary>The head_commit_sha property</summary>
+        /// <summary>SHA of the head commit of the source branch.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? HeadCommitSha { get => _explicitNullValueHeadCommitSha; set { _explicitNullValueHeadCommitSha = value; AdditionalData?.Remove("head_commit_sha"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("head_commit_sha"); else _explicitNullProperties?.Remove("head_commit_sha"); } }
@@ -62,13 +62,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string HeadCommitSha { get => _explicitNullValueHeadCommitSha; set { _explicitNullValueHeadCommitSha = value; AdditionalData?.Remove("head_commit_sha"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("head_commit_sha"); else _explicitNullProperties?.Remove("head_commit_sha"); } }
         private string _explicitNullValueHeadCommitSha = default!;
 #endif
-        /// <summary>The id property</summary>
+        /// <summary>ID of the merge request diff version.</summary>
         public long? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private long? _explicitNullValueId = default!;
-        /// <summary>The merge_request_id property</summary>
+        /// <summary>ID of the merge request.</summary>
         public long? MergeRequestId { get => _explicitNullValueMergeRequestId; set { _explicitNullValueMergeRequestId = value; AdditionalData?.Remove("merge_request_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_request_id"); else _explicitNullProperties?.Remove("merge_request_id"); } }
         private long? _explicitNullValueMergeRequestId = default!;
-        /// <summary>The patch_id_sha property</summary>
+        /// <summary>Patch ID of the diff version, from `git patch-id`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PatchIdSha { get => _explicitNullValuePatchIdSha; set { _explicitNullValuePatchIdSha = value; AdditionalData?.Remove("patch_id_sha"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("patch_id_sha"); else _explicitNullProperties?.Remove("patch_id_sha"); } }
@@ -78,7 +78,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string PatchIdSha { get => _explicitNullValuePatchIdSha; set { _explicitNullValuePatchIdSha = value; AdditionalData?.Remove("patch_id_sha"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("patch_id_sha"); else _explicitNullProperties?.Remove("patch_id_sha"); } }
         private string _explicitNullValuePatchIdSha = default!;
 #endif
-        /// <summary>The real_size property</summary>
+        /// <summary>Number of changes in the diff version.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? RealSize { get => _explicitNullValueRealSize; set { _explicitNullValueRealSize = value; AdditionalData?.Remove("real_size"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("real_size"); else _explicitNullProperties?.Remove("real_size"); } }
@@ -88,7 +88,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string RealSize { get => _explicitNullValueRealSize; set { _explicitNullValueRealSize = value; AdditionalData?.Remove("real_size"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("real_size"); else _explicitNullProperties?.Remove("real_size"); } }
         private string _explicitNullValueRealSize = default!;
 #endif
-        /// <summary>The start_commit_sha property</summary>
+        /// <summary>SHA of the head commit of the target branch when this diff version was created.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? StartCommitSha { get => _explicitNullValueStartCommitSha; set { _explicitNullValueStartCommitSha = value; AdditionalData?.Remove("start_commit_sha"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_commit_sha"); else _explicitNullProperties?.Remove("start_commit_sha"); } }
@@ -98,7 +98,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string StartCommitSha { get => _explicitNullValueStartCommitSha; set { _explicitNullValueStartCommitSha = value; AdditionalData?.Remove("start_commit_sha"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_commit_sha"); else _explicitNullProperties?.Remove("start_commit_sha"); } }
         private string _explicitNullValueStartCommitSha = default!;
 #endif
-        /// <summary>The state property</summary>
+        /// <summary>State of the merge request diff. Can be `empty`, `collected`, `overflow` or `without_files`. Deprecated values: `timeout`, `overflow_commits_safe_size`, `overflow_diff_files_limit` and `overflow_diff_lines_limit`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? State { get => _explicitNullValueState; set { _explicitNullValueState = value; AdditionalData?.Remove("state"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("state"); else _explicitNullProperties?.Remove("state"); } }

@@ -63,7 +63,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string AvatarUrl { get => _explicitNullValueAvatarUrl; set { _explicitNullValueAvatarUrl = value; AdditionalData?.Remove("avatar_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("avatar_url"); else _explicitNullProperties?.Remove("avatar_url"); } }
         private string _explicitNullValueAvatarUrl = default!;
 #endif
-        /// <summary>The bot property</summary>
+        /// <summary>If `true`, the author is a bot.</summary>
         public bool? Bot { get => _explicitNullValueBot; set { _explicitNullValueBot = value; AdditionalData?.Remove("bot"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bot"); else _explicitNullProperties?.Remove("bot"); } }
         private bool? _explicitNullValueBot = default!;
         /// <summary>The custom_attributes property</summary>

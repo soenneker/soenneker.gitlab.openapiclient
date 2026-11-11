@@ -35,13 +35,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The appliable property</summary>
+        /// <summary>If `true`, the suggestion can be applied.</summary>
         public bool? Appliable { get => _explicitNullValueAppliable; set { _explicitNullValueAppliable = value; AdditionalData?.Remove("appliable"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("appliable"); else _explicitNullProperties?.Remove("appliable"); } }
         private bool? _explicitNullValueAppliable = default!;
-        /// <summary>The applied property</summary>
+        /// <summary>If `true`, the suggestion has been applied.</summary>
         public bool? Applied { get => _explicitNullValueApplied; set { _explicitNullValueApplied = value; AdditionalData?.Remove("applied"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("applied"); else _explicitNullProperties?.Remove("applied"); } }
         private bool? _explicitNullValueApplied = default!;
-        /// <summary>The from_content property</summary>
+        /// <summary>Original content before the suggestion.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? FromContent { get => _explicitNullValueFromContent; set { _explicitNullValueFromContent = value; AdditionalData?.Remove("from_content"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("from_content"); else _explicitNullProperties?.Remove("from_content"); } }
@@ -51,13 +51,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string FromContent { get => _explicitNullValueFromContent; set { _explicitNullValueFromContent = value; AdditionalData?.Remove("from_content"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("from_content"); else _explicitNullProperties?.Remove("from_content"); } }
         private string _explicitNullValueFromContent = default!;
 #endif
-        /// <summary>The from_line property</summary>
+        /// <summary>First line number of the suggestion.</summary>
         public int? FromLine { get => _explicitNullValueFromLine; set { _explicitNullValueFromLine = value; AdditionalData?.Remove("from_line"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("from_line"); else _explicitNullProperties?.Remove("from_line"); } }
         private int? _explicitNullValueFromLine = default!;
-        /// <summary>The id property</summary>
+        /// <summary>ID of the suggestion.</summary>
         public long? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private long? _explicitNullValueId = default!;
-        /// <summary>The to_content property</summary>
+        /// <summary>Suggested content that replaces the original.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ToContent { get => _explicitNullValueToContent; set { _explicitNullValueToContent = value; AdditionalData?.Remove("to_content"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("to_content"); else _explicitNullProperties?.Remove("to_content"); } }
@@ -67,7 +67,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string ToContent { get => _explicitNullValueToContent; set { _explicitNullValueToContent = value; AdditionalData?.Remove("to_content"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("to_content"); else _explicitNullProperties?.Remove("to_content"); } }
         private string _explicitNullValueToContent = default!;
 #endif
-        /// <summary>The to_line property</summary>
+        /// <summary>Last line number of the suggestion.</summary>
         public int? ToLine { get => _explicitNullValueToLine; set { _explicitNullValueToLine = value; AdditionalData?.Remove("to_line"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("to_line"); else _explicitNullProperties?.Remove("to_line"); } }
         private int? _explicitNullValueToLine = default!;
         /// <summary>

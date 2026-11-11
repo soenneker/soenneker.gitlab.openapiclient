@@ -34,11 +34,12 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Ite
         {
         }
         /// <summary>
-        /// Retrieves changes for a specified merge request.
+        /// Retrieves changes for a specified merge request. The diffs have the same size limits as other diffs returned by the API or shown in the UI. When the limits affect the results, the `overflow` field is `true`. Deprecated in GitLab 15.7 and scheduled for removal in API v5. Use GET /projects/:id/merge_requests/:merge_request_iid/diffs instead.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequestChanges"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        [Obsolete("")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequestChanges?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Item.Changes.ChangesRequestBuilder.ChangesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -52,10 +53,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Ite
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequestChanges>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequestChanges.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Retrieves changes for a specified merge request.
+        /// Retrieves changes for a specified merge request. The diffs have the same size limits as other diffs returned by the API or shown in the UI. When the limits affect the results, the `overflow` field is `true`. Deprecated in GitLab 15.7 and scheduled for removal in API v5. Use GET /projects/:id/merge_requests/:merge_request_iid/diffs instead.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
+        [Obsolete("")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Item.Changes.ChangesRequestBuilder.ChangesRequestBuilderGetQueryParameters>>? requestConfiguration = default)
@@ -75,12 +77,13 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Ite
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Item.Changes.ChangesRequestBuilder"/></returns>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
+        [Obsolete("")]
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Item.Changes.ChangesRequestBuilder WithUrl(string rawUrl)
         {
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Item.Changes.ChangesRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Retrieves changes for a specified merge request.
+        /// Retrieves changes for a specified merge request. The diffs have the same size limits as other diffs returned by the API or shown in the UI. When the limits affect the results, the `overflow` field is `true`. Deprecated in GitLab 15.7 and scheduled for removal in API v5. Use GET /projects/:id/merge_requests/:merge_request_iid/diffs instead.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ChangesRequestBuilderGetQueryParameters 

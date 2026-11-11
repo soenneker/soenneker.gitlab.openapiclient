@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Ite
         {
         }
         /// <summary>
-        /// Rebases a merge request. Automatically rebases the `source_branch` of the merge request against its `target_branch`.
+        /// Rebases a merge request. Automatically rebases the `source_branch` of the merge request against its `target_branch`. The rebase runs asynchronously. To check its status, poll the retrieve merge request endpoint with `include_rebase_in_progress` set to `true`. While the rebase runs, `rebase_in_progress` is `true`. When it ends, `rebase_in_progress` is `false`, and `merge_error` holds the error if the rebase failed.
         /// </summary>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -53,7 +53,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Ite
             await RequestAdapter.SendNoContentAsync(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Rebases a merge request. Automatically rebases the `source_branch` of the merge request against its `target_branch`.
+        /// Rebases a merge request. Automatically rebases the `source_branch` of the merge request against its `target_branch`. The rebase runs asynchronously. To check its status, poll the retrieve merge request endpoint with `include_rebase_in_progress` set to `true`. While the rebase runs, `rebase_in_progress` is `true`. When it ends, `rebase_in_progress` is `false`, and `merge_error` holds the error if the rebase failed.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

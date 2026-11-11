@@ -33,7 +33,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Packages.Terraform.Modules.V1.It
         {
         }
         /// <summary>
-        /// Retrieves download URL for latest module version.
+        /// Retrieves download URL for latest module version. Redirects to `packages/terraform/modules/v1/:module_namespace/:module_name/:module_system/:module_version/download` for the latest version, which returns the URL in the `X-Terraform-Get` header with an empty `204 No Content` response.
         /// </summary>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -50,7 +50,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Packages.Terraform.Modules.V1.It
             await RequestAdapter.SendNoContentAsync(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Retrieves download URL for latest module version.
+        /// Retrieves download URL for latest module version. Redirects to `packages/terraform/modules/v1/:module_namespace/:module_name/:module_system/:module_version/download` for the latest version, which returns the URL in the `X-Terraform-Get` header with an empty `204 No Content` response.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

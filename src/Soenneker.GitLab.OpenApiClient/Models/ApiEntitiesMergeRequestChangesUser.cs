@@ -7,10 +7,11 @@ using System.IO;
 using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
+    /// <summary>
+    /// Permissions of the current user for the merge request.
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public partial class ApiEntitiesMergeRequestChangesUser : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
     , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
         // Track explicitly assigned nulls separately from absent properties.
         private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
@@ -23,7 +24,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The can_merge property</summary>
+        /// <summary>If `true`, the current user can merge the merge request.</summary>
         public bool? CanMerge { get => _explicitNullValueCanMerge; set { _explicitNullValueCanMerge = value; AdditionalData?.Remove("can_merge"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("can_merge"); else _explicitNullProperties?.Remove("can_merge"); } }
         private bool? _explicitNullValueCanMerge = default!;
         /// <summary>

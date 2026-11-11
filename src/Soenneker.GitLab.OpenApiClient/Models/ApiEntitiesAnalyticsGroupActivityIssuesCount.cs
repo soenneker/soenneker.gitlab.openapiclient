@@ -19,13 +19,18 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             if (parseNode.GetChildNode("issues_count") is null) { _explicitNullValueIssuesCount = default!; _explicitNullProperties?.Remove("issues_count"); }
             else if (parseNode.GetChildNode("issues_count") is { } nullNodeIssuesCount && nullNodeIssuesCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssuesCount = null;
+            if (parseNode.GetChildNode("too_large") is null) { _explicitNullValueTooLarge = default!; _explicitNullProperties?.Remove("too_large"); }
+            else if (parseNode.GetChildNode("too_large") is { } nullNodeTooLarge && nullNodeTooLarge.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TooLarge = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Number of issues. Limited to 1000</summary>
+        /// <summary>Number of issues. Limited to 1000. `null` when `too_large` is `true`.</summary>
         public int? IssuesCount { get => _explicitNullValueIssuesCount; set { _explicitNullValueIssuesCount = value; AdditionalData?.Remove("issues_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issues_count"); else _explicitNullProperties?.Remove("issues_count"); } }
         private int? _explicitNullValueIssuesCount = default!;
+        /// <summary>Present and `true` when the count could not be calculated within the time limit. The count is then unknown and `null`.</summary>
+        public bool? TooLarge { get => _explicitNullValueTooLarge; set { _explicitNullValueTooLarge = value; AdditionalData?.Remove("too_large"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("too_large"); else _explicitNullProperties?.Remove("too_large"); } }
+        private bool? _explicitNullValueTooLarge = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAnalyticsGroupActivityIssuesCount"/> and sets the default values.
         /// </summary>
@@ -52,6 +57,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "issues_count", n => { IssuesCount = n.GetIntValue(); } },
+                { "too_large", n => { TooLarge = n.GetBoolValue(); } },
             };
         }
         /// <summary>
@@ -62,6 +68,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("issues_count", IssuesCount);
+            writer.WriteBoolValue("too_large", TooLarge);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

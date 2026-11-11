@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Nuget.Ind
         {
         }
         /// <summary>
-        /// This feature was introduced in GitLab 12.6
+        /// Retrieves a list of available API resources. This endpoint can be accessed without authentication. The URLs in the response use the same route prefix as the request. With the group-level prefix, the URLs contain `/groups/:id/-`. This feature was introduced in GitLab 12.6
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNugetServiceIndex"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Nuget.Ind
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNugetServiceIndex>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNugetServiceIndex.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// This feature was introduced in GitLab 12.6
+        /// Retrieves a list of available API resources. This endpoint can be accessed without authentication. The URLs in the response use the same route prefix as the request. With the group-level prefix, the URLs contain `/groups/:id/-`. This feature was introduced in GitLab 12.6
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

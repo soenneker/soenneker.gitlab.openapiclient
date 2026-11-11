@@ -77,22 +77,22 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects
         {
         }
         /// <summary>
-        /// Lists all projects. Unauthenticated requests return only public projects with a limited subset of attributes. You can filter responses by custom attributes. To use the `updated_after` or `updated_before` filters, you must also set `order_by` to `updated_at`.
+        /// Lists all projects accessible to the authenticated user. Unauthenticated requests return only public projects with a limited subset of attributes. Offset-based pagination returns up to 50,000 projects. Use keyset-based pagination to list more. You can filter responses by custom attributes. To use the `updated_after` or `updated_before` filters, you must also set `order_by` to `updated_at`.
         /// </summary>
-        /// <returns>A List&lt;global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBasicProjectDetails&gt;</returns>
+        /// <returns>A List&lt;global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectWithAccess&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBasicProjectDetails>?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.ProjectsRequestBuilder.ProjectsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectWithAccess>?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.ProjectsRequestBuilder.ProjectsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBasicProjectDetails>> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.ProjectsRequestBuilder.ProjectsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectWithAccess>> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.ProjectsRequestBuilder.ProjectsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBasicProjectDetails>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBasicProjectDetails.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
+            var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectWithAccess>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectWithAccess.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
             return collectionResult?.AsList();
         }
         /// <summary>
@@ -116,7 +116,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProject>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProject.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Lists all projects. Unauthenticated requests return only public projects with a limited subset of attributes. You can filter responses by custom attributes. To use the `updated_after` or `updated_before` filters, you must also set `order_by` to `updated_at`.
+        /// Lists all projects accessible to the authenticated user. Unauthenticated requests return only public projects with a limited subset of attributes. Offset-based pagination returns up to 50,000 projects. Use keyset-based pagination to list more. You can filter responses by custom attributes. To use the `updated_after` or `updated_before` filters, you must also set `order_by` to `updated_at`.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -166,7 +166,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.ProjectsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Lists all projects. Unauthenticated requests return only public projects with a limited subset of attributes. You can filter responses by custom attributes. To use the `updated_after` or `updated_before` filters, you must also set `order_by` to `updated_at`.
+        /// Lists all projects accessible to the authenticated user. Unauthenticated requests return only public projects with a limited subset of attributes. Offset-based pagination returns up to 50,000 projects. Use keyset-based pagination to list more. You can filter responses by custom attributes. To use the `updated_after` or `updated_before` filters, you must also set `order_by` to `updated_at`.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ProjectsRequestBuilderGetQueryParameters 
@@ -252,10 +252,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects
             [QueryParameter("search")]
             public string Search { get; set; }
 #endif
-            /// <summary>If `true`, includes ancestor namespaces when matching search criteria.</summary>
+            /// <summary>If `true`, includes ancestor namespaces when matching search criteria. Default is `false`.</summary>
             [QueryParameter("search_namespaces")]
             public bool? SearchNamespaces { get; set; }
-            /// <summary>If `true`, returns only limited fields for each project. Without authentication, only limited fields are returned regardless of this setting.</summary>
+            /// <summary>If `true`, returns only limited fields for each project. Without authentication, only public projects with limited fields are returned, regardless of this setting.</summary>
             [QueryParameter("simple")]
             public bool? Simple { get; set; }
             /// <summary>Sort results in ascending or descending order.</summary>

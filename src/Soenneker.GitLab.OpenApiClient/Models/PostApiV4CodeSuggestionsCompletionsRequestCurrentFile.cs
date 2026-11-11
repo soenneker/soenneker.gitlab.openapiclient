@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
     /// <summary>
-    /// Attributes of the file that suggestions are generated for.
+    /// Attributes of the file that suggestions are generated for. Requires `file_name` (name of the file) and `content_above_cursor` (content of the file above the cursor position). `content_below_cursor` (content of the file below the cursor position) is optional.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PostApiV4CodeSuggestionsCompletionsRequestCurrentFile : IAdditionalDataHolder, IParsable

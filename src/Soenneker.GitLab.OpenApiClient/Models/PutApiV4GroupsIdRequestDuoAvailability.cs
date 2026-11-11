@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
-    /// <summary>Duo availability. One of `default_on`, `default_off`, `never_on` or `always_on`</summary>
+    /// <summary>Duo availability. One of `default_on`, `default_off`, `never_on` or `always_on`. In the UI, `never_on` is displayed as Always Off.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum PutApiV4GroupsIdRequestDuoAvailability
     {

@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Groups.Shared
         {
         }
         /// <summary>
-        /// Lists all groups shared with a specified group.
+        /// Lists all groups shared with a specified group. Unauthenticated requests return only public shared groups.
         /// </summary>
         /// <returns>A List&lt;global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroup&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -53,7 +53,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Groups.Shared
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// Lists all groups shared with a specified group.
+        /// Lists all groups shared with a specified group. Unauthenticated requests return only public shared groups.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -81,7 +81,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Groups.Shared
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Groups.Shared.SharedRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Lists all groups shared with a specified group.
+        /// Lists all groups shared with a specified group. Unauthenticated requests return only public shared groups.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class SharedRequestBuilderGetQueryParameters 

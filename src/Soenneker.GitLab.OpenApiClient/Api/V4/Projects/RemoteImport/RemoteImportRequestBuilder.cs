@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.RemoteImport
         {
         }
         /// <summary>
-        /// Imports a project from a remote archive.
+        /// Imports a project from a remote archive. The `Content-Length` header of the remote file must be a valid number, and the file cannot be larger than the `max_import_remote_file_size` application setting, which defaults to 10 GB. The `Content-Type` header must be `application/gzip`, `application/x-gzip`, or `application/x-tar`.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectImportStatus"/></returns>
         /// <param name="body">The request body</param>
@@ -54,7 +54,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.RemoteImport
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectImportStatus>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectImportStatus.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Imports a project from a remote archive.
+        /// Imports a project from a remote archive. The `Content-Length` header of the remote file must be a valid number, and the file cannot be larger than the `max_import_remote_file_size` application setting, which defaults to 10 GB. The `Content-Type` header must be `application/gzip`, `application/x-gzip`, or `application/x-tar`.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

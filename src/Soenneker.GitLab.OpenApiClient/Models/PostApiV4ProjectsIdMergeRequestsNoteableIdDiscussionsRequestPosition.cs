@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
     /// <summary>
-    /// Position when creating a note
+    /// Position when creating a diff note
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PostApiV4ProjectsIdMergeRequestsNoteableIdDiscussionsRequestPosition : IAdditionalDataHolder, IParsable
@@ -68,7 +68,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string HeadSha { get => _explicitNullValueHeadSha; set { _explicitNullValueHeadSha = value; AdditionalData?.Remove("head_sha"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("head_sha"); else _explicitNullProperties?.Remove("head_sha"); } }
         private string _explicitNullValueHeadSha = default!;
 #endif
-        /// <summary>Height of the image</summary>
+        /// <summary>For `image` diff notes, the height of the image</summary>
         public int? Height { get => _explicitNullValueHeight; set { _explicitNullValueHeight = value; AdditionalData?.Remove("height"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("height"); else _explicitNullProperties?.Remove("height"); } }
         private int? _explicitNullValueHeight = default!;
         /// <summary>Multi-line start and end</summary>
@@ -81,7 +81,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdMergeRequestsNoteableIdDiscussionsRequestPositionLineRange LineRange { get => _explicitNullValueLineRange; set { _explicitNullValueLineRange = value; AdditionalData?.Remove("line_range"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("line_range"); else _explicitNullProperties?.Remove("line_range"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdMergeRequestsNoteableIdDiscussionsRequestPositionLineRange _explicitNullValueLineRange = default!;
 #endif
-        /// <summary>Line number after change</summary>
+        /// <summary>For `text` diff notes, the line number after change</summary>
         public int? NewLine { get => _explicitNullValueNewLine; set { _explicitNullValueNewLine = value; AdditionalData?.Remove("new_line"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_line"); else _explicitNullProperties?.Remove("new_line"); } }
         private int? _explicitNullValueNewLine = default!;
         /// <summary>File path after change</summary>
@@ -94,7 +94,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string NewPath { get => _explicitNullValueNewPath; set { _explicitNullValueNewPath = value; AdditionalData?.Remove("new_path"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_path"); else _explicitNullProperties?.Remove("new_path"); } }
         private string _explicitNullValueNewPath = default!;
 #endif
-        /// <summary>Line number before change</summary>
+        /// <summary>For `text` diff notes, the line number before change</summary>
         public int? OldLine { get => _explicitNullValueOldLine; set { _explicitNullValueOldLine = value; AdditionalData?.Remove("old_line"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("old_line"); else _explicitNullProperties?.Remove("old_line"); } }
         private int? _explicitNullValueOldLine = default!;
         /// <summary>File path before change</summary>
@@ -120,13 +120,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string StartSha { get => _explicitNullValueStartSha; set { _explicitNullValueStartSha = value; AdditionalData?.Remove("start_sha"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_sha"); else _explicitNullProperties?.Remove("start_sha"); } }
         private string _explicitNullValueStartSha = default!;
 #endif
-        /// <summary>Width of the image</summary>
+        /// <summary>For `image` diff notes, the width of the image</summary>
         public int? Width { get => _explicitNullValueWidth; set { _explicitNullValueWidth = value; AdditionalData?.Remove("width"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("width"); else _explicitNullProperties?.Remove("width"); } }
         private int? _explicitNullValueWidth = default!;
-        /// <summary>X coordinate in the image</summary>
+        /// <summary>For `image` diff notes, the X coordinate in the image</summary>
         public int? X { get => _explicitNullValueX; set { _explicitNullValueX = value; AdditionalData?.Remove("x"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("x"); else _explicitNullProperties?.Remove("x"); } }
         private int? _explicitNullValueX = default!;
-        /// <summary>Y coordinate in the image</summary>
+        /// <summary>For `image` diff notes, the Y coordinate in the image</summary>
         public int? Y { get => _explicitNullValueY; set { _explicitNullValueY = value; AdditionalData?.Remove("y"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("y"); else _explicitNullProperties?.Remove("y"); } }
         private int? _explicitNullValueY = default!;
         /// <summary>

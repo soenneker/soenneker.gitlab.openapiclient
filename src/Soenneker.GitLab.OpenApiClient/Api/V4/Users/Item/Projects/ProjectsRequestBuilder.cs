@@ -34,26 +34,26 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Projects
         {
         }
         /// <summary>
-        /// Lists all personal projects for a specified user. Does not return group or subgroup projects. If the user profile is private, returns only an empty list.
+        /// Lists all personal projects for a specified user. Does not return group or subgroup projects. If the user profile is private, returns only an empty list. Unauthenticated requests return only public projects. Offset-based pagination returns up to 50,000 projects. Use keyset-based pagination to list more.
         /// </summary>
-        /// <returns>A List&lt;global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBasicProjectDetails&gt;</returns>
+        /// <returns>A List&lt;global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectWithAccess&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBasicProjectDetails>?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Projects.ProjectsRequestBuilder.ProjectsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectWithAccess>?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Projects.ProjectsRequestBuilder.ProjectsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBasicProjectDetails>> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Projects.ProjectsRequestBuilder.ProjectsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectWithAccess>> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Projects.ProjectsRequestBuilder.ProjectsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBasicProjectDetails>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBasicProjectDetails.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
+            var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectWithAccess>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectWithAccess.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// Lists all personal projects for a specified user. Does not return group or subgroup projects. If the user profile is private, returns only an empty list.
+        /// Lists all personal projects for a specified user. Does not return group or subgroup projects. If the user profile is private, returns only an empty list. Unauthenticated requests return only public projects. Offset-based pagination returns up to 50,000 projects. Use keyset-based pagination to list more.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -81,7 +81,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Projects
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Projects.ProjectsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Lists all personal projects for a specified user. Does not return group or subgroup projects. If the user profile is private, returns only an empty list.
+        /// Lists all personal projects for a specified user. Does not return group or subgroup projects. If the user profile is private, returns only an empty list. Unauthenticated requests return only public projects. Offset-based pagination returns up to 50,000 projects. Use keyset-based pagination to list more.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ProjectsRequestBuilderGetQueryParameters 
@@ -167,10 +167,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Projects
             [QueryParameter("search")]
             public string Search { get; set; }
 #endif
-            /// <summary>If `true`, includes ancestor namespaces when matching search criteria.</summary>
+            /// <summary>If `true`, includes ancestor namespaces when matching search criteria. Default is `false`.</summary>
             [QueryParameter("search_namespaces")]
             public bool? SearchNamespaces { get; set; }
-            /// <summary>If `true`, returns only limited fields for each project. Without authentication, only limited fields are returned regardless of this setting.</summary>
+            /// <summary>If `true`, returns only limited fields for each project. Without authentication, only public projects with limited fields are returned, regardless of this setting.</summary>
             [QueryParameter("simple")]
             public bool? Simple { get; set; }
             /// <summary>Sort results in ascending or descending order.</summary>

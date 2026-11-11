@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Topics.Merge
         {
         }
         /// <summary>
-        /// Merges a source topic into a target topic. This action deletes the source topic and moves all assigned projects to the target topic. Administrators only.
+        /// Merges a source topic into a target topic. This action deletes the source topic and moves all assigned projects to the target topic. Administrators only. The source and target topics must belong to the same organization.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectsTopic"/></returns>
         /// <param name="body">The request body</param>
@@ -54,7 +54,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Topics.Merge
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectsTopic>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectsTopic.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Merges a source topic into a target topic. This action deletes the source topic and moves all assigned projects to the target topic. Administrators only.
+        /// Merges a source topic into a target topic. This action deletes the source topic and moves all assigned projects to the target topic. Administrators only. The source and target topics must belong to the same organization.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

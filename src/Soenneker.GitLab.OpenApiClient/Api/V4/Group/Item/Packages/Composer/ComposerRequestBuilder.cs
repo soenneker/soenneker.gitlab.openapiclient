@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Group.Item.Packages.Composer
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Group.Item.Packages.Composer.Packages.PackagesRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.group.item.packages.composer.item collection</summary>
-        /// <param name="position">The Composer package name</param>
+        /// <param name="position">The Composer package name, followed by `$` and the SHA digest of the package from the V1 packages list. URL-encode `$` as `%24`.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Group.Item.Packages.Composer.Item.WithPackageNameItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Group.Item.Packages.Composer.Item.WithPackageNameItemRequestBuilder this[string position]
         {

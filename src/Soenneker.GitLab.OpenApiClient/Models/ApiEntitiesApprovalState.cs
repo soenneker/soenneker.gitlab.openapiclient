@@ -69,7 +69,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The approval_rules_left property</summary>
+        /// <summary>Approval rules that still require approvals.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApprovalRuleShort>? ApprovalRulesLeft { get => _explicitNullValueApprovalRulesLeft; set { _explicitNullValueApprovalRulesLeft = value; AdditionalData?.Remove("approval_rules_left"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approval_rules_left"); else _explicitNullProperties?.Remove("approval_rules_left"); } }
@@ -79,16 +79,16 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApprovalRuleShort> ApprovalRulesLeft { get => _explicitNullValueApprovalRulesLeft; set { _explicitNullValueApprovalRulesLeft = value; AdditionalData?.Remove("approval_rules_left"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approval_rules_left"); else _explicitNullProperties?.Remove("approval_rules_left"); } }
         private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApprovalRuleShort> _explicitNullValueApprovalRulesLeft = default!;
 #endif
-        /// <summary>The approvals_left property</summary>
+        /// <summary>Number of approvals still required before the merge request is approved.</summary>
         public int? ApprovalsLeft { get => _explicitNullValueApprovalsLeft; set { _explicitNullValueApprovalsLeft = value; AdditionalData?.Remove("approvals_left"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approvals_left"); else _explicitNullProperties?.Remove("approvals_left"); } }
         private int? _explicitNullValueApprovalsLeft = default!;
-        /// <summary>The approvals_required property</summary>
+        /// <summary>Number of approvals that the approval rules require.</summary>
         public int? ApprovalsRequired { get => _explicitNullValueApprovalsRequired; set { _explicitNullValueApprovalsRequired = value; AdditionalData?.Remove("approvals_required"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approvals_required"); else _explicitNullProperties?.Remove("approvals_required"); } }
         private int? _explicitNullValueApprovalsRequired = default!;
-        /// <summary>The approved property</summary>
+        /// <summary>If `true`, the merge request has every approval its approval rules require.</summary>
         public bool? Approved { get => _explicitNullValueApproved; set { _explicitNullValueApproved = value; AdditionalData?.Remove("approved"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approved"); else _explicitNullProperties?.Remove("approved"); } }
         private bool? _explicitNullValueApproved = default!;
-        /// <summary>The approved_by property</summary>
+        /// <summary>Users who approved the merge request, whether or not their approvals satisfy an approval rule.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApprovals>? ApprovedBy { get => _explicitNullValueApprovedBy; set { _explicitNullValueApprovedBy = value; AdditionalData?.Remove("approved_by"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approved_by"); else _explicitNullProperties?.Remove("approved_by"); } }
@@ -98,7 +98,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApprovals> ApprovedBy { get => _explicitNullValueApprovedBy; set { _explicitNullValueApprovedBy = value; AdditionalData?.Remove("approved_by"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approved_by"); else _explicitNullProperties?.Remove("approved_by"); } }
         private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApprovals> _explicitNullValueApprovedBy = default!;
 #endif
-        /// <summary>The approver_groups property</summary>
+        /// <summary>Groups of the first `regular` or `any_approver` approval rule, each in a `group` object. Deprecated. Use the `/approval_state` endpoint instead.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApprovalStateApproverGroupsItemProperty>? ApproverGroups { get => _explicitNullValueApproverGroups; set { _explicitNullValueApproverGroups = value; AdditionalData?.Remove("approver_groups"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approver_groups"); else _explicitNullProperties?.Remove("approver_groups"); } }
@@ -108,7 +108,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApprovalStateApproverGroupsItemProperty> ApproverGroups { get => _explicitNullValueApproverGroups; set { _explicitNullValueApproverGroups = value; AdditionalData?.Remove("approver_groups"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approver_groups"); else _explicitNullProperties?.Remove("approver_groups"); } }
         private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApprovalStateApproverGroupsItemProperty> _explicitNullValueApproverGroups = default!;
 #endif
-        /// <summary>The approvers property</summary>
+        /// <summary>Users of the first `regular` or `any_approver` approval rule, each in a `user` object. Deprecated. Use the `/approval_state` endpoint instead.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApprovalStateApproversItemProperty>? Approvers { get => _explicitNullValueApprovers; set { _explicitNullValueApprovers = value; AdditionalData?.Remove("approvers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approvers"); else _explicitNullProperties?.Remove("approvers"); } }
@@ -131,7 +131,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
         private string _explicitNullValueDescription = default!;
 #endif
-        /// <summary>The has_approval_rules property</summary>
+        /// <summary>If `true`, at least one `regular` or `any_approver` approval rule applies to the merge request.</summary>
         public bool? HasApprovalRules { get => _explicitNullValueHasApprovalRules; set { _explicitNullValueHasApprovalRules = value; AdditionalData?.Remove("has_approval_rules"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("has_approval_rules"); else _explicitNullProperties?.Remove("has_approval_rules"); } }
         private bool? _explicitNullValueHasApprovalRules = default!;
         /// <summary>The id property</summary>
@@ -140,7 +140,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The iid property</summary>
         public int? Iid { get => _explicitNullValueIid; set { _explicitNullValueIid = value; AdditionalData?.Remove("iid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("iid"); else _explicitNullProperties?.Remove("iid"); } }
         private int? _explicitNullValueIid = default!;
-        /// <summary>The invalid_approvers_rules property</summary>
+        /// <summary>Approval rules that have fewer eligible approvers than the approvals they require.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApprovalRuleShort>? InvalidApproversRules { get => _explicitNullValueInvalidApproversRules; set { _explicitNullValueInvalidApproversRules = value; AdditionalData?.Remove("invalid_approvers_rules"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invalid_approvers_rules"); else _explicitNullProperties?.Remove("invalid_approvers_rules"); } }
@@ -150,10 +150,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApprovalRuleShort> InvalidApproversRules { get => _explicitNullValueInvalidApproversRules; set { _explicitNullValueInvalidApproversRules = value; AdditionalData?.Remove("invalid_approvers_rules"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invalid_approvers_rules"); else _explicitNullProperties?.Remove("invalid_approvers_rules"); } }
         private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApprovalRuleShort> _explicitNullValueInvalidApproversRules = default!;
 #endif
-        /// <summary>The merge_request_approvers_available property</summary>
+        /// <summary>If `true`, approval rules are available in the project.</summary>
         public bool? MergeRequestApproversAvailable { get => _explicitNullValueMergeRequestApproversAvailable; set { _explicitNullValueMergeRequestApproversAvailable = value; AdditionalData?.Remove("merge_request_approvers_available"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_request_approvers_available"); else _explicitNullProperties?.Remove("merge_request_approvers_available"); } }
         private bool? _explicitNullValueMergeRequestApproversAvailable = default!;
-        /// <summary>The merge_status property</summary>
+        /// <summary>Status of the merge request, such as `can_be_merged`. For every possible status, use `detailed_merge_status` from the merge requests endpoints instead.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? MergeStatus { get => _explicitNullValueMergeStatus; set { _explicitNullValueMergeStatus = value; AdditionalData?.Remove("merge_status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_status"); else _explicitNullProperties?.Remove("merge_status"); } }
@@ -163,13 +163,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string MergeStatus { get => _explicitNullValueMergeStatus; set { _explicitNullValueMergeStatus = value; AdditionalData?.Remove("merge_status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_status"); else _explicitNullProperties?.Remove("merge_status"); } }
         private string _explicitNullValueMergeStatus = default!;
 #endif
-        /// <summary>The multiple_approval_rules_available property</summary>
+        /// <summary>If `true`, the project can have more than one approval rule.</summary>
         public bool? MultipleApprovalRulesAvailable { get => _explicitNullValueMultipleApprovalRulesAvailable; set { _explicitNullValueMultipleApprovalRulesAvailable = value; AdditionalData?.Remove("multiple_approval_rules_available"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("multiple_approval_rules_available"); else _explicitNullProperties?.Remove("multiple_approval_rules_available"); } }
         private bool? _explicitNullValueMultipleApprovalRulesAvailable = default!;
         /// <summary>The project_id property</summary>
         public long? ProjectId { get => _explicitNullValueProjectId; set { _explicitNullValueProjectId = value; AdditionalData?.Remove("project_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_id"); else _explicitNullProperties?.Remove("project_id"); } }
         private long? _explicitNullValueProjectId = default!;
-        /// <summary>The require_password_to_approve property</summary>
+        /// <summary>If `true`, approvers must authenticate again to approve. Deprecated. Use `require_reauthentication_to_approve` from the project approval configuration instead.</summary>
         public bool? RequirePasswordToApprove { get => _explicitNullValueRequirePasswordToApprove; set { _explicitNullValueRequirePasswordToApprove = value; AdditionalData?.Remove("require_password_to_approve"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("require_password_to_approve"); else _explicitNullProperties?.Remove("require_password_to_approve"); } }
         private bool? _explicitNullValueRequirePasswordToApprove = default!;
         /// <summary>The state property</summary>
@@ -182,7 +182,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string State { get => _explicitNullValueState; set { _explicitNullValueState = value; AdditionalData?.Remove("state"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("state"); else _explicitNullProperties?.Remove("state"); } }
         private string _explicitNullValueState = default!;
 #endif
-        /// <summary>The suggested_approvers property</summary>
+        /// <summary>Eligible approvers who have not approved the merge request yet.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic>? SuggestedApprovers { get => _explicitNullValueSuggestedApprovers; set { _explicitNullValueSuggestedApprovers = value; AdditionalData?.Remove("suggested_approvers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("suggested_approvers"); else _explicitNullProperties?.Remove("suggested_approvers"); } }
@@ -205,10 +205,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The updated_at property</summary>
         public DateTimeOffset? UpdatedAt { get => _explicitNullValueUpdatedAt; set { _explicitNullValueUpdatedAt = value; AdditionalData?.Remove("updated_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updated_at"); else _explicitNullProperties?.Remove("updated_at"); } }
         private DateTimeOffset? _explicitNullValueUpdatedAt = default!;
-        /// <summary>The user_can_approve property</summary>
+        /// <summary>If `true`, the current user can approve the merge request.</summary>
         public bool? UserCanApprove { get => _explicitNullValueUserCanApprove; set { _explicitNullValueUserCanApprove = value; AdditionalData?.Remove("user_can_approve"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_can_approve"); else _explicitNullProperties?.Remove("user_can_approve"); } }
         private bool? _explicitNullValueUserCanApprove = default!;
-        /// <summary>The user_has_approved property</summary>
+        /// <summary>If `true`, the current user has approved the merge request.</summary>
         public bool? UserHasApproved { get => _explicitNullValueUserHasApproved; set { _explicitNullValueUserHasApproved = value; AdditionalData?.Remove("user_has_approved"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_has_approved"); else _explicitNullProperties?.Remove("user_has_approved"); } }
         private bool? _explicitNullValueUserHasApproved = default!;
         /// <summary>

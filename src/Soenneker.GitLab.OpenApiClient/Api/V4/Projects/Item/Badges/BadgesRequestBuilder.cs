@@ -147,7 +147,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Badges
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class BadgesRequestBuilderGetQueryParameters 
         {
-            /// <summary>Name of the badge.</summary>
+            /// <summary>Name of the badges to return. Case-sensitive.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("name")]

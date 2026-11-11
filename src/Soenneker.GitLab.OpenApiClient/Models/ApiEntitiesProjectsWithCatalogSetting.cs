@@ -103,6 +103,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             else if (parseNode.GetChildNode("description_html") is { } nullNodeDescriptionHtml && nullNodeDescriptionHtml.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DescriptionHtml = null;
             if (parseNode.GetChildNode("duo_code_review_decisions_enabled") is null) { _explicitNullValueDuoCodeReviewDecisionsEnabled = default!; _explicitNullProperties?.Remove("duo_code_review_decisions_enabled"); }
             else if (parseNode.GetChildNode("duo_code_review_decisions_enabled") is { } nullNodeDuoCodeReviewDecisionsEnabled && nullNodeDuoCodeReviewDecisionsEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DuoCodeReviewDecisionsEnabled = null;
+            if (parseNode.GetChildNode("duo_code_review_default_depth") is null) { _explicitNullValueDuoCodeReviewDefaultDepth = default!; _explicitNullProperties?.Remove("duo_code_review_default_depth"); }
+            else if (parseNode.GetChildNode("duo_code_review_default_depth") is { } nullNodeDuoCodeReviewDefaultDepth && nullNodeDuoCodeReviewDefaultDepth.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DuoCodeReviewDefaultDepth = null;
+            if (parseNode.GetChildNode("duo_code_review_depth_allowed") is null) { _explicitNullValueDuoCodeReviewDepthAllowed = default!; _explicitNullProperties?.Remove("duo_code_review_depth_allowed"); }
+            else if (parseNode.GetChildNode("duo_code_review_depth_allowed") is { } nullNodeDuoCodeReviewDepthAllowed && nullNodeDuoCodeReviewDepthAllowed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DuoCodeReviewDepthAllowed = null;
             if (parseNode.GetChildNode("duo_dependency_bump_breaking_changes_enabled") is null) { _explicitNullValueDuoDependencyBumpBreakingChangesEnabled = default!; _explicitNullProperties?.Remove("duo_dependency_bump_breaking_changes_enabled"); }
             else if (parseNode.GetChildNode("duo_dependency_bump_breaking_changes_enabled") is { } nullNodeDuoDependencyBumpBreakingChangesEnabled && nullNodeDuoDependencyBumpBreakingChangesEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DuoDependencyBumpBreakingChangesEnabled = null;
             if (parseNode.GetChildNode("duo_foundational_flows_enabled") is null) { _explicitNullValueDuoFoundationalFlowsEnabled = default!; _explicitNullProperties?.Remove("duo_foundational_flows_enabled"); }
@@ -113,8 +117,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             else if (parseNode.GetChildNode("duo_sast_fp_detection_enabled") is { } nullNodeDuoSastFpDetectionEnabled && nullNodeDuoSastFpDetectionEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DuoSastFpDetectionEnabled = null;
             if (parseNode.GetChildNode("duo_sast_vr_workflow_enabled") is null) { _explicitNullValueDuoSastVrWorkflowEnabled = default!; _explicitNullProperties?.Remove("duo_sast_vr_workflow_enabled"); }
             else if (parseNode.GetChildNode("duo_sast_vr_workflow_enabled") is { } nullNodeDuoSastVrWorkflowEnabled && nullNodeDuoSastVrWorkflowEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DuoSastVrWorkflowEnabled = null;
-            if (parseNode.GetChildNode("duo_scheduled_triggers_enabled") is null) { _explicitNullValueDuoScheduledTriggersEnabled = default!; _explicitNullProperties?.Remove("duo_scheduled_triggers_enabled"); }
-            else if (parseNode.GetChildNode("duo_scheduled_triggers_enabled") is { } nullNodeDuoScheduledTriggersEnabled && nullNodeDuoScheduledTriggersEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DuoScheduledTriggersEnabled = null;
+            if (parseNode.GetChildNode("duo_scheduled_automations_enabled") is null) { _explicitNullValueDuoScheduledAutomationsEnabled = default!; _explicitNullProperties?.Remove("duo_scheduled_automations_enabled"); }
+            else if (parseNode.GetChildNode("duo_scheduled_automations_enabled") is { } nullNodeDuoScheduledAutomationsEnabled && nullNodeDuoScheduledAutomationsEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DuoScheduledAutomationsEnabled = null;
             if (parseNode.GetChildNode("duo_secret_detection_fp_enabled") is null) { _explicitNullValueDuoSecretDetectionFpEnabled = default!; _explicitNullProperties?.Remove("duo_secret_detection_fp_enabled"); }
             else if (parseNode.GetChildNode("duo_secret_detection_fp_enabled") is { } nullNodeDuoSecretDetectionFpEnabled && nullNodeDuoSecretDetectionFpEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DuoSecretDetectionFpEnabled = null;
             if (parseNode.GetChildNode("emails_disabled") is null) { _explicitNullValueEmailsDisabled = default!; _explicitNullProperties?.Remove("emails_disabled"); }
@@ -625,6 +629,19 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string DuoCodeReviewDecisionsEnabled { get => _explicitNullValueDuoCodeReviewDecisionsEnabled; set { _explicitNullValueDuoCodeReviewDecisionsEnabled = value; AdditionalData?.Remove("duo_code_review_decisions_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duo_code_review_decisions_enabled"); else _explicitNullProperties?.Remove("duo_code_review_decisions_enabled"); } }
         private string _explicitNullValueDuoCodeReviewDecisionsEnabled = default!;
 #endif
+        /// <summary>The duo_code_review_default_depth property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? DuoCodeReviewDefaultDepth { get => _explicitNullValueDuoCodeReviewDefaultDepth; set { _explicitNullValueDuoCodeReviewDefaultDepth = value; AdditionalData?.Remove("duo_code_review_default_depth"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duo_code_review_default_depth"); else _explicitNullProperties?.Remove("duo_code_review_default_depth"); } }
+        private string? _explicitNullValueDuoCodeReviewDefaultDepth = default!;
+#nullable restore
+#else
+        public string DuoCodeReviewDefaultDepth { get => _explicitNullValueDuoCodeReviewDefaultDepth; set { _explicitNullValueDuoCodeReviewDefaultDepth = value; AdditionalData?.Remove("duo_code_review_default_depth"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duo_code_review_default_depth"); else _explicitNullProperties?.Remove("duo_code_review_default_depth"); } }
+        private string _explicitNullValueDuoCodeReviewDefaultDepth = default!;
+#endif
+        /// <summary>The duo_code_review_depth_allowed property</summary>
+        public bool? DuoCodeReviewDepthAllowed { get => _explicitNullValueDuoCodeReviewDepthAllowed; set { _explicitNullValueDuoCodeReviewDepthAllowed = value; AdditionalData?.Remove("duo_code_review_depth_allowed"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duo_code_review_depth_allowed"); else _explicitNullProperties?.Remove("duo_code_review_depth_allowed"); } }
+        private bool? _explicitNullValueDuoCodeReviewDepthAllowed = default!;
         /// <summary>The duo_dependency_bump_breaking_changes_enabled property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -675,15 +692,15 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string DuoSastVrWorkflowEnabled { get => _explicitNullValueDuoSastVrWorkflowEnabled; set { _explicitNullValueDuoSastVrWorkflowEnabled = value; AdditionalData?.Remove("duo_sast_vr_workflow_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duo_sast_vr_workflow_enabled"); else _explicitNullProperties?.Remove("duo_sast_vr_workflow_enabled"); } }
         private string _explicitNullValueDuoSastVrWorkflowEnabled = default!;
 #endif
-        /// <summary>The duo_scheduled_triggers_enabled property</summary>
+        /// <summary>The duo_scheduled_automations_enabled property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DuoScheduledTriggersEnabled { get => _explicitNullValueDuoScheduledTriggersEnabled; set { _explicitNullValueDuoScheduledTriggersEnabled = value; AdditionalData?.Remove("duo_scheduled_triggers_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duo_scheduled_triggers_enabled"); else _explicitNullProperties?.Remove("duo_scheduled_triggers_enabled"); } }
-        private string? _explicitNullValueDuoScheduledTriggersEnabled = default!;
+        public string? DuoScheduledAutomationsEnabled { get => _explicitNullValueDuoScheduledAutomationsEnabled; set { _explicitNullValueDuoScheduledAutomationsEnabled = value; AdditionalData?.Remove("duo_scheduled_automations_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duo_scheduled_automations_enabled"); else _explicitNullProperties?.Remove("duo_scheduled_automations_enabled"); } }
+        private string? _explicitNullValueDuoScheduledAutomationsEnabled = default!;
 #nullable restore
 #else
-        public string DuoScheduledTriggersEnabled { get => _explicitNullValueDuoScheduledTriggersEnabled; set { _explicitNullValueDuoScheduledTriggersEnabled = value; AdditionalData?.Remove("duo_scheduled_triggers_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duo_scheduled_triggers_enabled"); else _explicitNullProperties?.Remove("duo_scheduled_triggers_enabled"); } }
-        private string _explicitNullValueDuoScheduledTriggersEnabled = default!;
+        public string DuoScheduledAutomationsEnabled { get => _explicitNullValueDuoScheduledAutomationsEnabled; set { _explicitNullValueDuoScheduledAutomationsEnabled = value; AdditionalData?.Remove("duo_scheduled_automations_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duo_scheduled_automations_enabled"); else _explicitNullProperties?.Remove("duo_scheduled_automations_enabled"); } }
+        private string _explicitNullValueDuoScheduledAutomationsEnabled = default!;
 #endif
         /// <summary>The duo_secret_detection_fp_enabled property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -1616,12 +1633,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "description_html", n => { DescriptionHtml = n.GetStringValue(); } },
                 { "duo_code_review_decisions_enabled", n => { DuoCodeReviewDecisionsEnabled = n.GetStringValue(); } },
+                { "duo_code_review_default_depth", n => { DuoCodeReviewDefaultDepth = n.GetStringValue(); } },
+                { "duo_code_review_depth_allowed", n => { DuoCodeReviewDepthAllowed = n.GetBoolValue(); } },
                 { "duo_dependency_bump_breaking_changes_enabled", n => { DuoDependencyBumpBreakingChangesEnabled = n.GetStringValue(); } },
                 { "duo_foundational_flows_enabled", n => { DuoFoundationalFlowsEnabled = n.GetStringValue(); } },
                 { "duo_remote_flows_enabled", n => { DuoRemoteFlowsEnabled = n.GetStringValue(); } },
                 { "duo_sast_fp_detection_enabled", n => { DuoSastFpDetectionEnabled = n.GetStringValue(); } },
                 { "duo_sast_vr_workflow_enabled", n => { DuoSastVrWorkflowEnabled = n.GetStringValue(); } },
-                { "duo_scheduled_triggers_enabled", n => { DuoScheduledTriggersEnabled = n.GetStringValue(); } },
+                { "duo_scheduled_automations_enabled", n => { DuoScheduledAutomationsEnabled = n.GetStringValue(); } },
                 { "duo_secret_detection_fp_enabled", n => { DuoSecretDetectionFpEnabled = n.GetStringValue(); } },
                 { "emails_disabled", n => { EmailsDisabled = n.GetBoolValue(); } },
                 { "emails_enabled", n => { EmailsEnabled = n.GetBoolValue(); } },
@@ -1789,12 +1808,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("description_html", DescriptionHtml);
             writer.WriteStringValue("duo_code_review_decisions_enabled", DuoCodeReviewDecisionsEnabled);
+            writer.WriteStringValue("duo_code_review_default_depth", DuoCodeReviewDefaultDepth);
+            writer.WriteBoolValue("duo_code_review_depth_allowed", DuoCodeReviewDepthAllowed);
             writer.WriteStringValue("duo_dependency_bump_breaking_changes_enabled", DuoDependencyBumpBreakingChangesEnabled);
             writer.WriteStringValue("duo_foundational_flows_enabled", DuoFoundationalFlowsEnabled);
             writer.WriteStringValue("duo_remote_flows_enabled", DuoRemoteFlowsEnabled);
             writer.WriteStringValue("duo_sast_fp_detection_enabled", DuoSastFpDetectionEnabled);
             writer.WriteStringValue("duo_sast_vr_workflow_enabled", DuoSastVrWorkflowEnabled);
-            writer.WriteStringValue("duo_scheduled_triggers_enabled", DuoScheduledTriggersEnabled);
+            writer.WriteStringValue("duo_scheduled_automations_enabled", DuoScheduledAutomationsEnabled);
             writer.WriteStringValue("duo_secret_detection_fp_enabled", DuoSecretDetectionFpEnabled);
             writer.WriteBoolValue("emails_disabled", EmailsDisabled);
             writer.WriteBoolValue("emails_enabled", EmailsEnabled);

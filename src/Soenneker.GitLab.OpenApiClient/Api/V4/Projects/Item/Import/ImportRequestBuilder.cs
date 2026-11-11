@@ -40,7 +40,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Import
         {
         }
         /// <summary>
-        /// Retrieves the status of the most recent import for a specified project.
+        /// Retrieves the status of the most recent import for a specified project. The `import_status` is one of `none`, `scheduled`, `started`, `finished`, `failed`, or `canceled`. If the status is `failed`, the response includes the import error message in `import_error`. If the status is `failed`, `started`, or `finished`, the `failed_relations` array might list relations that failed to import because of unrecoverable errors or because retries were exhausted, for example after query timeouts. The `id` of each `failed_relations` element references the failure record, not the relation. The `failed_relations` array is capped at 100 items. For imports from GitHub, a `stats` field lists how many objects were already fetched from GitHub and how many were already imported.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectImportStatus"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -58,7 +58,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Import
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectImportStatus>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectImportStatus.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Retrieves the status of the most recent import for a specified project.
+        /// Retrieves the status of the most recent import for a specified project. The `import_status` is one of `none`, `scheduled`, `started`, `finished`, `failed`, or `canceled`. If the status is `failed`, the response includes the import error message in `import_error`. If the status is `failed`, `started`, or `finished`, the `failed_relations` array might list relations that failed to import because of unrecoverable errors or because retries were exhausted, for example after query timeouts. The `id` of each `failed_relations` element references the failure record, not the relation. The `failed_relations` array is capped at 100 items. For imports from GitHub, a `stats` field lists how many objects were already fetched from GitHub and how many were already imported.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

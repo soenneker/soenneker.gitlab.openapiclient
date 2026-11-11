@@ -53,7 +53,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups
         {
         }
         /// <summary>
-        /// Lists all visible groups for the authenticated user. Unauthenticated requests return only public groups.
+        /// Lists all visible groups for the authenticated user. Unauthenticated requests return only public groups. Unauthenticated requests also support keyset pagination. For unauthenticated requests, offset pagination is unavailable beyond the maximum allowed offset. Use keyset pagination to request consecutive pages.
         /// </summary>
         /// <returns>A List&lt;global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroup&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -72,7 +72,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// Creates a project group. Available only for users who can create groups.
+        /// Creates a project group. Available only for users who can create groups. On GitLab.com, top-level groups cannot be created with the API.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroup"/></returns>
         /// <param name="body">The request body</param>
@@ -92,7 +92,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroup>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroup.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Lists all visible groups for the authenticated user. Unauthenticated requests return only public groups.
+        /// Lists all visible groups for the authenticated user. Unauthenticated requests return only public groups. Unauthenticated requests also support keyset pagination. For unauthenticated requests, offset pagination is unavailable beyond the maximum allowed offset. Use keyset pagination to request consecutive pages.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -111,7 +111,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups
             return requestInfo;
         }
         /// <summary>
-        /// Creates a project group. Available only for users who can create groups.
+        /// Creates a project group. Available only for users who can create groups. On GitLab.com, top-level groups cannot be created with the API.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -142,7 +142,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.GroupsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Lists all visible groups for the authenticated user. Unauthenticated requests return only public groups.
+        /// Lists all visible groups for the authenticated user. Unauthenticated requests return only public groups. Unauthenticated requests also support keyset pagination. For unauthenticated requests, offset pagination is unavailable beyond the maximum allowed offset. Use keyset pagination to request consecutive pages.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class GroupsRequestBuilderGetQueryParameters 
@@ -153,7 +153,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups
             /// <summary>If `true`, returns all accessible groups. If `false`, returns only groups where the user is a member. When omitted, administrators receive all groups and other authenticated users receive only their own. Unauthenticated requests always return all public groups. The `owned` and `min_access_level` attributes take precedence.</summary>
             [QueryParameter("all_available")]
             public bool? AllAvailable { get; set; }
-            /// <summary>If `true`, returns only archived groups or projects.</summary>
+            /// <summary>If `true`, returns only archived groups or projects. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/519587) in GitLab 18.2.</summary>
             [QueryParameter("archived")]
             public bool? Archived { get; set; }
             /// <summary>Filter by [custom attributes](https://docs.gitlab.com/api/custom_attributes/) that match all of the specified key and value pairs. Administrators only.</summary>
@@ -194,7 +194,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups
             [QueryParameter("repository_storage")]
             public string RepositoryStorage { get; set; }
 #endif
-            /// <summary>Return the list of authorized groups matching the search criteria.</summary>
+            /// <summary>Return the list of authorized groups matching the search criteria. Matches group names and paths. When listing subgroups or descendant groups, only short paths are searched, not full paths.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("search")]
@@ -217,7 +217,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups
             /// <summary>Sort results in ascending or descending order.</summary>
             [QueryParameter("sort")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4GroupsSortParameter? Sort { get; set; }
-            /// <summary>If `true`, includes group statistics. Administrators only.</summary>
+            /// <summary>If `true`, includes group statistics. Administrators only. For top-level groups, the response also includes `root_storage_statistics`. `root_storage_statistics` [introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/469254) in GitLab 17.4.</summary>
             [QueryParameter("statistics")]
             public bool? Statistics { get; set; }
             /// <summary>If `true`, returns only top-level groups, excluding subgroups.</summary>

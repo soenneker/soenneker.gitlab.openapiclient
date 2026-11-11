@@ -130,10 +130,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Projects
             /// <summary>Return projects where the current user has at least the specified access level. For a list of values, see [roles](https://docs.gitlab.com/user/permissions/#default-roles).</summary>
             [QueryParameter("min_access_level")]
             public int? MinAccessLevel { get; set; }
-            /// <summary>Sort results by the specified field.</summary>
+            /// <summary>Sort results by the specified field. With `similarity`, results are ordered by similarity to `search` and `sort` is ignored. Without `search`, `similarity` orders results by `name`.</summary>
             [QueryParameter("order_by")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4GroupsIdProjectsOrderByParameter? OrderBy { get; set; }
-            /// <summary>If `true`, returns only groups explicitly owned by the current user.</summary>
+            /// <summary>If `true`, returns only projects owned by the current user.</summary>
             [QueryParameter("owned")]
             public bool? Owned { get; set; }
             /// <summary>Page number of results to retrieve.</summary>
@@ -161,7 +161,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Projects
             /// <summary>If `true`, returns only projects starred by the current user.</summary>
             [QueryParameter("starred")]
             public bool? Starred { get; set; }
-            /// <summary>Return groups with the specified visibility.</summary>
+            /// <summary>Return projects with the specified visibility.</summary>
             [QueryParameter("visibility")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4GroupsIdProjectsVisibilityParameter? Visibility { get; set; }
             /// <summary>If `true`, includes [custom attributes](https://docs.gitlab.com/api/custom_attributes/) in the response. Administrators only.</summary>

@@ -47,7 +47,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Commits
         {
         }
         /// <summary>
-        /// Lists all discussions for a specified commit.
+        /// Lists all discussions for a specified commit. Diff comments also contain position information.
         /// </summary>
         /// <returns>A List&lt;global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDiscussion&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -66,7 +66,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Commits
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// Creates a discussion for a specified commit. Replies can be added to it later.
+        /// Creates a discussion for a specified commit. Replies can be added to it later. The position rules are the same as for merge request diff threads, except for `position[base_sha]`, `position[head_sha]`, and `position[start_sha]`.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDiscussion"/></returns>
         /// <param name="body">The request body</param>
@@ -86,7 +86,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Commits
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDiscussion>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDiscussion.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Lists all discussions for a specified commit.
+        /// Lists all discussions for a specified commit. Diff comments also contain position information.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -105,7 +105,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Commits
             return requestInfo;
         }
         /// <summary>
-        /// Creates a discussion for a specified commit. Replies can be added to it later.
+        /// Creates a discussion for a specified commit. Replies can be added to it later. The position rules are the same as for merge request diff threads, except for `position[base_sha]`, `position[head_sha]`, and `position[start_sha]`.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -136,7 +136,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Commits
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Commits.Item.Discussions.DiscussionsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Lists all discussions for a specified commit.
+        /// Lists all discussions for a specified commit. Diff comments also contain position information.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class DiscussionsRequestBuilderGetQueryParameters 

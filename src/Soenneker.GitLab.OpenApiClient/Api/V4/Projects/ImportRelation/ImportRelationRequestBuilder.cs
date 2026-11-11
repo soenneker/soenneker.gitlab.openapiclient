@@ -40,7 +40,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.ImportRelation
         {
         }
         /// <summary>
-        /// Imports project resources included with a project archive. The type of item to import is controlled by the `relation` attribute. Skips items that were previously imported. This feature was introduced in GitLab 16.11.
+        /// Imports project resources included with a project archive. The type of item to import is controlled by the `relation` attribute. Skips items that were previously imported. The extracted files must have the structure of a GitLab project export, and the archive cannot be larger than the maximum import file size set by an administrator. This feature was introduced in GitLab 16.11.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRelationImportTracker"/></returns>
         /// <param name="body">The request body</param>
@@ -60,7 +60,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.ImportRelation
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRelationImportTracker>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRelationImportTracker.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Imports project resources included with a project archive. The type of item to import is controlled by the `relation` attribute. Skips items that were previously imported. This feature was introduced in GitLab 16.11.
+        /// Imports project resources included with a project archive. The type of item to import is controlled by the `relation` attribute. Skips items that were previously imported. The extracted files must have the structure of a GitLab project export, and the archive cannot be larger than the maximum import file size set by an administrator. This feature was introduced in GitLab 16.11.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

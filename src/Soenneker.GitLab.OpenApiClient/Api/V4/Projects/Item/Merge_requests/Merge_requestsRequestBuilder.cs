@@ -174,7 +174,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests
             /// <summary>Returns merge requests assigned to the given user `id`. `None` returns unassigned merge requests. `Any` returns merge requests with an assignee. Mutually exclusive with `assignee_username`.</summary>
             [QueryParameter("assignee_id")]
             public int? AssigneeId { get; set; }
-            /// <summary>Returns merge requests created by the given `username`. Mutually exclusive with `assignee_id`.</summary>
+            /// <summary>Returns merge requests assigned to the given usernames. Mutually exclusive with `assignee_id`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("assignee_username")]
@@ -258,10 +258,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests
             /// <summary>Return merge requests merged on or before the specified time.</summary>
             [QueryParameter("merged_before")]
             public DateTimeOffset? MergedBefore { get; set; }
-            /// <summary>Returns merge requests which have been merged by the user with the given user `id`. Mutually exclusive with `merge_user_username`.</summary>
+            /// <summary>Returns merge requests which have been merged by the user with the given user `id`. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/140002) in GitLab 17.0. Mutually exclusive with `merge_user_username`.</summary>
             [QueryParameter("merge_user_id")]
             public int? MergeUserId { get; set; }
-            /// <summary>Returns merge requests which have been merged by the user with the given `username`. Mutually exclusive with `merge_user_id`.</summary>
+            /// <summary>Returns merge requests which have been merged by the user with the given `username`. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/140002) in GitLab 17.0. Mutually exclusive with `merge_user_id`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("merge_user_username")]
@@ -304,7 +304,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests
             /// <summary>`&lt;Negated&gt;` Returns merge requests assigned to the given user `id`. `None` returns unassigned merge requests. `Any` returns merge requests with an assignee. Mutually exclusive with `not[assignee_username]`.</summary>
             [QueryParameter("not%5Bassignee_id%5D")]
             public int? NotassigneeId { get; set; }
-            /// <summary>`&lt;Negated&gt;` Returns merge requests created by the given `username`. Mutually exclusive with `not[assignee_id]`.</summary>
+            /// <summary>`&lt;Negated&gt;` Returns merge requests assigned to the given usernames. Mutually exclusive with `not[assignee_id]`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("not%5Bassignee_username%5D")]
@@ -370,7 +370,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests
             [QueryParameter("not%5Breviewer_username%5D")]
             public string NotreviewerUsername { get; set; }
 #endif
-            /// <summary>Returns merge requests ordered by `created_at`, `label_priority`, `milestone_due`, `popularity`, `priority`, `title`, `updated_at` or `merged_at` fields. Introduced in GitLab 14.8.</summary>
+            /// <summary>Returns merge requests ordered by `created_at`, `label_priority`, `milestone_due`, `popularity`, `priority`, `title`, `updated_at` or `merged_at` fields. Introduced in GitLab 14.8. `merged_at` [introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/147052) in GitLab 17.2.</summary>
             [QueryParameter("order_by")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdMergeRequestsOrderByParameter? OrderBy { get; set; }
             /// <summary>Page number of results to retrieve.</summary>
@@ -392,7 +392,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests
             [QueryParameter("reviewer_username")]
             public string ReviewerUsername { get; set; }
 #endif
-            /// <summary>Return merge requests for the given scope. `reviews_for_me` returns merge requests where the current user is assigned as a reviewer.</summary>
+            /// <summary>Return merge requests for the given scope. `reviews_for_me` returns merge requests where the current user is assigned as a reviewer. Default is `all`.</summary>
             [QueryParameter("scope")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdMergeRequestsScopeParameter? Scope { get; set; }
             /// <summary>Search merge requests against their `title` and `description`. Combine with the `in` attribute.</summary>
@@ -421,7 +421,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests
             /// <summary>Return merge requests with the given source project ID.</summary>
             [QueryParameter("source_project_id")]
             public int? SourceProjectId { get; set; }
-            /// <summary>Filter merge requests by state.</summary>
+            /// <summary>Filter merge requests by state. Filtering by `locked` usually returns no results, because the `locked` state is short-lived.</summary>
             [QueryParameter("state")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdMergeRequestsStateParameter? State { get; set; }
             /// <summary>Return merge requests with the given target branch.</summary>

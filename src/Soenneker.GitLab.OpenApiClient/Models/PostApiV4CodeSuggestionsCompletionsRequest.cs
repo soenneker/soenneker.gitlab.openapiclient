@@ -35,7 +35,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Additional context to use for Code Suggestions. [Generally available](https://gitlab.com/gitlab-org/gitlab/-/issues/462750) in GitLab 18.6. Feature flag `code_suggestions_context` removed.</summary>
+        /// <summary>Additional context to use for Code Suggestions. Each element has a `type` (`file` or `snippet`), a `name` (the name of the file or code snippet), and `content` (the body of the file or function). [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/462750) in GitLab 17.1 [with a feature flag](https://docs.gitlab.com/administration/feature_flags/) named `code_suggestions_context`. Disabled by default. [Generally available](https://gitlab.com/gitlab-org/gitlab/-/issues/462750) in GitLab 18.6. Feature flag `code_suggestions_context` removed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4CodeSuggestionsCompletionsRequestContextItem>? Context { get => _explicitNullValueContext; set { _explicitNullValueContext = value; AdditionalData?.Remove("context"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("context"); else _explicitNullProperties?.Remove("context"); } }
@@ -45,7 +45,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4CodeSuggestionsCompletionsRequestContextItem> Context { get => _explicitNullValueContext; set { _explicitNullValueContext = value; AdditionalData?.Remove("context"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("context"); else _explicitNullProperties?.Remove("context"); } }
         private List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4CodeSuggestionsCompletionsRequestContextItem> _explicitNullValueContext = default!;
 #endif
-        /// <summary>Attributes of the file that suggestions are generated for.</summary>
+        /// <summary>Attributes of the file that suggestions are generated for. Requires `file_name` (name of the file) and `content_above_cursor` (content of the file above the cursor position). `content_below_cursor` (content of the file below the cursor position) is optional.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4CodeSuggestionsCompletionsRequestCurrentFile? CurrentFile { get => _explicitNullValueCurrentFile; set { _explicitNullValueCurrentFile = value; AdditionalData?.Remove("current_file"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("current_file"); else _explicitNullProperties?.Remove("current_file"); } }
@@ -74,7 +74,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>If `true`, streams the response as smaller chunks as they are ready, if applicable.</summary>
         public bool? Stream { get => _explicitNullValueStream; set { _explicitNullValueStream = value; AdditionalData?.Remove("stream"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stream"); else _explicitNullProperties?.Remove("stream"); } }
         private bool? _explicitNullValueStream = default!;
-        /// <summary>User&apos;s instructions for Code Suggestions. [Generally available](https://gitlab.com/gitlab-org/gitlab/-/issues/462750) in GitLab 18.6. Feature flag `code_suggestions_context` removed.</summary>
+        /// <summary>User&apos;s instructions for Code Suggestions. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/462750) in GitLab 17.1 [with a feature flag](https://docs.gitlab.com/administration/feature_flags/) named `code_suggestions_context`. Disabled by default. [Generally available](https://gitlab.com/gitlab-org/gitlab/-/issues/462750) in GitLab 18.6. Feature flag `code_suggestions_context` removed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? UserInstruction { get => _explicitNullValueUserInstruction; set { _explicitNullValueUserInstruction = value; AdditionalData?.Remove("user_instruction"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_instruction"); else _explicitNullProperties?.Remove("user_instruction"); } }

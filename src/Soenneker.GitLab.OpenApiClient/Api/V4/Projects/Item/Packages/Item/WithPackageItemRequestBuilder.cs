@@ -46,7 +46,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Item
         {
         }
         /// <summary>
-        /// Deletes a specified project package.
+        /// Deletes a specified project package. If request forwarding is enabled, deleting a package can introduce a dependency confusion risk. Deleting a package protected by a protection rule is forbidden. The protection check is behind a feature flag named `packages_protected_packages_delete`, disabled by default.
         /// </summary>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -63,7 +63,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Item
             await RequestAdapter.SendNoContentAsync(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Retrieves a specified project package. Only packages with status `default` or `deprecated` are returned.
+        /// Retrieves a specified project package. Only packages with status `default` or `deprecated` are returned. In the response, `creator_id` is the ID of the user who created the package, and is `null` when a deploy token created the package. For a Conan package, `name` contains the recipe, and `conan_package_name` contains the package name. Other package types do not have this field. In `_links`, `web_path` is the path to the package details page in GitLab, and `delete_api_path` is the API path to delete the package, returned only if you have permission to delete it.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackage"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -81,7 +81,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Item
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackage>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackage.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Deletes a specified project package.
+        /// Deletes a specified project package. If request forwarding is enabled, deleting a package can introduce a dependency confusion risk. Deleting a package protected by a protection rule is forbidden. The protection check is behind a feature flag named `packages_protected_packages_delete`, disabled by default.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -99,7 +99,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Item
             return requestInfo;
         }
         /// <summary>
-        /// Retrieves a specified project package. Only packages with status `default` or `deprecated` are returned.
+        /// Retrieves a specified project package. Only packages with status `default` or `deprecated` are returned. In the response, `creator_id` is the ID of the user who created the package, and is `null` when a deploy token created the package. For a Conan package, `name` contains the recipe, and `conan_package_name` contains the package name. Other package types do not have this field. In `_links`, `web_path` is the path to the package details page in GitLab, and `delete_api_path` is the API path to delete the package, returned only if you have permission to delete it.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

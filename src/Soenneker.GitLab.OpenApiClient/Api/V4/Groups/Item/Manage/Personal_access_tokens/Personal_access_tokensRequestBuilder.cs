@@ -47,7 +47,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Personal_acce
         {
         }
         /// <summary>
-        /// Lists all personal access tokens associated with enterprise users in a top-level group. This feature was introduced in GitLab 17.8.
+        /// Lists all personal access tokens associated with enterprise users in a top-level group. For tokens created with granular scopes, the response also includes a `granular_scopes` attribute. The `last_used_ips` attribute was [introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/250307) in GitLab 19.4. The `granular_scopes` attribute was [introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/634390) in GitLab 19.6. This feature was introduced in GitLab 17.8.
         /// </summary>
         /// <returns>A <see cref="Stream"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -65,7 +65,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Personal_acce
             return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Lists all personal access tokens associated with enterprise users in a top-level group. This feature was introduced in GitLab 17.8.
+        /// Lists all personal access tokens associated with enterprise users in a top-level group. For tokens created with granular scopes, the response also includes a `granular_scopes` attribute. The `last_used_ips` attribute was [introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/250307) in GitLab 19.4. The `granular_scopes` attribute was [introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/634390) in GitLab 19.6. This feature was introduced in GitLab 17.8.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -92,7 +92,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Personal_acce
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Manage.Personal_access_tokens.Personal_access_tokensRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Lists all personal access tokens associated with enterprise users in a top-level group. This feature was introduced in GitLab 17.8.
+        /// Lists all personal access tokens associated with enterprise users in a top-level group. For tokens created with granular scopes, the response also includes a `granular_scopes` attribute. The `last_used_ips` attribute was [introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/250307) in GitLab 19.4. The `granular_scopes` attribute was [introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/634390) in GitLab 19.6. This feature was introduced in GitLab 17.8.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Personal_access_tokensRequestBuilderGetQueryParameters 

@@ -66,7 +66,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.External_status_ch
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// Creates an external status check service for a specified project.
+        /// Creates an external status check service for a specified project. External status checks send information about all applicable merge requests to the defined external service, including confidential merge requests.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesExternalStatusCheck"/></returns>
         /// <param name="body">The request body</param>
@@ -105,7 +105,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.External_status_ch
             return requestInfo;
         }
         /// <summary>
-        /// Creates an external status check service for a specified project.
+        /// Creates an external status check service for a specified project. External status checks send information about all applicable merge requests to the defined external service, including confidential merge requests.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

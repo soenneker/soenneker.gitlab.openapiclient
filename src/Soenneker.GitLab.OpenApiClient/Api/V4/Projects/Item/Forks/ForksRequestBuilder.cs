@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Forks
         {
         }
         /// <summary>
-        /// Lists all forks of a project.
+        /// Lists all forks of a project that are accessible to the authenticated user.
         /// </summary>
         /// <returns>A List&lt;global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProject&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -53,7 +53,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Forks
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// Lists all forks of a project.
+        /// Lists all forks of a project that are accessible to the authenticated user.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -81,7 +81,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Forks
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Forks.ForksRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Lists all forks of a project.
+        /// Lists all forks of a project that are accessible to the authenticated user.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ForksRequestBuilderGetQueryParameters 
@@ -167,10 +167,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Forks
             [QueryParameter("search")]
             public string Search { get; set; }
 #endif
-            /// <summary>If `true`, includes ancestor namespaces when matching search criteria.</summary>
+            /// <summary>If `true`, includes ancestor namespaces when matching search criteria. Default is `false`.</summary>
             [QueryParameter("search_namespaces")]
             public bool? SearchNamespaces { get; set; }
-            /// <summary>If `true`, returns only limited fields for each project. Without authentication, only limited fields are returned regardless of this setting.</summary>
+            /// <summary>If `true`, returns only limited fields for each project. Without authentication, only public projects with limited fields are returned, regardless of this setting.</summary>
             [QueryParameter("simple")]
             public bool? Simple { get; set; }
             /// <summary>Sort results in ascending or descending order.</summary>

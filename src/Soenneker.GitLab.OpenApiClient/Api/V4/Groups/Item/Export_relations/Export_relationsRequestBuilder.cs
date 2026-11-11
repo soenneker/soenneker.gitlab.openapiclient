@@ -46,7 +46,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Export_relations
         {
         }
         /// <summary>
-        /// Schedules a relations export for a specified group.
+        /// Schedules a relations export for a specified group. By default, this endpoint has a rate limit of 6 requests per minute for each user and group. On GitLab Self-Managed and GitLab Dedicated, an administrator can change this limit in the application settings.
         /// </summary>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -65,7 +65,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Export_relations
             await RequestAdapter.SendNoContentAsync(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Schedules a relations export for a specified group.
+        /// Schedules a relations export for a specified group. By default, this endpoint has a rate limit of 6 requests per minute for each user and group. On GitLab Self-Managed and GitLab Dedicated, an administrator can change this limit in the application settings.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

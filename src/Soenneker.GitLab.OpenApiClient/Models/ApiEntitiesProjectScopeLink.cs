@@ -25,10 +25,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The source_project_id property</summary>
+        /// <summary>ID of the project whose job token inbound allowlist is updated.</summary>
         public long? SourceProjectId { get => _explicitNullValueSourceProjectId; set { _explicitNullValueSourceProjectId = value; AdditionalData?.Remove("source_project_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source_project_id"); else _explicitNullProperties?.Remove("source_project_id"); } }
         private long? _explicitNullValueSourceProjectId = default!;
-        /// <summary>The target_project_id property</summary>
+        /// <summary>ID of the project added to the source project&apos;s inbound allowlist.</summary>
         public long? TargetProjectId { get => _explicitNullValueTargetProjectId; set { _explicitNullValueTargetProjectId = value; AdditionalData?.Remove("target_project_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_project_id"); else _explicitNullProperties?.Remove("target_project_id"); } }
         private long? _explicitNullValueTargetProjectId = default!;
         /// <summary>

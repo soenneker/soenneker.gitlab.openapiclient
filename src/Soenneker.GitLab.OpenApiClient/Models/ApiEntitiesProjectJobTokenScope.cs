@@ -25,10 +25,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The inbound_enabled property</summary>
+        /// <summary>If `true`, only groups and projects in the job token allowlist can access this project. Also `true` when the instance enforces the job token allowlist. If `false`, all projects have access.</summary>
         public bool? InboundEnabled { get => _explicitNullValueInboundEnabled; set { _explicitNullValueInboundEnabled = value; AdditionalData?.Remove("inbound_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inbound_enabled"); else _explicitNullProperties?.Remove("inbound_enabled"); } }
         private bool? _explicitNullValueInboundEnabled = default!;
-        /// <summary>The outbound_enabled property</summary>
+        /// <summary>If `true`, the CI/CD job token generated in this project can access only the projects in its outbound scope. Deprecated.</summary>
         public bool? OutboundEnabled { get => _explicitNullValueOutboundEnabled; set { _explicitNullValueOutboundEnabled = value; AdditionalData?.Remove("outbound_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outbound_enabled"); else _explicitNullProperties?.Remove("outbound_enabled"); } }
         private bool? _explicitNullValueOutboundEnabled = default!;
         /// <summary>

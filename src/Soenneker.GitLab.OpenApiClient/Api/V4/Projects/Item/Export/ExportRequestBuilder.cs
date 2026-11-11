@@ -40,7 +40,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Export
         {
         }
         /// <summary>
-        /// Retrieves the status of the most recent export for a specified project.
+        /// Retrieves the status of the most recent export for a specified project. The `export_status` is one of: `none` when no exports are queued, started, finished, or being regenerated; `queued` when the export request is received and is in the queue to be processed; `started` when the export is in progress, including actions on the resulting file such as sending the notification email or uploading it to a web server; `finished` when the export is complete and the user was notified; `failed` when the export failed; or `regeneration_in_progress` when an export file is available to download and a new export is in progress. The `_links` object is returned only when the export is finished. The `created_at` attribute is the project creation time, not the export start time.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectExportStatus"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -58,7 +58,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Export
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectExportStatus>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectExportStatus.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Exports a project. Use the `upload` hash parameter to upload the exported project to a web server or any S3-compatible platform.
+        /// Exports a project. Use the `upload` hash parameter to upload the exported project to a web server or any S3-compatible platform. Uploads support only binary data and are sent with the `Content-Type: application/gzip` header, so a pre-signed upload URL must include this header in its signature. The export can take some time, so the upload URL must not have a short expiration time. Because of a known issue, uploads to Amazon S3 cannot be larger than 5 GB. The maximum export file size is set by an administrator with the `max_export_size` application setting. Default is `0` (unlimited).
         /// </summary>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -77,7 +77,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Export
             await RequestAdapter.SendNoContentAsync(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Retrieves the status of the most recent export for a specified project.
+        /// Retrieves the status of the most recent export for a specified project. The `export_status` is one of: `none` when no exports are queued, started, finished, or being regenerated; `queued` when the export request is received and is in the queue to be processed; `started` when the export is in progress, including actions on the resulting file such as sending the notification email or uploading it to a web server; `finished` when the export is complete and the user was notified; `failed` when the export failed; or `regeneration_in_progress` when an export file is available to download and a new export is in progress. The `_links` object is returned only when the export is finished. The `created_at` attribute is the project creation time, not the export start time.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -96,7 +96,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Export
             return requestInfo;
         }
         /// <summary>
-        /// Exports a project. Use the `upload` hash parameter to upload the exported project to a web server or any S3-compatible platform.
+        /// Exports a project. Use the `upload` hash parameter to upload the exported project to a web server or any S3-compatible platform. Uploads support only binary data and are sent with the `Content-Type: application/gzip` header, so a pre-signed upload URL must include this header in its signature. The export can take some time, so the upload URL must not have a short expiration time. Because of a known issue, uploads to Amazon S3 cannot be larger than 5 GB. The maximum export file size is set by an administrator with the `max_export_size` application setting. Default is `0` (unlimited).
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

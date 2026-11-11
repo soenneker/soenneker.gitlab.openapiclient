@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.RelationImports
         {
         }
         /// <summary>
-        /// Retrieves the status of the most recent relation import for a specified project. Because only one relation import can be scheduled at a time, you can use this endpoint to check whether the previous import completed successfully. This feature was introduced in GitLab 16.11.
+        /// Retrieves the status of the most recent relation import for a specified project. Because only one relation import can be scheduled at a time, you can use this endpoint to check whether the previous import completed successfully. The `status` is one of `created` when the import is scheduled but not started, `started` when the import is being processed, `finished` when the import is complete, or `failed` when the import could not be completed. This feature was introduced in GitLab 16.11.
         /// </summary>
         /// <returns>A List&lt;global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRelationImportTracker&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -53,7 +53,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.RelationImports
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// Retrieves the status of the most recent relation import for a specified project. Because only one relation import can be scheduled at a time, you can use this endpoint to check whether the previous import completed successfully. This feature was introduced in GitLab 16.11.
+        /// Retrieves the status of the most recent relation import for a specified project. Because only one relation import can be scheduled at a time, you can use this endpoint to check whether the previous import completed successfully. The `status` is one of `created` when the import is scheduled but not started, `started` when the import is being processed, `finished` when the import is complete, or `failed` when the import could not be completed. This feature was introduced in GitLab 16.11.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

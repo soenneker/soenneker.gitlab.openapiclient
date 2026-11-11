@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
-    /// <summary>Limit the ability to create, update, toggle, and delete feature flags to only users with at least the set minimum role</summary>
+    /// <summary>Limit the ability to create, update, toggle, and delete feature flags to only users with at least the set minimum role. Default is `developer`. Changing the setting away from `owner` or `no_one_allowed` requires the Owner role. The minimum role is enforced behind a feature flag named `feature_flag_management_permissions`, disabled by default.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum PutApiV4ProjectsIdRequestFeatureFlagsMinimumRole
     {

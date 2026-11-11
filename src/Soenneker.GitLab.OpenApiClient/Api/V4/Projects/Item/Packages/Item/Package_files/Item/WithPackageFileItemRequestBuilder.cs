@@ -39,7 +39,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Item.Pack
         {
         }
         /// <summary>
-        /// Deletes a specified package file.
+        /// Deletes a specified package file. Deleting a package file can corrupt the package, making it unusable or unpullable from your package manager client. Deleting a file of a package protected by a protection rule is forbidden. The protection check is behind a feature flag named `packages_protected_packages_delete`, disabled by default.
         /// </summary>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -56,7 +56,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Item.Pack
             await RequestAdapter.SendNoContentAsync(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Deletes a specified package file.
+        /// Deletes a specified package file. Deleting a package file can corrupt the package, making it unusable or unpullable from your package manager client. Deleting a file of a package protected by a protection rule is forbidden. The protection check is behind a feature flag named `packages_protected_packages_delete`, disabled by default.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

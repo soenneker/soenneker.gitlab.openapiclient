@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Organizations.Item.Transfer_user
         {
         }
         /// <summary>
-        /// Transfers ownership of users to the organization, including their personal namespaces and projects. All users must currently belong to the same organization. This feature was introduced in GitLab 19.6.
+        /// Transfers ownership of users to the organization, including their personal namespaces and projects. All users must currently belong to the same organization. This is a change of ownership, not organization membership. The transfer runs in the background. Administrators only. No user can be an internal user, such as the ghost user or a bot like `support_bot` or `admin_bot`. Service accounts and project access token bots can be transferred. This feature was introduced in GitLab 19.6.
         /// </summary>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -53,7 +53,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Organizations.Item.Transfer_user
             await RequestAdapter.SendNoContentAsync(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Transfers ownership of users to the organization, including their personal namespaces and projects. All users must currently belong to the same organization. This feature was introduced in GitLab 19.6.
+        /// Transfers ownership of users to the organization, including their personal namespaces and projects. All users must currently belong to the same organization. This is a change of ownership, not organization membership. The transfer runs in the background. Administrators only. No user can be an internal user, such as the ghost user or a bot like `support_bot` or `admin_bot`. Service accounts and project access token bots can be transferred. This feature was introduced in GitLab 19.6.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

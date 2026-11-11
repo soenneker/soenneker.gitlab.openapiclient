@@ -53,7 +53,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Namespaces
         {
         }
         /// <summary>
-        /// Lists all namespaces available to the current user. If the user is an administrator, this endpoint returns all namespaces in the instance.
+        /// Lists all namespaces available to the current user. If the user is an administrator, this endpoint returns all namespaces in the instance. The response can include additional attributes for group owners or on GitLab.com. The `shared_runners_minutes_limit`, `extra_shared_runners_minutes_limit`, `additional_purchased_storage_size`, and `additional_purchased_storage_ends_on` attributes are returned only to administrators on GitLab.com.
         /// </summary>
         /// <returns>A List&lt;global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNamespace&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -72,7 +72,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Namespaces
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// Lists all namespaces available to the current user. If the user is an administrator, this endpoint returns all namespaces in the instance.
+        /// Lists all namespaces available to the current user. If the user is an administrator, this endpoint returns all namespaces in the instance. The response can include additional attributes for group owners or on GitLab.com. The `shared_runners_minutes_limit`, `extra_shared_runners_minutes_limit`, `additional_purchased_storage_size`, and `additional_purchased_storage_ends_on` attributes are returned only to administrators on GitLab.com.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -100,7 +100,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Namespaces
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Namespaces.NamespacesRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Lists all namespaces available to the current user. If the user is an administrator, this endpoint returns all namespaces in the instance.
+        /// Lists all namespaces available to the current user. If the user is an administrator, this endpoint returns all namespaces in the instance. The response can include additional attributes for group owners or on GitLab.com. The `shared_runners_minutes_limit`, `extra_shared_runners_minutes_limit`, `additional_purchased_storage_size`, and `additional_purchased_storage_ends_on` attributes are returned only to administrators on GitLab.com.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class NamespacesRequestBuilderGetQueryParameters 

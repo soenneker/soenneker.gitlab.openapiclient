@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
     /// <summary>
-    /// New project params to override values in the export
+    /// New project params to override values in the export. Supports all fields defined in the projects API.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PostApiV4ProjectsImportRequestOverrideParams : IAdditionalDataHolder, IParsable
@@ -56,6 +56,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             else if (parseNode.GetChildNode("description") is { } nullNodeDescription && nullNodeDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Description = null;
             if (parseNode.GetChildNode("duo_code_review_decisions_enabled") is null) { _explicitNullValueDuoCodeReviewDecisionsEnabled = default!; _explicitNullProperties?.Remove("duo_code_review_decisions_enabled"); }
             else if (parseNode.GetChildNode("duo_code_review_decisions_enabled") is { } nullNodeDuoCodeReviewDecisionsEnabled && nullNodeDuoCodeReviewDecisionsEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DuoCodeReviewDecisionsEnabled = null;
+            if (parseNode.GetChildNode("duo_code_review_default_depth") is null) { _explicitNullValueDuoCodeReviewDefaultDepth = default!; _explicitNullProperties?.Remove("duo_code_review_default_depth"); }
+            else if (parseNode.GetChildNode("duo_code_review_default_depth") is { } nullNodeDuoCodeReviewDefaultDepth && nullNodeDuoCodeReviewDefaultDepth.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DuoCodeReviewDefaultDepth = null;
+            if (parseNode.GetChildNode("duo_code_review_depth_allowed") is null) { _explicitNullValueDuoCodeReviewDepthAllowed = default!; _explicitNullProperties?.Remove("duo_code_review_depth_allowed"); }
+            else if (parseNode.GetChildNode("duo_code_review_depth_allowed") is { } nullNodeDuoCodeReviewDepthAllowed && nullNodeDuoCodeReviewDepthAllowed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DuoCodeReviewDepthAllowed = null;
             if (parseNode.GetChildNode("duo_dependency_bump_breaking_changes_enabled") is null) { _explicitNullValueDuoDependencyBumpBreakingChangesEnabled = default!; _explicitNullProperties?.Remove("duo_dependency_bump_breaking_changes_enabled"); }
             else if (parseNode.GetChildNode("duo_dependency_bump_breaking_changes_enabled") is { } nullNodeDuoDependencyBumpBreakingChangesEnabled && nullNodeDuoDependencyBumpBreakingChangesEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DuoDependencyBumpBreakingChangesEnabled = null;
             if (parseNode.GetChildNode("duo_remote_flows_enabled") is null) { _explicitNullValueDuoRemoteFlowsEnabled = default!; _explicitNullProperties?.Remove("duo_remote_flows_enabled"); }
@@ -200,13 +204,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Analytics access level. One of `disabled`, `private` or `enabled`</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsAnalyticsAccessLevel? AnalyticsAccessLevel { get => _explicitNullValueAnalyticsAccessLevel; set { _explicitNullValueAnalyticsAccessLevel = value; AdditionalData?.Remove("analytics_access_level"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("analytics_access_level"); else _explicitNullProperties?.Remove("analytics_access_level"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsAnalyticsAccessLevel? _explicitNullValueAnalyticsAccessLevel = default!;
-        /// <summary>How many approvers should approve merge request by default</summary>
+        /// <summary>How many approvers should approve merge request by default. Deprecated in GitLab 16.0: Use the merge request approvals API instead. Premium and Ultimate only.</summary>
         public int? ApprovalsBeforeMerge { get => _explicitNullValueApprovalsBeforeMerge; set { _explicitNullValueApprovalsBeforeMerge = value; AdditionalData?.Remove("approvals_before_merge"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approvals_before_merge"); else _explicitNullProperties?.Remove("approvals_before_merge"); } }
         private int? _explicitNullValueApprovalsBeforeMerge = default!;
         /// <summary>Auto-cancel pending pipelines</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsAutoCancelPendingPipelines? AutoCancelPendingPipelines { get => _explicitNullValueAutoCancelPendingPipelines; set { _explicitNullValueAutoCancelPendingPipelines = value; AdditionalData?.Remove("auto_cancel_pending_pipelines"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auto_cancel_pending_pipelines"); else _explicitNullProperties?.Remove("auto_cancel_pending_pipelines"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsAutoCancelPendingPipelines? _explicitNullValueAutoCancelPendingPipelines = default!;
-        /// <summary>Flag indication if referenced issues auto-closing is enabled</summary>
+        /// <summary>Flag indication if referenced issues auto-closing on the default branch is enabled</summary>
         public bool? AutocloseReferencedIssues { get => _explicitNullValueAutocloseReferencedIssues; set { _explicitNullValueAutocloseReferencedIssues = value; AdditionalData?.Remove("autoclose_referenced_issues"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("autoclose_referenced_issues"); else _explicitNullProperties?.Remove("autoclose_referenced_issues"); } }
         private bool? _explicitNullValueAutocloseReferencedIssues = default!;
         /// <summary>Auto Deploy strategy</summary>
@@ -218,7 +222,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Enable automatic reviews by GitLab Duo on merge requests</summary>
         public bool? AutoDuoCodeReviewEnabled { get => _explicitNullValueAutoDuoCodeReviewEnabled; set { _explicitNullValueAutoDuoCodeReviewEnabled = value; AdditionalData?.Remove("auto_duo_code_review_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auto_duo_code_review_enabled"); else _explicitNullProperties?.Remove("auto_duo_code_review_enabled"); } }
         private bool? _explicitNullValueAutoDuoCodeReviewEnabled = default!;
-        /// <summary>Avatar image for project</summary>
+        /// <summary>Avatar image for project. The file must be 200 KB or smaller, and one of these types: `.bmp`, `.gif`, `.ico`, `.jpeg`, `.jpg`, `.png`, `.tiff`, or `.webp`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public byte[]? Avatar { get => _explicitNullValueAvatar; set { _explicitNullValueAvatar = value; AdditionalData?.Remove("avatar"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("avatar"); else _explicitNullProperties?.Remove("avatar"); } }
@@ -234,10 +238,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Builds access level. One of `disabled`, `private` or `enabled`</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsBuildsAccessLevel? BuildsAccessLevel { get => _explicitNullValueBuildsAccessLevel; set { _explicitNullValueBuildsAccessLevel = value; AdditionalData?.Remove("builds_access_level"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("builds_access_level"); else _explicitNullProperties?.Remove("builds_access_level"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsBuildsAccessLevel? _explicitNullValueBuildsAccessLevel = default!;
-        /// <summary>Build timeout</summary>
+        /// <summary>The maximum amount of time, in seconds, that a job can run.</summary>
         public int? BuildTimeout { get => _explicitNullValueBuildTimeout; set { _explicitNullValueBuildTimeout = value; AdditionalData?.Remove("build_timeout"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("build_timeout"); else _explicitNullProperties?.Remove("build_timeout"); } }
         private int? _explicitNullValueBuildTimeout = default!;
-        /// <summary>Set whether the project is a CI/CD catalog project</summary>
+        /// <summary>Set whether the project is a CI/CD catalog project. Requires the Owner role. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/463043) in GitLab 19.3.</summary>
         public bool? CicdCatalogEnabled { get => _explicitNullValueCicdCatalogEnabled; set { _explicitNullValueCicdCatalogEnabled = value; AdditionalData?.Remove("cicd_catalog_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cicd_catalog_enabled"); else _explicitNullProperties?.Remove("cicd_catalog_enabled"); } }
         private bool? _explicitNullValueCicdCatalogEnabled = default!;
         /// <summary>The path to CI config file. Defaults to `.gitlab-ci.yml`</summary>
@@ -260,7 +264,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsContainerExpirationPolicyAttributes ContainerExpirationPolicyAttributes { get => _explicitNullValueContainerExpirationPolicyAttributes; set { _explicitNullValueContainerExpirationPolicyAttributes = value; AdditionalData?.Remove("container_expiration_policy_attributes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("container_expiration_policy_attributes"); else _explicitNullProperties?.Remove("container_expiration_policy_attributes"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsContainerExpirationPolicyAttributes _explicitNullValueContainerExpirationPolicyAttributes = default!;
 #endif
-        /// <summary>Controls visibility of the container registry. One of `disabled`, `private` or `enabled`. `private` will make the container registry accessible only to project members (reporter role and above). `enabled` will make the container registry accessible to everyone who has access to the project. `disabled` will disable the container registry</summary>
+        /// <summary>Controls visibility of the container registry. One of `disabled`, `private` or `enabled`. `private` will make the container registry accessible only to project members (reporter role and above). `enabled` will make the container registry accessible to everyone who has access to the project. `disabled` will disable the container registry. With `enabled`, the container registry has the same visibility as the project. When you create a project, the default is `enabled`, unless the container registry is turned off by default for new projects on the instance.</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsContainerRegistryAccessLevel? ContainerRegistryAccessLevel { get => _explicitNullValueContainerRegistryAccessLevel; set { _explicitNullValueContainerRegistryAccessLevel = value; AdditionalData?.Remove("container_registry_access_level"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("container_registry_access_level"); else _explicitNullProperties?.Remove("container_registry_access_level"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsContainerRegistryAccessLevel? _explicitNullValueContainerRegistryAccessLevel = default!;
         /// <summary>Deprecated: Use :container_registry_access_level instead. Flag indication if the container registry is enabled for that project</summary>
@@ -276,9 +280,15 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
         private string _explicitNullValueDescription = default!;
 #endif
-        /// <summary>Enable approval and change requests by GitLab Duo on merge requests</summary>
+        /// <summary>Enable approval and change requests by GitLab Duo on merge requests. Behind a feature flag named `duo_code_review_decisions`, disabled by default.</summary>
         public bool? DuoCodeReviewDecisionsEnabled { get => _explicitNullValueDuoCodeReviewDecisionsEnabled; set { _explicitNullValueDuoCodeReviewDecisionsEnabled = value; AdditionalData?.Remove("duo_code_review_decisions_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duo_code_review_decisions_enabled"); else _explicitNullProperties?.Remove("duo_code_review_decisions_enabled"); } }
         private bool? _explicitNullValueDuoCodeReviewDecisionsEnabled = default!;
+        /// <summary>[Beta] Default review depth for GitLab Duo Code Review Flow. One of `standard` or `deep`</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsDuoCodeReviewDefaultDepth? DuoCodeReviewDefaultDepth { get => _explicitNullValueDuoCodeReviewDefaultDepth; set { _explicitNullValueDuoCodeReviewDefaultDepth = value; AdditionalData?.Remove("duo_code_review_default_depth"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duo_code_review_default_depth"); else _explicitNullProperties?.Remove("duo_code_review_default_depth"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsDuoCodeReviewDefaultDepth? _explicitNullValueDuoCodeReviewDefaultDepth = default!;
+        /// <summary>[Beta] Allow deep reviews by GitLab Duo Code Review Flow</summary>
+        public bool? DuoCodeReviewDepthAllowed { get => _explicitNullValueDuoCodeReviewDepthAllowed; set { _explicitNullValueDuoCodeReviewDepthAllowed = value; AdditionalData?.Remove("duo_code_review_depth_allowed"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duo_code_review_depth_allowed"); else _explicitNullProperties?.Remove("duo_code_review_depth_allowed"); } }
+        private bool? _explicitNullValueDuoCodeReviewDepthAllowed = default!;
         /// <summary>Turn on Agentic Breaking Change Resolution for this project</summary>
         public bool? DuoDependencyBumpBreakingChangesEnabled { get => _explicitNullValueDuoDependencyBumpBreakingChangesEnabled; set { _explicitNullValueDuoDependencyBumpBreakingChangesEnabled = value; AdditionalData?.Remove("duo_dependency_bump_breaking_changes_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duo_dependency_bump_breaking_changes_enabled"); else _explicitNullProperties?.Remove("duo_dependency_bump_breaking_changes_enabled"); } }
         private bool? _explicitNullValueDuoDependencyBumpBreakingChangesEnabled = default!;
@@ -288,13 +298,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Enable GitLab Duo SAST false positive detection for this project</summary>
         public bool? DuoSastFpDetectionEnabled { get => _explicitNullValueDuoSastFpDetectionEnabled; set { _explicitNullValueDuoSastFpDetectionEnabled = value; AdditionalData?.Remove("duo_sast_fp_detection_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duo_sast_fp_detection_enabled"); else _explicitNullProperties?.Remove("duo_sast_fp_detection_enabled"); } }
         private bool? _explicitNullValueDuoSastFpDetectionEnabled = default!;
-        /// <summary>Enable GitLab Duo SAST vulnerability resolution workflow for this project</summary>
+        /// <summary>Enable GitLab Duo SAST vulnerability resolution workflow for this project. Requires the Security Manager, Maintainer, or Owner role.</summary>
         public bool? DuoSastVrWorkflowEnabled { get => _explicitNullValueDuoSastVrWorkflowEnabled; set { _explicitNullValueDuoSastVrWorkflowEnabled = value; AdditionalData?.Remove("duo_sast_vr_workflow_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duo_sast_vr_workflow_enabled"); else _explicitNullProperties?.Remove("duo_sast_vr_workflow_enabled"); } }
         private bool? _explicitNullValueDuoSastVrWorkflowEnabled = default!;
         /// <summary>Enable GitLab Duo Secret Detection false positive detection for this project</summary>
         public bool? DuoSecretDetectionFpEnabled { get => _explicitNullValueDuoSecretDetectionFpEnabled; set { _explicitNullValueDuoSecretDetectionFpEnabled = value; AdditionalData?.Remove("duo_secret_detection_fp_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duo_secret_detection_fp_enabled"); else _explicitNullProperties?.Remove("duo_secret_detection_fp_enabled"); } }
         private bool? _explicitNullValueDuoSecretDetectionFpEnabled = default!;
-        /// <summary>Deprecated: Use emails_enabled instead.</summary>
+        /// <summary>Disable email notifications. Deprecated: Use emails_enabled instead.</summary>
         public bool? EmailsDisabled { get => _explicitNullValueEmailsDisabled; set { _explicitNullValueEmailsDisabled = value; AdditionalData?.Remove("emails_disabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emails_disabled"); else _explicitNullProperties?.Remove("emails_disabled"); } }
         private bool? _explicitNullValueEmailsDisabled = default!;
         /// <summary>Enable email notifications</summary>
@@ -306,7 +316,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Environments access level. One of `disabled`, `private` or `enabled`</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsEnvironmentsAccessLevel? EnvironmentsAccessLevel { get => _explicitNullValueEnvironmentsAccessLevel; set { _explicitNullValueEnvironmentsAccessLevel = value; AdditionalData?.Remove("environments_access_level"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("environments_access_level"); else _explicitNullProperties?.Remove("environments_access_level"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsEnvironmentsAccessLevel? _explicitNullValueEnvironmentsAccessLevel = default!;
-        /// <summary>The classification label for the project</summary>
+        /// <summary>The classification label for the project. Premium and Ultimate only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ExternalAuthorizationClassificationLabel { get => _explicitNullValueExternalAuthorizationClassificationLabel; set { _explicitNullValueExternalAuthorizationClassificationLabel = value; AdditionalData?.Remove("external_authorization_classification_label"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_authorization_classification_label"); else _explicitNullProperties?.Remove("external_authorization_classification_label"); } }
@@ -341,10 +351,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Issues access level. One of `disabled`, `private` or `enabled`</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsIssuesAccessLevel? IssuesAccessLevel { get => _explicitNullValueIssuesAccessLevel; set { _explicitNullValueIssuesAccessLevel = value; AdditionalData?.Remove("issues_access_level"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issues_access_level"); else _explicitNullProperties?.Remove("issues_access_level"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsIssuesAccessLevel? _explicitNullValueIssuesAccessLevel = default!;
-        /// <summary>Flag indication if the issue tracker is enabled</summary>
+        /// <summary>Flag indication if the issue tracker is enabled. Deprecated: Use `issues_access_level` instead.</summary>
         public bool? IssuesEnabled { get => _explicitNullValueIssuesEnabled; set { _explicitNullValueIssuesEnabled = value; AdditionalData?.Remove("issues_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issues_enabled"); else _explicitNullProperties?.Remove("issues_enabled"); } }
         private bool? _explicitNullValueIssuesEnabled = default!;
-        /// <summary>Flag indication if jobs are enabled</summary>
+        /// <summary>Flag indication if jobs are enabled. Deprecated: Use `builds_access_level` instead.</summary>
         public bool? JobsEnabled { get => _explicitNullValueJobsEnabled; set { _explicitNullValueJobsEnabled = value; AdditionalData?.Remove("jobs_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("jobs_enabled"); else _explicitNullProperties?.Remove("jobs_enabled"); } }
         private bool? _explicitNullValueJobsEnabled = default!;
         /// <summary>Flag indication if Git LFS is enabled for that project</summary>
@@ -366,7 +376,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Merge requests access level. One of `disabled`, `private` or `enabled`</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsMergeRequestsAccessLevel? MergeRequestsAccessLevel { get => _explicitNullValueMergeRequestsAccessLevel; set { _explicitNullValueMergeRequestsAccessLevel = value; AdditionalData?.Remove("merge_requests_access_level"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_requests_access_level"); else _explicitNullProperties?.Remove("merge_requests_access_level"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsMergeRequestsAccessLevel? _explicitNullValueMergeRequestsAccessLevel = default!;
-        /// <summary>Flag indication if merge requests are enabled</summary>
+        /// <summary>Flag indication if merge requests are enabled. Deprecated: Use `merge_requests_access_level` instead.</summary>
         public bool? MergeRequestsEnabled { get => _explicitNullValueMergeRequestsEnabled; set { _explicitNullValueMergeRequestsEnabled = value; AdditionalData?.Remove("merge_requests_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_requests_enabled"); else _explicitNullProperties?.Remove("merge_requests_enabled"); } }
         private bool? _explicitNullValueMergeRequestsEnabled = default!;
         /// <summary>The regex the Merge Request must adhere to</summary>
@@ -389,10 +399,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string MergeRequestTitleRegexDescription { get => _explicitNullValueMergeRequestTitleRegexDescription; set { _explicitNullValueMergeRequestTitleRegexDescription = value; AdditionalData?.Remove("merge_request_title_regex_description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_request_title_regex_description"); else _explicitNullProperties?.Remove("merge_request_title_regex_description"); } }
         private string _explicitNullValueMergeRequestTitleRegexDescription = default!;
 #endif
-        /// <summary>[Deprecated] Enables pull mirroring in a project</summary>
+        /// <summary>[Deprecated] Enables pull mirroring in a project. Premium and Ultimate only.</summary>
         public bool? Mirror { get => _explicitNullValueMirror; set { _explicitNullValueMirror = value; AdditionalData?.Remove("mirror"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mirror"); else _explicitNullProperties?.Remove("mirror"); } }
         private bool? _explicitNullValueMirror = default!;
-        /// <summary>[Deprecated] Pull mirroring triggers builds</summary>
+        /// <summary>[Deprecated] Pull mirroring triggers builds. Premium and Ultimate only.</summary>
         public bool? MirrorTriggerBuilds { get => _explicitNullValueMirrorTriggerBuilds; set { _explicitNullValueMirrorTriggerBuilds = value; AdditionalData?.Remove("mirror_trigger_builds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mirror_trigger_builds"); else _explicitNullProperties?.Remove("mirror_trigger_builds"); } }
         private bool? _explicitNullValueMirrorTriggerBuilds = default!;
         /// <summary>Model experiments access level. One of `disabled`, `private` or `enabled`</summary>
@@ -404,10 +414,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Monitor access level. One of `disabled`, `private` or `enabled`</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsMonitorAccessLevel? MonitorAccessLevel { get => _explicitNullValueMonitorAccessLevel; set { _explicitNullValueMonitorAccessLevel = value; AdditionalData?.Remove("monitor_access_level"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("monitor_access_level"); else _explicitNullProperties?.Remove("monitor_access_level"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsMonitorAccessLevel? _explicitNullValueMonitorAccessLevel = default!;
-        /// <summary>Merge requests of this forked project targets itself by default</summary>
+        /// <summary>Merge requests of this forked project targets itself by default. If `false`, the target is the upstream project.</summary>
         public bool? MrDefaultTargetSelf { get => _explicitNullValueMrDefaultTargetSelf; set { _explicitNullValueMrDefaultTargetSelf = value; AdditionalData?.Remove("mr_default_target_self"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mr_default_target_self"); else _explicitNullProperties?.Remove("mr_default_target_self"); } }
         private bool? _explicitNullValueMrDefaultTargetSelf = default!;
-        /// <summary>Template used to generate the default merge request title. Maximum 100 characters.</summary>
+        /// <summary>Template used to generate the default merge request title. Maximum 100 characters. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/228442) in GitLab 18.11.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? MrDefaultTitleTemplate { get => _explicitNullValueMrDefaultTitleTemplate; set { _explicitNullValueMrDefaultTitleTemplate = value; AdditionalData?.Remove("mr_default_title_template"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mr_default_title_template"); else _explicitNullProperties?.Remove("mr_default_title_template"); } }
@@ -420,31 +430,31 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Only allow to merge if all threads are resolved</summary>
         public bool? OnlyAllowMergeIfAllDiscussionsAreResolved { get => _explicitNullValueOnlyAllowMergeIfAllDiscussionsAreResolved; set { _explicitNullValueOnlyAllowMergeIfAllDiscussionsAreResolved = value; AdditionalData?.Remove("only_allow_merge_if_all_discussions_are_resolved"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("only_allow_merge_if_all_discussions_are_resolved"); else _explicitNullProperties?.Remove("only_allow_merge_if_all_discussions_are_resolved"); } }
         private bool? _explicitNullValueOnlyAllowMergeIfAllDiscussionsAreResolved = default!;
-        /// <summary>Blocks merge requests from merging unless all status checks have passed</summary>
+        /// <summary>Blocks merge requests from merging unless all status checks have passed. Default is `false`. Ultimate only.</summary>
         public bool? OnlyAllowMergeIfAllStatusChecksPassed { get => _explicitNullValueOnlyAllowMergeIfAllStatusChecksPassed; set { _explicitNullValueOnlyAllowMergeIfAllStatusChecksPassed = value; AdditionalData?.Remove("only_allow_merge_if_all_status_checks_passed"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("only_allow_merge_if_all_status_checks_passed"); else _explicitNullProperties?.Remove("only_allow_merge_if_all_status_checks_passed"); } }
         private bool? _explicitNullValueOnlyAllowMergeIfAllStatusChecksPassed = default!;
         /// <summary>Only allow to merge if builds succeed</summary>
         public bool? OnlyAllowMergeIfPipelineSucceeds { get => _explicitNullValueOnlyAllowMergeIfPipelineSucceeds; set { _explicitNullValueOnlyAllowMergeIfPipelineSucceeds = value; AdditionalData?.Remove("only_allow_merge_if_pipeline_succeeds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("only_allow_merge_if_pipeline_succeeds"); else _explicitNullProperties?.Remove("only_allow_merge_if_pipeline_succeeds"); } }
         private bool? _explicitNullValueOnlyAllowMergeIfPipelineSucceeds = default!;
-        /// <summary>Controls visibility of the package registry. One of `disabled`, `private`, `enabled` or `public`. `private` will make the package registry accessible only to project members (reporter role and above). `enabled` will make the package registry accessible to everyone who has access to the project. `public` will make the package registry accessible to everyone. `disabled` will disable the package registry</summary>
+        /// <summary>Controls visibility of the package registry. One of `disabled`, `private`, `enabled` or `public`. `private` will make the package registry accessible only to project members (reporter role and above). `enabled` will make the package registry accessible to everyone who has access to the project. `public` will make the package registry accessible to everyone. `disabled` will disable the package registry. When you create a project with `disabled`, the package registry might remain enabled unless you also set `packages_enabled` to `false`. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/454759) in GitLab 18.5.</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsPackageRegistryAccessLevel? PackageRegistryAccessLevel { get => _explicitNullValuePackageRegistryAccessLevel; set { _explicitNullValuePackageRegistryAccessLevel = value; AdditionalData?.Remove("package_registry_access_level"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("package_registry_access_level"); else _explicitNullProperties?.Remove("package_registry_access_level"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsPackageRegistryAccessLevel? _explicitNullValuePackageRegistryAccessLevel = default!;
-        /// <summary>Deprecated: Use :package_registry_access_level instead. Enable project packages feature</summary>
+        /// <summary>Deprecated in GitLab 17.10: Use :package_registry_access_level instead. Enable project packages feature</summary>
         public bool? PackagesEnabled { get => _explicitNullValuePackagesEnabled; set { _explicitNullValuePackagesEnabled = value; AdditionalData?.Remove("packages_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("packages_enabled"); else _explicitNullProperties?.Remove("packages_enabled"); } }
         private bool? _explicitNullValuePackagesEnabled = default!;
         /// <summary>Pages access level. One of `disabled`, `private`, `enabled` or `public`</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsPagesAccessLevel? PagesAccessLevel { get => _explicitNullValuePagesAccessLevel; set { _explicitNullValuePagesAccessLevel = value; AdditionalData?.Remove("pages_access_level"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pages_access_level"); else _explicitNullProperties?.Remove("pages_access_level"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsPagesAccessLevel? _explicitNullValuePagesAccessLevel = default!;
-        /// <summary>Require an associated issue from Jira</summary>
+        /// <summary>Require an associated issue from Jira. Ultimate only.</summary>
         public bool? PreventMergeWithoutJiraIssue { get => _explicitNullValuePreventMergeWithoutJiraIssue; set { _explicitNullValuePreventMergeWithoutJiraIssue = value; AdditionalData?.Remove("prevent_merge_without_jira_issue"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prevent_merge_without_jira_issue"); else _explicitNullProperties?.Remove("prevent_merge_without_jira_issue"); } }
         private bool? _explicitNullValuePreventMergeWithoutJiraIssue = default!;
         /// <summary>Show link to create/view merge request when pushing from the command line</summary>
         public bool? PrintingMergeRequestLinkEnabled { get => _explicitNullValuePrintingMergeRequestLinkEnabled; set { _explicitNullValuePrintingMergeRequestLinkEnabled = value; AdditionalData?.Remove("printing_merge_request_link_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("printing_merge_request_link_enabled"); else _explicitNullProperties?.Remove("printing_merge_request_link_enabled"); } }
         private bool? _explicitNullValuePrintingMergeRequestLinkEnabled = default!;
-        /// <summary>Deprecated: Use public_jobs instead.</summary>
+        /// <summary>If `true`, jobs can be viewed by non-project members. Deprecated: Use public_jobs instead.</summary>
         public bool? PublicBuilds { get => _explicitNullValuePublicBuilds; set { _explicitNullValuePublicBuilds = value; AdditionalData?.Remove("public_builds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("public_builds"); else _explicitNullProperties?.Remove("public_builds"); } }
         private bool? _explicitNullValuePublicBuilds = default!;
-        /// <summary>Perform public builds</summary>
+        /// <summary>If `true`, jobs can be viewed by non-project members.</summary>
         public bool? PublicJobs { get => _explicitNullValuePublicJobs; set { _explicitNullValuePublicJobs = value; AdditionalData?.Remove("public_jobs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("public_jobs"); else _explicitNullProperties?.Remove("public_jobs"); } }
         private bool? _explicitNullValuePublicJobs = default!;
         /// <summary>Releases access level. One of `disabled`, `private` or `enabled`</summary>
@@ -496,10 +506,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Snippets access level. One of `disabled`, `private` or `enabled`</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsSnippetsAccessLevel? SnippetsAccessLevel { get => _explicitNullValueSnippetsAccessLevel; set { _explicitNullValueSnippetsAccessLevel = value; AdditionalData?.Remove("snippets_access_level"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("snippets_access_level"); else _explicitNullProperties?.Remove("snippets_access_level"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsSnippetsAccessLevel? _explicitNullValueSnippetsAccessLevel = default!;
-        /// <summary>Flag indication if snippets are enabled</summary>
+        /// <summary>Flag indication if snippets are enabled. Deprecated: Use `snippets_access_level` instead.</summary>
         public bool? SnippetsEnabled { get => _explicitNullValueSnippetsEnabled; set { _explicitNullValueSnippetsEnabled = value; AdditionalData?.Remove("snippets_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("snippets_enabled"); else _explicitNullProperties?.Remove("snippets_enabled"); } }
         private bool? _explicitNullValueSnippetsEnabled = default!;
-        /// <summary>Grant read-only access to security policy configurations for enforcement in linked CI/CD projects</summary>
+        /// <summary>Grant users and tokens read-only access to security policy configurations for enforcement in linked CI/CD projects. Ultimate only.</summary>
         public bool? SppRepositoryPipelineAccess { get => _explicitNullValueSppRepositoryPipelineAccess; set { _explicitNullValueSppRepositoryPipelineAccess = value; AdditionalData?.Remove("spp_repository_pipeline_access"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("spp_repository_pipeline_access"); else _explicitNullProperties?.Remove("spp_repository_pipeline_access"); } }
         private bool? _explicitNullValueSppRepositoryPipelineAccess = default!;
         /// <summary>Template used to create squash commit message</summary>
@@ -525,7 +535,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string SuggestionCommitMessage { get => _explicitNullValueSuggestionCommitMessage; set { _explicitNullValueSuggestionCommitMessage = value; AdditionalData?.Remove("suggestion_commit_message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("suggestion_commit_message"); else _explicitNullProperties?.Remove("suggestion_commit_message"); } }
         private string _explicitNullValueSuggestionCommitMessage = default!;
 #endif
-        /// <summary>Deprecated: Use :topics instead</summary>
+        /// <summary>The list of tags for the project. Deprecated in GitLab 14.0: Use :topics instead</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? TagList { get => _explicitNullValueTagList; set { _explicitNullValueTagList = value; AdditionalData?.Remove("tag_list"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tag_list"); else _explicitNullProperties?.Remove("tag_list"); } }
@@ -535,7 +545,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public List<string> TagList { get => _explicitNullValueTagList; set { _explicitNullValueTagList = value; AdditionalData?.Remove("tag_list"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tag_list"); else _explicitNullProperties?.Remove("tag_list"); } }
         private List<string> _explicitNullValueTagList = default!;
 #endif
-        /// <summary>The list of topics for a project</summary>
+        /// <summary>The list of topics for a project. When updating a project, replaces any existing topics.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? Topics { get => _explicitNullValueTopics; set { _explicitNullValueTopics = value; AdditionalData?.Remove("topics"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("topics"); else _explicitNullProperties?.Remove("topics"); } }
@@ -554,7 +564,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Wiki access level. One of `disabled`, `private` or `enabled`</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsWikiAccessLevel? WikiAccessLevel { get => _explicitNullValueWikiAccessLevel; set { _explicitNullValueWikiAccessLevel = value; AdditionalData?.Remove("wiki_access_level"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wiki_access_level"); else _explicitNullProperties?.Remove("wiki_access_level"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsWikiAccessLevel? _explicitNullValueWikiAccessLevel = default!;
-        /// <summary>Flag indication if the wiki is enabled</summary>
+        /// <summary>Flag indication if the wiki is enabled. Deprecated: Use `wiki_access_level` instead.</summary>
         public bool? WikiEnabled { get => _explicitNullValueWikiEnabled; set { _explicitNullValueWikiEnabled = value; AdditionalData?.Remove("wiki_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wiki_enabled"); else _explicitNullProperties?.Remove("wiki_enabled"); } }
         private bool? _explicitNullValueWikiEnabled = default!;
         /// <summary>
@@ -603,6 +613,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "container_registry_enabled", n => { ContainerRegistryEnabled = n.GetBoolValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "duo_code_review_decisions_enabled", n => { DuoCodeReviewDecisionsEnabled = n.GetBoolValue(); } },
+                { "duo_code_review_default_depth", n => { var parsed = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsDuoCodeReviewDefaultDepth>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueDuoCodeReviewDefaultDepth = default; _explicitNullProperties?.Remove("duo_code_review_default_depth"); AdditionalData["duo_code_review_default_depth"] = unknown; } else { DuoCodeReviewDefaultDepth = parsed; AdditionalData.Remove("duo_code_review_default_depth"); } } },
+                { "duo_code_review_depth_allowed", n => { DuoCodeReviewDepthAllowed = n.GetBoolValue(); } },
                 { "duo_dependency_bump_breaking_changes_enabled", n => { DuoDependencyBumpBreakingChangesEnabled = n.GetBoolValue(); } },
                 { "duo_remote_flows_enabled", n => { DuoRemoteFlowsEnabled = n.GetBoolValue(); } },
                 { "duo_sast_fp_detection_enabled", n => { DuoSastFpDetectionEnabled = n.GetBoolValue(); } },
@@ -698,6 +710,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteBoolValue("container_registry_enabled", ContainerRegistryEnabled);
             writer.WriteStringValue("description", Description);
             writer.WriteBoolValue("duo_code_review_decisions_enabled", DuoCodeReviewDecisionsEnabled);
+            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsImportRequestOverrideParamsDuoCodeReviewDefaultDepth>("duo_code_review_default_depth", DuoCodeReviewDefaultDepth);
+            writer.WriteBoolValue("duo_code_review_depth_allowed", DuoCodeReviewDepthAllowed);
             writer.WriteBoolValue("duo_dependency_bump_breaking_changes_enabled", DuoDependencyBumpBreakingChangesEnabled);
             writer.WriteBoolValue("duo_remote_flows_enabled", DuoRemoteFlowsEnabled);
             writer.WriteBoolValue("duo_sast_fp_detection_enabled", DuoSastFpDetectionEnabled);

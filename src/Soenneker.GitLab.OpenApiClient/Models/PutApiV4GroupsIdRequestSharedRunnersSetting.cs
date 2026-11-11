@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
-    /// <summary>Enable/disable shared runners for the group and its subgroups and projects</summary>
+    /// <summary>Enable/disable shared runners for the group and its subgroups and projects. `enabled` enables instance runners for all projects and subgroups in the group. `disabled_and_overridable` disables them, but subgroups can override the setting. `disabled_and_unoverridable` disables them, and subgroups cannot override the setting.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum PutApiV4GroupsIdRequestSharedRunnersSetting
     {

@@ -33,7 +33,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Date when the share expires.</summary>
         public Date? ExpiresAt { get => _explicitNullValueExpiresAt; set { _explicitNullValueExpiresAt = value; AdditionalData?.Remove("expires_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expires_at"); else _explicitNullProperties?.Remove("expires_at"); } }
         private Date? _explicitNullValueExpiresAt = default!;
-        /// <summary>Access level to grant to the invited group. For a list of values, see [roles](https://docs.gitlab.com/user/permissions/#default-roles).</summary>
+        /// <summary>Access level to grant to the invited group. For a list of values, see [roles](https://docs.gitlab.com/user/permissions/#default-roles). Possible values: `10` (Guest), `15` (Planner), `20` (Reporter), `25` (Security Manager), `30` (Developer), `40` (Maintainer), or `50` (Owner). On Premium and Ultimate, `5` (Minimal access) is also valid when `id` is a top-level group.</summary>
         public int? GroupAccess { get => _explicitNullValueGroupAccess; set { _explicitNullValueGroupAccess = value; AdditionalData?.Remove("group_access"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_access"); else _explicitNullProperties?.Remove("group_access"); } }
         private int? _explicitNullValueGroupAccess = default!;
         /// <summary>ID of the group to invite.</summary>

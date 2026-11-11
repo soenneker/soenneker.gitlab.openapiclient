@@ -29,13 +29,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The additions property</summary>
+        /// <summary>Number of added lines.</summary>
         public int? Additions { get => _explicitNullValueAdditions; set { _explicitNullValueAdditions = value; AdditionalData?.Remove("additions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("additions"); else _explicitNullProperties?.Remove("additions"); } }
         private int? _explicitNullValueAdditions = default!;
-        /// <summary>The deletions property</summary>
+        /// <summary>Number of deleted lines.</summary>
         public int? Deletions { get => _explicitNullValueDeletions; set { _explicitNullValueDeletions = value; AdditionalData?.Remove("deletions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deletions"); else _explicitNullProperties?.Remove("deletions"); } }
         private int? _explicitNullValueDeletions = default!;
-        /// <summary>The old_path property</summary>
+        /// <summary>Previous path of the file. Differs from `path` when the file was renamed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? OldPath { get => _explicitNullValueOldPath; set { _explicitNullValueOldPath = value; AdditionalData?.Remove("old_path"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("old_path"); else _explicitNullProperties?.Remove("old_path"); } }
@@ -45,7 +45,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string OldPath { get => _explicitNullValueOldPath; set { _explicitNullValueOldPath = value; AdditionalData?.Remove("old_path"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("old_path"); else _explicitNullProperties?.Remove("old_path"); } }
         private string _explicitNullValueOldPath = default!;
 #endif
-        /// <summary>The path property</summary>
+        /// <summary>Path of the file.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Path { get => _explicitNullValuePath; set { _explicitNullValuePath = value; AdditionalData?.Remove("path"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("path"); else _explicitNullProperties?.Remove("path"); } }

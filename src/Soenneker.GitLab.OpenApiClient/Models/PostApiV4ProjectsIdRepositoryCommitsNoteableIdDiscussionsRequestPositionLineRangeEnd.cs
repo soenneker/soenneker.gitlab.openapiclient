@@ -46,7 +46,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>End old_line line number</summary>
         public int? OldLine { get => _explicitNullValueOldLine; set { _explicitNullValueOldLine = value; AdditionalData?.Remove("old_line"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("old_line"); else _explicitNullProperties?.Remove("old_line"); } }
         private int? _explicitNullValueOldLine = default!;
-        /// <summary>End line type for multi-line note</summary>
+        /// <summary>End line type for multi-line note. Use `new` for an added line and `old` for a removed line. Omit for an unchanged line</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }

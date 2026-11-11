@@ -157,13 +157,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The allow_collaboration property</summary>
+        /// <summary>If `true`, the fork allows commits from members who can merge to the target branch. Returned only for merge requests from forks.</summary>
         public bool? AllowCollaboration { get => _explicitNullValueAllowCollaboration; set { _explicitNullValueAllowCollaboration = value; AdditionalData?.Remove("allow_collaboration"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allow_collaboration"); else _explicitNullProperties?.Remove("allow_collaboration"); } }
         private bool? _explicitNullValueAllowCollaboration = default!;
-        /// <summary>The allow_maintainer_to_push property</summary>
+        /// <summary>Returned only for merge requests from forks. Deprecated. Use `allow_collaboration` instead.</summary>
         public bool? AllowMaintainerToPush { get => _explicitNullValueAllowMaintainerToPush; set { _explicitNullValueAllowMaintainerToPush = value; AdditionalData?.Remove("allow_maintainer_to_push"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allow_maintainer_to_push"); else _explicitNullProperties?.Remove("allow_maintainer_to_push"); } }
         private bool? _explicitNullValueAllowMaintainerToPush = default!;
-        /// <summary>The approvals_before_merge property</summary>
+        /// <summary>Number of approvals required before the merge request can merge. Deprecated. To configure approval rules, use the merge request approvals API instead. Premium and Ultimate only.</summary>
         public int? ApprovalsBeforeMerge { get => _explicitNullValueApprovalsBeforeMerge; set { _explicitNullValueApprovalsBeforeMerge = value; AdditionalData?.Remove("approvals_before_merge"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approvals_before_merge"); else _explicitNullProperties?.Remove("approvals_before_merge"); } }
         private int? _explicitNullValueApprovalsBeforeMerge = default!;
         /// <summary>The assignee property</summary>
@@ -176,7 +176,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic Assignee { get => _explicitNullValueAssignee; set { _explicitNullValueAssignee = value; AdditionalData?.Remove("assignee"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assignee"); else _explicitNullProperties?.Remove("assignee"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic _explicitNullValueAssignee = default!;
 #endif
-        /// <summary>The assignees property</summary>
+        /// <summary>Users assigned to the merge request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic>? Assignees { get => _explicitNullValueAssignees; set { _explicitNullValueAssignees = value; AdditionalData?.Remove("assignees"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assignees"); else _explicitNullProperties?.Remove("assignees"); } }
@@ -196,10 +196,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequestAuthor Author { get => _explicitNullValueAuthor; set { _explicitNullValueAuthor = value; AdditionalData?.Remove("author"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("author"); else _explicitNullProperties?.Remove("author"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequestAuthor _explicitNullValueAuthor = default!;
 #endif
-        /// <summary>The blocking_discussions_resolved property</summary>
+        /// <summary>If `true`, no unresolved threads block the merge. Always `true` if the project does not require all threads to be resolved before merge.</summary>
         public bool? BlockingDiscussionsResolved { get => _explicitNullValueBlockingDiscussionsResolved; set { _explicitNullValueBlockingDiscussionsResolved = value; AdditionalData?.Remove("blocking_discussions_resolved"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("blocking_discussions_resolved"); else _explicitNullProperties?.Remove("blocking_discussions_resolved"); } }
         private bool? _explicitNullValueBlockingDiscussionsResolved = default!;
-        /// <summary>The changes_count property</summary>
+        /// <summary>Number of changed files in the merge request, as a string. Empty when the merge request is created, and populates asynchronously. When the diff exceeds the file limit, the value is the limit followed by `+`, like `&quot;1000+&quot;`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ChangesCount { get => _explicitNullValueChangesCount; set { _explicitNullValueChangesCount = value; AdditionalData?.Remove("changes_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("changes_count"); else _explicitNullProperties?.Remove("changes_count"); } }
@@ -209,7 +209,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string ChangesCount { get => _explicitNullValueChangesCount; set { _explicitNullValueChangesCount = value; AdditionalData?.Remove("changes_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("changes_count"); else _explicitNullProperties?.Remove("changes_count"); } }
         private string _explicitNullValueChangesCount = default!;
 #endif
-        /// <summary>The closed_at property</summary>
+        /// <summary>Timestamp of when the merge request was closed.</summary>
         public DateTimeOffset? ClosedAt { get => _explicitNullValueClosedAt; set { _explicitNullValueClosedAt = value; AdditionalData?.Remove("closed_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("closed_at"); else _explicitNullProperties?.Remove("closed_at"); } }
         private DateTimeOffset? _explicitNullValueClosedAt = default!;
         /// <summary>The closed_by property</summary>
@@ -235,7 +235,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
         private string _explicitNullValueDescription = default!;
 #endif
-        /// <summary>The description_html property</summary>
+        /// <summary>Description of the merge request rendered as HTML. Returned only if `render_html` is `true`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? DescriptionHtml { get => _explicitNullValueDescriptionHtml; set { _explicitNullValueDescriptionHtml = value; AdditionalData?.Remove("description_html"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description_html"); else _explicitNullProperties?.Remove("description_html"); } }
@@ -245,7 +245,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string DescriptionHtml { get => _explicitNullValueDescriptionHtml; set { _explicitNullValueDescriptionHtml = value; AdditionalData?.Remove("description_html"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description_html"); else _explicitNullProperties?.Remove("description_html"); } }
         private string _explicitNullValueDescriptionHtml = default!;
 #endif
-        /// <summary>The detailed_merge_status property</summary>
+        /// <summary>Detailed merge status of the merge request. Accounts for every check that can block a merge. Can be `approvals_syncing` (approvals are syncing), `checking` (Git is testing whether a valid merge is possible), `ci_must_pass` (a CI/CD pipeline must succeed before merge), `ci_still_running` (a CI/CD pipeline is still running), `commits_status` (the source branch must exist and contain commits), `conflict` (conflicts exist between the source and target branches), `discussions_not_resolved` (all discussions must be resolved before merge), `draft_status` (the merge request is a draft), `jira_association_missing` (the title or description must reference a Jira issue), `locked_lfs_files` (LFS files locked by other users must be unlocked before merge), `locked_paths` (paths locked by other users must be unlocked before merging to the default branch), `merge_request_blocked` (blocked by another merge request), `merge_time` (cannot be merged until after the specified time), `mergeable` (the branch can merge cleanly into the target branch), `need_rebase` (the merge request must be rebased), `not_approved` (approval is required before merge), `not_open` (the merge request must be open before merge), `preparing` (the merge request diff is being created), `requested_changes` (reviewers have requested changes), `security_policy_pipeline_check` (when security policies are enforced, all pipelines for the latest commit must succeed before merge), `security_policy_violations` (all security policies must be satisfied), `status_checks_must_pass` (all status checks must pass before merge), `title_regex` (the title must match the regular expression set in the project settings), or `unchecked` (Git has not yet tested whether a valid merge is possible).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? DetailedMergeStatus { get => _explicitNullValueDetailedMergeStatus; set { _explicitNullValueDetailedMergeStatus = value; AdditionalData?.Remove("detailed_merge_status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("detailed_merge_status"); else _explicitNullProperties?.Remove("detailed_merge_status"); } }
@@ -265,28 +265,28 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDiffRefs DiffRefs { get => _explicitNullValueDiffRefs; set { _explicitNullValueDiffRefs = value; AdditionalData?.Remove("diff_refs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("diff_refs"); else _explicitNullProperties?.Remove("diff_refs"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDiffRefs _explicitNullValueDiffRefs = default!;
 #endif
-        /// <summary>The discussion_locked property</summary>
+        /// <summary>If `true`, discussions are locked. Only project members can add, edit or resolve comments in locked discussions.</summary>
         public bool? DiscussionLocked { get => _explicitNullValueDiscussionLocked; set { _explicitNullValueDiscussionLocked = value; AdditionalData?.Remove("discussion_locked"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discussion_locked"); else _explicitNullProperties?.Remove("discussion_locked"); } }
         private bool? _explicitNullValueDiscussionLocked = default!;
-        /// <summary>The diverged_commits_count property</summary>
+        /// <summary>Number of commits the source branch is behind the target branch. Returned only if `include_diverged_commits_count` is `true`.</summary>
         public int? DivergedCommitsCount { get => _explicitNullValueDivergedCommitsCount; set { _explicitNullValueDivergedCommitsCount = value; AdditionalData?.Remove("diverged_commits_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("diverged_commits_count"); else _explicitNullProperties?.Remove("diverged_commits_count"); } }
         private int? _explicitNullValueDivergedCommitsCount = default!;
-        /// <summary>The downvotes property</summary>
+        /// <summary>Number of downvotes for the merge request.</summary>
         public int? Downvotes { get => _explicitNullValueDownvotes; set { _explicitNullValueDownvotes = value; AdditionalData?.Remove("downvotes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("downvotes"); else _explicitNullProperties?.Remove("downvotes"); } }
         private int? _explicitNullValueDownvotes = default!;
-        /// <summary>The draft property</summary>
+        /// <summary>If `true`, the merge request is a draft.</summary>
         public bool? Draft { get => _explicitNullValueDraft; set { _explicitNullValueDraft = value; AdditionalData?.Remove("draft"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("draft"); else _explicitNullProperties?.Remove("draft"); } }
         private bool? _explicitNullValueDraft = default!;
-        /// <summary>The first_contribution property</summary>
+        /// <summary>If `true`, the merge request is the author&apos;s first contribution to the project.</summary>
         public bool? FirstContribution { get => _explicitNullValueFirstContribution; set { _explicitNullValueFirstContribution = value; AdditionalData?.Remove("first_contribution"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("first_contribution"); else _explicitNullProperties?.Remove("first_contribution"); } }
         private bool? _explicitNullValueFirstContribution = default!;
-        /// <summary>The first_deployed_to_production_at property</summary>
+        /// <summary>Timestamp of when the first deployment to production finished.</summary>
         public DateTimeOffset? FirstDeployedToProductionAt { get => _explicitNullValueFirstDeployedToProductionAt; set { _explicitNullValueFirstDeployedToProductionAt = value; AdditionalData?.Remove("first_deployed_to_production_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("first_deployed_to_production_at"); else _explicitNullProperties?.Remove("first_deployed_to_production_at"); } }
         private DateTimeOffset? _explicitNullValueFirstDeployedToProductionAt = default!;
-        /// <summary>The force_remove_source_branch property</summary>
+        /// <summary>If `true`, the source branch is forced to be deleted after merge.</summary>
         public bool? ForceRemoveSourceBranch { get => _explicitNullValueForceRemoveSourceBranch; set { _explicitNullValueForceRemoveSourceBranch = value; AdditionalData?.Remove("force_remove_source_branch"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("force_remove_source_branch"); else _explicitNullProperties?.Remove("force_remove_source_branch"); } }
         private bool? _explicitNullValueForceRemoveSourceBranch = default!;
-        /// <summary>The has_conflicts property</summary>
+        /// <summary>If `true`, the merge request has conflicts and cannot merge. `false` unless `merge_status` is `cannot_be_merged`.</summary>
         public bool? HasConflicts { get => _explicitNullValueHasConflicts; set { _explicitNullValueHasConflicts = value; AdditionalData?.Remove("has_conflicts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("has_conflicts"); else _explicitNullProperties?.Remove("has_conflicts"); } }
         private bool? _explicitNullValueHasConflicts = default!;
         /// <summary>The head_pipeline property</summary>
@@ -305,10 +305,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The iid property</summary>
         public int? Iid { get => _explicitNullValueIid; set { _explicitNullValueIid = value; AdditionalData?.Remove("iid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("iid"); else _explicitNullProperties?.Remove("iid"); } }
         private int? _explicitNullValueIid = default!;
-        /// <summary>The imported property</summary>
+        /// <summary>If `true`, the merge request was imported.</summary>
         public bool? Imported { get => _explicitNullValueImported; set { _explicitNullValueImported = value; AdditionalData?.Remove("imported"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("imported"); else _explicitNullProperties?.Remove("imported"); } }
         private bool? _explicitNullValueImported = default!;
-        /// <summary>The imported_from property</summary>
+        /// <summary>Source of the import, such as `bitbucket`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ImportedFrom { get => _explicitNullValueImportedFrom; set { _explicitNullValueImportedFrom = value; AdditionalData?.Remove("imported_from"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("imported_from"); else _explicitNullProperties?.Remove("imported_from"); } }
@@ -318,7 +318,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string ImportedFrom { get => _explicitNullValueImportedFrom; set { _explicitNullValueImportedFrom = value; AdditionalData?.Remove("imported_from"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("imported_from"); else _explicitNullProperties?.Remove("imported_from"); } }
         private string _explicitNullValueImportedFrom = default!;
 #endif
-        /// <summary>The labels property</summary>
+        /// <summary>Names of the labels assigned to the merge request, sorted by name. If `with_labels_details` is `true`, an array of label objects with `id`, `name`, `color`, `text_color`, `description`, `description_html` and `archived` instead.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? Labels { get => _explicitNullValueLabels; set { _explicitNullValueLabels = value; AdditionalData?.Remove("labels"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("labels"); else _explicitNullProperties?.Remove("labels"); } }
@@ -328,16 +328,16 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public List<string> Labels { get => _explicitNullValueLabels; set { _explicitNullValueLabels = value; AdditionalData?.Remove("labels"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("labels"); else _explicitNullProperties?.Remove("labels"); } }
         private List<string> _explicitNullValueLabels = default!;
 #endif
-        /// <summary>The latest_build_finished_at property</summary>
+        /// <summary>Timestamp of when the latest build for the merge request finished.</summary>
         public DateTimeOffset? LatestBuildFinishedAt { get => _explicitNullValueLatestBuildFinishedAt; set { _explicitNullValueLatestBuildFinishedAt = value; AdditionalData?.Remove("latest_build_finished_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("latest_build_finished_at"); else _explicitNullProperties?.Remove("latest_build_finished_at"); } }
         private DateTimeOffset? _explicitNullValueLatestBuildFinishedAt = default!;
-        /// <summary>The latest_build_started_at property</summary>
+        /// <summary>Timestamp of when the latest build for the merge request started.</summary>
         public DateTimeOffset? LatestBuildStartedAt { get => _explicitNullValueLatestBuildStartedAt; set { _explicitNullValueLatestBuildStartedAt = value; AdditionalData?.Remove("latest_build_started_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("latest_build_started_at"); else _explicitNullProperties?.Remove("latest_build_started_at"); } }
         private DateTimeOffset? _explicitNullValueLatestBuildStartedAt = default!;
-        /// <summary>The merge_after property</summary>
+        /// <summary>If set, timestamp after which the merge request can be merged. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/510992) in GitLab 17.8.</summary>
         public DateTimeOffset? MergeAfter { get => _explicitNullValueMergeAfter; set { _explicitNullValueMergeAfter = value; AdditionalData?.Remove("merge_after"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_after"); else _explicitNullProperties?.Remove("merge_after"); } }
         private DateTimeOffset? _explicitNullValueMergeAfter = default!;
-        /// <summary>The merge_commit_sha property</summary>
+        /// <summary>SHA of the merge commit. `null` until the merge request is merged.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? MergeCommitSha { get => _explicitNullValueMergeCommitSha; set { _explicitNullValueMergeCommitSha = value; AdditionalData?.Remove("merge_commit_sha"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_commit_sha"); else _explicitNullProperties?.Remove("merge_commit_sha"); } }
@@ -347,7 +347,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string MergeCommitSha { get => _explicitNullValueMergeCommitSha; set { _explicitNullValueMergeCommitSha = value; AdditionalData?.Remove("merge_commit_sha"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_commit_sha"); else _explicitNullProperties?.Remove("merge_commit_sha"); } }
         private string _explicitNullValueMergeCommitSha = default!;
 #endif
-        /// <summary>The merged_at property</summary>
+        /// <summary>Timestamp of when the merge request was merged.</summary>
         public DateTimeOffset? MergedAt { get => _explicitNullValueMergedAt; set { _explicitNullValueMergedAt = value; AdditionalData?.Remove("merged_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merged_at"); else _explicitNullProperties?.Remove("merged_at"); } }
         private DateTimeOffset? _explicitNullValueMergedAt = default!;
         /// <summary>The merged_by property</summary>
@@ -360,7 +360,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic MergedBy { get => _explicitNullValueMergedBy; set { _explicitNullValueMergedBy = value; AdditionalData?.Remove("merged_by"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merged_by"); else _explicitNullProperties?.Remove("merged_by"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic _explicitNullValueMergedBy = default!;
 #endif
-        /// <summary>The merge_error property</summary>
+        /// <summary>Error message shown when a merge fails. To check mergeability, use `detailed_merge_status` instead.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? MergeError { get => _explicitNullValueMergeError; set { _explicitNullValueMergeError = value; AdditionalData?.Remove("merge_error"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_error"); else _explicitNullProperties?.Remove("merge_error"); } }
@@ -370,7 +370,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string MergeError { get => _explicitNullValueMergeError; set { _explicitNullValueMergeError = value; AdditionalData?.Remove("merge_error"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_error"); else _explicitNullProperties?.Remove("merge_error"); } }
         private string _explicitNullValueMergeError = default!;
 #endif
-        /// <summary>The merge_status property</summary>
+        /// <summary>Status of the merge request. Can be `unchecked`, `checking`, `can_be_merged`, `cannot_be_merged` or `cannot_be_merged_recheck`. Affects `has_conflicts`. Deprecated. Use `detailed_merge_status` instead.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? MergeStatus { get => _explicitNullValueMergeStatus; set { _explicitNullValueMergeStatus = value; AdditionalData?.Remove("merge_status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_status"); else _explicitNullProperties?.Remove("merge_status"); } }
@@ -390,7 +390,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic MergeUser { get => _explicitNullValueMergeUser; set { _explicitNullValueMergeUser = value; AdditionalData?.Remove("merge_user"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_user"); else _explicitNullProperties?.Remove("merge_user"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic _explicitNullValueMergeUser = default!;
 #endif
-        /// <summary>The merge_when_pipeline_succeeds property</summary>
+        /// <summary>If `true`, the merge request is set to auto-merge.</summary>
         public bool? MergeWhenPipelineSucceeds { get => _explicitNullValueMergeWhenPipelineSucceeds; set { _explicitNullValueMergeWhenPipelineSucceeds = value; AdditionalData?.Remove("merge_when_pipeline_succeeds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_when_pipeline_succeeds"); else _explicitNullProperties?.Remove("merge_when_pipeline_succeeds"); } }
         private bool? _explicitNullValueMergeWhenPipelineSucceeds = default!;
         /// <summary>The milestone property</summary>
@@ -413,16 +413,16 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiPipelineBasic Pipeline { get => _explicitNullValuePipeline; set { _explicitNullValuePipeline = value; AdditionalData?.Remove("pipeline"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pipeline"); else _explicitNullProperties?.Remove("pipeline"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiPipelineBasic _explicitNullValuePipeline = default!;
 #endif
-        /// <summary>The prepared_at property</summary>
+        /// <summary>Timestamp of when the merge request was prepared. Set one time, after the diff is created, pipeline creation and the mergeability check are started, Git LFS objects are linked, and notifications are sent. Not updated when more changes are added.</summary>
         public DateTimeOffset? PreparedAt { get => _explicitNullValuePreparedAt; set { _explicitNullValuePreparedAt = value; AdditionalData?.Remove("prepared_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prepared_at"); else _explicitNullProperties?.Remove("prepared_at"); } }
         private DateTimeOffset? _explicitNullValuePreparedAt = default!;
         /// <summary>The project_id property</summary>
         public long? ProjectId { get => _explicitNullValueProjectId; set { _explicitNullValueProjectId = value; AdditionalData?.Remove("project_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_id"); else _explicitNullProperties?.Remove("project_id"); } }
         private long? _explicitNullValueProjectId = default!;
-        /// <summary>The rebase_in_progress property</summary>
+        /// <summary>If `true`, a rebase operation is in progress on the source branch. Returned only if `include_rebase_in_progress` is `true`.</summary>
         public bool? RebaseInProgress { get => _explicitNullValueRebaseInProgress; set { _explicitNullValueRebaseInProgress = value; AdditionalData?.Remove("rebase_in_progress"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rebase_in_progress"); else _explicitNullProperties?.Remove("rebase_in_progress"); } }
         private bool? _explicitNullValueRebaseInProgress = default!;
-        /// <summary>The reference property</summary>
+        /// <summary>Internal reference of the merge request, in short format. Deprecated. Use `references` instead.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Reference { get => _explicitNullValueReference; set { _explicitNullValueReference = value; AdditionalData?.Remove("reference"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reference"); else _explicitNullProperties?.Remove("reference"); } }
@@ -442,7 +442,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesIssuableReferences References { get => _explicitNullValueReferences; set { _explicitNullValueReferences = value; AdditionalData?.Remove("references"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("references"); else _explicitNullProperties?.Remove("references"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesIssuableReferences _explicitNullValueReferences = default!;
 #endif
-        /// <summary>The reviewers property</summary>
+        /// <summary>Reviewers of the merge request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic>? Reviewers { get => _explicitNullValueReviewers; set { _explicitNullValueReviewers = value; AdditionalData?.Remove("reviewers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reviewers"); else _explicitNullProperties?.Remove("reviewers"); } }
@@ -452,7 +452,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic> Reviewers { get => _explicitNullValueReviewers; set { _explicitNullValueReviewers = value; AdditionalData?.Remove("reviewers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reviewers"); else _explicitNullProperties?.Remove("reviewers"); } }
         private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic> _explicitNullValueReviewers = default!;
 #endif
-        /// <summary>The sha property</summary>
+        /// <summary>SHA of the head commit of the source branch.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Sha { get => _explicitNullValueSha; set { _explicitNullValueSha = value; AdditionalData?.Remove("sha"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sha"); else _explicitNullProperties?.Remove("sha"); } }
@@ -462,10 +462,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Sha { get => _explicitNullValueSha; set { _explicitNullValueSha = value; AdditionalData?.Remove("sha"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sha"); else _explicitNullProperties?.Remove("sha"); } }
         private string _explicitNullValueSha = default!;
 #endif
-        /// <summary>The should_remove_source_branch property</summary>
+        /// <summary>If `true`, the source branch is deleted after merge.</summary>
         public bool? ShouldRemoveSourceBranch { get => _explicitNullValueShouldRemoveSourceBranch; set { _explicitNullValueShouldRemoveSourceBranch = value; AdditionalData?.Remove("should_remove_source_branch"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("should_remove_source_branch"); else _explicitNullProperties?.Remove("should_remove_source_branch"); } }
         private bool? _explicitNullValueShouldRemoveSourceBranch = default!;
-        /// <summary>The source_branch property</summary>
+        /// <summary>Name of the source branch.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SourceBranch { get => _explicitNullValueSourceBranch; set { _explicitNullValueSourceBranch = value; AdditionalData?.Remove("source_branch"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source_branch"); else _explicitNullProperties?.Remove("source_branch"); } }
@@ -475,13 +475,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string SourceBranch { get => _explicitNullValueSourceBranch; set { _explicitNullValueSourceBranch = value; AdditionalData?.Remove("source_branch"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source_branch"); else _explicitNullProperties?.Remove("source_branch"); } }
         private string _explicitNullValueSourceBranch = default!;
 #endif
-        /// <summary>The source_project_id property</summary>
+        /// <summary>ID of the source project. Equal to `target_project_id`, unless the merge request comes from a fork.</summary>
         public long? SourceProjectId { get => _explicitNullValueSourceProjectId; set { _explicitNullValueSourceProjectId = value; AdditionalData?.Remove("source_project_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source_project_id"); else _explicitNullProperties?.Remove("source_project_id"); } }
         private long? _explicitNullValueSourceProjectId = default!;
-        /// <summary>The squash property</summary>
+        /// <summary>If `true`, squash commits when merging. Project squash settings can override this value. Use `squash_on_merge` to take them into account.</summary>
         public bool? Squash { get => _explicitNullValueSquash; set { _explicitNullValueSquash = value; AdditionalData?.Remove("squash"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("squash"); else _explicitNullProperties?.Remove("squash"); } }
         private bool? _explicitNullValueSquash = default!;
-        /// <summary>The squash_commit_sha property</summary>
+        /// <summary>SHA of the squash commit. Empty until the merge request is merged.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SquashCommitSha { get => _explicitNullValueSquashCommitSha; set { _explicitNullValueSquashCommitSha = value; AdditionalData?.Remove("squash_commit_sha"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("squash_commit_sha"); else _explicitNullProperties?.Remove("squash_commit_sha"); } }
@@ -491,7 +491,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string SquashCommitSha { get => _explicitNullValueSquashCommitSha; set { _explicitNullValueSquashCommitSha = value; AdditionalData?.Remove("squash_commit_sha"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("squash_commit_sha"); else _explicitNullProperties?.Remove("squash_commit_sha"); } }
         private string _explicitNullValueSquashCommitSha = default!;
 #endif
-        /// <summary>The squash_on_merge property</summary>
+        /// <summary>If `true`, commits are squashed on merge.</summary>
         public bool? SquashOnMerge { get => _explicitNullValueSquashOnMerge; set { _explicitNullValueSquashOnMerge = value; AdditionalData?.Remove("squash_on_merge"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("squash_on_merge"); else _explicitNullProperties?.Remove("squash_on_merge"); } }
         private bool? _explicitNullValueSquashOnMerge = default!;
         /// <summary>The state property</summary>
@@ -504,10 +504,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string State { get => _explicitNullValueState; set { _explicitNullValueState = value; AdditionalData?.Remove("state"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("state"); else _explicitNullProperties?.Remove("state"); } }
         private string _explicitNullValueState = default!;
 #endif
-        /// <summary>The subscribed property</summary>
+        /// <summary>If `true`, the current user is subscribed to the merge request.</summary>
         public bool? Subscribed { get => _explicitNullValueSubscribed; set { _explicitNullValueSubscribed = value; AdditionalData?.Remove("subscribed"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscribed"); else _explicitNullProperties?.Remove("subscribed"); } }
         private bool? _explicitNullValueSubscribed = default!;
-        /// <summary>The target_branch property</summary>
+        /// <summary>Name of the target branch.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? TargetBranch { get => _explicitNullValueTargetBranch; set { _explicitNullValueTargetBranch = value; AdditionalData?.Remove("target_branch"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_branch"); else _explicitNullProperties?.Remove("target_branch"); } }
@@ -517,7 +517,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string TargetBranch { get => _explicitNullValueTargetBranch; set { _explicitNullValueTargetBranch = value; AdditionalData?.Remove("target_branch"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_branch"); else _explicitNullProperties?.Remove("target_branch"); } }
         private string _explicitNullValueTargetBranch = default!;
 #endif
-        /// <summary>The target_project_id property</summary>
+        /// <summary>ID of the target project.</summary>
         public long? TargetProjectId { get => _explicitNullValueTargetProjectId; set { _explicitNullValueTargetProjectId = value; AdditionalData?.Remove("target_project_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_project_id"); else _explicitNullProperties?.Remove("target_project_id"); } }
         private long? _explicitNullValueTargetProjectId = default!;
         /// <summary>The task_completion_status property</summary>
@@ -550,7 +550,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; AdditionalData?.Remove("title"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
         private string _explicitNullValueTitle = default!;
 #endif
-        /// <summary>The title_html property</summary>
+        /// <summary>Title of the merge request rendered as HTML. Returned only if `render_html` is `true`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? TitleHtml { get => _explicitNullValueTitleHtml; set { _explicitNullValueTitleHtml = value; AdditionalData?.Remove("title_html"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title_html"); else _explicitNullProperties?.Remove("title_html"); } }
@@ -563,10 +563,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The updated_at property</summary>
         public DateTimeOffset? UpdatedAt { get => _explicitNullValueUpdatedAt; set { _explicitNullValueUpdatedAt = value; AdditionalData?.Remove("updated_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updated_at"); else _explicitNullProperties?.Remove("updated_at"); } }
         private DateTimeOffset? _explicitNullValueUpdatedAt = default!;
-        /// <summary>The upvotes property</summary>
+        /// <summary>Number of upvotes for the merge request.</summary>
         public int? Upvotes { get => _explicitNullValueUpvotes; set { _explicitNullValueUpvotes = value; AdditionalData?.Remove("upvotes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("upvotes"); else _explicitNullProperties?.Remove("upvotes"); } }
         private int? _explicitNullValueUpvotes = default!;
-        /// <summary>The user property</summary>
+        /// <summary>Permissions of the current user for the merge request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequestUser? User { get => _explicitNullValueUser; set { _explicitNullValueUser = value; AdditionalData?.Remove("user"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user"); else _explicitNullProperties?.Remove("user"); } }
@@ -576,10 +576,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequestUser User { get => _explicitNullValueUser; set { _explicitNullValueUser = value; AdditionalData?.Remove("user"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user"); else _explicitNullProperties?.Remove("user"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequestUser _explicitNullValueUser = default!;
 #endif
-        /// <summary>The user_notes_count property</summary>
+        /// <summary>Number of user comments on the merge request.</summary>
         public int? UserNotesCount { get => _explicitNullValueUserNotesCount; set { _explicitNullValueUserNotesCount = value; AdditionalData?.Remove("user_notes_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_notes_count"); else _explicitNullProperties?.Remove("user_notes_count"); } }
         private int? _explicitNullValueUserNotesCount = default!;
-        /// <summary>The web_url property</summary>
+        /// <summary>Web URL of the merge request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? WebUrl { get => _explicitNullValueWebUrl; set { _explicitNullValueWebUrl = value; AdditionalData?.Remove("web_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("web_url"); else _explicitNullProperties?.Remove("web_url"); } }
@@ -589,7 +589,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string WebUrl { get => _explicitNullValueWebUrl; set { _explicitNullValueWebUrl = value; AdditionalData?.Remove("web_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("web_url"); else _explicitNullProperties?.Remove("web_url"); } }
         private string _explicitNullValueWebUrl = default!;
 #endif
-        /// <summary>The work_in_progress property</summary>
+        /// <summary>If `true`, the merge request is a draft. Deprecated. Use `draft` instead.</summary>
         public bool? WorkInProgress { get => _explicitNullValueWorkInProgress; set { _explicitNullValueWorkInProgress = value; AdditionalData?.Remove("work_in_progress"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("work_in_progress"); else _explicitNullProperties?.Remove("work_in_progress"); } }
         private bool? _explicitNullValueWorkInProgress = default!;
         /// <summary>

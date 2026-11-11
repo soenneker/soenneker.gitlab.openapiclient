@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Provisioned_users
         {
         }
         /// <summary>
-        /// Lists all provisioned users for a specified group.
+        /// Lists all provisioned users for a specified group. Subgroups are not included. Requires the Maintainer or Owner role for the group.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserPublic"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Provisioned_users
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserPublic>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserPublic.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Lists all provisioned users for a specified group.
+        /// Lists all provisioned users for a specified group. Subgroups are not included. Requires the Maintainer or Owner role for the group.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -80,7 +80,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Provisioned_users
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Provisioned_users.Provisioned_usersRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Lists all provisioned users for a specified group.
+        /// Lists all provisioned users for a specified group. Subgroups are not included. Requires the Maintainer or Owner role for the group.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Provisioned_usersRequestBuilderGetQueryParameters 

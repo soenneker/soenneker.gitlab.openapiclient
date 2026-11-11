@@ -33,7 +33,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Conan.V2.
         {
         }
         /// <summary>
-        /// Retrieves the metadata for all package references associated with a specified recipe revision. This feature was introduced in GitLab 18.1.
+        /// Retrieves the metadata for all package references associated with a specified recipe revision. The response maps each package reference to its metadata: `settings`, the build settings; `options`, the package options; `requires`, the required dependencies; and `recipe_hash`, the hash of the recipe. This feature was introduced in GitLab 18.1.
         /// </summary>
         /// <returns>A <see cref="Stream"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -51,7 +51,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Conan.V2.
             return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Retrieves the metadata for all package references associated with a specified recipe revision. This feature was introduced in GitLab 18.1.
+        /// Retrieves the metadata for all package references associated with a specified recipe revision. The response maps each package reference to its metadata: `settings`, the build settings; `options`, the package options; `requires`, the required dependencies; and `recipe_hash`, the hash of the recipe. This feature was introduced in GitLab 18.1.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

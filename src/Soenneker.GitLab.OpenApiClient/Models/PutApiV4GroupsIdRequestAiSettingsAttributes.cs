@@ -52,10 +52,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Confine the AI Catalog to items within this top-level group hierarchy</summary>
+        /// <summary>Confine the AI Catalog to items within this top-level group hierarchy. Can only be set on top-level groups.</summary>
         public bool? AiCatalogRestrictedToGroupHierarchy { get => _explicitNullValueAiCatalogRestrictedToGroupHierarchy; set { _explicitNullValueAiCatalogRestrictedToGroupHierarchy = value; AdditionalData?.Remove("ai_catalog_restricted_to_group_hierarchy"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ai_catalog_restricted_to_group_hierarchy"); else _explicitNullProperties?.Remove("ai_catalog_restricted_to_group_hierarchy"); } }
         private bool? _explicitNullValueAiCatalogRestrictedToGroupHierarchy = default!;
-        /// <summary>Enable AI usage data collection for this namespace</summary>
+        /// <summary>Enable AI usage data collection for this namespace. GitLab.com only.</summary>
         public bool? AiUsageDataCollectionEnabled { get => _explicitNullValueAiUsageDataCollectionEnabled; set { _explicitNullValueAiUsageDataCollectionEnabled = value; AdditionalData?.Remove("ai_usage_data_collection_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ai_usage_data_collection_enabled"); else _explicitNullProperties?.Remove("ai_usage_data_collection_enabled"); } }
         private bool? _explicitNullValueAiUsageDataCollectionEnabled = default!;
         /// <summary>Whether to allow all Unix sockets for network access</summary>
@@ -76,25 +76,25 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Whether to include recommended domains in the network access allowlist</summary>
         public bool? IncludeRecommendedAllowed { get => _explicitNullValueIncludeRecommendedAllowed; set { _explicitNullValueIncludeRecommendedAllowed = value; AdditionalData?.Remove("include_recommended_allowed"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("include_recommended_allowed"); else _explicitNullProperties?.Remove("include_recommended_allowed"); } }
         private bool? _explicitNullValueIncludeRecommendedAllowed = default!;
-        /// <summary>The minimum access level required to enable Duo Agent Platform. This field is behind a feature flag.</summary>
+        /// <summary>The minimum access level required to enable Duo Agent Platform. Behind a feature flag named `dap_group_customizable_permissions`, disabled by default.</summary>
         public int? MinimumAccessLevelEnableOnProjects { get => _explicitNullValueMinimumAccessLevelEnableOnProjects; set { _explicitNullValueMinimumAccessLevelEnableOnProjects = value; AdditionalData?.Remove("minimum_access_level_enable_on_projects"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minimum_access_level_enable_on_projects"); else _explicitNullProperties?.Remove("minimum_access_level_enable_on_projects"); } }
         private int? _explicitNullValueMinimumAccessLevelEnableOnProjects = default!;
-        /// <summary>The minimum access level required to execute Duo Agent Platform. This field is behind a feature flag.</summary>
+        /// <summary>The minimum access level required to execute Duo Agent Platform. Behind a feature flag named `dap_group_customizable_permissions`, disabled by default.</summary>
         public int? MinimumAccessLevelExecute { get => _explicitNullValueMinimumAccessLevelExecute; set { _explicitNullValueMinimumAccessLevelExecute = value; AdditionalData?.Remove("minimum_access_level_execute"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minimum_access_level_execute"); else _explicitNullProperties?.Remove("minimum_access_level_execute"); } }
         private int? _explicitNullValueMinimumAccessLevelExecute = default!;
-        /// <summary>The minimum access level required to execute Duo Agent Platform features in CI/CD. This field is behind a feature flag.</summary>
+        /// <summary>The minimum access level required to execute Duo Agent Platform features in CI/CD. Behind a feature flag named `dap_group_customizable_permissions`, disabled by default.</summary>
         public int? MinimumAccessLevelExecuteAsync { get => _explicitNullValueMinimumAccessLevelExecuteAsync; set { _explicitNullValueMinimumAccessLevelExecuteAsync = value; AdditionalData?.Remove("minimum_access_level_execute_async"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minimum_access_level_execute_async"); else _explicitNullProperties?.Remove("minimum_access_level_execute_async"); } }
         private int? _explicitNullValueMinimumAccessLevelExecuteAsync = default!;
-        /// <summary>The minimum access level required to manage Duo Agent Platform. This field is behind a feature flag.</summary>
+        /// <summary>The minimum access level required to manage Duo Agent Platform. Behind a feature flag named `dap_group_customizable_permissions`, disabled by default.</summary>
         public int? MinimumAccessLevelManage { get => _explicitNullValueMinimumAccessLevelManage; set { _explicitNullValueMinimumAccessLevelManage = value; AdditionalData?.Remove("minimum_access_level_manage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minimum_access_level_manage"); else _explicitNullProperties?.Remove("minimum_access_level_manage"); } }
         private int? _explicitNullValueMinimumAccessLevelManage = default!;
         /// <summary>Prompt injection protection level. One of `no_checks`, `log_only` or `interrupt`</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdRequestAiSettingsAttributesPromptInjectionProtectionLevel? PromptInjectionProtectionLevel { get => _explicitNullValuePromptInjectionProtectionLevel; set { _explicitNullValuePromptInjectionProtectionLevel = value; AdditionalData?.Remove("prompt_injection_protection_level"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prompt_injection_protection_level"); else _explicitNullProperties?.Remove("prompt_injection_protection_level"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdRequestAiSettingsAttributesPromptInjectionProtectionLevel? _explicitNullValuePromptInjectionProtectionLevel = default!;
-        /// <summary>Whether flows that run on GitLab Runner fail when the execution environment sandbox is unavailable</summary>
+        /// <summary>Whether flows that run on GitLab Runner fail when the execution environment sandbox is unavailable. Applies only to top-level groups on GitLab.com.</summary>
         public bool? RequireSandbox { get => _explicitNullValueRequireSandbox; set { _explicitNullValueRequireSandbox = value; AdditionalData?.Remove("require_sandbox"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("require_sandbox"); else _explicitNullProperties?.Remove("require_sandbox"); } }
         private bool? _explicitNullValueRequireSandbox = default!;
-        /// <summary>Allow web search in GitLab Duo Chat for this top-level group</summary>
+        /// <summary>Allow web search in GitLab Duo Chat for this top-level group. Can only be set on top-level groups.</summary>
         public bool? WebSearchEnabled { get => _explicitNullValueWebSearchEnabled; set { _explicitNullValueWebSearchEnabled = value; AdditionalData?.Remove("web_search_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("web_search_enabled"); else _explicitNullProperties?.Remove("web_search_enabled"); } }
         private bool? _explicitNullValueWebSearchEnabled = default!;
         /// <summary>

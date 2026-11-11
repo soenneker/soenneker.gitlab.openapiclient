@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Import.Bitbucket_server
         {
         }
         /// <summary>
-        /// Imports a repository from Bitbucket Server to GitLab. The Bitbucket Project Key is only used for finding the repository in Bitbucket. You must specify a `target_namespace` if you want to import the repository to a GitLab group.
+        /// Imports a repository from Bitbucket Server to GitLab. The Bitbucket Project Key is only used for finding the repository in Bitbucket. You must specify a `new_namespace` if you want to import the repository to a GitLab group. If you do not specify `new_namespace`, the project imports to your personal user namespace. This endpoint shares a rate limit with starting imports from the UI and with file-based project imports. By default, the limit is six requests per minute for each user. An administrator can change this limit in the application settings.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ProjectEntity"/></returns>
         /// <param name="body">The request body</param>
@@ -54,7 +54,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Import.Bitbucket_server
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ProjectEntity>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ProjectEntity.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Imports a repository from Bitbucket Server to GitLab. The Bitbucket Project Key is only used for finding the repository in Bitbucket. You must specify a `target_namespace` if you want to import the repository to a GitLab group.
+        /// Imports a repository from Bitbucket Server to GitLab. The Bitbucket Project Key is only used for finding the repository in Bitbucket. You must specify a `new_namespace` if you want to import the repository to a GitLab group. If you do not specify `new_namespace`, the project imports to your personal user namespace. This endpoint shares a rate limit with starting imports from the UI and with file-based project imports. By default, the limit is six requests per minute for each user. An administrator can change this limit in the application settings.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

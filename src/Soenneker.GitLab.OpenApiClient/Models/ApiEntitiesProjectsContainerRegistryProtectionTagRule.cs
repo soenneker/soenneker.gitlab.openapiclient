@@ -31,10 +31,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The id property</summary>
+        /// <summary>ID of the protection tag rule.</summary>
         public long? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private long? _explicitNullValueId = default!;
-        /// <summary>The minimum_access_level_for_delete property</summary>
+        /// <summary>Minimum access level required to delete container tags that match the pattern. One of `maintainer`, `owner`, or `admin`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? MinimumAccessLevelForDelete { get => _explicitNullValueMinimumAccessLevelForDelete; set { _explicitNullValueMinimumAccessLevelForDelete = value; AdditionalData?.Remove("minimum_access_level_for_delete"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minimum_access_level_for_delete"); else _explicitNullProperties?.Remove("minimum_access_level_for_delete"); } }
@@ -44,7 +44,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string MinimumAccessLevelForDelete { get => _explicitNullValueMinimumAccessLevelForDelete; set { _explicitNullValueMinimumAccessLevelForDelete = value; AdditionalData?.Remove("minimum_access_level_for_delete"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minimum_access_level_for_delete"); else _explicitNullProperties?.Remove("minimum_access_level_for_delete"); } }
         private string _explicitNullValueMinimumAccessLevelForDelete = default!;
 #endif
-        /// <summary>The minimum_access_level_for_push property</summary>
+        /// <summary>Minimum access level required to push container tags that match the pattern. One of `maintainer`, `owner`, or `admin`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? MinimumAccessLevelForPush { get => _explicitNullValueMinimumAccessLevelForPush; set { _explicitNullValueMinimumAccessLevelForPush = value; AdditionalData?.Remove("minimum_access_level_for_push"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minimum_access_level_for_push"); else _explicitNullProperties?.Remove("minimum_access_level_for_push"); } }
@@ -54,10 +54,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string MinimumAccessLevelForPush { get => _explicitNullValueMinimumAccessLevelForPush; set { _explicitNullValueMinimumAccessLevelForPush = value; AdditionalData?.Remove("minimum_access_level_for_push"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minimum_access_level_for_push"); else _explicitNullProperties?.Remove("minimum_access_level_for_push"); } }
         private string _explicitNullValueMinimumAccessLevelForPush = default!;
 #endif
-        /// <summary>The project_id property</summary>
+        /// <summary>ID of the project the rule belongs to.</summary>
         public long? ProjectId { get => _explicitNullValueProjectId; set { _explicitNullValueProjectId = value; AdditionalData?.Remove("project_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_id"); else _explicitNullProperties?.Remove("project_id"); } }
         private long? _explicitNullValueProjectId = default!;
-        /// <summary>The tag_name_pattern property</summary>
+        /// <summary>Pattern that matches container tag names. For example, `v*-release` or `latest`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? TagNamePattern { get => _explicitNullValueTagNamePattern; set { _explicitNullValueTagNamePattern = value; AdditionalData?.Remove("tag_name_pattern"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tag_name_pattern"); else _explicitNullProperties?.Remove("tag_name_pattern"); } }

@@ -77,7 +77,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic Author { get => _explicitNullValueAuthor; set { _explicitNullValueAuthor = value; AdditionalData?.Remove("author"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("author"); else _explicitNullProperties?.Remove("author"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic _explicitNullValueAuthor = default!;
 #endif
-        /// <summary>The body property</summary>
+        /// <summary>Content of the note.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Body { get => _explicitNullValueBody; set { _explicitNullValueBody = value; AdditionalData?.Remove("body"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("body"); else _explicitNullProperties?.Remove("body"); } }
@@ -110,10 +110,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The confidential property</summary>
         public bool? Confidential { get => _explicitNullValueConfidential; set { _explicitNullValueConfidential = value; AdditionalData?.Remove("confidential"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("confidential"); else _explicitNullProperties?.Remove("confidential"); } }
         private bool? _explicitNullValueConfidential = default!;
-        /// <summary>The created_at property</summary>
+        /// <summary>Date and time when the note was created.</summary>
         public DateTimeOffset? CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; AdditionalData?.Remove("created_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_at"); else _explicitNullProperties?.Remove("created_at"); } }
         private DateTimeOffset? _explicitNullValueCreatedAt = default!;
-        /// <summary>The id property</summary>
+        /// <summary>ID of the note.</summary>
         public long? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private long? _explicitNullValueId = default!;
         /// <summary>The imported property</summary>
@@ -132,13 +132,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The internal property</summary>
         public bool? Internal { get => _explicitNullValueInternal; set { _explicitNullValueInternal = value; AdditionalData?.Remove("internal"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("internal"); else _explicitNullProperties?.Remove("internal"); } }
         private bool? _explicitNullValueInternal = default!;
-        /// <summary>The noteable_id property</summary>
+        /// <summary>ID of the object the note belongs to, such as an issue or merge request.</summary>
         public long? NoteableId { get => _explicitNullValueNoteableId; set { _explicitNullValueNoteableId = value; AdditionalData?.Remove("noteable_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("noteable_id"); else _explicitNullProperties?.Remove("noteable_id"); } }
         private long? _explicitNullValueNoteableId = default!;
         /// <summary>The noteable_iid property</summary>
         public int? NoteableIid { get => _explicitNullValueNoteableIid; set { _explicitNullValueNoteableIid = value; AdditionalData?.Remove("noteable_iid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("noteable_iid"); else _explicitNullProperties?.Remove("noteable_iid"); } }
         private int? _explicitNullValueNoteableIid = default!;
-        /// <summary>The noteable_type property</summary>
+        /// <summary>Type of the object the note belongs to, such as `Issue` or `MergeRequest`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? NoteableType { get => _explicitNullValueNoteableType; set { _explicitNullValueNoteableType = value; AdditionalData?.Remove("noteable_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("noteable_type"); else _explicitNullProperties?.Remove("noteable_type"); } }
@@ -148,7 +148,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string NoteableType { get => _explicitNullValueNoteableType; set { _explicitNullValueNoteableType = value; AdditionalData?.Remove("noteable_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("noteable_type"); else _explicitNullProperties?.Remove("noteable_type"); } }
         private string _explicitNullValueNoteableType = default!;
 #endif
-        /// <summary>The position property</summary>
+        /// <summary>Position of the note in the diff. Returned only for diff notes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNotePositionProperty? Position { get => _explicitNullValuePosition; set { _explicitNullValuePosition = value; AdditionalData?.Remove("position"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("position"); else _explicitNullProperties?.Remove("position"); } }
@@ -158,16 +158,16 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNotePositionProperty Position { get => _explicitNullValuePosition; set { _explicitNullValuePosition = value; AdditionalData?.Remove("position"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("position"); else _explicitNullProperties?.Remove("position"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNotePositionProperty _explicitNullValuePosition = default!;
 #endif
-        /// <summary>The project_id property</summary>
+        /// <summary>ID of the project the note belongs to.</summary>
         public long? ProjectId { get => _explicitNullValueProjectId; set { _explicitNullValueProjectId = value; AdditionalData?.Remove("project_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_id"); else _explicitNullProperties?.Remove("project_id"); } }
         private long? _explicitNullValueProjectId = default!;
-        /// <summary>The resolvable property</summary>
+        /// <summary>If `true`, the note can be resolved.</summary>
         public bool? Resolvable { get => _explicitNullValueResolvable; set { _explicitNullValueResolvable = value; AdditionalData?.Remove("resolvable"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resolvable"); else _explicitNullProperties?.Remove("resolvable"); } }
         private bool? _explicitNullValueResolvable = default!;
-        /// <summary>The resolved property</summary>
+        /// <summary>If `true`, the note is resolved. Returned only for resolvable notes.</summary>
         public bool? Resolved { get => _explicitNullValueResolved; set { _explicitNullValueResolved = value; AdditionalData?.Remove("resolved"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resolved"); else _explicitNullProperties?.Remove("resolved"); } }
         private bool? _explicitNullValueResolved = default!;
-        /// <summary>The resolved_at property</summary>
+        /// <summary>Date and time when the note was resolved. Returned only for resolvable notes.</summary>
         public DateTimeOffset? ResolvedAt { get => _explicitNullValueResolvedAt; set { _explicitNullValueResolvedAt = value; AdditionalData?.Remove("resolved_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resolved_at"); else _explicitNullProperties?.Remove("resolved_at"); } }
         private DateTimeOffset? _explicitNullValueResolvedAt = default!;
         /// <summary>The resolved_by property</summary>
@@ -180,7 +180,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic ResolvedBy { get => _explicitNullValueResolvedBy; set { _explicitNullValueResolvedBy = value; AdditionalData?.Remove("resolved_by"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resolved_by"); else _explicitNullProperties?.Remove("resolved_by"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic _explicitNullValueResolvedBy = default!;
 #endif
-        /// <summary>The suggestions property</summary>
+        /// <summary>Suggestions in the note. Returned only for diff notes on merge requests.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSuggestion>? Suggestions { get => _explicitNullValueSuggestions; set { _explicitNullValueSuggestions = value; AdditionalData?.Remove("suggestions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("suggestions"); else _explicitNullProperties?.Remove("suggestions"); } }
@@ -190,10 +190,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSuggestion> Suggestions { get => _explicitNullValueSuggestions; set { _explicitNullValueSuggestions = value; AdditionalData?.Remove("suggestions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("suggestions"); else _explicitNullProperties?.Remove("suggestions"); } }
         private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSuggestion> _explicitNullValueSuggestions = default!;
 #endif
-        /// <summary>The system property</summary>
+        /// <summary>If `true`, the note is a system note.</summary>
         public bool? System { get => _explicitNullValueSystem; set { _explicitNullValueSystem = value; AdditionalData?.Remove("system"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("system"); else _explicitNullProperties?.Remove("system"); } }
         private bool? _explicitNullValueSystem = default!;
-        /// <summary>The type property</summary>
+        /// <summary>Type of the note, such as `DiscussionNote` or `DiffNote`. `null` for a plain note.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
@@ -203,7 +203,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private string _explicitNullValueType = default!;
 #endif
-        /// <summary>The updated_at property</summary>
+        /// <summary>Date and time when the note was last updated.</summary>
         public DateTimeOffset? UpdatedAt { get => _explicitNullValueUpdatedAt; set { _explicitNullValueUpdatedAt = value; AdditionalData?.Remove("updated_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updated_at"); else _explicitNullProperties?.Remove("updated_at"); } }
         private DateTimeOffset? _explicitNullValueUpdatedAt = default!;
         /// <summary>

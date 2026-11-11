@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Import.Bitbucket
         {
         }
         /// <summary>
-        /// Imports a repository from Bitbucket Cloud to GitLab. Prerequisites: - The prerequisites for Bitbucket Cloud importer. This feature was introduced in GitLab 17.0.
+        /// Imports a repository from Bitbucket Cloud to GitLab. Prerequisites: - The prerequisites for Bitbucket Cloud importer. You must have a Bitbucket Cloud API token with the `read:repository:bitbucket` and `read:pullrequest:bitbucket` scopes. This endpoint shares a rate limit with starting imports from the UI and with file-based project imports. By default, the limit is six requests per minute for each user. An administrator can change this limit in the application settings. This feature was introduced in GitLab 17.0.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ProjectImportEntity"/></returns>
         /// <param name="body">The request body</param>
@@ -54,7 +54,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Import.Bitbucket
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ProjectImportEntity>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ProjectImportEntity.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Imports a repository from Bitbucket Cloud to GitLab. Prerequisites: - The prerequisites for Bitbucket Cloud importer. This feature was introduced in GitLab 17.0.
+        /// Imports a repository from Bitbucket Cloud to GitLab. Prerequisites: - The prerequisites for Bitbucket Cloud importer. You must have a Bitbucket Cloud API token with the `read:repository:bitbucket` and `read:pullrequest:bitbucket` scopes. This endpoint shares a rate limit with starting imports from the UI and with file-based project imports. By default, the limit is six requests per minute for each user. An administrator can change this limit in the application settings. This feature was introduced in GitLab 17.0.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

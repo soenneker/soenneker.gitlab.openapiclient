@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Ite
         {
         }
         /// <summary>
-        /// Cancels an automatic merge for a merge request that has been set to merge automatically. Use this endpoint instead of `cancel_merge_when_pipeline_succeeds`, which returns a status hash rather than the merge request.
+        /// Cancels an automatic merge for a merge request that has been set to merge automatically. If the merge request is on a merge train, it is also removed from the train. Use this endpoint instead of `cancel_merge_when_pipeline_succeeds`, which returns a status hash rather than the merge request. This feature was introduced in GitLab 19.5.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequest"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Ite
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequest>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequest.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Cancels an automatic merge for a merge request that has been set to merge automatically. Use this endpoint instead of `cancel_merge_when_pipeline_succeeds`, which returns a status hash rather than the merge request.
+        /// Cancels an automatic merge for a merge request that has been set to merge automatically. If the merge request is on a merge train, it is also removed from the train. Use this endpoint instead of `cancel_merge_when_pipeline_succeeds`, which returns a status hash rather than the merge request. This feature was introduced in GitLab 19.5.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

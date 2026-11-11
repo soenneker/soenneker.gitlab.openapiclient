@@ -114,7 +114,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Date after which the merge request can be merged. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/510992) in GitLab 17.8.</summary>
         public DateTimeOffset? MergeAfter { get => _explicitNullValueMergeAfter; set { _explicitNullValueMergeAfter = value; AdditionalData?.Remove("merge_after"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_after"); else _explicitNullProperties?.Remove("merge_after"); } }
         private DateTimeOffset? _explicitNullValueMergeAfter = default!;
-        /// <summary>The title of a project or ancestor-group milestone to assign the merge request to. Mutually exclusive with `milestone_id`.</summary>
+        /// <summary>The title of a project or ancestor-group milestone to assign the merge request to. The title must match exactly, and matching is case-sensitive. Mutually exclusive with `milestone_id`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Milestone { get => _explicitNullValueMilestone; set { _explicitNullValueMilestone = value; AdditionalData?.Remove("milestone"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("milestone"); else _explicitNullProperties?.Remove("milestone"); } }

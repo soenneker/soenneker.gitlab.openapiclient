@@ -76,7 +76,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The additional_purchased_storage_size property</summary>
         public int? AdditionalPurchasedStorageSize { get => _explicitNullValueAdditionalPurchasedStorageSize; set { _explicitNullValueAdditionalPurchasedStorageSize = value; AdditionalData?.Remove("additional_purchased_storage_size"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("additional_purchased_storage_size"); else _explicitNullProperties?.Remove("additional_purchased_storage_size"); } }
         private int? _explicitNullValueAdditionalPurchasedStorageSize = default!;
-        /// <summary>The avatar_url property</summary>
+        /// <summary>URL of the namespace avatar. For a group, `null` if no avatar is set.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? AvatarUrl { get => _explicitNullValueAvatarUrl; set { _explicitNullValueAvatarUrl = value; AdditionalData?.Remove("avatar_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("avatar_url"); else _explicitNullProperties?.Remove("avatar_url"); } }
@@ -105,7 +105,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The extra_shared_runners_minutes_limit property</summary>
         public int? ExtraSharedRunnersMinutesLimit { get => _explicitNullValueExtraSharedRunnersMinutesLimit; set { _explicitNullValueExtraSharedRunnersMinutesLimit = value; AdditionalData?.Remove("extra_shared_runners_minutes_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extra_shared_runners_minutes_limit"); else _explicitNullProperties?.Remove("extra_shared_runners_minutes_limit"); } }
         private int? _explicitNullValueExtraSharedRunnersMinutesLimit = default!;
-        /// <summary>The full_path property</summary>
+        /// <summary>Full path of the namespace, including the paths of its parent groups.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? FullPath { get => _explicitNullValueFullPath; set { _explicitNullValueFullPath = value; AdditionalData?.Remove("full_path"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("full_path"); else _explicitNullProperties?.Remove("full_path"); } }
@@ -115,10 +115,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string FullPath { get => _explicitNullValueFullPath; set { _explicitNullValueFullPath = value; AdditionalData?.Remove("full_path"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("full_path"); else _explicitNullProperties?.Remove("full_path"); } }
         private string _explicitNullValueFullPath = default!;
 #endif
-        /// <summary>The id property</summary>
+        /// <summary>ID of the namespace.</summary>
         public long? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private long? _explicitNullValueId = default!;
-        /// <summary>The kind property</summary>
+        /// <summary>Type of the namespace: `user`, `group`, or `project`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Kind { get => _explicitNullValueKind; set { _explicitNullValueKind = value; AdditionalData?.Remove("kind"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("kind"); else _explicitNullProperties?.Remove("kind"); } }
@@ -134,10 +134,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The max_seats_used_changed_at property</summary>
         public Date? MaxSeatsUsedChangedAt { get => _explicitNullValueMaxSeatsUsedChangedAt; set { _explicitNullValueMaxSeatsUsedChangedAt = value; AdditionalData?.Remove("max_seats_used_changed_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("max_seats_used_changed_at"); else _explicitNullProperties?.Remove("max_seats_used_changed_at"); } }
         private Date? _explicitNullValueMaxSeatsUsedChangedAt = default!;
-        /// <summary>The members_count_with_descendants property</summary>
+        /// <summary>Number of members of the group and its subgroups. Returned only for groups, to users who can administer the group.</summary>
         public int? MembersCountWithDescendants { get => _explicitNullValueMembersCountWithDescendants; set { _explicitNullValueMembersCountWithDescendants = value; AdditionalData?.Remove("members_count_with_descendants"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("members_count_with_descendants"); else _explicitNullProperties?.Remove("members_count_with_descendants"); } }
         private int? _explicitNullValueMembersCountWithDescendants = default!;
-        /// <summary>The name property</summary>
+        /// <summary>Name of the namespace.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
@@ -147,10 +147,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string _explicitNullValueName = default!;
 #endif
-        /// <summary>The parent_id property</summary>
+        /// <summary>ID of the parent namespace. `null` for top-level namespaces.</summary>
         public long? ParentId { get => _explicitNullValueParentId; set { _explicitNullValueParentId = value; AdditionalData?.Remove("parent_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parent_id"); else _explicitNullProperties?.Remove("parent_id"); } }
         private long? _explicitNullValueParentId = default!;
-        /// <summary>The path property</summary>
+        /// <summary>Path of the namespace.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Path { get => _explicitNullValuePath; set { _explicitNullValuePath = value; AdditionalData?.Remove("path"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("path"); else _explicitNullProperties?.Remove("path"); } }
@@ -170,10 +170,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Plan { get => _explicitNullValuePlan; set { _explicitNullValuePlan = value; AdditionalData?.Remove("plan"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("plan"); else _explicitNullProperties?.Remove("plan"); } }
         private string _explicitNullValuePlan = default!;
 #endif
-        /// <summary>The projects_count property</summary>
+        /// <summary>Number of projects in the group and its subgroups. Returned only for groups, to users who can administer the group.</summary>
         public int? ProjectsCount { get => _explicitNullValueProjectsCount; set { _explicitNullValueProjectsCount = value; AdditionalData?.Remove("projects_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("projects_count"); else _explicitNullProperties?.Remove("projects_count"); } }
         private int? _explicitNullValueProjectsCount = default!;
-        /// <summary>The root_repository_size property</summary>
+        /// <summary>Total size of all repositories in the namespace, in bytes. Returned only for groups, to users who can administer the group.</summary>
         public int? RootRepositorySize { get => _explicitNullValueRootRepositorySize; set { _explicitNullValueRootRepositorySize = value; AdditionalData?.Remove("root_repository_size"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("root_repository_size"); else _explicitNullProperties?.Remove("root_repository_size"); } }
         private int? _explicitNullValueRootRepositorySize = default!;
         /// <summary>The seats_in_use property</summary>
@@ -188,7 +188,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The trial_ends_on property</summary>
         public Date? TrialEndsOn { get => _explicitNullValueTrialEndsOn; set { _explicitNullValueTrialEndsOn = value; AdditionalData?.Remove("trial_ends_on"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trial_ends_on"); else _explicitNullProperties?.Remove("trial_ends_on"); } }
         private Date? _explicitNullValueTrialEndsOn = default!;
-        /// <summary>The web_url property</summary>
+        /// <summary>Web URL of the namespace. For a user namespace, the URL of the user profile.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? WebUrl { get => _explicitNullValueWebUrl; set { _explicitNullValueWebUrl = value; AdditionalData?.Remove("web_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("web_url"); else _explicitNullProperties?.Remove("web_url"); } }

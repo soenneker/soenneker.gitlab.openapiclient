@@ -111,6 +111,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Ite
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Item.Cancel_merge_when_pipeline_succeeds.Cancel_merge_when_pipeline_succeedsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The changes property</summary>
+        [Obsolete("")]
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Item.Changes.ChangesRequestBuilder Changes
         {
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Item.Changes.ChangesRequestBuilder(PathParameters, RequestAdapter);

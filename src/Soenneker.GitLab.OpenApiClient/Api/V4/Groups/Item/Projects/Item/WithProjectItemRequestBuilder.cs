@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Projects.Item
         {
         }
         /// <summary>
-        /// Transfers a specified project to another group. Administrators only.
+        /// Transfers a specified project to another group. Administrators only. To transfer a project to any namespace, use `PUT /projects/:id/transfer` instead. The transfer can fail if image tags are present in the project&apos;s container registry.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroupDetail"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Projects.Item
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroupDetail>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroupDetail.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Transfers a specified project to another group. Administrators only.
+        /// Transfers a specified project to another group. Administrators only. To transfer a project to any namespace, use `PUT /projects/:id/transfer` instead. The transfer can fail if image tags are present in the project&apos;s container registry.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

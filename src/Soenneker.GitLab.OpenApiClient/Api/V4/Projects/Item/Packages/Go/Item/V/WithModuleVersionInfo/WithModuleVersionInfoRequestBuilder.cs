@@ -36,7 +36,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Go.Item.V
         {
         }
         /// <summary>
-        /// Get all tagged versions for a given Go module.See `go help goproxy`, GET $GOPROXY/&lt;module&gt;/@v/&lt;version&gt;.info. This feature was introduced in GitLab 13.1
+        /// Get the metadata of a given Go module version. See `go help goproxy`, GET $GOPROXY/&lt;module&gt;/@v/&lt;version&gt;.info. This endpoint is used by the `go` command and is not meant for manual consumption. It does not follow the standard API authentication methods. Undocumented authentication methods might be removed in the future. This feature was introduced in GitLab 13.1.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGoModuleVersion"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -54,7 +54,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Packages.Go.Item.V
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGoModuleVersion>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGoModuleVersion.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Get all tagged versions for a given Go module.See `go help goproxy`, GET $GOPROXY/&lt;module&gt;/@v/&lt;version&gt;.info. This feature was introduced in GitLab 13.1
+        /// Get the metadata of a given Go module version. See `go help goproxy`, GET $GOPROXY/&lt;module&gt;/@v/&lt;version&gt;.info. This endpoint is used by the `go` command and is not meant for manual consumption. It does not follow the standard API authentication methods. Undocumented authentication methods might be removed in the future. This feature was introduced in GitLab 13.1.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

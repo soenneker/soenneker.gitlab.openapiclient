@@ -25,7 +25,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The approved_at property</summary>
+        /// <summary>Timestamp of when the user approved the merge request.</summary>
         public DateTimeOffset? ApprovedAt { get => _explicitNullValueApprovedAt; set { _explicitNullValueApprovedAt = value; AdditionalData?.Remove("approved_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approved_at"); else _explicitNullProperties?.Remove("approved_at"); } }
         private DateTimeOffset? _explicitNullValueApprovedAt = default!;
         /// <summary>The user property</summary>

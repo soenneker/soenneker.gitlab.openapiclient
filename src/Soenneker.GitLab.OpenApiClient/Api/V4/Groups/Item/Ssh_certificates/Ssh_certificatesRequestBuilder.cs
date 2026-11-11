@@ -47,7 +47,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Ssh_certificates
         {
         }
         /// <summary>
-        /// Lists all SSH certificates for a specified group.
+        /// Lists all SSH certificates for a specified group. This feature was introduced in GitLab 16.4.
         /// </summary>
         /// <returns>A List&lt;global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSshCertificate&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -66,7 +66,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Ssh_certificates
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// Adds a group SSH certificate for a specified group.
+        /// Adds a group SSH certificate for a specified group. This feature was introduced in GitLab 16.4.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSshCertificate"/></returns>
         /// <param name="body">The request body</param>
@@ -86,7 +86,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Ssh_certificates
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSshCertificate>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSshCertificate.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Lists all SSH certificates for a specified group.
+        /// Lists all SSH certificates for a specified group. This feature was introduced in GitLab 16.4.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -105,7 +105,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Ssh_certificates
             return requestInfo;
         }
         /// <summary>
-        /// Adds a group SSH certificate for a specified group.
+        /// Adds a group SSH certificate for a specified group. This feature was introduced in GitLab 16.4.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -136,7 +136,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Ssh_certificates
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Ssh_certificates.Ssh_certificatesRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Lists all SSH certificates for a specified group.
+        /// Lists all SSH certificates for a specified group. This feature was introduced in GitLab 16.4.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Ssh_certificatesRequestBuilderGetQueryParameters 

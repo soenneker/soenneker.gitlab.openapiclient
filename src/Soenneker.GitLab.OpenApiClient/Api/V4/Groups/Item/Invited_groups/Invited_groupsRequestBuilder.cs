@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Invited_groups
         {
         }
         /// <summary>
-        /// Lists all groups invited to a specified group.
+        /// Lists all groups invited to a specified group. Unauthenticated requests return only public invited groups. By default, this endpoint is rate-limited to 60 requests per minute for each user, or for each IP address for unauthenticated requests.
         /// </summary>
         /// <returns>A List&lt;global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroup&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -53,7 +53,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Invited_groups
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// Lists all groups invited to a specified group.
+        /// Lists all groups invited to a specified group. Unauthenticated requests return only public invited groups. By default, this endpoint is rate-limited to 60 requests per minute for each user, or for each IP address for unauthenticated requests.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -81,7 +81,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Invited_groups
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Invited_groups.Invited_groupsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Lists all groups invited to a specified group.
+        /// Lists all groups invited to a specified group. Unauthenticated requests return only public invited groups. By default, this endpoint is rate-limited to 60 requests per minute for each user, or for each IP address for unauthenticated requests.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Invited_groupsRequestBuilderGetQueryParameters 

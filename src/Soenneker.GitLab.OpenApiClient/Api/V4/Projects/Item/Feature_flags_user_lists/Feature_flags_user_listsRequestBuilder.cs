@@ -66,7 +66,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Feature_flags_user
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// Creates a feature flag user list in a specified project.
+        /// Creates a feature flag user list in a specified project. The bytes of `user_xids` written count toward a per-user rate limit (`feature_flag_user_list_write_bytes_limit_per_user` application setting). Until the `rate_limit_feature_flag_user_list_write_bytes` feature flag is enabled, requests over this limit are logged but not blocked.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFeatureFlagUserList"/></returns>
         /// <param name="body">The request body</param>
@@ -105,7 +105,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Feature_flags_user
             return requestInfo;
         }
         /// <summary>
-        /// Creates a feature flag user list in a specified project.
+        /// Creates a feature flag user list in a specified project. The bytes of `user_xids` written count toward a per-user rate limit (`feature_flag_user_list_write_bytes_limit_per_user` application setting). Until the `rate_limit_feature_flag_user_list_write_bytes` feature flag is enabled, requests over this limit are logged but not blocked.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

@@ -46,7 +46,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Export_relations
         {
         }
         /// <summary>
-        /// Schedules a relations export for a specified project.
+        /// Schedules a relations export for a specified project. By default, this endpoint is limited to 6 requests per minute for each user and project. The instance must meet the direct transfer prerequisites, including the `bulk_import_enabled` application setting. If the setting is disabled, a `404` is returned. This endpoint cannot be used with the file-based group import and export API.
         /// </summary>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -65,7 +65,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Export_relations
             await RequestAdapter.SendNoContentAsync(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Schedules a relations export for a specified project.
+        /// Schedules a relations export for a specified project. By default, this endpoint is limited to 6 requests per minute for each user and project. The instance must meet the direct transfer prerequisites, including the `bulk_import_enabled` application setting. If the setting is disabled, a `404` is returned. This endpoint cannot be used with the file-based group import and export API.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

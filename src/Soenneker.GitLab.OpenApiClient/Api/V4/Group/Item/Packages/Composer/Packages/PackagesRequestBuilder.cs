@@ -33,7 +33,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Group.Item.Packages.Composer.Pac
         {
         }
         /// <summary>
-        /// Retrieves the repository URL templates for requesting individual packages for a group.
+        /// Retrieves the repository URL templates for requesting individual packages for a group. Composer V1 and V2 both use this endpoint. If the `User-Agent` header contains `Composer/2`, the endpoint returns the V2 response, which contains only `packages` and the `metadata-url` template. Composer V2 is recommended over V1.
         /// </summary>
         /// <returns>A <see cref="Stream"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -51,7 +51,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Group.Item.Packages.Composer.Pac
             return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Retrieves the repository URL templates for requesting individual packages for a group.
+        /// Retrieves the repository URL templates for requesting individual packages for a group. Composer V1 and V2 both use this endpoint. If the `User-Agent` header contains `Composer/2`, the endpoint returns the V2 response, which contains only `packages` and the `metadata-url` template. Composer V2 is recommended over V1.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

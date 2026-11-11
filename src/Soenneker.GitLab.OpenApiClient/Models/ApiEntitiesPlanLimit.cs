@@ -49,6 +49,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             else if (parseNode.GetChildNode("dotenv_size") is { } nullNodeDotenvSize && nullNodeDotenvSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DotenvSize = null;
             if (parseNode.GetChildNode("dotenv_variables") is null) { _explicitNullValueDotenvVariables = default!; _explicitNullProperties?.Remove("dotenv_variables"); }
             else if (parseNode.GetChildNode("dotenv_variables") is { } nullNodeDotenvVariables && nullNodeDotenvVariables.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DotenvVariables = null;
+            if (parseNode.GetChildNode("draft_notes_per_merge_request") is null) { _explicitNullValueDraftNotesPerMergeRequest = default!; _explicitNullProperties?.Remove("draft_notes_per_merge_request"); }
+            else if (parseNode.GetChildNode("draft_notes_per_merge_request") is { } nullNodeDraftNotesPerMergeRequest && nullNodeDraftNotesPerMergeRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DraftNotesPerMergeRequest = null;
             if (parseNode.GetChildNode("enforcement_limit") is null) { _explicitNullValueEnforcementLimit = default!; _explicitNullProperties?.Remove("enforcement_limit"); }
             else if (parseNode.GetChildNode("enforcement_limit") is { } nullNodeEnforcementLimit && nullNodeEnforcementLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnforcementLimit = null;
             if (parseNode.GetChildNode("generic_packages_max_file_size") is null) { _explicitNullValueGenericPackagesMaxFileSize = default!; _explicitNullProperties?.Remove("generic_packages_max_file_size"); }
@@ -145,6 +147,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The dotenv_variables property</summary>
         public int? DotenvVariables { get => _explicitNullValueDotenvVariables; set { _explicitNullValueDotenvVariables = value; AdditionalData?.Remove("dotenv_variables"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dotenv_variables"); else _explicitNullProperties?.Remove("dotenv_variables"); } }
         private int? _explicitNullValueDotenvVariables = default!;
+        /// <summary>The draft_notes_per_merge_request property</summary>
+        public int? DraftNotesPerMergeRequest { get => _explicitNullValueDraftNotesPerMergeRequest; set { _explicitNullValueDraftNotesPerMergeRequest = value; AdditionalData?.Remove("draft_notes_per_merge_request"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("draft_notes_per_merge_request"); else _explicitNullProperties?.Remove("draft_notes_per_merge_request"); } }
+        private int? _explicitNullValueDraftNotesPerMergeRequest = default!;
         /// <summary>The enforcement_limit property</summary>
         public int? EnforcementLimit { get => _explicitNullValueEnforcementLimit; set { _explicitNullValueEnforcementLimit = value; AdditionalData?.Remove("enforcement_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enforcement_limit"); else _explicitNullProperties?.Remove("enforcement_limit"); } }
         private int? _explicitNullValueEnforcementLimit = default!;
@@ -259,6 +264,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "conan_max_file_size", n => { ConanMaxFileSize = n.GetLongValue(); } },
                 { "dotenv_size", n => { DotenvSize = n.GetIntValue(); } },
                 { "dotenv_variables", n => { DotenvVariables = n.GetIntValue(); } },
+                { "draft_notes_per_merge_request", n => { DraftNotesPerMergeRequest = n.GetIntValue(); } },
                 { "enforcement_limit", n => { EnforcementLimit = n.GetIntValue(); } },
                 { "generic_packages_max_file_size", n => { GenericPackagesMaxFileSize = n.GetLongValue(); } },
                 { "helm_max_file_size", n => { HelmMaxFileSize = n.GetIntValue(); } },
@@ -306,6 +312,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteLongValue("conan_max_file_size", ConanMaxFileSize);
             writer.WriteIntValue("dotenv_size", DotenvSize);
             writer.WriteIntValue("dotenv_variables", DotenvVariables);
+            writer.WriteIntValue("draft_notes_per_merge_request", DraftNotesPerMergeRequest);
             writer.WriteIntValue("enforcement_limit", EnforcementLimit);
             writer.WriteLongValue("generic_packages_max_file_size", GenericPackagesMaxFileSize);
             writer.WriteIntValue("helm_max_file_size", HelmMaxFileSize);

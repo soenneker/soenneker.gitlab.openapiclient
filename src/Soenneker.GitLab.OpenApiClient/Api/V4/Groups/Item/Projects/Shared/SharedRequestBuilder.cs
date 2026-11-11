@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Projects.Shared
         {
         }
         /// <summary>
-        /// Lists all projects shared with a specified group.
+        /// Lists all projects shared with a specified group. Unauthenticated requests return only public shared projects.
         /// </summary>
         /// <returns>A List&lt;global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProject&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -53,7 +53,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Projects.Shared
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// Lists all projects shared with a specified group.
+        /// Lists all projects shared with a specified group. Unauthenticated requests return only public shared projects.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -81,7 +81,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Projects.Shared
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Projects.Shared.SharedRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Lists all projects shared with a specified group.
+        /// Lists all projects shared with a specified group. Unauthenticated requests return only public shared projects.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class SharedRequestBuilderGetQueryParameters 
@@ -130,7 +130,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Projects.Shared
             /// <summary>If `true`, returns only projects starred by the current user.</summary>
             [QueryParameter("starred")]
             public bool? Starred { get; set; }
-            /// <summary>Return groups with the specified visibility.</summary>
+            /// <summary>Return projects with the specified visibility.</summary>
             [QueryParameter("visibility")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4GroupsIdProjectsSharedVisibilityParameter? Visibility { get; set; }
             /// <summary>If `true`, includes [custom attributes](https://docs.gitlab.com/api/custom_attributes/) in the response. Administrators only.</summary>

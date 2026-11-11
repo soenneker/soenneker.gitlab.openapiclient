@@ -471,7 +471,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item
         {
         }
         /// <summary>
-        /// Schedules a group for deletion. Groups are deleted at the end of the retention period (30 days by default). Use the `permanently_remove` param to override the retention period.
+        /// Schedules a group for deletion. Groups are deleted at the end of the retention period (30 days by default). Use the `permanently_remove` param to override the retention period. On GitLab.com, groups are retained for 30 days. On GitLab Self-Managed, the retention period is set in the instance settings. A group that is linked to a subscription cannot be deleted. You must be an administrator or have the Owner role for the group.
         /// </summary>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -488,7 +488,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item
             await RequestAdapter.SendNoContentAsync(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Retrieves a specified group by ID or path.
+        /// Retrieves a specified group by ID or path. Public groups can be retrieved without authentication. The `runners_token` attribute is returned only to administrators and users with the Owner role for the group. The `enabled_git_access_protocol` attribute is returned only to those users, and only for top-level groups. The `projects` and `shared_projects` attributes are deprecated and scheduled for removal in API v5. Each returns at most 100 projects.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroupDetail"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -506,27 +506,27 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroupDetail>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroupDetail.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Updates the attributes for a specified group. You must be an administrator or have the Owner role for the group.
+        /// Updates the attributes for a specified group. You must be an administrator or have the Owner role for the group. The `projects` and `shared_projects` attributes in the response are deprecated and scheduled for removal in API v5. Each returns at most 100 projects.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroup"/></returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroupDetail"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroup?> PutAsync(global::Microsoft.Kiota.Abstractions.MultipartBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroupDetail?> PutAsync(global::Microsoft.Kiota.Abstractions.MultipartBody body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroup> PutAsync(global::Microsoft.Kiota.Abstractions.MultipartBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroupDetail> PutAsync(global::Microsoft.Kiota.Abstractions.MultipartBody body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPutRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroup>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroup.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroupDetail>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroupDetail.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Schedules a group for deletion. Groups are deleted at the end of the retention period (30 days by default). Use the `permanently_remove` param to override the retention period.
+        /// Schedules a group for deletion. Groups are deleted at the end of the retention period (30 days by default). Use the `permanently_remove` param to override the retention period. On GitLab.com, groups are retained for 30 days. On GitLab Self-Managed, the retention period is set in the instance settings. A group that is linked to a subscription cannot be deleted. You must be an administrator or have the Owner role for the group.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -544,7 +544,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item
             return requestInfo;
         }
         /// <summary>
-        /// Retrieves a specified group by ID or path.
+        /// Retrieves a specified group by ID or path. Public groups can be retrieved without authentication. The `runners_token` attribute is returned only to administrators and users with the Owner role for the group. The `enabled_git_access_protocol` attribute is returned only to those users, and only for top-level groups. The `projects` and `shared_projects` attributes are deprecated and scheduled for removal in API v5. Each returns at most 100 projects.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -563,7 +563,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item
             return requestInfo;
         }
         /// <summary>
-        /// Updates the attributes for a specified group. You must be an administrator or have the Owner role for the group.
+        /// Updates the attributes for a specified group. You must be an administrator or have the Owner role for the group. The `projects` and `shared_projects` attributes in the response are deprecated and scheduled for removal in API v5. Each returns at most 100 projects.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -594,7 +594,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.GroupsItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Retrieves a specified group by ID or path.
+        /// Retrieves a specified group by ID or path. Public groups can be retrieved without authentication. The `runners_token` attribute is returned only to administrators and users with the Owner role for the group. The `enabled_git_access_protocol` attribute is returned only to those users, and only for top-level groups. The `projects` and `shared_projects` attributes are deprecated and scheduled for removal in API v5. Each returns at most 100 projects.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class GroupsItemRequestBuilderGetQueryParameters 

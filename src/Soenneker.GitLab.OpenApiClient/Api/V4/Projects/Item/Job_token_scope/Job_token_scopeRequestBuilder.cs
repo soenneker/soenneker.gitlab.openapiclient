@@ -64,7 +64,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Job_token_scope
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectJobTokenScope>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectJobTokenScope.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Updates the **Authorized groups and projects** setting (job token scope) of a specified project.
+        /// Updates the **Authorized groups and projects** setting (job token scope) of a specified project. If the **Enforce job token allowlist** instance setting is enabled, setting `enabled` to `false` returns `400 Bad Request` with an error message.
         /// </summary>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -102,7 +102,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Job_token_scope
             return requestInfo;
         }
         /// <summary>
-        /// Updates the **Authorized groups and projects** setting (job token scope) of a specified project.
+        /// Updates the **Authorized groups and projects** setting (job token scope) of a specified project. If the **Enforce job token allowlist** instance setting is enabled, setting `enabled` to `false` returns `400 Bad Request` with an error message.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

@@ -47,7 +47,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Ite
         {
         }
         /// <summary>
-        /// List all merge request dependencies for a specified merge request.
+        /// List all merge request dependencies for a specified merge request. Dependencies must be resolved before the merge request can merge. If the user does not have access to a blocking merge request, the `blocking_merge_request` attribute is not returned.
         /// </summary>
         /// <returns>A List&lt;global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequestDependency&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -85,7 +85,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Ite
             await RequestAdapter.SendNoContentAsync(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// List all merge request dependencies for a specified merge request.
+        /// List all merge request dependencies for a specified merge request. Dependencies must be resolved before the merge request can merge. If the user does not have access to a blocking merge request, the `blocking_merge_request` attribute is not returned.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -134,7 +134,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Ite
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_requests.Item.Blocks.BlocksRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// List all merge request dependencies for a specified merge request.
+        /// List all merge request dependencies for a specified merge request. Dependencies must be resolved before the merge request can merge. If the user does not have access to a blocking merge request, the `blocking_merge_request` attribute is not returned.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class BlocksRequestBuilderGetQueryParameters 

@@ -16,7 +16,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Wiki_pages
     public partial class Wiki_pagesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.groups.item.wiki_pages.item collection</summary>
-        /// <param name="position">ID of the resource the note is attached to.</param>
+        /// <param name="position">ID of the wiki page meta. Use the meta ID, not the page slug. A slug returns a `404` error.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Wiki_pages.Item.WithNoteableItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Wiki_pages.Item.WithNoteableItemRequestBuilder this[int position]
         {

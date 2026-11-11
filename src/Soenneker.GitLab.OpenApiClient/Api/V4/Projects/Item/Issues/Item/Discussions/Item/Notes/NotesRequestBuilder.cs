@@ -66,7 +66,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.Item.Discus
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// Adds a comment to a specified issue discussion.
+        /// Adds a comment to a specified issue discussion. If the discussion is a single comment, the comment becomes a thread.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNote"/></returns>
         /// <param name="body">The request body</param>
@@ -105,7 +105,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.Item.Discus
             return requestInfo;
         }
         /// <summary>
-        /// Adds a comment to a specified issue discussion.
+        /// Adds a comment to a specified issue discussion. If the discussion is a single comment, the comment becomes a thread.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

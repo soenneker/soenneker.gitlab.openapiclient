@@ -47,7 +47,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Debian_distributio
         {
         }
         /// <summary>
-        /// Lists all Debian distributions for a specified project.
+        /// Lists all Debian distributions for a specified project. `suite` filters the results by suite.
         /// </summary>
         /// <returns>A List&lt;global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackagesDebianDistribution&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -86,7 +86,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Debian_distributio
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackagesDebianDistribution>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackagesDebianDistribution.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Lists all Debian distributions for a specified project.
+        /// Lists all Debian distributions for a specified project. `suite` filters the results by suite.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -136,7 +136,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Debian_distributio
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Debian_distributions.Debian_distributionsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Lists all Debian distributions for a specified project.
+        /// Lists all Debian distributions for a specified project. `suite` filters the results by suite.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Debian_distributionsRequestBuilderGetQueryParameters 
@@ -151,7 +151,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Debian_distributio
             [QueryParameter("architectures")]
             public string[] Architectures { get; set; }
 #endif
-            /// <summary>Codename of the Debian distribution.</summary>
+            /// <summary>Codename of the Debian distribution. Filters the results by codename.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("codename")]

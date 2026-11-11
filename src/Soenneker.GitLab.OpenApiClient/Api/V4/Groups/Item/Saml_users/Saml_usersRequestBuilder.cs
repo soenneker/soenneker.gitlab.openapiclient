@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Saml_users
         {
         }
         /// <summary>
-        /// Lists all SAML users for a specified top-level group. Use the `page` and `per_page` pagination parameters to filter the results.
+        /// Lists all SAML users for a specified top-level group. Use the `page` and `per_page` pagination parameters to filter the results. This feature was introduced in GitLab 18.1.
         /// </summary>
         /// <returns>A List&lt;global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserPublic&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -53,7 +53,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Saml_users
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// Lists all SAML users for a specified top-level group. Use the `page` and `per_page` pagination parameters to filter the results.
+        /// Lists all SAML users for a specified top-level group. Use the `page` and `per_page` pagination parameters to filter the results. This feature was introduced in GitLab 18.1.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -81,7 +81,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Saml_users
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Saml_users.Saml_usersRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Lists all SAML users for a specified top-level group. Use the `page` and `per_page` pagination parameters to filter the results.
+        /// Lists all SAML users for a specified top-level group. Use the `page` and `per_page` pagination parameters to filter the results. This feature was introduced in GitLab 18.1.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Saml_usersRequestBuilderGetQueryParameters 

@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Export_relations.Sta
         {
         }
         /// <summary>
-        /// Retrieves the status of a relations export for a group.
+        /// Retrieves the status of a relations export for a group. The status is one of `0` (started), `1` (finished), or `-1` (failed).
         /// </summary>
         /// <returns>A List&lt;global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBulkImportsExportStatus&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -53,7 +53,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Export_relations.Sta
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// Retrieves the status of a relations export for a group.
+        /// Retrieves the status of a relations export for a group. The status is one of `0` (started), `1` (finished), or `-1` (failed).
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -81,7 +81,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Export_relations.Sta
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Export_relations.Status.StatusRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Retrieves the status of a relations export for a group.
+        /// Retrieves the status of a relations export for a group. The status is one of `0` (started), `1` (finished), or `-1` (failed).
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class StatusRequestBuilderGetQueryParameters 

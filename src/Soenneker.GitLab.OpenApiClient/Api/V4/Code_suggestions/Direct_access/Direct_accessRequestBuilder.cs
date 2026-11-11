@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Code_suggestions.Direct_access
         {
         }
         /// <summary>
-        /// Retrieves user-specific connection details which can be used by IDEs or clients to send `completion` requests to Code Suggestions directly through the AI Gateway.
+        /// Retrieves user-specific connection details which can be used by IDEs or clients to send `completion` requests to Code Suggestions directly through the AI Gateway. The response includes the headers that must be proxied to the AI Gateway and the required authentication token. This endpoint has a rate limit of 50 requests per minute for each user. This feature was introduced in GitLab 17.0 with a feature flag named `code_suggestions_direct_completions`, disabled by default, and made generally available in GitLab 17.2.
         /// </summary>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -53,7 +53,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Code_suggestions.Direct_access
             await RequestAdapter.SendNoContentAsync(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Retrieves user-specific connection details which can be used by IDEs or clients to send `completion` requests to Code Suggestions directly through the AI Gateway.
+        /// Retrieves user-specific connection details which can be used by IDEs or clients to send `completion` requests to Code Suggestions directly through the AI Gateway. The response includes the headers that must be proxied to the AI Gateway and the required authentication token. This endpoint has a rate limit of 50 requests per minute for each user. This feature was introduced in GitLab 17.0 with a feature flag named `code_suggestions_direct_completions`, disabled by default, and made generally available in GitLab 17.2.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

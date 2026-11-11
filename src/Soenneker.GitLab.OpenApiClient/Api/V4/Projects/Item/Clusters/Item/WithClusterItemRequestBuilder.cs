@@ -70,7 +70,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Clusters.Item
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesClusterProject>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesClusterProject.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Updates a cluster in a specified project.
+        /// Updates a cluster in a specified project. The `name`, `api_url`, `ca_cert`, and `token` attributes can be updated only if the cluster was added as an existing Kubernetes cluster.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesClusterProject"/></returns>
         /// <param name="body">The request body</param>
@@ -128,7 +128,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Clusters.Item
             return requestInfo;
         }
         /// <summary>
-        /// Updates a cluster in a specified project.
+        /// Updates a cluster in a specified project. The `name`, `api_url`, `ca_cert`, and `token` attributes can be updated only if the cluster was added as an existing Kubernetes cluster.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Releases.Item.Evid
         {
         }
         /// <summary>
-        /// Generates an evidence for an existing release.
+        /// Generates an evidence for an existing release. Requests are rate limited per user (`release_evidence_collections_limit_per_user` application setting). Requests over the limit are blocked when the `rate_limit_release_evidence_collections_per_user` feature flag is enabled, and only logged otherwise.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRelease"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Releases.Item.Evid
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRelease>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRelease.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Generates an evidence for an existing release.
+        /// Generates an evidence for an existing release. Requests are rate limited per user (`release_evidence_collections_limit_per_user` application setting). Requests over the limit are blocked when the `rate_limit_release_evidence_collections_per_user` feature flag is enabled, and only logged otherwise.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
