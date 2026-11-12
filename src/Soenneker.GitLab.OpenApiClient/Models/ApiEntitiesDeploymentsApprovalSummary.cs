@@ -26,12 +26,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The rules property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedEnvironmentsApprovalRuleForSummary? Rules { get => _explicitNullValueRules; set { _explicitNullValueRules = value; AdditionalData?.Remove("rules"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rules"); else _explicitNullProperties?.Remove("rules"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedEnvironmentsApprovalRuleForSummary? _explicitNullValueRules = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedEnvironmentsApprovalRuleForSummary>? Rules { get => _explicitNullValueRules; set { _explicitNullValueRules = value; AdditionalData?.Remove("rules"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rules"); else _explicitNullProperties?.Remove("rules"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedEnvironmentsApprovalRuleForSummary>? _explicitNullValueRules = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedEnvironmentsApprovalRuleForSummary Rules { get => _explicitNullValueRules; set { _explicitNullValueRules = value; AdditionalData?.Remove("rules"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rules"); else _explicitNullProperties?.Remove("rules"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedEnvironmentsApprovalRuleForSummary _explicitNullValueRules = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedEnvironmentsApprovalRuleForSummary> Rules { get => _explicitNullValueRules; set { _explicitNullValueRules = value; AdditionalData?.Remove("rules"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rules"); else _explicitNullProperties?.Remove("rules"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedEnvironmentsApprovalRuleForSummary> _explicitNullValueRules = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDeploymentsApprovalSummary"/> and sets the default values.
@@ -58,7 +58,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "rules", n => { Rules = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedEnvironmentsApprovalRuleForSummary>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedEnvironmentsApprovalRuleForSummary.CreateFromDiscriminatorValue); } },
+                { "rules", n => { Rules = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedEnvironmentsApprovalRuleForSummary>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedEnvironmentsApprovalRuleForSummary.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -68,7 +68,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedEnvironmentsApprovalRuleForSummary>("rules", Rules);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedEnvironmentsApprovalRuleForSummary>("rules", Rules);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

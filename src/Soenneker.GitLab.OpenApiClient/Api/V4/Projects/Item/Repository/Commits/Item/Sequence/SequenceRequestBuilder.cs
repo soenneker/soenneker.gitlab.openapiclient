@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Commits
         {
         }
         /// <summary>
-        /// Retrieves the commit sequence for a specified commit.
+        /// Retrieves the sequence number of a specified commit, found by following the parent links from the commit. The result is the same as `git rev-list --count` for the commit SHA.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommitSequence"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Commits
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommitSequence>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommitSequence.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Retrieves the commit sequence for a specified commit.
+        /// Retrieves the sequence number of a specified commit, found by following the parent links from the commit. The result is the same as `git rev-list --count` for the commit SHA.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -80,7 +80,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Commits
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Commits.Item.Sequence.SequenceRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Retrieves the commit sequence for a specified commit.
+        /// Retrieves the sequence number of a specified commit, found by following the parent links from the commit. The result is the same as `git rev-list --count` for the commit SHA.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class SequenceRequestBuilderGetQueryParameters 

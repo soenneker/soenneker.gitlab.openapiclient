@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Files.I
         {
         }
         /// <summary>
-        /// Retrieves blame history for a specified file in a repository. Each blame range contains lines and their corresponding commit information. This endpoint is rate-limited for each authenticated user for a given project, and for each IP address for unauthenticated requests. On GitLab Self-Managed and GitLab Dedicated, an administrator can change these limits in the application settings.
+        /// Retrieves blame history for a specified file in a repository. Each blame range contains lines and their corresponding commit information. This endpoint is rate-limited for each authenticated user for a given project, and for each IP address for unauthenticated requests. On GitLab Self-Managed and GitLab Dedicated, an administrator can change these limits in the application settings. The default limits are 400 requests every minute for each user and project, set by `project_repositories_blame_limit`, and 400 requests every minute for each IP address, set by `project_repositories_blame_unauthenticated_limit`. A limit of `0` disables it. `HEAD` requests do not count toward these limits. The GraphQL `blame` field on `RepositoryBlob` shares these limits.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBlameRange"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Files.I
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBlameRange>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBlameRange.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Retrieves blame metadata for lines in a specified file.
+        /// Retrieves blame metadata for lines in a specified file. Uses the `HEAD` method and returns the metadata in `X-Gitlab-*` response headers, such as `X-Gitlab-Blob-Id`, `X-Gitlab-Commit-Id`, `X-Gitlab-Content-Sha256`, `X-Gitlab-File-Name`, `X-Gitlab-Last-Commit-Id`, `X-Gitlab-Ref`, and `X-Gitlab-Size`.
         /// </summary>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -71,7 +71,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Files.I
             await RequestAdapter.SendNoContentAsync(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Retrieves blame history for a specified file in a repository. Each blame range contains lines and their corresponding commit information. This endpoint is rate-limited for each authenticated user for a given project, and for each IP address for unauthenticated requests. On GitLab Self-Managed and GitLab Dedicated, an administrator can change these limits in the application settings.
+        /// Retrieves blame history for a specified file in a repository. Each blame range contains lines and their corresponding commit information. This endpoint is rate-limited for each authenticated user for a given project, and for each IP address for unauthenticated requests. On GitLab Self-Managed and GitLab Dedicated, an administrator can change these limits in the application settings. The default limits are 400 requests every minute for each user and project, set by `project_repositories_blame_limit`, and 400 requests every minute for each IP address, set by `project_repositories_blame_unauthenticated_limit`. A limit of `0` disables it. `HEAD` requests do not count toward these limits. The GraphQL `blame` field on `RepositoryBlob` shares these limits.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -90,7 +90,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Files.I
             return requestInfo;
         }
         /// <summary>
-        /// Retrieves blame metadata for lines in a specified file.
+        /// Retrieves blame metadata for lines in a specified file. Uses the `HEAD` method and returns the metadata in `X-Gitlab-*` response headers, such as `X-Gitlab-Blob-Id`, `X-Gitlab-Commit-Id`, `X-Gitlab-Content-Sha256`, `X-Gitlab-File-Name`, `X-Gitlab-Last-Commit-Id`, `X-Gitlab-Ref`, and `X-Gitlab-Size`.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -120,7 +120,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Files.I
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Files.Item.Blame.BlameRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Retrieves blame history for a specified file in a repository. Each blame range contains lines and their corresponding commit information. This endpoint is rate-limited for each authenticated user for a given project, and for each IP address for unauthenticated requests. On GitLab Self-Managed and GitLab Dedicated, an administrator can change these limits in the application settings.
+        /// Retrieves blame history for a specified file in a repository. Each blame range contains lines and their corresponding commit information. This endpoint is rate-limited for each authenticated user for a given project, and for each IP address for unauthenticated requests. On GitLab Self-Managed and GitLab Dedicated, an administrator can change these limits in the application settings. The default limits are 400 requests every minute for each user and project, set by `project_repositories_blame_limit`, and 400 requests every minute for each IP address, set by `project_repositories_blame_unauthenticated_limit`. A limit of `0` disables it. `HEAD` requests do not count toward these limits. The GraphQL `blame` field on `RepositoryBlob` shares these limits.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class BlameRequestBuilderGetQueryParameters 
@@ -141,7 +141,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Files.I
             /// <summary>First line number of the range to blame.</summary>
             [QueryParameter("range%5Bstart%5D")]
             public int? Rangestart { get; set; }
-            /// <summary>Commit SHA or name of a repository branch or tag.</summary>
+            /// <summary>Commit SHA or name of a repository branch or tag. Use `HEAD` to use the default branch.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("ref")]

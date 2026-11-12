@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Token_exchange
         {
         }
         /// <summary>
-        /// Issues a short-lived RS256 JWT scoped to one modular-service audience (such as the Artifact Registry). Claims include the requesting user id (sub), organization id, and deployment realm (saas / self-managed). Presented to the corresponding backend and verified against the instance JWKS. The response uses the RFC 8693 names. token and access_token have the same value, with access_token preferred where possible.
+        /// Issues a short-lived RS256 JWT scoped to one modular-service audience (such as the Artifact Registry). Claims include the requesting user id (sub), organization id, and deployment realm (saas / self-managed). When called with a CI/CD ID token, the claims also carry its build metadata. Presented to the corresponding backend and verified against the instance JWKS. The response uses the RFC 8693 names. token and access_token have the same value, with access_token preferred where possible.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAuthnTokenExchange"/></returns>
         /// <param name="body">The request body</param>
@@ -54,7 +54,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Token_exchange
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAuthnTokenExchange>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAuthnTokenExchange.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Issues a short-lived RS256 JWT scoped to one modular-service audience (such as the Artifact Registry). Claims include the requesting user id (sub), organization id, and deployment realm (saas / self-managed). Presented to the corresponding backend and verified against the instance JWKS. The response uses the RFC 8693 names. token and access_token have the same value, with access_token preferred where possible.
+        /// Issues a short-lived RS256 JWT scoped to one modular-service audience (such as the Artifact Registry). Claims include the requesting user id (sub), organization id, and deployment realm (saas / self-managed). When called with a CI/CD ID token, the claims also carry its build metadata. Presented to the corresponding backend and verified against the instance JWKS. The response uses the RFC 8693 names. token and access_token have the same value, with access_token preferred where possible.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

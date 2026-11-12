@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Commits
         {
         }
         /// <summary>
-        /// Reverts a commit in a specified branch.
+        /// Reverts a commit in a specified branch. If the revert fails, the `400` response contains a `message` and an `error_code`. The `error_code` is `conflict` when the revert causes a merge conflict, or `empty` when the revert changes nothing on the branch, for example because the changes were already reverted or were never on the branch. If `dry_run` is `true`, a successful check returns `{&quot;dry_run&quot;: &quot;success&quot;}`, and a failed check returns the same error response with `&quot;dry_run&quot;: &quot;error&quot;` added.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommit"/></returns>
         /// <param name="body">The request body</param>
@@ -54,7 +54,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Commits
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommit>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommit.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Reverts a commit in a specified branch.
+        /// Reverts a commit in a specified branch. If the revert fails, the `400` response contains a `message` and an `error_code`. The `error_code` is `conflict` when the revert causes a merge conflict, or `empty` when the revert changes nothing on the branch, for example because the changes were already reverted or were never on the branch. If `dry_run` is `true`, a successful check returns `{&quot;dry_run&quot;: &quot;success&quot;}`, and a failed check returns the same error response with `&quot;dry_run&quot;: &quot;error&quot;` added.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

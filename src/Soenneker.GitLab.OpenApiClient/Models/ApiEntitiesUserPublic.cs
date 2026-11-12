@@ -385,12 +385,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The scim_identities property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesScimIdentity? ScimIdentities { get => _explicitNullValueScimIdentities; set { _explicitNullValueScimIdentities = value; AdditionalData?.Remove("scim_identities"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scim_identities"); else _explicitNullProperties?.Remove("scim_identities"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesScimIdentity? _explicitNullValueScimIdentities = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesScimIdentity>? ScimIdentities { get => _explicitNullValueScimIdentities; set { _explicitNullValueScimIdentities = value; AdditionalData?.Remove("scim_identities"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scim_identities"); else _explicitNullProperties?.Remove("scim_identities"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesScimIdentity>? _explicitNullValueScimIdentities = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesScimIdentity ScimIdentities { get => _explicitNullValueScimIdentities; set { _explicitNullValueScimIdentities = value; AdditionalData?.Remove("scim_identities"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scim_identities"); else _explicitNullProperties?.Remove("scim_identities"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesScimIdentity _explicitNullValueScimIdentities = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesScimIdentity> ScimIdentities { get => _explicitNullValueScimIdentities; set { _explicitNullValueScimIdentities = value; AdditionalData?.Remove("scim_identities"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scim_identities"); else _explicitNullProperties?.Remove("scim_identities"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesScimIdentity> _explicitNullValueScimIdentities = default!;
 #endif
         /// <summary>The shared_runners_minutes_limit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -529,7 +529,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "projects_limit", n => { ProjectsLimit = n.GetIntValue(); } },
                 { "pronouns", n => { Pronouns = n.GetStringValue(); } },
                 { "public_email", n => { PublicEmail = n.GetStringValue(); } },
-                { "scim_identities", n => { ScimIdentities = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesScimIdentity>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesScimIdentity.CreateFromDiscriminatorValue); } },
+                { "scim_identities", n => { ScimIdentities = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesScimIdentity>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesScimIdentity.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "shared_runners_minutes_limit", n => { SharedRunnersMinutesLimit = n.GetStringValue(); } },
                 { "state", n => { State = n.GetStringValue(); } },
                 { "theme_id", n => { ThemeId = n.GetIntValue(); } },
@@ -584,7 +584,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteIntValue("projects_limit", ProjectsLimit);
             writer.WriteStringValue("pronouns", Pronouns);
             writer.WriteStringValue("public_email", PublicEmail);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesScimIdentity>("scim_identities", ScimIdentities);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesScimIdentity>("scim_identities", ScimIdentities);
             writer.WriteStringValue("shared_runners_minutes_limit", SharedRunnersMinutesLimit);
             writer.WriteStringValue("state", State);
             writer.WriteIntValue("theme_id", ThemeId);

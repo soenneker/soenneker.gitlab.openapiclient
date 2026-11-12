@@ -33,7 +33,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Mirror authentication method.</summary>
+        /// <summary>Mirror authentication method. Accepted values are `ssh_public_key` and `password`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? AuthMethod { get => _explicitNullValueAuthMethod; set { _explicitNullValueAuthMethod = value; AdditionalData?.Remove("auth_method"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auth_method"); else _explicitNullProperties?.Remove("auth_method"); } }

@@ -3,6 +3,7 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Workflows.Item.Session_files.Item.Raw;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -16,6 +17,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Workflows.Item.
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WithFileItemRequestBuilder : BaseRequestBuilder
     {
+        /// <summary>The raw property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Workflows.Item.Session_files.Item.Raw.RawRequestBuilder Raw
+        {
+            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Workflows.Item.Session_files.Item.Raw.RawRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Workflows.Item.Session_files.Item.WithFileItemRequestBuilder"/> and sets the default values.
         /// </summary>

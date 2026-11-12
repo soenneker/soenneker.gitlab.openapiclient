@@ -40,7 +40,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Note { get => _explicitNullValueNote; set { _explicitNullValueNote = value; AdditionalData?.Remove("note"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("note"); else _explicitNullProperties?.Remove("note"); } }
         private string _explicitNullValueNote = default!;
 #endif
-        /// <summary>Sets the review state after publishing. Does not record a formal approval.</summary>
+        /// <summary>Sets the review state after publishing. Does not record a formal approval. If you can&apos;t request changes, sets `reviewed` instead.</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdMergeRequestsMergeRequestIidDraftNotesBulkPublishRequestReviewerState? ReviewerState { get => _explicitNullValueReviewerState; set { _explicitNullValueReviewerState = value; AdditionalData?.Remove("reviewer_state"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reviewer_state"); else _explicitNullProperties?.Remove("reviewer_state"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdMergeRequestsMergeRequestIidDraftNotesBulkPublishRequestReviewerState? _explicitNullValueReviewerState = default!;
         /// <summary>

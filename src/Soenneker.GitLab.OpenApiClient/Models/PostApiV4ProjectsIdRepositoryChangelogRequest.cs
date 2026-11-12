@@ -59,7 +59,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string ConfigFile { get => _explicitNullValueConfigFile; set { _explicitNullValueConfigFile = value; AdditionalData?.Remove("config_file"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("config_file"); else _explicitNullProperties?.Remove("config_file"); } }
         private string _explicitNullValueConfigFile = default!;
 #endif
-        /// <summary>Git reference, for example a branch, where the changelog configuration file is defined. Defaults to the default branch of the repository.</summary>
+        /// <summary>Git reference, for example a branch, where the changelog configuration file is defined. Defaults to the default branch of the repository. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/426108) in GitLab 18.2.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ConfigFileRef { get => _explicitNullValueConfigFileRef; set { _explicitNullValueConfigFileRef = value; AdditionalData?.Remove("config_file_ref"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("config_file_ref"); else _explicitNullProperties?.Remove("config_file_ref"); } }
@@ -82,7 +82,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string File { get => _explicitNullValueFile; set { _explicitNullValueFile = value; AdditionalData?.Remove("file"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file"); else _explicitNullProperties?.Remove("file"); } }
         private string _explicitNullValueFile = default!;
 #endif
-        /// <summary>First commit in the range of commits, as a SHA, to use for the changelog. This commit is not included in the changelog. If omitted, the most recent stable version tag before `version` is used.</summary>
+        /// <summary>First commit in the range of commits, as a SHA, to use for the changelog. This commit is not included in the changelog. If omitted, the most recent stable version tag before `version` is used. Tags in `X.Y.Z` or `vX.Y.Z` format are recognized, and pre-release tags such as `v1.0.0-pre1` are ignored. If no such tag exists, an error is returned and you must set `from`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? From { get => _explicitNullValueFrom; set { _explicitNullValueFrom = value; AdditionalData?.Remove("from"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("from"); else _explicitNullProperties?.Remove("from"); } }
@@ -102,7 +102,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; AdditionalData?.Remove("message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
         private string _explicitNullValueMessage = default!;
 #endif
-        /// <summary>Last commit in the range of commits, as a SHA, to use for the changelog. This commit is included in the changelog. If omitted, uses the latest commit on the default branch. For the Add changelog data to file operation, uses the latest commit on `branch` instead. The range can contain at most 15,000 commits.</summary>
+        /// <summary>Last commit in the range of commits, as a SHA or a branch or tag name, to use for the changelog. This commit is included in the changelog. If omitted, uses the latest commit on the default branch. For the Add changelog data to file operation, uses the latest commit on `branch` instead. The range can contain at most 15,000 commits.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? To { get => _explicitNullValueTo; set { _explicitNullValueTo = value; AdditionalData?.Remove("to"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("to"); else _explicitNullProperties?.Remove("to"); } }

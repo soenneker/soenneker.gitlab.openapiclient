@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Divergi
         {
         }
         /// <summary>
-        /// Retrieves the number of commits by which the `to` ref is ahead of and behind the `from` ref.
+        /// Retrieves the number of commits by which the `to` ref is ahead of and behind the `from` ref. `behind` is the number of commits in `from` that are not in `to`, and `ahead` is the number of commits in `to` that are not in `from`. This endpoint requires authentication. This endpoint is behind the `repository_diverging_commits_api` feature flag, disabled by default. This feature was introduced in GitLab 19.3.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDivergingCommitCount"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Divergi
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDivergingCommitCount>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDivergingCommitCount.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Retrieves the number of commits by which the `to` ref is ahead of and behind the `from` ref.
+        /// Retrieves the number of commits by which the `to` ref is ahead of and behind the `from` ref. `behind` is the number of commits in `from` that are not in `to`, and `ahead` is the number of commits in `to` that are not in `from`. This endpoint requires authentication. This endpoint is behind the `repository_diverging_commits_api` feature flag, disabled by default. This feature was introduced in GitLab 19.3.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -80,7 +80,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Divergi
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Diverging_commits.Diverging_commitsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Retrieves the number of commits by which the `to` ref is ahead of and behind the `from` ref.
+        /// Retrieves the number of commits by which the `to` ref is ahead of and behind the `from` ref. `behind` is the number of commits in `from` that are not in `to`, and `ahead` is the number of commits in `to` that are not in `from`. This endpoint requires authentication. This endpoint is behind the `repository_diverging_commits_api` feature flag, disabled by default. This feature was introduced in GitLab 19.3.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Diverging_commitsRequestBuilderGetQueryParameters 

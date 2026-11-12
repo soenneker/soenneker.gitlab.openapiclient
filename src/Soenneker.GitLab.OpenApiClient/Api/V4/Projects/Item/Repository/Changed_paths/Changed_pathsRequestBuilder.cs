@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Changed
         {
         }
         /// <summary>
-        /// Returns the path, change status, and file modes for every path that differs between two refs.
+        /// Returns the path, change status, and file modes for every path that differs between two refs. This endpoint requires authentication. This endpoint is behind the `repository_changed_paths_api` feature flag, disabled by default. This feature was introduced in GitLab 19.4.
         /// </summary>
         /// <returns>A List&lt;global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesChangedPath&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -53,7 +53,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Changed
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// Returns the path, change status, and file modes for every path that differs between two refs.
+        /// Returns the path, change status, and file modes for every path that differs between two refs. This endpoint requires authentication. This endpoint is behind the `repository_changed_paths_api` feature flag, disabled by default. This feature was introduced in GitLab 19.4.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -81,7 +81,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Changed
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Changed_paths.Changed_pathsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Returns the path, change status, and file modes for every path that differs between two refs.
+        /// Returns the path, change status, and file modes for every path that differs between two refs. This endpoint requires authentication. This endpoint is behind the `repository_changed_paths_api` feature flag, disabled by default. This feature was introduced in GitLab 19.4.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Changed_pathsRequestBuilderGetQueryParameters 

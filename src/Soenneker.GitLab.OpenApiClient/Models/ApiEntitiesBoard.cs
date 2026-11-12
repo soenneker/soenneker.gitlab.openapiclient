@@ -75,12 +75,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The labels property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesLabelBasic? Labels { get => _explicitNullValueLabels; set { _explicitNullValueLabels = value; AdditionalData?.Remove("labels"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("labels"); else _explicitNullProperties?.Remove("labels"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesLabelBasic? _explicitNullValueLabels = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesLabelBasic>? Labels { get => _explicitNullValueLabels; set { _explicitNullValueLabels = value; AdditionalData?.Remove("labels"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("labels"); else _explicitNullProperties?.Remove("labels"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesLabelBasic>? _explicitNullValueLabels = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesLabelBasic Labels { get => _explicitNullValueLabels; set { _explicitNullValueLabels = value; AdditionalData?.Remove("labels"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("labels"); else _explicitNullProperties?.Remove("labels"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesLabelBasic _explicitNullValueLabels = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesLabelBasic> Labels { get => _explicitNullValueLabels; set { _explicitNullValueLabels = value; AdditionalData?.Remove("labels"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("labels"); else _explicitNullProperties?.Remove("labels"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesLabelBasic> _explicitNullValueLabels = default!;
 #endif
         /// <summary>The lists property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -155,7 +155,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "hide_backlog_list", n => { HideBacklogList = n.GetBoolValue(); } },
                 { "hide_closed_list", n => { HideClosedList = n.GetBoolValue(); } },
                 { "id", n => { Id = n.GetLongValue(); } },
-                { "labels", n => { Labels = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesLabelBasic>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesLabelBasic.CreateFromDiscriminatorValue); } },
+                { "labels", n => { Labels = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesLabelBasic>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesLabelBasic.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "lists", n => { Lists = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesList>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesList.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "milestone", n => { Milestone = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBoardMilestoneProperty>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBoardMilestoneProperty.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
@@ -175,7 +175,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteBoolValue("hide_backlog_list", HideBacklogList);
             writer.WriteBoolValue("hide_closed_list", HideClosedList);
             writer.WriteLongValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesLabelBasic>("labels", Labels);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesLabelBasic>("labels", Labels);
             writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesList>("lists", Lists);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBoardMilestoneProperty>("milestone", Milestone);
             writer.WriteStringValue("name", Name);

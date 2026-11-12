@@ -31,12 +31,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The rules property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectApprovalSettingRule? Rules { get => _explicitNullValueRules; set { _explicitNullValueRules = value; AdditionalData?.Remove("rules"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rules"); else _explicitNullProperties?.Remove("rules"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectApprovalSettingRule? _explicitNullValueRules = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectApprovalSettingRule>? Rules { get => _explicitNullValueRules; set { _explicitNullValueRules = value; AdditionalData?.Remove("rules"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rules"); else _explicitNullProperties?.Remove("rules"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectApprovalSettingRule>? _explicitNullValueRules = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectApprovalSettingRule Rules { get => _explicitNullValueRules; set { _explicitNullValueRules = value; AdditionalData?.Remove("rules"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rules"); else _explicitNullProperties?.Remove("rules"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectApprovalSettingRule _explicitNullValueRules = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectApprovalSettingRule> Rules { get => _explicitNullValueRules; set { _explicitNullValueRules = value; AdditionalData?.Remove("rules"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rules"); else _explicitNullProperties?.Remove("rules"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectApprovalSettingRule> _explicitNullValueRules = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectApprovalSettings"/> and sets the default values.
@@ -64,7 +64,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "fallback_approvals_required", n => { FallbackApprovalsRequired = n.GetIntValue(); } },
-                { "rules", n => { Rules = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectApprovalSettingRule>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectApprovalSettingRule.CreateFromDiscriminatorValue); } },
+                { "rules", n => { Rules = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectApprovalSettingRule>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectApprovalSettingRule.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -75,7 +75,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("fallback_approvals_required", FallbackApprovalsRequired);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectApprovalSettingRule>("rules", Rules);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectApprovalSettingRule>("rules", Rules);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

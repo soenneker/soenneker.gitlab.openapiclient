@@ -54,12 +54,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The approved_by property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic? ApprovedBy { get => _explicitNullValueApprovedBy; set { _explicitNullValueApprovedBy = value; AdditionalData?.Remove("approved_by"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approved_by"); else _explicitNullProperties?.Remove("approved_by"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic? _explicitNullValueApprovedBy = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic>? ApprovedBy { get => _explicitNullValueApprovedBy; set { _explicitNullValueApprovedBy = value; AdditionalData?.Remove("approved_by"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approved_by"); else _explicitNullProperties?.Remove("approved_by"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic>? _explicitNullValueApprovedBy = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic ApprovedBy { get => _explicitNullValueApprovedBy; set { _explicitNullValueApprovedBy = value; AdditionalData?.Remove("approved_by"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approved_by"); else _explicitNullProperties?.Remove("approved_by"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic _explicitNullValueApprovedBy = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic> ApprovedBy { get => _explicitNullValueApprovedBy; set { _explicitNullValueApprovedBy = value; AdditionalData?.Remove("approved_by"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approved_by"); else _explicitNullProperties?.Remove("approved_by"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic> _explicitNullValueApprovedBy = default!;
 #endif
         /// <summary>The author property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -177,7 +177,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "approved_by", n => { ApprovedBy = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic.CreateFromDiscriminatorValue); } },
+                { "approved_by", n => { ApprovedBy = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "author", n => { Author = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic.CreateFromDiscriminatorValue); } },
                 { "created_at", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
@@ -201,7 +201,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic>("approved_by", ApprovedBy);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic>("approved_by", ApprovedBy);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic>("author", Author);
             writer.WriteDateTimeOffsetValue("created_at", CreatedAt);
             writer.WriteStringValue("description", Description);

@@ -32,22 +32,22 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The approval_rules property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedEnvironmentsApprovalRule? ApprovalRules { get => _explicitNullValueApprovalRules; set { _explicitNullValueApprovalRules = value; AdditionalData?.Remove("approval_rules"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approval_rules"); else _explicitNullProperties?.Remove("approval_rules"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedEnvironmentsApprovalRule? _explicitNullValueApprovalRules = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedEnvironmentsApprovalRule>? ApprovalRules { get => _explicitNullValueApprovalRules; set { _explicitNullValueApprovalRules = value; AdditionalData?.Remove("approval_rules"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approval_rules"); else _explicitNullProperties?.Remove("approval_rules"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedEnvironmentsApprovalRule>? _explicitNullValueApprovalRules = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedEnvironmentsApprovalRule ApprovalRules { get => _explicitNullValueApprovalRules; set { _explicitNullValueApprovalRules = value; AdditionalData?.Remove("approval_rules"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approval_rules"); else _explicitNullProperties?.Remove("approval_rules"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedEnvironmentsApprovalRule _explicitNullValueApprovalRules = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedEnvironmentsApprovalRule> ApprovalRules { get => _explicitNullValueApprovalRules; set { _explicitNullValueApprovalRules = value; AdditionalData?.Remove("approval_rules"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approval_rules"); else _explicitNullProperties?.Remove("approval_rules"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedEnvironmentsApprovalRule> _explicitNullValueApprovalRules = default!;
 #endif
         /// <summary>The deploy_access_levels property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedEnvironmentsDeployAccessLevel? DeployAccessLevels { get => _explicitNullValueDeployAccessLevels; set { _explicitNullValueDeployAccessLevels = value; AdditionalData?.Remove("deploy_access_levels"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deploy_access_levels"); else _explicitNullProperties?.Remove("deploy_access_levels"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedEnvironmentsDeployAccessLevel? _explicitNullValueDeployAccessLevels = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedEnvironmentsDeployAccessLevel>? DeployAccessLevels { get => _explicitNullValueDeployAccessLevels; set { _explicitNullValueDeployAccessLevels = value; AdditionalData?.Remove("deploy_access_levels"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deploy_access_levels"); else _explicitNullProperties?.Remove("deploy_access_levels"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedEnvironmentsDeployAccessLevel>? _explicitNullValueDeployAccessLevels = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedEnvironmentsDeployAccessLevel DeployAccessLevels { get => _explicitNullValueDeployAccessLevels; set { _explicitNullValueDeployAccessLevels = value; AdditionalData?.Remove("deploy_access_levels"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deploy_access_levels"); else _explicitNullProperties?.Remove("deploy_access_levels"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedEnvironmentsDeployAccessLevel _explicitNullValueDeployAccessLevels = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedEnvironmentsDeployAccessLevel> DeployAccessLevels { get => _explicitNullValueDeployAccessLevels; set { _explicitNullValueDeployAccessLevels = value; AdditionalData?.Remove("deploy_access_levels"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deploy_access_levels"); else _explicitNullProperties?.Remove("deploy_access_levels"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedEnvironmentsDeployAccessLevel> _explicitNullValueDeployAccessLevels = default!;
 #endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -87,8 +87,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "approval_rules", n => { ApprovalRules = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedEnvironmentsApprovalRule>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedEnvironmentsApprovalRule.CreateFromDiscriminatorValue); } },
-                { "deploy_access_levels", n => { DeployAccessLevels = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedEnvironmentsDeployAccessLevel>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedEnvironmentsDeployAccessLevel.CreateFromDiscriminatorValue); } },
+                { "approval_rules", n => { ApprovalRules = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedEnvironmentsApprovalRule>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedEnvironmentsApprovalRule.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "deploy_access_levels", n => { DeployAccessLevels = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedEnvironmentsDeployAccessLevel>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedEnvironmentsDeployAccessLevel.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "required_approval_count", n => { RequiredApprovalCount = n.GetIntValue(); } },
             };
@@ -100,8 +100,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedEnvironmentsApprovalRule>("approval_rules", ApprovalRules);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedEnvironmentsDeployAccessLevel>("deploy_access_levels", DeployAccessLevels);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedEnvironmentsApprovalRule>("approval_rules", ApprovalRules);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedEnvironmentsDeployAccessLevel>("deploy_access_levels", DeployAccessLevels);
             writer.WriteStringValue("name", Name);
             writer.WriteIntValue("required_approval_count", RequiredApprovalCount);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);

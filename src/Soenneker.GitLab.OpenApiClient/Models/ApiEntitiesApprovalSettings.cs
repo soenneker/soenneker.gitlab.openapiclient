@@ -47,22 +47,22 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The approver_groups property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApproverGroup? ApproverGroups { get => _explicitNullValueApproverGroups; set { _explicitNullValueApproverGroups = value; AdditionalData?.Remove("approver_groups"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approver_groups"); else _explicitNullProperties?.Remove("approver_groups"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApproverGroup? _explicitNullValueApproverGroups = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApproverGroup>? ApproverGroups { get => _explicitNullValueApproverGroups; set { _explicitNullValueApproverGroups = value; AdditionalData?.Remove("approver_groups"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approver_groups"); else _explicitNullProperties?.Remove("approver_groups"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApproverGroup>? _explicitNullValueApproverGroups = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApproverGroup ApproverGroups { get => _explicitNullValueApproverGroups; set { _explicitNullValueApproverGroups = value; AdditionalData?.Remove("approver_groups"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approver_groups"); else _explicitNullProperties?.Remove("approver_groups"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApproverGroup _explicitNullValueApproverGroups = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApproverGroup> ApproverGroups { get => _explicitNullValueApproverGroups; set { _explicitNullValueApproverGroups = value; AdditionalData?.Remove("approver_groups"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approver_groups"); else _explicitNullProperties?.Remove("approver_groups"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApproverGroup> _explicitNullValueApproverGroups = default!;
 #endif
         /// <summary>The approvers property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApprover? Approvers { get => _explicitNullValueApprovers; set { _explicitNullValueApprovers = value; AdditionalData?.Remove("approvers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approvers"); else _explicitNullProperties?.Remove("approvers"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApprover? _explicitNullValueApprovers = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApprover>? Approvers { get => _explicitNullValueApprovers; set { _explicitNullValueApprovers = value; AdditionalData?.Remove("approvers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approvers"); else _explicitNullProperties?.Remove("approvers"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApprover>? _explicitNullValueApprovers = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApprover Approvers { get => _explicitNullValueApprovers; set { _explicitNullValueApprovers = value; AdditionalData?.Remove("approvers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approvers"); else _explicitNullProperties?.Remove("approvers"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApprover _explicitNullValueApprovers = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApprover> Approvers { get => _explicitNullValueApprovers; set { _explicitNullValueApprovers = value; AdditionalData?.Remove("approvers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approvers"); else _explicitNullProperties?.Remove("approvers"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApprover> _explicitNullValueApprovers = default!;
 #endif
         /// <summary>The disable_overriding_approvers_per_merge_request property</summary>
         public bool? DisableOverridingApproversPerMergeRequest { get => _explicitNullValueDisableOverridingApproversPerMergeRequest; set { _explicitNullValueDisableOverridingApproversPerMergeRequest = value; AdditionalData?.Remove("disable_overriding_approvers_per_merge_request"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("disable_overriding_approvers_per_merge_request"); else _explicitNullProperties?.Remove("disable_overriding_approvers_per_merge_request"); } }
@@ -111,8 +111,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "approvals_before_merge", n => { ApprovalsBeforeMerge = n.GetIntValue(); } },
-                { "approver_groups", n => { ApproverGroups = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApproverGroup>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApproverGroup.CreateFromDiscriminatorValue); } },
-                { "approvers", n => { Approvers = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApprover>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApprover.CreateFromDiscriminatorValue); } },
+                { "approver_groups", n => { ApproverGroups = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApproverGroup>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApproverGroup.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "approvers", n => { Approvers = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApprover>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApprover.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "disable_overriding_approvers_per_merge_request", n => { DisableOverridingApproversPerMergeRequest = n.GetBoolValue(); } },
                 { "merge_requests_author_approval", n => { MergeRequestsAuthorApproval = n.GetBoolValue(); } },
                 { "merge_requests_disable_committers_approval", n => { MergeRequestsDisableCommittersApproval = n.GetBoolValue(); } },
@@ -130,8 +130,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("approvals_before_merge", ApprovalsBeforeMerge);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApproverGroup>("approver_groups", ApproverGroups);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApprover>("approvers", Approvers);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApproverGroup>("approver_groups", ApproverGroups);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApprover>("approvers", Approvers);
             writer.WriteBoolValue("disable_overriding_approvers_per_merge_request", DisableOverridingApproversPerMergeRequest);
             writer.WriteBoolValue("merge_requests_author_approval", MergeRequestsAuthorApproval);
             writer.WriteBoolValue("merge_requests_disable_committers_approval", MergeRequestsDisableCommittersApproval);

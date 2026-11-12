@@ -66,7 +66,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Commits
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// This feature was introduced in GitLab 8.13
+        /// Creates a commit in the specified project from a JSON payload. The request body can also be form-encoded, with each action sent as `actions[][&lt;attribute&gt;]` fields. By default, requests larger than 300 MB are rejected. Requests larger than 20 MB are rate-limited to 3 requests every 30 seconds for each user. This feature was introduced in GitLab 8.13
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommitDetail"/></returns>
         /// <param name="body">The request body</param>
@@ -105,7 +105,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Commits
             return requestInfo;
         }
         /// <summary>
-        /// This feature was introduced in GitLab 8.13
+        /// Creates a commit in the specified project from a JSON payload. The request body can also be form-encoded, with each action sent as `actions[][&lt;attribute&gt;]` fields. By default, requests larger than 300 MB are rejected. Requests larger than 20 MB are rate-limited to 3 requests every 30 seconds for each user. This feature was introduced in GitLab 8.13
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -157,7 +157,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Commits
             /// <summary>If `true`, follows only the first parent commit upon seeing a merge commit.</summary>
             [QueryParameter("first_parent")]
             public bool? FirstParent { get; set; }
-            /// <summary>If `true`, follows file renames when filtering commits by `path` and returns commits for the file even if it was renamed. If `false`, returns only commits where the file existed at its current path. Used only when `path` specifies a single file.</summary>
+            /// <summary>If `true`, follows file renames when filtering commits by `path` and returns commits for the file even if it was renamed. If `false`, returns only commits where the file existed at its current path. Used only when `path` specifies a single file. Default is `true`. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/225733) in GitLab 18.10.</summary>
             [QueryParameter("follow")]
             public bool? Follow { get; set; }
             /// <summary>Order in which to list commits, either reverse chronological or [topological](https://git-scm.com/docs/git-log#Documentation/git-log.txt---topo-order).</summary>

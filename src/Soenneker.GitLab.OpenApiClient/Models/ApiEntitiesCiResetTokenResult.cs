@@ -36,15 +36,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         private string _explicitNullValueToken = default!;
 #endif
         /// <summary>The token_expires_at property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? TokenExpiresAt { get => _explicitNullValueTokenExpiresAt; set { _explicitNullValueTokenExpiresAt = value; AdditionalData?.Remove("token_expires_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token_expires_at"); else _explicitNullProperties?.Remove("token_expires_at"); } }
-        private string? _explicitNullValueTokenExpiresAt = default!;
-#nullable restore
-#else
-        public string TokenExpiresAt { get => _explicitNullValueTokenExpiresAt; set { _explicitNullValueTokenExpiresAt = value; AdditionalData?.Remove("token_expires_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token_expires_at"); else _explicitNullProperties?.Remove("token_expires_at"); } }
-        private string _explicitNullValueTokenExpiresAt = default!;
-#endif
+        public DateTimeOffset? TokenExpiresAt { get => _explicitNullValueTokenExpiresAt; set { _explicitNullValueTokenExpiresAt = value; AdditionalData?.Remove("token_expires_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token_expires_at"); else _explicitNullProperties?.Remove("token_expires_at"); } }
+        private DateTimeOffset? _explicitNullValueTokenExpiresAt = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiResetTokenResult"/> and sets the default values.
         /// </summary>
@@ -71,7 +64,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "token", n => { Token = n.GetStringValue(); } },
-                { "token_expires_at", n => { TokenExpiresAt = n.GetStringValue(); } },
+                { "token_expires_at", n => { TokenExpiresAt = n.GetDateTimeOffsetValue(); } },
             };
         }
         /// <summary>
@@ -82,7 +75,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("token", Token);
-            writer.WriteStringValue("token_expires_at", TokenExpiresAt);
+            writer.WriteDateTimeOffsetValue("token_expires_at", TokenExpiresAt);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

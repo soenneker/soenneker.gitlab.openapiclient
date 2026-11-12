@@ -280,7 +280,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
         private string _explicitNullValueDescription = default!;
 #endif
-        /// <summary>Enable approval and change requests by GitLab Duo on merge requests. Behind a feature flag named `duo_code_review_decisions`, disabled by default.</summary>
+        /// <summary>Enable approval and change requests by GitLab Duo on merge requests. Behind a feature flag named `duo_code_review_decisions`, enabled by default.</summary>
         public bool? DuoCodeReviewDecisionsEnabled { get => _explicitNullValueDuoCodeReviewDecisionsEnabled; set { _explicitNullValueDuoCodeReviewDecisionsEnabled = value; AdditionalData?.Remove("duo_code_review_decisions_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duo_code_review_decisions_enabled"); else _explicitNullProperties?.Remove("duo_code_review_decisions_enabled"); } }
         private bool? _explicitNullValueDuoCodeReviewDecisionsEnabled = default!;
         /// <summary>[Beta] Default review depth for GitLab Duo Code Review Flow. One of `standard` or `deep`</summary>

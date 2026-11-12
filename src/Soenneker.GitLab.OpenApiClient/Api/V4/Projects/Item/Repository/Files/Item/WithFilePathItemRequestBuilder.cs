@@ -63,7 +63,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Files.I
             await RequestAdapter.SendNoContentAsync(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Retrieves information about a specified file in a repository. This includes information like the name, size, and the file contents. File content is Base64 encoded.
+        /// Retrieves information about a specified file in a repository. This includes information like the name, size, and the file contents. File content is Base64 encoded. You can access this endpoint without authentication if the repository is publicly accessible. For blobs larger than 10 MB, this endpoint has a rate limit of 5 requests every minute for each project. For text files not stored as valid UTF-8 in Git, `content` is converted to UTF-8 before Base64 encoding. In that case, `size` is the raw blob size, which might differ from the length of the decoded content, and `content_sha256` is the hash of the converted content, not the raw blob. To retrieve the exact bytes stored in Git, use the raw file endpoint.
         /// </summary>
         /// <returns>A <see cref="Stream"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -81,7 +81,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Files.I
             return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Retrieves metadata for a specified file in a repository.
+        /// Retrieves metadata for a specified file in a repository. Uses the `HEAD` method and returns the metadata in `X-Gitlab-*` response headers, such as `X-Gitlab-Blob-Id`, `X-Gitlab-Commit-Id`, `X-Gitlab-Content-Sha256`, `X-Gitlab-File-Name`, `X-Gitlab-Last-Commit-Id`, `X-Gitlab-Ref`, and `X-Gitlab-Size`.
         /// </summary>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -100,7 +100,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Files.I
             await RequestAdapter.SendNoContentAsync(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Creates a file in a specified repository. Use the Commits API to create multiple files with a single request.
+        /// Creates a file in a specified repository. Use the Commits API to create multiple files with a single request. Requests larger than 300 MB by default are rejected. Requests larger than 20 MB are rate-limited to 3 requests every 30 seconds for each user.
         /// </summary>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -119,7 +119,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Files.I
             await RequestAdapter.SendNoContentAsync(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Updates a specified file in a repository. Use the Commits API to update multiple files with a single request.
+        /// Updates a specified file in a repository. Use the Commits API to update multiple files with a single request. Requests larger than 300 MB by default are rejected. Requests larger than 20 MB are rate-limited to 3 requests every 30 seconds for each user. If the commit fails, returns `400 Bad Request` with an error message. Possible causes are a `file_path` that contains `/../`, new file contents that are identical to the current contents, or a `git push` to the branch while the edit was in progress.
         /// </summary>
         /// <returns>A <see cref="Stream"/></returns>
         /// <param name="body">The request body</param>
@@ -157,7 +157,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Files.I
             return requestInfo;
         }
         /// <summary>
-        /// Retrieves information about a specified file in a repository. This includes information like the name, size, and the file contents. File content is Base64 encoded.
+        /// Retrieves information about a specified file in a repository. This includes information like the name, size, and the file contents. File content is Base64 encoded. You can access this endpoint without authentication if the repository is publicly accessible. For blobs larger than 10 MB, this endpoint has a rate limit of 5 requests every minute for each project. For text files not stored as valid UTF-8 in Git, `content` is converted to UTF-8 before Base64 encoding. In that case, `size` is the raw blob size, which might differ from the length of the decoded content, and `content_sha256` is the hash of the converted content, not the raw blob. To retrieve the exact bytes stored in Git, use the raw file endpoint.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -175,7 +175,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Files.I
             return requestInfo;
         }
         /// <summary>
-        /// Retrieves metadata for a specified file in a repository.
+        /// Retrieves metadata for a specified file in a repository. Uses the `HEAD` method and returns the metadata in `X-Gitlab-*` response headers, such as `X-Gitlab-Blob-Id`, `X-Gitlab-Commit-Id`, `X-Gitlab-Content-Sha256`, `X-Gitlab-File-Name`, `X-Gitlab-Last-Commit-Id`, `X-Gitlab-Ref`, and `X-Gitlab-Size`.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -196,7 +196,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Files.I
             return requestInfo;
         }
         /// <summary>
-        /// Creates a file in a specified repository. Use the Commits API to create multiple files with a single request.
+        /// Creates a file in a specified repository. Use the Commits API to create multiple files with a single request. Requests larger than 300 MB by default are rejected. Requests larger than 20 MB are rate-limited to 3 requests every 30 seconds for each user.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -217,7 +217,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Files.I
             return requestInfo;
         }
         /// <summary>
-        /// Updates a specified file in a repository. Use the Commits API to update multiple files with a single request.
+        /// Updates a specified file in a repository. Use the Commits API to update multiple files with a single request. Requests larger than 300 MB by default are rejected. Requests larger than 20 MB are rate-limited to 3 requests every 30 seconds for each user. If the commit fails, returns `400 Bad Request` with an error message. Possible causes are a `file_path` that contains `/../`, new file contents that are identical to the current contents, or a `git push` to the branch while the edit was in progress.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -314,12 +314,12 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Files.I
 #endif
         }
         /// <summary>
-        /// Retrieves information about a specified file in a repository. This includes information like the name, size, and the file contents. File content is Base64 encoded.
+        /// Retrieves information about a specified file in a repository. This includes information like the name, size, and the file contents. File content is Base64 encoded. You can access this endpoint without authentication if the repository is publicly accessible. For blobs larger than 10 MB, this endpoint has a rate limit of 5 requests every minute for each project. For text files not stored as valid UTF-8 in Git, `content` is converted to UTF-8 before Base64 encoding. In that case, `size` is the raw blob size, which might differ from the length of the decoded content, and `content_sha256` is the hash of the converted content, not the raw blob. To retrieve the exact bytes stored in Git, use the raw file endpoint.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithFilePathItemRequestBuilderGetQueryParameters 
         {
-            /// <summary>Commit SHA or name of a repository branch or tag.</summary>
+            /// <summary>Commit SHA or name of a repository branch or tag. Use `HEAD` to use the default branch.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("ref")]

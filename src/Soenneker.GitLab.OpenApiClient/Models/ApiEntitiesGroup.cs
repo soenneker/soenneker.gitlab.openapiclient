@@ -340,12 +340,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The ldap_group_links property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesLdapGroupLink? LdapGroupLinks { get => _explicitNullValueLdapGroupLinks; set { _explicitNullValueLdapGroupLinks = value; AdditionalData?.Remove("ldap_group_links"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ldap_group_links"); else _explicitNullProperties?.Remove("ldap_group_links"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesLdapGroupLink? _explicitNullValueLdapGroupLinks = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesLdapGroupLink>? LdapGroupLinks { get => _explicitNullValueLdapGroupLinks; set { _explicitNullValueLdapGroupLinks = value; AdditionalData?.Remove("ldap_group_links"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ldap_group_links"); else _explicitNullProperties?.Remove("ldap_group_links"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesLdapGroupLink>? _explicitNullValueLdapGroupLinks = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesLdapGroupLink LdapGroupLinks { get => _explicitNullValueLdapGroupLinks; set { _explicitNullValueLdapGroupLinks = value; AdditionalData?.Remove("ldap_group_links"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ldap_group_links"); else _explicitNullProperties?.Remove("ldap_group_links"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesLdapGroupLink _explicitNullValueLdapGroupLinks = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesLdapGroupLink> LdapGroupLinks { get => _explicitNullValueLdapGroupLinks; set { _explicitNullValueLdapGroupLinks = value; AdditionalData?.Remove("ldap_group_links"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ldap_group_links"); else _explicitNullProperties?.Remove("ldap_group_links"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesLdapGroupLink> _explicitNullValueLdapGroupLinks = default!;
 #endif
         /// <summary>The lfs_enabled property</summary>
         public bool? LfsEnabled { get => _explicitNullValueLfsEnabled; set { _explicitNullValueLfsEnabled = value; AdditionalData?.Remove("lfs_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lfs_enabled"); else _explicitNullProperties?.Remove("lfs_enabled"); } }
@@ -463,12 +463,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The saml_group_links property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSamlGroupLink? SamlGroupLinks { get => _explicitNullValueSamlGroupLinks; set { _explicitNullValueSamlGroupLinks = value; AdditionalData?.Remove("saml_group_links"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("saml_group_links"); else _explicitNullProperties?.Remove("saml_group_links"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSamlGroupLink? _explicitNullValueSamlGroupLinks = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSamlGroupLink>? SamlGroupLinks { get => _explicitNullValueSamlGroupLinks; set { _explicitNullValueSamlGroupLinks = value; AdditionalData?.Remove("saml_group_links"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("saml_group_links"); else _explicitNullProperties?.Remove("saml_group_links"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSamlGroupLink>? _explicitNullValueSamlGroupLinks = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSamlGroupLink SamlGroupLinks { get => _explicitNullValueSamlGroupLinks; set { _explicitNullValueSamlGroupLinks = value; AdditionalData?.Remove("saml_group_links"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("saml_group_links"); else _explicitNullProperties?.Remove("saml_group_links"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSamlGroupLink _explicitNullValueSamlGroupLinks = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSamlGroupLink> SamlGroupLinks { get => _explicitNullValueSamlGroupLinks; set { _explicitNullValueSamlGroupLinks = value; AdditionalData?.Remove("saml_group_links"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("saml_group_links"); else _explicitNullProperties?.Remove("saml_group_links"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSamlGroupLink> _explicitNullValueSamlGroupLinks = default!;
 #endif
         /// <summary>The shared_runners_setting property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -601,7 +601,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "id", n => { Id = n.GetLongValue(); } },
                 { "ldap_access", n => { LdapAccess = n.GetStringValue(); } },
                 { "ldap_cn", n => { LdapCn = n.GetStringValue(); } },
-                { "ldap_group_links", n => { LdapGroupLinks = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesLdapGroupLink>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesLdapGroupLink.CreateFromDiscriminatorValue); } },
+                { "ldap_group_links", n => { LdapGroupLinks = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesLdapGroupLink>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesLdapGroupLink.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "lfs_enabled", n => { LfsEnabled = n.GetBoolValue(); } },
                 { "lock_built_in_project_templates_enabled", n => { LockBuiltInProjectTemplatesEnabled = n.GetBoolValue(); } },
                 { "lock_duo_features_enabled", n => { LockDuoFeaturesEnabled = n.GetBoolValue(); } },
@@ -621,7 +621,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "require_two_factor_authentication", n => { RequireTwoFactorAuthentication = n.GetBoolValue(); } },
                 { "resource_access_token_notify_inherited", n => { ResourceAccessTokenNotifyInherited = n.GetBoolValue(); } },
                 { "root_storage_statistics", n => { RootStorageStatistics = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNamespaceRootStorageStatistics>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNamespaceRootStorageStatistics.CreateFromDiscriminatorValue); } },
-                { "saml_group_links", n => { SamlGroupLinks = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSamlGroupLink>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSamlGroupLink.CreateFromDiscriminatorValue); } },
+                { "saml_group_links", n => { SamlGroupLinks = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSamlGroupLink>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSamlGroupLink.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "share_with_group_lock", n => { ShareWithGroupLock = n.GetBoolValue(); } },
                 { "shared_runners_setting", n => { SharedRunnersSetting = n.GetStringValue(); } },
                 { "show_diff_preview_in_email", n => { ShowDiffPreviewInEmail = n.GetBoolValue(); } },
@@ -668,7 +668,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteLongValue("id", Id);
             writer.WriteStringValue("ldap_access", LdapAccess);
             writer.WriteStringValue("ldap_cn", LdapCn);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesLdapGroupLink>("ldap_group_links", LdapGroupLinks);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesLdapGroupLink>("ldap_group_links", LdapGroupLinks);
             writer.WriteBoolValue("lfs_enabled", LfsEnabled);
             writer.WriteBoolValue("lock_built_in_project_templates_enabled", LockBuiltInProjectTemplatesEnabled);
             writer.WriteBoolValue("lock_duo_features_enabled", LockDuoFeaturesEnabled);
@@ -688,7 +688,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteBoolValue("require_two_factor_authentication", RequireTwoFactorAuthentication);
             writer.WriteBoolValue("resource_access_token_notify_inherited", ResourceAccessTokenNotifyInherited);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNamespaceRootStorageStatistics>("root_storage_statistics", RootStorageStatistics);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSamlGroupLink>("saml_group_links", SamlGroupLinks);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSamlGroupLink>("saml_group_links", SamlGroupLinks);
             writer.WriteStringValue("shared_runners_setting", SharedRunnersSetting);
             writer.WriteBoolValue("share_with_group_lock", ShareWithGroupLock);
             writer.WriteBoolValue("show_diff_preview_in_email", ShowDiffPreviewInEmail);

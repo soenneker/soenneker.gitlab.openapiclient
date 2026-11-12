@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Changel
         {
         }
         /// <summary>
-        /// Generates changelog data based on commits in a repository, without committing them to a changelog file. Works exactly like `POST /projects/:id/repository/changelog`, except the changelog data is not committed to any changelog file.
+        /// Generates changelog data based on commits in a repository, without committing them to a changelog file. Works exactly like `POST /projects/:id/repository/changelog`, except the changelog data is not committed to any changelog file. Add a `.txt` suffix to the path, as in `GET /projects/:id/repository/changelog.txt`, to return the changelog as plain text Markdown instead of JSON.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesChangelog"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Changel
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesChangelog>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesChangelog.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Adds changelog data to file.
+        /// Generates changelog data based on commits in a repository and commits it to a changelog file. Given a semantic version and a range of commits, GitLab generates a changelog for all commits that use a specific Git trailer, and adds a new Markdown section to the changelog file. The output format can be customized. Parsing the changelog configuration is limited to 2 seconds. If the request times out, reduce the size of the changelog configuration file.
         /// </summary>
         /// <returns>A <see cref="Stream"/></returns>
         /// <param name="body">The request body</param>
@@ -72,7 +72,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Changel
             return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Generates changelog data based on commits in a repository, without committing them to a changelog file. Works exactly like `POST /projects/:id/repository/changelog`, except the changelog data is not committed to any changelog file.
+        /// Generates changelog data based on commits in a repository, without committing them to a changelog file. Works exactly like `POST /projects/:id/repository/changelog`, except the changelog data is not committed to any changelog file. Add a `.txt` suffix to the path, as in `GET /projects/:id/repository/changelog.txt`, to return the changelog as plain text Markdown instead of JSON.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -91,7 +91,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Changel
             return requestInfo;
         }
         /// <summary>
-        /// Adds changelog data to file.
+        /// Generates changelog data based on commits in a repository and commits it to a changelog file. Given a semantic version and a range of commits, GitLab generates a changelog for all commits that use a specific Git trailer, and adds a new Markdown section to the changelog file. The output format can be customized. Parsing the changelog configuration is limited to 2 seconds. If the request times out, reduce the size of the changelog configuration file.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -121,7 +121,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Changel
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Changelog.ChangelogRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Generates changelog data based on commits in a repository, without committing them to a changelog file. Works exactly like `POST /projects/:id/repository/changelog`, except the changelog data is not committed to any changelog file.
+        /// Generates changelog data based on commits in a repository, without committing them to a changelog file. Works exactly like `POST /projects/:id/repository/changelog`, except the changelog data is not committed to any changelog file. Add a `.txt` suffix to the path, as in `GET /projects/:id/repository/changelog.txt`, to return the changelog as plain text Markdown instead of JSON.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ChangelogRequestBuilderGetQueryParameters 
@@ -136,7 +136,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Changel
             [QueryParameter("config_file")]
             public string ConfigFile { get; set; }
 #endif
-            /// <summary>Git reference, for example a branch, where the changelog configuration file is defined. Defaults to the default branch of the repository.</summary>
+            /// <summary>Git reference, for example a branch, where the changelog configuration file is defined. Defaults to the default branch of the repository. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/426108) in GitLab 18.2.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("config_file_ref")]
@@ -149,7 +149,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Changel
             /// <summary>Date and time of the release. Defaults to the current time.</summary>
             [QueryParameter("date")]
             public DateTimeOffset? Date { get; set; }
-            /// <summary>First commit in the range of commits, as a SHA, to use for the changelog. This commit is not included in the changelog. If omitted, the most recent stable version tag before `version` is used.</summary>
+            /// <summary>First commit in the range of commits, as a SHA, to use for the changelog. This commit is not included in the changelog. If omitted, the most recent stable version tag before `version` is used. Tags in `X.Y.Z` or `vX.Y.Z` format are recognized, and pre-release tags such as `v1.0.0-pre1` are ignored. If no such tag exists, an error is returned and you must set `from`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("from")]
@@ -159,7 +159,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Changel
             [QueryParameter("from")]
             public string From { get; set; }
 #endif
-            /// <summary>Last commit in the range of commits, as a SHA, to use for the changelog. This commit is included in the changelog. If omitted, uses the latest commit on the default branch. For the Add changelog data to file operation, uses the latest commit on `branch` instead. The range can contain at most 15,000 commits.</summary>
+            /// <summary>Last commit in the range of commits, as a SHA or a branch or tag name, to use for the changelog. This commit is included in the changelog. If omitted, uses the latest commit on the default branch. For the Add changelog data to file operation, uses the latest commit on `branch` instead. The range can contain at most 15,000 commits.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("to")]
@@ -179,7 +179,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Changel
             [QueryParameter("trailer")]
             public string Trailer { get; set; }
 #endif
-            /// <summary>Version to generate the changelog for. Must follow [semantic versioning](https://semver.org/) format.</summary>
+            /// <summary>Version to generate the changelog for. Must follow [semantic versioning](https://semver.org/) format. Can include or omit the `v` prefix: `1.0.0` and `v1.0.0` give the same result.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("version")]

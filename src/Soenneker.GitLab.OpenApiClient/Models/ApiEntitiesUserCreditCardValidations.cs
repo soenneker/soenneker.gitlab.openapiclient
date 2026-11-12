@@ -26,25 +26,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The credit_card_validated_at property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? CreditCardValidatedAt { get => _explicitNullValueCreditCardValidatedAt; set { _explicitNullValueCreditCardValidatedAt = value; AdditionalData?.Remove("credit_card_validated_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credit_card_validated_at"); else _explicitNullProperties?.Remove("credit_card_validated_at"); } }
-        private string? _explicitNullValueCreditCardValidatedAt = default!;
-#nullable restore
-#else
-        public string CreditCardValidatedAt { get => _explicitNullValueCreditCardValidatedAt; set { _explicitNullValueCreditCardValidatedAt = value; AdditionalData?.Remove("credit_card_validated_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credit_card_validated_at"); else _explicitNullProperties?.Remove("credit_card_validated_at"); } }
-        private string _explicitNullValueCreditCardValidatedAt = default!;
-#endif
+        public DateTimeOffset? CreditCardValidatedAt { get => _explicitNullValueCreditCardValidatedAt; set { _explicitNullValueCreditCardValidatedAt = value; AdditionalData?.Remove("credit_card_validated_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credit_card_validated_at"); else _explicitNullProperties?.Remove("credit_card_validated_at"); } }
+        private DateTimeOffset? _explicitNullValueCreditCardValidatedAt = default!;
         /// <summary>The user_id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? UserId { get => _explicitNullValueUserId; set { _explicitNullValueUserId = value; AdditionalData?.Remove("user_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_id"); else _explicitNullProperties?.Remove("user_id"); } }
-        private string? _explicitNullValueUserId = default!;
-#nullable restore
-#else
-        public string UserId { get => _explicitNullValueUserId; set { _explicitNullValueUserId = value; AdditionalData?.Remove("user_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_id"); else _explicitNullProperties?.Remove("user_id"); } }
-        private string _explicitNullValueUserId = default!;
-#endif
+        public long? UserId { get => _explicitNullValueUserId; set { _explicitNullValueUserId = value; AdditionalData?.Remove("user_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_id"); else _explicitNullProperties?.Remove("user_id"); } }
+        private long? _explicitNullValueUserId = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserCreditCardValidations"/> and sets the default values.
         /// </summary>
@@ -70,8 +56,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "credit_card_validated_at", n => { CreditCardValidatedAt = n.GetStringValue(); } },
-                { "user_id", n => { UserId = n.GetStringValue(); } },
+                { "credit_card_validated_at", n => { CreditCardValidatedAt = n.GetDateTimeOffsetValue(); } },
+                { "user_id", n => { UserId = n.GetLongValue(); } },
             };
         }
         /// <summary>
@@ -81,8 +67,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("credit_card_validated_at", CreditCardValidatedAt);
-            writer.WriteStringValue("user_id", UserId);
+            writer.WriteDateTimeOffsetValue("credit_card_validated_at", CreditCardValidatedAt);
+            writer.WriteLongValue("user_id", UserId);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

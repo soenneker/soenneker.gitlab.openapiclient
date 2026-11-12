@@ -56,12 +56,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The applicable_approval_rules property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApprovalRuleShort? ApplicableApprovalRules { get => _explicitNullValueApplicableApprovalRules; set { _explicitNullValueApplicableApprovalRules = value; AdditionalData?.Remove("applicable_approval_rules"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("applicable_approval_rules"); else _explicitNullProperties?.Remove("applicable_approval_rules"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApprovalRuleShort? _explicitNullValueApplicableApprovalRules = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApprovalRuleShort>? ApplicableApprovalRules { get => _explicitNullValueApplicableApprovalRules; set { _explicitNullValueApplicableApprovalRules = value; AdditionalData?.Remove("applicable_approval_rules"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("applicable_approval_rules"); else _explicitNullProperties?.Remove("applicable_approval_rules"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApprovalRuleShort>? _explicitNullValueApplicableApprovalRules = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApprovalRuleShort ApplicableApprovalRules { get => _explicitNullValueApplicableApprovalRules; set { _explicitNullValueApplicableApprovalRules = value; AdditionalData?.Remove("applicable_approval_rules"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("applicable_approval_rules"); else _explicitNullProperties?.Remove("applicable_approval_rules"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApprovalRuleShort _explicitNullValueApplicableApprovalRules = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApprovalRuleShort> ApplicableApprovalRules { get => _explicitNullValueApplicableApprovalRules; set { _explicitNullValueApplicableApprovalRules = value; AdditionalData?.Remove("applicable_approval_rules"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("applicable_approval_rules"); else _explicitNullProperties?.Remove("applicable_approval_rules"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApprovalRuleShort> _explicitNullValueApplicableApprovalRules = default!;
 #endif
         /// <summary>The availability property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -217,7 +217,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "applicable_approval_rules", n => { ApplicableApprovalRules = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApprovalRuleShort>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApprovalRuleShort.CreateFromDiscriminatorValue); } },
+                { "applicable_approval_rules", n => { ApplicableApprovalRules = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApprovalRuleShort>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApprovalRuleShort.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "availability", n => { Availability = n.GetStringValue(); } },
                 { "avatar_path", n => { AvatarPath = n.GetStringValue(); } },
                 { "avatar_url", n => { AvatarUrl = n.GetStringValue(); } },
@@ -242,7 +242,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApprovalRuleShort>("applicable_approval_rules", ApplicableApprovalRules);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApprovalRuleShort>("applicable_approval_rules", ApplicableApprovalRules);
             writer.WriteStringValue("availability", Availability);
             writer.WriteStringValue("avatar_path", AvatarPath);
             writer.WriteStringValue("avatar_url", AvatarUrl);

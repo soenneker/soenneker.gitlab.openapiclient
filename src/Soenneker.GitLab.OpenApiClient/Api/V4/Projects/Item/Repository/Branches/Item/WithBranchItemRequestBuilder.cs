@@ -46,7 +46,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Branche
         {
         }
         /// <summary>
-        /// Deletes a specified branch from the repository.
+        /// Deletes a specified branch from the repository. If an error occurs, the response includes a message that explains it. Deleting a branch does not completely erase all related data. Some information persists to maintain project history and to support recovery processes.
         /// </summary>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -63,7 +63,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Branche
             await RequestAdapter.SendNoContentAsync(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Retrieves a specified project repository branch.
+        /// Retrieves a specified project repository branch. This endpoint can be accessed without authentication if the repository is publicly accessible.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBranch"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -98,7 +98,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Branche
             await RequestAdapter.SendNoContentAsync(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Deletes a specified branch from the repository.
+        /// Deletes a specified branch from the repository. If an error occurs, the response includes a message that explains it. Deleting a branch does not completely erase all related data. Some information persists to maintain project history and to support recovery processes.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -116,7 +116,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Branche
             return requestInfo;
         }
         /// <summary>
-        /// Retrieves a specified project repository branch.
+        /// Retrieves a specified project repository branch. This endpoint can be accessed without authentication if the repository is publicly accessible.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

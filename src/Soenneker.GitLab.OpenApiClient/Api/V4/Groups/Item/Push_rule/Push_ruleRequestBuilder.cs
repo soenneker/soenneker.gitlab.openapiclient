@@ -51,7 +51,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Push_rule
             await RequestAdapter.SendNoContentAsync(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Retrieves the push rules of a specified group.
+        /// Retrieves the push rules of a specified group. When disabled, the `commit_committer_check`, `reject_unsigned_commits`, and `reject_non_dco_commits` attributes can return `null` instead of `false`.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroupPushRule"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -127,7 +127,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Push_rule
             return requestInfo;
         }
         /// <summary>
-        /// Retrieves the push rules of a specified group.
+        /// Retrieves the push rules of a specified group. When disabled, the `commit_committer_check`, `reject_unsigned_commits`, and `reject_non_dco_commits` attributes can return `null` instead of `false`.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

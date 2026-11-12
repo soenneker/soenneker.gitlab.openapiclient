@@ -47,7 +47,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Tags
         {
         }
         /// <summary>
-        /// Lists all repository tags from a project, sorted by update date and time in descending order.
+        /// Lists all repository tags from a project, sorted by update date and time in descending order. This endpoint can be accessed without authentication if the repository is publicly accessible.
         /// </summary>
         /// <returns>A List&lt;global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesTag&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -66,7 +66,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Tags
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// Creates a tag in the repository that points to a specified reference.
+        /// Creates a tag in the repository that points to a specified reference. This endpoint is rate-limited for each project. The default is 100 requests every 30 minutes, configurable with the `tags_create_limit` application setting. Set the limit to `0` to disable it. The limit is shared between this endpoint, the GraphQL `tagCreate` mutation, tag creation in the UI, and the `/tag` quick action. The limit applies to the project, so you can receive `429 Too Many Requests` after other users of the project reach the limit. The type of tag created determines the contents of `created_at`, `target`, and `message`. For annotated tags, `created_at` contains the timestamp of tag creation, `message` contains the annotation, and `target` contains the ID of the tag object. For lightweight tags, `created_at` and `message` are null, and `target` contains the commit ID.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesTag"/></returns>
         /// <param name="body">The request body</param>
@@ -86,7 +86,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Tags
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesTag>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesTag.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Lists all repository tags from a project, sorted by update date and time in descending order.
+        /// Lists all repository tags from a project, sorted by update date and time in descending order. This endpoint can be accessed without authentication if the repository is publicly accessible.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -105,7 +105,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Tags
             return requestInfo;
         }
         /// <summary>
-        /// Creates a tag in the repository that points to a specified reference.
+        /// Creates a tag in the repository that points to a specified reference. This endpoint is rate-limited for each project. The default is 100 requests every 30 minutes, configurable with the `tags_create_limit` application setting. Set the limit to `0` to disable it. The limit is shared between this endpoint, the GraphQL `tagCreate` mutation, tag creation in the UI, and the `/tag` quick action. The limit applies to the project, so you can receive `429 Too Many Requests` after other users of the project reach the limit. The type of tag created determines the contents of `created_at`, `target`, and `message`. For annotated tags, `created_at` contains the timestamp of tag creation, `message` contains the annotation, and `target` contains the ID of the tag object. For lightweight tags, `created_at` and `message` are null, and `target` contains the commit ID.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -136,7 +136,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Tags
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Tags.TagsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Lists all repository tags from a project, sorted by update date and time in descending order.
+        /// Lists all repository tags from a project, sorted by update date and time in descending order. This endpoint can be accessed without authentication if the repository is publicly accessible.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class TagsRequestBuilderGetQueryParameters 

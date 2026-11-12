@@ -100,15 +100,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         private string _explicitNullValuePublicEmail = default!;
 #endif
         /// <summary>The requested_at property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? RequestedAt { get => _explicitNullValueRequestedAt; set { _explicitNullValueRequestedAt = value; AdditionalData?.Remove("requested_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requested_at"); else _explicitNullProperties?.Remove("requested_at"); } }
-        private string? _explicitNullValueRequestedAt = default!;
-#nullable restore
-#else
-        public string RequestedAt { get => _explicitNullValueRequestedAt; set { _explicitNullValueRequestedAt = value; AdditionalData?.Remove("requested_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requested_at"); else _explicitNullProperties?.Remove("requested_at"); } }
-        private string _explicitNullValueRequestedAt = default!;
-#endif
+        public DateTimeOffset? RequestedAt { get => _explicitNullValueRequestedAt; set { _explicitNullValueRequestedAt = value; AdditionalData?.Remove("requested_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requested_at"); else _explicitNullProperties?.Remove("requested_at"); } }
+        private DateTimeOffset? _explicitNullValueRequestedAt = default!;
         /// <summary>The state property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -171,7 +164,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "locked", n => { Locked = n.GetBoolValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "public_email", n => { PublicEmail = n.GetStringValue(); } },
-                { "requested_at", n => { RequestedAt = n.GetStringValue(); } },
+                { "requested_at", n => { RequestedAt = n.GetDateTimeOffsetValue(); } },
                 { "state", n => { State = n.GetStringValue(); } },
                 { "username", n => { Username = n.GetStringValue(); } },
                 { "web_url", n => { WebUrl = n.GetStringValue(); } },
@@ -191,7 +184,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteBoolValue("locked", Locked);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("public_email", PublicEmail);
-            writer.WriteStringValue("requested_at", RequestedAt);
+            writer.WriteDateTimeOffsetValue("requested_at", RequestedAt);
             writer.WriteStringValue("state", State);
             writer.WriteStringValue("username", Username);
             writer.WriteStringValue("web_url", WebUrl);

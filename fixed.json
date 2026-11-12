@@ -789,7 +789,7 @@
           "Token exchange"
         ],
         "summary": "Issue a short-lived JWT for a single modular-service audience",
-        "description": "Issues a short-lived RS256 JWT scoped to one modular-service audience (such as the Artifact Registry). Claims include the requesting user id (sub), organization id, and deployment realm (saas / self-managed). Presented to the corresponding backend and verified against the instance JWKS. The response uses the RFC 8693 names. token and access_token have the same value, with access_token preferred where possible.",
+        "description": "Issues a short-lived RS256 JWT scoped to one modular-service audience (such as the Artifact Registry). Claims include the requesting user id (sub), organization id, and deployment realm (saas / self-managed). When called with a CI/CD ID token, the claims also carry its build metadata. Presented to the corresponding backend and verified against the instance JWKS. The response uses the RFC 8693 names. token and access_token have the same value, with access_token preferred where possible.",
         "operationId": "PostApiV4TokenExchange",
         "requestBody": {
           "content": {
@@ -1295,7 +1295,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ApiEntitiesAiExternalAgentsSession"
+                  "$ref": "#/components/schemas/GetApiV4ProjectsIdAiAgentSessions200ResponseSchema"
                 }
               }
             }
@@ -2822,6 +2822,55 @@
         "summary": "Get a session file with its contents",
         "description": "Returns a file the user attached to the session, with its contents base64 encoded.",
         "operationId": "GetApiV4AiDuoWorkflowsWorkflowsWorkflowIdSessionFilesFileId",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID of the workflow.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fileId",
+            "in": "path",
+            "description": "ID of the session file.",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            },
+            "example": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        },
+        "x-gitlab-lifecycle": "experiment"
+      }
+    },
+    "/api/v4/ai/duo_workflows/workflows/{id}/session_files/{fileId}/raw": {
+      "get": {
+        "tags": [
+          "GitLab Duo workflows"
+        ],
+        "summary": "Download a session file",
+        "description": "Returns the raw contents of a file the user attached to the session.",
+        "operationId": "GetApiV4AiDuoWorkflowsWorkflowsWorkflowIdSessionFilesFileIdRaw",
         "parameters": [
           {
             "name": "id",
@@ -5968,7 +6017,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ApiEntitiesAnalyticsCodeReviewMergeRequest"
+                  "$ref": "#/components/schemas/GetApiV4AnalyticsCodeReview200ResponseSchema"
                 }
               }
             }
@@ -6049,7 +6098,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ApiEntitiesDependency"
+                  "$ref": "#/components/schemas/GetApiV4ProjectsIdDependencies200ResponseSchema"
                 }
               }
             }
@@ -6103,7 +6152,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ApiEntitiesProjectAlias"
+                  "$ref": "#/components/schemas/GetApiV4ProjectAliases200ResponseSchema"
                 }
               }
             }
@@ -6310,7 +6359,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ApiEntitiesMergeRequestApprovalRule"
+                  "$ref": "#/components/schemas/GetApiV4ProjectsIdMergeRequestsMergeRequestIidApprovalRules200ResponseSchema"
                 }
               }
             }
@@ -7644,7 +7693,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ApiEntitiesVulnerability"
+                  "$ref": "#/components/schemas/GetApiV4ProjectsIdVulnerabilities200ResponseSchema"
                 }
               }
             }
@@ -8933,7 +8982,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ApiEntitiesSshKeyWithUserId"
+                  "$ref": "#/components/schemas/GetApiV4GroupsIdManageSshKeys200ResponseSchema"
                 }
               }
             }
@@ -9828,7 +9877,7 @@
           "Hooks"
         ],
         "summary": "List all events",
-        "description": "Lists all events for a specified webhook.",
+        "description": "Lists all events from the past seven days for a specified webhook. This feature was introduced in GitLab 17.3.",
         "operationId": "GetApiV4GroupsIdHooksHookIdEvents",
         "parameters": [
           {
@@ -9915,7 +9964,7 @@
           "Hooks"
         ],
         "summary": "Update a URL variable",
-        "description": "Updates a URL variable for a specified webhook.",
+        "description": "Updates a URL variable for a specified webhook. Setting the value does not replace a literal value in the existing webhook URL with the placeholder. To use the variable, also update the webhook URL to include the \u0060{key}\u0060 placeholder.",
         "operationId": "PutApiV4GroupsIdHooksHookIdUrlVariablesKey",
         "parameters": [
           {
@@ -9964,8 +10013,8 @@
           "required": true
         },
         "responses": {
-          "200": {
-            "description": "OK"
+          "204": {
+            "description": "No Content"
           },
           "404": {
             "description": "Not Found"
@@ -10039,7 +10088,7 @@
           "Hooks"
         ],
         "summary": "Update a custom header",
-        "description": "Updates a custom header for a specified webhook.",
+        "description": "Updates a custom header for a specified webhook. This feature was introduced in GitLab 17.1.",
         "operationId": "PutApiV4GroupsIdHooksHookIdCustomHeadersKey",
         "parameters": [
           {
@@ -10088,8 +10137,8 @@
           "required": true
         },
         "responses": {
-          "200": {
-            "description": "OK"
+          "204": {
+            "description": "No Content"
           },
           "404": {
             "description": "Not Found"
@@ -10105,7 +10154,7 @@
           "Hooks"
         ],
         "summary": "Delete a custom header",
-        "description": "Deletes a custom header from a specified webhook.",
+        "description": "Deletes a custom header from a specified webhook. This feature was introduced in GitLab 17.1.",
         "operationId": "DeleteApiV4GroupsIdHooksHookIdCustomHeadersKey",
         "parameters": [
           {
@@ -10163,7 +10212,7 @@
           "Hooks"
         ],
         "summary": "Trigger a test webhook",
-        "description": "Triggers a test webhook. This endpoint has a rate limit of five requests per minute for each authenticated user for a given project or group. On GitLab Self-Managed and GitLab Dedicated, an administrator can change this limit in the application settings.",
+        "description": "Triggers a test webhook. This endpoint has a rate limit of five requests per minute for each authenticated user for a given project or group. On GitLab Self-Managed and GitLab Dedicated, an administrator can change this limit in the application settings. This feature was introduced in GitLab 16.11 for project hooks and GitLab 17.1 for group hooks.",
         "operationId": "PostApiV4GroupsIdHooksHookIdTestTrigger",
         "parameters": [
           {
@@ -10230,7 +10279,7 @@
           "Hooks"
         ],
         "summary": "Resend a webhook event",
-        "description": "Resends a webhook event. This endpoint has a rate limit of five requests per minute for each authenticated user for a given project or group. On GitLab Self-Managed and GitLab Dedicated, an administrator can change this limit in the application settings.",
+        "description": "Resends a webhook event. This endpoint has a rate limit of five requests per minute for each authenticated user for a given project or group. All webhooks in the same project or group share the limit. On GitLab Self-Managed and GitLab Dedicated, an administrator can change this limit in the application settings. This feature was introduced in GitLab 17.4.",
         "operationId": "PostApiV4GroupsIdHooksHookIdEventsHookLogIdResend",
         "parameters": [
           {
@@ -10313,7 +10362,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ApiEntitiesIdentityDetail"
+                  "$ref": "#/components/schemas/GetApiV4GroupsIdSamlIdentities200ResponseSchema"
                 }
               }
             }
@@ -10506,7 +10555,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ApiEntitiesIdentityDetail"
+                  "$ref": "#/components/schemas/GetApiV4GroupsIdScimIdentities200ResponseSchema"
                 }
               }
             }
@@ -11316,7 +11365,7 @@
           "Push rules"
         ],
         "summary": "Retrieve the push rules of a group",
-        "description": "Retrieves the push rules of a specified group.",
+        "description": "Retrieves the push rules of a specified group. When disabled, the \u0060commit_committer_check\u0060, \u0060reject_unsigned_commits\u0060, and \u0060reject_non_dco_commits\u0060 attributes can return \u0060null\u0060 instead of \u0060false\u0060.",
         "operationId": "GetApiV4GroupsIdPushRule",
         "parameters": [
           {
@@ -11498,7 +11547,7 @@
           "Push rules"
         ],
         "summary": "Retrieve the push rules of a project",
-        "description": "Retrieves the push rules of a specified project.",
+        "description": "Retrieves the push rules of a specified project. If push rules were never configured for the project, returns \u0060200 OK\u0060 with the literal string \u0060\u0022null\u0022\u0060 (4 characters) as the response body, not a JSON \u0060null\u0060 value. If \u0060commit_committer_check\u0060, \u0060reject_unsigned_commits\u0060, or \u0060reject_non_dco_commits\u0060 are disabled, they return \u0060null\u0060 instead of \u0060false\u0060.",
         "operationId": "GetApiV4ProjectsIdPushRule",
         "parameters": [
           {
@@ -16753,7 +16802,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ApiEntitiesGroupApprovalRule"
+                  "$ref": "#/components/schemas/GetApiV4GroupsIdApprovalRules200ResponseSchema"
                 }
               }
             }
@@ -17074,7 +17123,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ApiEntitiesProjectApprovalRule"
+                  "$ref": "#/components/schemas/GetApiV4ProjectsIdApprovalRules200ResponseSchema"
                 }
               }
             }
@@ -17362,7 +17411,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ApiEntitiesClustersAgentUrlConfiguration"
+                  "$ref": "#/components/schemas/GetApiV4ProjectsIdClusterAgentsAgentIdUrlConfigurations200ResponseSchema"
                 }
               }
             }
@@ -18939,7 +18988,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ApiEntitiesAnalyticsKnowledgeGraphEnabledNamespace"
+                  "$ref": "#/components/schemas/GetApiV4AdminKnowledgeGraphNamespaces200ResponseSchema"
                 }
               }
             }
@@ -19255,7 +19304,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ApiEntitiesSearchZoektNode"
+                  "$ref": "#/components/schemas/GetApiV4AdminZoektShards200ResponseSchema"
                 }
               }
             }
@@ -19297,7 +19346,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ApiEntitiesSearchZoektIndexedNamespace"
+                  "$ref": "#/components/schemas/GetApiV4AdminZoektShardsNodeIdIndexedNamespaces200ResponseSchema"
                 }
               }
             }
@@ -19439,7 +19488,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ApiEntitiesAiActiveContextConnection"
+                  "$ref": "#/components/schemas/GetApiV4AdminActiveContextConnections200ResponseSchema"
                 }
               }
             }
@@ -26376,7 +26425,7 @@
           "Templates"
         ],
         "summary": "Retrieve a license template",
-        "description": "Retrieves a specified license template. You can pass parameters to replace the license placeholder.",
+        "description": "Retrieves a specified license template. You can pass parameters to replace the license placeholder. If \u0060fullname\u0060 is omitted and the request is authenticated, the name of the authenticated user replaces the copyright holder placeholder.",
         "operationId": "GetApiV4TemplatesLicensesName",
         "parameters": [
           {
@@ -42544,7 +42593,7 @@
           "Tags"
         ],
         "summary": "List all project repository tags",
-        "description": "Lists all repository tags from a project, sorted by update date and time in descending order.",
+        "description": "Lists all repository tags from a project, sorted by update date and time in descending order. This endpoint can be accessed without authentication if the repository is publicly accessible.",
         "operationId": "GetApiV4ProjectsIdRepositoryTags",
         "parameters": [
           {
@@ -42651,7 +42700,7 @@
           "Tags"
         ],
         "summary": "Create a tag",
-        "description": "Creates a tag in the repository that points to a specified reference.",
+        "description": "Creates a tag in the repository that points to a specified reference. This endpoint is rate-limited for each project. The default is 100 requests every 30 minutes, configurable with the \u0060tags_create_limit\u0060 application setting. Set the limit to \u00600\u0060 to disable it. The limit is shared between this endpoint, the GraphQL \u0060tagCreate\u0060 mutation, tag creation in the UI, and the \u0060/tag\u0060 quick action. The limit applies to the project, so you can receive \u0060429 Too Many Requests\u0060 after other users of the project reach the limit. The type of tag created determines the contents of \u0060created_at\u0060, \u0060target\u0060, and \u0060message\u0060. For annotated tags, \u0060created_at\u0060 contains the timestamp of tag creation, \u0060message\u0060 contains the annotation, and \u0060target\u0060 contains the ID of the tag object. For lightweight tags, \u0060created_at\u0060 and \u0060message\u0060 are null, and \u0060target\u0060 contains the commit ID.",
         "operationId": "PostApiV4ProjectsIdRepositoryTags",
         "parameters": [
           {
@@ -42889,7 +42938,7 @@
           "Hooks"
         ],
         "summary": "Update a URL variable",
-        "description": "Updates a URL variable for a specified webhook.",
+        "description": "Updates a URL variable for a specified webhook. Setting the value does not replace a literal value in the existing webhook URL with the placeholder. To use the variable, also update the webhook URL to include the \u0060{key}\u0060 placeholder.",
         "operationId": "PutApiV4HooksHookIdUrlVariablesKey",
         "parameters": [
           {
@@ -42922,8 +42971,8 @@
           "required": true
         },
         "responses": {
-          "200": {
-            "description": "OK"
+          "204": {
+            "description": "No Content"
           },
           "404": {
             "description": "Not Found"
@@ -42979,7 +43028,7 @@
           "Hooks"
         ],
         "summary": "Update a custom header",
-        "description": "Updates a custom header for a specified webhook.",
+        "description": "Updates a custom header for a specified webhook. This feature was introduced in GitLab 17.1.",
         "operationId": "PutApiV4HooksHookIdCustomHeadersKey",
         "parameters": [
           {
@@ -43012,8 +43061,8 @@
           "required": true
         },
         "responses": {
-          "200": {
-            "description": "OK"
+          "204": {
+            "description": "No Content"
           },
           "404": {
             "description": "Not Found"
@@ -43028,7 +43077,7 @@
           "Hooks"
         ],
         "summary": "Delete a custom header",
-        "description": "Deletes a custom header from a specified webhook.",
+        "description": "Deletes a custom header from a specified webhook. This feature was introduced in GitLab 17.1.",
         "operationId": "DeleteApiV4HooksHookIdCustomHeadersKey",
         "parameters": [
           {
@@ -43517,7 +43566,7 @@
           "Submodules"
         ],
         "summary": "Update a submodule reference",
-        "description": "Updates a reference for a specified submodule.",
+        "description": "Updates a reference for a specified submodule. Used in workflows, especially automated ones, to keep other projects that use the submodule up to date.",
         "operationId": "PutApiV4ProjectsIdRepositorySubmodulesSubmodule",
         "parameters": [
           {
@@ -43676,7 +43725,7 @@
           "Snippets"
         ],
         "summary": "Create a snippet",
-        "description": "Creates a snippet.",
+        "description": "Creates a snippet. The user must have permission to create snippets. Creating snippets is rate limited to 300 requests every hour for each authenticated user. The limit is shared between this endpoint, creating a project snippet, and the \u0060createSnippet\u0060 GraphQL mutation.",
         "operationId": "PostApiV4Snippets",
         "requestBody": {
           "content": {
@@ -43914,7 +43963,7 @@
           "Snippets"
         ],
         "summary": "Update snippet",
-        "description": "Updates a specified snippet.",
+        "description": "Updates a specified snippet. The user must have permission to change the snippet.",
         "operationId": "PutApiV4SnippetsId",
         "parameters": [
           {
@@ -44084,7 +44133,7 @@
           "Snippets"
         ],
         "summary": "Retrieve user agent details for a snippet",
-        "description": "Retrieves user agent details for a specified snippet.",
+        "description": "Retrieves user agent details for a specified snippet. Available only for administrators.",
         "operationId": "GetApiV4SnippetsIdUserAgentDetail",
         "parameters": [
           {
@@ -46673,7 +46722,7 @@
           "Repositories"
         ],
         "summary": "Retrieve a blob from a repository",
-        "description": "Retrieves information, such as size and content, about blobs in a repository. Blob content is Base64 encoded. This endpoint can be accessed without authentication, if the repository is publicly accessible.",
+        "description": "Retrieves information, such as size and content, about blobs in a repository. Blob content is Base64 encoded. This endpoint can be accessed without authentication, if the repository is publicly accessible. For blobs larger than 10 MB, this endpoint has a rate limit of 5 requests per minute. For text files not stored as valid UTF-8 in Git, \u0060content\u0060 is converted to UTF-8 before Base64 encoding, and \u0060size\u0060 is the raw blob size, which might differ from the length of the decoded content.",
         "operationId": "GetApiV4ProjectsIdRepositoryBlobsSha",
         "parameters": [
           {
@@ -46764,7 +46813,7 @@
           {
             "name": "format",
             "in": "query",
-            "description": "Archive format.",
+            "description": "Archive format, added as a suffix to the path, for example \u0060archive.zip\u0060. One of \u0060bz2\u0060, \u0060gz\u0060, \u0060tar\u0060, \u0060tar.bz2\u0060, \u0060tar.gz\u0060, \u0060tb2\u0060, \u0060tbz\u0060, \u0060tbz2\u0060, \u0060tgz\u0060, or \u0060zip\u0060. Default is \u0060tar.gz\u0060.",
             "schema": {
               "type": "string",
               "nullable": true
@@ -46823,7 +46872,7 @@
           "Repositories"
         ],
         "summary": "Compare branches, tags, or commits",
-        "description": "Compares branches, tags, or commits. Retrieves the differences between two branches, tags, or commits in a specified project.",
+        "description": "Compares branches, tags, or commits. Retrieves the differences between two branches, tags, or commits in a specified project. This endpoint can be accessed without authentication if the repository is publicly accessible. When \u0060compare_timeout\u0060 is \u0060true\u0060, the comparison exceeded size limits: the \u0060commits\u0060 array is still complete, but the \u0060diffs\u0060 array might be incomplete, and individual diff objects might have empty \u0060diff\u0060 strings.",
         "operationId": "GetApiV4ProjectsIdRepositoryCompare",
         "parameters": [
           {
@@ -46920,7 +46969,7 @@
           "Repositories"
         ],
         "summary": "Retrieve repository health statistics",
-        "description": "Retrieves statistics related to the health of a project repository. This endpoint is rate-limited to 5 requests/hour per project when \u0060generate\u0060 is \u0060true\u0060. Available only to users with push access to the repository.",
+        "description": "Retrieves statistics related to the health of a project repository. This endpoint is rate-limited to 5 requests/hour per project when \u0060generate\u0060 is \u0060true\u0060. Available only to users with push access to the repository. This feature was introduced in GitLab 17.10.",
         "operationId": "GetApiV4ProjectsIdRepositoryHealth",
         "parameters": [
           {
@@ -46976,7 +47025,7 @@
           "Repositories"
         ],
         "summary": "Retrieve contributors metrics",
-        "description": "Retrieves a list of contributors to a specified repository.",
+        "description": "Retrieves a list of contributors to a specified repository. This endpoint can be accessed without authentication if the repository is publicly accessible. The commit count does not include merge commits.",
         "operationId": "GetApiV4ProjectsIdRepositoryContributors",
         "parameters": [
           {
@@ -47019,7 +47068,7 @@
           {
             "name": "ref",
             "in": "query",
-            "description": "Name of a repository branch or tag. If omitted, uses the default branch.",
+            "description": "Name of a repository branch or tag. If omitted, uses the default branch. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/156852) in GitLab 17.4.",
             "schema": {
               "type": "string",
               "nullable": true
@@ -47069,7 +47118,7 @@
           "Repositories"
         ],
         "summary": "Retrieve a merge base",
-        "description": "Retrieves the merge base for two specified commits.",
+        "description": "Retrieves the merge base, the common ancestor, of two or more refs, such as commit SHAs, branch names, or tags.",
         "operationId": "GetApiV4ProjectsIdRepositoryMergeBase",
         "parameters": [
           {
@@ -47134,7 +47183,7 @@
           "Repositories"
         ],
         "summary": "Get contents of multiple files in a single request",
-        "description": "Each blob is truncated to the first 1 MB; the \u0060truncated\u0060 field indicates when this happens.",
+        "description": "Blob content is Base64 encoded. Each blob is truncated to the first 1 MB; the \u0060truncated\u0060 field indicates when this happens. \u0060size\u0060 is the full blob size in bytes. Files that do not exist at the requested reference are omitted from the response. This endpoint requires authentication. It is rate limited per user and project, to 5 requests per minute by default, set by the \u0060project_repositories_blobs_batch_limit\u0060 application setting. This endpoint is behind the \u0060repository_blobs_batch_api\u0060 feature flag, disabled by default. This feature was introduced in GitLab 19.3.",
         "operationId": "PostApiV4ProjectsIdRepositoryBlobsBatch",
         "parameters": [
           {
@@ -47198,7 +47247,7 @@
           "Repositories"
         ],
         "summary": "List files changed between two commits",
-        "description": "Returns the path, change status, and file modes for every path that differs between two refs.",
+        "description": "Returns the path, change status, and file modes for every path that differs between two refs. This endpoint requires authentication. This endpoint is behind the \u0060repository_changed_paths_api\u0060 feature flag, disabled by default. This feature was introduced in GitLab 19.4.",
         "operationId": "GetApiV4ProjectsIdRepositoryChangedPaths",
         "parameters": [
           {
@@ -47308,7 +47357,7 @@
           "Repositories"
         ],
         "summary": "Retrieve diverging commit counts between two refs",
-        "description": "Retrieves the number of commits by which the \u0060to\u0060 ref is ahead of and behind the \u0060from\u0060 ref.",
+        "description": "Retrieves the number of commits by which the \u0060to\u0060 ref is ahead of and behind the \u0060from\u0060 ref. \u0060behind\u0060 is the number of commits in \u0060from\u0060 that are not in \u0060to\u0060, and \u0060ahead\u0060 is the number of commits in \u0060to\u0060 that are not in \u0060from\u0060. This endpoint requires authentication. This endpoint is behind the \u0060repository_diverging_commits_api\u0060 feature flag, disabled by default. This feature was introduced in GitLab 19.3.",
         "operationId": "GetApiV4ProjectsIdRepositoryDivergingCommits",
         "parameters": [
           {
@@ -47400,7 +47449,7 @@
           "Repositories"
         ],
         "summary": "Get diff statistics between two commits",
-        "description": "Returns the number of added and deleted lines for every file that differs between two refs.",
+        "description": "Returns the number of added and deleted lines for every file that differs between two refs. This endpoint requires authentication. This endpoint is behind the \u0060repository_diff_stats_api\u0060 feature flag, disabled by default. This feature was introduced in GitLab 19.4.",
         "operationId": "GetApiV4ProjectsIdRepositoryDiffStats",
         "parameters": [
           {
@@ -47501,7 +47550,7 @@
           "Repositories"
         ],
         "summary": "Generate changelog data",
-        "description": "Generates changelog data based on commits in a repository, without committing them to a changelog file. Works exactly like \u0060POST /projects/:id/repository/changelog\u0060, except the changelog data is not committed to any changelog file.",
+        "description": "Generates changelog data based on commits in a repository, without committing them to a changelog file. Works exactly like \u0060POST /projects/:id/repository/changelog\u0060, except the changelog data is not committed to any changelog file. Add a \u0060.txt\u0060 suffix to the path, as in \u0060GET /projects/:id/repository/changelog.txt\u0060, to return the changelog as plain text Markdown instead of JSON.",
         "operationId": "GetApiV4ProjectsIdRepositoryChangelog",
         "parameters": [
           {
@@ -47524,7 +47573,7 @@
           {
             "name": "version",
             "in": "query",
-            "description": "Version to generate the changelog for. Must follow [semantic versioning](https://semver.org/) format.",
+            "description": "Version to generate the changelog for. Must follow [semantic versioning](https://semver.org/) format. Can include or omit the \u0060v\u0060 prefix: \u00601.0.0\u0060 and \u0060v1.0.0\u0060 give the same result.",
             "required": true,
             "schema": {
               "pattern": "(?:(?:(0|[1-9]\\d*))\\.(?:(0|[1-9]\\d*))\\.(?:(0|[1-9]\\d*)))(?:(?:-((?:\\d*[a-zA-Z\\-][0-9a-zA-Z\\-]*|[1-9]\\d*|0)(?:\\.(?:\\d*[a-zA-Z\\-][0-9a-zA-Z\\-]*|[1-9]\\d*|0))*))?(?:\\\u002B([0-9a-zA-Z\\-]\u002B(?:\\.[0-9a-zA-Z\\-]\u002B)*))?)",
@@ -47536,7 +47585,7 @@
           {
             "name": "from",
             "in": "query",
-            "description": "First commit in the range of commits, as a SHA, to use for the changelog. This commit is not included in the changelog. If omitted, the most recent stable version tag before \u0060version\u0060 is used.",
+            "description": "First commit in the range of commits, as a SHA, to use for the changelog. This commit is not included in the changelog. If omitted, the most recent stable version tag before \u0060version\u0060 is used. Tags in \u0060X.Y.Z\u0060 or \u0060vX.Y.Z\u0060 format are recognized, and pre-release tags such as \u0060v1.0.0-pre1\u0060 are ignored. If no such tag exists, an error is returned and you must set \u0060from\u0060.",
             "schema": {
               "type": "string",
               "nullable": true
@@ -47546,7 +47595,7 @@
           {
             "name": "to",
             "in": "query",
-            "description": "Last commit in the range of commits, as a SHA, to use for the changelog. This commit is included in the changelog. If omitted, uses the latest commit on the default branch. For the Add changelog data to file operation, uses the latest commit on \u0060branch\u0060 instead. The range can contain at most 15,000 commits.",
+            "description": "Last commit in the range of commits, as a SHA or a branch or tag name, to use for the changelog. This commit is included in the changelog. If omitted, uses the latest commit on the default branch. For the Add changelog data to file operation, uses the latest commit on \u0060branch\u0060 instead. The range can contain at most 15,000 commits.",
             "schema": {
               "type": "string",
               "nullable": true
@@ -47587,7 +47636,7 @@
           {
             "name": "config_file_ref",
             "in": "query",
-            "description": "Git reference, for example a branch, where the changelog configuration file is defined. Defaults to the default branch of the repository.",
+            "description": "Git reference, for example a branch, where the changelog configuration file is defined. Defaults to the default branch of the repository. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/426108) in GitLab 18.2.",
             "schema": {
               "type": "string",
               "nullable": true
@@ -47619,7 +47668,7 @@
           "Repositories"
         ],
         "summary": "Add changelog data to file",
-        "description": "Adds changelog data to file.",
+        "description": "Generates changelog data based on commits in a repository and commits it to a changelog file. Given a semantic version and a range of commits, GitLab generates a changelog for all commits that use a specific Git trailer, and adds a new Markdown section to the changelog file. The output format can be customized. Parsing the changelog configuration is limited to 2 seconds. If the request times out, reduce the size of the changelog configuration file.",
         "operationId": "PostApiV4ProjectsIdRepositoryChangelog",
         "parameters": [
           {
@@ -47735,7 +47784,7 @@
           "Remote mirrors"
         ],
         "summary": "Create a push mirror",
-        "description": "Creates a push mirror.",
+        "description": "Creates a push mirror. Each project can have a maximum of 10 enabled push mirrors.",
         "operationId": "PostApiV4ProjectsIdRemoteMirrors",
         "parameters": [
           {
@@ -48028,7 +48077,7 @@
           "Remote mirrors"
         ],
         "summary": "Retrieve a public key for a remote mirror",
-        "description": "Retrieves the public key of a specified remote mirror that uses SSH authentication.",
+        "description": "Retrieves the public key of a specified remote mirror that uses SSH authentication. This feature was introduced in GitLab 17.9.",
         "operationId": "GetApiV4ProjectsIdRemoteMirrorsMirrorIdPublicKey",
         "parameters": [
           {
@@ -48635,7 +48684,7 @@
           "Releases"
         ],
         "summary": "Create a release",
-        "description": "Creates a release. Developer level access to the project is required to create a release. Release creates and updates are rate limited per project (\u0060release_writes_limit_per_project\u0060 application setting) and per user (\u0060release_writes_limit_per_user\u0060 application setting). Requests over a limit are blocked when its feature flag (\u0060rate_limit_release_writes_per_project\u0060 or \u0060rate_limit_release_writes_per_user\u0060) is enabled, and only logged otherwise.",
+        "description": "Creates a release. Developer level access to the project is required to create a release. Release creates and updates are rate limited per project (\u0060release_writes_limit_per_project\u0060 application setting) and per user (\u0060release_writes_limit_per_user\u0060 application setting). Requests over a limit are blocked when its feature flag (\u0060rate_limit_release_writes_per_project\u0060 or \u0060rate_limit_release_writes_per_user\u0060) is enabled, and only logged otherwise. When the \u0060release_evidence_size_limit\u0060 feature flag is enabled, the response includes \u0060warnings\u0060 if the release evidence would exceed the \u0060release_evidence_max_size_bytes\u0060 application setting even without its issues.",
         "operationId": "PostApiV4ProjectsIdReleases",
         "parameters": [
           {
@@ -49067,7 +49116,7 @@
           "Releases"
         ],
         "summary": "Generate release evidence",
-        "description": "Generates an evidence for an existing release. Requests are rate limited per user (\u0060release_evidence_collections_limit_per_user\u0060 application setting). Requests over the limit are blocked when the \u0060rate_limit_release_evidence_collections_per_user\u0060 feature flag is enabled, and only logged otherwise.",
+        "description": "Generates an evidence for an existing release. Requests are rate limited per user (\u0060release_evidence_collections_limit_per_user\u0060 application setting). Requests over the limit are blocked when the \u0060rate_limit_release_evidence_collections_per_user\u0060 feature flag is enabled, and only logged otherwise. When the \u0060release_evidence_size_limit\u0060 feature flag is enabled, returns \u0060422\u0060 if the evidence would exceed the \u0060release_evidence_max_size_bytes\u0060 application setting.",
         "operationId": "PostApiV4ProjectsIdReleasesTagNameEvidence",
         "parameters": [
           {
@@ -49113,6 +49162,9 @@
           },
           "404": {
             "description": "Not found"
+          },
+          "422": {
+            "description": "Unprocessable entity"
           },
           "429": {
             "description": "Too many requests"
@@ -54105,7 +54157,7 @@
           "Snippets"
         ],
         "summary": "Create a project snippet",
-        "description": "Creates a project snippet. The user must have permission to create snippets.",
+        "description": "Creates a project snippet. The user must have permission to create snippets. Creating snippets has a rate limit of 300 requests every hour for each authenticated user. The limit is shared between this endpoint, the endpoint that creates a personal snippet, and the \u0060createSnippet\u0060 GraphQL mutation.",
         "operationId": "PostApiV4ProjectsIdSnippets",
         "parameters": [
           {
@@ -56106,7 +56158,7 @@
           "Hooks"
         ],
         "summary": "Update a URL variable",
-        "description": "Updates a URL variable for a specified webhook.",
+        "description": "Updates a URL variable for a specified webhook. Setting the value does not replace a literal value in the existing webhook URL with the placeholder. To use the variable, also update the webhook URL to include the \u0060{key}\u0060 placeholder.",
         "operationId": "PutApiV4ProjectsIdHooksHookIdUrlVariablesKey",
         "parameters": [
           {
@@ -56156,8 +56208,8 @@
           "required": true
         },
         "responses": {
-          "200": {
-            "description": "OK"
+          "204": {
+            "description": "No Content"
           },
           "404": {
             "description": "Not Found"
@@ -56230,7 +56282,7 @@
           "Hooks"
         ],
         "summary": "Update a custom header",
-        "description": "Updates a custom header for a specified webhook.",
+        "description": "Updates a custom header for a specified webhook. This feature was introduced in GitLab 17.1.",
         "operationId": "PutApiV4ProjectsIdHooksHookIdCustomHeadersKey",
         "parameters": [
           {
@@ -56280,8 +56332,8 @@
           "required": true
         },
         "responses": {
-          "200": {
-            "description": "OK"
+          "204": {
+            "description": "No Content"
           },
           "404": {
             "description": "Not Found"
@@ -56296,7 +56348,7 @@
           "Hooks"
         ],
         "summary": "Delete a custom header",
-        "description": "Deletes a custom header from a specified webhook.",
+        "description": "Deletes a custom header from a specified webhook. This feature was introduced in GitLab 17.1.",
         "operationId": "DeleteApiV4ProjectsIdHooksHookIdCustomHeadersKey",
         "parameters": [
           {
@@ -56418,7 +56470,7 @@
           "Hooks"
         ],
         "summary": "Add a webhook to a project",
-        "description": "Adds a webhook to a specified project. This endpoint has a rate limit of five requests per minute for each authenticated user for a given project. On GitLab Self-Managed and GitLab Dedicated, an administrator can change this limit in the application settings.",
+        "description": "Adds a webhook to a specified project. This endpoint has a rate limit of five requests per minute for each authenticated user for a given project. On GitLab Self-Managed and GitLab Dedicated, an administrator can change this limit in the application settings. Setting \u0060duo_flow_callback_enabled\u0060 to \u0060false\u0060 is always accepted.",
         "operationId": "PostApiV4ProjectsIdHooks",
         "parameters": [
           {
@@ -56544,7 +56596,7 @@
           "Hooks"
         ],
         "summary": "Update a project webhook",
-        "description": "Updates a specified webhook for a project.",
+        "description": "Updates a specified webhook for a project. Setting \u0060duo_flow_callback_enabled\u0060 to \u0060false\u0060 is always accepted.",
         "operationId": "PutApiV4ProjectsIdHooksHookId",
         "parameters": [
           {
@@ -56609,7 +56661,7 @@
           "Hooks"
         ],
         "summary": "Delete a project webhook",
-        "description": "Deletes a specified webhook for a project.",
+        "description": "Deletes a specified webhook for a project. If the webhook was already deleted, returns \u0060404 Not found\u0060.",
         "operationId": "DeleteApiV4ProjectsIdHooksHookId",
         "parameters": [
           {
@@ -56639,15 +56691,8 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ApiEntitiesProjectHook"
-                }
-              }
-            }
+          "204": {
+            "description": "No Content"
           },
           "404": {
             "description": "Not found"
@@ -56664,7 +56709,7 @@
           "Hooks"
         ],
         "summary": "List all events",
-        "description": "Lists all events for a specified webhook.",
+        "description": "Lists all events from the past seven days for a specified webhook. This feature was introduced in GitLab 17.3.",
         "operationId": "GetApiV4ProjectsIdHooksHookIdEvents",
         "parameters": [
           {
@@ -56751,7 +56796,7 @@
           "Hooks"
         ],
         "summary": "Trigger a test webhook",
-        "description": "Triggers a test webhook. This endpoint has a rate limit of five requests per minute for each authenticated user for a given project or group. On GitLab Self-Managed and GitLab Dedicated, an administrator can change this limit in the application settings.",
+        "description": "Triggers a test webhook. This endpoint has a rate limit of five requests per minute for each authenticated user for a given project or group. On GitLab Self-Managed and GitLab Dedicated, an administrator can change this limit in the application settings. This feature was introduced in GitLab 16.11 for project hooks and GitLab 17.1 for group hooks.",
         "operationId": "PostApiV4ProjectsIdHooksHookIdTestTrigger",
         "parameters": [
           {
@@ -56818,7 +56863,7 @@
           "Hooks"
         ],
         "summary": "Resend a webhook event",
-        "description": "Resends a webhook event. This endpoint has a rate limit of five requests per minute for each authenticated user for a given project or group. On GitLab Self-Managed and GitLab Dedicated, an administrator can change this limit in the application settings.",
+        "description": "Resends a webhook event. This endpoint has a rate limit of five requests per minute for each authenticated user for a given project or group. All webhooks in the same project or group share the limit. On GitLab Self-Managed and GitLab Dedicated, an administrator can change this limit in the application settings. This feature was introduced in GitLab 17.4.",
         "operationId": "PostApiV4ProjectsIdHooksHookIdEventsHookLogIdResend",
         "parameters": [
           {
@@ -64026,7 +64071,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ApiEntitiesNamespacesStorageLimitExclusion"
+                  "$ref": "#/components/schemas/GetApiV4NamespacesStorageLimitExclusions200ResponseSchema"
                 }
               }
             }
@@ -65428,7 +65473,7 @@
           {
             "name": "assignee_username",
             "in": "query",
-            "description": "Returns merge requests assigned to the given usernames. Mutually exclusive with \u0060assignee_id\u0060.",
+            "description": "Returns merge requests assigned to the given usernames. Instances without a license accept only one username. Mutually exclusive with \u0060assignee_id\u0060.",
             "schema": {
               "type": "array",
               "items": {
@@ -65728,7 +65773,7 @@
           {
             "name": "not[assignee_username]",
             "in": "query",
-            "description": "\u0060\u003CNegated\u003E\u0060 Returns merge requests assigned to the given usernames. Mutually exclusive with \u0060not[assignee_id]\u0060.",
+            "description": "\u0060\u003CNegated\u003E\u0060 Returns merge requests assigned to the given usernames. Instances without a license accept only one username. Mutually exclusive with \u0060not[assignee_id]\u0060.",
             "schema": {
               "type": "array",
               "items": {
@@ -65995,7 +66040,7 @@
           {
             "name": "assignee_username",
             "in": "query",
-            "description": "Returns merge requests assigned to the given usernames. Mutually exclusive with \u0060assignee_id\u0060.",
+            "description": "Returns merge requests assigned to the given usernames. Instances without a license accept only one username. Mutually exclusive with \u0060assignee_id\u0060.",
             "schema": {
               "type": "array",
               "items": {
@@ -66295,7 +66340,7 @@
           {
             "name": "not[assignee_username]",
             "in": "query",
-            "description": "\u0060\u003CNegated\u003E\u0060 Returns merge requests assigned to the given usernames. Mutually exclusive with \u0060not[assignee_id]\u0060.",
+            "description": "\u0060\u003CNegated\u003E\u0060 Returns merge requests assigned to the given usernames. Instances without a license accept only one username. Mutually exclusive with \u0060not[assignee_id]\u0060.",
             "schema": {
               "type": "array",
               "items": {
@@ -66926,7 +66971,7 @@
           {
             "name": "assignee_username",
             "in": "query",
-            "description": "Returns merge requests assigned to the given usernames. Mutually exclusive with \u0060assignee_id\u0060.",
+            "description": "Returns merge requests assigned to the given usernames. Instances without a license accept only one username. Mutually exclusive with \u0060assignee_id\u0060.",
             "schema": {
               "type": "array",
               "items": {
@@ -67226,7 +67271,7 @@
           {
             "name": "not[assignee_username]",
             "in": "query",
-            "description": "\u0060\u003CNegated\u003E\u0060 Returns merge requests assigned to the given usernames. Mutually exclusive with \u0060not[assignee_id]\u0060.",
+            "description": "\u0060\u003CNegated\u003E\u0060 Returns merge requests assigned to the given usernames. Instances without a license accept only one username. Mutually exclusive with \u0060not[assignee_id]\u0060.",
             "schema": {
               "type": "array",
               "items": {
@@ -70146,7 +70191,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ApiEntitiesMember"
+                  "$ref": "#/components/schemas/GetApiV4GroupsIdBillableMembers200ResponseSchema"
                 }
               }
             }
@@ -70265,7 +70310,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ApiEntitiesBillableMembership"
+                  "$ref": "#/components/schemas/GetApiV4GroupsIdBillableMembersUserIdMemberships200ResponseSchema"
                 }
               }
             }
@@ -70333,7 +70378,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ApiEntitiesBillableMembership"
+                  "$ref": "#/components/schemas/GetApiV4GroupsIdBillableMembersUserIdIndirect200ResponseSchema"
                 }
               }
             }
@@ -75697,7 +75742,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ApiEntitiesIssuableMetricImage"
+                  "$ref": "#/components/schemas/GetApiV4ProjectsIdIssuesIssueIidMetricImages200ResponseSchema"
                 }
               }
             }
@@ -91062,7 +91107,7 @@
           "Files"
         ],
         "summary": "Retrieve file blame metadata",
-        "description": "Retrieves blame metadata for lines in a specified file.",
+        "description": "Retrieves blame metadata for lines in a specified file. Uses the \u0060HEAD\u0060 method and returns the metadata in \u0060X-Gitlab-*\u0060 response headers, such as \u0060X-Gitlab-Blob-Id\u0060, \u0060X-Gitlab-Commit-Id\u0060, \u0060X-Gitlab-Content-Sha256\u0060, \u0060X-Gitlab-File-Name\u0060, \u0060X-Gitlab-Last-Commit-Id\u0060, \u0060X-Gitlab-Ref\u0060, and \u0060X-Gitlab-Size\u0060.",
         "operationId": "HeadApiV4ProjectsIdRepositoryFilesFilePathBlame",
         "parameters": [
           {
@@ -91113,7 +91158,7 @@
           "Files"
         ],
         "summary": "Retrieve file blame history from a repository",
-        "description": "Retrieves blame history for a specified file in a repository. Each blame range contains lines and their corresponding commit information. This endpoint is rate-limited for each authenticated user for a given project, and for each IP address for unauthenticated requests. On GitLab Self-Managed and GitLab Dedicated, an administrator can change these limits in the application settings.",
+        "description": "Retrieves blame history for a specified file in a repository. Each blame range contains lines and their corresponding commit information. This endpoint is rate-limited for each authenticated user for a given project, and for each IP address for unauthenticated requests. On GitLab Self-Managed and GitLab Dedicated, an administrator can change these limits in the application settings. The default limits are 400 requests every minute for each user and project, set by \u0060project_repositories_blame_limit\u0060, and 400 requests every minute for each IP address, set by \u0060project_repositories_blame_unauthenticated_limit\u0060. A limit of \u00600\u0060 disables it. \u0060HEAD\u0060 requests do not count toward these limits. The GraphQL \u0060blame\u0060 field on \u0060RepositoryBlob\u0060 shares these limits.",
         "operationId": "GetApiV4ProjectsIdRepositoryFilesFilePathBlame",
         "parameters": [
           {
@@ -91139,7 +91184,7 @@
           {
             "name": "ref",
             "in": "query",
-            "description": "Commit SHA or name of a repository branch or tag.",
+            "description": "Commit SHA or name of a repository branch or tag. Use \u0060HEAD\u0060 to use the default branch.",
             "required": true,
             "schema": {
               "type": "string",
@@ -91206,7 +91251,7 @@
           "Files"
         ],
         "summary": "Retrieve a raw file from a repository",
-        "description": "Retrieves the raw file contents for a specified file in a repository.",
+        "description": "Retrieves the raw file contents for a specified file in a repository. To get only the file metadata, use the \u0060HEAD\u0060 method on the file endpoint.",
         "operationId": "GetApiV4ProjectsIdRepositoryFilesFilePathRaw",
         "parameters": [
           {
@@ -91232,7 +91277,7 @@
           {
             "name": "ref",
             "in": "query",
-            "description": "Commit SHA or name of a repository branch or tag.",
+            "description": "Commit SHA or name of a repository branch or tag. Default is the \u0060HEAD\u0060 of the project.",
             "schema": {
               "type": "string",
               "nullable": true
@@ -91275,7 +91320,7 @@
           "Files"
         ],
         "summary": "Retrieve file metadata",
-        "description": "Retrieves metadata for a specified file in a repository.",
+        "description": "Retrieves metadata for a specified file in a repository. Uses the \u0060HEAD\u0060 method and returns the metadata in \u0060X-Gitlab-*\u0060 response headers, such as \u0060X-Gitlab-Blob-Id\u0060, \u0060X-Gitlab-Commit-Id\u0060, \u0060X-Gitlab-Content-Sha256\u0060, \u0060X-Gitlab-File-Name\u0060, \u0060X-Gitlab-Last-Commit-Id\u0060, \u0060X-Gitlab-Ref\u0060, and \u0060X-Gitlab-Size\u0060.",
         "operationId": "HeadApiV4ProjectsIdRepositoryFilesFilePath",
         "parameters": [
           {
@@ -91326,7 +91371,7 @@
           "Files"
         ],
         "summary": "Retrieve a file from a repository",
-        "description": "Retrieves information about a specified file in a repository. This includes information like the name, size, and the file contents. File content is Base64 encoded.",
+        "description": "Retrieves information about a specified file in a repository. This includes information like the name, size, and the file contents. File content is Base64 encoded. You can access this endpoint without authentication if the repository is publicly accessible. For blobs larger than 10 MB, this endpoint has a rate limit of 5 requests every minute for each project. For text files not stored as valid UTF-8 in Git, \u0060content\u0060 is converted to UTF-8 before Base64 encoding. In that case, \u0060size\u0060 is the raw blob size, which might differ from the length of the decoded content, and \u0060content_sha256\u0060 is the hash of the converted content, not the raw blob. To retrieve the exact bytes stored in Git, use the raw file endpoint.",
         "operationId": "GetApiV4ProjectsIdRepositoryFilesFilePath",
         "parameters": [
           {
@@ -91352,7 +91397,7 @@
           {
             "name": "ref",
             "in": "query",
-            "description": "Commit SHA or name of a repository branch or tag.",
+            "description": "Commit SHA or name of a repository branch or tag. Use \u0060HEAD\u0060 to use the default branch.",
             "required": true,
             "schema": {
               "type": "string",
@@ -91378,7 +91423,7 @@
           "Files"
         ],
         "summary": "Create a file in a repository",
-        "description": "Creates a file in a specified repository. Use the Commits API to create multiple files with a single request.",
+        "description": "Creates a file in a specified repository. Use the Commits API to create multiple files with a single request. Requests larger than 300 MB by default are rejected. Requests larger than 20 MB are rate-limited to 3 requests every 30 seconds for each user.",
         "operationId": "PostApiV4ProjectsIdRepositoryFilesFilePath",
         "parameters": [
           {
@@ -91429,7 +91474,7 @@
           "Files"
         ],
         "summary": "Update a file in a repository",
-        "description": "Updates a specified file in a repository. Use the Commits API to update multiple files with a single request.",
+        "description": "Updates a specified file in a repository. Use the Commits API to update multiple files with a single request. Requests larger than 300 MB by default are rejected. Requests larger than 20 MB are rate-limited to 3 requests every 30 seconds for each user. If the commit fails, returns \u0060400 Bad Request\u0060 with an error message. Possible causes are a \u0060file_path\u0060 that contains \u0060/../\u0060, new file contents that are identical to the current contents, or a \u0060git push\u0060 to the branch while the edit was in progress.",
         "operationId": "PutApiV4ProjectsIdRepositoryFilesFilePath",
         "parameters": [
           {
@@ -93286,7 +93331,7 @@
           "Environments"
         ],
         "summary": "Delete an environment",
-        "description": "Deletes an environment from a project. The environment must be stopped first.",
+        "description": "Deletes an environment from a project. The environment must be stopped first. When the \u0060environment_delete_in_batches\u0060 feature flag is enabled, a large environment is deleted over several requests: each request returns \u0060409\u0060 until the environment is gone, and the rows deleted count toward a per-user rate limit (\u0060environment_delete_rows_limit_per_user\u0060 application setting). Until the \u0060rate_limit_environment_delete_rows\u0060 feature flag is enabled, requests over this limit are logged but not blocked.",
         "operationId": "DeleteApiV4ProjectsIdEnvironmentsEnvironmentId",
         "parameters": [
           {
@@ -93329,8 +93374,20 @@
           "401": {
             "description": "Unauthorized"
           },
+          "403": {
+            "description": "Forbidden"
+          },
           "404": {
             "description": "Not found"
+          },
+          "409": {
+            "description": "Conflict"
+          },
+          "422": {
+            "description": "Unprocessable entity"
+          },
+          "429": {
+            "description": "Too many requests"
           },
           "400": {
             "description": "Bad Request"
@@ -94495,7 +94552,7 @@
           {
             "name": "assignee_username",
             "in": "query",
-            "description": "Returns merge requests assigned to the given usernames. Mutually exclusive with \u0060assignee_id\u0060.",
+            "description": "Returns merge requests assigned to the given usernames. Instances without a license accept only one username. Mutually exclusive with \u0060assignee_id\u0060.",
             "schema": {
               "type": "array",
               "items": {
@@ -94795,7 +94852,7 @@
           {
             "name": "not[assignee_username]",
             "in": "query",
-            "description": "\u0060\u003CNegated\u003E\u0060 Returns merge requests assigned to the given usernames. Mutually exclusive with \u0060not[assignee_id]\u0060.",
+            "description": "\u0060\u003CNegated\u003E\u0060 Returns merge requests assigned to the given usernames. Instances without a license accept only one username. Mutually exclusive with \u0060not[assignee_id]\u0060.",
             "schema": {
               "type": "array",
               "items": {
@@ -103640,7 +103697,7 @@
           {
             "name": "follow",
             "in": "query",
-            "description": "If \u0060true\u0060, follows file renames when filtering commits by \u0060path\u0060 and returns commits for the file even if it was renamed. If \u0060false\u0060, returns only commits where the file existed at its current path. Used only when \u0060path\u0060 specifies a single file.",
+            "description": "If \u0060true\u0060, follows file renames when filtering commits by \u0060path\u0060 and returns commits for the file even if it was renamed. If \u0060false\u0060, returns only commits where the file existed at its current path. Used only when \u0060path\u0060 specifies a single file. Default is \u0060true\u0060. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/225733) in GitLab 18.10.",
             "schema": {
               "type": "boolean",
               "nullable": true
@@ -103765,7 +103822,7 @@
           "Commits"
         ],
         "summary": "Create a commit",
-        "description": "This feature was introduced in GitLab 8.13",
+        "description": "Creates a commit in the specified project from a JSON payload. The request body can also be form-encoded, with each action sent as \u0060actions[][\u003Cattribute\u003E]\u0060 fields. By default, requests larger than 300 MB are rejected. Requests larger than 20 MB are rate-limited to 3 requests every 30 seconds for each user. This feature was introduced in GitLab 8.13",
         "operationId": "PostApiV4ProjectsIdRepositoryCommits",
         "parameters": [
           {
@@ -103891,7 +103948,7 @@
           "Commits"
         ],
         "summary": "Retrieve a commit diff",
-        "description": "Retrieves the diff of a commit in a project.",
+        "description": "Retrieves the diff of a commit in a project. Diff limits apply. When a commit exceeds the maximum number of files, pagination stops and no files beyond the limit are returned.",
         "operationId": "GetApiV4ProjectsIdRepositoryCommitsShaDiff",
         "parameters": [
           {
@@ -104048,7 +104105,7 @@
           "Commits"
         ],
         "summary": "Create a comment on a commit",
-        "description": "Creates a comment on a commit. To comment on a specific line in a file, specify the full commit SHA, \u0060path\u0060, \u0060line\u0060, and set \u0060line_type\u0060 to \u0060new\u0060.",
+        "description": "Creates a comment on a commit. To comment on a specific line in a file, specify the full commit SHA, \u0060path\u0060, \u0060line\u0060, and set \u0060line_type\u0060 to \u0060new\u0060. If \u0060path\u0060 or \u0060line\u0060 does not exist in the commit diff, the comment is added to the commit without a line position, and \u0060line\u0060, \u0060line_type\u0060, and \u0060path\u0060 are \u0060null\u0060 in the response. GitLab might change the comment body before saving it, for example by running and removing quick actions.",
         "operationId": "PostApiV4ProjectsIdRepositoryCommitsShaComments",
         "parameters": [
           {
@@ -104113,7 +104170,7 @@
           "Commits"
         ],
         "summary": "Retrieve a commit sequence",
-        "description": "Retrieves the commit sequence for a specified commit.",
+        "description": "Retrieves the sequence number of a specified commit, found by following the parent links from the commit. The result is the same as \u0060git rev-list --count\u0060 for the commit SHA.",
         "operationId": "GetApiV4ProjectsIdRepositoryCommitsShaSequence",
         "parameters": [
           {
@@ -104177,7 +104234,7 @@
           "Commits"
         ],
         "summary": "Cherry-pick a commit",
-        "description": "Cherry-picks a commit to a specified branch.",
+        "description": "Cherry-picks a commit to a specified branch. If the cherry-pick fails, the \u0060400\u0060 response contains a \u0060message\u0060 and an \u0060error_code\u0060. The \u0060error_code\u0060 is \u0060empty\u0060 when the changeset is empty, which usually means the commit already exists in the target branch, or \u0060conflict\u0060 when there is a merge conflict. If \u0060dry_run\u0060 is \u0060true\u0060, a successful check returns \u0060{\u0022dry_run\u0022: \u0022success\u0022}\u0060, and a failed check returns the same error response with \u0060\u0022dry_run\u0022: \u0022error\u0022\u0060 added.",
         "operationId": "PostApiV4ProjectsIdRepositoryCommitsShaCherryPick",
         "parameters": [
           {
@@ -104242,7 +104299,7 @@
           "Commits"
         ],
         "summary": "Revert a commit",
-        "description": "Reverts a commit in a specified branch.",
+        "description": "Reverts a commit in a specified branch. If the revert fails, the \u0060400\u0060 response contains a \u0060message\u0060 and an \u0060error_code\u0060. The \u0060error_code\u0060 is \u0060conflict\u0060 when the revert causes a merge conflict, or \u0060empty\u0060 when the revert changes nothing on the branch, for example because the changes were already reverted or were never on the branch. If \u0060dry_run\u0060 is \u0060true\u0060, a successful check returns \u0060{\u0022dry_run\u0022: \u0022success\u0022}\u0060, and a failed check returns the same error response with \u0060\u0022dry_run\u0022: \u0022error\u0022\u0060 added.",
         "operationId": "PostApiV4ProjectsIdRepositoryCommitsShaRevert",
         "parameters": [
           {
@@ -106131,6 +106188,9 @@
           "404": {
             "description": "Not found"
           },
+          "429": {
+            "description": "Too Many Requests"
+          },
           "200": {
             "description": "Created",
             "content": {
@@ -106273,6 +106333,9 @@
           },
           "404": {
             "description": "Not found"
+          },
+          "429": {
+            "description": "Too Many Requests"
           }
         }
       },
@@ -106330,6 +106393,9 @@
           },
           "412": {
             "description": "Precondition Failed"
+          },
+          "429": {
+            "description": "Too Many Requests"
           }
         }
       }
@@ -114131,7 +114197,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ApiEntitiesUserPublic"
+                  "$ref": "#/components/schemas/GetApiV4GroupsIdProvisionedUsers200ResponseSchema"
                 }
               }
             }
@@ -115542,7 +115608,7 @@
           "Branches"
         ],
         "summary": "List all repository branches",
-        "description": "Lists all repository branches from a specified project, sorted alphabetically by name. Search by name, or use regular expressions to find specific branch patterns. Returns detailed information about the branch, including its protection status, merge status, and commit details.",
+        "description": "Lists all repository branches from a specified project, sorted alphabetically by name. Search by name, or use regular expressions to find specific branch patterns. Returns detailed information about the branch, including its protection status, merge status, and commit details. This endpoint can be accessed without authentication if the repository is publicly accessible.",
         "operationId": "GetApiV4ProjectsIdRepositoryBranches",
         "parameters": [
           {
@@ -115730,7 +115796,7 @@
           {
             "name": "branch",
             "in": "path",
-            "description": "Name of the branch.",
+            "description": "URL-encoded name of the branch.",
             "required": true,
             "schema": {
               "type": "string"
@@ -115754,7 +115820,7 @@
           "Branches"
         ],
         "summary": "Retrieve a repository branch",
-        "description": "Retrieves a specified project repository branch.",
+        "description": "Retrieves a specified project repository branch. This endpoint can be accessed without authentication if the repository is publicly accessible.",
         "operationId": "GetApiV4ProjectsIdRepositoryBranchesBranch",
         "parameters": [
           {
@@ -115776,7 +115842,7 @@
           {
             "name": "branch",
             "in": "path",
-            "description": "Name of the branch.",
+            "description": "URL-encoded name of the branch.",
             "required": true,
             "schema": {
               "type": "string"
@@ -115807,7 +115873,7 @@
           "Branches"
         ],
         "summary": "Delete a repository branch",
-        "description": "Deletes a specified branch from the repository.",
+        "description": "Deletes a specified branch from the repository. If an error occurs, the response includes a message that explains it. Deleting a branch does not completely erase all related data. Some information persists to maintain project history and to support recovery processes.",
         "operationId": "DeleteApiV4ProjectsIdRepositoryBranchesBranch",
         "parameters": [
           {
@@ -115829,7 +115895,7 @@
           {
             "name": "branch",
             "in": "path",
-            "description": "Name of the branch.",
+            "description": "URL-encoded name of the branch. Cannot be the default branch. Only users with the Maintainer or Owner role can delete a protected branch.",
             "required": true,
             "schema": {
               "type": "string"
@@ -115974,7 +116040,7 @@
           "Branches"
         ],
         "summary": "Delete all merged branches",
-        "description": "Deletes all branches that are merged into the default branch for a project.",
+        "description": "Deletes all branches that are merged into the default branch for a project. Protected branches are not deleted.",
         "operationId": "DeleteApiV4ProjectsIdRepositoryMergedBranches",
         "parameters": [
           {
@@ -116000,6 +116066,9 @@
           },
           "404": {
             "description": "404 Project Not Found"
+          },
+          "429": {
+            "description": "429 Too Many Requests"
           },
           "400": {
             "description": "Bad Request"
@@ -122214,7 +122283,10 @@
             "type": "string"
           },
           "scim_identities": {
-            "$ref": "#/components/schemas/ApiEntitiesScimIdentity"
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ApiEntitiesScimIdentity"
+            }
           }
         }
       },
@@ -122624,14 +122696,20 @@
             "example": "production"
           },
           "deploy_access_levels": {
-            "$ref": "#/components/schemas/ApiEntitiesProtectedEnvironmentsDeployAccessLevel"
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ApiEntitiesProtectedEnvironmentsDeployAccessLevel"
+            }
           },
           "required_approval_count": {
             "type": "integer",
             "example": 2
           },
           "approval_rules": {
-            "$ref": "#/components/schemas/ApiEntitiesProtectedEnvironmentsApprovalRule"
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ApiEntitiesProtectedEnvironmentsApprovalRule"
+            }
           }
         }
       },
@@ -122795,7 +122873,10 @@
             "$ref": "#/components/schemas/ApiEntitiesUserBasic"
           },
           "approved_by": {
-            "$ref": "#/components/schemas/ApiEntitiesUserBasic"
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ApiEntitiesUserBasic"
+            }
           },
           "notes_count": {
             "type": "integer",
@@ -122858,10 +122939,16 @@
             "type": "string"
           },
           "vulnerabilities": {
-            "$ref": "#/components/schemas/DependencyEntityVulnerabilityEntity"
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DependencyEntityVulnerabilityEntity"
+            }
           },
           "licenses": {
-            "$ref": "#/components/schemas/DependencyEntityLicenseEntity"
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DependencyEntityLicenseEntity"
+            }
           },
           "malware": {
             "type": "boolean",
@@ -123108,10 +123195,16 @@
             "type": "string"
           },
           "ldap_group_links": {
-            "$ref": "#/components/schemas/ApiEntitiesLdapGroupLink"
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ApiEntitiesLdapGroupLink"
+            }
           },
           "saml_group_links": {
-            "$ref": "#/components/schemas/ApiEntitiesSamlGroupLink"
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ApiEntitiesSamlGroupLink"
+            }
           },
           "file_template_project_id": {
             "type": "string"
@@ -123887,10 +123980,14 @@
             "type": "string"
           },
           "path": {
-            "type": "string"
+            "type": "string",
+            "example": "/root"
           },
           "applicable_approval_rules": {
-            "$ref": "#/components/schemas/ApiEntitiesApprovalRuleShort"
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ApiEntitiesApprovalRuleShort"
+            }
           }
         }
       },
@@ -124059,10 +124156,14 @@
             "type": "string"
           },
           "path": {
-            "type": "string"
+            "type": "string",
+            "example": "/root"
           },
           "applicable_approval_rules": {
-            "$ref": "#/components/schemas/ApiEntitiesApprovalRuleShort"
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ApiEntitiesApprovalRuleShort"
+            }
           },
           "human": {
             "type": "boolean",
@@ -124146,7 +124247,10 @@
             "type": "string"
           },
           "identifiers": {
-            "$ref": "#/components/schemas/VulnerabilitiesIdentifierEntity"
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/VulnerabilitiesIdentifierEntity"
+            }
           },
           "uuid": {
             "type": "string"
@@ -124179,16 +124283,28 @@
             "$ref": "#/components/schemas/VulnerabilitiesFeedbackEntity"
           },
           "state_transitions": {
-            "$ref": "#/components/schemas/VulnerabilitiesStateTransitionEntity"
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/VulnerabilitiesStateTransitionEntity"
+            }
           },
           "issue_links": {
-            "$ref": "#/components/schemas/VulnerabilitiesIssueLinkEntity"
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/VulnerabilitiesIssueLinkEntity"
+            }
           },
           "external_issue_links": {
-            "$ref": "#/components/schemas/VulnerabilitiesExternalIssueLinkEntity"
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/VulnerabilitiesExternalIssueLinkEntity"
+            }
           },
           "merge_request_links": {
-            "$ref": "#/components/schemas/VulnerabilitiesMergeRequestLinkEntity"
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/VulnerabilitiesMergeRequestLinkEntity"
+            }
           },
           "description": {
             "type": "string"
@@ -124272,10 +124388,16 @@
         "type": "object",
         "properties": {
           "approvers": {
-            "$ref": "#/components/schemas/ApiEntitiesApprover"
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ApiEntitiesApprover"
+            }
           },
           "approver_groups": {
-            "$ref": "#/components/schemas/ApiEntitiesApproverGroup"
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ApiEntitiesApproverGroup"
+            }
           },
           "approvals_before_merge": {
             "type": "integer"
@@ -124418,7 +124540,8 @@
             "example": "2020-08-31T15:53:00.073Z"
           },
           "token": {
-            "type": "string"
+            "type": "string",
+            "example": "glpat-\u003Cexample-token\u003E"
           }
         }
       },
@@ -124845,10 +124968,12 @@
           },
           "name": {
             "type": "string",
+            "description": "Name of the hook. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/460887) in GitLab 17.1.",
             "example": "Hook name"
           },
           "description": {
             "type": "string",
+            "description": "Description of the hook. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/460887) in GitLab 17.1.",
             "example": "Hook description"
           },
           "created_at": {
@@ -124920,12 +125045,12 @@
           },
           "token_present": {
             "type": "boolean",
-            "description": "Whether a secret token is configured",
+            "description": "Whether a secret token is configured. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/231325) in GitLab 19.0.",
             "example": false
           },
           "signing_token_present": {
             "type": "boolean",
-            "description": "Whether an HMAC signing token is configured",
+            "description": "Whether an HMAC signing token is configured. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/231325) in GitLab 19.0.",
             "example": false
           },
           "group_id": {
@@ -130464,7 +130589,10 @@
             "type": "string"
           },
           "protected_branches": {
-            "$ref": "#/components/schemas/ApiEntitiesProtectedBranch"
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ApiEntitiesProtectedBranch"
+            }
           },
           "applies_to_all_protected_branches": {
             "type": "boolean"
@@ -130474,7 +130602,10 @@
             "example": 80
           },
           "approvers": {
-            "$ref": "#/components/schemas/ApiEntitiesUserBasic"
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ApiEntitiesUserBasic"
+            }
           },
           "scanners": {
             "type": "array",
@@ -130503,7 +130634,10 @@
         "type": "object",
         "properties": {
           "rules": {
-            "$ref": "#/components/schemas/ApiEntitiesProjectApprovalSettingRule"
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ApiEntitiesProjectApprovalSettingRule"
+            }
           },
           "fallback_approvals_required": {
             "type": "integer"
@@ -131115,7 +131249,10 @@
             "type": "string"
           },
           "protected_branches": {
-            "$ref": "#/components/schemas/ApiEntitiesProtectedBranch"
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ApiEntitiesProtectedBranch"
+            }
           },
           "applies_to_all_protected_branches": {
             "type": "boolean"
@@ -131170,7 +131307,10 @@
             "type": "string"
           },
           "protected_branches": {
-            "$ref": "#/components/schemas/ApiEntitiesProtectedBranch"
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ApiEntitiesProtectedBranch"
+            }
           },
           "applies_to_all_protected_branches": {
             "type": "boolean"
@@ -131926,7 +132066,10 @@
             "$ref": "#/components/schemas/ApiEntitiesUserBasic"
           },
           "labels": {
-            "$ref": "#/components/schemas/ApiEntitiesLabelBasic"
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ApiEntitiesLabelBasic"
+            }
           },
           "weight": {
             "type": "integer",
@@ -132654,7 +132797,10 @@
             "type": "string"
           },
           "scim_identities": {
-            "$ref": "#/components/schemas/ApiEntitiesScimIdentity"
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ApiEntitiesScimIdentity"
+            }
           },
           "is_admin": {
             "type": "string"
@@ -132930,7 +133076,8 @@
             "example": "2020-08-31T15:53:00.073Z"
           },
           "impersonation": {
-            "type": "string"
+            "type": "boolean",
+            "example": true
           }
         }
       },
@@ -133006,10 +133153,12 @@
             "example": "2020-08-31T15:53:00.073Z"
           },
           "impersonation": {
-            "type": "string"
+            "type": "boolean",
+            "example": true
           },
           "token": {
-            "type": "string"
+            "type": "string",
+            "example": "glpat-\u003Cexample-token\u003E"
           }
         }
       },
@@ -133017,10 +133166,14 @@
         "type": "object",
         "properties": {
           "user_id": {
-            "type": "string"
+            "type": "integer",
+            "format": "int64",
+            "example": 1
           },
           "credit_card_validated_at": {
-            "type": "string"
+            "type": "string",
+            "format": "date-time",
+            "example": "2025-01-01T00:00:00.000Z"
           }
         }
       },
@@ -133028,25 +133181,30 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "string"
+            "type": "integer",
+            "format": "int64",
+            "example": 1
           },
           "user_id": {
-            "type": "string"
+            "type": "integer",
+            "format": "int64",
+            "example": 1
           },
           "view_diffs_file_by_file": {
-            "type": "string"
+            "type": "boolean"
           },
           "show_whitespace_in_diffs": {
-            "type": "string"
+            "type": "boolean"
           },
           "pass_user_identities_to_ci_jwt": {
-            "type": "string"
+            "type": "boolean"
           },
           "policy_advanced_editor": {
-            "type": "string"
+            "type": "boolean"
           },
           "emoji_skin_tone": {
-            "type": "string"
+            "type": "integer",
+            "example": 0
           },
           "mobile_push_working_hours_enabled": {
             "type": "boolean",
@@ -134681,10 +134839,16 @@
           "merge_requests_create_limit": {
             "type": "string"
           },
+          "environment_delete_rows_limit_per_user": {
+            "type": "string"
+          },
           "feature_flag_user_list_write_bytes_limit_per_user": {
             "type": "string"
           },
           "merge_requests_rebase_limit": {
+            "type": "string"
+          },
+          "draft_notes_create_limit": {
             "type": "string"
           },
           "members_delete_limit": {
@@ -135026,6 +135190,9 @@
           "wiki_read_request_limit_unauthenticated": {
             "type": "string"
           },
+          "merge_request_diffs_page_request_limit": {
+            "type": "string"
+          },
           "work_item_hierarchy_add_children_limit": {
             "type": "string"
           },
@@ -135062,7 +135229,13 @@
           "ci_runner_manager_creation_ceiling": {
             "type": "string"
           },
+          "release_evidence_max_size_bytes": {
+            "type": "string"
+          },
           "allow_account_deletion": {
+            "type": "string"
+          },
+          "git_push_per_project_limit": {
             "type": "string"
           },
           "gitlab_shell_operation_limit": {
@@ -135105,6 +135278,9 @@
             "type": "string"
           },
           "pipeline_schedule_management_limit_per_user": {
+            "type": "string"
+          },
+          "pipeline_trigger_management_limit_per_user": {
             "type": "string"
           },
           "job_retry_limit_per_user_project": {
@@ -135645,6 +135821,15 @@
             "type": "string"
           },
           "budget_cap_update_per_day_limit": {
+            "type": "string"
+          },
+          "credits_usage_per_minute_limit": {
+            "type": "string"
+          },
+          "credits_usage_per_hour_limit": {
+            "type": "string"
+          },
+          "credits_usage_per_day_limit": {
             "type": "string"
           },
           "duo_workflow_oauth_application_id": {
@@ -136203,7 +136388,8 @@
             "type": "string"
           },
           "notification_email": {
-            "type": "string"
+            "type": "string",
+            "example": "user@example.com"
           }
         }
       },
@@ -136534,13 +136720,18 @@
         "type": "object",
         "properties": {
           "id": {
-            "type": "string"
+            "type": "integer",
+            "format": "int64",
+            "example": 1
           },
           "token": {
-            "type": "string"
+            "type": "string",
+            "example": "glrt-abc123"
           },
           "token_expires_at": {
-            "type": "string"
+            "type": "string",
+            "format": "date-time",
+            "example": "2025-01-01T00:00:00.000Z"
           }
         }
       },
@@ -136635,7 +136826,10 @@
         "type": "object",
         "properties": {
           "modules": {
-            "type": "string"
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ApiEntitiesTerraformModuleVersionsModulesItemProperty"
+            }
           }
         }
       },
@@ -136810,10 +137004,12 @@
           },
           "name": {
             "type": "string",
+            "description": "Name of the hook. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/460887) in GitLab 17.1.",
             "example": "Hook name"
           },
           "description": {
             "type": "string",
+            "description": "Description of the hook. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/460887) in GitLab 17.1.",
             "example": "Hook description"
           },
           "created_at": {
@@ -136885,12 +137081,12 @@
           },
           "token_present": {
             "type": "boolean",
-            "description": "Whether a secret token is configured",
+            "description": "Whether a secret token is configured. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/231325) in GitLab 19.0.",
             "example": false
           },
           "signing_token_present": {
             "type": "boolean",
-            "description": "Whether an HMAC signing token is configured",
+            "description": "Whether an HMAC signing token is configured. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/231325) in GitLab 19.0.",
             "example": false
           }
         }
@@ -137422,7 +137618,8 @@
             "example": 1234
           },
           "token": {
-            "type": "string"
+            "type": "string",
+            "example": "glpat-\u003Cexample-token\u003E"
           }
         }
       },
@@ -138131,6 +138328,15 @@
           },
           "_links": {
             "$ref": "#/components/schemas/ApiEntitiesReleaseLinks"
+          },
+          "warnings": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "example": [
+              "No evidence was collected for this release."
+            ]
           }
         }
       },
@@ -141222,10 +141428,12 @@
           },
           "name": {
             "type": "string",
+            "description": "Name of the hook. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/460887) in GitLab 17.1.",
             "example": "Hook name"
           },
           "description": {
             "type": "string",
+            "description": "Description of the hook. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/460887) in GitLab 17.1.",
             "example": "Hook description"
           },
           "created_at": {
@@ -141297,12 +141505,12 @@
           },
           "token_present": {
             "type": "boolean",
-            "description": "Whether a secret token is configured",
+            "description": "Whether a secret token is configured. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/231325) in GitLab 19.0.",
             "example": false
           },
           "signing_token_present": {
             "type": "boolean",
-            "description": "Whether an HMAC signing token is configured",
+            "description": "Whether an HMAC signing token is configured. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/231325) in GitLab 19.0.",
             "example": false
           },
           "project_id": {
@@ -141950,10 +142158,12 @@
         "type": "object",
         "properties": {
           "expired": {
-            "type": "string"
+            "type": "boolean"
           },
           "expiration": {
-            "type": "string"
+            "type": "string",
+            "format": "date-time",
+            "example": "2025-01-01T00:00:00.000Z"
           }
         }
       },
@@ -143311,7 +143521,8 @@
             "type": "string"
           },
           "path": {
-            "type": "string"
+            "type": "string",
+            "example": "/root"
           }
         }
       },
@@ -145654,7 +145865,10 @@
             "type": "integer"
           },
           "deployment_approvals": {
-            "$ref": "#/components/schemas/ApiEntitiesDeploymentsApproval"
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ApiEntitiesDeploymentsApproval"
+            }
           }
         }
       },
@@ -145662,7 +145876,10 @@
         "type": "object",
         "properties": {
           "rules": {
-            "$ref": "#/components/schemas/ApiEntitiesProtectedEnvironmentsApprovalRuleForSummary"
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ApiEntitiesProtectedEnvironmentsApprovalRuleForSummary"
+            }
           }
         }
       },
@@ -145714,7 +145931,10 @@
             "example": 0
           },
           "approvals": {
-            "$ref": "#/components/schemas/ApiEntitiesDeploymentsApproval"
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ApiEntitiesDeploymentsApproval"
+            }
           },
           "approval_summary": {
             "$ref": "#/components/schemas/ApiEntitiesDeploymentsApprovalSummary"
@@ -147187,10 +147407,13 @@
         "type": "object",
         "properties": {
           "token": {
-            "type": "string"
+            "type": "string",
+            "example": "your_runner_token"
           },
           "token_expires_at": {
-            "type": "string"
+            "type": "string",
+            "format": "date-time",
+            "example": "2025-01-01T00:00:00.000Z"
           }
         }
       },
@@ -147920,10 +148143,16 @@
             "type": "string"
           },
           "ldap_group_links": {
-            "$ref": "#/components/schemas/ApiEntitiesLdapGroupLink"
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ApiEntitiesLdapGroupLink"
+            }
           },
           "saml_group_links": {
-            "$ref": "#/components/schemas/ApiEntitiesSamlGroupLink"
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ApiEntitiesSamlGroupLink"
+            }
           },
           "file_template_project_id": {
             "type": "string"
@@ -148036,6 +148265,12 @@
           },
           "ai_settings": {
             "$ref": "#/components/schemas/ApiEntitiesAiSettings"
+          },
+          "duo_remote_flows_enabled": {
+            "type": "boolean"
+          },
+          "lock_duo_remote_flows_enabled": {
+            "type": "boolean"
           },
           "membership_lock": {
             "type": "string"
@@ -148852,7 +149087,9 @@
             "example": "https://gitlab.example.com/root"
           },
           "requested_at": {
-            "type": "string"
+            "type": "string",
+            "format": "date-time",
+            "example": "2025-01-01T00:00:00.000Z"
           }
         }
       },
@@ -151647,13 +151884,13 @@
           },
           "commit_message_negative_regex": {
             "type": "string",
-            "description": "Regular expression that commit messages must not match. At least one of \u0060deny_delete_tag\u0060, \u0060member_check\u0060, \u0060prevent_secrets\u0060, \u0060commit_message_regex\u0060, \u0060commit_message_negative_regex\u0060, \u0060branch_name_regex\u0060, \u0060author_email_regex\u0060, \u0060file_name_regex\u0060, \u0060max_file_size\u0060, \u0060commit_committer_check\u0060, \u0060commit_committer_name_check\u0060, \u0060reject_unsigned_commits\u0060, \u0060reject_non_dco_commits\u0060 must be provided.",
+            "description": "Regular expression that commit messages must not match, for example \u0060ssh\\:\\/\\/\u0060. At least one of \u0060deny_delete_tag\u0060, \u0060member_check\u0060, \u0060prevent_secrets\u0060, \u0060commit_message_regex\u0060, \u0060commit_message_negative_regex\u0060, \u0060branch_name_regex\u0060, \u0060author_email_regex\u0060, \u0060file_name_regex\u0060, \u0060max_file_size\u0060, \u0060commit_committer_check\u0060, \u0060commit_committer_name_check\u0060, \u0060reject_unsigned_commits\u0060, \u0060reject_non_dco_commits\u0060 must be provided.",
             "nullable": true,
             "example": "ssh\\:\\/\\/"
           },
           "branch_name_regex": {
             "type": "string",
-            "description": "Regular expression that branch names must match. At least one of \u0060deny_delete_tag\u0060, \u0060member_check\u0060, \u0060prevent_secrets\u0060, \u0060commit_message_regex\u0060, \u0060commit_message_negative_regex\u0060, \u0060branch_name_regex\u0060, \u0060author_email_regex\u0060, \u0060file_name_regex\u0060, \u0060max_file_size\u0060, \u0060commit_committer_check\u0060, \u0060commit_committer_name_check\u0060, \u0060reject_unsigned_commits\u0060, \u0060reject_non_dco_commits\u0060 must be provided.",
+            "description": "Regular expression that branch names must match, for example \u0060(feature|hotfix)\\/.*\u0060. At least one of \u0060deny_delete_tag\u0060, \u0060member_check\u0060, \u0060prevent_secrets\u0060, \u0060commit_message_regex\u0060, \u0060commit_message_negative_regex\u0060, \u0060branch_name_regex\u0060, \u0060author_email_regex\u0060, \u0060file_name_regex\u0060, \u0060max_file_size\u0060, \u0060commit_committer_check\u0060, \u0060commit_committer_name_check\u0060, \u0060reject_unsigned_commits\u0060, \u0060reject_non_dco_commits\u0060 must be provided.",
             "nullable": true,
             "example": "(feature|hotfix)\\/.*"
           },
@@ -151665,7 +151902,7 @@
           },
           "file_name_regex": {
             "type": "string",
-            "description": "Regular expression that committed filenames must not match. At least one of \u0060deny_delete_tag\u0060, \u0060member_check\u0060, \u0060prevent_secrets\u0060, \u0060commit_message_regex\u0060, \u0060commit_message_negative_regex\u0060, \u0060branch_name_regex\u0060, \u0060author_email_regex\u0060, \u0060file_name_regex\u0060, \u0060max_file_size\u0060, \u0060commit_committer_check\u0060, \u0060commit_committer_name_check\u0060, \u0060reject_unsigned_commits\u0060, \u0060reject_non_dco_commits\u0060 must be provided.",
+            "description": "Regular expression that committed filenames must not match, for example \u0060(jar|exe)$\u0060. At least one of \u0060deny_delete_tag\u0060, \u0060member_check\u0060, \u0060prevent_secrets\u0060, \u0060commit_message_regex\u0060, \u0060commit_message_negative_regex\u0060, \u0060branch_name_regex\u0060, \u0060author_email_regex\u0060, \u0060file_name_regex\u0060, \u0060max_file_size\u0060, \u0060commit_committer_check\u0060, \u0060commit_committer_name_check\u0060, \u0060reject_unsigned_commits\u0060, \u0060reject_non_dco_commits\u0060 must be provided.",
             "nullable": true,
             "example": "(jar|exe)$"
           },
@@ -151727,13 +151964,13 @@
           },
           "commit_message_negative_regex": {
             "type": "string",
-            "description": "Regular expression that commit messages must not match. At least one of \u0060deny_delete_tag\u0060, \u0060member_check\u0060, \u0060prevent_secrets\u0060, \u0060commit_message_regex\u0060, \u0060commit_message_negative_regex\u0060, \u0060branch_name_regex\u0060, \u0060author_email_regex\u0060, \u0060file_name_regex\u0060, \u0060max_file_size\u0060, \u0060commit_committer_check\u0060, \u0060commit_committer_name_check\u0060, \u0060reject_unsigned_commits\u0060, \u0060reject_non_dco_commits\u0060 must be provided.",
+            "description": "Regular expression that commit messages must not match, for example \u0060ssh\\:\\/\\/\u0060. At least one of \u0060deny_delete_tag\u0060, \u0060member_check\u0060, \u0060prevent_secrets\u0060, \u0060commit_message_regex\u0060, \u0060commit_message_negative_regex\u0060, \u0060branch_name_regex\u0060, \u0060author_email_regex\u0060, \u0060file_name_regex\u0060, \u0060max_file_size\u0060, \u0060commit_committer_check\u0060, \u0060commit_committer_name_check\u0060, \u0060reject_unsigned_commits\u0060, \u0060reject_non_dco_commits\u0060 must be provided.",
             "nullable": true,
             "example": "ssh\\:\\/\\/"
           },
           "branch_name_regex": {
             "type": "string",
-            "description": "Regular expression that branch names must match. At least one of \u0060deny_delete_tag\u0060, \u0060member_check\u0060, \u0060prevent_secrets\u0060, \u0060commit_message_regex\u0060, \u0060commit_message_negative_regex\u0060, \u0060branch_name_regex\u0060, \u0060author_email_regex\u0060, \u0060file_name_regex\u0060, \u0060max_file_size\u0060, \u0060commit_committer_check\u0060, \u0060commit_committer_name_check\u0060, \u0060reject_unsigned_commits\u0060, \u0060reject_non_dco_commits\u0060 must be provided.",
+            "description": "Regular expression that branch names must match, for example \u0060(feature|hotfix)\\/.*\u0060. At least one of \u0060deny_delete_tag\u0060, \u0060member_check\u0060, \u0060prevent_secrets\u0060, \u0060commit_message_regex\u0060, \u0060commit_message_negative_regex\u0060, \u0060branch_name_regex\u0060, \u0060author_email_regex\u0060, \u0060file_name_regex\u0060, \u0060max_file_size\u0060, \u0060commit_committer_check\u0060, \u0060commit_committer_name_check\u0060, \u0060reject_unsigned_commits\u0060, \u0060reject_non_dco_commits\u0060 must be provided.",
             "nullable": true,
             "example": "(feature|hotfix)\\/.*"
           },
@@ -151745,7 +151982,7 @@
           },
           "file_name_regex": {
             "type": "string",
-            "description": "Regular expression that committed filenames must not match. At least one of \u0060deny_delete_tag\u0060, \u0060member_check\u0060, \u0060prevent_secrets\u0060, \u0060commit_message_regex\u0060, \u0060commit_message_negative_regex\u0060, \u0060branch_name_regex\u0060, \u0060author_email_regex\u0060, \u0060file_name_regex\u0060, \u0060max_file_size\u0060, \u0060commit_committer_check\u0060, \u0060commit_committer_name_check\u0060, \u0060reject_unsigned_commits\u0060, \u0060reject_non_dco_commits\u0060 must be provided.",
+            "description": "Regular expression that committed filenames must not match, for example \u0060(jar|exe)$\u0060. At least one of \u0060deny_delete_tag\u0060, \u0060member_check\u0060, \u0060prevent_secrets\u0060, \u0060commit_message_regex\u0060, \u0060commit_message_negative_regex\u0060, \u0060branch_name_regex\u0060, \u0060author_email_regex\u0060, \u0060file_name_regex\u0060, \u0060max_file_size\u0060, \u0060commit_committer_check\u0060, \u0060commit_committer_name_check\u0060, \u0060reject_unsigned_commits\u0060, \u0060reject_non_dco_commits\u0060 must be provided.",
             "nullable": true,
             "example": "(jar|exe)$"
           },
@@ -155206,6 +155443,11 @@
             "description": "Maximum number of thread resolve and unresolve requests per minute for each user. Default: \u0060120\u0060. Set to \u00600\u0060 to disable the rate limit. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/work_items/606720) in GitLab 19.6.",
             "nullable": true
           },
+          "draft_notes_create_limit": {
+            "type": "integer",
+            "description": "Maximum number of draft note create requests per minute for each user. Default: \u0060300\u0060. Set to \u00600\u0060 to disable the rate limit. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/work_items/636471) in GitLab 19.6.",
+            "nullable": true
+          },
           "domain_denylist_enabled": {
             "type": "boolean",
             "description": "If \u0060true\u0060, enables the domain denylist for sign-ups. Requires \u0060domain_denylist\u0060.",
@@ -155238,6 +155480,11 @@
           "email_otp_enabled": {
             "type": "boolean",
             "description": "If \u0060true\u0060, enables email-based one-time passwords (OTP) as a multi-factor authentication method. Requires \u0060require_email_verification_on_account_locked\u0060 to be \u0060true\u0060.",
+            "nullable": true
+          },
+          "environment_delete_rows_limit_per_user": {
+            "type": "integer",
+            "description": "Maximum number of deployment, job, and merge request link rows each user can delete with environments every minute.",
             "nullable": true
           },
           "iframe_rendering_enabled": {
@@ -155984,6 +156231,11 @@
             "description": "If \u0060true\u0060, \u0060GET /projects/:id/ci/lint\u0060 requires authentication, including for public projects.",
             "nullable": true
           },
+          "release_evidence_max_size_bytes": {
+            "type": "integer",
+            "description": "Maximum size of a release evidence, in bytes. Applies only when the \u0060release_evidence_size_limit\u0060 feature flag is enabled. Default: \u00602097152\u0060 (2 MiB). To disable the limit, set to \u00600\u0060.",
+            "nullable": true
+          },
           "ci_job_live_trace_enabled": {
             "type": "boolean",
             "description": "If \u0060true\u0060, turns on incremental logging for job logs. Archived job logs are incrementally uploaded to object storage, which must be configured.",
@@ -156082,6 +156334,11 @@
           "pipeline_schedule_management_limit_per_user": {
             "type": "integer",
             "description": "Maximum number of pipeline schedule changes (create, update, delete, take ownership) allowed per minute for a given user.",
+            "nullable": true
+          },
+          "pipeline_trigger_management_limit_per_user": {
+            "type": "integer",
+            "description": "Maximum number of pipeline trigger token changes (create, update, delete) allowed per minute for a given user.",
             "nullable": true
           },
           "job_retry_limit_per_user_project": {
@@ -156446,6 +156703,11 @@
           "first_day_of_week": {
             "type": "string",
             "description": "Start day of the week for calendar views and date pickers. Valid values are \u00600\u0060 (default) for Sunday, \u00601\u0060 for Monday, and \u00606\u0060 for Saturday.",
+            "nullable": true
+          },
+          "git_push_per_project_limit": {
+            "type": "integer",
+            "description": "Maximum number of Git pushes every minute to one project, over HTTPS and SSH. Default: \u0060600\u0060. Set to \u00600\u0060 to disable the limit. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/269867) in GitLab 19.6. This attribute is in beta and might be changed or removed without notice.",
             "nullable": true
           },
           "github_gists_import_limit": {
@@ -157282,6 +157544,21 @@
             "description": "Maximum number of \u0060upsertUserBudgetCapOverrides\u0060 and \u0060upsertFlatUserCap\u0060 GraphQL mutation calls per day per user. Default: \u006020000\u0060. Set to \u00600\u0060 to disable the rate limit.",
             "nullable": true
           },
+          "credits_usage_per_minute_limit": {
+            "type": "integer",
+            "description": "Maximum number of \u0060creditsUsage\u0060 GraphQL requests per minute per user. Default: \u006060\u0060. Set to \u00600\u0060 to disable the rate limit.",
+            "nullable": true
+          },
+          "credits_usage_per_hour_limit": {
+            "type": "integer",
+            "description": "Maximum number of \u0060creditsUsage\u0060 GraphQL requests per hour per user. Default: \u0060300\u0060. Set to \u00600\u0060 to disable the rate limit.",
+            "nullable": true
+          },
+          "credits_usage_per_day_limit": {
+            "type": "integer",
+            "description": "Maximum number of \u0060creditsUsage\u0060 GraphQL requests per day per user. Default: \u00603000\u0060. Set to \u00600\u0060 to disable the rate limit.",
+            "nullable": true
+          },
           "group_owners_can_manage_default_branch_protection": {
             "type": "boolean",
             "description": "If \u0060true\u0060, allows group owners to manage default branch protection in their groups. If \u0060false\u0060, group owners cannot override the instance default branch protection. GitLab Self-Managed, Premium and Ultimate only.",
@@ -158087,6 +158364,10 @@
             "nullable": true
           },
           "wiki_read_request_limit_unauthenticated": {
+            "type": "string",
+            "nullable": true
+          },
+          "merge_request_diffs_page_request_limit": {
             "type": "string",
             "nullable": true
           },
@@ -161141,7 +161422,7 @@
         "properties": {
           "content": {
             "type": "string",
-            "description": "The content of a snippet. Mutually exclusive with \u0060files\u0060. At least one of \u0060content\u0060, \u0060description\u0060, \u0060files\u0060, \u0060file_name\u0060, \u0060title\u0060, \u0060visibility\u0060 must be provided.",
+            "description": "The content of a snippet. Deprecated. Use \u0060files\u0060 instead. Mutually exclusive with \u0060files\u0060. At least one of \u0060content\u0060, \u0060description\u0060, \u0060files\u0060, \u0060file_name\u0060, \u0060title\u0060, \u0060visibility\u0060 must be provided.",
             "nullable": true
           },
           "description": {
@@ -161151,7 +161432,7 @@
           },
           "file_name": {
             "type": "string",
-            "description": "The name of a snippet file. Mutually exclusive with \u0060files\u0060. At least one of \u0060content\u0060, \u0060description\u0060, \u0060files\u0060, \u0060file_name\u0060, \u0060title\u0060, \u0060visibility\u0060 must be provided.",
+            "description": "The name of a snippet file. Deprecated. Use \u0060files\u0060 instead. Mutually exclusive with \u0060files\u0060. At least one of \u0060content\u0060, \u0060description\u0060, \u0060files\u0060, \u0060file_name\u0060, \u0060title\u0060, \u0060visibility\u0060 must be provided.",
             "nullable": true
           },
           "title": {
@@ -161331,13 +161612,13 @@
         "properties": {
           "from": {
             "type": "string",
-            "description": "First commit in the range of commits, as a SHA, to use for the changelog. This commit is not included in the changelog. If omitted, the most recent stable version tag before \u0060version\u0060 is used.",
+            "description": "First commit in the range of commits, as a SHA, to use for the changelog. This commit is not included in the changelog. If omitted, the most recent stable version tag before \u0060version\u0060 is used. Tags in \u0060X.Y.Z\u0060 or \u0060vX.Y.Z\u0060 format are recognized, and pre-release tags such as \u0060v1.0.0-pre1\u0060 are ignored. If no such tag exists, an error is returned and you must set \u0060from\u0060.",
             "nullable": true,
             "example": "ed899a2f4b50b4370feeea94676502b42383c746"
           },
           "to": {
             "type": "string",
-            "description": "Last commit in the range of commits, as a SHA, to use for the changelog. This commit is included in the changelog. If omitted, uses the latest commit on the default branch. For the Add changelog data to file operation, uses the latest commit on \u0060branch\u0060 instead. The range can contain at most 15,000 commits.",
+            "description": "Last commit in the range of commits, as a SHA or a branch or tag name, to use for the changelog. This commit is included in the changelog. If omitted, uses the latest commit on the default branch. For the Add changelog data to file operation, uses the latest commit on \u0060branch\u0060 instead. The range can contain at most 15,000 commits.",
             "nullable": true,
             "example": "6104942438c14ec7bd21c6cd5bd995272b3faff6"
           },
@@ -161362,7 +161643,7 @@
           },
           "config_file_ref": {
             "type": "string",
-            "description": "Git reference, for example a branch, where the changelog configuration file is defined. Defaults to the default branch of the repository.",
+            "description": "Git reference, for example a branch, where the changelog configuration file is defined. Defaults to the default branch of the repository. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/426108) in GitLab 18.2.",
             "nullable": true,
             "example": "main"
           },
@@ -161400,7 +161681,7 @@
           },
           "enabled": {
             "type": "boolean",
-            "description": "If \u0060true\u0060, the mirror is enabled.",
+            "description": "If \u0060true\u0060, the mirror is enabled. Default is \u0060false\u0060.",
             "nullable": true
           },
           "auth_method": {
@@ -161442,7 +161723,7 @@
           },
           "auth_method": {
             "type": "string",
-            "description": "Mirror authentication method.",
+            "description": "Mirror authentication method. Accepted values are \u0060ssh_public_key\u0060 and \u0060password\u0060.",
             "nullable": true
           },
           "keep_divergent_refs": {
@@ -162192,7 +162473,7 @@
           },
           "duo_code_review_decisions_enabled": {
             "type": "boolean",
-            "description": "Enable approval and change requests by GitLab Duo on merge requests. Behind a feature flag named \u0060duo_code_review_decisions\u0060, disabled by default.",
+            "description": "Enable approval and change requests by GitLab Duo on merge requests. Behind a feature flag named \u0060duo_code_review_decisions\u0060, enabled by default.",
             "nullable": true
           },
           "duo_code_review_depth_allowed": {
@@ -162646,7 +162927,7 @@
           },
           "duo_code_review_decisions_enabled": {
             "type": "boolean",
-            "description": "Enable approval and change requests by GitLab Duo on merge requests. Behind a feature flag named \u0060duo_code_review_decisions\u0060, disabled by default.",
+            "description": "Enable approval and change requests by GitLab Duo on merge requests. Behind a feature flag named \u0060duo_code_review_decisions\u0060, enabled by default.",
             "nullable": true
           },
           "duo_code_review_depth_allowed": {
@@ -163097,7 +163378,7 @@
           },
           "duo_code_review_decisions_enabled": {
             "type": "boolean",
-            "description": "Enable approval and change requests by GitLab Duo on merge requests. Behind a feature flag named \u0060duo_code_review_decisions\u0060, disabled by default.",
+            "description": "Enable approval and change requests by GitLab Duo on merge requests. Behind a feature flag named \u0060duo_code_review_decisions\u0060, enabled by default.",
             "nullable": true
           },
           "duo_code_review_depth_allowed": {
@@ -176436,7 +176717,7 @@
           },
           "line": {
             "type": "integer",
-            "description": "Line number where the comment should be placed.",
+            "description": "Line number where the comment should be placed. Required if \u0060path\u0060 is provided.",
             "nullable": true,
             "example": 11
           },
@@ -182082,7 +182363,7 @@
           },
           "duo_code_review_decisions_enabled": {
             "type": "boolean",
-            "description": "Enable approval and change requests by GitLab Duo on merge requests. Behind a feature flag named \u0060duo_code_review_decisions\u0060, disabled by default.",
+            "description": "Enable approval and change requests by GitLab Duo on merge requests. Behind a feature flag named \u0060duo_code_review_decisions\u0060, enabled by default.",
             "nullable": true
           },
           "duo_code_review_depth_allowed": {
@@ -182479,7 +182760,7 @@
           },
           "duo_code_review_decisions_enabled": {
             "type": "boolean",
-            "description": "Enable approval and change requests by GitLab Duo on merge requests. Behind a feature flag named \u0060duo_code_review_decisions\u0060, disabled by default.",
+            "description": "Enable approval and change requests by GitLab Duo on merge requests. Behind a feature flag named \u0060duo_code_review_decisions\u0060, enabled by default.",
             "nullable": true
           },
           "duo_code_review_depth_allowed": {
@@ -182876,7 +183157,7 @@
           },
           "duo_code_review_decisions_enabled": {
             "type": "boolean",
-            "description": "Enable approval and change requests by GitLab Duo on merge requests. Behind a feature flag named \u0060duo_code_review_decisions\u0060, disabled by default.",
+            "description": "Enable approval and change requests by GitLab Duo on merge requests. Behind a feature flag named \u0060duo_code_review_decisions\u0060, enabled by default.",
             "nullable": true
           },
           "duo_code_review_depth_allowed": {
@@ -186193,6 +186474,12 @@
           "$ref": "#/components/schemas/ApiEntitiesSecurityVulnerabilityScanningSbomScan"
         }
       },
+      "GetApiV4ProjectsIdAiAgentSessions200ResponseSchema": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ApiEntitiesAiExternalAgentsSession"
+        }
+      },
       "GetApiV4AiDuoWorkflowsWorkflowsIdCheckpoints200ResponseSchema": {
         "type": "array",
         "items": {
@@ -186281,6 +186568,30 @@
           "$ref": "#/components/schemas/ApiEntitiesAnalyticsDeploymentFrequency"
         }
       },
+      "GetApiV4AnalyticsCodeReview200ResponseSchema": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ApiEntitiesAnalyticsCodeReviewMergeRequest"
+        }
+      },
+      "GetApiV4ProjectsIdDependencies200ResponseSchema": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ApiEntitiesDependency"
+        }
+      },
+      "GetApiV4ProjectAliases200ResponseSchema": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ApiEntitiesProjectAlias"
+        }
+      },
+      "GetApiV4ProjectsIdMergeRequestsMergeRequestIidApprovalRules200ResponseSchema": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ApiEntitiesMergeRequestApprovalRule"
+        }
+      },
       "GetApiV4SecurityVulnerabilityExportsIdDownload200OctetStreamResponseSchema": {
         "type": "string",
         "format": "binary"
@@ -186301,6 +186612,12 @@
           "$ref": "#/components/schemas/VulnerabilitiesFindingEntity"
         }
       },
+      "GetApiV4ProjectsIdVulnerabilities200ResponseSchema": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ApiEntitiesVulnerability"
+        }
+      },
       "GetApiV4ProjectsIdGoogleCloudSetupIntegrationsSh200PlainResponseSchema": {
         "type": "string"
       },
@@ -186311,6 +186628,12 @@
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/ApiEntitiesManagedLicense"
+        }
+      },
+      "GetApiV4GroupsIdManageSshKeys200ResponseSchema": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ApiEntitiesSshKeyWithUserId"
         }
       },
       "GetApiV4ProjectsIdMergeRequestsMergeRequestIidBlocks200ResponseSchema": {
@@ -186329,6 +186652,18 @@
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/ApiEntitiesGroupHook"
+        }
+      },
+      "GetApiV4GroupsIdSamlIdentities200ResponseSchema": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ApiEntitiesIdentityDetail"
+        }
+      },
+      "GetApiV4GroupsIdScimIdentities200ResponseSchema": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ApiEntitiesIdentityDetail"
         }
       },
       "GetApiV4GroupsIdMemberRoles200ResponseSchema": {
@@ -186497,6 +186832,24 @@
           "$ref": "#/components/schemas/ApiEntitiesMergeRequestsStatusCheck"
         }
       },
+      "GetApiV4GroupsIdApprovalRules200ResponseSchema": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ApiEntitiesGroupApprovalRule"
+        }
+      },
+      "GetApiV4ProjectsIdApprovalRules200ResponseSchema": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ApiEntitiesProjectApprovalRule"
+        }
+      },
+      "GetApiV4ProjectsIdClusterAgentsAgentIdUrlConfigurations200ResponseSchema": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ApiEntitiesClustersAgentUrlConfiguration"
+        }
+      },
       "GetApiV4RunnerControllersRunnerControllerIdTokens200ResponseSchema": {
         "type": "array",
         "items": {
@@ -186525,6 +186878,30 @@
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/ApiEntitiesAdminModel"
+        }
+      },
+      "GetApiV4AdminKnowledgeGraphNamespaces200ResponseSchema": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ApiEntitiesAnalyticsKnowledgeGraphEnabledNamespace"
+        }
+      },
+      "GetApiV4AdminZoektShards200ResponseSchema": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ApiEntitiesSearchZoektNode"
+        }
+      },
+      "GetApiV4AdminZoektShardsNodeIdIndexedNamespaces200ResponseSchema": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ApiEntitiesSearchZoektIndexedNamespace"
+        }
+      },
+      "GetApiV4AdminActiveContextConnections200ResponseSchema": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ApiEntitiesAiActiveContextConnection"
         }
       },
       "GetApiV4AdminMemberRoles200ResponseSchema": {
@@ -187308,6 +187685,12 @@
           "$ref": "#/components/schemas/ApiEntitiesImportOfflineExport"
         }
       },
+      "GetApiV4NamespacesStorageLimitExclusions200ResponseSchema": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ApiEntitiesNamespacesStorageLimitExclusion"
+        }
+      },
       "GetApiV4Namespaces200ResponseSchema": {
         "type": "array",
         "items": {
@@ -187410,6 +187793,24 @@
           "$ref": "#/components/schemas/ApiEntitiesMember"
         }
       },
+      "GetApiV4GroupsIdBillableMembers200ResponseSchema": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ApiEntitiesMember"
+        }
+      },
+      "GetApiV4GroupsIdBillableMembersUserIdMemberships200ResponseSchema": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ApiEntitiesBillableMembership"
+        }
+      },
+      "GetApiV4GroupsIdBillableMembersUserIdIndirect200ResponseSchema": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ApiEntitiesBillableMembership"
+        }
+      },
       "GetApiV4ProjectsIdUploads200ResponseSchema": {
         "type": "array",
         "items": {
@@ -187472,6 +187873,12 @@
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/ApiEntitiesUserBasic"
+        }
+      },
+      "GetApiV4ProjectsIdIssuesIssueIidMetricImages200ResponseSchema": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ApiEntitiesIssuableMetricImage"
         }
       },
       "GetApiV4ProjectsIdIssuesIssueIidLinks200ResponseSchema": {
@@ -187959,6 +188366,12 @@
           "$ref": "#/components/schemas/ApiEntitiesUserPublic"
         }
       },
+      "GetApiV4GroupsIdProvisionedUsers200ResponseSchema": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ApiEntitiesUserPublic"
+        }
+      },
       "GetApiV4GroupsIdSshCertificates200ResponseSchema": {
         "type": "array",
         "items": {
@@ -188237,6 +188650,9 @@
         "example": {
           "title": "deploy"
         }
+      },
+      "ApiEntitiesTerraformModuleVersionsModulesItemProperty": {
+        "type": "object"
       },
       "ApiEntitiesCommitTrailersProperty": {
         "type": "object",
@@ -197287,7 +197703,7 @@
           "reviewed"
         ],
         "type": "string",
-        "description": "Sets the review state after publishing. Does not record a formal approval.",
+        "description": "Sets the review state after publishing. Does not record a formal approval. If you can\u0027t request changes, sets \u0060reviewed\u0060 instead.",
         "nullable": true,
         "x-ms-enum": {
           "name": "PostApiV4ProjectsIdMergeRequestsMergeRequestIidDraftNotesBulkPublishRequestReviewerState",
@@ -217297,6 +217713,9 @@
         "title": "deploy"
       }
     },
+    "ApiEntitiesTerraformModuleVersionsModulesItem": {
+      "type": "object"
+    },
     "ApiEntitiesCommitTrailers": {
       "type": "object",
       "example": {
@@ -217853,6 +218272,12 @@
         "$ref": "#/components/schemas/ApiEntitiesSecurityVulnerabilityScanningSbomScan"
       }
     },
+    "GetApiV4ProjectsIdAiAgentSessions200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesAiExternalAgentsSession"
+      }
+    },
     "GetApiV4AiDuoWorkflowsWorkflowsIdCheckpoints200Response": {
       "type": "array",
       "items": {
@@ -217941,6 +218366,30 @@
         "$ref": "#/components/schemas/ApiEntitiesAnalyticsDeploymentFrequency"
       }
     },
+    "GetApiV4AnalyticsCodeReview200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesAnalyticsCodeReviewMergeRequest"
+      }
+    },
+    "GetApiV4ProjectsIdDependencies200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesDependency"
+      }
+    },
+    "GetApiV4ProjectAliases200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesProjectAlias"
+      }
+    },
+    "GetApiV4ProjectsIdMergeRequestsMergeRequestIidApprovalRules200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesMergeRequestApprovalRule"
+      }
+    },
     "GetApiV4SecurityVulnerabilityExportsIdDownload200OctetStreamResponse": {
       "type": "string",
       "format": "binary"
@@ -217961,6 +218410,12 @@
         "$ref": "#/components/schemas/VulnerabilitiesFindingEntity"
       }
     },
+    "GetApiV4ProjectsIdVulnerabilities200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesVulnerability"
+      }
+    },
     "GetApiV4ProjectsIdGoogleCloudSetupIntegrationsSh200PlainResponse": {
       "type": "string"
     },
@@ -217971,6 +218426,12 @@
       "type": "array",
       "items": {
         "$ref": "#/components/schemas/ApiEntitiesManagedLicense"
+      }
+    },
+    "GetApiV4GroupsIdManageSshKeys200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesSshKeyWithUserId"
       }
     },
     "GetApiV4ProjectsIdMergeRequestsMergeRequestIidBlocks200Response": {
@@ -217989,6 +218450,18 @@
       "type": "array",
       "items": {
         "$ref": "#/components/schemas/ApiEntitiesGroupHook"
+      }
+    },
+    "GetApiV4GroupsIdSamlIdentities200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesIdentityDetail"
+      }
+    },
+    "GetApiV4GroupsIdScimIdentities200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesIdentityDetail"
       }
     },
     "GetApiV4GroupsIdMemberRoles200Response": {
@@ -218157,6 +218630,24 @@
         "$ref": "#/components/schemas/ApiEntitiesMergeRequestsStatusCheck"
       }
     },
+    "GetApiV4GroupsIdApprovalRules200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesGroupApprovalRule"
+      }
+    },
+    "GetApiV4ProjectsIdApprovalRules200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesProjectApprovalRule"
+      }
+    },
+    "GetApiV4ProjectsIdClusterAgentsAgentIdUrlConfigurations200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesClustersAgentUrlConfiguration"
+      }
+    },
     "GetApiV4RunnerControllersRunnerControllerIdTokens200Response": {
       "type": "array",
       "items": {
@@ -218185,6 +218676,30 @@
       "type": "array",
       "items": {
         "$ref": "#/components/schemas/ApiEntitiesAdminModel"
+      }
+    },
+    "GetApiV4AdminKnowledgeGraphNamespaces200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesAnalyticsKnowledgeGraphEnabledNamespace"
+      }
+    },
+    "GetApiV4AdminZoektShards200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesSearchZoektNode"
+      }
+    },
+    "GetApiV4AdminZoektShardsNodeIdIndexedNamespaces200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesSearchZoektIndexedNamespace"
+      }
+    },
+    "GetApiV4AdminActiveContextConnections200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesAiActiveContextConnection"
       }
     },
     "GetApiV4AdminMemberRoles200Response": {
@@ -218976,6 +219491,12 @@
         "$ref": "#/components/schemas/ApiEntitiesImportOfflineExport"
       }
     },
+    "GetApiV4NamespacesStorageLimitExclusions200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesNamespacesStorageLimitExclusion"
+      }
+    },
     "GetApiV4Namespaces200Response": {
       "type": "array",
       "items": {
@@ -219078,6 +219599,24 @@
         "$ref": "#/components/schemas/ApiEntitiesMember"
       }
     },
+    "GetApiV4GroupsIdBillableMembers200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesMember"
+      }
+    },
+    "GetApiV4GroupsIdBillableMembersUserIdMemberships200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesBillableMembership"
+      }
+    },
+    "GetApiV4GroupsIdBillableMembersUserIdIndirect200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesBillableMembership"
+      }
+    },
     "GetApiV4ProjectsIdUploads200Response": {
       "type": "array",
       "items": {
@@ -219140,6 +219679,12 @@
       "type": "array",
       "items": {
         "$ref": "#/components/schemas/ApiEntitiesUserBasic"
+      }
+    },
+    "GetApiV4ProjectsIdIssuesIssueIidMetricImages200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesIssuableMetricImage"
       }
     },
     "GetApiV4ProjectsIdIssuesIssueIidLinks200Response": {
@@ -219622,6 +220167,12 @@
       }
     },
     "GetApiV4GroupsIdSamlUsers200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesUserPublic"
+      }
+    },
+    "GetApiV4GroupsIdProvisionedUsers200Response": {
       "type": "array",
       "items": {
         "$ref": "#/components/schemas/ApiEntitiesUserPublic"

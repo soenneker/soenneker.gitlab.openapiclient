@@ -47,7 +47,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Hooks.Item.Events
         {
         }
         /// <summary>
-        /// Lists all events for a specified webhook.
+        /// Lists all events from the past seven days for a specified webhook. This feature was introduced in GitLab 17.3.
         /// </summary>
         /// <returns>A <see cref="Stream"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -65,7 +65,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Hooks.Item.Events
             return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Lists all events for a specified webhook.
+        /// Lists all events from the past seven days for a specified webhook. This feature was introduced in GitLab 17.3.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -92,7 +92,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Hooks.Item.Events
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Hooks.Item.Events.EventsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Lists all events for a specified webhook.
+        /// Lists all events from the past seven days for a specified webhook. This feature was introduced in GitLab 17.3.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class EventsRequestBuilderGetQueryParameters 

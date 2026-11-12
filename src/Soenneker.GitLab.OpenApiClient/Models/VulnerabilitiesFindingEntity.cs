@@ -246,12 +246,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The external_issue_links property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesExternalIssueLinkEntity? ExternalIssueLinks { get => _explicitNullValueExternalIssueLinks; set { _explicitNullValueExternalIssueLinks = value; AdditionalData?.Remove("external_issue_links"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_issue_links"); else _explicitNullProperties?.Remove("external_issue_links"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesExternalIssueLinkEntity? _explicitNullValueExternalIssueLinks = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesExternalIssueLinkEntity>? ExternalIssueLinks { get => _explicitNullValueExternalIssueLinks; set { _explicitNullValueExternalIssueLinks = value; AdditionalData?.Remove("external_issue_links"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_issue_links"); else _explicitNullProperties?.Remove("external_issue_links"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesExternalIssueLinkEntity>? _explicitNullValueExternalIssueLinks = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesExternalIssueLinkEntity ExternalIssueLinks { get => _explicitNullValueExternalIssueLinks; set { _explicitNullValueExternalIssueLinks = value; AdditionalData?.Remove("external_issue_links"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_issue_links"); else _explicitNullProperties?.Remove("external_issue_links"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesExternalIssueLinkEntity _explicitNullValueExternalIssueLinks = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesExternalIssueLinkEntity> ExternalIssueLinks { get => _explicitNullValueExternalIssueLinks; set { _explicitNullValueExternalIssueLinks = value; AdditionalData?.Remove("external_issue_links"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_issue_links"); else _explicitNullProperties?.Remove("external_issue_links"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesExternalIssueLinkEntity> _explicitNullValueExternalIssueLinks = default!;
 #endif
         /// <summary>The false_positive property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -286,12 +286,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The identifiers property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesIdentifierEntity? Identifiers { get => _explicitNullValueIdentifiers; set { _explicitNullValueIdentifiers = value; AdditionalData?.Remove("identifiers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("identifiers"); else _explicitNullProperties?.Remove("identifiers"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesIdentifierEntity? _explicitNullValueIdentifiers = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesIdentifierEntity>? Identifiers { get => _explicitNullValueIdentifiers; set { _explicitNullValueIdentifiers = value; AdditionalData?.Remove("identifiers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("identifiers"); else _explicitNullProperties?.Remove("identifiers"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesIdentifierEntity>? _explicitNullValueIdentifiers = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesIdentifierEntity Identifiers { get => _explicitNullValueIdentifiers; set { _explicitNullValueIdentifiers = value; AdditionalData?.Remove("identifiers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("identifiers"); else _explicitNullProperties?.Remove("identifiers"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesIdentifierEntity _explicitNullValueIdentifiers = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesIdentifierEntity> Identifiers { get => _explicitNullValueIdentifiers; set { _explicitNullValueIdentifiers = value; AdditionalData?.Remove("identifiers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("identifiers"); else _explicitNullProperties?.Remove("identifiers"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesIdentifierEntity> _explicitNullValueIdentifiers = default!;
 #endif
         /// <summary>The issue_feedback property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -306,12 +306,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The issue_links property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesIssueLinkEntity? IssueLinks { get => _explicitNullValueIssueLinks; set { _explicitNullValueIssueLinks = value; AdditionalData?.Remove("issue_links"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issue_links"); else _explicitNullProperties?.Remove("issue_links"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesIssueLinkEntity? _explicitNullValueIssueLinks = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesIssueLinkEntity>? IssueLinks { get => _explicitNullValueIssueLinks; set { _explicitNullValueIssueLinks = value; AdditionalData?.Remove("issue_links"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issue_links"); else _explicitNullProperties?.Remove("issue_links"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesIssueLinkEntity>? _explicitNullValueIssueLinks = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesIssueLinkEntity IssueLinks { get => _explicitNullValueIssueLinks; set { _explicitNullValueIssueLinks = value; AdditionalData?.Remove("issue_links"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issue_links"); else _explicitNullProperties?.Remove("issue_links"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesIssueLinkEntity _explicitNullValueIssueLinks = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesIssueLinkEntity> IssueLinks { get => _explicitNullValueIssueLinks; set { _explicitNullValueIssueLinks = value; AdditionalData?.Remove("issue_links"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issue_links"); else _explicitNullProperties?.Remove("issue_links"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesIssueLinkEntity> _explicitNullValueIssueLinks = default!;
 #endif
         /// <summary>The links property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -356,12 +356,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The merge_request_links property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesMergeRequestLinkEntity? MergeRequestLinks { get => _explicitNullValueMergeRequestLinks; set { _explicitNullValueMergeRequestLinks = value; AdditionalData?.Remove("merge_request_links"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_request_links"); else _explicitNullProperties?.Remove("merge_request_links"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesMergeRequestLinkEntity? _explicitNullValueMergeRequestLinks = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesMergeRequestLinkEntity>? MergeRequestLinks { get => _explicitNullValueMergeRequestLinks; set { _explicitNullValueMergeRequestLinks = value; AdditionalData?.Remove("merge_request_links"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_request_links"); else _explicitNullProperties?.Remove("merge_request_links"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesMergeRequestLinkEntity>? _explicitNullValueMergeRequestLinks = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesMergeRequestLinkEntity MergeRequestLinks { get => _explicitNullValueMergeRequestLinks; set { _explicitNullValueMergeRequestLinks = value; AdditionalData?.Remove("merge_request_links"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_request_links"); else _explicitNullProperties?.Remove("merge_request_links"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesMergeRequestLinkEntity _explicitNullValueMergeRequestLinks = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesMergeRequestLinkEntity> MergeRequestLinks { get => _explicitNullValueMergeRequestLinks; set { _explicitNullValueMergeRequestLinks = value; AdditionalData?.Remove("merge_request_links"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_request_links"); else _explicitNullProperties?.Remove("merge_request_links"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesMergeRequestLinkEntity> _explicitNullValueMergeRequestLinks = default!;
 #endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -476,12 +476,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The state_transitions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesStateTransitionEntity? StateTransitions { get => _explicitNullValueStateTransitions; set { _explicitNullValueStateTransitions = value; AdditionalData?.Remove("state_transitions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("state_transitions"); else _explicitNullProperties?.Remove("state_transitions"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesStateTransitionEntity? _explicitNullValueStateTransitions = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesStateTransitionEntity>? StateTransitions { get => _explicitNullValueStateTransitions; set { _explicitNullValueStateTransitions = value; AdditionalData?.Remove("state_transitions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("state_transitions"); else _explicitNullProperties?.Remove("state_transitions"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesStateTransitionEntity>? _explicitNullValueStateTransitions = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesStateTransitionEntity StateTransitions { get => _explicitNullValueStateTransitions; set { _explicitNullValueStateTransitions = value; AdditionalData?.Remove("state_transitions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("state_transitions"); else _explicitNullProperties?.Remove("state_transitions"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesStateTransitionEntity _explicitNullValueStateTransitions = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesStateTransitionEntity> StateTransitions { get => _explicitNullValueStateTransitions; set { _explicitNullValueStateTransitions = value; AdditionalData?.Remove("state_transitions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("state_transitions"); else _explicitNullProperties?.Remove("state_transitions"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesStateTransitionEntity> _explicitNullValueStateTransitions = default!;
 #endif
         /// <summary>The supporting_messages property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -552,18 +552,18 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "dismissal_feedback", n => { DismissalFeedback = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFeedbackEntity>(global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFeedbackEntity.CreateFromDiscriminatorValue); } },
                 { "evidence", n => { Evidence = n.GetStringValue(); } },
                 { "evidence_source", n => { EvidenceSource = n.GetStringValue(); } },
-                { "external_issue_links", n => { ExternalIssueLinks = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesExternalIssueLinkEntity>(global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesExternalIssueLinkEntity.CreateFromDiscriminatorValue); } },
+                { "external_issue_links", n => { ExternalIssueLinks = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesExternalIssueLinkEntity>(global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesExternalIssueLinkEntity.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "false_positive", n => { FalsePositive = n.GetStringValue(); } },
                 { "found_by_pipeline", n => { FoundByPipeline = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFindingEntityFoundByPipeline>(global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFindingEntityFoundByPipeline.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "identifiers", n => { Identifiers = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesIdentifierEntity>(global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesIdentifierEntity.CreateFromDiscriminatorValue); } },
+                { "identifiers", n => { Identifiers = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesIdentifierEntity>(global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesIdentifierEntity.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "issue_feedback", n => { IssueFeedback = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFeedbackEntity>(global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFeedbackEntity.CreateFromDiscriminatorValue); } },
-                { "issue_links", n => { IssueLinks = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesIssueLinkEntity>(global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesIssueLinkEntity.CreateFromDiscriminatorValue); } },
+                { "issue_links", n => { IssueLinks = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesIssueLinkEntity>(global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesIssueLinkEntity.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "links", n => { Links = n.GetStringValue(); } },
                 { "location", n => { Location = n.GetStringValue(); } },
                 { "matches_auto_dismiss_policy", n => { MatchesAutoDismissPolicy = n.GetStringValue(); } },
                 { "merge_request_feedback", n => { MergeRequestFeedback = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFeedbackEntity>(global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFeedbackEntity.CreateFromDiscriminatorValue); } },
-                { "merge_request_links", n => { MergeRequestLinks = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesMergeRequestLinkEntity>(global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesMergeRequestLinkEntity.CreateFromDiscriminatorValue); } },
+                { "merge_request_links", n => { MergeRequestLinks = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesMergeRequestLinkEntity>(global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesMergeRequestLinkEntity.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "project", n => { Project = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ProjectEntity>(global::Soenneker.GitLab.OpenApiClient.Models.ProjectEntity.CreateFromDiscriminatorValue); } },
                 { "remediations", n => { Remediations = n.GetStringValue(); } },
@@ -575,7 +575,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "severity", n => { Severity = n.GetStringValue(); } },
                 { "solution", n => { Solution = n.GetStringValue(); } },
                 { "state", n => { State = n.GetStringValue(); } },
-                { "state_transitions", n => { StateTransitions = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesStateTransitionEntity>(global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesStateTransitionEntity.CreateFromDiscriminatorValue); } },
+                { "state_transitions", n => { StateTransitions = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesStateTransitionEntity>(global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesStateTransitionEntity.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "supporting_messages", n => { SupportingMessages = n.GetStringValue(); } },
                 { "unverified", n => { Unverified = n.GetStringValue(); } },
                 { "uuid", n => { Uuid = n.GetStringValue(); } },
@@ -602,18 +602,18 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFeedbackEntity>("dismissal_feedback", DismissalFeedback);
             writer.WriteStringValue("evidence", Evidence);
             writer.WriteStringValue("evidence_source", EvidenceSource);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesExternalIssueLinkEntity>("external_issue_links", ExternalIssueLinks);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesExternalIssueLinkEntity>("external_issue_links", ExternalIssueLinks);
             writer.WriteStringValue("false_positive", FalsePositive);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFindingEntityFoundByPipeline>("found_by_pipeline", FoundByPipeline);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesIdentifierEntity>("identifiers", Identifiers);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesIdentifierEntity>("identifiers", Identifiers);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFeedbackEntity>("issue_feedback", IssueFeedback);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesIssueLinkEntity>("issue_links", IssueLinks);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesIssueLinkEntity>("issue_links", IssueLinks);
             writer.WriteStringValue("links", Links);
             writer.WriteStringValue("location", Location);
             writer.WriteStringValue("matches_auto_dismiss_policy", MatchesAutoDismissPolicy);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFeedbackEntity>("merge_request_feedback", MergeRequestFeedback);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesMergeRequestLinkEntity>("merge_request_links", MergeRequestLinks);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesMergeRequestLinkEntity>("merge_request_links", MergeRequestLinks);
             writer.WriteStringValue("name", Name);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ProjectEntity>("project", Project);
             writer.WriteStringValue("remediations", Remediations);
@@ -625,7 +625,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("severity", Severity);
             writer.WriteStringValue("solution", Solution);
             writer.WriteStringValue("state", State);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesStateTransitionEntity>("state_transitions", StateTransitions);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesStateTransitionEntity>("state_transitions", StateTransitions);
             writer.WriteStringValue("supporting_messages", SupportingMessages);
             writer.WriteStringValue("unverified", Unverified);
             writer.WriteStringValue("uuid", Uuid);

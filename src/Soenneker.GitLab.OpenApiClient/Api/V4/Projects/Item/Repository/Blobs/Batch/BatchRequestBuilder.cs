@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Blobs.B
         {
         }
         /// <summary>
-        /// Each blob is truncated to the first 1 MB; the `truncated` field indicates when this happens.
+        /// Blob content is Base64 encoded. Each blob is truncated to the first 1 MB; the `truncated` field indicates when this happens. `size` is the full blob size in bytes. Files that do not exist at the requested reference are omitted from the response. This endpoint requires authentication. It is rate limited per user and project, to 5 requests per minute by default, set by the `project_repositories_blobs_batch_limit` application setting. This endpoint is behind the `repository_blobs_batch_api` feature flag, disabled by default. This feature was introduced in GitLab 19.3.
         /// </summary>
         /// <returns>A List&lt;global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBatchBlob&gt;</returns>
         /// <param name="body">The request body</param>
@@ -55,7 +55,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Blobs.B
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// Each blob is truncated to the first 1 MB; the `truncated` field indicates when this happens.
+        /// Blob content is Base64 encoded. Each blob is truncated to the first 1 MB; the `truncated` field indicates when this happens. `size` is the full blob size in bytes. Files that do not exist at the requested reference are omitted from the response. This endpoint requires authentication. It is rate limited per user and project, to 5 requests per minute by default, set by the `project_repositories_blobs_batch_limit` application setting. This endpoint is behind the `repository_blobs_batch_api` feature flag, disabled by default. This feature was introduced in GitLab 19.3.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

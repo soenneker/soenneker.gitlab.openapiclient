@@ -29,7 +29,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Line number where the comment should be placed.</summary>
+        /// <summary>Line number where the comment should be placed. Required if `path` is provided.</summary>
         public int? Line { get => _explicitNullValueLine; set { _explicitNullValueLine = value; AdditionalData?.Remove("line"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("line"); else _explicitNullProperties?.Remove("line"); } }
         private int? _explicitNullValueLine = default!;
         /// <summary>Line type.</summary>

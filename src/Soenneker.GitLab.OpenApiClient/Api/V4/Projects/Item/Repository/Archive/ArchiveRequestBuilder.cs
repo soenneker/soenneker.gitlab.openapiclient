@@ -94,7 +94,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Archive
             [QueryParameter("exclude_paths")]
             public string[] ExcludePaths { get; set; }
 #endif
-            /// <summary>Archive format.</summary>
+            /// <summary>Archive format, added as a suffix to the path, for example `archive.zip`. One of `bz2`, `gz`, `tar`, `tar.bz2`, `tar.gz`, `tb2`, `tbz`, `tbz2`, `tgz`, or `zip`. Default is `tar.gz`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("format")]

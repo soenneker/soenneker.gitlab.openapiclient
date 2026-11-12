@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Compare
         {
         }
         /// <summary>
-        /// Compares branches, tags, or commits. Retrieves the differences between two branches, tags, or commits in a specified project.
+        /// Compares branches, tags, or commits. Retrieves the differences between two branches, tags, or commits in a specified project. This endpoint can be accessed without authentication if the repository is publicly accessible. When `compare_timeout` is `true`, the comparison exceeded size limits: the `commits` array is still complete, but the `diffs` array might be incomplete, and individual diff objects might have empty `diff` strings.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCompare"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Compare
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCompare>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCompare.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Compares branches, tags, or commits. Retrieves the differences between two branches, tags, or commits in a specified project.
+        /// Compares branches, tags, or commits. Retrieves the differences between two branches, tags, or commits in a specified project. This endpoint can be accessed without authentication if the repository is publicly accessible. When `compare_timeout` is `true`, the comparison exceeded size limits: the `commits` array is still complete, but the `diffs` array might be incomplete, and individual diff objects might have empty `diff` strings.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -80,7 +80,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Compare
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Compare.CompareRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Compares branches, tags, or commits. Retrieves the differences between two branches, tags, or commits in a specified project.
+        /// Compares branches, tags, or commits. Retrieves the differences between two branches, tags, or commits in a specified project. This endpoint can be accessed without authentication if the repository is publicly accessible. When `compare_timeout` is `true`, the comparison exceeded size limits: the `commits` array is still complete, but the `diffs` array might be incomplete, and individual diff objects might have empty `diff` strings.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class CompareRequestBuilderGetQueryParameters 

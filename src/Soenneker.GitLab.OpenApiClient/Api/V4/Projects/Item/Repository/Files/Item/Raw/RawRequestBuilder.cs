@@ -33,7 +33,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Files.I
         {
         }
         /// <summary>
-        /// Retrieves the raw file contents for a specified file in a repository.
+        /// Retrieves the raw file contents for a specified file in a repository. To get only the file metadata, use the `HEAD` method on the file endpoint.
         /// </summary>
         /// <returns>A <see cref="Stream"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -51,7 +51,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Files.I
             return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Retrieves the raw file contents for a specified file in a repository.
+        /// Retrieves the raw file contents for a specified file in a repository. To get only the file metadata, use the `HEAD` method on the file endpoint.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -79,7 +79,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Files.I
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Files.Item.Raw.RawRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Retrieves the raw file contents for a specified file in a repository.
+        /// Retrieves the raw file contents for a specified file in a repository. To get only the file metadata, use the `HEAD` method on the file endpoint.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class RawRequestBuilderGetQueryParameters 
@@ -87,7 +87,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Files.I
             /// <summary>If `true`, returns the Git LFS file contents instead of the pointer. Ignored if the file isn&apos;t tracked by Git LFS.</summary>
             [QueryParameter("lfs")]
             public bool? Lfs { get; set; }
-            /// <summary>Commit SHA or name of a repository branch or tag.</summary>
+            /// <summary>Commit SHA or name of a repository branch or tag. Default is the `HEAD` of the project.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("ref")]

@@ -38,7 +38,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Mirror authentication method.</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdRemoteMirrorsRequestAuthMethod? AuthMethod { get => _explicitNullValueAuthMethod; set { _explicitNullValueAuthMethod = value; AdditionalData?.Remove("auth_method"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auth_method"); else _explicitNullProperties?.Remove("auth_method"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdRemoteMirrorsRequestAuthMethod? _explicitNullValueAuthMethod = default!;
-        /// <summary>If `true`, the mirror is enabled.</summary>
+        /// <summary>If `true`, the mirror is enabled. Default is `false`.</summary>
         public bool? Enabled { get => _explicitNullValueEnabled; set { _explicitNullValueEnabled = value; AdditionalData?.Remove("enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enabled"); else _explicitNullProperties?.Remove("enabled"); } }
         private bool? _explicitNullValueEnabled = default!;
         /// <summary>SSH host keys in bare format, such as `ssh-ed25519 AAAA...`, or full `known_hosts` format, such as `hostname ssh-ed25519 AAAA...`. Bare keys use the hostname from the mirror URL.</summary>

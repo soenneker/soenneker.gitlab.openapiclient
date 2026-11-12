@@ -19,7 +19,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Branche
     public partial class BranchesRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.repository.branches.item collection</summary>
-        /// <param name="position">Name of the branch.</param>
+        /// <param name="position">URL-encoded name of the branch.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Branches.Item.WithBranchItemRequestBuilder"/></returns>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Branches.Item.WithBranchItemRequestBuilder this[string position]
         {
@@ -47,7 +47,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Branche
         {
         }
         /// <summary>
-        /// Lists all repository branches from a specified project, sorted alphabetically by name. Search by name, or use regular expressions to find specific branch patterns. Returns detailed information about the branch, including its protection status, merge status, and commit details.
+        /// Lists all repository branches from a specified project, sorted alphabetically by name. Search by name, or use regular expressions to find specific branch patterns. Returns detailed information about the branch, including its protection status, merge status, and commit details. This endpoint can be accessed without authentication if the repository is publicly accessible.
         /// </summary>
         /// <returns>A List&lt;global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBranch&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -86,7 +86,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Branche
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBranch>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBranch.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Lists all repository branches from a specified project, sorted alphabetically by name. Search by name, or use regular expressions to find specific branch patterns. Returns detailed information about the branch, including its protection status, merge status, and commit details.
+        /// Lists all repository branches from a specified project, sorted alphabetically by name. Search by name, or use regular expressions to find specific branch patterns. Returns detailed information about the branch, including its protection status, merge status, and commit details. This endpoint can be accessed without authentication if the repository is publicly accessible.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -136,7 +136,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Branche
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Branches.BranchesRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Lists all repository branches from a specified project, sorted alphabetically by name. Search by name, or use regular expressions to find specific branch patterns. Returns detailed information about the branch, including its protection status, merge status, and commit details.
+        /// Lists all repository branches from a specified project, sorted alphabetically by name. Search by name, or use regular expressions to find specific branch patterns. Returns detailed information about the branch, including its protection status, merge status, and commit details. This endpoint can be accessed without authentication if the repository is publicly accessible.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class BranchesRequestBuilderGetQueryParameters 

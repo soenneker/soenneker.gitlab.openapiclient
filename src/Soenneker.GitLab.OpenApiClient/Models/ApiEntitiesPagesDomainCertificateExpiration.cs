@@ -26,25 +26,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The expiration property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Expiration { get => _explicitNullValueExpiration; set { _explicitNullValueExpiration = value; AdditionalData?.Remove("expiration"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expiration"); else _explicitNullProperties?.Remove("expiration"); } }
-        private string? _explicitNullValueExpiration = default!;
-#nullable restore
-#else
-        public string Expiration { get => _explicitNullValueExpiration; set { _explicitNullValueExpiration = value; AdditionalData?.Remove("expiration"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expiration"); else _explicitNullProperties?.Remove("expiration"); } }
-        private string _explicitNullValueExpiration = default!;
-#endif
+        public DateTimeOffset? Expiration { get => _explicitNullValueExpiration; set { _explicitNullValueExpiration = value; AdditionalData?.Remove("expiration"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expiration"); else _explicitNullProperties?.Remove("expiration"); } }
+        private DateTimeOffset? _explicitNullValueExpiration = default!;
         /// <summary>The expired property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Expired { get => _explicitNullValueExpired; set { _explicitNullValueExpired = value; AdditionalData?.Remove("expired"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expired"); else _explicitNullProperties?.Remove("expired"); } }
-        private string? _explicitNullValueExpired = default!;
-#nullable restore
-#else
-        public string Expired { get => _explicitNullValueExpired; set { _explicitNullValueExpired = value; AdditionalData?.Remove("expired"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expired"); else _explicitNullProperties?.Remove("expired"); } }
-        private string _explicitNullValueExpired = default!;
-#endif
+        public bool? Expired { get => _explicitNullValueExpired; set { _explicitNullValueExpired = value; AdditionalData?.Remove("expired"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expired"); else _explicitNullProperties?.Remove("expired"); } }
+        private bool? _explicitNullValueExpired = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPagesDomainCertificateExpiration"/> and sets the default values.
         /// </summary>
@@ -70,8 +56,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "expiration", n => { Expiration = n.GetStringValue(); } },
-                { "expired", n => { Expired = n.GetStringValue(); } },
+                { "expiration", n => { Expiration = n.GetDateTimeOffsetValue(); } },
+                { "expired", n => { Expired = n.GetBoolValue(); } },
             };
         }
         /// <summary>
@@ -81,8 +67,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("expiration", Expiration);
-            writer.WriteStringValue("expired", Expired);
+            writer.WriteDateTimeOffsetValue("expiration", Expiration);
+            writer.WriteBoolValue("expired", Expired);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

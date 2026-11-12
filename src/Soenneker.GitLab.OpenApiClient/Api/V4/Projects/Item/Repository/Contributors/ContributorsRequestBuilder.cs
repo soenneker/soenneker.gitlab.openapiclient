@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Contrib
         {
         }
         /// <summary>
-        /// Retrieves a list of contributors to a specified repository.
+        /// Retrieves a list of contributors to a specified repository. This endpoint can be accessed without authentication if the repository is publicly accessible. The commit count does not include merge commits.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesContributor"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Contrib
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesContributor>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesContributor.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Retrieves a list of contributors to a specified repository.
+        /// Retrieves a list of contributors to a specified repository. This endpoint can be accessed without authentication if the repository is publicly accessible. The commit count does not include merge commits.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -80,7 +80,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Contrib
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Contributors.ContributorsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Retrieves a list of contributors to a specified repository.
+        /// Retrieves a list of contributors to a specified repository. This endpoint can be accessed without authentication if the repository is publicly accessible. The commit count does not include merge commits.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ContributorsRequestBuilderGetQueryParameters 
@@ -94,7 +94,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Contrib
             /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
-            /// <summary>Name of a repository branch or tag. If omitted, uses the default branch.</summary>
+            /// <summary>Name of a repository branch or tag. If omitted, uses the default branch. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/156852) in GitLab 17.4.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("ref")]

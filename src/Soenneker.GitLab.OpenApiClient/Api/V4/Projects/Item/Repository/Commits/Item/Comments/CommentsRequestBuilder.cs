@@ -53,7 +53,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Commits
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// Creates a comment on a commit. To comment on a specific line in a file, specify the full commit SHA, `path`, `line`, and set `line_type` to `new`.
+        /// Creates a comment on a commit. To comment on a specific line in a file, specify the full commit SHA, `path`, `line`, and set `line_type` to `new`. If `path` or `line` does not exist in the commit diff, the comment is added to the commit without a line position, and `line`, `line_type`, and `path` are `null` in the response. GitLab might change the comment body before saving it, for example by running and removing quick actions.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommitNote"/></returns>
         /// <param name="body">The request body</param>
@@ -92,7 +92,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Commits
             return requestInfo;
         }
         /// <summary>
-        /// Creates a comment on a commit. To comment on a specific line in a file, specify the full commit SHA, `path`, `line`, and set `line_type` to `new`.
+        /// Creates a comment on a commit. To comment on a specific line in a file, specify the full commit SHA, `path`, `line`, and set `line_type` to `new`. If `path` or `line` does not exist in the commit diff, the comment is added to the commit without a line position, and `line`, `line_type`, and `path` are `null` in the response. GitLab might change the comment body before saving it, for example by running and removing quick actions.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

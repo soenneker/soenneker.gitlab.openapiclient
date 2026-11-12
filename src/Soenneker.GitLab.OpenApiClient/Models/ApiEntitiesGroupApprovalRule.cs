@@ -88,12 +88,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The protected_branches property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedBranch? ProtectedBranches { get => _explicitNullValueProtectedBranches; set { _explicitNullValueProtectedBranches = value; AdditionalData?.Remove("protected_branches"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("protected_branches"); else _explicitNullProperties?.Remove("protected_branches"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedBranch? _explicitNullValueProtectedBranches = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedBranch>? ProtectedBranches { get => _explicitNullValueProtectedBranches; set { _explicitNullValueProtectedBranches = value; AdditionalData?.Remove("protected_branches"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("protected_branches"); else _explicitNullProperties?.Remove("protected_branches"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedBranch>? _explicitNullValueProtectedBranches = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedBranch ProtectedBranches { get => _explicitNullValueProtectedBranches; set { _explicitNullValueProtectedBranches = value; AdditionalData?.Remove("protected_branches"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("protected_branches"); else _explicitNullProperties?.Remove("protected_branches"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedBranch _explicitNullValueProtectedBranches = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedBranch> ProtectedBranches { get => _explicitNullValueProtectedBranches; set { _explicitNullValueProtectedBranches = value; AdditionalData?.Remove("protected_branches"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("protected_branches"); else _explicitNullProperties?.Remove("protected_branches"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedBranch> _explicitNullValueProtectedBranches = default!;
 #endif
         /// <summary>The report_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -157,7 +157,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "groups", n => { Groups = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroup>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroup.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "id", n => { Id = n.GetLongValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "protected_branches", n => { ProtectedBranches = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedBranch>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedBranch.CreateFromDiscriminatorValue); } },
+                { "protected_branches", n => { ProtectedBranches = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedBranch>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedBranch.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "report_type", n => { ReportType = n.GetStringValue(); } },
                 { "rule_type", n => { RuleType = n.GetStringValue(); } },
                 { "users", n => { Users = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -177,7 +177,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroup>("groups", Groups);
             writer.WriteLongValue("id", Id);
             writer.WriteStringValue("name", Name);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedBranch>("protected_branches", ProtectedBranches);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedBranch>("protected_branches", ProtectedBranches);
             writer.WriteStringValue("report_type", ReportType);
             writer.WriteStringValue("rule_type", RuleType);
             writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic>("users", Users);

@@ -26,12 +26,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The modules property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Modules { get => _explicitNullValueModules; set { _explicitNullValueModules = value; AdditionalData?.Remove("modules"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("modules"); else _explicitNullProperties?.Remove("modules"); } }
-        private string? _explicitNullValueModules = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesTerraformModuleVersionsModulesItemProperty>? Modules { get => _explicitNullValueModules; set { _explicitNullValueModules = value; AdditionalData?.Remove("modules"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("modules"); else _explicitNullProperties?.Remove("modules"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesTerraformModuleVersionsModulesItemProperty>? _explicitNullValueModules = default!;
 #nullable restore
 #else
-        public string Modules { get => _explicitNullValueModules; set { _explicitNullValueModules = value; AdditionalData?.Remove("modules"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("modules"); else _explicitNullProperties?.Remove("modules"); } }
-        private string _explicitNullValueModules = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesTerraformModuleVersionsModulesItemProperty> Modules { get => _explicitNullValueModules; set { _explicitNullValueModules = value; AdditionalData?.Remove("modules"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("modules"); else _explicitNullProperties?.Remove("modules"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesTerraformModuleVersionsModulesItemProperty> _explicitNullValueModules = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesTerraformModuleVersions"/> and sets the default values.
@@ -58,7 +58,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "modules", n => { Modules = n.GetStringValue(); } },
+                { "modules", n => { Modules = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesTerraformModuleVersionsModulesItemProperty>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesTerraformModuleVersionsModulesItemProperty.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -68,7 +68,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("modules", Modules);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesTerraformModuleVersionsModulesItemProperty>("modules", Modules);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

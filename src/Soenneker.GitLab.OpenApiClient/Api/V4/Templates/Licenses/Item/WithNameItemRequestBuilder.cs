@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Templates.Licenses.Item
         {
         }
         /// <summary>
-        /// Retrieves a specified license template. You can pass parameters to replace the license placeholder.
+        /// Retrieves a specified license template. You can pass parameters to replace the license placeholder. If `fullname` is omitted and the request is authenticated, the name of the authenticated user replaces the copyright holder placeholder.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesLicense"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Templates.Licenses.Item
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesLicense>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesLicense.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Retrieves a specified license template. You can pass parameters to replace the license placeholder.
+        /// Retrieves a specified license template. You can pass parameters to replace the license placeholder. If `fullname` is omitted and the request is authenticated, the name of the authenticated user replaces the copyright holder placeholder.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -80,7 +80,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Templates.Licenses.Item
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Templates.Licenses.Item.WithNameItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Retrieves a specified license template. You can pass parameters to replace the license placeholder.
+        /// Retrieves a specified license template. You can pass parameters to replace the license placeholder. If `fullname` is omitted and the request is authenticated, the name of the authenticated user replaces the copyright holder placeholder.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithNameItemRequestBuilderGetQueryParameters 

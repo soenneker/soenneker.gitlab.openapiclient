@@ -63,6 +63,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             else if (parseNode.GetChildNode("duo_features_enabled") is { } nullNodeDuoFeaturesEnabled && nullNodeDuoFeaturesEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DuoFeaturesEnabled = null;
             if (parseNode.GetChildNode("duo_namespace_access_rules") is null) { _explicitNullValueDuoNamespaceAccessRules = default!; _explicitNullProperties?.Remove("duo_namespace_access_rules"); }
             else if (parseNode.GetChildNode("duo_namespace_access_rules") is { } nullNodeDuoNamespaceAccessRules && nullNodeDuoNamespaceAccessRules.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DuoNamespaceAccessRules = null;
+            if (parseNode.GetChildNode("duo_remote_flows_enabled") is null) { _explicitNullValueDuoRemoteFlowsEnabled = default!; _explicitNullProperties?.Remove("duo_remote_flows_enabled"); }
+            else if (parseNode.GetChildNode("duo_remote_flows_enabled") is { } nullNodeDuoRemoteFlowsEnabled && nullNodeDuoRemoteFlowsEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DuoRemoteFlowsEnabled = null;
             if (parseNode.GetChildNode("emails_disabled") is null) { _explicitNullValueEmailsDisabled = default!; _explicitNullProperties?.Remove("emails_disabled"); }
             else if (parseNode.GetChildNode("emails_disabled") is { } nullNodeEmailsDisabled && nullNodeEmailsDisabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailsDisabled = null;
             if (parseNode.GetChildNode("emails_enabled") is null) { _explicitNullValueEmailsEnabled = default!; _explicitNullProperties?.Remove("emails_enabled"); }
@@ -95,6 +97,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             else if (parseNode.GetChildNode("lock_built_in_project_templates_enabled") is { } nullNodeLockBuiltInProjectTemplatesEnabled && nullNodeLockBuiltInProjectTemplatesEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LockBuiltInProjectTemplatesEnabled = null;
             if (parseNode.GetChildNode("lock_duo_features_enabled") is null) { _explicitNullValueLockDuoFeaturesEnabled = default!; _explicitNullProperties?.Remove("lock_duo_features_enabled"); }
             else if (parseNode.GetChildNode("lock_duo_features_enabled") is { } nullNodeLockDuoFeaturesEnabled && nullNodeLockDuoFeaturesEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LockDuoFeaturesEnabled = null;
+            if (parseNode.GetChildNode("lock_duo_remote_flows_enabled") is null) { _explicitNullValueLockDuoRemoteFlowsEnabled = default!; _explicitNullProperties?.Remove("lock_duo_remote_flows_enabled"); }
+            else if (parseNode.GetChildNode("lock_duo_remote_flows_enabled") is { } nullNodeLockDuoRemoteFlowsEnabled && nullNodeLockDuoRemoteFlowsEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LockDuoRemoteFlowsEnabled = null;
             if (parseNode.GetChildNode("lock_math_rendering_limits_enabled") is null) { _explicitNullValueLockMathRenderingLimitsEnabled = default!; _explicitNullProperties?.Remove("lock_math_rendering_limits_enabled"); }
             else if (parseNode.GetChildNode("lock_math_rendering_limits_enabled") is { } nullNodeLockMathRenderingLimitsEnabled && nullNodeLockMathRenderingLimitsEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LockMathRenderingLimitsEnabled = null;
             if (parseNode.GetChildNode("lock_require_sha_for_merge") is null) { _explicitNullValueLockRequireShaForMerge = default!; _explicitNullProperties?.Remove("lock_require_sha_for_merge"); }
@@ -372,6 +376,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string DuoNamespaceAccessRules { get => _explicitNullValueDuoNamespaceAccessRules; set { _explicitNullValueDuoNamespaceAccessRules = value; AdditionalData?.Remove("duo_namespace_access_rules"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duo_namespace_access_rules"); else _explicitNullProperties?.Remove("duo_namespace_access_rules"); } }
         private string _explicitNullValueDuoNamespaceAccessRules = default!;
 #endif
+        /// <summary>The duo_remote_flows_enabled property</summary>
+        public bool? DuoRemoteFlowsEnabled { get => _explicitNullValueDuoRemoteFlowsEnabled; set { _explicitNullValueDuoRemoteFlowsEnabled = value; AdditionalData?.Remove("duo_remote_flows_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duo_remote_flows_enabled"); else _explicitNullProperties?.Remove("duo_remote_flows_enabled"); } }
+        private bool? _explicitNullValueDuoRemoteFlowsEnabled = default!;
         /// <summary>The emails_disabled property</summary>
         public bool? EmailsDisabled { get => _explicitNullValueEmailsDisabled; set { _explicitNullValueEmailsDisabled = value; AdditionalData?.Remove("emails_disabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emails_disabled"); else _explicitNullProperties?.Remove("emails_disabled"); } }
         private bool? _explicitNullValueEmailsDisabled = default!;
@@ -467,12 +474,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The ldap_group_links property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesLdapGroupLink? LdapGroupLinks { get => _explicitNullValueLdapGroupLinks; set { _explicitNullValueLdapGroupLinks = value; AdditionalData?.Remove("ldap_group_links"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ldap_group_links"); else _explicitNullProperties?.Remove("ldap_group_links"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesLdapGroupLink? _explicitNullValueLdapGroupLinks = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesLdapGroupLink>? LdapGroupLinks { get => _explicitNullValueLdapGroupLinks; set { _explicitNullValueLdapGroupLinks = value; AdditionalData?.Remove("ldap_group_links"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ldap_group_links"); else _explicitNullProperties?.Remove("ldap_group_links"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesLdapGroupLink>? _explicitNullValueLdapGroupLinks = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesLdapGroupLink LdapGroupLinks { get => _explicitNullValueLdapGroupLinks; set { _explicitNullValueLdapGroupLinks = value; AdditionalData?.Remove("ldap_group_links"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ldap_group_links"); else _explicitNullProperties?.Remove("ldap_group_links"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesLdapGroupLink _explicitNullValueLdapGroupLinks = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesLdapGroupLink> LdapGroupLinks { get => _explicitNullValueLdapGroupLinks; set { _explicitNullValueLdapGroupLinks = value; AdditionalData?.Remove("ldap_group_links"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ldap_group_links"); else _explicitNullProperties?.Remove("ldap_group_links"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesLdapGroupLink> _explicitNullValueLdapGroupLinks = default!;
 #endif
         /// <summary>The lfs_enabled property</summary>
         public bool? LfsEnabled { get => _explicitNullValueLfsEnabled; set { _explicitNullValueLfsEnabled = value; AdditionalData?.Remove("lfs_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lfs_enabled"); else _explicitNullProperties?.Remove("lfs_enabled"); } }
@@ -483,6 +490,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>If `true`, the GitLab Duo features enabled setting is enforced for all subgroups. Premium and Ultimate only.</summary>
         public bool? LockDuoFeaturesEnabled { get => _explicitNullValueLockDuoFeaturesEnabled; set { _explicitNullValueLockDuoFeaturesEnabled = value; AdditionalData?.Remove("lock_duo_features_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lock_duo_features_enabled"); else _explicitNullProperties?.Remove("lock_duo_features_enabled"); } }
         private bool? _explicitNullValueLockDuoFeaturesEnabled = default!;
+        /// <summary>The lock_duo_remote_flows_enabled property</summary>
+        public bool? LockDuoRemoteFlowsEnabled { get => _explicitNullValueLockDuoRemoteFlowsEnabled; set { _explicitNullValueLockDuoRemoteFlowsEnabled = value; AdditionalData?.Remove("lock_duo_remote_flows_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lock_duo_remote_flows_enabled"); else _explicitNullProperties?.Remove("lock_duo_remote_flows_enabled"); } }
+        private bool? _explicitNullValueLockDuoRemoteFlowsEnabled = default!;
         /// <summary>The lock_math_rendering_limits_enabled property</summary>
         public bool? LockMathRenderingLimitsEnabled { get => _explicitNullValueLockMathRenderingLimitsEnabled; set { _explicitNullValueLockMathRenderingLimitsEnabled = value; AdditionalData?.Remove("lock_math_rendering_limits_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lock_math_rendering_limits_enabled"); else _explicitNullProperties?.Remove("lock_math_rendering_limits_enabled"); } }
         private bool? _explicitNullValueLockMathRenderingLimitsEnabled = default!;
@@ -662,12 +672,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The saml_group_links property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSamlGroupLink? SamlGroupLinks { get => _explicitNullValueSamlGroupLinks; set { _explicitNullValueSamlGroupLinks = value; AdditionalData?.Remove("saml_group_links"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("saml_group_links"); else _explicitNullProperties?.Remove("saml_group_links"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSamlGroupLink? _explicitNullValueSamlGroupLinks = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSamlGroupLink>? SamlGroupLinks { get => _explicitNullValueSamlGroupLinks; set { _explicitNullValueSamlGroupLinks = value; AdditionalData?.Remove("saml_group_links"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("saml_group_links"); else _explicitNullProperties?.Remove("saml_group_links"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSamlGroupLink>? _explicitNullValueSamlGroupLinks = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSamlGroupLink SamlGroupLinks { get => _explicitNullValueSamlGroupLinks; set { _explicitNullValueSamlGroupLinks = value; AdditionalData?.Remove("saml_group_links"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("saml_group_links"); else _explicitNullProperties?.Remove("saml_group_links"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSamlGroupLink _explicitNullValueSamlGroupLinks = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSamlGroupLink> SamlGroupLinks { get => _explicitNullValueSamlGroupLinks; set { _explicitNullValueSamlGroupLinks = value; AdditionalData?.Remove("saml_group_links"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("saml_group_links"); else _explicitNullProperties?.Remove("saml_group_links"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSamlGroupLink> _explicitNullValueSamlGroupLinks = default!;
 #endif
         /// <summary>The service_access_tokens_expiration_enforced property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -886,6 +896,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "duo_core_features_enabled", n => { DuoCoreFeaturesEnabled = n.GetBoolValue(); } },
                 { "duo_features_enabled", n => { DuoFeaturesEnabled = n.GetBoolValue(); } },
                 { "duo_namespace_access_rules", n => { DuoNamespaceAccessRules = n.GetStringValue(); } },
+                { "duo_remote_flows_enabled", n => { DuoRemoteFlowsEnabled = n.GetBoolValue(); } },
                 { "emails_disabled", n => { EmailsDisabled = n.GetBoolValue(); } },
                 { "emails_enabled", n => { EmailsEnabled = n.GetBoolValue(); } },
                 { "enabled_git_access_protocol", n => { EnabledGitAccessProtocol = n.GetStringValue(); } },
@@ -898,10 +909,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "ip_restriction_ranges", n => { IpRestrictionRanges = n.GetStringValue(); } },
                 { "ldap_access", n => { LdapAccess = n.GetStringValue(); } },
                 { "ldap_cn", n => { LdapCn = n.GetStringValue(); } },
-                { "ldap_group_links", n => { LdapGroupLinks = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesLdapGroupLink>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesLdapGroupLink.CreateFromDiscriminatorValue); } },
+                { "ldap_group_links", n => { LdapGroupLinks = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesLdapGroupLink>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesLdapGroupLink.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "lfs_enabled", n => { LfsEnabled = n.GetBoolValue(); } },
                 { "lock_built_in_project_templates_enabled", n => { LockBuiltInProjectTemplatesEnabled = n.GetBoolValue(); } },
                 { "lock_duo_features_enabled", n => { LockDuoFeaturesEnabled = n.GetBoolValue(); } },
+                { "lock_duo_remote_flows_enabled", n => { LockDuoRemoteFlowsEnabled = n.GetBoolValue(); } },
                 { "lock_math_rendering_limits_enabled", n => { LockMathRenderingLimitsEnabled = n.GetBoolValue(); } },
                 { "lock_require_sha_for_merge", n => { LockRequireShaForMerge = n.GetBoolValue(); } },
                 { "lock_resource_access_token_notify_inherited", n => { LockResourceAccessTokenNotifyInherited = n.GetBoolValue(); } },
@@ -928,7 +940,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "resource_access_token_notify_inherited", n => { ResourceAccessTokenNotifyInherited = n.GetBoolValue(); } },
                 { "root_storage_statistics", n => { RootStorageStatistics = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNamespaceRootStorageStatistics>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNamespaceRootStorageStatistics.CreateFromDiscriminatorValue); } },
                 { "runners_token", n => { RunnersToken = n.GetStringValue(); } },
-                { "saml_group_links", n => { SamlGroupLinks = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSamlGroupLink>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSamlGroupLink.CreateFromDiscriminatorValue); } },
+                { "saml_group_links", n => { SamlGroupLinks = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSamlGroupLink>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSamlGroupLink.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "service_access_tokens_expiration_enforced", n => { ServiceAccessTokensExpirationEnforced = n.GetStringValue(); } },
                 { "share_with_group_lock", n => { ShareWithGroupLock = n.GetBoolValue(); } },
                 { "shared_projects", n => { SharedProjects = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProject>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProject.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -980,6 +992,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteBoolValue("duo_core_features_enabled", DuoCoreFeaturesEnabled);
             writer.WriteBoolValue("duo_features_enabled", DuoFeaturesEnabled);
             writer.WriteStringValue("duo_namespace_access_rules", DuoNamespaceAccessRules);
+            writer.WriteBoolValue("duo_remote_flows_enabled", DuoRemoteFlowsEnabled);
             writer.WriteBoolValue("emails_disabled", EmailsDisabled);
             writer.WriteBoolValue("emails_enabled", EmailsEnabled);
             writer.WriteStringValue("enabled_git_access_protocol", EnabledGitAccessProtocol);
@@ -992,10 +1005,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("ip_restriction_ranges", IpRestrictionRanges);
             writer.WriteStringValue("ldap_access", LdapAccess);
             writer.WriteStringValue("ldap_cn", LdapCn);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesLdapGroupLink>("ldap_group_links", LdapGroupLinks);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesLdapGroupLink>("ldap_group_links", LdapGroupLinks);
             writer.WriteBoolValue("lfs_enabled", LfsEnabled);
             writer.WriteBoolValue("lock_built_in_project_templates_enabled", LockBuiltInProjectTemplatesEnabled);
             writer.WriteBoolValue("lock_duo_features_enabled", LockDuoFeaturesEnabled);
+            writer.WriteBoolValue("lock_duo_remote_flows_enabled", LockDuoRemoteFlowsEnabled);
             writer.WriteBoolValue("lock_math_rendering_limits_enabled", LockMathRenderingLimitsEnabled);
             writer.WriteBoolValue("lock_require_sha_for_merge", LockRequireShaForMerge);
             writer.WriteBoolValue("lock_resource_access_token_notify_inherited", LockResourceAccessTokenNotifyInherited);
@@ -1022,7 +1036,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteBoolValue("resource_access_token_notify_inherited", ResourceAccessTokenNotifyInherited);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNamespaceRootStorageStatistics>("root_storage_statistics", RootStorageStatistics);
             writer.WriteStringValue("runners_token", RunnersToken);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSamlGroupLink>("saml_group_links", SamlGroupLinks);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSamlGroupLink>("saml_group_links", SamlGroupLinks);
             writer.WriteStringValue("service_access_tokens_expiration_enforced", ServiceAccessTokensExpirationEnforced);
             writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProject>("shared_projects", SharedProjects);
             writer.WriteStringValue("shared_runners_minutes_limit", SharedRunnersMinutesLimit);

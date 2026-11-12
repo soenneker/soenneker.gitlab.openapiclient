@@ -66,7 +66,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Remote_mirrors
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// Creates a push mirror.
+        /// Creates a push mirror. Each project can have a maximum of 10 enabled push mirrors.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRemoteMirror"/></returns>
         /// <param name="body">The request body</param>
@@ -105,7 +105,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Remote_mirrors
             return requestInfo;
         }
         /// <summary>
-        /// Creates a push mirror.
+        /// Creates a push mirror. Each project can have a maximum of 10 enabled push mirrors.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

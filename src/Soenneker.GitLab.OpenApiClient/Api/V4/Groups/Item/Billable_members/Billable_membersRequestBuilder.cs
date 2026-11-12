@@ -49,20 +49,21 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Billable_members
         /// <summary>
         /// Lists all billable members of a specified top-level group. Includes members in any subgroups or projects. You must have the Owner role for the group.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMember"/></returns>
+        /// <returns>A List&lt;global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMember&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMember?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Billable_members.Billable_membersRequestBuilder.Billable_membersRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMember>?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Billable_members.Billable_membersRequestBuilder.Billable_membersRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMember> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Billable_members.Billable_membersRequestBuilder.Billable_membersRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMember>> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Billable_members.Billable_membersRequestBuilder.Billable_membersRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMember>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMember.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
+            var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMember>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMember.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
+            return collectionResult?.AsList();
         }
         /// <summary>
         /// Lists all billable members of a specified top-level group. Includes members in any subgroups or projects. You must have the Owner role for the group.

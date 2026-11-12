@@ -85,15 +85,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public long? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private long? _explicitNullValueId = default!;
         /// <summary>The impersonation property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Impersonation { get => _explicitNullValueImpersonation; set { _explicitNullValueImpersonation = value; AdditionalData?.Remove("impersonation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("impersonation"); else _explicitNullProperties?.Remove("impersonation"); } }
-        private string? _explicitNullValueImpersonation = default!;
-#nullable restore
-#else
-        public string Impersonation { get => _explicitNullValueImpersonation; set { _explicitNullValueImpersonation = value; AdditionalData?.Remove("impersonation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("impersonation"); else _explicitNullProperties?.Remove("impersonation"); } }
-        private string _explicitNullValueImpersonation = default!;
-#endif
+        public bool? Impersonation { get => _explicitNullValueImpersonation; set { _explicitNullValueImpersonation = value; AdditionalData?.Remove("impersonation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("impersonation"); else _explicitNullProperties?.Remove("impersonation"); } }
+        private bool? _explicitNullValueImpersonation = default!;
         /// <summary>The last_used_at property</summary>
         public DateTimeOffset? LastUsedAt { get => _explicitNullValueLastUsedAt; set { _explicitNullValueLastUsedAt = value; AdditionalData?.Remove("last_used_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_used_at"); else _explicitNullProperties?.Remove("last_used_at"); } }
         private DateTimeOffset? _explicitNullValueLastUsedAt = default!;
@@ -165,7 +158,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "granular", n => { Granular = n.GetBoolValue(); } },
                 { "granular_scopes", n => { GranularScopes = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGranularScope>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGranularScope.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "id", n => { Id = n.GetLongValue(); } },
-                { "impersonation", n => { Impersonation = n.GetStringValue(); } },
+                { "impersonation", n => { Impersonation = n.GetBoolValue(); } },
                 { "last_used_at", n => { LastUsedAt = n.GetDateTimeOffsetValue(); } },
                 { "last_used_ips", n => { LastUsedIps = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
@@ -188,7 +181,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteBoolValue("granular", Granular);
             writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGranularScope>("granular_scopes", GranularScopes);
             writer.WriteLongValue("id", Id);
-            writer.WriteStringValue("impersonation", Impersonation);
+            writer.WriteBoolValue("impersonation", Impersonation);
             writer.WriteDateTimeOffsetValue("last_used_at", LastUsedAt);
             writer.WriteCollectionOfPrimitiveValues<string>("last_used_ips", LastUsedIps);
             writer.WriteStringValue("name", Name);

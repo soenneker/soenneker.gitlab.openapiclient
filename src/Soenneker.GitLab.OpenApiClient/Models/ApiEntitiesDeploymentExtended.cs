@@ -50,12 +50,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The approvals property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDeploymentsApproval? Approvals { get => _explicitNullValueApprovals; set { _explicitNullValueApprovals = value; AdditionalData?.Remove("approvals"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approvals"); else _explicitNullProperties?.Remove("approvals"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDeploymentsApproval? _explicitNullValueApprovals = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDeploymentsApproval>? Approvals { get => _explicitNullValueApprovals; set { _explicitNullValueApprovals = value; AdditionalData?.Remove("approvals"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approvals"); else _explicitNullProperties?.Remove("approvals"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDeploymentsApproval>? _explicitNullValueApprovals = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDeploymentsApproval Approvals { get => _explicitNullValueApprovals; set { _explicitNullValueApprovals = value; AdditionalData?.Remove("approvals"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approvals"); else _explicitNullProperties?.Remove("approvals"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDeploymentsApproval _explicitNullValueApprovals = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDeploymentsApproval> Approvals { get => _explicitNullValueApprovals; set { _explicitNullValueApprovals = value; AdditionalData?.Remove("approvals"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approvals"); else _explicitNullProperties?.Remove("approvals"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDeploymentsApproval> _explicitNullValueApprovals = default!;
 #endif
         /// <summary>The approval_summary property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -168,7 +168,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "approval_summary", n => { ApprovalSummary = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDeploymentsApprovalSummary>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDeploymentsApprovalSummary.CreateFromDiscriminatorValue); } },
-                { "approvals", n => { Approvals = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDeploymentsApproval>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDeploymentsApproval.CreateFromDiscriminatorValue); } },
+                { "approvals", n => { Approvals = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDeploymentsApproval>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDeploymentsApproval.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "created_at", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "deployable", n => { Deployable = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJob>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJob.CreateFromDiscriminatorValue); } },
                 { "environment", n => { Environment = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesEnvironmentBasic>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesEnvironmentBasic.CreateFromDiscriminatorValue); } },
@@ -189,7 +189,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDeploymentsApproval>("approvals", Approvals);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDeploymentsApproval>("approvals", Approvals);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDeploymentsApprovalSummary>("approval_summary", ApprovalSummary);
             writer.WriteDateTimeOffsetValue("created_at", CreatedAt);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJob>("deployable", Deployable);

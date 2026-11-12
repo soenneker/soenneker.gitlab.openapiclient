@@ -51,7 +51,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Push_rule
             await RequestAdapter.SendNoContentAsync(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Retrieves the push rules of a specified project.
+        /// Retrieves the push rules of a specified project. If push rules were never configured for the project, returns `200 OK` with the literal string `&quot;null&quot;` (4 characters) as the response body, not a JSON `null` value. If `commit_committer_check`, `reject_unsigned_commits`, or `reject_non_dco_commits` are disabled, they return `null` instead of `false`.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectPushRule"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -127,7 +127,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Push_rule
             return requestInfo;
         }
         /// <summary>
-        /// Retrieves the push rules of a specified project.
+        /// Retrieves the push rules of a specified project. If push rules were never configured for the project, returns `200 OK` with the literal string `&quot;null&quot;` (4 characters) as the response body, not a JSON `null` value. If `commit_committer_check`, `reject_unsigned_commits`, or `reject_non_dco_commits` are disabled, they return `null` instead of `false`.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

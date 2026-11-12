@@ -49,20 +49,21 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Approval_rules
         /// <summary>
         /// Lists all approval rules and any associated details for a specified group. Restricted to group administrators. Use the `page` and `per_page` pagination parameters to restrict the list of approval rules. This feature was introduced in GitLab 16.10.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroupApprovalRule"/></returns>
+        /// <returns>A List&lt;global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroupApprovalRule&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroupApprovalRule?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Approval_rules.Approval_rulesRequestBuilder.Approval_rulesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroupApprovalRule>?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Approval_rules.Approval_rulesRequestBuilder.Approval_rulesRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroupApprovalRule> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Approval_rules.Approval_rulesRequestBuilder.Approval_rulesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroupApprovalRule>> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Approval_rules.Approval_rulesRequestBuilder.Approval_rulesRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroupApprovalRule>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroupApprovalRule.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
+            var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroupApprovalRule>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroupApprovalRule.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
+            return collectionResult?.AsList();
         }
         /// <summary>
         /// Creates an approval rule for a group. Restricted to group administrators. Do not use the `rule_type` field when building approval rules from the API. The field supports these rule types: `any_approver`, a pre-configured default rule with `approvals_required` set to `0`; `regular`, for regular merge request approval rules; and `report_approver`, used when GitLab creates an approval rule from configured and enabled merge request approval policies.

@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Commits
         {
         }
         /// <summary>
-        /// Retrieves the diff of a commit in a project.
+        /// Retrieves the diff of a commit in a project. Diff limits apply. When a commit exceeds the maximum number of files, pagination stops and no files beyond the limit are returned.
         /// </summary>
         /// <returns>A List&lt;global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDiff&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -53,7 +53,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Commits
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// Retrieves the diff of a commit in a project.
+        /// Retrieves the diff of a commit in a project. Diff limits apply. When a commit exceeds the maximum number of files, pagination stops and no files beyond the limit are returned.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -81,7 +81,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Commits
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Commits.Item.Diff.DiffRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Retrieves the diff of a commit in a project.
+        /// Retrieves the diff of a commit in a project. Diff limits apply. When a commit exceeds the maximum number of files, pagination stops and no files beyond the limit are returned.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class DiffRequestBuilderGetQueryParameters 

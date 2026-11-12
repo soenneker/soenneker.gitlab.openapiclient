@@ -66,7 +66,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Snippets
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// Creates a project snippet. The user must have permission to create snippets.
+        /// Creates a project snippet. The user must have permission to create snippets. Creating snippets has a rate limit of 300 requests every hour for each authenticated user. The limit is shared between this endpoint, the endpoint that creates a personal snippet, and the `createSnippet` GraphQL mutation.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectSnippet"/></returns>
         /// <param name="body">The request body</param>
@@ -105,7 +105,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Snippets
             return requestInfo;
         }
         /// <summary>
-        /// Creates a project snippet. The user must have permission to create snippets.
+        /// Creates a project snippet. The user must have permission to create snippets. Creating snippets has a rate limit of 300 requests every hour for each authenticated user. The limit is shared between this endpoint, the endpoint that creates a personal snippet, and the `createSnippet` GraphQL mutation.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

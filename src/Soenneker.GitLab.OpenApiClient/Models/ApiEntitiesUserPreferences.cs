@@ -46,25 +46,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The emoji_skin_tone property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? EmojiSkinTone { get => _explicitNullValueEmojiSkinTone; set { _explicitNullValueEmojiSkinTone = value; AdditionalData?.Remove("emoji_skin_tone"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emoji_skin_tone"); else _explicitNullProperties?.Remove("emoji_skin_tone"); } }
-        private string? _explicitNullValueEmojiSkinTone = default!;
-#nullable restore
-#else
-        public string EmojiSkinTone { get => _explicitNullValueEmojiSkinTone; set { _explicitNullValueEmojiSkinTone = value; AdditionalData?.Remove("emoji_skin_tone"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emoji_skin_tone"); else _explicitNullProperties?.Remove("emoji_skin_tone"); } }
-        private string _explicitNullValueEmojiSkinTone = default!;
-#endif
+        public int? EmojiSkinTone { get => _explicitNullValueEmojiSkinTone; set { _explicitNullValueEmojiSkinTone = value; AdditionalData?.Remove("emoji_skin_tone"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emoji_skin_tone"); else _explicitNullProperties?.Remove("emoji_skin_tone"); } }
+        private int? _explicitNullValueEmojiSkinTone = default!;
         /// <summary>The id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
-        private string? _explicitNullValueId = default!;
-#nullable restore
-#else
-        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
-        private string _explicitNullValueId = default!;
-#endif
+        public long? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private long? _explicitNullValueId = default!;
         /// <summary>The mobile_push_working_days property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -95,55 +81,20 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         private string _explicitNullValueMobilePushWorkingHoursTimeZone = default!;
 #endif
         /// <summary>The pass_user_identities_to_ci_jwt property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? PassUserIdentitiesToCiJwt { get => _explicitNullValuePassUserIdentitiesToCiJwt; set { _explicitNullValuePassUserIdentitiesToCiJwt = value; AdditionalData?.Remove("pass_user_identities_to_ci_jwt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pass_user_identities_to_ci_jwt"); else _explicitNullProperties?.Remove("pass_user_identities_to_ci_jwt"); } }
-        private string? _explicitNullValuePassUserIdentitiesToCiJwt = default!;
-#nullable restore
-#else
-        public string PassUserIdentitiesToCiJwt { get => _explicitNullValuePassUserIdentitiesToCiJwt; set { _explicitNullValuePassUserIdentitiesToCiJwt = value; AdditionalData?.Remove("pass_user_identities_to_ci_jwt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pass_user_identities_to_ci_jwt"); else _explicitNullProperties?.Remove("pass_user_identities_to_ci_jwt"); } }
-        private string _explicitNullValuePassUserIdentitiesToCiJwt = default!;
-#endif
+        public bool? PassUserIdentitiesToCiJwt { get => _explicitNullValuePassUserIdentitiesToCiJwt; set { _explicitNullValuePassUserIdentitiesToCiJwt = value; AdditionalData?.Remove("pass_user_identities_to_ci_jwt"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pass_user_identities_to_ci_jwt"); else _explicitNullProperties?.Remove("pass_user_identities_to_ci_jwt"); } }
+        private bool? _explicitNullValuePassUserIdentitiesToCiJwt = default!;
         /// <summary>The policy_advanced_editor property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? PolicyAdvancedEditor { get => _explicitNullValuePolicyAdvancedEditor; set { _explicitNullValuePolicyAdvancedEditor = value; AdditionalData?.Remove("policy_advanced_editor"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("policy_advanced_editor"); else _explicitNullProperties?.Remove("policy_advanced_editor"); } }
-        private string? _explicitNullValuePolicyAdvancedEditor = default!;
-#nullable restore
-#else
-        public string PolicyAdvancedEditor { get => _explicitNullValuePolicyAdvancedEditor; set { _explicitNullValuePolicyAdvancedEditor = value; AdditionalData?.Remove("policy_advanced_editor"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("policy_advanced_editor"); else _explicitNullProperties?.Remove("policy_advanced_editor"); } }
-        private string _explicitNullValuePolicyAdvancedEditor = default!;
-#endif
+        public bool? PolicyAdvancedEditor { get => _explicitNullValuePolicyAdvancedEditor; set { _explicitNullValuePolicyAdvancedEditor = value; AdditionalData?.Remove("policy_advanced_editor"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("policy_advanced_editor"); else _explicitNullProperties?.Remove("policy_advanced_editor"); } }
+        private bool? _explicitNullValuePolicyAdvancedEditor = default!;
         /// <summary>The show_whitespace_in_diffs property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? ShowWhitespaceInDiffs { get => _explicitNullValueShowWhitespaceInDiffs; set { _explicitNullValueShowWhitespaceInDiffs = value; AdditionalData?.Remove("show_whitespace_in_diffs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("show_whitespace_in_diffs"); else _explicitNullProperties?.Remove("show_whitespace_in_diffs"); } }
-        private string? _explicitNullValueShowWhitespaceInDiffs = default!;
-#nullable restore
-#else
-        public string ShowWhitespaceInDiffs { get => _explicitNullValueShowWhitespaceInDiffs; set { _explicitNullValueShowWhitespaceInDiffs = value; AdditionalData?.Remove("show_whitespace_in_diffs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("show_whitespace_in_diffs"); else _explicitNullProperties?.Remove("show_whitespace_in_diffs"); } }
-        private string _explicitNullValueShowWhitespaceInDiffs = default!;
-#endif
+        public bool? ShowWhitespaceInDiffs { get => _explicitNullValueShowWhitespaceInDiffs; set { _explicitNullValueShowWhitespaceInDiffs = value; AdditionalData?.Remove("show_whitespace_in_diffs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("show_whitespace_in_diffs"); else _explicitNullProperties?.Remove("show_whitespace_in_diffs"); } }
+        private bool? _explicitNullValueShowWhitespaceInDiffs = default!;
         /// <summary>The user_id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? UserId { get => _explicitNullValueUserId; set { _explicitNullValueUserId = value; AdditionalData?.Remove("user_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_id"); else _explicitNullProperties?.Remove("user_id"); } }
-        private string? _explicitNullValueUserId = default!;
-#nullable restore
-#else
-        public string UserId { get => _explicitNullValueUserId; set { _explicitNullValueUserId = value; AdditionalData?.Remove("user_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_id"); else _explicitNullProperties?.Remove("user_id"); } }
-        private string _explicitNullValueUserId = default!;
-#endif
+        public long? UserId { get => _explicitNullValueUserId; set { _explicitNullValueUserId = value; AdditionalData?.Remove("user_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_id"); else _explicitNullProperties?.Remove("user_id"); } }
+        private long? _explicitNullValueUserId = default!;
         /// <summary>The view_diffs_file_by_file property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? ViewDiffsFileByFile { get => _explicitNullValueViewDiffsFileByFile; set { _explicitNullValueViewDiffsFileByFile = value; AdditionalData?.Remove("view_diffs_file_by_file"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("view_diffs_file_by_file"); else _explicitNullProperties?.Remove("view_diffs_file_by_file"); } }
-        private string? _explicitNullValueViewDiffsFileByFile = default!;
-#nullable restore
-#else
-        public string ViewDiffsFileByFile { get => _explicitNullValueViewDiffsFileByFile; set { _explicitNullValueViewDiffsFileByFile = value; AdditionalData?.Remove("view_diffs_file_by_file"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("view_diffs_file_by_file"); else _explicitNullProperties?.Remove("view_diffs_file_by_file"); } }
-        private string _explicitNullValueViewDiffsFileByFile = default!;
-#endif
+        public bool? ViewDiffsFileByFile { get => _explicitNullValueViewDiffsFileByFile; set { _explicitNullValueViewDiffsFileByFile = value; AdditionalData?.Remove("view_diffs_file_by_file"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("view_diffs_file_by_file"); else _explicitNullProperties?.Remove("view_diffs_file_by_file"); } }
+        private bool? _explicitNullValueViewDiffsFileByFile = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserPreferences"/> and sets the default values.
         /// </summary>
@@ -169,18 +120,18 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "emoji_skin_tone", n => { EmojiSkinTone = n.GetStringValue(); } },
-                { "id", n => { Id = n.GetStringValue(); } },
+                { "emoji_skin_tone", n => { EmojiSkinTone = n.GetIntValue(); } },
+                { "id", n => { Id = n.GetLongValue(); } },
                 { "mobile_push_working_days", n => { MobilePushWorkingDays = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "mobile_push_working_hours_enabled", n => { MobilePushWorkingHoursEnabled = n.GetBoolValue(); } },
                 { "mobile_push_working_hours_end", n => { MobilePushWorkingHoursEnd = n.GetIntValue(); } },
                 { "mobile_push_working_hours_start", n => { MobilePushWorkingHoursStart = n.GetIntValue(); } },
                 { "mobile_push_working_hours_time_zone", n => { MobilePushWorkingHoursTimeZone = n.GetStringValue(); } },
-                { "pass_user_identities_to_ci_jwt", n => { PassUserIdentitiesToCiJwt = n.GetStringValue(); } },
-                { "policy_advanced_editor", n => { PolicyAdvancedEditor = n.GetStringValue(); } },
-                { "show_whitespace_in_diffs", n => { ShowWhitespaceInDiffs = n.GetStringValue(); } },
-                { "user_id", n => { UserId = n.GetStringValue(); } },
-                { "view_diffs_file_by_file", n => { ViewDiffsFileByFile = n.GetStringValue(); } },
+                { "pass_user_identities_to_ci_jwt", n => { PassUserIdentitiesToCiJwt = n.GetBoolValue(); } },
+                { "policy_advanced_editor", n => { PolicyAdvancedEditor = n.GetBoolValue(); } },
+                { "show_whitespace_in_diffs", n => { ShowWhitespaceInDiffs = n.GetBoolValue(); } },
+                { "user_id", n => { UserId = n.GetLongValue(); } },
+                { "view_diffs_file_by_file", n => { ViewDiffsFileByFile = n.GetBoolValue(); } },
             };
         }
         /// <summary>
@@ -190,18 +141,18 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("emoji_skin_tone", EmojiSkinTone);
-            writer.WriteStringValue("id", Id);
+            writer.WriteIntValue("emoji_skin_tone", EmojiSkinTone);
+            writer.WriteLongValue("id", Id);
             writer.WriteCollectionOfPrimitiveValues<string>("mobile_push_working_days", MobilePushWorkingDays);
             writer.WriteBoolValue("mobile_push_working_hours_enabled", MobilePushWorkingHoursEnabled);
             writer.WriteIntValue("mobile_push_working_hours_end", MobilePushWorkingHoursEnd);
             writer.WriteIntValue("mobile_push_working_hours_start", MobilePushWorkingHoursStart);
             writer.WriteStringValue("mobile_push_working_hours_time_zone", MobilePushWorkingHoursTimeZone);
-            writer.WriteStringValue("pass_user_identities_to_ci_jwt", PassUserIdentitiesToCiJwt);
-            writer.WriteStringValue("policy_advanced_editor", PolicyAdvancedEditor);
-            writer.WriteStringValue("show_whitespace_in_diffs", ShowWhitespaceInDiffs);
-            writer.WriteStringValue("user_id", UserId);
-            writer.WriteStringValue("view_diffs_file_by_file", ViewDiffsFileByFile);
+            writer.WriteBoolValue("pass_user_identities_to_ci_jwt", PassUserIdentitiesToCiJwt);
+            writer.WriteBoolValue("policy_advanced_editor", PolicyAdvancedEditor);
+            writer.WriteBoolValue("show_whitespace_in_diffs", ShowWhitespaceInDiffs);
+            writer.WriteLongValue("user_id", UserId);
+            writer.WriteBoolValue("view_diffs_file_by_file", ViewDiffsFileByFile);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

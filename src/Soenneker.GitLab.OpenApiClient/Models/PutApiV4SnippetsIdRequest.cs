@@ -33,7 +33,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The content of a snippet. Mutually exclusive with `files`. At least one of `content`, `description`, `files`, `file_name`, `title`, `visibility` must be provided.</summary>
+        /// <summary>The content of a snippet. Deprecated. Use `files` instead. Mutually exclusive with `files`. At least one of `content`, `description`, `files`, `file_name`, `title`, `visibility` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Content { get => _explicitNullValueContent; set { _explicitNullValueContent = value; AdditionalData?.Remove("content"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("content"); else _explicitNullProperties?.Remove("content"); } }
@@ -53,7 +53,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
         private string _explicitNullValueDescription = default!;
 #endif
-        /// <summary>The name of a snippet file. Mutually exclusive with `files`. At least one of `content`, `description`, `files`, `file_name`, `title`, `visibility` must be provided.</summary>
+        /// <summary>The name of a snippet file. Deprecated. Use `files` instead. Mutually exclusive with `files`. At least one of `content`, `description`, `files`, `file_name`, `title`, `visibility` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? FileName { get => _explicitNullValueFileName; set { _explicitNullValueFileName = value; AdditionalData?.Remove("file_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file_name"); else _explicitNullProperties?.Remove("file_name"); } }

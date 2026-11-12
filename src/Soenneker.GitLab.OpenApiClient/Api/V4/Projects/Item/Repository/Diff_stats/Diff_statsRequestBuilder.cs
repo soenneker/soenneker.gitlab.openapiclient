@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Diff_st
         {
         }
         /// <summary>
-        /// Returns the number of added and deleted lines for every file that differs between two refs.
+        /// Returns the number of added and deleted lines for every file that differs between two refs. This endpoint requires authentication. This endpoint is behind the `repository_diff_stats_api` feature flag, disabled by default. This feature was introduced in GitLab 19.4.
         /// </summary>
         /// <returns>A List&lt;global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDiffStat&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -53,7 +53,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Diff_st
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// Returns the number of added and deleted lines for every file that differs between two refs.
+        /// Returns the number of added and deleted lines for every file that differs between two refs. This endpoint requires authentication. This endpoint is behind the `repository_diff_stats_api` feature flag, disabled by default. This feature was introduced in GitLab 19.4.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -81,7 +81,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Diff_st
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Diff_stats.Diff_statsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Returns the number of added and deleted lines for every file that differs between two refs.
+        /// Returns the number of added and deleted lines for every file that differs between two refs. This endpoint requires authentication. This endpoint is behind the `repository_diff_stats_api` feature flag, disabled by default. This feature was introduced in GitLab 19.4.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Diff_statsRequestBuilderGetQueryParameters 

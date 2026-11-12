@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
-    /// <summary>Sets the review state after publishing. Does not record a formal approval.</summary>
+    /// <summary>Sets the review state after publishing. Does not record a formal approval. If you can&apos;t request changes, sets `reviewed` instead.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum PostApiV4ProjectsIdMergeRequestsMergeRequestIidDraftNotesBulkPublishRequestReviewerState
     {

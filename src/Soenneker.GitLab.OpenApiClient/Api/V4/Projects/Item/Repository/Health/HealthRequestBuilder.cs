@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Health
         {
         }
         /// <summary>
-        /// Retrieves statistics related to the health of a project repository. This endpoint is rate-limited to 5 requests/hour per project when `generate` is `true`. Available only to users with push access to the repository.
+        /// Retrieves statistics related to the health of a project repository. This endpoint is rate-limited to 5 requests/hour per project when `generate` is `true`. Available only to users with push access to the repository. This feature was introduced in GitLab 17.10.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRepositoryHealth"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Health
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRepositoryHealth>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRepositoryHealth.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Retrieves statistics related to the health of a project repository. This endpoint is rate-limited to 5 requests/hour per project when `generate` is `true`. Available only to users with push access to the repository.
+        /// Retrieves statistics related to the health of a project repository. This endpoint is rate-limited to 5 requests/hour per project when `generate` is `true`. Available only to users with push access to the repository. This feature was introduced in GitLab 17.10.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -80,7 +80,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Health
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Health.HealthRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Retrieves statistics related to the health of a project repository. This endpoint is rate-limited to 5 requests/hour per project when `generate` is `true`. Available only to users with push access to the repository.
+        /// Retrieves statistics related to the health of a project repository. This endpoint is rate-limited to 5 requests/hour per project when `generate` is `true`. Available only to users with push access to the repository. This feature was introduced in GitLab 17.10.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class HealthRequestBuilderGetQueryParameters 

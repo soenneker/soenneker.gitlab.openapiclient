@@ -48,12 +48,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The licenses property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.DependencyEntityLicenseEntity? Licenses { get => _explicitNullValueLicenses; set { _explicitNullValueLicenses = value; AdditionalData?.Remove("licenses"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("licenses"); else _explicitNullProperties?.Remove("licenses"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.DependencyEntityLicenseEntity? _explicitNullValueLicenses = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.DependencyEntityLicenseEntity>? Licenses { get => _explicitNullValueLicenses; set { _explicitNullValueLicenses = value; AdditionalData?.Remove("licenses"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("licenses"); else _explicitNullProperties?.Remove("licenses"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.DependencyEntityLicenseEntity>? _explicitNullValueLicenses = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.DependencyEntityLicenseEntity Licenses { get => _explicitNullValueLicenses; set { _explicitNullValueLicenses = value; AdditionalData?.Remove("licenses"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("licenses"); else _explicitNullProperties?.Remove("licenses"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.DependencyEntityLicenseEntity _explicitNullValueLicenses = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.DependencyEntityLicenseEntity> Licenses { get => _explicitNullValueLicenses; set { _explicitNullValueLicenses = value; AdditionalData?.Remove("licenses"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("licenses"); else _explicitNullProperties?.Remove("licenses"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.DependencyEntityLicenseEntity> _explicitNullValueLicenses = default!;
 #endif
         /// <summary>Malware status: true if the package version matches a malware advisory, false otherwise. Omitted when the user cannot read security resources.</summary>
         public bool? Malware { get => _explicitNullValueMalware; set { _explicitNullValueMalware = value; AdditionalData?.Remove("malware"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("malware"); else _explicitNullProperties?.Remove("malware"); } }
@@ -91,12 +91,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The vulnerabilities property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.DependencyEntityVulnerabilityEntity? Vulnerabilities { get => _explicitNullValueVulnerabilities; set { _explicitNullValueVulnerabilities = value; AdditionalData?.Remove("vulnerabilities"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vulnerabilities"); else _explicitNullProperties?.Remove("vulnerabilities"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.DependencyEntityVulnerabilityEntity? _explicitNullValueVulnerabilities = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.DependencyEntityVulnerabilityEntity>? Vulnerabilities { get => _explicitNullValueVulnerabilities; set { _explicitNullValueVulnerabilities = value; AdditionalData?.Remove("vulnerabilities"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vulnerabilities"); else _explicitNullProperties?.Remove("vulnerabilities"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.DependencyEntityVulnerabilityEntity>? _explicitNullValueVulnerabilities = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.DependencyEntityVulnerabilityEntity Vulnerabilities { get => _explicitNullValueVulnerabilities; set { _explicitNullValueVulnerabilities = value; AdditionalData?.Remove("vulnerabilities"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vulnerabilities"); else _explicitNullProperties?.Remove("vulnerabilities"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.DependencyEntityVulnerabilityEntity _explicitNullValueVulnerabilities = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.DependencyEntityVulnerabilityEntity> Vulnerabilities { get => _explicitNullValueVulnerabilities; set { _explicitNullValueVulnerabilities = value; AdditionalData?.Remove("vulnerabilities"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vulnerabilities"); else _explicitNullProperties?.Remove("vulnerabilities"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.DependencyEntityVulnerabilityEntity> _explicitNullValueVulnerabilities = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDependency"/> and sets the default values.
@@ -124,12 +124,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "dependency_file_path", n => { DependencyFilePath = n.GetStringValue(); } },
-                { "licenses", n => { Licenses = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.DependencyEntityLicenseEntity>(global::Soenneker.GitLab.OpenApiClient.Models.DependencyEntityLicenseEntity.CreateFromDiscriminatorValue); } },
+                { "licenses", n => { Licenses = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.DependencyEntityLicenseEntity>(global::Soenneker.GitLab.OpenApiClient.Models.DependencyEntityLicenseEntity.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "malware", n => { Malware = n.GetBoolValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "package_manager", n => { PackageManager = n.GetStringValue(); } },
                 { "version", n => { Version = n.GetStringValue(); } },
-                { "vulnerabilities", n => { Vulnerabilities = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.DependencyEntityVulnerabilityEntity>(global::Soenneker.GitLab.OpenApiClient.Models.DependencyEntityVulnerabilityEntity.CreateFromDiscriminatorValue); } },
+                { "vulnerabilities", n => { Vulnerabilities = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.DependencyEntityVulnerabilityEntity>(global::Soenneker.GitLab.OpenApiClient.Models.DependencyEntityVulnerabilityEntity.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -140,12 +140,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("dependency_file_path", DependencyFilePath);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.DependencyEntityLicenseEntity>("licenses", Licenses);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.DependencyEntityLicenseEntity>("licenses", Licenses);
             writer.WriteBoolValue("malware", Malware);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("package_manager", PackageManager);
             writer.WriteStringValue("version", Version);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.DependencyEntityVulnerabilityEntity>("vulnerabilities", Vulnerabilities);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.DependencyEntityVulnerabilityEntity>("vulnerabilities", Vulnerabilities);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

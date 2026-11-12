@@ -151,7 +151,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The deployment_events property</summary>
         public bool? DeploymentEvents { get => _explicitNullValueDeploymentEvents; set { _explicitNullValueDeploymentEvents = value; AdditionalData?.Remove("deployment_events"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deployment_events"); else _explicitNullProperties?.Remove("deployment_events"); } }
         private bool? _explicitNullValueDeploymentEvents = default!;
-        /// <summary>The description property</summary>
+        /// <summary>Description of the hook. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/460887) in GitLab 17.1.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
@@ -197,7 +197,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The milestone_events property</summary>
         public bool? MilestoneEvents { get => _explicitNullValueMilestoneEvents; set { _explicitNullValueMilestoneEvents = value; AdditionalData?.Remove("milestone_events"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("milestone_events"); else _explicitNullProperties?.Remove("milestone_events"); } }
         private bool? _explicitNullValueMilestoneEvents = default!;
-        /// <summary>The name property</summary>
+        /// <summary>Name of the hook. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/460887) in GitLab 17.1.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
@@ -241,7 +241,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The resource_access_token_events property</summary>
         public bool? ResourceAccessTokenEvents { get => _explicitNullValueResourceAccessTokenEvents; set { _explicitNullValueResourceAccessTokenEvents = value; AdditionalData?.Remove("resource_access_token_events"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resource_access_token_events"); else _explicitNullProperties?.Remove("resource_access_token_events"); } }
         private bool? _explicitNullValueResourceAccessTokenEvents = default!;
-        /// <summary>Whether an HMAC signing token is configured</summary>
+        /// <summary>Whether an HMAC signing token is configured. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/231325) in GitLab 19.0.</summary>
         public bool? SigningTokenPresent { get => _explicitNullValueSigningTokenPresent; set { _explicitNullValueSigningTokenPresent = value; AdditionalData?.Remove("signing_token_present"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signing_token_present"); else _explicitNullProperties?.Remove("signing_token_present"); } }
         private bool? _explicitNullValueSigningTokenPresent = default!;
         /// <summary>The subgroup_events property</summary>
@@ -250,7 +250,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The tag_push_events property</summary>
         public bool? TagPushEvents { get => _explicitNullValueTagPushEvents; set { _explicitNullValueTagPushEvents = value; AdditionalData?.Remove("tag_push_events"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tag_push_events"); else _explicitNullProperties?.Remove("tag_push_events"); } }
         private bool? _explicitNullValueTagPushEvents = default!;
-        /// <summary>Whether a secret token is configured</summary>
+        /// <summary>Whether a secret token is configured. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/231325) in GitLab 19.0.</summary>
         public bool? TokenPresent { get => _explicitNullValueTokenPresent; set { _explicitNullValueTokenPresent = value; AdditionalData?.Remove("token_present"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token_present"); else _explicitNullProperties?.Remove("token_present"); } }
         private bool? _explicitNullValueTokenPresent = default!;
         /// <summary>The url property</summary>

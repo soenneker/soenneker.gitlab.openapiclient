@@ -119,7 +119,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Merge_requests
             /// <summary>Returns merge requests assigned to the given user `id`. `None` returns unassigned merge requests. `Any` returns merge requests with an assignee. Mutually exclusive with `assignee_username`.</summary>
             [QueryParameter("assignee_id")]
             public int? AssigneeId { get; set; }
-            /// <summary>Returns merge requests assigned to the given usernames. Mutually exclusive with `assignee_id`.</summary>
+            /// <summary>Returns merge requests assigned to the given usernames. Instances without a license accept only one username. Mutually exclusive with `assignee_id`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("assignee_username")]
@@ -242,7 +242,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Merge_requests
             /// <summary>`&lt;Negated&gt;` Returns merge requests assigned to the given user `id`. `None` returns unassigned merge requests. `Any` returns merge requests with an assignee. Mutually exclusive with `not[assignee_username]`.</summary>
             [QueryParameter("not%5Bassignee_id%5D")]
             public int? NotassigneeId { get; set; }
-            /// <summary>`&lt;Negated&gt;` Returns merge requests assigned to the given usernames. Mutually exclusive with `not[assignee_id]`.</summary>
+            /// <summary>`&lt;Negated&gt;` Returns merge requests assigned to the given usernames. Instances without a license accept only one username. Mutually exclusive with `not[assignee_id]`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("not%5Bassignee_username%5D")]

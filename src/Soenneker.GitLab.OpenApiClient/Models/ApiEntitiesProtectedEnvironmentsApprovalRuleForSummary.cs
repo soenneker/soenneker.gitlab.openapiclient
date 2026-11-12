@@ -53,12 +53,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The deployment_approvals property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDeploymentsApproval? DeploymentApprovals { get => _explicitNullValueDeploymentApprovals; set { _explicitNullValueDeploymentApprovals = value; AdditionalData?.Remove("deployment_approvals"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deployment_approvals"); else _explicitNullProperties?.Remove("deployment_approvals"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDeploymentsApproval? _explicitNullValueDeploymentApprovals = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDeploymentsApproval>? DeploymentApprovals { get => _explicitNullValueDeploymentApprovals; set { _explicitNullValueDeploymentApprovals = value; AdditionalData?.Remove("deployment_approvals"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deployment_approvals"); else _explicitNullProperties?.Remove("deployment_approvals"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDeploymentsApproval>? _explicitNullValueDeploymentApprovals = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDeploymentsApproval DeploymentApprovals { get => _explicitNullValueDeploymentApprovals; set { _explicitNullValueDeploymentApprovals = value; AdditionalData?.Remove("deployment_approvals"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deployment_approvals"); else _explicitNullProperties?.Remove("deployment_approvals"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDeploymentsApproval _explicitNullValueDeploymentApprovals = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDeploymentsApproval> DeploymentApprovals { get => _explicitNullValueDeploymentApprovals; set { _explicitNullValueDeploymentApprovals = value; AdditionalData?.Remove("deployment_approvals"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deployment_approvals"); else _explicitNullProperties?.Remove("deployment_approvals"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDeploymentsApproval> _explicitNullValueDeploymentApprovals = default!;
 #endif
         /// <summary>The group_id property</summary>
         public long? GroupId { get => _explicitNullValueGroupId; set { _explicitNullValueGroupId = value; AdditionalData?.Remove("group_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_id"); else _explicitNullProperties?.Remove("group_id"); } }
@@ -102,7 +102,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             {
                 { "access_level", n => { AccessLevel = n.GetIntValue(); } },
                 { "access_level_description", n => { AccessLevelDescription = n.GetStringValue(); } },
-                { "deployment_approvals", n => { DeploymentApprovals = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDeploymentsApproval>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDeploymentsApproval.CreateFromDiscriminatorValue); } },
+                { "deployment_approvals", n => { DeploymentApprovals = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDeploymentsApproval>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDeploymentsApproval.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "group_id", n => { GroupId = n.GetLongValue(); } },
                 { "group_inheritance_type", n => { GroupInheritanceType = n.GetIntValue(); } },
                 { "id", n => { Id = n.GetLongValue(); } },
@@ -119,7 +119,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("access_level", AccessLevel);
             writer.WriteStringValue("access_level_description", AccessLevelDescription);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDeploymentsApproval>("deployment_approvals", DeploymentApprovals);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDeploymentsApproval>("deployment_approvals", DeploymentApprovals);
             writer.WriteLongValue("group_id", GroupId);
             writer.WriteIntValue("group_inheritance_type", GroupInheritanceType);
             writer.WriteLongValue("id", Id);

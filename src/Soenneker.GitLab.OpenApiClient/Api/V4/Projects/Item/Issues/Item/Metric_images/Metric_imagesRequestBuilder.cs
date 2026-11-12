@@ -55,20 +55,21 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Issues.Item.Metric
         /// <summary>
         /// Lists all metric images for an incident.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesIssuableMetricImage"/></returns>
+        /// <returns>A List&lt;global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesIssuableMetricImage&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesIssuableMetricImage?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesIssuableMetricImage>?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesIssuableMetricImage> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesIssuableMetricImage>> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesIssuableMetricImage>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesIssuableMetricImage.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
+            var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesIssuableMetricImage>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesIssuableMetricImage.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
+            return collectionResult?.AsList();
         }
         /// <summary>
         /// Uploads a screenshot of metric charts for an incident. Available only for incidents.

@@ -213,6 +213,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             else if (parseNode.GetChildNode("container_registry_token_expire_delay") is { } nullNodeContainerRegistryTokenExpireDelay && nullNodeContainerRegistryTokenExpireDelay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContainerRegistryTokenExpireDelay = null;
             if (parseNode.GetChildNode("create_organization_api_limit") is null) { _explicitNullValueCreateOrganizationApiLimit = default!; _explicitNullProperties?.Remove("create_organization_api_limit"); }
             else if (parseNode.GetChildNode("create_organization_api_limit") is { } nullNodeCreateOrganizationApiLimit && nullNodeCreateOrganizationApiLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreateOrganizationApiLimit = null;
+            if (parseNode.GetChildNode("credits_usage_per_day_limit") is null) { _explicitNullValueCreditsUsagePerDayLimit = default!; _explicitNullProperties?.Remove("credits_usage_per_day_limit"); }
+            else if (parseNode.GetChildNode("credits_usage_per_day_limit") is { } nullNodeCreditsUsagePerDayLimit && nullNodeCreditsUsagePerDayLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreditsUsagePerDayLimit = null;
+            if (parseNode.GetChildNode("credits_usage_per_hour_limit") is null) { _explicitNullValueCreditsUsagePerHourLimit = default!; _explicitNullProperties?.Remove("credits_usage_per_hour_limit"); }
+            else if (parseNode.GetChildNode("credits_usage_per_hour_limit") is { } nullNodeCreditsUsagePerHourLimit && nullNodeCreditsUsagePerHourLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreditsUsagePerHourLimit = null;
+            if (parseNode.GetChildNode("credits_usage_per_minute_limit") is null) { _explicitNullValueCreditsUsagePerMinuteLimit = default!; _explicitNullProperties?.Remove("credits_usage_per_minute_limit"); }
+            else if (parseNode.GetChildNode("credits_usage_per_minute_limit") is { } nullNodeCreditsUsagePerMinuteLimit && nullNodeCreditsUsagePerMinuteLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreditsUsagePerMinuteLimit = null;
             if (parseNode.GetChildNode("cross_reference_checks_limit") is null) { _explicitNullValueCrossReferenceChecksLimit = default!; _explicitNullProperties?.Remove("cross_reference_checks_limit"); }
             else if (parseNode.GetChildNode("cross_reference_checks_limit") is { } nullNodeCrossReferenceChecksLimit && nullNodeCrossReferenceChecksLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CrossReferenceChecksLimit = null;
             if (parseNode.GetChildNode("cube_api_base_url") is null) { _explicitNullValueCubeApiBaseUrl = default!; _explicitNullProperties?.Remove("cube_api_base_url"); }
@@ -327,6 +333,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             else if (parseNode.GetChildNode("domain_denylist_raw") is { } nullNodeDomainDenylistRaw && nullNodeDomainDenylistRaw.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DomainDenylistRaw = null;
             if (parseNode.GetChildNode("downstream_pipeline_trigger_limit_per_project_user_sha") is null) { _explicitNullValueDownstreamPipelineTriggerLimitPerProjectUserSha = default!; _explicitNullProperties?.Remove("downstream_pipeline_trigger_limit_per_project_user_sha"); }
             else if (parseNode.GetChildNode("downstream_pipeline_trigger_limit_per_project_user_sha") is { } nullNodeDownstreamPipelineTriggerLimitPerProjectUserSha && nullNodeDownstreamPipelineTriggerLimitPerProjectUserSha.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DownstreamPipelineTriggerLimitPerProjectUserSha = null;
+            if (parseNode.GetChildNode("draft_notes_create_limit") is null) { _explicitNullValueDraftNotesCreateLimit = default!; _explicitNullProperties?.Remove("draft_notes_create_limit"); }
+            else if (parseNode.GetChildNode("draft_notes_create_limit") is { } nullNodeDraftNotesCreateLimit && nullNodeDraftNotesCreateLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DraftNotesCreateLimit = null;
             if (parseNode.GetChildNode("dsa_key_restriction") is null) { _explicitNullValueDsaKeyRestriction = default!; _explicitNullProperties?.Remove("dsa_key_restriction"); }
             else if (parseNode.GetChildNode("dsa_key_restriction") is { } nullNodeDsaKeyRestriction && nullNodeDsaKeyRestriction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DsaKeyRestriction = null;
             if (parseNode.GetChildNode("duo_agent_platform_enabled") is null) { _explicitNullValueDuoAgentPlatformEnabled = default!; _explicitNullProperties?.Remove("duo_agent_platform_enabled"); }
@@ -507,6 +515,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             else if (parseNode.GetChildNode("enforce_pipl_compliance") is { } nullNodeEnforcePiplCompliance && nullNodeEnforcePiplCompliance.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnforcePiplCompliance = null;
             if (parseNode.GetChildNode("enforce_terms") is null) { _explicitNullValueEnforceTerms = default!; _explicitNullProperties?.Remove("enforce_terms"); }
             else if (parseNode.GetChildNode("enforce_terms") is { } nullNodeEnforceTerms && nullNodeEnforceTerms.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnforceTerms = null;
+            if (parseNode.GetChildNode("environment_delete_rows_limit_per_user") is null) { _explicitNullValueEnvironmentDeleteRowsLimitPerUser = default!; _explicitNullProperties?.Remove("environment_delete_rows_limit_per_user"); }
+            else if (parseNode.GetChildNode("environment_delete_rows_limit_per_user") is { } nullNodeEnvironmentDeleteRowsLimitPerUser && nullNodeEnvironmentDeleteRowsLimitPerUser.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnvironmentDeleteRowsLimitPerUser = null;
             if (parseNode.GetChildNode("epic_move_list_limit") is null) { _explicitNullValueEpicMoveListLimit = default!; _explicitNullProperties?.Remove("epic_move_list_limit"); }
             else if (parseNode.GetChildNode("epic_move_list_limit") is { } nullNodeEpicMoveListLimit && nullNodeEpicMoveListLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EpicMoveListLimit = null;
             if (parseNode.GetChildNode("error_tracking_api_url") is null) { _explicitNullValueErrorTrackingApiUrl = default!; _explicitNullProperties?.Remove("error_tracking_api_url"); }
@@ -579,6 +589,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             else if (parseNode.GetChildNode("gitpod_enabled") is { } nullNodeGitpodEnabled && nullNodeGitpodEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GitpodEnabled = null;
             if (parseNode.GetChildNode("gitpod_url") is null) { _explicitNullValueGitpodUrl = default!; _explicitNullProperties?.Remove("gitpod_url"); }
             else if (parseNode.GetChildNode("gitpod_url") is { } nullNodeGitpodUrl && nullNodeGitpodUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GitpodUrl = null;
+            if (parseNode.GetChildNode("git_push_per_project_limit") is null) { _explicitNullValueGitPushPerProjectLimit = default!; _explicitNullProperties?.Remove("git_push_per_project_limit"); }
+            else if (parseNode.GetChildNode("git_push_per_project_limit") is { } nullNodeGitPushPerProjectLimit && nullNodeGitPushPerProjectLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GitPushPerProjectLimit = null;
             if (parseNode.GetChildNode("git_push_pipeline_limit") is null) { _explicitNullValueGitPushPipelineLimit = default!; _explicitNullProperties?.Remove("git_push_pipeline_limit"); }
             else if (parseNode.GetChildNode("git_push_pipeline_limit") is { } nullNodeGitPushPipelineLimit && nullNodeGitPushPipelineLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GitPushPipelineLimit = null;
             if (parseNode.GetChildNode("git_rate_limit_users_alertlist") is null) { _explicitNullValueGitRateLimitUsersAlertlist = default!; _explicitNullProperties?.Remove("git_rate_limit_users_alertlist"); }
@@ -853,6 +865,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             else if (parseNode.GetChildNode("mcp_server_enabled") is { } nullNodeMcpServerEnabled && nullNodeMcpServerEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) McpServerEnabled = null;
             if (parseNode.GetChildNode("members_delete_limit") is null) { _explicitNullValueMembersDeleteLimit = default!; _explicitNullProperties?.Remove("members_delete_limit"); }
             else if (parseNode.GetChildNode("members_delete_limit") is { } nullNodeMembersDeleteLimit && nullNodeMembersDeleteLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MembersDeleteLimit = null;
+            if (parseNode.GetChildNode("merge_request_diffs_page_request_limit") is null) { _explicitNullValueMergeRequestDiffsPageRequestLimit = default!; _explicitNullProperties?.Remove("merge_request_diffs_page_request_limit"); }
+            else if (parseNode.GetChildNode("merge_request_diffs_page_request_limit") is { } nullNodeMergeRequestDiffsPageRequestLimit && nullNodeMergeRequestDiffsPageRequestLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MergeRequestDiffsPageRequestLimit = null;
             if (parseNode.GetChildNode("merge_requests_create_limit") is null) { _explicitNullValueMergeRequestsCreateLimit = default!; _explicitNullProperties?.Remove("merge_requests_create_limit"); }
             else if (parseNode.GetChildNode("merge_requests_create_limit") is { } nullNodeMergeRequestsCreateLimit && nullNodeMergeRequestsCreateLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MergeRequestsCreateLimit = null;
             if (parseNode.GetChildNode("merge_requests_rebase_limit") is null) { _explicitNullValueMergeRequestsRebaseLimit = default!; _explicitNullProperties?.Remove("merge_requests_rebase_limit"); }
@@ -965,6 +979,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             else if (parseNode.GetChildNode("pipeline_retry_limit_per_user_project") is { } nullNodePipelineRetryLimitPerUserProject && nullNodePipelineRetryLimitPerUserProject.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PipelineRetryLimitPerUserProject = null;
             if (parseNode.GetChildNode("pipeline_schedule_management_limit_per_user") is null) { _explicitNullValuePipelineScheduleManagementLimitPerUser = default!; _explicitNullProperties?.Remove("pipeline_schedule_management_limit_per_user"); }
             else if (parseNode.GetChildNode("pipeline_schedule_management_limit_per_user") is { } nullNodePipelineScheduleManagementLimitPerUser && nullNodePipelineScheduleManagementLimitPerUser.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PipelineScheduleManagementLimitPerUser = null;
+            if (parseNode.GetChildNode("pipeline_trigger_management_limit_per_user") is null) { _explicitNullValuePipelineTriggerManagementLimitPerUser = default!; _explicitNullProperties?.Remove("pipeline_trigger_management_limit_per_user"); }
+            else if (parseNode.GetChildNode("pipeline_trigger_management_limit_per_user") is { } nullNodePipelineTriggerManagementLimitPerUser && nullNodePipelineTriggerManagementLimitPerUser.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PipelineTriggerManagementLimitPerUser = null;
             if (parseNode.GetChildNode("plantuml_diagram_proxy_enabled") is null) { _explicitNullValuePlantumlDiagramProxyEnabled = default!; _explicitNullProperties?.Remove("plantuml_diagram_proxy_enabled"); }
             else if (parseNode.GetChildNode("plantuml_diagram_proxy_enabled") is { } nullNodePlantumlDiagramProxyEnabled && nullNodePlantumlDiagramProxyEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PlantumlDiagramProxyEnabled = null;
             if (parseNode.GetChildNode("plantuml_enabled") is null) { _explicitNullValuePlantumlEnabled = default!; _explicitNullProperties?.Remove("plantuml_enabled"); }
@@ -1069,6 +1085,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             else if (parseNode.GetChildNode("relation_export_batch_size") is { } nullNodeRelationExportBatchSize && nullNodeRelationExportBatchSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RelationExportBatchSize = null;
             if (parseNode.GetChildNode("release_evidence_collections_limit_per_user") is null) { _explicitNullValueReleaseEvidenceCollectionsLimitPerUser = default!; _explicitNullProperties?.Remove("release_evidence_collections_limit_per_user"); }
             else if (parseNode.GetChildNode("release_evidence_collections_limit_per_user") is { } nullNodeReleaseEvidenceCollectionsLimitPerUser && nullNodeReleaseEvidenceCollectionsLimitPerUser.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReleaseEvidenceCollectionsLimitPerUser = null;
+            if (parseNode.GetChildNode("release_evidence_max_size_bytes") is null) { _explicitNullValueReleaseEvidenceMaxSizeBytes = default!; _explicitNullProperties?.Remove("release_evidence_max_size_bytes"); }
+            else if (parseNode.GetChildNode("release_evidence_max_size_bytes") is { } nullNodeReleaseEvidenceMaxSizeBytes && nullNodeReleaseEvidenceMaxSizeBytes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReleaseEvidenceMaxSizeBytes = null;
             if (parseNode.GetChildNode("release_writes_limit_per_project") is null) { _explicitNullValueReleaseWritesLimitPerProject = default!; _explicitNullProperties?.Remove("release_writes_limit_per_project"); }
             else if (parseNode.GetChildNode("release_writes_limit_per_project") is { } nullNodeReleaseWritesLimitPerProject && nullNodeReleaseWritesLimitPerProject.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReleaseWritesLimitPerProject = null;
             if (parseNode.GetChildNode("release_writes_limit_per_user") is null) { _explicitNullValueReleaseWritesLimitPerUser = default!; _explicitNullProperties?.Remove("release_writes_limit_per_user"); }
@@ -2461,6 +2479,36 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string CreateOrganizationApiLimit { get => _explicitNullValueCreateOrganizationApiLimit; set { _explicitNullValueCreateOrganizationApiLimit = value; AdditionalData?.Remove("create_organization_api_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("create_organization_api_limit"); else _explicitNullProperties?.Remove("create_organization_api_limit"); } }
         private string _explicitNullValueCreateOrganizationApiLimit = default!;
 #endif
+        /// <summary>The credits_usage_per_day_limit property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CreditsUsagePerDayLimit { get => _explicitNullValueCreditsUsagePerDayLimit; set { _explicitNullValueCreditsUsagePerDayLimit = value; AdditionalData?.Remove("credits_usage_per_day_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credits_usage_per_day_limit"); else _explicitNullProperties?.Remove("credits_usage_per_day_limit"); } }
+        private string? _explicitNullValueCreditsUsagePerDayLimit = default!;
+#nullable restore
+#else
+        public string CreditsUsagePerDayLimit { get => _explicitNullValueCreditsUsagePerDayLimit; set { _explicitNullValueCreditsUsagePerDayLimit = value; AdditionalData?.Remove("credits_usage_per_day_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credits_usage_per_day_limit"); else _explicitNullProperties?.Remove("credits_usage_per_day_limit"); } }
+        private string _explicitNullValueCreditsUsagePerDayLimit = default!;
+#endif
+        /// <summary>The credits_usage_per_hour_limit property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CreditsUsagePerHourLimit { get => _explicitNullValueCreditsUsagePerHourLimit; set { _explicitNullValueCreditsUsagePerHourLimit = value; AdditionalData?.Remove("credits_usage_per_hour_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credits_usage_per_hour_limit"); else _explicitNullProperties?.Remove("credits_usage_per_hour_limit"); } }
+        private string? _explicitNullValueCreditsUsagePerHourLimit = default!;
+#nullable restore
+#else
+        public string CreditsUsagePerHourLimit { get => _explicitNullValueCreditsUsagePerHourLimit; set { _explicitNullValueCreditsUsagePerHourLimit = value; AdditionalData?.Remove("credits_usage_per_hour_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credits_usage_per_hour_limit"); else _explicitNullProperties?.Remove("credits_usage_per_hour_limit"); } }
+        private string _explicitNullValueCreditsUsagePerHourLimit = default!;
+#endif
+        /// <summary>The credits_usage_per_minute_limit property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CreditsUsagePerMinuteLimit { get => _explicitNullValueCreditsUsagePerMinuteLimit; set { _explicitNullValueCreditsUsagePerMinuteLimit = value; AdditionalData?.Remove("credits_usage_per_minute_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credits_usage_per_minute_limit"); else _explicitNullProperties?.Remove("credits_usage_per_minute_limit"); } }
+        private string? _explicitNullValueCreditsUsagePerMinuteLimit = default!;
+#nullable restore
+#else
+        public string CreditsUsagePerMinuteLimit { get => _explicitNullValueCreditsUsagePerMinuteLimit; set { _explicitNullValueCreditsUsagePerMinuteLimit = value; AdditionalData?.Remove("credits_usage_per_minute_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credits_usage_per_minute_limit"); else _explicitNullProperties?.Remove("credits_usage_per_minute_limit"); } }
+        private string _explicitNullValueCreditsUsagePerMinuteLimit = default!;
+#endif
         /// <summary>The cross_reference_checks_limit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -3030,6 +3078,16 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string DownstreamPipelineTriggerLimitPerProjectUserSha { get => _explicitNullValueDownstreamPipelineTriggerLimitPerProjectUserSha; set { _explicitNullValueDownstreamPipelineTriggerLimitPerProjectUserSha = value; AdditionalData?.Remove("downstream_pipeline_trigger_limit_per_project_user_sha"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("downstream_pipeline_trigger_limit_per_project_user_sha"); else _explicitNullProperties?.Remove("downstream_pipeline_trigger_limit_per_project_user_sha"); } }
         private string _explicitNullValueDownstreamPipelineTriggerLimitPerProjectUserSha = default!;
+#endif
+        /// <summary>The draft_notes_create_limit property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? DraftNotesCreateLimit { get => _explicitNullValueDraftNotesCreateLimit; set { _explicitNullValueDraftNotesCreateLimit = value; AdditionalData?.Remove("draft_notes_create_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("draft_notes_create_limit"); else _explicitNullProperties?.Remove("draft_notes_create_limit"); } }
+        private string? _explicitNullValueDraftNotesCreateLimit = default!;
+#nullable restore
+#else
+        public string DraftNotesCreateLimit { get => _explicitNullValueDraftNotesCreateLimit; set { _explicitNullValueDraftNotesCreateLimit = value; AdditionalData?.Remove("draft_notes_create_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("draft_notes_create_limit"); else _explicitNullProperties?.Remove("draft_notes_create_limit"); } }
+        private string _explicitNullValueDraftNotesCreateLimit = default!;
 #endif
         /// <summary>The dsa_key_restriction property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -3889,6 +3947,16 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string EnforceTerms { get => _explicitNullValueEnforceTerms; set { _explicitNullValueEnforceTerms = value; AdditionalData?.Remove("enforce_terms"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enforce_terms"); else _explicitNullProperties?.Remove("enforce_terms"); } }
         private string _explicitNullValueEnforceTerms = default!;
 #endif
+        /// <summary>The environment_delete_rows_limit_per_user property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? EnvironmentDeleteRowsLimitPerUser { get => _explicitNullValueEnvironmentDeleteRowsLimitPerUser; set { _explicitNullValueEnvironmentDeleteRowsLimitPerUser = value; AdditionalData?.Remove("environment_delete_rows_limit_per_user"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("environment_delete_rows_limit_per_user"); else _explicitNullProperties?.Remove("environment_delete_rows_limit_per_user"); } }
+        private string? _explicitNullValueEnvironmentDeleteRowsLimitPerUser = default!;
+#nullable restore
+#else
+        public string EnvironmentDeleteRowsLimitPerUser { get => _explicitNullValueEnvironmentDeleteRowsLimitPerUser; set { _explicitNullValueEnvironmentDeleteRowsLimitPerUser = value; AdditionalData?.Remove("environment_delete_rows_limit_per_user"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("environment_delete_rows_limit_per_user"); else _explicitNullProperties?.Remove("environment_delete_rows_limit_per_user"); } }
+        private string _explicitNullValueEnvironmentDeleteRowsLimitPerUser = default!;
+#endif
         /// <summary>The epic_move_list_limit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -4248,6 +4316,16 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string GitpodUrl { get => _explicitNullValueGitpodUrl; set { _explicitNullValueGitpodUrl = value; AdditionalData?.Remove("gitpod_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gitpod_url"); else _explicitNullProperties?.Remove("gitpod_url"); } }
         private string _explicitNullValueGitpodUrl = default!;
+#endif
+        /// <summary>The git_push_per_project_limit property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? GitPushPerProjectLimit { get => _explicitNullValueGitPushPerProjectLimit; set { _explicitNullValueGitPushPerProjectLimit = value; AdditionalData?.Remove("git_push_per_project_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("git_push_per_project_limit"); else _explicitNullProperties?.Remove("git_push_per_project_limit"); } }
+        private string? _explicitNullValueGitPushPerProjectLimit = default!;
+#nullable restore
+#else
+        public string GitPushPerProjectLimit { get => _explicitNullValueGitPushPerProjectLimit; set { _explicitNullValueGitPushPerProjectLimit = value; AdditionalData?.Remove("git_push_per_project_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("git_push_per_project_limit"); else _explicitNullProperties?.Remove("git_push_per_project_limit"); } }
+        private string _explicitNullValueGitPushPerProjectLimit = default!;
 #endif
         /// <summary>The git_push_pipeline_limit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -5577,6 +5655,16 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string MembersDeleteLimit { get => _explicitNullValueMembersDeleteLimit; set { _explicitNullValueMembersDeleteLimit = value; AdditionalData?.Remove("members_delete_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("members_delete_limit"); else _explicitNullProperties?.Remove("members_delete_limit"); } }
         private string _explicitNullValueMembersDeleteLimit = default!;
 #endif
+        /// <summary>The merge_request_diffs_page_request_limit property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? MergeRequestDiffsPageRequestLimit { get => _explicitNullValueMergeRequestDiffsPageRequestLimit; set { _explicitNullValueMergeRequestDiffsPageRequestLimit = value; AdditionalData?.Remove("merge_request_diffs_page_request_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_request_diffs_page_request_limit"); else _explicitNullProperties?.Remove("merge_request_diffs_page_request_limit"); } }
+        private string? _explicitNullValueMergeRequestDiffsPageRequestLimit = default!;
+#nullable restore
+#else
+        public string MergeRequestDiffsPageRequestLimit { get => _explicitNullValueMergeRequestDiffsPageRequestLimit; set { _explicitNullValueMergeRequestDiffsPageRequestLimit = value; AdditionalData?.Remove("merge_request_diffs_page_request_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_request_diffs_page_request_limit"); else _explicitNullProperties?.Remove("merge_request_diffs_page_request_limit"); } }
+        private string _explicitNullValueMergeRequestDiffsPageRequestLimit = default!;
+#endif
         /// <summary>The merge_requests_create_limit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -6137,6 +6225,16 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string PipelineScheduleManagementLimitPerUser { get => _explicitNullValuePipelineScheduleManagementLimitPerUser; set { _explicitNullValuePipelineScheduleManagementLimitPerUser = value; AdditionalData?.Remove("pipeline_schedule_management_limit_per_user"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pipeline_schedule_management_limit_per_user"); else _explicitNullProperties?.Remove("pipeline_schedule_management_limit_per_user"); } }
         private string _explicitNullValuePipelineScheduleManagementLimitPerUser = default!;
 #endif
+        /// <summary>The pipeline_trigger_management_limit_per_user property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? PipelineTriggerManagementLimitPerUser { get => _explicitNullValuePipelineTriggerManagementLimitPerUser; set { _explicitNullValuePipelineTriggerManagementLimitPerUser = value; AdditionalData?.Remove("pipeline_trigger_management_limit_per_user"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pipeline_trigger_management_limit_per_user"); else _explicitNullProperties?.Remove("pipeline_trigger_management_limit_per_user"); } }
+        private string? _explicitNullValuePipelineTriggerManagementLimitPerUser = default!;
+#nullable restore
+#else
+        public string PipelineTriggerManagementLimitPerUser { get => _explicitNullValuePipelineTriggerManagementLimitPerUser; set { _explicitNullValuePipelineTriggerManagementLimitPerUser = value; AdditionalData?.Remove("pipeline_trigger_management_limit_per_user"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pipeline_trigger_management_limit_per_user"); else _explicitNullProperties?.Remove("pipeline_trigger_management_limit_per_user"); } }
+        private string _explicitNullValuePipelineTriggerManagementLimitPerUser = default!;
+#endif
         /// <summary>The plantuml_diagram_proxy_enabled property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -6656,6 +6754,16 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string ReleaseEvidenceCollectionsLimitPerUser { get => _explicitNullValueReleaseEvidenceCollectionsLimitPerUser; set { _explicitNullValueReleaseEvidenceCollectionsLimitPerUser = value; AdditionalData?.Remove("release_evidence_collections_limit_per_user"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("release_evidence_collections_limit_per_user"); else _explicitNullProperties?.Remove("release_evidence_collections_limit_per_user"); } }
         private string _explicitNullValueReleaseEvidenceCollectionsLimitPerUser = default!;
+#endif
+        /// <summary>The release_evidence_max_size_bytes property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ReleaseEvidenceMaxSizeBytes { get => _explicitNullValueReleaseEvidenceMaxSizeBytes; set { _explicitNullValueReleaseEvidenceMaxSizeBytes = value; AdditionalData?.Remove("release_evidence_max_size_bytes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("release_evidence_max_size_bytes"); else _explicitNullProperties?.Remove("release_evidence_max_size_bytes"); } }
+        private string? _explicitNullValueReleaseEvidenceMaxSizeBytes = default!;
+#nullable restore
+#else
+        public string ReleaseEvidenceMaxSizeBytes { get => _explicitNullValueReleaseEvidenceMaxSizeBytes; set { _explicitNullValueReleaseEvidenceMaxSizeBytes = value; AdditionalData?.Remove("release_evidence_max_size_bytes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("release_evidence_max_size_bytes"); else _explicitNullProperties?.Remove("release_evidence_max_size_bytes"); } }
+        private string _explicitNullValueReleaseEvidenceMaxSizeBytes = default!;
 #endif
         /// <summary>The release_writes_limit_per_project property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -8953,6 +9061,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "container_registry_pre_import_timeout", n => { ContainerRegistryPreImportTimeout = n.GetStringValue(); } },
                 { "container_registry_token_expire_delay", n => { ContainerRegistryTokenExpireDelay = n.GetStringValue(); } },
                 { "create_organization_api_limit", n => { CreateOrganizationApiLimit = n.GetStringValue(); } },
+                { "credits_usage_per_day_limit", n => { CreditsUsagePerDayLimit = n.GetStringValue(); } },
+                { "credits_usage_per_hour_limit", n => { CreditsUsagePerHourLimit = n.GetStringValue(); } },
+                { "credits_usage_per_minute_limit", n => { CreditsUsagePerMinuteLimit = n.GetStringValue(); } },
                 { "cross_reference_checks_limit", n => { CrossReferenceChecksLimit = n.GetStringValue(); } },
                 { "cube_api_base_url", n => { CubeApiBaseUrl = n.GetStringValue(); } },
                 { "cube_api_key", n => { CubeApiKey = n.GetStringValue(); } },
@@ -9010,6 +9121,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "domain_denylist_enabled", n => { DomainDenylistEnabled = n.GetStringValue(); } },
                 { "domain_denylist_raw", n => { DomainDenylistRaw = n.GetStringValue(); } },
                 { "downstream_pipeline_trigger_limit_per_project_user_sha", n => { DownstreamPipelineTriggerLimitPerProjectUserSha = n.GetStringValue(); } },
+                { "draft_notes_create_limit", n => { DraftNotesCreateLimit = n.GetStringValue(); } },
                 { "dsa_key_restriction", n => { DsaKeyRestriction = n.GetStringValue(); } },
                 { "duo_agent_platform_enabled", n => { DuoAgentPlatformEnabled = n.GetStringValue(); } },
                 { "duo_auto_mode_availability", n => { DuoAutoModeAvailability = n.GetStringValue(); } },
@@ -9100,6 +9212,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "enforce_namespace_storage_limit", n => { EnforceNamespaceStorageLimit = n.GetStringValue(); } },
                 { "enforce_pipl_compliance", n => { EnforcePiplCompliance = n.GetStringValue(); } },
                 { "enforce_terms", n => { EnforceTerms = n.GetStringValue(); } },
+                { "environment_delete_rows_limit_per_user", n => { EnvironmentDeleteRowsLimitPerUser = n.GetStringValue(); } },
                 { "epic_move_list_limit", n => { EpicMoveListLimit = n.GetStringValue(); } },
                 { "error_tracking_api_url", n => { ErrorTrackingApiUrl = n.GetStringValue(); } },
                 { "error_tracking_enabled", n => { ErrorTrackingEnabled = n.GetStringValue(); } },
@@ -9124,6 +9237,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "foundational_agents_statuses", n => { FoundationalAgentsStatuses = n.GetStringValue(); } },
                 { "geo_node_allowed_ips", n => { GeoNodeAllowedIps = n.GetStringValue(); } },
                 { "geo_status_timeout", n => { GeoStatusTimeout = n.GetStringValue(); } },
+                { "git_push_per_project_limit", n => { GitPushPerProjectLimit = n.GetStringValue(); } },
                 { "git_push_pipeline_limit", n => { GitPushPipelineLimit = n.GetStringValue(); } },
                 { "git_rate_limit_users_alertlist", n => { GitRateLimitUsersAlertlist = n.GetStringValue(); } },
                 { "git_rate_limit_users_allowlist", n => { GitRateLimitUsersAllowlist = n.GetStringValue(); } },
@@ -9273,6 +9387,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "max_yaml_size_bytes", n => { MaxYamlSizeBytes = n.GetStringValue(); } },
                 { "mcp_server_enabled", n => { McpServerEnabled = n.GetStringValue(); } },
                 { "members_delete_limit", n => { MembersDeleteLimit = n.GetStringValue(); } },
+                { "merge_request_diffs_page_request_limit", n => { MergeRequestDiffsPageRequestLimit = n.GetStringValue(); } },
                 { "merge_requests_create_limit", n => { MergeRequestsCreateLimit = n.GetStringValue(); } },
                 { "merge_requests_rebase_limit", n => { MergeRequestsRebaseLimit = n.GetStringValue(); } },
                 { "metrics_method_call_threshold", n => { MetricsMethodCallThreshold = n.GetStringValue(); } },
@@ -9329,6 +9444,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "pipeline_limit_per_user", n => { PipelineLimitPerUser = n.GetStringValue(); } },
                 { "pipeline_retry_limit_per_user_project", n => { PipelineRetryLimitPerUserProject = n.GetStringValue(); } },
                 { "pipeline_schedule_management_limit_per_user", n => { PipelineScheduleManagementLimitPerUser = n.GetStringValue(); } },
+                { "pipeline_trigger_management_limit_per_user", n => { PipelineTriggerManagementLimitPerUser = n.GetStringValue(); } },
                 { "plantuml_diagram_proxy_enabled", n => { PlantumlDiagramProxyEnabled = n.GetStringValue(); } },
                 { "plantuml_enabled", n => { PlantumlEnabled = n.GetStringValue(); } },
                 { "plantuml_url", n => { PlantumlUrl = n.GetStringValue(); } },
@@ -9381,6 +9497,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "reindexing_minimum_relative_bloat_size", n => { ReindexingMinimumRelativeBloatSize = n.GetStringValue(); } },
                 { "relation_export_batch_size", n => { RelationExportBatchSize = n.GetStringValue(); } },
                 { "release_evidence_collections_limit_per_user", n => { ReleaseEvidenceCollectionsLimitPerUser = n.GetStringValue(); } },
+                { "release_evidence_max_size_bytes", n => { ReleaseEvidenceMaxSizeBytes = n.GetStringValue(); } },
                 { "release_writes_limit_per_project", n => { ReleaseWritesLimitPerProject = n.GetStringValue(); } },
                 { "release_writes_limit_per_user", n => { ReleaseWritesLimitPerUser = n.GetStringValue(); } },
                 { "remember_me_enabled", n => { RememberMeEnabled = n.GetStringValue(); } },
@@ -9706,6 +9823,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("container_registry_pre_import_timeout", ContainerRegistryPreImportTimeout);
             writer.WriteStringValue("container_registry_token_expire_delay", ContainerRegistryTokenExpireDelay);
             writer.WriteStringValue("create_organization_api_limit", CreateOrganizationApiLimit);
+            writer.WriteStringValue("credits_usage_per_day_limit", CreditsUsagePerDayLimit);
+            writer.WriteStringValue("credits_usage_per_hour_limit", CreditsUsagePerHourLimit);
+            writer.WriteStringValue("credits_usage_per_minute_limit", CreditsUsagePerMinuteLimit);
             writer.WriteStringValue("cross_reference_checks_limit", CrossReferenceChecksLimit);
             writer.WriteStringValue("cube_api_base_url", CubeApiBaseUrl);
             writer.WriteStringValue("cube_api_key", CubeApiKey);
@@ -9763,6 +9883,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("domain_denylist_enabled", DomainDenylistEnabled);
             writer.WriteStringValue("domain_denylist_raw", DomainDenylistRaw);
             writer.WriteStringValue("downstream_pipeline_trigger_limit_per_project_user_sha", DownstreamPipelineTriggerLimitPerProjectUserSha);
+            writer.WriteStringValue("draft_notes_create_limit", DraftNotesCreateLimit);
             writer.WriteStringValue("dsa_key_restriction", DsaKeyRestriction);
             writer.WriteStringValue("duo_agent_platform_enabled", DuoAgentPlatformEnabled);
             writer.WriteStringValue("duo_auto_mode_availability", DuoAutoModeAvailability);
@@ -9853,6 +9974,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("enforce_namespace_storage_limit", EnforceNamespaceStorageLimit);
             writer.WriteStringValue("enforce_pipl_compliance", EnforcePiplCompliance);
             writer.WriteStringValue("enforce_terms", EnforceTerms);
+            writer.WriteStringValue("environment_delete_rows_limit_per_user", EnvironmentDeleteRowsLimitPerUser);
             writer.WriteStringValue("epic_move_list_limit", EpicMoveListLimit);
             writer.WriteStringValue("error_tracking_api_url", ErrorTrackingApiUrl);
             writer.WriteStringValue("error_tracking_enabled", ErrorTrackingEnabled);
@@ -9889,6 +10011,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("gitlab_shell_operation_per_actor_limit", GitlabShellOperationPerActorLimit);
             writer.WriteStringValue("gitpod_enabled", GitpodEnabled);
             writer.WriteStringValue("gitpod_url", GitpodUrl);
+            writer.WriteStringValue("git_push_per_project_limit", GitPushPerProjectLimit);
             writer.WriteStringValue("git_push_pipeline_limit", GitPushPipelineLimit);
             writer.WriteStringValue("git_rate_limit_users_alertlist", GitRateLimitUsersAlertlist);
             writer.WriteStringValue("git_rate_limit_users_allowlist", GitRateLimitUsersAllowlist);
@@ -10026,6 +10149,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("max_yaml_size_bytes", MaxYamlSizeBytes);
             writer.WriteStringValue("mcp_server_enabled", McpServerEnabled);
             writer.WriteStringValue("members_delete_limit", MembersDeleteLimit);
+            writer.WriteStringValue("merge_request_diffs_page_request_limit", MergeRequestDiffsPageRequestLimit);
             writer.WriteStringValue("merge_requests_create_limit", MergeRequestsCreateLimit);
             writer.WriteStringValue("merge_requests_rebase_limit", MergeRequestsRebaseLimit);
             writer.WriteStringValue("metrics_method_call_threshold", MetricsMethodCallThreshold);
@@ -10082,6 +10206,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("pipeline_limit_per_user", PipelineLimitPerUser);
             writer.WriteStringValue("pipeline_retry_limit_per_user_project", PipelineRetryLimitPerUserProject);
             writer.WriteStringValue("pipeline_schedule_management_limit_per_user", PipelineScheduleManagementLimitPerUser);
+            writer.WriteStringValue("pipeline_trigger_management_limit_per_user", PipelineTriggerManagementLimitPerUser);
             writer.WriteStringValue("plantuml_diagram_proxy_enabled", PlantumlDiagramProxyEnabled);
             writer.WriteStringValue("plantuml_enabled", PlantumlEnabled);
             writer.WriteStringValue("plantuml_url", PlantumlUrl);
@@ -10134,6 +10259,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("reindexing_minimum_relative_bloat_size", ReindexingMinimumRelativeBloatSize);
             writer.WriteStringValue("relation_export_batch_size", RelationExportBatchSize);
             writer.WriteStringValue("release_evidence_collections_limit_per_user", ReleaseEvidenceCollectionsLimitPerUser);
+            writer.WriteStringValue("release_evidence_max_size_bytes", ReleaseEvidenceMaxSizeBytes);
             writer.WriteStringValue("release_writes_limit_per_project", ReleaseWritesLimitPerProject);
             writer.WriteStringValue("release_writes_limit_per_user", ReleaseWritesLimitPerUser);
             writer.WriteStringValue("remember_me_enabled", RememberMeEnabled);
