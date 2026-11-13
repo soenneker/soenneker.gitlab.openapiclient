@@ -51,7 +51,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Experiments.Item.Assignments
             await RequestAdapter.SendNoContentAsync(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Returns the currently cached variant assignment for the given experiment and context. Defaults to current user if no context is provided.
+        /// Returns the currently cached variant assignment for the given experiment and context. Defaults to current user if no context is provided. If the experiment declares multiple context keys, pass every declared key. The fallback to the authenticated user applies only when you omit the `context` parameter, and only for the `user` and `actor` keys. The `namespace` and `project` keys must always be passed.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesExperimentsAssignment"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -107,7 +107,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Experiments.Item.Assignments
             return requestInfo;
         }
         /// <summary>
-        /// Returns the currently cached variant assignment for the given experiment and context. Defaults to current user if no context is provided.
+        /// Returns the currently cached variant assignment for the given experiment and context. Defaults to current user if no context is provided. If the experiment declares multiple context keys, pass every declared key. The fallback to the authenticated user applies only when you omit the `context` parameter, and only for the `user` and `actor` keys. The `namespace` and `project` keys must always be passed.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -174,7 +174,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Experiments.Item.Assignments
 #endif
         }
         /// <summary>
-        /// Returns the currently cached variant assignment for the given experiment and context. Defaults to current user if no context is provided.
+        /// Returns the currently cached variant assignment for the given experiment and context. Defaults to current user if no context is provided. If the experiment declares multiple context keys, pass every declared key. The fallback to the authenticated user applies only when you omit the `context` parameter, and only for the `user` and `actor` keys. The `namespace` and `project` keys must always be passed.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class AssignmentsRequestBuilderGetQueryParameters 

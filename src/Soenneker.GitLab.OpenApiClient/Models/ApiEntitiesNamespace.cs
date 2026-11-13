@@ -86,7 +86,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string AvatarUrl { get => _explicitNullValueAvatarUrl; set { _explicitNullValueAvatarUrl = value; AdditionalData?.Remove("avatar_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("avatar_url"); else _explicitNullProperties?.Remove("avatar_url"); } }
         private string _explicitNullValueAvatarUrl = default!;
 #endif
-        /// <summary>The billable_members_count property</summary>
+        /// <summary>Number of billable members in the namespace. `null` unless the user has the Owner role, is an auditor, or is an administrator.</summary>
         public int? BillableMembersCount { get => _explicitNullValueBillableMembersCount; set { _explicitNullValueBillableMembersCount = value; AdditionalData?.Remove("billable_members_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billable_members_count"); else _explicitNullProperties?.Remove("billable_members_count"); } }
         private int? _explicitNullValueBillableMembersCount = default!;
         /// <summary>The ci_minutes_usage property</summary>
@@ -99,10 +99,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiMinutesUsage CiMinutesUsage { get => _explicitNullValueCiMinutesUsage; set { _explicitNullValueCiMinutesUsage = value; AdditionalData?.Remove("ci_minutes_usage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ci_minutes_usage"); else _explicitNullProperties?.Remove("ci_minutes_usage"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiMinutesUsage _explicitNullValueCiMinutesUsage = default!;
 #endif
-        /// <summary>The end_date property</summary>
+        /// <summary>End date of the current subscription. Returned only for namespaces with a subscription. `null` if not applicable, or unless the user has the Owner role, is an auditor, or is an administrator.</summary>
         public Date? EndDate { get => _explicitNullValueEndDate; set { _explicitNullValueEndDate = value; AdditionalData?.Remove("end_date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("end_date"); else _explicitNullProperties?.Remove("end_date"); } }
         private Date? _explicitNullValueEndDate = default!;
-        /// <summary>The extra_shared_runners_minutes_limit property</summary>
+        /// <summary>Additional compute minutes added on top of the monthly quota, from purchased minute packs. Returned only on GitLab.com, for administrators.</summary>
         public int? ExtraSharedRunnersMinutesLimit { get => _explicitNullValueExtraSharedRunnersMinutesLimit; set { _explicitNullValueExtraSharedRunnersMinutesLimit = value; AdditionalData?.Remove("extra_shared_runners_minutes_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extra_shared_runners_minutes_limit"); else _explicitNullProperties?.Remove("extra_shared_runners_minutes_limit"); } }
         private int? _explicitNullValueExtraSharedRunnersMinutesLimit = default!;
         /// <summary>Full path of the namespace, including the paths of its parent groups.</summary>
@@ -128,12 +128,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Kind { get => _explicitNullValueKind; set { _explicitNullValueKind = value; AdditionalData?.Remove("kind"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("kind"); else _explicitNullProperties?.Remove("kind"); } }
         private string _explicitNullValueKind = default!;
 #endif
-        /// <summary>The max_seats_used property</summary>
+        /// <summary>Maximum number of seats used during the current subscription period. Returned only for namespaces with a subscription. `null` unless the user has the Owner role, is an auditor, or is an administrator.</summary>
         public int? MaxSeatsUsed { get => _explicitNullValueMaxSeatsUsed; set { _explicitNullValueMaxSeatsUsed = value; AdditionalData?.Remove("max_seats_used"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("max_seats_used"); else _explicitNullProperties?.Remove("max_seats_used"); } }
         private int? _explicitNullValueMaxSeatsUsed = default!;
-        /// <summary>The max_seats_used_changed_at property</summary>
-        public Date? MaxSeatsUsedChangedAt { get => _explicitNullValueMaxSeatsUsedChangedAt; set { _explicitNullValueMaxSeatsUsedChangedAt = value; AdditionalData?.Remove("max_seats_used_changed_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("max_seats_used_changed_at"); else _explicitNullProperties?.Remove("max_seats_used_changed_at"); } }
-        private Date? _explicitNullValueMaxSeatsUsedChangedAt = default!;
+        /// <summary>Timestamp of when `max_seats_used` last changed. Returned only for namespaces with a subscription. `null` unless the user has the Owner role, is an auditor, or is an administrator.</summary>
+        public DateTimeOffset? MaxSeatsUsedChangedAt { get => _explicitNullValueMaxSeatsUsedChangedAt; set { _explicitNullValueMaxSeatsUsedChangedAt = value; AdditionalData?.Remove("max_seats_used_changed_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("max_seats_used_changed_at"); else _explicitNullProperties?.Remove("max_seats_used_changed_at"); } }
+        private DateTimeOffset? _explicitNullValueMaxSeatsUsedChangedAt = default!;
         /// <summary>Number of members of the group and its subgroups. Returned only for groups, to users who can administer the group.</summary>
         public int? MembersCountWithDescendants { get => _explicitNullValueMembersCountWithDescendants; set { _explicitNullValueMembersCountWithDescendants = value; AdditionalData?.Remove("members_count_with_descendants"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("members_count_with_descendants"); else _explicitNullProperties?.Remove("members_count_with_descendants"); } }
         private int? _explicitNullValueMembersCountWithDescendants = default!;
@@ -160,7 +160,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Path { get => _explicitNullValuePath; set { _explicitNullValuePath = value; AdditionalData?.Remove("path"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("path"); else _explicitNullProperties?.Remove("path"); } }
         private string _explicitNullValuePath = default!;
 #endif
-        /// <summary>The plan property</summary>
+        /// <summary>Subscription plan of the namespace, for example `free` or `ultimate`. Returned only when the user has the Owner role or is an administrator.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Plan { get => _explicitNullValuePlan; set { _explicitNullValuePlan = value; AdditionalData?.Remove("plan"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("plan"); else _explicitNullProperties?.Remove("plan"); } }
@@ -176,16 +176,16 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Total size of all repositories in the namespace, in bytes. Returned only for groups, to users who can administer the group.</summary>
         public int? RootRepositorySize { get => _explicitNullValueRootRepositorySize; set { _explicitNullValueRootRepositorySize = value; AdditionalData?.Remove("root_repository_size"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("root_repository_size"); else _explicitNullProperties?.Remove("root_repository_size"); } }
         private int? _explicitNullValueRootRepositorySize = default!;
-        /// <summary>The seats_in_use property</summary>
+        /// <summary>Number of seats currently in use. Returned only for namespaces with a subscription. `null` unless the user has the Owner role, is an auditor, or is an administrator.</summary>
         public int? SeatsInUse { get => _explicitNullValueSeatsInUse; set { _explicitNullValueSeatsInUse = value; AdditionalData?.Remove("seats_in_use"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("seats_in_use"); else _explicitNullProperties?.Remove("seats_in_use"); } }
         private int? _explicitNullValueSeatsInUse = default!;
-        /// <summary>The shared_runners_minutes_limit property</summary>
+        /// <summary>Monthly compute minutes quota allocated to the namespace. Returned only on GitLab.com, for administrators.</summary>
         public int? SharedRunnersMinutesLimit { get => _explicitNullValueSharedRunnersMinutesLimit; set { _explicitNullValueSharedRunnersMinutesLimit = value; AdditionalData?.Remove("shared_runners_minutes_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shared_runners_minutes_limit"); else _explicitNullProperties?.Remove("shared_runners_minutes_limit"); } }
         private int? _explicitNullValueSharedRunnersMinutesLimit = default!;
-        /// <summary>The trial property</summary>
+        /// <summary>If `true`, the namespace is on a trial plan. Returned only when the user has the Owner role or is an administrator.</summary>
         public bool? Trial { get => _explicitNullValueTrial; set { _explicitNullValueTrial = value; AdditionalData?.Remove("trial"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trial"); else _explicitNullProperties?.Remove("trial"); } }
         private bool? _explicitNullValueTrial = default!;
-        /// <summary>The trial_ends_on property</summary>
+        /// <summary>Date the trial ends. `null` if not on a trial. Returned only when the user has the Owner role or is an administrator.</summary>
         public Date? TrialEndsOn { get => _explicitNullValueTrialEndsOn; set { _explicitNullValueTrialEndsOn = value; AdditionalData?.Remove("trial_ends_on"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trial_ends_on"); else _explicitNullProperties?.Remove("trial_ends_on"); } }
         private Date? _explicitNullValueTrialEndsOn = default!;
         /// <summary>Web URL of the namespace. For a user namespace, the URL of the user profile.</summary>
@@ -234,7 +234,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "id", n => { Id = n.GetLongValue(); } },
                 { "kind", n => { Kind = n.GetStringValue(); } },
                 { "max_seats_used", n => { MaxSeatsUsed = n.GetIntValue(); } },
-                { "max_seats_used_changed_at", n => { MaxSeatsUsedChangedAt = n.GetDateValue(); } },
+                { "max_seats_used_changed_at", n => { MaxSeatsUsedChangedAt = n.GetDateTimeOffsetValue(); } },
                 { "members_count_with_descendants", n => { MembersCountWithDescendants = n.GetIntValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "parent_id", n => { ParentId = n.GetLongValue(); } },
@@ -267,7 +267,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteLongValue("id", Id);
             writer.WriteStringValue("kind", Kind);
             writer.WriteIntValue("max_seats_used", MaxSeatsUsed);
-            writer.WriteDateValue("max_seats_used_changed_at", MaxSeatsUsedChangedAt);
+            writer.WriteDateTimeOffsetValue("max_seats_used_changed_at", MaxSeatsUsedChangedAt);
             writer.WriteIntValue("members_count_with_descendants", MembersCountWithDescendants);
             writer.WriteStringValue("name", Name);
             writer.WriteLongValue("parent_id", ParentId);

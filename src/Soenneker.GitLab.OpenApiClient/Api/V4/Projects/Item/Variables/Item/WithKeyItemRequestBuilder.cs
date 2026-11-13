@@ -164,7 +164,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Variables.Item
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithKeyItemRequestBuilderDeleteQueryParameters 
         {
-            /// <summary>Filter results when multiple variables share the same key.</summary>
+            /// <summary>Filter results when multiple variables share the same key. Supports `filter[environment_scope]`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("filter")]
@@ -191,7 +191,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Variables.Item
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithKeyItemRequestBuilderGetQueryParameters 
         {
-            /// <summary>Filter results when multiple variables share the same key.</summary>
+            /// <summary>Filter results when multiple variables share the same key. Supports `filter[environment_scope]`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("filter")]

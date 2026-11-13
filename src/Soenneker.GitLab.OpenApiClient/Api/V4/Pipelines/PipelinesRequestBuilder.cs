@@ -47,7 +47,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Pipelines
         {
         }
         /// <summary>
-        /// Lists recently created pipelines across all projects that were triggered by the authenticated user. By default, child pipelines are not included in the results. To return child pipelines, set `source` to `parent_pipeline`. This endpoint only supports keyset pagination.
+        /// Lists recently created pipelines across all projects that were triggered by the authenticated user. By default, child pipelines are not included in the results. To return child pipelines, set `source` to `parent_pipeline`. Pipelines from projects the user can no longer access are not included. The `merge_request` field is included only for merge request pipelines whose merge request is visible to the user. This endpoint only supports keyset pagination, and returns up to 100 records per page, 20 by default. To retrieve the next page of results, use the URL in the `Link` response header. This feature was introduced in GitLab 19.3.
         /// </summary>
         /// <returns>A List&lt;global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiUserPipeline&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -66,7 +66,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Pipelines
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// Lists recently created pipelines across all projects that were triggered by the authenticated user. By default, child pipelines are not included in the results. To return child pipelines, set `source` to `parent_pipeline`. This endpoint only supports keyset pagination.
+        /// Lists recently created pipelines across all projects that were triggered by the authenticated user. By default, child pipelines are not included in the results. To return child pipelines, set `source` to `parent_pipeline`. Pipelines from projects the user can no longer access are not included. The `merge_request` field is included only for merge request pipelines whose merge request is visible to the user. This endpoint only supports keyset pagination, and returns up to 100 records per page, 20 by default. To retrieve the next page of results, use the URL in the `Link` response header. This feature was introduced in GitLab 19.3.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -94,7 +94,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Pipelines
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Pipelines.PipelinesRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Lists recently created pipelines across all projects that were triggered by the authenticated user. By default, child pipelines are not included in the results. To return child pipelines, set `source` to `parent_pipeline`. This endpoint only supports keyset pagination.
+        /// Lists recently created pipelines across all projects that were triggered by the authenticated user. By default, child pipelines are not included in the results. To return child pipelines, set `source` to `parent_pipeline`. Pipelines from projects the user can no longer access are not included. The `merge_request` field is included only for merge request pipelines whose merge request is visible to the user. This endpoint only supports keyset pagination, and returns up to 100 records per page, 20 by default. To retrieve the next page of results, use the URL in the `Link` response header. This feature was introduced in GitLab 19.3.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class PipelinesRequestBuilderGetQueryParameters 
@@ -105,7 +105,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Pipelines
             /// <summary>Return pipelines created before the specified datetime. Format: ISO 8601 YYYY-MM-DDTHH:MM:SSZ</summary>
             [QueryParameter("created_before")]
             public DateTimeOffset? CreatedBefore { get; set; }
-            /// <summary>Cursor for obtaining the next set of records</summary>
+            /// <summary>Cursor for obtaining the next set of records, from the `Link` header of a previous response.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("cursor")]

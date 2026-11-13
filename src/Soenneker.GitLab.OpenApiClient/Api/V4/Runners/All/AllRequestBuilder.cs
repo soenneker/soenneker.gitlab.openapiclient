@@ -95,10 +95,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Runners.All
             /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
-            /// <summary>Scope of runners to return. Deprecated. Use `type` or `status` instead.</summary>
+            /// <summary>Scope of runners to return. If omitted, all runners are returned. Deprecated. Use `type` or `status` instead.</summary>
             [QueryParameter("scope")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4RunnersAllScopeParameter? Scope { get; set; }
-            /// <summary>Status of runners to return.</summary>
+            /// <summary>Status of runners to return. The `active` and `paused` values are deprecated. Use the `paused` parameter instead. Requesting `offline` runners might also return `stale` runners, because `stale` is included in `offline`.</summary>
             [QueryParameter("status")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4RunnersAllStatusParameter? Status { get; set; }
             /// <summary>List of runner tags.</summary>

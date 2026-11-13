@@ -3,6 +3,7 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Attestations.Item;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Attestations.Signing_certificates;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
@@ -15,6 +16,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Attestations
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class AttestationsRequestBuilder : BaseRequestBuilder
     {
+        /// <summary>The signing_certificates property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Attestations.Signing_certificates.Signing_certificatesRequestBuilder Signing_certificates
+        {
+            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Attestations.Signing_certificates.Signing_certificatesRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.projects.item.attestations.item collection</summary>
         /// <param name="position">Hex-encoded SHA-256 hash of the artifact.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Attestations.Item.WithSubjectDigestItemRequestBuilder"/></returns>

@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs.Item.Artifact
         {
         }
         /// <summary>
-        /// Lists all files in a specified artifacts archive without extracting them.
+        /// Lists all files and directories in a specified artifacts archive. It reads the artifact metadata without extracting the archive. This feature was introduced in GitLab 18.8.
         /// </summary>
         /// <returns>A List&lt;global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobArtifactEntry&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -53,7 +53,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs.Item.Artifact
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// Lists all files in a specified artifacts archive without extracting them.
+        /// Lists all files and directories in a specified artifacts archive. It reads the artifact metadata without extracting the archive. This feature was introduced in GitLab 18.8.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -81,7 +81,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs.Item.Artifact
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs.Item.Artifacts.Tree.TreeRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Lists all files in a specified artifacts archive without extracting them.
+        /// Lists all files and directories in a specified artifacts archive. It reads the artifact metadata without extracting the archive. This feature was introduced in GitLab 18.8.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class TreeRequestBuilderGetQueryParameters 

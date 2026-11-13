@@ -39,7 +39,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Description of the variable. Limited to 255 characters.</summary>
+        /// <summary>Description of the variable. Limited to 255 characters. Default is `null`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
@@ -69,13 +69,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Key { get => _explicitNullValueKey; set { _explicitNullValueKey = value; AdditionalData?.Remove("key"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("key"); else _explicitNullProperties?.Remove("key"); } }
         private string _explicitNullValueKey = default!;
 #endif
-        /// <summary>If `true`, the variable is masked.</summary>
+        /// <summary>If `true`, the variable is masked. Default is `false`.</summary>
         public bool? Masked { get => _explicitNullValueMasked; set { _explicitNullValueMasked = value; AdditionalData?.Remove("masked"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("masked"); else _explicitNullProperties?.Remove("masked"); } }
         private bool? _explicitNullValueMasked = default!;
-        /// <summary>If `true`, the variable is masked and hidden. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/29674) in GitLab 17.4.</summary>
+        /// <summary>If `true`, the variable is masked and hidden. Default is `false`. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/29674) in GitLab 17.4.</summary>
         public bool? MaskedAndHidden { get => _explicitNullValueMaskedAndHidden; set { _explicitNullValueMaskedAndHidden = value; AdditionalData?.Remove("masked_and_hidden"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("masked_and_hidden"); else _explicitNullProperties?.Remove("masked_and_hidden"); } }
         private bool? _explicitNullValueMaskedAndHidden = default!;
-        /// <summary>If `true`, the variable is protected.</summary>
+        /// <summary>If `true`, the variable is protected. Default is `false`.</summary>
         public bool? Protected { get => _explicitNullValueProtected; set { _explicitNullValueProtected = value; AdditionalData?.Remove("protected"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("protected"); else _explicitNullProperties?.Remove("protected"); } }
         private bool? _explicitNullValueProtected = default!;
         /// <summary>If `true`, the variable is treated as a raw string. If `false`, the value is [expanded](https://docs.gitlab.com/ci/variables/#allow-cicd-variable-expansion).</summary>

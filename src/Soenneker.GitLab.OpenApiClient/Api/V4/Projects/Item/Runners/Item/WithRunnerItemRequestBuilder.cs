@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Runners.Item
         {
         }
         /// <summary>
-        /// Unassigns a specified project runner from a project. You cannot unassign a runner from the owner project. Use the delete a runner operation instead.
+        /// Unassigns a specified project runner from a project. You cannot unassign a runner from the owner project. Use the delete a runner operation instead. If the runner is locked, only administrators can unassign it. You must have the Maintainer or Owner role in the project, or a custom role with the `admin_runners` permission. Requires a token with the `api` scope.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiRunner"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Runners.Item
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiRunner>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiRunner.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Unassigns a specified project runner from a project. You cannot unassign a runner from the owner project. Use the delete a runner operation instead.
+        /// Unassigns a specified project runner from a project. You cannot unassign a runner from the owner project. Use the delete a runner operation instead. If the runner is locked, only administrators can unassign it. You must have the Maintainer or Owner role in the project, or a custom role with the `admin_runners` permission. Requires a token with the `api` scope.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

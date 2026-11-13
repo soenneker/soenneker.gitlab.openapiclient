@@ -41,7 +41,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public PipelinesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{id}/pipelines{?created_after*,created_before*,name*,order_by*,page*,per_page*,ref*,scope*,sha*,sort*,source*,status*,updated_after*,updated_before*,username*,yaml_errors*}", pathParameters)
+        public PipelinesRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{id}/pipelines{?created_after*,created_before*,ids,iids,name*,order_by*,page*,per_page*,ref*,scope*,sha*,sort*,source*,status*,updated_after*,updated_before*,username*,yaml_errors*}", pathParameters)
         {
         }
         /// <summary>
@@ -49,11 +49,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public PipelinesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{id}/pipelines{?created_after*,created_before*,name*,order_by*,page*,per_page*,ref*,scope*,sha*,sort*,source*,status*,updated_after*,updated_before*,username*,yaml_errors*}", rawUrl)
+        public PipelinesRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/v4/projects/{id}/pipelines{?created_after*,created_before*,ids,iids,name*,order_by*,page*,per_page*,ref*,scope*,sha*,sort*,source*,status*,updated_after*,updated_before*,username*,yaml_errors*}", rawUrl)
         {
         }
         /// <summary>
-        /// Lists all pipelines in a project. By default, child pipelines are not included in the results. To return child pipelines, set `source` to `parent_pipeline`.
+        /// Lists all pipelines in a project. By default, child pipelines are not included in the results. To return child pipelines, set `source` to `parent_pipeline`. Child pipelines are also returned when requested by `iids` or `ids`.
         /// </summary>
         /// <returns>A List&lt;global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiPipelineBasic&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -72,7 +72,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// Lists all pipelines in a project. By default, child pipelines are not included in the results. To return child pipelines, set `source` to `parent_pipeline`.
+        /// Lists all pipelines in a project. By default, child pipelines are not included in the results. To return child pipelines, set `source` to `parent_pipeline`. Child pipelines are also returned when requested by `iids` or `ids`.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -100,7 +100,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines.PipelinesRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Lists all pipelines in a project. By default, child pipelines are not included in the results. To return child pipelines, set `source` to `parent_pipeline`.
+        /// Lists all pipelines in a project. By default, child pipelines are not included in the results. To return child pipelines, set `source` to `parent_pipeline`. Child pipelines are also returned when requested by `iids` or `ids`.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class PipelinesRequestBuilderGetQueryParameters 
@@ -111,6 +111,26 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines
             /// <summary>Return pipelines created before the specified time.</summary>
             [QueryParameter("created_before")]
             public DateTimeOffset? CreatedBefore { get; set; }
+            /// <summary>Return pipelines with the specified IDs. Child pipelines are included when requested by ID.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("ids")]
+            public int?[]? Ids { get; set; }
+#nullable restore
+#else
+            [QueryParameter("ids")]
+            public int?[] Ids { get; set; }
+#endif
+            /// <summary>Return pipelines with the specified IIDs. Child pipelines are included when requested by IID.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            [QueryParameter("iids")]
+            public int?[]? Iids { get; set; }
+#nullable restore
+#else
+            [QueryParameter("iids")]
+            public int?[] Iids { get; set; }
+#endif
             /// <summary>Return pipelines with the specified name.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -140,7 +160,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines
             [QueryParameter("ref")]
             public string Ref { get; set; }
 #endif
-            /// <summary>Return pipelines in the specified scope.</summary>
+            /// <summary>Return pipelines in the specified scope. `branches` and `tags` return only the latest pipeline for each branch or tag.</summary>
             [QueryParameter("scope")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdPipelinesScopeParameter? Scope { get; set; }
             /// <summary>Return pipelines for the specified commit SHA.</summary>

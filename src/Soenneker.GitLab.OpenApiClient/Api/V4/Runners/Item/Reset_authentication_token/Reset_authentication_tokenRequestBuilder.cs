@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Runners.Item.Reset_authenticatio
         {
         }
         /// <summary>
-        /// Resets the authentication token for a specified runner.
+        /// Resets the authentication token for a specified runner. For instance runners, you must be an administrator. For group runners, you must have the Owner role in the owner group. For project runners, you must have the Maintainer or Owner role in a project assigned to the runner. A custom role with the `admin_runners` permission in the owner group or project also grants access. Requires a token with the `api` or `manage_runner` scope.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiResetTokenResult"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Runners.Item.Reset_authenticatio
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiResetTokenResult>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiResetTokenResult.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Resets the authentication token for a specified runner.
+        /// Resets the authentication token for a specified runner. For instance runners, you must be an administrator. For group runners, you must have the Owner role in the owner group. For project runners, you must have the Maintainer or Owner role in a project assigned to the runner. A custom role with the `admin_runners` permission in the owner group or project also grants access. Requires a token with the `api` or `manage_runner` scope.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

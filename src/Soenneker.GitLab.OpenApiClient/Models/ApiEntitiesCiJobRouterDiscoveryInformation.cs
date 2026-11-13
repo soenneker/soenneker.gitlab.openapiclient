@@ -23,7 +23,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The server_url property</summary>
+        /// <summary>URL of the Job Router.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ServerUrl { get => _explicitNullValueServerUrl; set { _explicitNullValueServerUrl = value; AdditionalData?.Remove("server_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("server_url"); else _explicitNullProperties?.Remove("server_url"); } }

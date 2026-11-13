@@ -99,7 +99,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Commits
             [QueryParameter("name")]
             public string Name { get; set; }
 #endif
-            /// <summary>Sort results by the specified field. With `pipeline_id`, statuses of the same pipeline are also sorted by `id` in the `sort` direction.</summary>
+            /// <summary>Sort results by the specified field. With `pipeline_id`, statuses of the same pipeline are also sorted by `id` in the `sort` direction. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/176142) in GitLab 17.9.</summary>
             [QueryParameter("order_by")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdRepositoryCommitsShaStatusesOrderByParameter? OrderBy { get; set; }
             /// <summary>Page number of results to retrieve.</summary>
@@ -108,7 +108,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Commits
             /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
-            /// <summary>Filter statuses by pipeline ID.</summary>
+            /// <summary>Filter statuses by pipeline ID. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/176142) in GitLab 17.9.</summary>
             [QueryParameter("pipeline_id")]
             public int? PipelineId { get; set; }
             /// <summary>Name of the branch or tag. Defaults to the default branch.</summary>
@@ -121,7 +121,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Commits
             [QueryParameter("ref")]
             public string Ref { get; set; }
 #endif
-            /// <summary>Sort statuses in ascending or descending order. Defaults to `asc`.</summary>
+            /// <summary>Sort statuses in ascending or descending order. Defaults to `asc`. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/176142) in GitLab 17.9.</summary>
             [QueryParameter("sort")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdRepositoryCommitsShaStatusesSortParameter? Sort { get; set; }
             /// <summary>Filter statuses by [build stage](https://docs.gitlab.com/ci/yaml/#stages). For example, `test`.</summary>

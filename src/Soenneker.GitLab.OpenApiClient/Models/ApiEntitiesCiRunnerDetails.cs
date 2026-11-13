@@ -85,12 +85,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string AccessLevel { get => _explicitNullValueAccessLevel; set { _explicitNullValueAccessLevel = value; AdditionalData?.Remove("access_level"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("access_level"); else _explicitNullProperties?.Remove("access_level"); } }
         private string _explicitNullValueAccessLevel = default!;
 #endif
-        /// <summary>The active property</summary>
+        /// <summary>If `true`, the runner is allowed to receive jobs. Deprecated. Use `paused` instead.</summary>
         public bool? Active { get => _explicitNullValueActive; set { _explicitNullValueActive = value; AdditionalData?.Remove("active"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("active"); else _explicitNullProperties?.Remove("active"); } }
         private bool? _explicitNullValueActive = default!;
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The architecture property</summary>
+        /// <summary>Architecture of the runner, from its most recently contacted runner manager. Deprecated. Use the runner manager fields in the GraphQL API instead.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Architecture { get => _explicitNullValueArchitecture; set { _explicitNullValueArchitecture = value; AdditionalData?.Remove("architecture"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("architecture"); else _explicitNullProperties?.Remove("architecture"); } }
@@ -146,7 +146,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The id property</summary>
         public long? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private long? _explicitNullValueId = default!;
-        /// <summary>The ip_address property</summary>
+        /// <summary>Always `null`. Deprecated. Use the runner manager fields in the GraphQL API instead.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? IpAddress { get => _explicitNullValueIpAddress; set { _explicitNullValueIpAddress = value; AdditionalData?.Remove("ip_address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ip_address"); else _explicitNullProperties?.Remove("ip_address"); } }
@@ -208,7 +208,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The paused property</summary>
         public bool? Paused { get => _explicitNullValuePaused; set { _explicitNullValuePaused = value; AdditionalData?.Remove("paused"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paused"); else _explicitNullProperties?.Remove("paused"); } }
         private bool? _explicitNullValuePaused = default!;
-        /// <summary>The platform property</summary>
+        /// <summary>Platform of the runner, from its most recently contacted runner manager. Deprecated. Use the runner manager fields in the GraphQL API instead.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Platform { get => _explicitNullValuePlatform; set { _explicitNullValuePlatform = value; AdditionalData?.Remove("platform"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("platform"); else _explicitNullProperties?.Remove("platform"); } }
@@ -228,7 +228,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBasicProjectDetails> Projects { get => _explicitNullValueProjects; set { _explicitNullValueProjects = value; AdditionalData?.Remove("projects"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("projects"); else _explicitNullProperties?.Remove("projects"); } }
         private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBasicProjectDetails> _explicitNullValueProjects = default!;
 #endif
-        /// <summary>The revision property</summary>
+        /// <summary>Revision of the runner, from its most recently contacted runner manager. Deprecated. Use the runner manager fields in the GraphQL API instead.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Revision { get => _explicitNullValueRevision; set { _explicitNullValueRevision = value; AdditionalData?.Remove("revision"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("revision"); else _explicitNullProperties?.Remove("revision"); } }
@@ -271,10 +271,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string TagList { get => _explicitNullValueTagList; set { _explicitNullValueTagList = value; AdditionalData?.Remove("tag_list"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tag_list"); else _explicitNullProperties?.Remove("tag_list"); } }
         private string _explicitNullValueTagList = default!;
 #endif
-        /// <summary>The token_expires_at property</summary>
+        /// <summary>Expiry time of the runner authentication token. `null` if the token does not expire. Returned only to users who can view sensitive runner data. For instance runners, only administrators.</summary>
         public DateTimeOffset? TokenExpiresAt { get => _explicitNullValueTokenExpiresAt; set { _explicitNullValueTokenExpiresAt = value; AdditionalData?.Remove("token_expires_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token_expires_at"); else _explicitNullProperties?.Remove("token_expires_at"); } }
         private DateTimeOffset? _explicitNullValueTokenExpiresAt = default!;
-        /// <summary>The uuid property</summary>
+        /// <summary>UUID of the runner. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/266813) in GitLab 19.6.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Uuid { get => _explicitNullValueUuid; set { _explicitNullValueUuid = value; AdditionalData?.Remove("uuid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uuid"); else _explicitNullProperties?.Remove("uuid"); } }
@@ -284,7 +284,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Uuid { get => _explicitNullValueUuid; set { _explicitNullValueUuid = value; AdditionalData?.Remove("uuid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uuid"); else _explicitNullProperties?.Remove("uuid"); } }
         private string _explicitNullValueUuid = default!;
 #endif
-        /// <summary>The version property</summary>
+        /// <summary>Version of the runner, from its most recently contacted runner manager. Deprecated. Use the runner manager fields in the GraphQL API instead.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Version { get => _explicitNullValueVersion; set { _explicitNullValueVersion = value; AdditionalData?.Remove("version"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("version"); else _explicitNullProperties?.Remove("version"); } }

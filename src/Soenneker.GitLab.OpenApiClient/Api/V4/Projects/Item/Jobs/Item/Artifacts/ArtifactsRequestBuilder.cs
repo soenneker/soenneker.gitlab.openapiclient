@@ -59,7 +59,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs.Item.Artifact
         {
         }
         /// <summary>
-        /// Deletes job artifacts from a specified job in a project.
+        /// Deletes job artifacts from a specified job in a project. This includes archived files, metadata, and report artifacts such as JUnit reports. The job log is not deleted. Artifacts cannot be recovered after deletion. You must have the Maintainer or Owner role for the project.
         /// </summary>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -76,7 +76,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs.Item.Artifact
             await RequestAdapter.SendNoContentAsync(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// This feature was introduced in GitLab 8.5. The `file_type` attribute was added in GitLab 19.4.
+        /// Downloads the artifacts archive of a specified job. To download a specific report file, such as JUnit test results, use the `file_type` attribute. On GitLab.com, the request might redirect through a CDN, so clients must follow redirects, for example with the cURL `--location` option. This feature was introduced in GitLab 8.5. The `file_type` attribute was added in GitLab 19.4.
         /// </summary>
         /// <returns>A <see cref="Stream"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -94,7 +94,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs.Item.Artifact
             return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Deletes job artifacts from a specified job in a project.
+        /// Deletes job artifacts from a specified job in a project. This includes archived files, metadata, and report artifacts such as JUnit reports. The job log is not deleted. Artifacts cannot be recovered after deletion. You must have the Maintainer or Owner role for the project.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -112,7 +112,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs.Item.Artifact
             return requestInfo;
         }
         /// <summary>
-        /// This feature was introduced in GitLab 8.5. The `file_type` attribute was added in GitLab 19.4.
+        /// Downloads the artifacts archive of a specified job. To download a specific report file, such as JUnit test results, use the `file_type` attribute. On GitLab.com, the request might redirect through a CDN, so clients must follow redirects, for example with the cURL `--location` option. This feature was introduced in GitLab 8.5. The `file_type` attribute was added in GitLab 19.4.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -140,7 +140,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs.Item.Artifact
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs.Item.Artifacts.ArtifactsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// This feature was introduced in GitLab 8.5. The `file_type` attribute was added in GitLab 19.4.
+        /// Downloads the artifacts archive of a specified job. To download a specific report file, such as JUnit test results, use the `file_type` attribute. On GitLab.com, the request might redirect through a CDN, so clients must follow redirects, for example with the cURL `--location` option. This feature was introduced in GitLab 8.5. The `file_type` attribute was added in GitLab 19.4.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ArtifactsRequestBuilderGetQueryParameters 

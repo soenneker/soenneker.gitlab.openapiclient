@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs.Item.Retry
         {
         }
         /// <summary>
-        /// Retries a specified job in a project.
+        /// Retries a specified job in a project. Retries both CI/CD jobs and trigger jobs. If the job retry rate limit is exceeded, returns `429 Too Many Requests` with a `Retry-After` header.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJob"/></returns>
         /// <param name="body">The request body</param>
@@ -54,7 +54,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs.Item.Retry
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJob>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJob.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Retries a specified job in a project.
+        /// Retries a specified job in a project. Retries both CI/CD jobs and trigger jobs. If the job retry rate limit is exceeded, returns `429 Too Many Requests` with a `Retry-After` header.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

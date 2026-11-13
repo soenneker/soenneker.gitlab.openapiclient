@@ -47,7 +47,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Triggers
         {
         }
         /// <summary>
-        /// Lists all pipeline trigger tokens for a specified project.
+        /// Lists all pipeline trigger tokens for a specified project. The trigger token is displayed in full if the trigger token was created by the authenticated user. Trigger tokens created by other users are shortened to four characters.
         /// </summary>
         /// <returns>A List&lt;global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesTrigger&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -86,7 +86,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Triggers
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesTrigger>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesTrigger.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Lists all pipeline trigger tokens for a specified project.
+        /// Lists all pipeline trigger tokens for a specified project. The trigger token is displayed in full if the trigger token was created by the authenticated user. Trigger tokens created by other users are shortened to four characters.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -136,7 +136,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Triggers
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Triggers.TriggersRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Lists all pipeline trigger tokens for a specified project.
+        /// Lists all pipeline trigger tokens for a specified project. The trigger token is displayed in full if the trigger token was created by the authenticated user. Trigger tokens created by other users are shortened to four characters.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class TriggersRequestBuilderGetQueryParameters 

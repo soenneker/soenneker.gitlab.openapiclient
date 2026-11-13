@@ -83,7 +83,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Runners
         {
         }
         /// <summary>
-        /// Deletes a specified registered runner.
+        /// Deletes a registered runner by using its authentication token.
         /// </summary>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -100,7 +100,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Runners
             await RequestAdapter.SendNoContentAsync(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Lists all runners available to the user. For group runners, you must have the Owner role in the owner namespace.
+        /// Lists all runners available to the user. For group runners, you must have the Owner role in the owner namespace. For project runners, you must have the Maintainer or Owner role in a project assigned to the runner. Requires a token with the `api` or `read_api` scope.
         /// </summary>
         /// <returns>A List&lt;global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiRunnerWithUuid&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -119,7 +119,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Runners
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// Creates a runner.
+        /// Creates a runner with a runner registration token. Runner registration tokens are deprecated and disabled by default in GitLab 17.0 and later. If registration with runner registration tokens is disabled in the instance, project, or group settings, returns `410 Gone`. Use `POST /user/runners` to create runners instead.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiRunnerRegistrationDetails"/></returns>
         /// <param name="body">The request body</param>
@@ -139,7 +139,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Runners
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiRunnerRegistrationDetails>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiRunnerRegistrationDetails.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Deletes a specified registered runner.
+        /// Deletes a registered runner by using its authentication token.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -157,7 +157,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Runners
             return requestInfo;
         }
         /// <summary>
-        /// Lists all runners available to the user. For group runners, you must have the Owner role in the owner namespace.
+        /// Lists all runners available to the user. For group runners, you must have the Owner role in the owner namespace. For project runners, you must have the Maintainer or Owner role in a project assigned to the runner. Requires a token with the `api` or `read_api` scope.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -176,7 +176,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Runners
             return requestInfo;
         }
         /// <summary>
-        /// Creates a runner.
+        /// Creates a runner with a runner registration token. Runner registration tokens are deprecated and disabled by default in GitLab 17.0 and later. If registration with runner registration tokens is disabled in the instance, project, or group settings, returns `410 Gone`. Use `POST /user/runners` to create runners instead.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -207,7 +207,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Runners
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Runners.RunnersRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Deletes a specified registered runner.
+        /// Deletes a registered runner by using its authentication token.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class RunnersRequestBuilderDeleteQueryParameters 
@@ -224,7 +224,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Runners
 #endif
         }
         /// <summary>
-        /// Lists all runners available to the user. For group runners, you must have the Owner role in the owner namespace.
+        /// Lists all runners available to the user. For group runners, you must have the Owner role in the owner namespace. For project runners, you must have the Maintainer or Owner role in a project assigned to the runner. Requires a token with the `api` or `read_api` scope.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class RunnersRequestBuilderGetQueryParameters 
@@ -238,10 +238,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Runners
             /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
-            /// <summary>Scope of runners to return. Deprecated. Use `type` or `status` instead.</summary>
+            /// <summary>Scope of runners to return. If omitted, all runners are returned. Deprecated. Use `type` or `status` instead.</summary>
             [QueryParameter("scope")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4RunnersScopeParameter? Scope { get; set; }
-            /// <summary>Status of runners to return.</summary>
+            /// <summary>Status of runners to return. The `active` and `paused` values are deprecated. Use the `paused` parameter instead. Requesting `offline` runners might also return `stale` runners, because `stale` is included in `offline`.</summary>
             [QueryParameter("status")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4RunnersStatusParameter? Status { get; set; }
             /// <summary>List of runner tags.</summary>

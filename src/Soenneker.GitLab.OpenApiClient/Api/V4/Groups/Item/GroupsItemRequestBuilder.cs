@@ -5,6 +5,7 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Access_requests;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Access_tokens;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Applications;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Approval_rules;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Archive;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Audit_events;
@@ -98,6 +99,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Access_tokens.Access_tokensRequestBuilder Access_tokens
         {
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Access_tokens.Access_tokensRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The applications property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Applications.ApplicationsRequestBuilder Applications
+        {
+            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Applications.ApplicationsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The approval_rules property</summary>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Approval_rules.Approval_rulesRequestBuilder Approval_rules

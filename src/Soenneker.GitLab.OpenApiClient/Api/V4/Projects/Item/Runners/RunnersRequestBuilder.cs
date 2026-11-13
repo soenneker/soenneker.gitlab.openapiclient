@@ -53,7 +53,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Runners
         {
         }
         /// <summary>
-        /// List all runners available in the project, including from ancestor groups and any allowed shared runners.
+        /// Lists all runners available in the project, including from ancestor groups and any allowed instance runners. You must be an administrator of the GitLab instance or have at least the Maintainer or Auditor role for the target project.
         /// </summary>
         /// <returns>A List&lt;global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiRunnerWithUuid&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -72,7 +72,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Runners
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// Assigns an available project runner to a project.
+        /// Assigns an available project runner to a project. You must have the Maintainer or Owner role in the target project and in a project assigned to the runner, or a custom role with the `admin_runners` permission. Requires a token with the `api` scope.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiRunnerWithUuid"/></returns>
         /// <param name="body">The request body</param>
@@ -92,7 +92,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Runners
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiRunnerWithUuid>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiRunnerWithUuid.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// List all runners available in the project, including from ancestor groups and any allowed shared runners.
+        /// Lists all runners available in the project, including from ancestor groups and any allowed instance runners. You must be an administrator of the GitLab instance or have at least the Maintainer or Auditor role for the target project.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -111,7 +111,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Runners
             return requestInfo;
         }
         /// <summary>
-        /// Assigns an available project runner to a project.
+        /// Assigns an available project runner to a project. You must have the Maintainer or Owner role in the target project and in a project assigned to the runner, or a custom role with the `admin_runners` permission. Requires a token with the `api` scope.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -142,7 +142,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Runners
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Runners.RunnersRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// List all runners available in the project, including from ancestor groups and any allowed shared runners.
+        /// Lists all runners available in the project, including from ancestor groups and any allowed instance runners. You must be an administrator of the GitLab instance or have at least the Maintainer or Auditor role for the target project.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class RunnersRequestBuilderGetQueryParameters 
@@ -156,10 +156,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Runners
             /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
-            /// <summary>Scope of runners to return. Deprecated. Use `type` or `status` instead.</summary>
+            /// <summary>Scope of runners to return. If omitted, all runners are returned. Deprecated. Use `type` or `status` instead.</summary>
             [QueryParameter("scope")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdRunnersScopeParameter? Scope { get; set; }
-            /// <summary>Status of runners to return.</summary>
+            /// <summary>Status of runners to return. The `active` and `paused` values are deprecated. Use the `paused` parameter instead. Requesting `offline` runners might also return `stale` runners, because `stale` is included in `offline`.</summary>
             [QueryParameter("status")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdRunnersStatusParameter? Status { get; set; }
             /// <summary>List of runner tags.</summary>

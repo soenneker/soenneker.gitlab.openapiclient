@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines.Item.Job
         {
         }
         /// <summary>
-        /// Lists all jobs for a specified pipeline.
+        /// Lists all jobs for a specified pipeline, including a child pipeline. Retried jobs are not included by default. Jobs are sorted by ID in descending order.
         /// </summary>
         /// <returns>A List&lt;global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJob&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -53,7 +53,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines.Item.Job
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// Lists all jobs for a specified pipeline.
+        /// Lists all jobs for a specified pipeline, including a child pipeline. Retried jobs are not included by default. Jobs are sorted by ID in descending order.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -81,7 +81,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines.Item.Job
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines.Item.Jobs.JobsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Lists all jobs for a specified pipeline.
+        /// Lists all jobs for a specified pipeline, including a child pipeline. Retried jobs are not included by default. Jobs are sorted by ID in descending order.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class JobsRequestBuilderGetQueryParameters 
@@ -95,7 +95,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Pipelines.Item.Job
             /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
-            /// <summary>The scope of builds to show</summary>
+            /// <summary>Scope of jobs to show. Accepts a single job status or an array of job statuses. If omitted, returns all jobs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("scope")]

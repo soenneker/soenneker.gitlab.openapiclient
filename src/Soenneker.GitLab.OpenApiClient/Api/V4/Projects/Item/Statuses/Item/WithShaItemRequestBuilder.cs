@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Statuses.Item
         {
         }
         /// <summary>
-        /// Creates or updates the status of a commit represented by a job in an `external` stage. If the commit is associated with a merge request, target the commit in the merge request source branch.
+        /// Creates or updates the status of a commit represented by a job in an `external` stage. If the commit is associated with a merge request, target the commit in the merge request source branch. The job is added to the newest matching pipeline for the commit. If no matching pipeline exists, a new pipeline is created with `CI_PIPELINE_SOURCE: external`. When duplicate pipelines exist for the same commit, the newest one receives the status. If the matching pipeline exceeds the maximum number of jobs in a pipeline, a `422` error is returned when `pipeline_id` is specified. Otherwise, a new pipeline is created. If an update is already in progress for the same SHA and ref, a `409` error is returned, and the request can be retried.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommitStatus"/></returns>
         /// <param name="body">The request body</param>
@@ -54,7 +54,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Statuses.Item
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommitStatus>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommitStatus.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Creates or updates the status of a commit represented by a job in an `external` stage. If the commit is associated with a merge request, target the commit in the merge request source branch.
+        /// Creates or updates the status of a commit represented by a job in an `external` stage. If the commit is associated with a merge request, target the commit in the merge request source branch. The job is added to the newest matching pipeline for the commit. If no matching pipeline exists, a new pipeline is created with `CI_PIPELINE_SOURCE: external`. When duplicate pipelines exist for the same commit, the newest one receives the status. If the matching pipeline exceeds the maximum number of jobs in a pipeline, a `422` error is returned when `pipeline_id` is specified. Otherwise, a new pipeline is created. If an update is already in progress for the same SHA and ref, a `409` error is returned, and the request can be retried.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

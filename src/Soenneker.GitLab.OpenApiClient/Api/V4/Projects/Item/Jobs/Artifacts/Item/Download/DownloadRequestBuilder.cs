@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs.Artifacts.Ite
         {
         }
         /// <summary>
-        /// Retrieves the artifacts archive for the latest successful job on a specified branch or tag.
+        /// Retrieves the artifacts archive for the latest successful job on a specified branch or tag. The latest successful pipeline is determined by its creation time. The start or end time of individual jobs does not affect which pipeline is the latest. When `search_recent_successful_pipelines` is `true`, the search includes up to 100 recent successful pipelines for the ref. Otherwise, for parent and child pipelines, artifacts are searched in hierarchical order from parent to child. If both parent and child pipelines have a job with the same name, the artifact from the parent pipeline is returned. The pipeline must have completed with a `success` status, so any manual jobs in it must either complete successfully or have `allow_failure: true` set. On GitLab.com, the request might redirect through a CDN, so clients must follow redirects, for example with the cURL `--location` option.
         /// </summary>
         /// <returns>A <see cref="Stream"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs.Artifacts.Ite
             return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Retrieves the artifacts archive for the latest successful job on a specified branch or tag.
+        /// Retrieves the artifacts archive for the latest successful job on a specified branch or tag. The latest successful pipeline is determined by its creation time. The start or end time of individual jobs does not affect which pipeline is the latest. When `search_recent_successful_pipelines` is `true`, the search includes up to 100 recent successful pipelines for the ref. Otherwise, for parent and child pipelines, artifacts are searched in hierarchical order from parent to child. If both parent and child pipelines have a job with the same name, the artifact from the parent pipeline is returned. The pipeline must have completed with a `success` status, so any manual jobs in it must either complete successfully or have `allow_failure: true` set. On GitLab.com, the request might redirect through a CDN, so clients must follow redirects, for example with the cURL `--location` option.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -80,7 +80,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs.Artifacts.Ite
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs.Artifacts.Item.Download.DownloadRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Retrieves the artifacts archive for the latest successful job on a specified branch or tag.
+        /// Retrieves the artifacts archive for the latest successful job on a specified branch or tag. The latest successful pipeline is determined by its creation time. The start or end time of individual jobs does not affect which pipeline is the latest. When `search_recent_successful_pipelines` is `true`, the search includes up to 100 recent successful pipelines for the ref. Otherwise, for parent and child pipelines, artifacts are searched in hierarchical order from parent to child. If both parent and child pipelines have a job with the same name, the artifact from the parent pipeline is returned. The pipeline must have completed with a `success` status, so any manual jobs in it must either complete successfully or have `allow_failure: true` set. On GitLab.com, the request might redirect through a CDN, so clients must follow redirects, for example with the cURL `--location` option.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class DownloadRequestBuilderGetQueryParameters 
@@ -108,7 +108,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs.Artifacts.Ite
             [QueryParameter("job_token")]
             public string JobToken { get; set; }
 #endif
-            /// <summary>If `true`, searches across recent successful pipelines instead of just the latest one. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/work_items/515864) in GitLab 18.7 [with a feature flag](https://docs.gitlab.com/administration/feature_flags/) named `ci_search_recent_successful_pipelines`. Disabled by default.</summary>
+            /// <summary>If `true`, searches across recent successful pipelines instead of just the latest one. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/work_items/515864) in GitLab 18.7.</summary>
             [QueryParameter("search_recent_successful_pipelines")]
             public bool? SearchRecentSuccessfulPipelines { get; set; }
         }

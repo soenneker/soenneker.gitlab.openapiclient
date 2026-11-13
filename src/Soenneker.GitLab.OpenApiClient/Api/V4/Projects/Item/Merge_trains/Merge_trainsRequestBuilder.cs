@@ -111,7 +111,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Merge_trains
             /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
-            /// <summary>Filter merge trains by scope.</summary>
+            /// <summary>Filter merge trains by scope. `active` returns merge trains to be merged. `complete` returns merge trains that have been merged.</summary>
             [QueryParameter("scope")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdMergeTrainsScopeParameter? Scope { get; set; }
             /// <summary>Sort results in ascending or descending order by `id`. A lower `id` value means the merge request was added to the train earlier.</summary>

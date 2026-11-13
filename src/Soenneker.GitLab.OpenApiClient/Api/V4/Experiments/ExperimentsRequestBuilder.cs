@@ -47,7 +47,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Experiments
         {
         }
         /// <summary>
-        /// Lists all experiments on the GitLab instance. Each experiment has an `enabled` status that indicates whether the experiment is enabled globally, or only in specific contexts.
+        /// Lists all experiments on the GitLab instance. Each experiment has an `enabled` status that indicates whether the experiment is enabled globally, or only in specific contexts. Each experiment also has a `context` array with the context keys the experiment declares: `user`, `namespace`, `project`, or `actor`. The array is empty for experiments that declare no context keys. Pass these keys when you force, read, or clear a variant assignment. For an `actor` key, pass the `context[user]` parameter, because the actor is resolved from the user.
         /// </summary>
         /// <returns>A List&lt;global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesExperiment&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -66,7 +66,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Experiments
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// Lists all experiments on the GitLab instance. Each experiment has an `enabled` status that indicates whether the experiment is enabled globally, or only in specific contexts.
+        /// Lists all experiments on the GitLab instance. Each experiment has an `enabled` status that indicates whether the experiment is enabled globally, or only in specific contexts. Each experiment also has a `context` array with the context keys the experiment declares: `user`, `namespace`, `project`, or `actor`. The array is empty for experiments that declare no context keys. Pass these keys when you force, read, or clear a variant assignment. For an `actor` key, pass the `context[user]` parameter, because the actor is resolved from the user.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

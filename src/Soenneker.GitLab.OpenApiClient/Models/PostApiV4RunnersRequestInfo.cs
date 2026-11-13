@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
     /// <summary>
-    /// Runner&apos;s metadata
+    /// Runner&apos;s metadata. Accepts the keys `name`, `version`, `revision`, `platform`, and `architecture`.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PostApiV4RunnersRequestInfo : IAdditionalDataHolder, IParsable

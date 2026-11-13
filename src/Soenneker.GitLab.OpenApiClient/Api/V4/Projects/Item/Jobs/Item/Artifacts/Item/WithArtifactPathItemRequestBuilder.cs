@@ -33,7 +33,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs.Item.Artifact
         {
         }
         /// <summary>
-        /// This feature was introduced in GitLab 10.0
+        /// Downloads a single file from the artifacts of a specified job. The file is extracted from the archive and streamed to the client. On GitLab.com, the request might redirect through a CDN, so clients must follow redirects, for example with the cURL `--location` option. This feature was introduced in GitLab 10.0
         /// </summary>
         /// <returns>A <see cref="Stream"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -51,7 +51,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs.Item.Artifact
             return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// This feature was introduced in GitLab 10.0
+        /// Downloads a single file from the artifacts of a specified job. The file is extracted from the archive and streamed to the client. On GitLab.com, the request might redirect through a CDN, so clients must follow redirects, for example with the cURL `--location` option. This feature was introduced in GitLab 10.0
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -78,7 +78,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs.Item.Artifact
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs.Item.Artifacts.Item.WithArtifactPathItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// This feature was introduced in GitLab 10.0
+        /// Downloads a single file from the artifacts of a specified job. The file is extracted from the archive and streamed to the client. On GitLab.com, the request might redirect through a CDN, so clients must follow redirects, for example with the cURL `--location` option. This feature was introduced in GitLab 10.0
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithArtifactPathItemRequestBuilderGetQueryParameters 

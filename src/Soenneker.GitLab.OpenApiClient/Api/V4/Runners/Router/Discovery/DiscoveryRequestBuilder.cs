@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Runners.Router.Discovery
         {
         }
         /// <summary>
-        /// Discovers Job Router information for a runner. You must provide a valid runner authentication token.
+        /// Discovers Job Router information for a runner. You must provide a valid runner authentication token. This feature was introduced in GitLab 18.7.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRouterDiscoveryInformation"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Runners.Router.Discovery
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRouterDiscoveryInformation>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRouterDiscoveryInformation.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Discovers Job Router information for a runner. You must provide a valid runner authentication token.
+        /// Discovers Job Router information for a runner. You must provide a valid runner authentication token. This feature was introduced in GitLab 18.7.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

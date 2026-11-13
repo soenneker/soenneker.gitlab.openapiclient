@@ -27,13 +27,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The monthly_minutes_used property</summary>
+        /// <summary>Compute minutes used from the monthly quota.</summary>
         public int? MonthlyMinutesUsed { get => _explicitNullValueMonthlyMinutesUsed; set { _explicitNullValueMonthlyMinutesUsed = value; AdditionalData?.Remove("monthly_minutes_used"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("monthly_minutes_used"); else _explicitNullProperties?.Remove("monthly_minutes_used"); } }
         private int? _explicitNullValueMonthlyMinutesUsed = default!;
-        /// <summary>The purchased_minutes_used property</summary>
+        /// <summary>Compute minutes used from additional purchased allocations.</summary>
         public int? PurchasedMinutesUsed { get => _explicitNullValuePurchasedMinutesUsed; set { _explicitNullValuePurchasedMinutesUsed = value; AdditionalData?.Remove("purchased_minutes_used"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("purchased_minutes_used"); else _explicitNullProperties?.Remove("purchased_minutes_used"); } }
         private int? _explicitNullValuePurchasedMinutesUsed = default!;
-        /// <summary>The total_minutes_used property</summary>
+        /// <summary>Total compute minutes used in the current billing period.</summary>
         public int? TotalMinutesUsed { get => _explicitNullValueTotalMinutesUsed; set { _explicitNullValueTotalMinutesUsed = value; AdditionalData?.Remove("total_minutes_used"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total_minutes_used"); else _explicitNullProperties?.Remove("total_minutes_used"); } }
         private int? _explicitNullValueTotalMinutesUsed = default!;
         /// <summary>

@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Runner_controllers.Item.Scopes.R
         {
         }
         /// <summary>
-        /// Removes a runner scope from a runner controller.
+        /// Removes a runner scope from a runner controller. This feature was introduced in GitLab 18.10.
         /// </summary>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -51,7 +51,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Runner_controllers.Item.Scopes.R
             await RequestAdapter.SendNoContentAsync(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Adds a runner scope to a runner controller. When added, the runner controller evaluates jobs only for a specified runner. A runner controller with an instance scope cannot have runner scopes. Remove the instance scope before adding runner scopes.
+        /// Adds a runner scope to a runner controller. When added, the runner controller evaluates jobs only for a specified runner. A runner controller with an instance scope cannot have runner scopes. Remove the instance scope before adding runner scopes. This feature was introduced in GitLab 18.10.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiRunnerControllerRunnerLevelScoping"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -69,7 +69,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Runner_controllers.Item.Scopes.R
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiRunnerControllerRunnerLevelScoping>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiRunnerControllerRunnerLevelScoping.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Removes a runner scope from a runner controller.
+        /// Removes a runner scope from a runner controller. This feature was introduced in GitLab 18.10.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -87,7 +87,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Runner_controllers.Item.Scopes.R
             return requestInfo;
         }
         /// <summary>
-        /// Adds a runner scope to a runner controller. When added, the runner controller evaluates jobs only for a specified runner. A runner controller with an instance scope cannot have runner scopes. Remove the instance scope before adding runner scopes.
+        /// Adds a runner scope to a runner controller. When added, the runner controller evaluates jobs only for a specified runner. A runner controller with an instance scope cannot have runner scopes. Remove the instance scope before adding runner scopes. This feature was introduced in GitLab 18.10.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

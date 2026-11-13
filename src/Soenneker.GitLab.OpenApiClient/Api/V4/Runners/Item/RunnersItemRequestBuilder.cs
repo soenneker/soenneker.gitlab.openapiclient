@@ -58,7 +58,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Runners.Item
         {
         }
         /// <summary>
-        /// Deletes a specified runner.
+        /// Deletes a specified runner. For instance runners, you must be an administrator. For group runners, you must have the Owner role in the owner group. For project runners, you must have the Maintainer or Owner role in the project that owns the runner. A custom role with the `admin_runners` permission in the owner group or project also grants access. Requires a token with the `api` or `manage_runner` scope.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiRunner"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -76,7 +76,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Runners.Item
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiRunner>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiRunner.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Retrieves details of a runner. Instance runner details are available to all authenticated users through this endpoint. For groups and projects, you must have the Maintainer or Owner role for the associated project or group.
+        /// Retrieves details of a runner. Instance runner details are available to all authenticated users through this endpoint. For groups and projects, you must have the Maintainer or Owner role for the associated project or group. The Security Manager role in the associated project or group, or a custom role with the `admin_runners` permission in the owner group or project, also grants access. Requires a token with the `api`, `read_api`, or `manage_runner` scope.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiRunnerDetails"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -94,7 +94,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Runners.Item
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiRunnerDetails>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiRunnerDetails.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Updates a specified runner.
+        /// Updates a specified runner. For instance runners, you must be an administrator. For group runners, you must have the Owner role in the owner group. For project runners, you must have the Maintainer or Owner role in a project assigned to the runner. A custom role with the `admin_runners` permission in the owner group or project also grants access. Requires a token with the `api` or `manage_runner` scope.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiRunnerDetails"/></returns>
         /// <param name="body">The request body</param>
@@ -114,7 +114,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Runners.Item
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiRunnerDetails>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiRunnerDetails.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Deletes a specified runner.
+        /// Deletes a specified runner. For instance runners, you must be an administrator. For group runners, you must have the Owner role in the owner group. For project runners, you must have the Maintainer or Owner role in the project that owns the runner. A custom role with the `admin_runners` permission in the owner group or project also grants access. Requires a token with the `api` or `manage_runner` scope.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -133,7 +133,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Runners.Item
             return requestInfo;
         }
         /// <summary>
-        /// Retrieves details of a runner. Instance runner details are available to all authenticated users through this endpoint. For groups and projects, you must have the Maintainer or Owner role for the associated project or group.
+        /// Retrieves details of a runner. Instance runner details are available to all authenticated users through this endpoint. For groups and projects, you must have the Maintainer or Owner role for the associated project or group. The Security Manager role in the associated project or group, or a custom role with the `admin_runners` permission in the owner group or project, also grants access. Requires a token with the `api`, `read_api`, or `manage_runner` scope.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -152,7 +152,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Runners.Item
             return requestInfo;
         }
         /// <summary>
-        /// Updates a specified runner.
+        /// Updates a specified runner. For instance runners, you must be an administrator. For group runners, you must have the Owner role in the owner group. For project runners, you must have the Maintainer or Owner role in a project assigned to the runner. A custom role with the `admin_runners` permission in the owner group or project also grants access. Requires a token with the `api` or `manage_runner` scope.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -183,7 +183,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Runners.Item
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Runners.Item.RunnersItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Retrieves details of a runner. Instance runner details are available to all authenticated users through this endpoint. For groups and projects, you must have the Maintainer or Owner role for the associated project or group.
+        /// Retrieves details of a runner. Instance runner details are available to all authenticated users through this endpoint. For groups and projects, you must have the Maintainer or Owner role for the associated project or group. The Security Manager role in the associated project or group, or a custom role with the `admin_runners` permission in the owner group or project, also grants access. Requires a token with the `api`, `read_api`, or `manage_runner` scope.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class RunnersItemRequestBuilderGetQueryParameters 

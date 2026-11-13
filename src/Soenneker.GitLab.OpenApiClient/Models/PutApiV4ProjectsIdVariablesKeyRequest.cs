@@ -57,7 +57,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string EnvironmentScope { get => _explicitNullValueEnvironmentScope; set { _explicitNullValueEnvironmentScope = value; AdditionalData?.Remove("environment_scope"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("environment_scope"); else _explicitNullProperties?.Remove("environment_scope"); } }
         private string _explicitNullValueEnvironmentScope = default!;
 #endif
-        /// <summary>Filter results when multiple variables share the same key.</summary>
+        /// <summary>Filter results when multiple variables share the same key. Supports `filter[environment_scope]`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ProjectsIdVariablesKeyRequestFilter? Filter { get => _explicitNullValueFilter; set { _explicitNullValueFilter = value; AdditionalData?.Remove("filter"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filter"); else _explicitNullProperties?.Remove("filter"); } }

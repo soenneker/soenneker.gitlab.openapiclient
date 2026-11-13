@@ -33,7 +33,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Experiments.Item.Cache
         {
         }
         /// <summary>
-        /// Removes all cached variant assignments for the experiment with the given cache key. Useful for cleaning up completed experiments whose code has been removed from the codebase.
+        /// Removes all cached variant assignments for the experiment with the given cache key. Useful for cleaning up completed experiments whose code has been removed from the codebase. The `name` value is used directly as the cache key, so this endpoint clears any matching cache entry, even one that does not belong to a currently defined experiment.
         /// </summary>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -50,7 +50,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Experiments.Item.Cache
             await RequestAdapter.SendNoContentAsync(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Removes all cached variant assignments for the experiment with the given cache key. Useful for cleaning up completed experiments whose code has been removed from the codebase.
+        /// Removes all cached variant assignments for the experiment with the given cache key. Useful for cleaning up completed experiments whose code has been removed from the codebase. The `name` value is used directly as the cache key, so this endpoint clears any matching cache entry, even one that does not belong to a currently defined experiment.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

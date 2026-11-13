@@ -40,7 +40,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Runners
         {
         }
         /// <summary>
-        /// Lists all runners available in a specified group and any ancestor groups, including any allowed instance runners.
+        /// Lists all runners available in a specified group and any ancestor groups, including any allowed instance runners. You must be an administrator or auditor, or have the Security Manager, Maintainer, or Owner role in the group, or a custom role with the `admin_runners` permission in the group. Requires a token with the `api` or `read_api` scope.
         /// </summary>
         /// <returns>A List&lt;global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiRunnerWithUuid&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -59,7 +59,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Runners
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// Lists all runners available in a specified group and any ancestor groups, including any allowed instance runners.
+        /// Lists all runners available in a specified group and any ancestor groups, including any allowed instance runners. You must be an administrator or auditor, or have the Security Manager, Maintainer, or Owner role in the group, or a custom role with the `admin_runners` permission in the group. Requires a token with the `api` or `read_api` scope.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -87,7 +87,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Runners
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Runners.RunnersRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Lists all runners available in a specified group and any ancestor groups, including any allowed instance runners.
+        /// Lists all runners available in a specified group and any ancestor groups, including any allowed instance runners. You must be an administrator or auditor, or have the Security Manager, Maintainer, or Owner role in the group, or a custom role with the `admin_runners` permission in the group. Requires a token with the `api` or `read_api` scope.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class RunnersRequestBuilderGetQueryParameters 
@@ -101,7 +101,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Runners
             /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
-            /// <summary>Status of runners to return.</summary>
+            /// <summary>Status of runners to return. The `active` and `paused` values are deprecated. Use the `paused` parameter instead. Requesting `offline` runners might also return `stale` runners, because `stale` is included in `offline`.</summary>
             [QueryParameter("status")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4GroupsIdRunnersStatusParameter? Status { get; set; }
             /// <summary>List of runner tags.</summary>

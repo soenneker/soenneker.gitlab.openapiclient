@@ -821,6 +821,12 @@
           "403": {
             "description": "Forbidden"
           },
+          "404": {
+            "description": "Not found"
+          },
+          "409": {
+            "description": "Conflict"
+          },
           "200": {
             "description": "Created",
             "content": {
@@ -11030,7 +11036,7 @@
           {
             "name": "scope",
             "in": "query",
-            "description": "Filter merge trains by scope.",
+            "description": "Filter merge trains by scope. \u0060active\u0060 returns merge trains to be merged. \u0060complete\u0060 returns merge trains that have been merged.",
             "schema": {
               "$ref": "#/components/schemas/GetApiV4ProjectsIdMergeTrainsScopeParameter"
             },
@@ -11131,7 +11137,7 @@
           {
             "name": "scope",
             "in": "query",
-            "description": "Filter merge trains by scope.",
+            "description": "Filter merge trains by scope. \u0060active\u0060 returns merge trains to be merged. \u0060complete\u0060 returns merge trains that have been merged.",
             "schema": {
               "$ref": "#/components/schemas/GetApiV4ProjectsIdMergeTrainsTargetBranchScopeParameter"
             },
@@ -13296,7 +13302,7 @@
           "Experiments"
         ],
         "summary": "List all experiments",
-        "description": "Lists all experiments on the GitLab instance. Each experiment has an \u0060enabled\u0060 status that indicates whether the experiment is enabled globally, or only in specific contexts.",
+        "description": "Lists all experiments on the GitLab instance. Each experiment has an \u0060enabled\u0060 status that indicates whether the experiment is enabled globally, or only in specific contexts. Each experiment also has a \u0060context\u0060 array with the context keys the experiment declares: \u0060user\u0060, \u0060namespace\u0060, \u0060project\u0060, or \u0060actor\u0060. The array is empty for experiments that declare no context keys. Pass these keys when you force, read, or clear a variant assignment. For an \u0060actor\u0060 key, pass the \u0060context[user]\u0060 parameter, because the actor is resolved from the user.",
         "operationId": "GetApiV4Experiments",
         "responses": {
           "200": {
@@ -13327,7 +13333,7 @@
           "Experiments"
         ],
         "summary": "Delete cached assignments for an experiment",
-        "description": "Removes all cached variant assignments for the experiment with the given cache key. Useful for cleaning up completed experiments whose code has been removed from the codebase.",
+        "description": "Removes all cached variant assignments for the experiment with the given cache key. Useful for cleaning up completed experiments whose code has been removed from the codebase. The \u0060name\u0060 value is used directly as the cache key, so this endpoint clears any matching cache entry, even one that does not belong to a currently defined experiment.",
         "operationId": "DeleteApiV4ExperimentsNameCache",
         "parameters": [
           {
@@ -13365,7 +13371,7 @@
           "Experiments"
         ],
         "summary": "Get current variant assignment for an experiment context",
-        "description": "Returns the currently cached variant assignment for the given experiment and context. Defaults to current user if no context is provided.",
+        "description": "Returns the currently cached variant assignment for the given experiment and context. Defaults to current user if no context is provided. If the experiment declares multiple context keys, pass every declared key. The fallback to the authenticated user applies only when you omit the \u0060context\u0060 parameter, and only for the \u0060user\u0060 and \u0060actor\u0060 keys. The \u0060namespace\u0060 and \u0060project\u0060 keys must always be passed.",
         "operationId": "GetApiV4ExperimentsExperimentNameAssignments",
         "parameters": [
           {
@@ -17625,7 +17631,7 @@
     "/api/v4/runner_controllers/{runnerControllerId}/tokens": {
       "get": {
         "tags": [
-          "Runners"
+          "Runner controller tokens"
         ],
         "summary": "List all runner controller tokens",
         "description": "Lists all runner controller tokens.",
@@ -17718,7 +17724,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ApiEntitiesCiRunnerControllerToken"
+                  "$ref": "#/components/schemas/ApiEntitiesCiRunnerControllerTokenWithToken"
                 }
               }
             }
@@ -17737,7 +17743,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ApiEntitiesCiRunnerControllerToken"
+                  "$ref": "#/components/schemas/ApiEntitiesCiRunnerControllerTokenWithToken"
                 }
               }
             },
@@ -18043,7 +18049,7 @@
           "Runner controllers"
         ],
         "summary": "Add runner scope",
-        "description": "Adds a runner scope to a runner controller. When added, the runner controller evaluates jobs only for a specified runner. A runner controller with an instance scope cannot have runner scopes. Remove the instance scope before adding runner scopes.",
+        "description": "Adds a runner scope to a runner controller. When added, the runner controller evaluates jobs only for a specified runner. A runner controller with an instance scope cannot have runner scopes. Remove the instance scope before adding runner scopes. This feature was introduced in GitLab 18.10.",
         "operationId": "PostApiV4RunnerControllersIdScopesRunnersRunnerId",
         "parameters": [
           {
@@ -18058,7 +18064,7 @@
           {
             "name": "runnerId",
             "in": "path",
-            "description": "ID of the runner.",
+            "description": "ID of the runner. Must be an instance runner.",
             "required": true,
             "schema": {
               "type": "integer"
@@ -18110,7 +18116,7 @@
           "Runner controllers"
         ],
         "summary": "Remove runner scope",
-        "description": "Removes a runner scope from a runner controller.",
+        "description": "Removes a runner scope from a runner controller. This feature was introduced in GitLab 18.10.",
         "operationId": "DeleteApiV4RunnerControllersIdScopesRunnersRunnerId",
         "parameters": [
           {
@@ -18152,7 +18158,7 @@
     "/api/v4/runner_controllers": {
       "get": {
         "tags": [
-          "Runners"
+          "Runner controllers"
         ],
         "summary": "List all runner controllers",
         "description": "Lists all runner controllers.",
@@ -40637,6 +40643,9 @@
           "404": {
             "description": "Not found"
           },
+          "429": {
+            "description": "Too many requests"
+          },
           "400": {
             "description": "Bad Request"
           }
@@ -43365,6 +43374,76 @@
             "description": "Bad Request"
           }
         }
+      }
+    },
+    "/api/v4/projects/{id}/attestations/signing_certificates": {
+      "get": {
+        "tags": [
+          "Attestations"
+        ],
+        "summary": "List all signing certificates for a project",
+        "description": "Lists the unexpired certificate authority (CA) certificates of a project. GitLab uses these CAs to issue the certificates that sign attestations with the LOCAL_CA attestation method. This feature was introduced in GitLab 19.6.",
+        "operationId": "GetApiV4ProjectsIdAttestationsSigningCertificates",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID or URL-encoded path of the project.",
+            "required": true,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "Page number of results to retrieve.",
+            "schema": {
+              "type": "integer",
+              "default": 1
+            },
+            "example": 1
+          },
+          {
+            "name": "per_page",
+            "in": "query",
+            "description": "Number of items to list per page.",
+            "schema": {
+              "type": "integer",
+              "default": 20
+            },
+            "example": 20
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetApiV4ProjectsIdAttestationsSigningCertificates200ResponseSchema"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        },
+        "x-gitlab-lifecycle": "experiment"
       }
     },
     "/api/v4/projects/{id}/attestations/{subjectDigest}": {
@@ -46954,11 +47033,17 @@
               }
             }
           },
+          "400": {
+            "description": "Bad Request"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
           "404": {
             "description": "Not Found"
           },
-          "400": {
-            "description": "Bad Request"
+          "503": {
+            "description": "Service Unavailable"
           }
         }
       }
@@ -70794,6 +70879,9 @@
           "404": {
             "description": "Not found"
           },
+          "429": {
+            "description": "Too many requests"
+          },
           "400": {
             "description": "Bad Request"
           }
@@ -70849,6 +70937,9 @@
           },
           "404": {
             "description": "Not found"
+          },
+          "429": {
+            "description": "Too many requests"
           },
           "400": {
             "description": "Bad Request"
@@ -71199,6 +71290,9 @@
           "404": {
             "description": "Not found"
           },
+          "429": {
+            "description": "Too many requests"
+          },
           "400": {
             "description": "Bad Request"
           }
@@ -71257,6 +71351,9 @@
           },
           "404": {
             "description": "Not found"
+          },
+          "429": {
+            "description": "Too many requests"
           },
           "200": {
             "description": "Created",
@@ -89693,6 +89790,295 @@
         }
       }
     },
+    "/api/v4/groups/{id}/applications": {
+      "post": {
+        "tags": [
+          "Group applications"
+        ],
+        "summary": "Create a group application",
+        "description": "Creates an OAuth application owned by the specified group. This feature was introduced in GitLab 19.6",
+        "operationId": "PostApiV4GroupsIdApplications",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The ID or URL-encoded path of the group",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PostApiV4GroupsIdApplicationsRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesApplicationWithSecret"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesApplicationWithSecret"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Group applications"
+        ],
+        "summary": "List all group applications",
+        "description": "Lists all OAuth applications owned by a specified group.",
+        "operationId": "GetApiV4GroupsIdApplications",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The ID or URL-encoded path of the group",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "Page number of results to retrieve.",
+            "schema": {
+              "type": "integer",
+              "default": 1
+            },
+            "example": 1
+          },
+          {
+            "name": "per_page",
+            "in": "query",
+            "description": "Number of items to list per page.",
+            "schema": {
+              "type": "integer",
+              "default": 20
+            },
+            "example": 20
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetApiV4GroupsIdApplications200ResponseSchema"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      }
+    },
+    "/api/v4/groups/{id}/applications/{applicationId}": {
+      "get": {
+        "tags": [
+          "Group applications"
+        ],
+        "summary": "Retrieve a group application",
+        "description": "Retrieves details of a specified OAuth application owned by a group.",
+        "operationId": "GetApiV4GroupsIdApplicationsApplicationId",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The ID or URL-encoded path of the group",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "applicationId",
+            "in": "path",
+            "description": "ID of the application. Differs from the \u0060application_id\u0060 in the response.",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesApplication"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Group applications"
+        ],
+        "summary": "Update a group application",
+        "description": "Updates a specified OAuth application owned by a group. You cannot update the \u0060redirect_uri\u0060 and \u0060confidential\u0060 attributes of an existing application. To change them, delete the application and create it again.",
+        "operationId": "PutApiV4GroupsIdApplicationsApplicationId",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The ID or URL-encoded path of the group",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "applicationId",
+            "in": "path",
+            "description": "ID of the application. Differs from the \u0060application_id\u0060 in the response.",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PutApiV4GroupsIdApplicationsApplicationIdRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesApplication"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Group applications"
+        ],
+        "summary": "Delete a group application",
+        "description": "Deletes a specified OAuth application owned by a group.",
+        "operationId": "DeleteApiV4GroupsIdApplicationsApplicationId",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The ID or URL-encoded path of the group",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "applicationId",
+            "in": "path",
+            "description": "ID of the application. Differs from the \u0060application_id\u0060 in the response.",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      }
+    },
     "/api/v4/projects/{id}/packages/go/{moduleName}/@v/list": {
       "get": {
         "tags": [
@@ -103473,7 +103859,7 @@
           {
             "name": "pipeline_id",
             "in": "query",
-            "description": "Filter statuses by pipeline ID.",
+            "description": "Filter statuses by pipeline ID. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/176142) in GitLab 17.9.",
             "schema": {
               "type": "integer",
               "nullable": true
@@ -103492,7 +103878,7 @@
           {
             "name": "order_by",
             "in": "query",
-            "description": "Sort results by the specified field. With \u0060pipeline_id\u0060, statuses of the same pipeline are also sorted by \u0060id\u0060 in the \u0060sort\u0060 direction.",
+            "description": "Sort results by the specified field. With \u0060pipeline_id\u0060, statuses of the same pipeline are also sorted by \u0060id\u0060 in the \u0060sort\u0060 direction. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/176142) in GitLab 17.9.",
             "schema": {
               "$ref": "#/components/schemas/GetApiV4ProjectsIdRepositoryCommitsShaStatusesOrderByParameter"
             }
@@ -103500,7 +103886,7 @@
           {
             "name": "sort",
             "in": "query",
-            "description": "Sort statuses in ascending or descending order. Defaults to \u0060asc\u0060.",
+            "description": "Sort statuses in ascending or descending order. Defaults to \u0060asc\u0060. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/176142) in GitLab 17.9.",
             "schema": {
               "$ref": "#/components/schemas/GetApiV4ProjectsIdRepositoryCommitsShaStatusesSortParameter"
             }
@@ -103558,7 +103944,7 @@
           "Commit statuses"
         ],
         "summary": "Create or update a commit pipeline status",
-        "description": "Creates or updates the status of a commit represented by a job in an \u0060external\u0060 stage. If the commit is associated with a merge request, target the commit in the merge request source branch.",
+        "description": "Creates or updates the status of a commit represented by a job in an \u0060external\u0060 stage. If the commit is associated with a merge request, target the commit in the merge request source branch. The job is added to the newest matching pipeline for the commit. If no matching pipeline exists, a new pipeline is created with \u0060CI_PIPELINE_SOURCE: external\u0060. When duplicate pipelines exist for the same commit, the newest one receives the status. If the matching pipeline exceeds the maximum number of jobs in a pipeline, a \u0060422\u0060 error is returned when \u0060pipeline_id\u0060 is specified. Otherwise, a new pipeline is created. If an update is already in progress for the same SHA and ref, a \u0060409\u0060 error is returned, and the request can be retried.",
         "operationId": "PostApiV4ProjectsIdStatusesSha",
         "parameters": [
           {
@@ -105730,7 +106116,7 @@
           {
             "name": "filter",
             "in": "query",
-            "description": "Filter results when multiple variables share the same key.",
+            "description": "Filter results when multiple variables share the same key. Supports \u0060filter[environment_scope]\u0060.",
             "schema": {
               "type": "object",
               "nullable": true
@@ -105863,7 +106249,7 @@
           {
             "name": "filter",
             "in": "query",
-            "description": "Filter results when multiple variables share the same key.",
+            "description": "Filter results when multiple variables share the same key. Supports \u0060filter[environment_scope]\u0060.",
             "schema": {
               "type": "object",
               "nullable": true
@@ -106063,7 +106449,7 @@
           "CI triggers"
         ],
         "summary": "List all project trigger tokens",
-        "description": "Lists all pipeline trigger tokens for a specified project.",
+        "description": "Lists all pipeline trigger tokens for a specified project. The trigger token is displayed in full if the trigger token was created by the authenticated user. Trigger tokens created by other users are shortened to four characters.",
         "operationId": "GetApiV4ProjectsIdTriggers",
         "parameters": [
           {
@@ -106406,7 +106792,7 @@
           "Pipelines"
         ],
         "summary": "List pipelines triggered by the authenticated user",
-        "description": "Lists recently created pipelines across all projects that were triggered by the authenticated user. By default, child pipelines are not included in the results. To return child pipelines, set \u0060source\u0060 to \u0060parent_pipeline\u0060. This endpoint only supports keyset pagination.",
+        "description": "Lists recently created pipelines across all projects that were triggered by the authenticated user. By default, child pipelines are not included in the results. To return child pipelines, set \u0060source\u0060 to \u0060parent_pipeline\u0060. Pipelines from projects the user can no longer access are not included. The \u0060merge_request\u0060 field is included only for merge request pipelines whose merge request is visible to the user. This endpoint only supports keyset pagination, and returns up to 100 records per page, 20 by default. To retrieve the next page of results, use the URL in the \u0060Link\u0060 response header. This feature was introduced in GitLab 19.3.",
         "operationId": "GetApiV4Pipelines",
         "parameters": [
           {
@@ -106461,7 +106847,7 @@
           {
             "name": "cursor",
             "in": "query",
-            "description": "Cursor for obtaining the next set of records",
+            "description": "Cursor for obtaining the next set of records, from the \u0060Link\u0060 header of a previous response.",
             "schema": {
               "type": "string",
               "nullable": true
@@ -106507,7 +106893,7 @@
           "Pipeline schedules"
         ],
         "summary": "List all pipeline schedules",
-        "description": "Lists all pipeline schedules for a project.",
+        "description": "Lists all pipeline schedules for a project. The \u0060inputs\u0060 field is included only for users with the Maintainer or Owner role, or for the schedule owner.",
         "operationId": "GetApiV4ProjectsIdPipelineSchedules",
         "parameters": [
           {
@@ -106664,7 +107050,7 @@
           "Pipeline schedules"
         ],
         "summary": "Retrieve a pipeline schedule",
-        "description": "Retrieves a pipeline schedule for a project.",
+        "description": "Retrieves a pipeline schedule for a project. The \u0060inputs\u0060 and \u0060variables\u0060 fields are included only for users with the Maintainer or Owner role, or for the schedule owner.",
         "operationId": "GetApiV4ProjectsIdPipelineSchedulesPipelineScheduleId",
         "parameters": [
           {
@@ -107091,7 +107477,7 @@
           "Pipeline schedules"
         ],
         "summary": "Run a pipeline schedule",
-        "description": "Runs a pipeline schedule immediately. The next scheduled run of this pipeline is not affected.",
+        "description": "Runs a pipeline schedule immediately. The next scheduled run of this pipeline is not affected. This endpoint has a rate limit of one request per minute for each user for a given pipeline schedule.",
         "operationId": "PostApiV4ProjectsIdPipelineSchedulesPipelineScheduleIdPlay",
         "parameters": [
           {
@@ -107234,7 +107620,7 @@
           "Pipeline schedules"
         ],
         "summary": "Retrieve a variable for a pipeline schedule",
-        "description": "Retrieves a specified variable for a pipeline schedule.",
+        "description": "Retrieves a specified variable for a pipeline schedule. This feature was introduced in GitLab 18.7.",
         "operationId": "GetApiV4ProjectsIdPipelineSchedulesPipelineScheduleIdVariablesKey",
         "parameters": [
           {
@@ -107469,7 +107855,7 @@
           "Pipelines"
         ],
         "summary": "List all project pipelines",
-        "description": "Lists all pipelines in a project. By default, child pipelines are not included in the results. To return child pipelines, set \u0060source\u0060 to \u0060parent_pipeline\u0060.",
+        "description": "Lists all pipelines in a project. By default, child pipelines are not included in the results. To return child pipelines, set \u0060source\u0060 to \u0060parent_pipeline\u0060. Child pipelines are also returned when requested by \u0060iids\u0060 or \u0060ids\u0060.",
         "operationId": "GetApiV4ProjectsIdPipelines",
         "parameters": [
           {
@@ -107505,7 +107891,7 @@
           {
             "name": "scope",
             "in": "query",
-            "description": "Return pipelines in the specified scope.",
+            "description": "Return pipelines in the specified scope. \u0060branches\u0060 and \u0060tags\u0060 return only the latest pipeline for each branch or tag.",
             "schema": {
               "$ref": "#/components/schemas/GetApiV4ProjectsIdPipelinesScopeParameter"
             },
@@ -107640,6 +108026,40 @@
               "nullable": true
             },
             "example": "Build pipeline"
+          },
+          {
+            "name": "iids",
+            "in": "query",
+            "description": "Return pipelines with the specified IIDs. Child pipelines are included when requested by IID.",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "integer"
+              },
+              "nullable": true
+            },
+            "example": [
+              1,
+              2
+            ]
+          },
+          {
+            "name": "ids",
+            "in": "query",
+            "description": "Return pipelines with the specified IDs. Child pipelines are included when requested by ID.",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "integer"
+              },
+              "nullable": true
+            },
+            "example": [
+              1,
+              2
+            ]
           }
         ],
         "responses": {
@@ -107851,7 +108271,7 @@
           "Pipelines"
         ],
         "summary": "Delete a pipeline",
-        "description": "Deletes a specified pipeline for a project.",
+        "description": "Deletes a specified pipeline for a project. Deleting a pipeline expires all pipeline caches and deletes all immediately related objects, such as jobs, logs, artifacts, and triggers. This action cannot be undone. Child pipelines of the pipeline are not deleted. This endpoint requires the Owner role for the project.",
         "operationId": "DeleteApiV4ProjectsIdPipelinesPipelineId",
         "parameters": [
           {
@@ -107900,7 +108320,7 @@
           "Pipelines"
         ],
         "summary": "List all jobs by pipeline",
-        "description": "Lists all jobs for a specified pipeline.",
+        "description": "Lists all jobs for a specified pipeline, including a child pipeline. Retried jobs are not included by default. Jobs are sorted by ID in descending order.",
         "operationId": "GetApiV4ProjectsIdPipelinesPipelineIdJobs",
         "parameters": [
           {
@@ -107916,7 +108336,7 @@
           {
             "name": "pipelineId",
             "in": "path",
-            "description": "ID of the pipeline.",
+            "description": "ID of the pipeline. In a CI/CD job, the \u0060CI_PIPELINE_ID\u0060 predefined variable holds this value.",
             "required": true,
             "schema": {
               "type": "integer"
@@ -107935,7 +108355,7 @@
           {
             "name": "scope",
             "in": "query",
-            "description": "The scope of builds to show",
+            "description": "Scope of jobs to show. Accepts a single job status or an array of job statuses. If omitted, returns all jobs.",
             "schema": {
               "oneOf": [
                 {
@@ -108034,7 +108454,7 @@
           {
             "name": "scope",
             "in": "query",
-            "description": "The scope of builds to show",
+            "description": "Scope of jobs to show. Accepts a single job status or an array of job statuses. If omitted, returns all jobs.",
             "schema": {
               "oneOf": [
                 {
@@ -108108,7 +108528,7 @@
           "Pipelines"
         ],
         "summary": "List all trigger jobs by pipeline",
-        "description": "Lists all trigger jobs for a specified pipeline.",
+        "description": "Lists all trigger jobs for a specified pipeline. This feature was introduced in GitLab 19.2.",
         "operationId": "GetApiV4ProjectsIdPipelinesPipelineIdTriggerJobs",
         "parameters": [
           {
@@ -108134,7 +108554,7 @@
           {
             "name": "scope",
             "in": "query",
-            "description": "The scope of builds to show",
+            "description": "Scope of jobs to show. Accepts a single job status or an array of job statuses. If omitted, returns all jobs.",
             "schema": {
               "oneOf": [
                 {
@@ -108441,7 +108861,7 @@
           "Pipelines"
         ],
         "summary": "Retry jobs in a pipeline",
-        "description": "Retries failed or canceled jobs in a pipeline. If there are no failed or canceled jobs in the pipeline, calling this endpoint has no effect.",
+        "description": "Retries failed or canceled jobs in a pipeline. If there are no failed or canceled jobs in the pipeline, calling this endpoint has no effect. Only one retry of a pipeline runs at a time. If a retry of the same pipeline is in progress, returns \u0060409 Conflict\u0060. Wait for the retry to finish, then send the request again.",
         "operationId": "PostApiV4ProjectsIdPipelinesPipelineIdRetry",
         "parameters": [
           {
@@ -108514,7 +108934,7 @@
           "Pipelines"
         ],
         "summary": "Cancel all jobs for a pipeline",
-        "description": "Cancels all jobs in a specified pipeline.",
+        "description": "Cancels all jobs in a specified pipeline. If the pipeline cancellation rate limit is exceeded, returns \u0060429 Too Many Requests\u0060 with a \u0060Retry-After\u0060 header.",
         "operationId": "PostApiV4ProjectsIdPipelinesPipelineIdCancel",
         "parameters": [
           {
@@ -108871,13 +109291,13 @@
           "Runners"
         ],
         "summary": "List all available runners",
-        "description": "Lists all runners available to the user. For group runners, you must have the Owner role in the owner namespace.",
+        "description": "Lists all runners available to the user. For group runners, you must have the Owner role in the owner namespace. For project runners, you must have the Maintainer or Owner role in a project assigned to the runner. Requires a token with the \u0060api\u0060 or \u0060read_api\u0060 scope.",
         "operationId": "GetApiV4Runners",
         "parameters": [
           {
             "name": "scope",
             "in": "query",
-            "description": "Scope of runners to return. Deprecated. Use \u0060type\u0060 or \u0060status\u0060 instead.",
+            "description": "Scope of runners to return. If omitted, all runners are returned. Deprecated. Use \u0060type\u0060 or \u0060status\u0060 instead.",
             "schema": {
               "$ref": "#/components/schemas/GetApiV4RunnersScopeParameter"
             }
@@ -108902,7 +109322,7 @@
           {
             "name": "status",
             "in": "query",
-            "description": "Status of runners to return.",
+            "description": "Status of runners to return. The \u0060active\u0060 and \u0060paused\u0060 values are deprecated. Use the \u0060paused\u0060 parameter instead. Requesting \u0060offline\u0060 runners might also return \u0060stale\u0060 runners, because \u0060stale\u0060 is included in \u0060offline\u0060.",
             "schema": {
               "$ref": "#/components/schemas/GetApiV4RunnersStatusParameter"
             }
@@ -108980,7 +109400,7 @@
           "CI runners"
         ],
         "summary": "Create a runner",
-        "description": "Creates a runner.",
+        "description": "Creates a runner with a runner registration token. Runner registration tokens are deprecated and disabled by default in GitLab 17.0 and later. If registration with runner registration tokens is disabled in the instance, project, or group settings, returns \u0060410 Gone\u0060. Use \u0060POST /user/runners\u0060 to create runners instead.",
         "operationId": "PostApiV4Runners",
         "requestBody": {
           "content": {
@@ -109007,10 +109427,10 @@
             "description": "Bad Request"
           },
           "403": {
-            "description": "Forbidden"
+            "description": "Invalid runner registration token"
           },
           "410": {
-            "description": "Gone"
+            "description": "Runner registration disabled"
           },
           "200": {
             "description": "Created",
@@ -109030,7 +109450,7 @@
           "CI runners"
         ],
         "summary": "Delete a registered runner",
-        "description": "Deletes a specified registered runner.",
+        "description": "Deletes a registered runner by using its authentication token.",
         "operationId": "DeleteApiV4Runners",
         "parameters": [
           {
@@ -109069,7 +109489,7 @@
           {
             "name": "scope",
             "in": "query",
-            "description": "Scope of runners to return. Deprecated. Use \u0060type\u0060 or \u0060status\u0060 instead.",
+            "description": "Scope of runners to return. If omitted, all runners are returned. Deprecated. Use \u0060type\u0060 or \u0060status\u0060 instead.",
             "schema": {
               "$ref": "#/components/schemas/GetApiV4RunnersAllScopeParameter"
             }
@@ -109094,7 +109514,7 @@
           {
             "name": "status",
             "in": "query",
-            "description": "Status of runners to return.",
+            "description": "Status of runners to return. The \u0060active\u0060 and \u0060paused\u0060 values are deprecated. Use the \u0060paused\u0060 parameter instead. Requesting \u0060offline\u0060 runners might also return \u0060stale\u0060 runners, because \u0060stale\u0060 is included in \u0060offline\u0060.",
             "schema": {
               "$ref": "#/components/schemas/GetApiV4RunnersAllStatusParameter"
             }
@@ -109174,7 +109594,7 @@
           "Runners"
         ],
         "summary": "Retrieve details on a runner",
-        "description": "Retrieves details of a runner. Instance runner details are available to all authenticated users through this endpoint. For groups and projects, you must have the Maintainer or Owner role for the associated project or group.",
+        "description": "Retrieves details of a runner. Instance runner details are available to all authenticated users through this endpoint. For groups and projects, you must have the Maintainer or Owner role for the associated project or group. The Security Manager role in the associated project or group, or a custom role with the \u0060admin_runners\u0060 permission in the owner group or project, also grants access. Requires a token with the \u0060api\u0060, \u0060read_api\u0060, or \u0060manage_runner\u0060 scope.",
         "operationId": "GetApiV4RunnersId",
         "parameters": [
           {
@@ -109226,7 +109646,7 @@
           "Runners"
         ],
         "summary": "Update a runner",
-        "description": "Updates a specified runner.",
+        "description": "Updates a specified runner. For instance runners, you must be an administrator. For group runners, you must have the Owner role in the owner group. For project runners, you must have the Maintainer or Owner role in a project assigned to the runner. A custom role with the \u0060admin_runners\u0060 permission in the owner group or project also grants access. Requires a token with the \u0060api\u0060 or \u0060manage_runner\u0060 scope.",
         "operationId": "PutApiV4RunnersId",
         "parameters": [
           {
@@ -109278,7 +109698,7 @@
           "Runners"
         ],
         "summary": "Delete a runner",
-        "description": "Deletes a specified runner.",
+        "description": "Deletes a specified runner. For instance runners, you must be an administrator. For group runners, you must have the Owner role in the owner group. For project runners, you must have the Maintainer or Owner role in the project that owns the runner. A custom role with the \u0060admin_runners\u0060 permission in the owner group or project also grants access. Requires a token with the \u0060api\u0060 or \u0060manage_runner\u0060 scope.",
         "operationId": "DeleteApiV4RunnersId",
         "parameters": [
           {
@@ -109548,7 +109968,7 @@
           "Runners"
         ],
         "summary": "Reset an authentication token for a runner",
-        "description": "Resets the authentication token for a specified runner.",
+        "description": "Resets the authentication token for a specified runner. For instance runners, you must be an administrator. For group runners, you must have the Owner role in the owner group. For project runners, you must have the Maintainer or Owner role in a project assigned to the runner. A custom role with the \u0060admin_runners\u0060 permission in the owner group or project also grants access. Requires a token with the \u0060api\u0060 or \u0060manage_runner\u0060 scope.",
         "operationId": "PostApiV4RunnersIdResetAuthenticationToken",
         "parameters": [
           {
@@ -109605,7 +110025,7 @@
           "Projects"
         ],
         "summary": "List all runners for a project",
-        "description": "List all runners available in the project, including from ancestor groups and any allowed shared runners.",
+        "description": "Lists all runners available in the project, including from ancestor groups and any allowed instance runners. You must be an administrator of the GitLab instance or have at least the Maintainer or Auditor role for the target project.",
         "operationId": "GetApiV4ProjectsIdRunners",
         "parameters": [
           {
@@ -109627,7 +110047,7 @@
           {
             "name": "scope",
             "in": "query",
-            "description": "Scope of runners to return. Deprecated. Use \u0060type\u0060 or \u0060status\u0060 instead.",
+            "description": "Scope of runners to return. If omitted, all runners are returned. Deprecated. Use \u0060type\u0060 or \u0060status\u0060 instead.",
             "schema": {
               "$ref": "#/components/schemas/GetApiV4ProjectsIdRunnersScopeParameter"
             }
@@ -109652,7 +110072,7 @@
           {
             "name": "status",
             "in": "query",
-            "description": "Status of runners to return.",
+            "description": "Status of runners to return. The \u0060active\u0060 and \u0060paused\u0060 values are deprecated. Use the \u0060paused\u0060 parameter instead. Requesting \u0060offline\u0060 runners might also return \u0060stale\u0060 runners, because \u0060stale\u0060 is included in \u0060offline\u0060.",
             "schema": {
               "$ref": "#/components/schemas/GetApiV4ProjectsIdRunnersStatusParameter"
             }
@@ -109734,7 +110154,7 @@
           "Projects"
         ],
         "summary": "Assign a runner to a project",
-        "description": "Assigns an available project runner to a project.",
+        "description": "Assigns an available project runner to a project. You must have the Maintainer or Owner role in the target project and in a project assigned to the runner, or a custom role with the \u0060admin_runners\u0060 permission. Requires a token with the \u0060api\u0060 scope.",
         "operationId": "PostApiV4ProjectsIdRunners",
         "parameters": [
           {
@@ -109805,7 +110225,7 @@
           "Projects"
         ],
         "summary": "Unassign a runner from a project",
-        "description": "Unassigns a specified project runner from a project. You cannot unassign a runner from the owner project. Use the delete a runner operation instead.",
+        "description": "Unassigns a specified project runner from a project. You cannot unassign a runner from the owner project. Use the delete a runner operation instead. If the runner is locked, only administrators can unassign it. You must have the Maintainer or Owner role in the project, or a custom role with the \u0060admin_runners\u0060 permission. Requires a token with the \u0060api\u0060 scope.",
         "operationId": "DeleteApiV4ProjectsIdRunnersRunnerId",
         "parameters": [
           {
@@ -109867,7 +110287,7 @@
           "Groups"
         ],
         "summary": "List all runners in a group",
-        "description": "Lists all runners available in a specified group and any ancestor groups, including any allowed instance runners.",
+        "description": "Lists all runners available in a specified group and any ancestor groups, including any allowed instance runners. You must be an administrator or auditor, or have the Security Manager, Maintainer, or Owner role in the group, or a custom role with the \u0060admin_runners\u0060 permission in the group. Requires a token with the \u0060api\u0060 or \u0060read_api\u0060 scope.",
         "operationId": "GetApiV4GroupsIdRunners",
         "parameters": [
           {
@@ -109899,7 +110319,7 @@
           {
             "name": "status",
             "in": "query",
-            "description": "Status of runners to return.",
+            "description": "Status of runners to return. The \u0060active\u0060 and \u0060paused\u0060 values are deprecated. Use the \u0060paused\u0060 parameter instead. Requesting \u0060offline\u0060 runners might also return \u0060stale\u0060 runners, because \u0060stale\u0060 is included in \u0060offline\u0060.",
             "schema": {
               "$ref": "#/components/schemas/GetApiV4GroupsIdRunnersStatusParameter"
             }
@@ -109983,7 +110403,7 @@
           "Groups"
         ],
         "summary": "Reset the runner registration token for the instance",
-        "description": "Resets the runner registration token for the GitLab instance.",
+        "description": "Resets the runner registration token for the GitLab instance. Registering runners with a registration token is deprecated. Create runners with \u0060POST /user/runners\u0060 and use their authentication token instead.",
         "operationId": "PostApiV4RunnersResetRegistrationToken",
         "responses": {
           "201": {
@@ -110023,7 +110443,7 @@
           "Projects"
         ],
         "summary": "Reset the runner registration token for a project",
-        "description": "Resets the runner registration token for a specified project.",
+        "description": "Resets the runner registration token for a specified project. Registering runners with a registration token is deprecated. Create runners with \u0060POST /user/runners\u0060 and use their authentication token instead.",
         "operationId": "PostApiV4ProjectsIdRunnersResetRegistrationToken",
         "parameters": [
           {
@@ -110080,7 +110500,7 @@
           "Groups"
         ],
         "summary": "Reset the runner registration token for a group",
-        "description": "Resets the runner registration token for a specified group.",
+        "description": "Resets the runner registration token for a specified group. Registering runners with a registration token is deprecated. Create runners with \u0060POST /user/runners\u0060 and use their authentication token instead.",
         "operationId": "PostApiV4GroupsIdRunnersResetRegistrationToken",
         "parameters": [
           {
@@ -110206,7 +110626,7 @@
             }
           },
           "403": {
-            "description": "Forbidden"
+            "description": "Credentials are invalid"
           },
           "422": {
             "description": "Runner is orphaned"
@@ -110275,7 +110695,7 @@
           "CI runners"
         ],
         "summary": "Discover Job Router information",
-        "description": "Discovers Job Router information for a runner. You must provide a valid runner authentication token.",
+        "description": "Discovers Job Router information for a runner. You must provide a valid runner authentication token. This feature was introduced in GitLab 18.7.",
         "operationId": "GetApiV4RunnersRouterDiscovery",
         "responses": {
           "200": {
@@ -110292,7 +110712,7 @@
             "description": "403 Forbidden"
           },
           "501": {
-            "description": "501 Not Implemented"
+            "description": "Job Router is not available"
           }
         }
       }
@@ -110903,7 +111323,7 @@
           "CI resource groups"
         ],
         "summary": "Retrieve current job for a resource group",
-        "description": "Retrieves the current job for a specified resource group in a project.",
+        "description": "Retrieves the current job for a specified resource group in a project. This feature was introduced in GitLab 18.6.",
         "operationId": "GetApiV4ProjectsIdResourceGroupsKeyCurrentJob",
         "parameters": [
           {
@@ -111039,7 +111459,7 @@
           "CI jobs"
         ],
         "summary": "List all jobs for a project",
-        "description": "Lists all jobs for a specified project. By default, this request returns 20 results at a time because the API results are paginated.",
+        "description": "Lists all jobs for a specified project. By default, this request returns 20 results at a time because the API results are paginated. This endpoint supports offset-based and keyset-based pagination. Keyset-based pagination is recommended when requesting consecutive pages of results. Jobs are returned by ID in descending order.",
         "operationId": "GetApiV4ProjectsIdJobs",
         "parameters": [
           {
@@ -111285,7 +111705,7 @@
           "CI jobs"
         ],
         "summary": "Cancel a job",
-        "description": "Cancels a specified job in a project.",
+        "description": "Cancels a specified job in a project. If the job cancellation rate limit is exceeded, returns \u0060429 Too Many Requests\u0060 with a \u0060Retry-After\u0060 header.",
         "operationId": "PostApiV4ProjectsIdJobsJobIdCancel",
         "parameters": [
           {
@@ -111371,7 +111791,7 @@
           "CI jobs"
         ],
         "summary": "Retry a job",
-        "description": "Retries a specified job in a project.",
+        "description": "Retries a specified job in a project. Retries both CI/CD jobs and trigger jobs. If the job retry rate limit is exceeded, returns \u0060429 Too Many Requests\u0060 with a \u0060Retry-After\u0060 header.",
         "operationId": "PostApiV4ProjectsIdJobsJobIdRetry",
         "parameters": [
           {
@@ -111457,7 +111877,7 @@
           "CI jobs"
         ],
         "summary": "Erase a job",
-        "description": "Erases a specified job in a project. This removes job artifacts and the job log.",
+        "description": "Erases a specified job in a project. This removes job artifacts and the job log. If the job erasure rate limit is exceeded, returns \u0060429 Too Many Requests\u0060 with a \u0060Retry-After\u0060 header.",
         "operationId": "PostApiV4ProjectsIdJobsJobIdErase",
         "parameters": [
           {
@@ -111537,7 +111957,7 @@
           "CI jobs"
         ],
         "summary": "Run a job",
-        "description": "Runs a specified job. For a job in manual status, triggers an action to start the job.",
+        "description": "Runs a specified job. For a job in manual status, triggers an action to start the job. If the manual job run rate limit is exceeded, returns \u0060429 Too Many Requests\u0060 with a \u0060Retry-After\u0060 header.",
         "operationId": "PostApiV4ProjectsIdJobsJobIdPlay",
         "parameters": [
           {
@@ -111612,7 +112032,7 @@
           "CI jobs"
         ],
         "summary": "Retrieve a job by job token",
-        "description": "Retrieves a job that was generated by a specified job token.",
+        "description": "Retrieves a job that was generated by a specified job token. The request must run as part of the \u0060script\u0060 section of a CI/CD job.",
         "operationId": "GetApiV4Job",
         "responses": {
           "200": {
@@ -111643,7 +112063,7 @@
           "Agents"
         ],
         "summary": "List all GitLab agents for Kubernetes by job token",
-        "description": "Lists all GitLab agents for Kubernetes with a specified \u0060CI_JOB_TOKEN\u0060.",
+        "description": "Retrieves the job that generated the specified \u0060CI_JOB_TOKEN\u0060, along with a list of the GitLab agents for Kubernetes the job is allowed to access.",
         "operationId": "GetApiV4JobAllowedAgents",
         "responses": {
           "200": {
@@ -114421,7 +114841,7 @@
           "Job artifacts"
         ],
         "summary": "Retrieve job artifacts",
-        "description": "Retrieves the artifacts archive for the latest successful job on a specified branch or tag.",
+        "description": "Retrieves the artifacts archive for the latest successful job on a specified branch or tag. The latest successful pipeline is determined by its creation time. The start or end time of individual jobs does not affect which pipeline is the latest. When \u0060search_recent_successful_pipelines\u0060 is \u0060true\u0060, the search includes up to 100 recent successful pipelines for the ref. Otherwise, for parent and child pipelines, artifacts are searched in hierarchical order from parent to child. If both parent and child pipelines have a job with the same name, the artifact from the parent pipeline is returned. The pipeline must have completed with a \u0060success\u0060 status, so any manual jobs in it must either complete successfully or have \u0060allow_failure: true\u0060 set. On GitLab.com, the request might redirect through a CDN, so clients must follow redirects, for example with the cURL \u0060--location\u0060 option.",
         "operationId": "GetApiV4ProjectsIdJobsArtifactsRefNameDownload",
         "parameters": [
           {
@@ -114471,7 +114891,7 @@
           {
             "name": "search_recent_successful_pipelines",
             "in": "query",
-            "description": "If \u0060true\u0060, searches across recent successful pipelines instead of just the latest one. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/work_items/515864) in GitLab 18.7 [with a feature flag](https://docs.gitlab.com/administration/feature_flags/) named \u0060ci_search_recent_successful_pipelines\u0060. Disabled by default.",
+            "description": "If \u0060true\u0060, searches across recent successful pipelines instead of just the latest one. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/work_items/515864) in GitLab 18.7.",
             "schema": {
               "type": "boolean",
               "default": false
@@ -114518,7 +114938,7 @@
           "Job artifacts"
         ],
         "summary": "Download a specific file from artifacts archive from a ref",
-        "description": "This feature was introduced in GitLab 11.5",
+        "description": "Downloads a single file from the artifacts of the latest successful job on a specified branch or tag. The file is extracted from the archive and streamed to the client. When \u0060search_recent_successful_pipelines\u0060 is \u0060true\u0060, the search includes up to 100 recent successful pipelines for the ref. Otherwise, for parent and child pipelines, artifacts are searched in hierarchical order from parent to child. If both parent and child pipelines have a job with the same name, the artifact from the parent pipeline is returned. The pipeline must have completed with a \u0060success\u0060 status, so any manual jobs in it must either complete successfully or have \u0060allow_failure: true\u0060 set. On GitLab.com, the request might redirect through a CDN, so clients must follow redirects, for example with the cURL \u0060--location\u0060 option. This feature was introduced in GitLab 11.5",
         "operationId": "GetApiV4ProjectsIdJobsArtifactsRefNameRawArtifactPath",
         "parameters": [
           {
@@ -114577,7 +114997,7 @@
           {
             "name": "search_recent_successful_pipelines",
             "in": "query",
-            "description": "If \u0060true\u0060, searches across recent successful pipelines instead of just the latest one. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/work_items/515864) in GitLab 18.7 [with a feature flag](https://docs.gitlab.com/administration/feature_flags/) named \u0060ci_search_recent_successful_pipelines\u0060. Disabled by default.",
+            "description": "If \u0060true\u0060, searches across recent successful pipelines instead of just the latest one. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/work_items/515864) in GitLab 18.9.",
             "schema": {
               "type": "boolean",
               "default": false
@@ -114609,7 +115029,7 @@
           "Job artifacts"
         ],
         "summary": "Download an artifact from a job",
-        "description": "This feature was introduced in GitLab 8.5. The \u0060file_type\u0060 attribute was added in GitLab 19.4.",
+        "description": "Downloads the artifacts archive of a specified job. To download a specific report file, such as JUnit test results, use the \u0060file_type\u0060 attribute. On GitLab.com, the request might redirect through a CDN, so clients must follow redirects, for example with the cURL \u0060--location\u0060 option. This feature was introduced in GitLab 8.5. The \u0060file_type\u0060 attribute was added in GitLab 19.4.",
         "operationId": "GetApiV4ProjectsIdJobsJobIdArtifacts",
         "parameters": [
           {
@@ -114693,7 +115113,7 @@
           "Job artifacts"
         ],
         "summary": "Delete job artifacts",
-        "description": "Deletes job artifacts from a specified job in a project.",
+        "description": "Deletes job artifacts from a specified job in a project. This includes archived files, metadata, and report artifacts such as JUnit reports. The job log is not deleted. Artifacts cannot be recovered after deletion. You must have the Maintainer or Owner role for the project.",
         "operationId": "DeleteApiV4ProjectsIdJobsJobIdArtifacts",
         "parameters": [
           {
@@ -114750,7 +115170,7 @@
           "Job artifacts"
         ],
         "summary": "List all files in an artifacts archive",
-        "description": "Lists all files in a specified artifacts archive without extracting them.",
+        "description": "Lists all files and directories in a specified artifacts archive. It reads the artifact metadata without extracting the archive. This feature was introduced in GitLab 18.8.",
         "operationId": "GetApiV4ProjectsIdJobsJobIdArtifactsTree",
         "parameters": [
           {
@@ -114861,7 +115281,7 @@
           "Job artifacts"
         ],
         "summary": "Download a specific file from artifacts archive",
-        "description": "This feature was introduced in GitLab 10.0",
+        "description": "Downloads a single file from the artifacts of a specified job. The file is extracted from the archive and streamed to the client. On GitLab.com, the request might redirect through a CDN, so clients must follow redirects, for example with the cURL \u0060--location\u0060 option. This feature was introduced in GitLab 10.0",
         "operationId": "GetApiV4ProjectsIdJobsJobIdArtifactsArtifactPath",
         "parameters": [
           {
@@ -115005,7 +115425,7 @@
           "Job artifacts"
         ],
         "summary": "Delete all job artifacts in a project",
-        "description": "Deletes job artifacts from all jobs in a specified project.",
+        "description": "Deletes job artifacts that are eligible for deletion from all jobs in a specified project. By default, artifacts from the most recently completed pipeline and the most recent successful pipeline for each ref are kept, regardless of expiration. The request sets the expiry of all deletable job artifacts to the current time. The files are then deleted by the regular cleanup of expired job artifacts, which runs asynchronously on a schedule, so deletion might take a short time. Job logs are never deleted. Artifacts cannot be recovered after deletion. You must have the Maintainer or Owner role for the project.",
         "operationId": "DeleteApiV4ProjectsIdArtifacts",
         "parameters": [
           {
@@ -125398,46 +125818,56 @@
         "properties": {
           "id": {
             "type": "integer",
+            "description": "ID of the pipeline.",
             "format": "int64",
             "example": 1
           },
           "iid": {
             "type": "integer",
+            "description": "Internal ID of the pipeline.",
             "example": 2
           },
           "project_id": {
             "type": "integer",
+            "description": "ID of the project of the pipeline.",
             "format": "int64",
             "example": 3
           },
           "sha": {
             "type": "string",
+            "description": "SHA of the commit the pipeline runs for.",
             "example": "0ec9e58fdfca6cdd6652c083c9edb53abc0bad52"
           },
           "ref": {
             "type": "string",
+            "description": "Git reference of the pipeline.",
             "example": "feature-branch"
           },
           "status": {
             "type": "string",
+            "description": "Status of the pipeline.",
             "example": "success"
           },
           "source": {
             "type": "string",
+            "description": "Source that triggered the pipeline.",
             "example": "push"
           },
           "created_at": {
             "type": "string",
+            "description": "Timestamp when the pipeline was created.",
             "format": "date-time",
             "example": "2022-10-21T16:49:48.000\u002B02:00"
           },
           "updated_at": {
             "type": "string",
+            "description": "Timestamp when the pipeline was last updated.",
             "format": "date-time",
             "example": "2022-10-21T16:49:48.000\u002B02:00"
           },
           "web_url": {
             "type": "string",
+            "description": "URL of the pipeline in the GitLab UI.",
             "example": "https://gitlab.example.com/gitlab-org/gitlab-foss/-/pipelines/61"
           }
         }
@@ -129751,6 +130181,7 @@
             "items": {
               "type": "string"
             },
+            "description": "Context keys the experiment declares: \u0060user\u0060, \u0060namespace\u0060, \u0060project\u0060, or \u0060actor\u0060. Empty when the experiment declares no context keys. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/248274) in GitLab 19.3.",
             "example": [
               "user"
             ]
@@ -130725,32 +131156,39 @@
         "properties": {
           "id": {
             "type": "integer",
+            "description": "ID of the pipeline.",
             "format": "int64",
             "example": 1
           },
           "iid": {
             "type": "integer",
+            "description": "Internal ID of the pipeline.",
             "example": 2
           },
           "project_id": {
             "type": "integer",
+            "description": "ID of the project of the pipeline.",
             "format": "int64",
             "example": 3
           },
           "sha": {
             "type": "string",
+            "description": "SHA of the commit the pipeline runs for.",
             "example": "0ec9e58fdfca6cdd6652c083c9edb53abc0bad52"
           },
           "ref": {
             "type": "string",
+            "description": "Git reference of the pipeline.",
             "example": "feature-branch"
           },
           "status": {
             "type": "string",
+            "description": "Status of the pipeline.",
             "example": "success"
           },
           "source": {
             "type": "string",
+            "description": "Source that triggered the pipeline.",
             "example": "push"
           },
           "created_at": {
@@ -130765,6 +131203,7 @@
           },
           "web_url": {
             "type": "string",
+            "description": "URL of the pipeline in the GitLab UI.",
             "example": "https://gitlab.example.com/gitlab-org/gitlab-foss/-/pipelines/61"
           },
           "before_sha": {
@@ -131356,28 +131795,34 @@
         "properties": {
           "id": {
             "type": "integer",
+            "description": "ID of the runner controller token.",
             "format": "int64",
             "example": 1
           },
           "runner_controller_id": {
             "type": "integer",
+            "description": "ID of the associated runner controller.",
             "format": "int64",
             "example": 1
           },
           "description": {
             "type": "string",
+            "description": "Description of the token.",
             "example": "Controller for managing runner"
           },
           "last_used_at": {
             "type": "string",
+            "description": "Date and time when the token was last used.",
             "format": "date-time"
           },
           "created_at": {
             "type": "string",
+            "description": "Date and time when the token was created.",
             "format": "date-time"
           },
           "updated_at": {
             "type": "string",
+            "description": "Date and time when the token was last updated.",
             "format": "date-time"
           }
         }
@@ -131387,32 +131832,39 @@
         "properties": {
           "id": {
             "type": "integer",
+            "description": "ID of the runner controller token.",
             "format": "int64",
             "example": 1
           },
           "runner_controller_id": {
             "type": "integer",
+            "description": "ID of the associated runner controller.",
             "format": "int64",
             "example": 1
           },
           "description": {
             "type": "string",
+            "description": "Description of the token.",
             "example": "Controller for managing runner"
           },
           "last_used_at": {
             "type": "string",
+            "description": "Date and time when the token was last used.",
             "format": "date-time"
           },
           "created_at": {
             "type": "string",
+            "description": "Date and time when the token was created.",
             "format": "date-time"
           },
           "updated_at": {
             "type": "string",
+            "description": "Date and time when the token was last updated.",
             "format": "date-time"
           },
           "token": {
-            "type": "string"
+            "type": "string",
+            "description": "Token value used for authentication."
           }
         }
       },
@@ -131421,10 +131873,12 @@
         "properties": {
           "created_at": {
             "type": "string",
+            "description": "Date and time when the scope was created.",
             "format": "date-time"
           },
           "updated_at": {
             "type": "string",
+            "description": "Date and time when the scope was last updated.",
             "format": "date-time"
           }
         }
@@ -131434,14 +131888,17 @@
         "properties": {
           "runner_id": {
             "type": "integer",
+            "description": "ID of the runner.",
             "format": "int64"
           },
           "created_at": {
             "type": "string",
+            "description": "Date and time when the scope was created.",
             "format": "date-time"
           },
           "updated_at": {
             "type": "string",
+            "description": "Date and time when the scope was last updated.",
             "format": "date-time"
           }
         }
@@ -131451,23 +131908,28 @@
         "properties": {
           "id": {
             "type": "integer",
+            "description": "ID of the runner controller.",
             "format": "int64",
             "example": 1
           },
           "description": {
             "type": "string",
+            "description": "Description of the runner controller.",
             "example": "Controller for managing runner"
           },
           "state": {
             "type": "string",
+            "description": "State of the runner controller. Possible values: \u0060disabled\u0060 (default), \u0060enabled\u0060, or \u0060dry_run\u0060.",
             "example": "enabled"
           },
           "created_at": {
             "type": "string",
+            "description": "Date and time when the runner controller was created.",
             "format": "date-time"
           },
           "updated_at": {
             "type": "string",
+            "description": "Date and time when the runner controller was last updated.",
             "format": "date-time"
           }
         }
@@ -131477,27 +131939,33 @@
         "properties": {
           "id": {
             "type": "integer",
+            "description": "ID of the runner controller.",
             "format": "int64",
             "example": 1
           },
           "description": {
             "type": "string",
+            "description": "Description of the runner controller.",
             "example": "Controller for managing runner"
           },
           "state": {
             "type": "string",
+            "description": "State of the runner controller. Possible values: \u0060disabled\u0060 (default), \u0060enabled\u0060, or \u0060dry_run\u0060.",
             "example": "enabled"
           },
           "created_at": {
             "type": "string",
+            "description": "Date and time when the runner controller was created.",
             "format": "date-time"
           },
           "updated_at": {
             "type": "string",
+            "description": "Date and time when the runner controller was last updated.",
             "format": "date-time"
           },
           "connected": {
             "type": "boolean",
+            "description": "If \u0060true\u0060, the runner controller is connected. A runner controller is connected when it has used at least one of its active tokens within the last hour.",
             "example": true
           }
         }
@@ -134851,6 +135319,15 @@
           "draft_notes_create_limit": {
             "type": "string"
           },
+          "markdown_upload_limit_megabytes_per_day": {
+            "type": "string"
+          },
+          "pages_domain_create_limit": {
+            "type": "string"
+          },
+          "pages_domain_verify_limit": {
+            "type": "string"
+          },
           "members_delete_limit": {
             "type": "string"
           },
@@ -135193,6 +135670,9 @@
           "merge_request_diffs_page_request_limit": {
             "type": "string"
           },
+          "merge_request_diff_resources_request_limit": {
+            "type": "string"
+          },
           "work_item_hierarchy_add_children_limit": {
             "type": "string"
           },
@@ -135203,6 +135683,9 @@
             "type": "string"
           },
           "github_gists_import_limit": {
+            "type": "string"
+          },
+          "ipv6_rate_limit_prefix_length": {
             "type": "string"
           },
           "gitlab_dedicated_instance": {
@@ -135230,6 +135713,12 @@
             "type": "string"
           },
           "release_evidence_max_size_bytes": {
+            "type": "string"
+          },
+          "ci_stale_runner_managers_cleanup_deletions_per_run": {
+            "type": "string"
+          },
+          "ci_stale_runner_managers_cleanup_backlog_limit": {
             "type": "string"
           },
           "allow_account_deletion": {
@@ -137088,6 +137577,39 @@
             "type": "boolean",
             "description": "Whether an HMAC signing token is configured. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/231325) in GitLab 19.0.",
             "example": false
+          }
+        }
+      },
+      "ApiEntitiesSupplyChainSigningCertificate": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "ID of the signing certificate",
+            "format": "int64",
+            "example": 1
+          },
+          "certificate": {
+            "type": "string",
+            "description": "PEM-encoded certificate authority (CA) certificate, which contains the CA public key",
+            "example": "-----BEGIN CERTIFICATE-----\nMIIBszCCAVqgAwIBAgIUJ...\n-----END CERTIFICATE-----\n"
+          },
+          "active": {
+            "type": "boolean",
+            "description": "If true, GitLab uses this CA to issue certificates for new attestations",
+            "example": true
+          },
+          "expires_at": {
+            "type": "string",
+            "description": "Date and time the certificate expires",
+            "format": "date-time",
+            "example": "2036-10-22T07:08:25.000Z"
+          },
+          "created_at": {
+            "type": "string",
+            "description": "Date and time the certificate was created",
+            "format": "date-time",
+            "example": "2026-10-22T07:08:25.643Z"
           }
         }
       },
@@ -141103,46 +141625,56 @@
         "properties": {
           "id": {
             "type": "integer",
+            "description": "ID of the pipeline.",
             "format": "int64",
             "example": 1
           },
           "iid": {
             "type": "integer",
+            "description": "Internal ID of the pipeline.",
             "example": 2
           },
           "project_id": {
             "type": "integer",
+            "description": "ID of the project of the pipeline.",
             "format": "int64",
             "example": 3
           },
           "sha": {
             "type": "string",
+            "description": "SHA of the commit the pipeline runs for.",
             "example": "0ec9e58fdfca6cdd6652c083c9edb53abc0bad52"
           },
           "ref": {
             "type": "string",
+            "description": "Git reference of the pipeline.",
             "example": "feature-branch"
           },
           "status": {
             "type": "string",
+            "description": "Status of the pipeline.",
             "example": "success"
           },
           "source": {
             "type": "string",
+            "description": "Source that triggered the pipeline.",
             "example": "push"
           },
           "created_at": {
             "type": "string",
+            "description": "Timestamp when the pipeline was created.",
             "format": "date-time",
             "example": "2022-10-21T16:49:48.000\u002B02:00"
           },
           "updated_at": {
             "type": "string",
+            "description": "Timestamp when the pipeline was last updated.",
             "format": "date-time",
             "example": "2022-10-21T16:49:48.000\u002B02:00"
           },
           "web_url": {
             "type": "string",
+            "description": "URL of the pipeline in the GitLab UI.",
             "example": "https://gitlab.example.com/gitlab-org/gitlab-foss/-/pipelines/61"
           },
           "user": {
@@ -142758,14 +143290,17 @@
         "properties": {
           "total_minutes_used": {
             "type": "integer",
+            "description": "Total compute minutes used in the current billing period.",
             "example": 105
           },
           "monthly_minutes_used": {
             "type": "integer",
+            "description": "Compute minutes used from the monthly quota.",
             "example": 100
           },
           "purchased_minutes_used": {
             "type": "integer",
+            "description": "Compute minutes used from additional purchased allocations.",
             "example": 5
           }
         }
@@ -142832,6 +143367,7 @@
           },
           "shared_runners_minutes_limit": {
             "type": "integer",
+            "description": "Monthly compute minutes quota allocated to the namespace. Returned only on GitLab.com, for administrators.",
             "example": 133
           },
           "ci_minutes_usage": {
@@ -142839,6 +143375,7 @@
           },
           "extra_shared_runners_minutes_limit": {
             "type": "integer",
+            "description": "Additional compute minutes added on top of the monthly quota, from purchased minute packs. Returned only on GitLab.com, for administrators.",
             "example": 133
           },
           "additional_purchased_storage_size": {
@@ -142852,37 +143389,45 @@
           },
           "billable_members_count": {
             "type": "integer",
+            "description": "Number of billable members in the namespace. \u0060null\u0060 unless the user has the Owner role, is an auditor, or is an administrator.",
             "example": 2
           },
           "seats_in_use": {
             "type": "integer",
+            "description": "Number of seats currently in use. Returned only for namespaces with a subscription. \u0060null\u0060 unless the user has the Owner role, is an auditor, or is an administrator.",
             "example": 5
           },
           "max_seats_used": {
             "type": "integer",
+            "description": "Maximum number of seats used during the current subscription period. Returned only for namespaces with a subscription. \u0060null\u0060 unless the user has the Owner role, is an auditor, or is an administrator.",
             "example": 100
           },
           "max_seats_used_changed_at": {
             "type": "string",
-            "format": "date",
-            "example": "2022-06-18"
+            "description": "Timestamp of when \u0060max_seats_used\u0060 last changed. Returned only for namespaces with a subscription. \u0060null\u0060 unless the user has the Owner role, is an auditor, or is an administrator.",
+            "format": "date-time",
+            "example": "2025-05-15T12:00:02.000Z"
           },
           "end_date": {
             "type": "string",
+            "description": "End date of the current subscription. Returned only for namespaces with a subscription. \u0060null\u0060 if not applicable, or unless the user has the Owner role, is an auditor, or is an administrator.",
             "format": "date",
             "example": "2022-06-18"
           },
           "plan": {
             "type": "string",
+            "description": "Subscription plan of the namespace, for example \u0060free\u0060 or \u0060ultimate\u0060. Returned only when the user has the Owner role or is an administrator.",
             "example": "default"
           },
           "trial_ends_on": {
             "type": "string",
+            "description": "Date the trial ends. \u0060null\u0060 if not on a trial. Returned only when the user has the Owner role or is an administrator.",
             "format": "date",
             "example": "2022-06-18"
           },
           "trial": {
-            "type": "boolean"
+            "type": "boolean",
+            "description": "If \u0060true\u0060, the namespace is on a trial plan. Returned only when the user has the Owner role or is an administrator."
           }
         }
       },
@@ -144908,14 +145453,17 @@
         "properties": {
           "variable_type": {
             "type": "string",
+            "description": "Type of the variable. Either \u0060env_var\u0060 or \u0060file\u0060.",
             "example": "env_var"
           },
           "key": {
             "type": "string",
+            "description": "Key of the variable.",
             "example": "TEST_VARIABLE_1"
           },
           "value": {
             "type": "string",
+            "description": "Value of the variable.",
             "example": "TEST_1"
           },
           "hidden": {
@@ -144928,7 +145476,8 @@
             "type": "boolean"
           },
           "raw": {
-            "type": "boolean"
+            "type": "boolean",
+            "description": "Whether the variable is treated as a raw string. When \u0060false\u0060, variable references in the value are expanded."
           },
           "environment_scope": {
             "type": "string",
@@ -145418,10 +145967,12 @@
           },
           "ip_address": {
             "type": "string",
+            "description": "Always \u0060null\u0060. Deprecated. Use the runner manager fields in the GraphQL API instead.",
             "example": "127.0.0.1"
           },
           "active": {
             "type": "boolean",
+            "description": "If \u0060true\u0060, the runner is allowed to receive jobs. Deprecated. Use \u0060paused\u0060 instead.",
             "example": true
           },
           "paused": {
@@ -146521,46 +147072,56 @@
         "properties": {
           "id": {
             "type": "integer",
+            "description": "ID of the pipeline.",
             "format": "int64",
             "example": 1
           },
           "iid": {
             "type": "integer",
+            "description": "Internal ID of the pipeline.",
             "example": 2
           },
           "project_id": {
             "type": "integer",
+            "description": "ID of the project of the pipeline.",
             "format": "int64",
             "example": 3
           },
           "sha": {
             "type": "string",
+            "description": "SHA of the commit the pipeline runs for.",
             "example": "0ec9e58fdfca6cdd6652c083c9edb53abc0bad52"
           },
           "ref": {
             "type": "string",
+            "description": "Git reference of the pipeline.",
             "example": "feature-branch"
           },
           "status": {
             "type": "string",
+            "description": "Status of the pipeline.",
             "example": "success"
           },
           "source": {
             "type": "string",
+            "description": "Source that triggered the pipeline.",
             "example": "push"
           },
           "created_at": {
             "type": "string",
+            "description": "Timestamp when the pipeline was created.",
             "format": "date-time",
             "example": "2022-10-21T16:49:48.000\u002B02:00"
           },
           "updated_at": {
             "type": "string",
+            "description": "Timestamp when the pipeline was last updated.",
             "format": "date-time",
             "example": "2022-10-21T16:49:48.000\u002B02:00"
           },
           "web_url": {
             "type": "string",
+            "description": "URL of the pipeline in the GitLab UI.",
             "example": "https://gitlab.example.com/gitlab-org/gitlab-foss/-/pipelines/61"
           },
           "name": {
@@ -146731,32 +147292,39 @@
         "properties": {
           "id": {
             "type": "integer",
+            "description": "ID of the pipeline.",
             "format": "int64",
             "example": 1
           },
           "iid": {
             "type": "integer",
+            "description": "Internal ID of the pipeline.",
             "example": 2
           },
           "project_id": {
             "type": "integer",
+            "description": "ID of the project of the pipeline.",
             "format": "int64",
             "example": 3
           },
           "sha": {
             "type": "string",
+            "description": "SHA of the commit the pipeline runs for.",
             "example": "0ec9e58fdfca6cdd6652c083c9edb53abc0bad52"
           },
           "ref": {
             "type": "string",
+            "description": "Git reference of the pipeline.",
             "example": "feature-branch"
           },
           "status": {
             "type": "string",
+            "description": "Status of the pipeline.",
             "example": "success"
           },
           "source": {
             "type": "string",
+            "description": "Source that triggered the pipeline.",
             "example": "push"
           },
           "created_at": {
@@ -146771,6 +147339,7 @@
           },
           "web_url": {
             "type": "string",
+            "description": "URL of the pipeline in the GitLab UI.",
             "example": "https://gitlab.example.com/gitlab-org/gitlab-foss/-/pipelines/61"
           },
           "before_sha": {
@@ -147158,10 +147727,12 @@
           },
           "ip_address": {
             "type": "string",
+            "description": "Always \u0060null\u0060. Deprecated. Use the runner manager fields in the GraphQL API instead.",
             "example": "127.0.0.1"
           },
           "active": {
             "type": "boolean",
+            "description": "If \u0060true\u0060, the runner is allowed to receive jobs. Deprecated. Use \u0060paused\u0060 instead.",
             "example": true
           },
           "paused": {
@@ -147200,6 +147771,7 @@
           },
           "uuid": {
             "type": "string",
+            "description": "UUID of the runner. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/266813) in GitLab 19.6.",
             "example": "01966aa0-f383-7a6b-b694-cd4f2f96cca1"
           }
         }
@@ -147218,10 +147790,12 @@
           },
           "ip_address": {
             "type": "string",
+            "description": "Always \u0060null\u0060. Deprecated. Use the runner manager fields in the GraphQL API instead.",
             "example": "127.0.0.1"
           },
           "active": {
             "type": "boolean",
+            "description": "If \u0060true\u0060, the runner is allowed to receive jobs. Deprecated. Use \u0060paused\u0060 instead.",
             "example": true
           },
           "paused": {
@@ -147260,6 +147834,7 @@
           },
           "uuid": {
             "type": "string",
+            "description": "UUID of the runner. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/266813) in GitLab 19.6.",
             "example": "01966aa0-f383-7a6b-b694-cd4f2f96cca1"
           },
           "tag_list": {
@@ -147279,20 +147854,25 @@
           },
           "token_expires_at": {
             "type": "string",
+            "description": "Expiry time of the runner authentication token. \u0060null\u0060 if the token does not expire. Returned only to users who can view sensitive runner data. For instance runners, only administrators.",
             "format": "date-time",
             "example": "2025-01-01T00:00:00.000Z"
           },
           "version": {
-            "type": "string"
+            "type": "string",
+            "description": "Version of the runner, from its most recently contacted runner manager. Deprecated. Use the runner manager fields in the GraphQL API instead."
           },
           "revision": {
-            "type": "string"
+            "type": "string",
+            "description": "Revision of the runner, from its most recently contacted runner manager. Deprecated. Use the runner manager fields in the GraphQL API instead."
           },
           "platform": {
-            "type": "string"
+            "type": "string",
+            "description": "Platform of the runner, from its most recently contacted runner manager. Deprecated. Use the runner manager fields in the GraphQL API instead."
           },
           "architecture": {
-            "type": "string"
+            "type": "string",
+            "description": "Architecture of the runner, from its most recently contacted runner manager. Deprecated. Use the runner manager fields in the GraphQL API instead."
           },
           "contacted_at": {
             "type": "string"
@@ -147422,6 +148002,7 @@
         "properties": {
           "server_url": {
             "type": "string",
+            "description": "URL of the Job Router.",
             "example": "wss://kas.example.com"
           }
         }
@@ -147971,6 +148552,10 @@
             "type": "boolean",
             "example": false
           },
+          "duo_workflow_file_attachments_enabled": {
+            "type": "boolean",
+            "example": false
+          },
           "include_recommended_allowed": {
             "type": "boolean",
             "example": false
@@ -148339,10 +148924,12 @@
         "properties": {
           "name": {
             "type": "string",
+            "description": "Name of the file or directory.",
             "example": "index.html"
           },
           "path": {
             "type": "string",
+            "description": "Full path in the artifacts archive. Directories end with a slash.",
             "example": "coverage/index.html"
           },
           "type": {
@@ -148350,10 +148937,12 @@
           },
           "size": {
             "type": "integer",
+            "description": "File size in bytes. Returned only for files.",
             "example": 12345
           },
           "mode": {
             "type": "string",
+            "description": "Unix file mode in octal format, such as \u0060100644\u0060 for a file or \u0060040755\u0060 for a directory.",
             "example": "100644"
           }
         }
@@ -149351,6 +149940,11 @@
             "type": "integer",
             "description": "Requested token lifetime in seconds. The granted lifetime may be shorter than requested depending on the authentication method used to call this endpoint or the audience.",
             "default": 300
+          },
+          "organization_id": {
+            "type": "integer",
+            "description": "ID of the organization to mint the token for. Required for Artifact Registry when the caller belongs to more than one.",
+            "nullable": true
           }
         }
       },
@@ -155726,6 +156320,16 @@
             "description": "URL of the Observability provisioner API. GitLab.com only.",
             "nullable": true
           },
+          "pages_domain_create_limit": {
+            "type": "integer",
+            "description": "Maximum number of Pages custom domains each user can create per day. Default: \u006020\u0060. Set to \u00600\u0060 to disable the rate limit. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/work_items/635642) in GitLab 19.6.",
+            "nullable": true
+          },
+          "pages_domain_verify_limit": {
+            "type": "integer",
+            "description": "Maximum number of Pages custom domain verification requests per minute for each user. Default: \u00605\u0060. Set to \u00600\u0060 to disable the rate limit. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/work_items/635642) in GitLab 19.6.",
+            "nullable": true
+          },
           "password_authentication_enabled": {
             "type": "boolean",
             "description": "Flag indicating if password authentication is enabled for the web interface. Mutually exclusive with \u0060password_authentication_enabled_for_web\u0060, \u0060signin_enabled\u0060.",
@@ -156224,6 +156828,16 @@
           "ci_runner_manager_creation_ceiling": {
             "type": "integer",
             "description": "Number of runner managers for each runner at which the runner cannot create new runner managers. Existing runner managers continue to work. Applies only when the \u0060log_runner_manager_cap\u0060 or \u0060enforce_runner_manager_ceiling\u0060 feature flag is enabled. Default: \u0060150000\u0060. To disable the limit, set to \u00600\u0060.",
+            "nullable": true
+          },
+          "ci_stale_runner_managers_cleanup_deletions_per_run": {
+            "type": "integer",
+            "description": "Maximum number of stale runner managers deleted by each run of the stale runner manager cleanup. Applies only when the \u0060stale_runner_manager_cleanup_by_partition\u0060 feature flag is enabled. Default: \u0060500\u0060.",
+            "nullable": true
+          },
+          "ci_stale_runner_managers_cleanup_backlog_limit": {
+            "type": "integer",
+            "description": "Number of deleted runner manager records still waiting for background cleanup, above which the stale runner manager cleanup stops deleting. If higher than \u0060ci_runner_manager_cap_cleanup_backlog_limit\u0060, that value is used instead. Applies only when the \u0060stale_runner_manager_cleanup_by_partition\u0060 feature flag is enabled. Default: \u00605000\u0060.",
             "nullable": true
           },
           "ci_lint_api_require_authentication": {
@@ -158151,6 +158765,10 @@
             "type": "string",
             "nullable": true
           },
+          "markdown_upload_limit_megabytes_per_day": {
+            "type": "string",
+            "nullable": true
+          },
           "members_delete_limit": {
             "type": "string",
             "nullable": true
@@ -158371,6 +158989,10 @@
             "type": "string",
             "nullable": true
           },
+          "merge_request_diff_resources_request_limit": {
+            "type": "string",
+            "nullable": true
+          },
           "work_item_hierarchy_add_children_limit": {
             "type": "string",
             "nullable": true
@@ -158380,6 +159002,10 @@
             "nullable": true
           },
           "work_item_update_limit": {
+            "type": "string",
+            "nullable": true
+          },
+          "ipv6_rate_limit_prefix_length": {
             "type": "string",
             "nullable": true
           },
@@ -175644,6 +176270,53 @@
           }
         }
       },
+      "PostApiV4GroupsIdApplicationsRequest": {
+        "required": [
+          "name",
+          "redirect_uri",
+          "scopes"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name of the application.",
+            "nullable": true,
+            "example": "MyApplication"
+          },
+          "redirect_uri": {
+            "type": "string",
+            "description": "Redirect URI of the application.",
+            "nullable": true,
+            "example": "https://redirect.uri"
+          },
+          "scopes": {
+            "type": "string",
+            "description": "Scopes available to the application. Separate multiple scopes with a space.",
+            "nullable": true
+          },
+          "confidential": {
+            "type": "boolean",
+            "description": "If \u0060true\u0060, the application can securely store client credentials, such as the client secret. Non-confidential applications, such as native mobile apps and Single Page Apps might expose client credentials. If unset, defaults to \u0060true\u0060.",
+            "default": true
+          }
+        }
+      },
+      "PutApiV4GroupsIdApplicationsApplicationIdRequest": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name of the application.",
+            "nullable": true
+          },
+          "scopes": {
+            "type": "string",
+            "description": "Scopes available to the application. Separate multiple scopes with a space.",
+            "nullable": true
+          }
+        }
+      },
       "PostApiV4GeoStatusRequest": {
         "type": "object",
         "properties": {
@@ -176658,13 +177331,13 @@
           },
           "name": {
             "type": "string",
-            "description": "String label to differentiate this status from the status of other systems.",
+            "description": "String label to differentiate this status from the status of other systems. Default is \u0060default\u0060.",
             "nullable": true,
             "example": "coverage"
           },
           "context": {
             "type": "string",
-            "description": "String label to differentiate this status from the status of other systems.",
+            "description": "String label to differentiate this status from the status of other systems. Default is \u0060default\u0060.",
             "nullable": true,
             "example": "coverage"
           },
@@ -176834,17 +177507,17 @@
           },
           "protected": {
             "type": "boolean",
-            "description": "If \u0060true\u0060, the variable is protected.",
+            "description": "If \u0060true\u0060, the variable is protected. Default is \u0060false\u0060.",
             "nullable": true
           },
           "masked": {
             "type": "boolean",
-            "description": "If \u0060true\u0060, the variable is masked.",
+            "description": "If \u0060true\u0060, the variable is masked. Default is \u0060false\u0060.",
             "nullable": true
           },
           "masked_and_hidden": {
             "type": "boolean",
-            "description": "If \u0060true\u0060, the variable is masked and hidden. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/29674) in GitLab 17.4.",
+            "description": "If \u0060true\u0060, the variable is masked and hidden. Default is \u0060false\u0060. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/29674) in GitLab 17.4.",
             "nullable": true
           },
           "raw": {
@@ -176862,7 +177535,7 @@
           },
           "description": {
             "type": "string",
-            "description": "Description of the variable. Limited to 255 characters.",
+            "description": "Description of the variable. Limited to 255 characters. Default is \u0060null\u0060.",
             "nullable": true
           }
         }
@@ -177022,7 +177695,7 @@
             "items": {
               "$ref": "#/components/schemas/PostApiV4ProjectsIdPipelineSchedulesRequestInputsItem"
             },
-            "description": "Array of inputs to pass to the pipeline schedule. Each input has a \u0060name\u0060 and a \u0060value\u0060, which can be a string, array, number, or boolean. To delete an existing input, include the \u0060name\u0060 field and set \u0060destroy\u0060 to \u0060true\u0060.",
+            "description": "Array of inputs to pass to the pipeline schedule. Each input has a \u0060name\u0060 and a \u0060value\u0060, which can be a string, array, number, or boolean. To delete an existing input, include the \u0060name\u0060 field and set \u0060destroy\u0060 to \u0060true\u0060. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/525504) in GitLab 17.11.",
             "nullable": true
           }
         }
@@ -177116,7 +177789,7 @@
         "properties": {
           "ref": {
             "type": "string",
-            "description": "Reference",
+            "description": "Branch or tag to run the pipeline on. For merge request pipelines, use the merge request pipelines endpoint.",
             "nullable": true,
             "example": "develop"
           },
@@ -177125,7 +177798,7 @@
             "items": {
               "$ref": "#/components/schemas/PostApiV4ProjectsIdPipelineRequestVariablesItem"
             },
-            "description": "Array of variables to make available in the pipeline. If \u0060variable_type\u0060 is omitted, it defaults to \u0060env_var\u0060.",
+            "description": "Array of variables to make available in the pipeline. Each variable is a hash with \u0060key\u0060, \u0060value\u0060, and \u0060variable_type\u0060. If \u0060variable_type\u0060 is omitted, it defaults to \u0060env_var\u0060.",
             "nullable": true
           },
           "inputs": {
@@ -177161,7 +177834,7 @@
           },
           "file": {
             "type": "string",
-            "description": "The secure file being uploaded",
+            "description": "The secure file being uploaded. Maximum size is 5 MB.",
             "format": "binary",
             "nullable": true
           }
@@ -184251,7 +184924,7 @@
             "nullable": true
           }
         },
-        "description": "Filter results when multiple variables share the same key.",
+        "description": "Filter results when multiple variables share the same key. Supports \u0060filter[environment_scope]\u0060.",
         "nullable": true
       },
       "PostApiV4ProjectsIdPipelineSchedulesRequestInputsItem": {
@@ -184344,7 +185017,7 @@
             "nullable": true
           }
         },
-        "description": "Runner\u0027s metadata",
+        "description": "Runner\u0027s metadata. Accepts the keys \u0060name\u0060, \u0060version\u0060, \u0060revision\u0060, \u0060platform\u0060, and \u0060architecture\u0060.",
         "nullable": true
       },
       "PostApiV4JobsRequestRequestInfo": {
@@ -184538,6 +185211,11 @@
             "description": "Allow web search in GitLab Duo Chat for this top-level group. Can only be set on top-level groups.",
             "nullable": true
           },
+          "duo_workflow_file_attachments_enabled": {
+            "type": "boolean",
+            "description": "Allow file attachments in GitLab Duo Chat for this top-level group. Can only be set on top-level groups. GitLab.com only.",
+            "nullable": true
+          },
           "foundational_agents_default_enabled": {
             "type": "boolean",
             "description": "Whether new foundational agents are enabled by default",
@@ -184665,6 +185343,11 @@
           "web_search_enabled": {
             "type": "boolean",
             "description": "Allow web search in GitLab Duo Chat for this top-level group. Can only be set on top-level groups.",
+            "nullable": true
+          },
+          "duo_workflow_file_attachments_enabled": {
+            "type": "boolean",
+            "description": "Allow file attachments in GitLab Duo Chat for this top-level group. Can only be set on top-level groups. GitLab.com only.",
             "nullable": true
           },
           "foundational_agents_default_enabled": {
@@ -187335,6 +188018,12 @@
           "$ref": "#/components/schemas/ApiEntitiesHook"
         }
       },
+      "GetApiV4ProjectsIdAttestationsSigningCertificates200ResponseSchema": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ApiEntitiesSupplyChainSigningCertificate"
+        }
+      },
       "GetApiV4ProjectsIdAttestationsSubjectDigest200ResponseSchema": {
         "type": "array",
         "items": {
@@ -187971,6 +188660,12 @@
       "GetApiV4GroupsIdAvatar200OctetStreamResponseSchema": {
         "type": "string",
         "format": "binary"
+      },
+      "GetApiV4GroupsIdApplications200ResponseSchema": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ApiEntitiesApplication"
+        }
       },
       "GetApiV4GeoRepositoriesGlRepositoryPipelineRefs200ResponseSchema": {
         "type": "array",
@@ -189039,7 +189734,7 @@
       },
       "PostApiV4ProjectsIdTriggerPipelineRequestInputsProperty": {
         "type": "object",
-        "description": "Map of inputs, as key-value pairs, to use when creating the pipeline. [Generally available](https://gitlab.com/gitlab-org/gitlab/-/issues/536548) in GitLab 18.1. Feature flag \u0060ci_inputs_for_pipelines\u0060 removed.",
+        "description": "Map of inputs, as key-value pairs, to use when creating the pipeline. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/519958) in GitLab 17.10. [Generally available](https://gitlab.com/gitlab-org/gitlab/-/issues/536548) in GitLab 18.1. Feature flag \u0060ci_inputs_for_pipelines\u0060 removed.",
         "nullable": true
       },
       "PostApiV4ProjectsIdRefRefTriggerPipelineRequestVariablesProperty": {
@@ -189053,17 +189748,17 @@
       },
       "PostApiV4ProjectsIdRefRefTriggerPipelineRequestInputsProperty": {
         "type": "object",
-        "description": "Map of inputs, as key-value pairs, to use when creating the pipeline. [Generally available](https://gitlab.com/gitlab-org/gitlab/-/issues/536548) in GitLab 18.1. Feature flag \u0060ci_inputs_for_pipelines\u0060 removed.",
+        "description": "Map of inputs, as key-value pairs, to use when creating the pipeline. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/519958) in GitLab 17.10. [Generally available](https://gitlab.com/gitlab-org/gitlab/-/issues/536548) in GitLab 18.1. Feature flag \u0060ci_inputs_for_pipelines\u0060 removed.",
         "nullable": true
       },
       "PostApiV4ProjectsIdPipelineRequestInputsProperty": {
         "type": "object",
-        "description": "Map of inputs, as key-value pairs, to use when creating the pipeline. [Generally available](https://gitlab.com/gitlab-org/gitlab/-/issues/536548) in GitLab 18.1. Feature flag \u0060ci_inputs_for_pipelines\u0060 removed.",
+        "description": "Map of inputs, as key-value pairs, to use when creating the pipeline. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/519958) in GitLab 17.10. [Generally available](https://gitlab.com/gitlab-org/gitlab/-/issues/536548) in GitLab 18.1. Feature flag \u0060ci_inputs_for_pipelines\u0060 removed.",
         "nullable": true
       },
       "PostApiV4ProjectsIdJobsJobIdRetryRequestInputsProperty": {
         "type": "object",
-        "description": "Input values for the job.",
+        "description": "Input values for the job. [Introduced](https://gitlab.com/groups/gitlab-org/-/work_items/17833) in GitLab 18.10.",
         "nullable": true,
         "example": {
           "environment": "production"
@@ -190320,6 +191015,7 @@
           "directory"
         ],
         "type": "string",
+        "description": "Type of the entry. Either \u0060file\u0060 or \u0060directory\u0060.",
         "example": "file",
         "x-ms-enum": {
           "name": "ApiEntitiesCiJobArtifactEntryType",
@@ -216736,6 +217432,10 @@
       "x-displayName": "GitLab Pages"
     },
     {
+      "name": "Group applications",
+      "description": "Operations related to group applications."
+    },
+    {
       "name": "Group credentials inventory",
       "description": "Use this API to manage the credentials that members of a top-level group hold, including their\npersonal access tokens, resource access tokens, and SSH keys. You can list these credentials, revoke\nthem, and rotate the tokens. For more information, see\n[credentials inventory](https://docs.gitlab.com/administration/credentials_inventory/).",
       "externalDocs": {
@@ -217381,10 +218081,6 @@
         "url": "https://docs.gitlab.com/api/service_accounts/"
       },
       "x-displayName": "Service accounts"
-    },
-    {
-      "name": "Service ping",
-      "description": "Operations related to service ping."
     },
     {
       "name": "Sidekiq",
@@ -218101,7 +218797,7 @@
     },
     "PostApiV4ProjectsIdTriggerPipelineRequestInputs": {
       "type": "object",
-      "description": "Map of inputs, as key-value pairs, to use when creating the pipeline. [Generally available](https://gitlab.com/gitlab-org/gitlab/-/issues/536548) in GitLab 18.1. Feature flag \u0060ci_inputs_for_pipelines\u0060 removed.",
+      "description": "Map of inputs, as key-value pairs, to use when creating the pipeline. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/519958) in GitLab 17.10. [Generally available](https://gitlab.com/gitlab-org/gitlab/-/issues/536548) in GitLab 18.1. Feature flag \u0060ci_inputs_for_pipelines\u0060 removed.",
       "nullable": true
     },
     "PostApiV4ProjectsIdRefRefTriggerPipelineRequestVariables": {
@@ -218115,17 +218811,17 @@
     },
     "PostApiV4ProjectsIdRefRefTriggerPipelineRequestInputs": {
       "type": "object",
-      "description": "Map of inputs, as key-value pairs, to use when creating the pipeline. [Generally available](https://gitlab.com/gitlab-org/gitlab/-/issues/536548) in GitLab 18.1. Feature flag \u0060ci_inputs_for_pipelines\u0060 removed.",
+      "description": "Map of inputs, as key-value pairs, to use when creating the pipeline. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/519958) in GitLab 17.10. [Generally available](https://gitlab.com/gitlab-org/gitlab/-/issues/536548) in GitLab 18.1. Feature flag \u0060ci_inputs_for_pipelines\u0060 removed.",
       "nullable": true
     },
     "PostApiV4ProjectsIdPipelineRequestInputs": {
       "type": "object",
-      "description": "Map of inputs, as key-value pairs, to use when creating the pipeline. [Generally available](https://gitlab.com/gitlab-org/gitlab/-/issues/536548) in GitLab 18.1. Feature flag \u0060ci_inputs_for_pipelines\u0060 removed.",
+      "description": "Map of inputs, as key-value pairs, to use when creating the pipeline. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/519958) in GitLab 17.10. [Generally available](https://gitlab.com/gitlab-org/gitlab/-/issues/536548) in GitLab 18.1. Feature flag \u0060ci_inputs_for_pipelines\u0060 removed.",
       "nullable": true
     },
     "PostApiV4ProjectsIdJobsJobIdRetryRequestInputs": {
       "type": "object",
-      "description": "Input values for the job.",
+      "description": "Input values for the job. [Introduced](https://gitlab.com/groups/gitlab-org/-/work_items/17833) in GitLab 18.10.",
       "nullable": true,
       "example": {
         "environment": "production"
@@ -219133,6 +219829,12 @@
         "$ref": "#/components/schemas/ApiEntitiesHook"
       }
     },
+    "GetApiV4ProjectsIdAttestationsSigningCertificates200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesSupplyChainSigningCertificate"
+      }
+    },
     "GetApiV4ProjectsIdAttestationsSubjectDigest200Response": {
       "type": "array",
       "items": {
@@ -219777,6 +220479,12 @@
     "GetApiV4GroupsIdAvatar200OctetStreamResponse": {
       "type": "string",
       "format": "binary"
+    },
+    "GetApiV4GroupsIdApplications200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesApplication"
+      }
     },
     "GetApiV4GeoRepositoriesGlRepositoryPipelineRefs200Response": {
       "type": "array",

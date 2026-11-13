@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
     /// <summary>
-    /// Filter results when multiple variables share the same key.
+    /// Filter results when multiple variables share the same key. Supports `filter[environment_scope]`.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PutApiV4ProjectsIdVariablesKeyRequestFilter : IAdditionalDataHolder, IParsable

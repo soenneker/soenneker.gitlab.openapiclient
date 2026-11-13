@@ -28,6 +28,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             else if (parseNode.GetChildNode("allow_project_extension") is { } nullNodeAllowProjectExtension && nullNodeAllowProjectExtension.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowProjectExtension = null;
             if (parseNode.GetChildNode("duo_agent_platform_enabled") is null) { _explicitNullValueDuoAgentPlatformEnabled = default!; _explicitNullProperties?.Remove("duo_agent_platform_enabled"); }
             else if (parseNode.GetChildNode("duo_agent_platform_enabled") is { } nullNodeDuoAgentPlatformEnabled && nullNodeDuoAgentPlatformEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DuoAgentPlatformEnabled = null;
+            if (parseNode.GetChildNode("duo_workflow_file_attachments_enabled") is null) { _explicitNullValueDuoWorkflowFileAttachmentsEnabled = default!; _explicitNullProperties?.Remove("duo_workflow_file_attachments_enabled"); }
+            else if (parseNode.GetChildNode("duo_workflow_file_attachments_enabled") is { } nullNodeDuoWorkflowFileAttachmentsEnabled && nullNodeDuoWorkflowFileAttachmentsEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DuoWorkflowFileAttachmentsEnabled = null;
             if (parseNode.GetChildNode("duo_workflow_mcp_enabled") is null) { _explicitNullValueDuoWorkflowMcpEnabled = default!; _explicitNullProperties?.Remove("duo_workflow_mcp_enabled"); }
             else if (parseNode.GetChildNode("duo_workflow_mcp_enabled") is { } nullNodeDuoWorkflowMcpEnabled && nullNodeDuoWorkflowMcpEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DuoWorkflowMcpEnabled = null;
             if (parseNode.GetChildNode("foundational_agents_default_enabled") is null) { _explicitNullValueFoundationalAgentsDefaultEnabled = default!; _explicitNullProperties?.Remove("foundational_agents_default_enabled"); }
@@ -67,6 +69,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Whether Duo Agent Platform features are enabled</summary>
         public bool? DuoAgentPlatformEnabled { get => _explicitNullValueDuoAgentPlatformEnabled; set { _explicitNullValueDuoAgentPlatformEnabled = value; AdditionalData?.Remove("duo_agent_platform_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duo_agent_platform_enabled"); else _explicitNullProperties?.Remove("duo_agent_platform_enabled"); } }
         private bool? _explicitNullValueDuoAgentPlatformEnabled = default!;
+        /// <summary>Allow file attachments in GitLab Duo Chat for this top-level group. Can only be set on top-level groups. GitLab.com only.</summary>
+        public bool? DuoWorkflowFileAttachmentsEnabled { get => _explicitNullValueDuoWorkflowFileAttachmentsEnabled; set { _explicitNullValueDuoWorkflowFileAttachmentsEnabled = value; AdditionalData?.Remove("duo_workflow_file_attachments_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duo_workflow_file_attachments_enabled"); else _explicitNullProperties?.Remove("duo_workflow_file_attachments_enabled"); } }
+        private bool? _explicitNullValueDuoWorkflowFileAttachmentsEnabled = default!;
         /// <summary>Enable MCP support for Duo Agent Platform</summary>
         public bool? DuoWorkflowMcpEnabled { get => _explicitNullValueDuoWorkflowMcpEnabled; set { _explicitNullValueDuoWorkflowMcpEnabled = value; AdditionalData?.Remove("duo_workflow_mcp_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duo_workflow_mcp_enabled"); else _explicitNullProperties?.Remove("duo_workflow_mcp_enabled"); } }
         private bool? _explicitNullValueDuoWorkflowMcpEnabled = default!;
@@ -129,6 +134,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "allow_all_unix_sockets", n => { AllowAllUnixSockets = n.GetBoolValue(); } },
                 { "allow_project_extension", n => { AllowProjectExtension = n.GetBoolValue(); } },
                 { "duo_agent_platform_enabled", n => { DuoAgentPlatformEnabled = n.GetBoolValue(); } },
+                { "duo_workflow_file_attachments_enabled", n => { DuoWorkflowFileAttachmentsEnabled = n.GetBoolValue(); } },
                 { "duo_workflow_mcp_enabled", n => { DuoWorkflowMcpEnabled = n.GetBoolValue(); } },
                 { "foundational_agents_default_enabled", n => { FoundationalAgentsDefaultEnabled = n.GetBoolValue(); } },
                 { "include_recommended_allowed", n => { IncludeRecommendedAllowed = n.GetBoolValue(); } },
@@ -153,6 +159,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteBoolValue("allow_all_unix_sockets", AllowAllUnixSockets);
             writer.WriteBoolValue("allow_project_extension", AllowProjectExtension);
             writer.WriteBoolValue("duo_agent_platform_enabled", DuoAgentPlatformEnabled);
+            writer.WriteBoolValue("duo_workflow_file_attachments_enabled", DuoWorkflowFileAttachmentsEnabled);
             writer.WriteBoolValue("duo_workflow_mcp_enabled", DuoWorkflowMcpEnabled);
             writer.WriteBoolValue("foundational_agents_default_enabled", FoundationalAgentsDefaultEnabled);
             writer.WriteBoolValue("include_recommended_allowed", IncludeRecommendedAllowed);

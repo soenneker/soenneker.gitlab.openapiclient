@@ -53,7 +53,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs
         {
         }
         /// <summary>
-        /// Lists all jobs for a specified project. By default, this request returns 20 results at a time because the API results are paginated.
+        /// Lists all jobs for a specified project. By default, this request returns 20 results at a time because the API results are paginated. This endpoint supports offset-based and keyset-based pagination. Keyset-based pagination is recommended when requesting consecutive pages of results. Jobs are returned by ID in descending order.
         /// </summary>
         /// <returns>A List&lt;global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJob&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -72,7 +72,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// Lists all jobs for a specified project. By default, this request returns 20 results at a time because the API results are paginated.
+        /// Lists all jobs for a specified project. By default, this request returns 20 results at a time because the API results are paginated. This endpoint supports offset-based and keyset-based pagination. Keyset-based pagination is recommended when requesting consecutive pages of results. Jobs are returned by ID in descending order.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -100,7 +100,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Jobs.JobsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Lists all jobs for a specified project. By default, this request returns 20 results at a time because the API results are paginated.
+        /// Lists all jobs for a specified project. By default, this request returns 20 results at a time because the API results are paginated. This endpoint supports offset-based and keyset-based pagination. Keyset-based pagination is recommended when requesting consecutive pages of results. Jobs are returned by ID in descending order.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class JobsRequestBuilderGetQueryParameters 

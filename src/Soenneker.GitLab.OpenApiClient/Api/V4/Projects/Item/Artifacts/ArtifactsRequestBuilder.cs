@@ -33,7 +33,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Artifacts
         {
         }
         /// <summary>
-        /// Deletes job artifacts from all jobs in a specified project.
+        /// Deletes job artifacts that are eligible for deletion from all jobs in a specified project. By default, artifacts from the most recently completed pipeline and the most recent successful pipeline for each ref are kept, regardless of expiration. The request sets the expiry of all deletable job artifacts to the current time. The files are then deleted by the regular cleanup of expired job artifacts, which runs asynchronously on a schedule, so deletion might take a short time. Job logs are never deleted. Artifacts cannot be recovered after deletion. You must have the Maintainer or Owner role for the project.
         /// </summary>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -50,7 +50,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Artifacts
             await RequestAdapter.SendNoContentAsync(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Deletes job artifacts from all jobs in a specified project.
+        /// Deletes job artifacts that are eligible for deletion from all jobs in a specified project. By default, artifacts from the most recently completed pipeline and the most recent successful pipeline for each ref are kept, regardless of expiration. The request sets the expiry of all deletable job artifacts to the current time. The files are then deleted by the regular cleanup of expired job artifacts, which runs asynchronously on a schedule, so deletion might take a short time. Job logs are never deleted. Artifacts cannot be recovered after deletion. You must have the Maintainer or Owner role for the project.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
