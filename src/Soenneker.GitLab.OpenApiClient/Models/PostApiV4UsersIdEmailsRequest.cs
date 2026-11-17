@@ -35,7 +35,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; AdditionalData?.Remove("email"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
         private string _explicitNullValueEmail = default!;
 #endif
-        /// <summary>If `true`, skips email confirmation and assumes the email is verified.</summary>
+        /// <summary>If `true`, skips email confirmation and assumes the email is verified. Default is `false`.</summary>
         public bool? SkipConfirmation { get => _explicitNullValueSkipConfirmation; set { _explicitNullValueSkipConfirmation = value; AdditionalData?.Remove("skip_confirmation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("skip_confirmation"); else _explicitNullProperties?.Remove("skip_confirmation"); } }
         private bool? _explicitNullValueSkipConfirmation = default!;
         /// <summary>

@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Events
         {
         }
         /// <summary>
-        /// Lists all events for the authenticated user. Does not return events associated with epics or merge requests. Returns bulk push events with limited commit details.
+        /// Lists all events for the authenticated user. Does not return events associated with epics or merge requests. Returns bulk push events with limited commit details. Events about a wiki page include a `wiki_page` object. To return only those events, set `target_type` to `wiki`. Requires a token with the `read_user` or `api` scope.
         /// </summary>
         /// <returns>A List&lt;global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesEvent&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -53,7 +53,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Events
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// Lists all events for the authenticated user. Does not return events associated with epics or merge requests. Returns bulk push events with limited commit details.
+        /// Lists all events for the authenticated user. Does not return events associated with epics or merge requests. Returns bulk push events with limited commit details. Events about a wiki page include a `wiki_page` object. To return only those events, set `target_type` to `wiki`. Requires a token with the `read_user` or `api` scope.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -81,7 +81,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Events
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Events.EventsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Lists all events for the authenticated user. Does not return events associated with epics or merge requests. Returns bulk push events with limited commit details.
+        /// Lists all events for the authenticated user. Does not return events associated with epics or merge requests. Returns bulk push events with limited commit details. Events about a wiki page include a `wiki_page` object. To return only those events, set `target_type` to `wiki`. Requires a token with the `read_user` or `api` scope.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class EventsRequestBuilderGetQueryParameters 

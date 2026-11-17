@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Geo_sites.Item.Repair
         {
         }
         /// <summary>
-        /// Repairs the OAuth authentication of a Geo site if there is an OAuth synchronization problem between the primary or secondary Geo sites.
+        /// Repairs the OAuth authentication of a Geo site if there is an OAuth synchronization problem between the primary or secondary Geo sites. In that case, the message `There are no OAuth application defined for this Geo node.` might be displayed.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGeoSiteStatus"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Geo_sites.Item.Repair
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGeoSiteStatus>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGeoSiteStatus.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Repairs the OAuth authentication of a Geo site if there is an OAuth synchronization problem between the primary or secondary Geo sites.
+        /// Repairs the OAuth authentication of a Geo site if there is an OAuth synchronization problem between the primary or secondary Geo sites. In that case, the message `There are no OAuth application defined for this Geo node.` might be displayed.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

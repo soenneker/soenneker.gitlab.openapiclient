@@ -35,7 +35,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBlameRangeCommit Commit { get => _explicitNullValueCommit; set { _explicitNullValueCommit = value; AdditionalData?.Remove("commit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commit"); else _explicitNullProperties?.Remove("commit"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBlameRangeCommit _explicitNullValueCommit = default!;
 #endif
-        /// <summary>The lines property</summary>
+        /// <summary>Lines of the file in this blame range.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? Lines { get => _explicitNullValueLines; set { _explicitNullValueLines = value; AdditionalData?.Remove("lines"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lines"); else _explicitNullProperties?.Remove("lines"); } }

@@ -25,7 +25,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The create_access_levels property</summary>
+        /// <summary>Access levels allowed to create the tag.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedRefAccess>? CreateAccessLevels { get => _explicitNullValueCreateAccessLevels; set { _explicitNullValueCreateAccessLevels = value; AdditionalData?.Remove("create_access_levels"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("create_access_levels"); else _explicitNullProperties?.Remove("create_access_levels"); } }
@@ -35,7 +35,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedRefAccess> CreateAccessLevels { get => _explicitNullValueCreateAccessLevels; set { _explicitNullValueCreateAccessLevels = value; AdditionalData?.Remove("create_access_levels"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("create_access_levels"); else _explicitNullProperties?.Remove("create_access_levels"); } }
         private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedRefAccess> _explicitNullValueCreateAccessLevels = default!;
 #endif
-        /// <summary>The name property</summary>
+        /// <summary>Name of the protected tag or wildcard pattern.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }

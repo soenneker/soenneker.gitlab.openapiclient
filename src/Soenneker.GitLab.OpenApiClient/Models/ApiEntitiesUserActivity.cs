@@ -28,10 +28,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The last_activity_at property</summary>
+        /// <summary>Deprecated. Use `last_activity_on` instead.</summary>
         public Date? LastActivityAt { get => _explicitNullValueLastActivityAt; set { _explicitNullValueLastActivityAt = value; AdditionalData?.Remove("last_activity_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_activity_at"); else _explicitNullProperties?.Remove("last_activity_at"); } }
         private Date? _explicitNullValueLastActivityAt = default!;
-        /// <summary>The last_activity_on property</summary>
+        /// <summary>Date of the last activity of the user. Updated by Git HTTP or SSH activity such as clone and push, signing in, visiting dashboard, project, issue, and merge request pages, and using the REST or GraphQL API.</summary>
         public Date? LastActivityOn { get => _explicitNullValueLastActivityOn; set { _explicitNullValueLastActivityOn = value; AdditionalData?.Remove("last_activity_on"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_activity_on"); else _explicitNullProperties?.Remove("last_activity_on"); } }
         private Date? _explicitNullValueLastActivityOn = default!;
         /// <summary>The username property</summary>

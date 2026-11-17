@@ -226,7 +226,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesEmail>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesEmail.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Retrieves a specified user as a regular user.
+        /// Retrieves a specified user. Requires authentication. Administrators and auditors see more attributes in the response.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserProfile"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -244,7 +244,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserProfile>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserProfile.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Updates the details of a specified user.
+        /// Updates the details of a specified user. If an administrator updates the password of another user, that user must change it when they next sign in. Administrators only. If `email` is a confirmed secondary email address of the user, it becomes the primary email address at once. Any other address is stored as unconfirmed and becomes the primary email address only after the user confirms it, unless `skip_reconfirmation` is `true`.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserWithAdmin"/></returns>
         /// <param name="body">The request body</param>
@@ -283,7 +283,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item
             return requestInfo;
         }
         /// <summary>
-        /// Retrieves a specified user as a regular user.
+        /// Retrieves a specified user. Requires authentication. Administrators and auditors see more attributes in the response.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -302,7 +302,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item
             return requestInfo;
         }
         /// <summary>
-        /// Updates the details of a specified user.
+        /// Updates the details of a specified user. If an administrator updates the password of another user, that user must change it when they next sign in. Administrators only. If `email` is a confirmed secondary email address of the user, it becomes the primary email address at once. Any other address is stored as unconfirmed and becomes the primary email address only after the user confirms it, unless `skip_reconfirmation` is `true`.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -343,7 +343,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item
             public bool? HardDelete { get; set; }
         }
         /// <summary>
-        /// Retrieves a specified user as a regular user.
+        /// Retrieves a specified user. Requires authentication. Administrators and auditors see more attributes in the response.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class UsersItemRequestBuilderGetQueryParameters 

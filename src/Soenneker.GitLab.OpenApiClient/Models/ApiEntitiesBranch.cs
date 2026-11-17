@@ -39,7 +39,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The can_push property</summary>
+        /// <summary>Whether the authenticated user can push to the branch.</summary>
         public bool? CanPush { get => _explicitNullValueCanPush; set { _explicitNullValueCanPush = value; AdditionalData?.Remove("can_push"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("can_push"); else _explicitNullProperties?.Remove("can_push"); } }
         private bool? _explicitNullValueCanPush = default!;
         /// <summary>The commit property</summary>
@@ -52,19 +52,19 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommit Commit { get => _explicitNullValueCommit; set { _explicitNullValueCommit = value; AdditionalData?.Remove("commit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commit"); else _explicitNullProperties?.Remove("commit"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommit _explicitNullValueCommit = default!;
 #endif
-        /// <summary>The default property</summary>
+        /// <summary>Whether the branch is the default branch of the project.</summary>
         public bool? Default { get => _explicitNullValueDefault; set { _explicitNullValueDefault = value; AdditionalData?.Remove("default"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default"); else _explicitNullProperties?.Remove("default"); } }
         private bool? _explicitNullValueDefault = default!;
-        /// <summary>The developers_can_merge property</summary>
+        /// <summary>Whether a protected branch rule allows the Developer role to merge to the branch.</summary>
         public bool? DevelopersCanMerge { get => _explicitNullValueDevelopersCanMerge; set { _explicitNullValueDevelopersCanMerge = value; AdditionalData?.Remove("developers_can_merge"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("developers_can_merge"); else _explicitNullProperties?.Remove("developers_can_merge"); } }
         private bool? _explicitNullValueDevelopersCanMerge = default!;
-        /// <summary>The developers_can_push property</summary>
+        /// <summary>Whether a protected branch rule allows the Developer role to push to the branch.</summary>
         public bool? DevelopersCanPush { get => _explicitNullValueDevelopersCanPush; set { _explicitNullValueDevelopersCanPush = value; AdditionalData?.Remove("developers_can_push"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("developers_can_push"); else _explicitNullProperties?.Remove("developers_can_push"); } }
         private bool? _explicitNullValueDevelopersCanPush = default!;
-        /// <summary>The merged property</summary>
+        /// <summary>Whether the branch is merged into the default branch.</summary>
         public bool? Merged { get => _explicitNullValueMerged; set { _explicitNullValueMerged = value; AdditionalData?.Remove("merged"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merged"); else _explicitNullProperties?.Remove("merged"); } }
         private bool? _explicitNullValueMerged = default!;
-        /// <summary>The name property</summary>
+        /// <summary>Name of the branch.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
@@ -74,10 +74,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string _explicitNullValueName = default!;
 #endif
-        /// <summary>The protected property</summary>
+        /// <summary>Whether the branch is protected.</summary>
         public bool? Protected { get => _explicitNullValueProtected; set { _explicitNullValueProtected = value; AdditionalData?.Remove("protected"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("protected"); else _explicitNullProperties?.Remove("protected"); } }
         private bool? _explicitNullValueProtected = default!;
-        /// <summary>The web_url property</summary>
+        /// <summary>URL of the branch in the GitLab UI.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? WebUrl { get => _explicitNullValueWebUrl; set { _explicitNullValueWebUrl = value; AdditionalData?.Remove("web_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("web_url"); else _explicitNullProperties?.Remove("web_url"); } }

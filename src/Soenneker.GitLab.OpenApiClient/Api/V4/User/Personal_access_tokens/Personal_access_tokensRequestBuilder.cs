@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.User.Personal_access_tokens
         {
         }
         /// <summary>
-        /// Creates a personal access token for the currently authenticated user. For security purposes, the token is limited to the `k8s_proxy` and `self_rotate` scope. Token values are included with the response, but cannot be retrieved later. This feature was introduced in GitLab 16.5.
+        /// Creates a personal access token for the currently authenticated user. To create a fine-grained personal access token, use `granular_scopes` instead of `scopes`. For security purposes, a token created with `scopes` is limited to the `k8s_proxy` and `self_rotate` scope. With `selected_memberships`, you must have access to each group and project listed. Token values are included with the response, but cannot be retrieved later. The `granular_scopes` parameter was [introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/243428) in GitLab 19.2. The `last_used_ips` attribute was [introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/250307) in GitLab 19.4. The `granular_scopes` attribute in the response was [introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/632314) in GitLab 19.5.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPersonalAccessTokenWithToken"/></returns>
         /// <param name="body">The request body</param>
@@ -54,7 +54,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.User.Personal_access_tokens
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPersonalAccessTokenWithToken>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPersonalAccessTokenWithToken.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Creates a personal access token for the currently authenticated user. For security purposes, the token is limited to the `k8s_proxy` and `self_rotate` scope. Token values are included with the response, but cannot be retrieved later. This feature was introduced in GitLab 16.5.
+        /// Creates a personal access token for the currently authenticated user. To create a fine-grained personal access token, use `granular_scopes` instead of `scopes`. For security purposes, a token created with `scopes` is limited to the `k8s_proxy` and `self_rotate` scope. With `selected_memberships`, you must have access to each group and project listed. Token values are included with the response, but cannot be retrieved later. The `granular_scopes` parameter was [introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/243428) in GitLab 19.2. The `last_used_ips` attribute was [introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/250307) in GitLab 19.4. The `granular_scopes` attribute in the response was [introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/632314) in GitLab 19.5.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

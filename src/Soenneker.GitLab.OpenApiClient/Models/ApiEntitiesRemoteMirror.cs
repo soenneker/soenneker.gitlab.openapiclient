@@ -47,7 +47,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The auth_method property</summary>
+        /// <summary>Authentication method used for the mirror.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? AuthMethod { get => _explicitNullValueAuthMethod; set { _explicitNullValueAuthMethod = value; AdditionalData?.Remove("auth_method"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auth_method"); else _explicitNullProperties?.Remove("auth_method"); } }
@@ -57,10 +57,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string AuthMethod { get => _explicitNullValueAuthMethod; set { _explicitNullValueAuthMethod = value; AdditionalData?.Remove("auth_method"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auth_method"); else _explicitNullProperties?.Remove("auth_method"); } }
         private string _explicitNullValueAuthMethod = default!;
 #endif
-        /// <summary>The enabled property</summary>
+        /// <summary>If `true`, the mirror is enabled.</summary>
         public bool? Enabled { get => _explicitNullValueEnabled; set { _explicitNullValueEnabled = value; AdditionalData?.Remove("enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enabled"); else _explicitNullProperties?.Remove("enabled"); } }
         private bool? _explicitNullValueEnabled = default!;
-        /// <summary>The host_keys property</summary>
+        /// <summary>Array of SSH host key fingerprints for the remote mirror. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/203435) in GitLab 18.4.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMirrorHostKey>? HostKeys { get => _explicitNullValueHostKeys; set { _explicitNullValueHostKeys = value; AdditionalData?.Remove("host_keys"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("host_keys"); else _explicitNullProperties?.Remove("host_keys"); } }
@@ -70,13 +70,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMirrorHostKey> HostKeys { get => _explicitNullValueHostKeys; set { _explicitNullValueHostKeys = value; AdditionalData?.Remove("host_keys"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("host_keys"); else _explicitNullProperties?.Remove("host_keys"); } }
         private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMirrorHostKey> _explicitNullValueHostKeys = default!;
 #endif
-        /// <summary>The id property</summary>
+        /// <summary>ID of the remote mirror.</summary>
         public long? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private long? _explicitNullValueId = default!;
-        /// <summary>The keep_divergent_refs property</summary>
+        /// <summary>If `true`, divergent refs are kept when mirroring.</summary>
         public bool? KeepDivergentRefs { get => _explicitNullValueKeepDivergentRefs; set { _explicitNullValueKeepDivergentRefs = value; AdditionalData?.Remove("keep_divergent_refs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("keep_divergent_refs"); else _explicitNullProperties?.Remove("keep_divergent_refs"); } }
         private bool? _explicitNullValueKeepDivergentRefs = default!;
-        /// <summary>The last_error property</summary>
+        /// <summary>Error message from the last mirror attempt. `null` if successful.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? LastError { get => _explicitNullValueLastError; set { _explicitNullValueLastError = value; AdditionalData?.Remove("last_error"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_error"); else _explicitNullProperties?.Remove("last_error"); } }
@@ -86,13 +86,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string LastError { get => _explicitNullValueLastError; set { _explicitNullValueLastError = value; AdditionalData?.Remove("last_error"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_error"); else _explicitNullProperties?.Remove("last_error"); } }
         private string _explicitNullValueLastError = default!;
 #endif
-        /// <summary>The last_successful_update_at property</summary>
+        /// <summary>Timestamp of the last successful mirror update. ISO 8601 format.</summary>
         public DateTimeOffset? LastSuccessfulUpdateAt { get => _explicitNullValueLastSuccessfulUpdateAt; set { _explicitNullValueLastSuccessfulUpdateAt = value; AdditionalData?.Remove("last_successful_update_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_successful_update_at"); else _explicitNullProperties?.Remove("last_successful_update_at"); } }
         private DateTimeOffset? _explicitNullValueLastSuccessfulUpdateAt = default!;
-        /// <summary>The last_update_at property</summary>
+        /// <summary>Timestamp of the last mirror attempt. ISO 8601 format.</summary>
         public DateTimeOffset? LastUpdateAt { get => _explicitNullValueLastUpdateAt; set { _explicitNullValueLastUpdateAt = value; AdditionalData?.Remove("last_update_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_update_at"); else _explicitNullProperties?.Remove("last_update_at"); } }
         private DateTimeOffset? _explicitNullValueLastUpdateAt = default!;
-        /// <summary>The last_update_started_at property</summary>
+        /// <summary>Timestamp when the last mirror attempt started. ISO 8601 format.</summary>
         public DateTimeOffset? LastUpdateStartedAt { get => _explicitNullValueLastUpdateStartedAt; set { _explicitNullValueLastUpdateStartedAt = value; AdditionalData?.Remove("last_update_started_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_update_started_at"); else _explicitNullProperties?.Remove("last_update_started_at"); } }
         private DateTimeOffset? _explicitNullValueLastUpdateStartedAt = default!;
         /// <summary>The mirror_branch_regex property</summary>
@@ -105,20 +105,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string MirrorBranchRegex { get => _explicitNullValueMirrorBranchRegex; set { _explicitNullValueMirrorBranchRegex = value; AdditionalData?.Remove("mirror_branch_regex"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mirror_branch_regex"); else _explicitNullProperties?.Remove("mirror_branch_regex"); } }
         private string _explicitNullValueMirrorBranchRegex = default!;
 #endif
-        /// <summary>The only_protected_branches property</summary>
+        /// <summary>If `true`, only protected branches are mirrored.</summary>
         public bool? OnlyProtectedBranches { get => _explicitNullValueOnlyProtectedBranches; set { _explicitNullValueOnlyProtectedBranches = value; AdditionalData?.Remove("only_protected_branches"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("only_protected_branches"); else _explicitNullProperties?.Remove("only_protected_branches"); } }
         private bool? _explicitNullValueOnlyProtectedBranches = default!;
-        /// <summary>The update_status property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? UpdateStatus { get => _explicitNullValueUpdateStatus; set { _explicitNullValueUpdateStatus = value; AdditionalData?.Remove("update_status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("update_status"); else _explicitNullProperties?.Remove("update_status"); } }
-        private string? _explicitNullValueUpdateStatus = default!;
-#nullable restore
-#else
-        public string UpdateStatus { get => _explicitNullValueUpdateStatus; set { _explicitNullValueUpdateStatus = value; AdditionalData?.Remove("update_status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("update_status"); else _explicitNullProperties?.Remove("update_status"); } }
-        private string _explicitNullValueUpdateStatus = default!;
-#endif
-        /// <summary>The url property</summary>
+        /// <summary>Status of the mirror update.</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRemoteMirrorUpdateStatus? UpdateStatus { get => _explicitNullValueUpdateStatus; set { _explicitNullValueUpdateStatus = value; AdditionalData?.Remove("update_status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("update_status"); else _explicitNullProperties?.Remove("update_status"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRemoteMirrorUpdateStatus? _explicitNullValueUpdateStatus = default!;
+        /// <summary>Mirror URL with credentials scrubbed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; AdditionalData?.Remove("url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
@@ -164,7 +157,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "last_update_started_at", n => { LastUpdateStartedAt = n.GetDateTimeOffsetValue(); } },
                 { "mirror_branch_regex", n => { MirrorBranchRegex = n.GetStringValue(); } },
                 { "only_protected_branches", n => { OnlyProtectedBranches = n.GetBoolValue(); } },
-                { "update_status", n => { UpdateStatus = n.GetStringValue(); } },
+                { "update_status", n => { var parsed = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRemoteMirrorUpdateStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueUpdateStatus = default; _explicitNullProperties?.Remove("update_status"); AdditionalData["update_status"] = unknown; } else { UpdateStatus = parsed; AdditionalData.Remove("update_status"); } } },
                 { "url", n => { Url = n.GetStringValue(); } },
             };
         }
@@ -186,7 +179,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("last_update_started_at", LastUpdateStartedAt);
             writer.WriteStringValue("mirror_branch_regex", MirrorBranchRegex);
             writer.WriteBoolValue("only_protected_branches", OnlyProtectedBranches);
-            writer.WriteStringValue("update_status", UpdateStatus);
+            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesRemoteMirrorUpdateStatus>("update_status", UpdateStatus);
             writer.WriteStringValue("url", Url);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

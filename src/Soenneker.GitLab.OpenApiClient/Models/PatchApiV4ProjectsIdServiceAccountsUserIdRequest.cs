@@ -27,7 +27,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Email address of the user account. If omitted when creating a new service account, generates an email address prefixed with `service_account_project_`. Custom email addresses require confirmation, unless the group has a matching [verified domain](https://docs.gitlab.com/user/enterprise_user/#manage-group-domains) or email confirmation settings are [turned off](https://docs.gitlab.com/administration/settings/sign_up_restrictions/#confirm-user-email).</summary>
+        /// <summary>Email address of the user account. If omitted when creating a new service account, generates an email address prefixed with `service_account_project_`. Custom email addresses require confirmation, unless the top-level group has a matching [verified domain](https://docs.gitlab.com/user/enterprise_user/#manage-group-domains) or email confirmation settings are [turned off](https://docs.gitlab.com/administration/settings/sign_up_restrictions/#confirm-user-email).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; AdditionalData?.Remove("email"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }

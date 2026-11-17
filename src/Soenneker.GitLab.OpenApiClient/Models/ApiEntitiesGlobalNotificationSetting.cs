@@ -37,17 +37,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Events { get => _explicitNullValueEvents; set { _explicitNullValueEvents = value; AdditionalData?.Remove("events"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("events"); else _explicitNullProperties?.Remove("events"); } }
         private string _explicitNullValueEvents = default!;
 #endif
-        /// <summary>The level property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Level { get => _explicitNullValueLevel; set { _explicitNullValueLevel = value; AdditionalData?.Remove("level"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("level"); else _explicitNullProperties?.Remove("level"); } }
-        private string? _explicitNullValueLevel = default!;
-#nullable restore
-#else
-        public string Level { get => _explicitNullValueLevel; set { _explicitNullValueLevel = value; AdditionalData?.Remove("level"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("level"); else _explicitNullProperties?.Remove("level"); } }
-        private string _explicitNullValueLevel = default!;
-#endif
-        /// <summary>The notification_email property</summary>
+        /// <summary>Notification level.</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGlobalNotificationSettingLevel? Level { get => _explicitNullValueLevel; set { _explicitNullValueLevel = value; AdditionalData?.Remove("level"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("level"); else _explicitNullProperties?.Remove("level"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGlobalNotificationSettingLevel? _explicitNullValueLevel = default!;
+        /// <summary>Email address where notifications are sent.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? NotificationEmail { get => _explicitNullValueNotificationEmail; set { _explicitNullValueNotificationEmail = value; AdditionalData?.Remove("notification_email"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notification_email"); else _explicitNullProperties?.Remove("notification_email"); } }
@@ -83,7 +76,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "events", n => { Events = n.GetStringValue(); } },
-                { "level", n => { Level = n.GetStringValue(); } },
+                { "level", n => { var parsed = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGlobalNotificationSettingLevel>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueLevel = default; _explicitNullProperties?.Remove("level"); AdditionalData["level"] = unknown; } else { Level = parsed; AdditionalData.Remove("level"); } } },
                 { "notification_email", n => { NotificationEmail = n.GetStringValue(); } },
             };
         }
@@ -95,7 +88,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("events", Events);
-            writer.WriteStringValue("level", Level);
+            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGlobalNotificationSettingLevel>("level", Level);
             writer.WriteStringValue("notification_email", NotificationEmail);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

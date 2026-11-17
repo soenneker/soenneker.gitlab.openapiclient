@@ -66,7 +66,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.User.Keys
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// Adds an SSH key for the currently authenticated user.
+        /// Adds an SSH key for the currently authenticated user. If the key or its fingerprint is already in use, returns a validation error with the message `has already been taken`.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSshKey"/></returns>
         /// <param name="body">The request body</param>
@@ -105,7 +105,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.User.Keys
             return requestInfo;
         }
         /// <summary>
-        /// Adds an SSH key for the currently authenticated user.
+        /// Adds an SSH key for the currently authenticated user. If the key or its fingerprint is already in use, returns a validation error with the message `has already been taken`.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

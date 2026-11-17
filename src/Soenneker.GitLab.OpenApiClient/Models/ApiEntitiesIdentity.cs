@@ -27,7 +27,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The extern_uid property</summary>
+        /// <summary>ID of the user at the identity provider.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ExternUid { get => _explicitNullValueExternUid; set { _explicitNullValueExternUid = value; AdditionalData?.Remove("extern_uid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extern_uid"); else _explicitNullProperties?.Remove("extern_uid"); } }
@@ -37,7 +37,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string ExternUid { get => _explicitNullValueExternUid; set { _explicitNullValueExternUid = value; AdditionalData?.Remove("extern_uid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extern_uid"); else _explicitNullProperties?.Remove("extern_uid"); } }
         private string _explicitNullValueExternUid = default!;
 #endif
-        /// <summary>The provider property</summary>
+        /// <summary>Name of the identity provider, such as `google_oauth2` or `group_saml`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Provider { get => _explicitNullValueProvider; set { _explicitNullValueProvider = value; AdditionalData?.Remove("provider"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("provider"); else _explicitNullProperties?.Remove("provider"); } }
@@ -47,7 +47,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Provider { get => _explicitNullValueProvider; set { _explicitNullValueProvider = value; AdditionalData?.Remove("provider"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("provider"); else _explicitNullProperties?.Remove("provider"); } }
         private string _explicitNullValueProvider = default!;
 #endif
-        /// <summary>The saml_provider_id property</summary>
+        /// <summary>ID of the SAML provider for a `group_saml` identity.</summary>
         public int? SamlProviderId { get => _explicitNullValueSamlProviderId; set { _explicitNullValueSamlProviderId = value; AdditionalData?.Remove("saml_provider_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("saml_provider_id"); else _explicitNullProperties?.Remove("saml_provider_id"); } }
         private int? _explicitNullValueSamlProviderId = default!;
         /// <summary>

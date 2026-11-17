@@ -46,7 +46,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Ldap_group_links.Ite
         {
         }
         /// <summary>
-        /// Deletes an LDAP group link. Deprecated. Scheduled for removal in a future release.
+        /// Deletes an LDAP group link. Deprecated. Scheduled for removal in a future release. Use `DELETE /groups/:id/ldap_group_links` instead.
         /// </summary>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -63,7 +63,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Ldap_group_links.Ite
             await RequestAdapter.SendNoContentAsync(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Deletes an LDAP group link. Deprecated. Scheduled for removal in a future release.
+        /// Deletes an LDAP group link. Deprecated. Scheduled for removal in a future release. Use `DELETE /groups/:id/ldap_group_links` instead.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

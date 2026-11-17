@@ -35,10 +35,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             else if (parseNode.GetChildNode("user_id") is { } nullNodeUserId && nullNodeUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserId = null;
         }
 
-        /// <summary>The access_level property</summary>
+        /// <summary>Access level the configuration grants.</summary>
         public int? AccessLevel { get => _explicitNullValueAccessLevel; set { _explicitNullValueAccessLevel = value; AdditionalData?.Remove("access_level"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("access_level"); else _explicitNullProperties?.Remove("access_level"); } }
         private int? _explicitNullValueAccessLevel = default!;
-        /// <summary>The access_level_description property</summary>
+        /// <summary>Human-readable description of the access level.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? AccessLevelDescription { get => _explicitNullValueAccessLevelDescription; set { _explicitNullValueAccessLevelDescription = value; AdditionalData?.Remove("access_level_description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("access_level_description"); else _explicitNullProperties?.Remove("access_level_description"); } }
@@ -50,16 +50,16 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The deploy_key_id property</summary>
+        /// <summary>ID of the deploy key with access.</summary>
         public long? DeployKeyId { get => _explicitNullValueDeployKeyId; set { _explicitNullValueDeployKeyId = value; AdditionalData?.Remove("deploy_key_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deploy_key_id"); else _explicitNullProperties?.Remove("deploy_key_id"); } }
         private long? _explicitNullValueDeployKeyId = default!;
-        /// <summary>The group_id property</summary>
+        /// <summary>ID of the group with access. Premium and Ultimate only.</summary>
         public long? GroupId { get => _explicitNullValueGroupId; set { _explicitNullValueGroupId = value; AdditionalData?.Remove("group_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_id"); else _explicitNullProperties?.Remove("group_id"); } }
         private long? _explicitNullValueGroupId = default!;
-        /// <summary>The id property</summary>
+        /// <summary>ID of the access level configuration.</summary>
         public long? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private long? _explicitNullValueId = default!;
-        /// <summary>The member_role_id property</summary>
+        /// <summary>ID of the custom member role with access. Ultimate only.</summary>
         public long? MemberRoleId { get => _explicitNullValueMemberRoleId; set { _explicitNullValueMemberRoleId = value; AdditionalData?.Remove("member_role_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("member_role_id"); else _explicitNullProperties?.Remove("member_role_id"); } }
         private long? _explicitNullValueMemberRoleId = default!;
         /// <summary>The member_role_name property</summary>
@@ -72,7 +72,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string MemberRoleName { get => _explicitNullValueMemberRoleName; set { _explicitNullValueMemberRoleName = value; AdditionalData?.Remove("member_role_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("member_role_name"); else _explicitNullProperties?.Remove("member_role_name"); } }
         private string _explicitNullValueMemberRoleName = default!;
 #endif
-        /// <summary>The user_id property</summary>
+        /// <summary>ID of the user with access. Premium and Ultimate only.</summary>
         public long? UserId { get => _explicitNullValueUserId; set { _explicitNullValueUserId = value; AdditionalData?.Remove("user_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_id"); else _explicitNullProperties?.Remove("user_id"); } }
         private long? _explicitNullValueUserId = default!;
         /// <summary>

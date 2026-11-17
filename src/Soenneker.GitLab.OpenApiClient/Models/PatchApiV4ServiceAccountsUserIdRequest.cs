@@ -39,7 +39,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; AdditionalData?.Remove("email"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
         private string _explicitNullValueEmail = default!;
 #endif
-        /// <summary>Flag indicating the user is an external user</summary>
+        /// <summary>Flag indicating the user is an external user. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/583452) in GitLab 19.5.</summary>
         public bool? External { get => _explicitNullValueExternal; set { _explicitNullValueExternal = value; AdditionalData?.Remove("external"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external"); else _explicitNullProperties?.Remove("external"); } }
         private bool? _explicitNullValueExternal = default!;
         /// <summary>Name of the user. If omitted when creating a new service account, uses `Service account user`.</summary>

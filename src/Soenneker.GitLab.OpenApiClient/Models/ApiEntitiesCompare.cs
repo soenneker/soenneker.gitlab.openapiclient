@@ -43,7 +43,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommit Commit { get => _explicitNullValueCommit; set { _explicitNullValueCommit = value; AdditionalData?.Remove("commit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commit"); else _explicitNullProperties?.Remove("commit"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommit _explicitNullValueCommit = default!;
 #endif
-        /// <summary>The commits property</summary>
+        /// <summary>Commits between the two references. Not truncated when `compare_timeout` is `true`. For unauthenticated requests, contains at most the 100 most recent commits in the range. Behind a feature flag named `compare_api_anonymous_commits_limit`, disabled by default.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommit>? Commits { get => _explicitNullValueCommits; set { _explicitNullValueCommits = value; AdditionalData?.Remove("commits"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commits"); else _explicitNullProperties?.Remove("commits"); } }
@@ -53,13 +53,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommit> Commits { get => _explicitNullValueCommits; set { _explicitNullValueCommits = value; AdditionalData?.Remove("commits"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commits"); else _explicitNullProperties?.Remove("commits"); } }
         private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommit> _explicitNullValueCommits = default!;
 #endif
-        /// <summary>The compare_same_ref property</summary>
+        /// <summary>If `true`, `from` and `to` resolve to the same commit.</summary>
         public bool? CompareSameRef { get => _explicitNullValueCompareSameRef; set { _explicitNullValueCompareSameRef = value; AdditionalData?.Remove("compare_same_ref"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("compare_same_ref"); else _explicitNullProperties?.Remove("compare_same_ref"); } }
         private bool? _explicitNullValueCompareSameRef = default!;
-        /// <summary>The compare_timeout property</summary>
+        /// <summary>If `true`, the comparison exceeded size limits or timed out, and `diffs` might be incomplete.</summary>
         public bool? CompareTimeout { get => _explicitNullValueCompareTimeout; set { _explicitNullValueCompareTimeout = value; AdditionalData?.Remove("compare_timeout"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("compare_timeout"); else _explicitNullProperties?.Remove("compare_timeout"); } }
         private bool? _explicitNullValueCompareTimeout = default!;
-        /// <summary>The diffs property</summary>
+        /// <summary>File differences between the two references.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDiff>? Diffs { get => _explicitNullValueDiffs; set { _explicitNullValueDiffs = value; AdditionalData?.Remove("diffs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("diffs"); else _explicitNullProperties?.Remove("diffs"); } }
@@ -69,7 +69,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDiff> Diffs { get => _explicitNullValueDiffs; set { _explicitNullValueDiffs = value; AdditionalData?.Remove("diffs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("diffs"); else _explicitNullProperties?.Remove("diffs"); } }
         private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDiff> _explicitNullValueDiffs = default!;
 #endif
-        /// <summary>The web_url property</summary>
+        /// <summary>URL to view the comparison in the GitLab UI.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? WebUrl { get => _explicitNullValueWebUrl; set { _explicitNullValueWebUrl = value; AdditionalData?.Remove("web_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("web_url"); else _explicitNullProperties?.Remove("web_url"); } }

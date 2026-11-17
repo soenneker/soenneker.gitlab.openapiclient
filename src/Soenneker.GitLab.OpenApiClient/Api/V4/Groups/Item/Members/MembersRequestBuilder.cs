@@ -78,7 +78,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Members
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// Adds a member to a specified group.
+        /// Adds a direct member to a specified group. If administrator approval for role promotions is turned on, requests that promote existing users into a billable role require administrator approval. Administrator approval for role promotions can be turned on only when the `enable_member_promotion_management` application setting is enabled. When a request for a single user is queued, the response has a `message` object that maps the username to `Request queued for administrator approval.`. When requests for multiple users are queued, the response has a `queued_users` object with the same mapping and a `status` of `success`.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMember"/></returns>
         /// <param name="body">The request body</param>
@@ -117,7 +117,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Members
             return requestInfo;
         }
         /// <summary>
-        /// Adds a member to a specified group.
+        /// Adds a direct member to a specified group. If administrator approval for role promotions is turned on, requests that promote existing users into a billable role require administrator approval. Administrator approval for role promotions can be turned on only when the `enable_member_promotion_management` application setting is enabled. When a request for a single user is queued, the response has a `message` object that maps the username to `Request queued for administrator approval.`. When requests for multiple users are queued, the response has a `queued_users` object with the same mapping and a `status` of `success`.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

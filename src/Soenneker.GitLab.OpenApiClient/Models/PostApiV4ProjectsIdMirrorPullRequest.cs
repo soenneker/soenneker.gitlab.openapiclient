@@ -49,7 +49,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>If `true`, resets a hard-failed mirror and retries the update. Ignored for requests authenticated with a GitHub webhook signature.</summary>
+        /// <summary>If `true`, resets a hard-failed mirror and retries the update. Ignored for requests authenticated with a GitHub webhook signature. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/576606) in GitLab 19.3.</summary>
         public bool? Force { get => _explicitNullValueForce; set { _explicitNullValueForce = value; AdditionalData?.Remove("force"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("force"); else _explicitNullProperties?.Remove("force"); } }
         private bool? _explicitNullValueForce = default!;
         /// <summary>Target branch</summary>

@@ -46,7 +46,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>If `true`, the mirror is enabled.</summary>
         public bool? Enabled { get => _explicitNullValueEnabled; set { _explicitNullValueEnabled = value; AdditionalData?.Remove("enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enabled"); else _explicitNullProperties?.Remove("enabled"); } }
         private bool? _explicitNullValueEnabled = default!;
-        /// <summary>SSH host keys in bare format, such as `ssh-ed25519 AAAA...`, or full `known_hosts` format, such as `hostname ssh-ed25519 AAAA...`. Bare keys use the hostname from the mirror URL.</summary>
+        /// <summary>SSH host keys in bare format, such as `ssh-ed25519 AAAA...`, or full `known_hosts` format, such as `hostname ssh-ed25519 AAAA...`. Bare keys use the hostname from the mirror URL. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/203435) in GitLab 18.4.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? HostKeys { get => _explicitNullValueHostKeys; set { _explicitNullValueHostKeys = value; AdditionalData?.Remove("host_keys"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("host_keys"); else _explicitNullProperties?.Remove("host_keys"); } }
@@ -59,7 +59,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>If `true`, divergent refs are kept when mirroring.</summary>
         public bool? KeepDivergentRefs { get => _explicitNullValueKeepDivergentRefs; set { _explicitNullValueKeepDivergentRefs = value; AdditionalData?.Remove("keep_divergent_refs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("keep_divergent_refs"); else _explicitNullProperties?.Remove("keep_divergent_refs"); } }
         private bool? _explicitNullValueKeepDivergentRefs = default!;
-        /// <summary>Determines if only matched branches are mirrored. Mutually exclusive with `only_protected_branches`.</summary>
+        /// <summary>Regular expression for branch names to mirror. Only branches with names matching the regex are mirrored. Premium and Ultimate only. Mutually exclusive with `only_protected_branches`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? MirrorBranchRegex { get => _explicitNullValueMirrorBranchRegex; set { _explicitNullValueMirrorBranchRegex = value; AdditionalData?.Remove("mirror_branch_regex"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mirror_branch_regex"); else _explicitNullProperties?.Remove("mirror_branch_regex"); } }

@@ -87,7 +87,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Members.Item
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMember>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMember.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Updates a specified member of a group.
+        /// Updates a specified member of a group. If administrator approval for role promotions is turned on, requests that promote existing users into a billable role require administrator approval. Administrator approval for role promotions can be turned on only when the `enable_member_promotion_management` application setting is enabled. When the request is queued, the response has a `message` object that maps the username to `Request queued for administrator approval.`.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMember"/></returns>
         /// <param name="body">The request body</param>
@@ -144,7 +144,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Members.Item
             return requestInfo;
         }
         /// <summary>
-        /// Updates a specified member of a group.
+        /// Updates a specified member of a group. If administrator approval for role promotions is turned on, requests that promote existing users into a billable role require administrator approval. Administrator approval for role promotions can be turned on only when the `enable_member_promotion_management` application setting is enabled. When the request is queued, the response has a `message` object that maps the username to `Request queued for administrator approval.`.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

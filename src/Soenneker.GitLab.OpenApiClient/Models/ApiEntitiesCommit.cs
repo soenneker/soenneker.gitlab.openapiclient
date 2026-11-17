@@ -51,10 +51,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The authored_date property</summary>
+        /// <summary>Date and time when the commit was authored.</summary>
         public DateTimeOffset? AuthoredDate { get => _explicitNullValueAuthoredDate; set { _explicitNullValueAuthoredDate = value; AdditionalData?.Remove("authored_date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authored_date"); else _explicitNullProperties?.Remove("authored_date"); } }
         private DateTimeOffset? _explicitNullValueAuthoredDate = default!;
-        /// <summary>The author_email property</summary>
+        /// <summary>Email address of the commit author.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? AuthorEmail { get => _explicitNullValueAuthorEmail; set { _explicitNullValueAuthorEmail = value; AdditionalData?.Remove("author_email"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("author_email"); else _explicitNullProperties?.Remove("author_email"); } }
@@ -64,7 +64,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string AuthorEmail { get => _explicitNullValueAuthorEmail; set { _explicitNullValueAuthorEmail = value; AdditionalData?.Remove("author_email"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("author_email"); else _explicitNullProperties?.Remove("author_email"); } }
         private string _explicitNullValueAuthorEmail = default!;
 #endif
-        /// <summary>The author_name property</summary>
+        /// <summary>Name of the commit author.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? AuthorName { get => _explicitNullValueAuthorName; set { _explicitNullValueAuthorName = value; AdditionalData?.Remove("author_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("author_name"); else _explicitNullProperties?.Remove("author_name"); } }
@@ -74,10 +74,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string AuthorName { get => _explicitNullValueAuthorName; set { _explicitNullValueAuthorName = value; AdditionalData?.Remove("author_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("author_name"); else _explicitNullProperties?.Remove("author_name"); } }
         private string _explicitNullValueAuthorName = default!;
 #endif
-        /// <summary>The committed_date property</summary>
+        /// <summary>Date and time when the commit was committed.</summary>
         public DateTimeOffset? CommittedDate { get => _explicitNullValueCommittedDate; set { _explicitNullValueCommittedDate = value; AdditionalData?.Remove("committed_date"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("committed_date"); else _explicitNullProperties?.Remove("committed_date"); } }
         private DateTimeOffset? _explicitNullValueCommittedDate = default!;
-        /// <summary>The committer_email property</summary>
+        /// <summary>Email address of the committer.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CommitterEmail { get => _explicitNullValueCommitterEmail; set { _explicitNullValueCommitterEmail = value; AdditionalData?.Remove("committer_email"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("committer_email"); else _explicitNullProperties?.Remove("committer_email"); } }
@@ -87,7 +87,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string CommitterEmail { get => _explicitNullValueCommitterEmail; set { _explicitNullValueCommitterEmail = value; AdditionalData?.Remove("committer_email"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("committer_email"); else _explicitNullProperties?.Remove("committer_email"); } }
         private string _explicitNullValueCommitterEmail = default!;
 #endif
-        /// <summary>The committer_name property</summary>
+        /// <summary>Name of the committer.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CommitterName { get => _explicitNullValueCommitterName; set { _explicitNullValueCommitterName = value; AdditionalData?.Remove("committer_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("committer_name"); else _explicitNullProperties?.Remove("committer_name"); } }
@@ -97,10 +97,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string CommitterName { get => _explicitNullValueCommitterName; set { _explicitNullValueCommitterName = value; AdditionalData?.Remove("committer_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("committer_name"); else _explicitNullProperties?.Remove("committer_name"); } }
         private string _explicitNullValueCommitterName = default!;
 #endif
-        /// <summary>The created_at property</summary>
+        /// <summary>Date and time when the commit was created. Identical to `committed_date`.</summary>
         public DateTimeOffset? CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; AdditionalData?.Remove("created_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_at"); else _explicitNullProperties?.Remove("created_at"); } }
         private DateTimeOffset? _explicitNullValueCreatedAt = default!;
-        /// <summary>The extended_trailers property</summary>
+        /// <summary>Git trailers parsed from the commit message, with every value for each key.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommitExtendedTrailersProperty? ExtendedTrailers { get => _explicitNullValueExtendedTrailers; set { _explicitNullValueExtendedTrailers = value; AdditionalData?.Remove("extended_trailers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extended_trailers"); else _explicitNullProperties?.Remove("extended_trailers"); } }
@@ -110,7 +110,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommitExtendedTrailersProperty ExtendedTrailers { get => _explicitNullValueExtendedTrailers; set { _explicitNullValueExtendedTrailers = value; AdditionalData?.Remove("extended_trailers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extended_trailers"); else _explicitNullProperties?.Remove("extended_trailers"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommitExtendedTrailersProperty _explicitNullValueExtendedTrailers = default!;
 #endif
-        /// <summary>The id property</summary>
+        /// <summary>Full SHA of the commit.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
@@ -120,7 +120,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string _explicitNullValueId = default!;
 #endif
-        /// <summary>The message property</summary>
+        /// <summary>Full commit message.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; AdditionalData?.Remove("message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
@@ -130,7 +130,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; AdditionalData?.Remove("message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
         private string _explicitNullValueMessage = default!;
 #endif
-        /// <summary>The parent_ids property</summary>
+        /// <summary>SHAs of the parent commits.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? ParentIds { get => _explicitNullValueParentIds; set { _explicitNullValueParentIds = value; AdditionalData?.Remove("parent_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parent_ids"); else _explicitNullProperties?.Remove("parent_ids"); } }
@@ -140,7 +140,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public List<string> ParentIds { get => _explicitNullValueParentIds; set { _explicitNullValueParentIds = value; AdditionalData?.Remove("parent_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parent_ids"); else _explicitNullProperties?.Remove("parent_ids"); } }
         private List<string> _explicitNullValueParentIds = default!;
 #endif
-        /// <summary>The short_id property</summary>
+        /// <summary>Short SHA of the commit.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ShortId { get => _explicitNullValueShortId; set { _explicitNullValueShortId = value; AdditionalData?.Remove("short_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("short_id"); else _explicitNullProperties?.Remove("short_id"); } }
@@ -150,7 +150,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string ShortId { get => _explicitNullValueShortId; set { _explicitNullValueShortId = value; AdditionalData?.Remove("short_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("short_id"); else _explicitNullProperties?.Remove("short_id"); } }
         private string _explicitNullValueShortId = default!;
 #endif
-        /// <summary>The title property</summary>
+        /// <summary>Title of the commit message.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; AdditionalData?.Remove("title"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
@@ -160,7 +160,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; AdditionalData?.Remove("title"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
         private string _explicitNullValueTitle = default!;
 #endif
-        /// <summary>The trailers property</summary>
+        /// <summary>Git trailers parsed from the commit message. Duplicate keys include the last value only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommitTrailersProperty? Trailers { get => _explicitNullValueTrailers; set { _explicitNullValueTrailers = value; AdditionalData?.Remove("trailers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trailers"); else _explicitNullProperties?.Remove("trailers"); } }
@@ -170,7 +170,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommitTrailersProperty Trailers { get => _explicitNullValueTrailers; set { _explicitNullValueTrailers = value; AdditionalData?.Remove("trailers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trailers"); else _explicitNullProperties?.Remove("trailers"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommitTrailersProperty _explicitNullValueTrailers = default!;
 #endif
-        /// <summary>The web_url property</summary>
+        /// <summary>URL to view the commit in the GitLab UI.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? WebUrl { get => _explicitNullValueWebUrl; set { _explicitNullValueWebUrl = value; AdditionalData?.Remove("web_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("web_url"); else _explicitNullProperties?.Remove("web_url"); } }

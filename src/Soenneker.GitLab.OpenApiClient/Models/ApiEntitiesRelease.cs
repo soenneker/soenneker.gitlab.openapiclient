@@ -126,7 +126,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesReleasesEvidence> Evidences { get => _explicitNullValueEvidences; set { _explicitNullValueEvidences = value; AdditionalData?.Remove("evidences"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("evidences"); else _explicitNullProperties?.Remove("evidences"); } }
         private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesReleasesEvidence> _explicitNullValueEvidences = default!;
 #endif
-        /// <summary>The links property</summary>
+        /// <summary>Links of the release.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesReleaseLinks? Links { get => _explicitNullValueLinks; set { _explicitNullValueLinks = value; AdditionalData?.Remove("_links"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("_links"); else _explicitNullProperties?.Remove("_links"); } }

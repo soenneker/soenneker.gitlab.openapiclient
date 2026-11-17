@@ -31,16 +31,16 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The additions property</summary>
+        /// <summary>Number of lines added by the contributor.</summary>
         public int? Additions { get => _explicitNullValueAdditions; set { _explicitNullValueAdditions = value; AdditionalData?.Remove("additions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("additions"); else _explicitNullProperties?.Remove("additions"); } }
         private int? _explicitNullValueAdditions = default!;
-        /// <summary>The commits property</summary>
+        /// <summary>Number of commits by the contributor.</summary>
         public int? Commits { get => _explicitNullValueCommits; set { _explicitNullValueCommits = value; AdditionalData?.Remove("commits"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commits"); else _explicitNullProperties?.Remove("commits"); } }
         private int? _explicitNullValueCommits = default!;
-        /// <summary>The deletions property</summary>
+        /// <summary>Number of lines deleted by the contributor.</summary>
         public int? Deletions { get => _explicitNullValueDeletions; set { _explicitNullValueDeletions = value; AdditionalData?.Remove("deletions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deletions"); else _explicitNullProperties?.Remove("deletions"); } }
         private int? _explicitNullValueDeletions = default!;
-        /// <summary>The email property</summary>
+        /// <summary>Email address of the contributor.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; AdditionalData?.Remove("email"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
@@ -50,7 +50,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; AdditionalData?.Remove("email"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
         private string _explicitNullValueEmail = default!;
 #endif
-        /// <summary>The name property</summary>
+        /// <summary>Name of the contributor.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }

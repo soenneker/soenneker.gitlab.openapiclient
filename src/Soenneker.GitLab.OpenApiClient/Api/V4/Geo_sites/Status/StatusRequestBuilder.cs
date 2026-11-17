@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Geo_sites.Status
         {
         }
         /// <summary>
-        /// Lists all Geo site statuses.
+        /// Lists all Geo site statuses. When the legacy `geo_upload_replication` and `geo_upload_force_primary_checksumming` feature flags are disabled, the `uploads_*` fields are the sum of the values for each upload type.
         /// </summary>
         /// <returns>A List&lt;global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGeoSiteStatus&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -53,7 +53,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Geo_sites.Status
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// Lists all Geo site statuses.
+        /// Lists all Geo site statuses. When the legacy `geo_upload_replication` and `geo_upload_force_primary_checksumming` feature flags are disabled, the `uploads_*` fields are the sum of the values for each upload type.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -81,7 +81,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Geo_sites.Status
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Geo_sites.Status.StatusRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Lists all Geo site statuses.
+        /// Lists all Geo site statuses. When the legacy `geo_upload_replication` and `geo_upload_force_primary_checksumming` feature flags are disabled, the `uploads_*` fields are the sum of the values for each upload type.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class StatusRequestBuilderGetQueryParameters 

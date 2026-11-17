@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.User.Activities
         {
         }
         /// <summary>
-        /// Lists all activity for a specified user.
+        /// Lists the last activity date of users, sorted from oldest to newest. By default, lists users active in the last six months. Use `from` to change the start date. Only users with public profiles are listed, unless you are an administrator or auditor.
         /// </summary>
         /// <returns>A List&lt;global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserActivity&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -53,7 +53,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.User.Activities
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// Lists all activity for a specified user.
+        /// Lists the last activity date of users, sorted from oldest to newest. By default, lists users active in the last six months. Use `from` to change the start date. Only users with public profiles are listed, unless you are an administrator or auditor.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -81,12 +81,12 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.User.Activities
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.User.Activities.ActivitiesRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Lists all activity for a specified user.
+        /// Lists the last activity date of users, sorted from oldest to newest. By default, lists users active in the last six months. Use `from` to change the start date. Only users with public profiles are listed, unless you are an administrator or auditor.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class ActivitiesRequestBuilderGetQueryParameters 
         {
-            /// <summary>Date string in the format YEAR-MONTH-DAY</summary>
+            /// <summary>Date string in the format `YEAR-MM-DD`, for example `2016-03-11`. Default is six months ago.</summary>
             [QueryParameter("from")]
             public DateTimeOffset? From { get; set; }
             /// <summary>Page number of results to retrieve.</summary>

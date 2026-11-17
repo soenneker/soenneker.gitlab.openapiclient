@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Personal_access_token
         {
         }
         /// <summary>
-        /// Creates a personal access token for a user. To create a fine-grained personal access token, use `granular_scopes` instead of `scopes`. Token values are included with the response, but cannot be retrieved later. Administrators only.
+        /// Creates a personal access token for a user. To create a fine-grained personal access token, use `granular_scopes` instead of `scopes`. The scopes in `granular_scopes` apply to the user the token is for. With `selected_memberships`, that user must have access to each group and project listed. Token values are included with the response, but cannot be retrieved later. Administrators only. The `last_used_ips` attribute was [introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/250307) in GitLab 19.4. The `granular_scopes` attribute was [introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/630541) in GitLab 19.6.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPersonalAccessTokenWithToken"/></returns>
         /// <param name="body">The request body</param>
@@ -54,7 +54,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Personal_access_token
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPersonalAccessTokenWithToken>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPersonalAccessTokenWithToken.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Creates a personal access token for a user. To create a fine-grained personal access token, use `granular_scopes` instead of `scopes`. Token values are included with the response, but cannot be retrieved later. Administrators only.
+        /// Creates a personal access token for a user. To create a fine-grained personal access token, use `granular_scopes` instead of `scopes`. The scopes in `granular_scopes` apply to the user the token is for. With `selected_memberships`, that user must have access to each group and project listed. Token values are included with the response, but cannot be retrieved later. Administrators only. The `last_used_ips` attribute was [introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/250307) in GitLab 19.4. The `granular_scopes` attribute was [introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/630541) in GitLab 19.6.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

@@ -66,7 +66,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.User.Emails
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// Adds an email address for the currently authenticated user.
+        /// Adds an email address for the currently authenticated user. If the email address is already in use, returns a validation error with the message `has already been taken`.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesEmail"/></returns>
         /// <param name="body">The request body</param>
@@ -105,7 +105,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.User.Emails
             return requestInfo;
         }
         /// <summary>
-        /// Adds an email address for the currently authenticated user.
+        /// Adds an email address for the currently authenticated user. If the email address is already in use, returns a validation error with the message `has already been taken`.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

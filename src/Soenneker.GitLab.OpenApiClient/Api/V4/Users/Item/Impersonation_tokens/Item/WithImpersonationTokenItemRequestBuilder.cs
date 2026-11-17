@@ -51,7 +51,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Impersonation_tokens.
             await RequestAdapter.SendNoContentAsync(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Retrieves an impersonation token for a specified user. Administrators only.
+        /// Retrieves an impersonation token for a specified user. Administrators only. The `last_used_ips` attribute was [introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/242819) in GitLab 19.2 and made generally available in GitLab 19.4. The `granular_scopes` attribute was [introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/632315) in GitLab 19.5.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesImpersonationToken"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -87,7 +87,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Impersonation_tokens.
             return requestInfo;
         }
         /// <summary>
-        /// Retrieves an impersonation token for a specified user. Administrators only.
+        /// Retrieves an impersonation token for a specified user. Administrators only. The `last_used_ips` attribute was [introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/242819) in GitLab 19.2 and made generally available in GitLab 19.4. The `granular_scopes` attribute was [introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/632315) in GitLab 19.5.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

@@ -27,7 +27,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The commit_source property</summary>
+        /// <summary>Source of the commit. Always `gitaly`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CommitSource { get => _explicitNullValueCommitSource; set { _explicitNullValueCommitSource = value; AdditionalData?.Remove("commit_source"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commit_source"); else _explicitNullProperties?.Remove("commit_source"); } }
@@ -47,7 +47,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommitSignatureSignatureProperty Signature { get => _explicitNullValueSignature; set { _explicitNullValueSignature = value; AdditionalData?.Remove("signature"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signature"); else _explicitNullProperties?.Remove("signature"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommitSignatureSignatureProperty _explicitNullValueSignature = default!;
 #endif
-        /// <summary>The signature_type property</summary>
+        /// <summary>Type of the signature: `PGP`, `SSH`, or `X509`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SignatureType { get => _explicitNullValueSignatureType; set { _explicitNullValueSignatureType = value; AdditionalData?.Remove("signature_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signature_type"); else _explicitNullProperties?.Remove("signature_type"); } }

@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Members.Item.State
         {
         }
         /// <summary>
-        /// Updates the membership state for a specified user in a group.
+        /// Updates the membership state for a specified user in a group. When a user is over the free user limit, changing their membership state to `awaiting` or `active` can allow them to access the group or project. The change is applied to all subgroups and projects.
         /// </summary>
         /// <returns>A <see cref="Stream"/></returns>
         /// <param name="body">The request body</param>
@@ -54,7 +54,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Members.Item.State
             return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Updates the membership state for a specified user in a group.
+        /// Updates the membership state for a specified user in a group. When a user is over the free user limit, changing their membership state to `awaiting` or `active` can allow them to access the group or project. The change is applied to all subgroups and projects.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

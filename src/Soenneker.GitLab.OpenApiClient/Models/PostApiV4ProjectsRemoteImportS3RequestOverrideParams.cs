@@ -283,10 +283,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Enable approval and change requests by GitLab Duo on merge requests. Behind a feature flag named `duo_code_review_decisions`, enabled by default.</summary>
         public bool? DuoCodeReviewDecisionsEnabled { get => _explicitNullValueDuoCodeReviewDecisionsEnabled; set { _explicitNullValueDuoCodeReviewDecisionsEnabled = value; AdditionalData?.Remove("duo_code_review_decisions_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duo_code_review_decisions_enabled"); else _explicitNullProperties?.Remove("duo_code_review_decisions_enabled"); } }
         private bool? _explicitNullValueDuoCodeReviewDecisionsEnabled = default!;
-        /// <summary>[Beta] Default review depth for GitLab Duo Code Review Flow. One of `standard` or `deep`</summary>
+        /// <summary>[Beta] Default review depth for GitLab Duo Code Review Flow. One of `lite` or `standard`</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsRemoteImportS3RequestOverrideParamsDuoCodeReviewDefaultDepth? DuoCodeReviewDefaultDepth { get => _explicitNullValueDuoCodeReviewDefaultDepth; set { _explicitNullValueDuoCodeReviewDefaultDepth = value; AdditionalData?.Remove("duo_code_review_default_depth"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duo_code_review_default_depth"); else _explicitNullProperties?.Remove("duo_code_review_default_depth"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsRemoteImportS3RequestOverrideParamsDuoCodeReviewDefaultDepth? _explicitNullValueDuoCodeReviewDefaultDepth = default!;
-        /// <summary>[Beta] Allow deep reviews by GitLab Duo Code Review Flow</summary>
+        /// <summary>[Beta] Allow Standard reviews by GitLab Duo Code Review Flow</summary>
         public bool? DuoCodeReviewDepthAllowed { get => _explicitNullValueDuoCodeReviewDepthAllowed; set { _explicitNullValueDuoCodeReviewDepthAllowed = value; AdditionalData?.Remove("duo_code_review_depth_allowed"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duo_code_review_depth_allowed"); else _explicitNullProperties?.Remove("duo_code_review_depth_allowed"); } }
         private bool? _explicitNullValueDuoCodeReviewDepthAllowed = default!;
         /// <summary>Turn on Agentic Breaking Change Resolution for this project</summary>

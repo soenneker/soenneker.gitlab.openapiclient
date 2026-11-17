@@ -47,7 +47,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Service_accounts
         {
         }
         /// <summary>
-        /// Lists all instance service accounts. Use the `page` and `per_page` pagination parameters to filter the results.
+        /// Lists all instance service accounts. Use the `page` and `per_page` pagination parameters to filter the results. This feature was introduced in GitLab 17.1.
         /// </summary>
         /// <returns>A List&lt;global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesServiceAccount&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -66,7 +66,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Service_accounts
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// Creates an instance service account.
+        /// Creates an instance service account. If the email address is already in use by another user, `400 Bad request` is returned.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesServiceAccount"/></returns>
         /// <param name="body">The request body</param>
@@ -86,7 +86,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Service_accounts
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesServiceAccount>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesServiceAccount.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Lists all instance service accounts. Use the `page` and `per_page` pagination parameters to filter the results.
+        /// Lists all instance service accounts. Use the `page` and `per_page` pagination parameters to filter the results. This feature was introduced in GitLab 17.1.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -105,7 +105,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Service_accounts
             return requestInfo;
         }
         /// <summary>
-        /// Creates an instance service account.
+        /// Creates an instance service account. If the email address is already in use by another user, `400 Bad request` is returned.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -136,7 +136,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Service_accounts
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Service_accounts.Service_accountsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Lists all instance service accounts. Use the `page` and `per_page` pagination parameters to filter the results.
+        /// Lists all instance service accounts. Use the `page` and `per_page` pagination parameters to filter the results. This feature was introduced in GitLab 17.1.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Service_accountsRequestBuilderGetQueryParameters 

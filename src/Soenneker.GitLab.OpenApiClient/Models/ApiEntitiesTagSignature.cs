@@ -35,16 +35,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesTagSignatureSignatureProperty Signature { get => _explicitNullValueSignature; set { _explicitNullValueSignature = value; AdditionalData?.Remove("signature"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signature"); else _explicitNullProperties?.Remove("signature"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesTagSignatureSignatureProperty _explicitNullValueSignature = default!;
 #endif
-        /// <summary>The signature_type property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? SignatureType { get => _explicitNullValueSignatureType; set { _explicitNullValueSignatureType = value; AdditionalData?.Remove("signature_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signature_type"); else _explicitNullProperties?.Remove("signature_type"); } }
-        private string? _explicitNullValueSignatureType = default!;
-#nullable restore
-#else
-        public string SignatureType { get => _explicitNullValueSignatureType; set { _explicitNullValueSignatureType = value; AdditionalData?.Remove("signature_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signature_type"); else _explicitNullProperties?.Remove("signature_type"); } }
-        private string _explicitNullValueSignatureType = default!;
-#endif
+        /// <summary>Type of signature. Signature details are returned only for `X509`.</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesTagSignatureSignatureType? SignatureType { get => _explicitNullValueSignatureType; set { _explicitNullValueSignatureType = value; AdditionalData?.Remove("signature_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signature_type"); else _explicitNullProperties?.Remove("signature_type"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesTagSignatureSignatureType? _explicitNullValueSignatureType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesTagSignature"/> and sets the default values.
         /// </summary>
@@ -71,7 +64,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "signature", n => { Signature = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesTagSignatureSignatureProperty>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesTagSignatureSignatureProperty.CreateFromDiscriminatorValue); } },
-                { "signature_type", n => { SignatureType = n.GetStringValue(); } },
+                { "signature_type", n => { var parsed = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesTagSignatureSignatureType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueSignatureType = default; _explicitNullProperties?.Remove("signature_type"); AdditionalData["signature_type"] = unknown; } else { SignatureType = parsed; AdditionalData.Remove("signature_type"); } } },
             };
         }
         /// <summary>
@@ -82,7 +75,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesTagSignatureSignatureProperty>("signature", Signature);
-            writer.WriteStringValue("signature_type", SignatureType);
+            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesTagSignatureSignatureType>("signature_type", SignatureType);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

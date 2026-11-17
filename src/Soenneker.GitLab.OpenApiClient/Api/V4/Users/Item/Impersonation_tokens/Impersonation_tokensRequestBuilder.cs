@@ -47,7 +47,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Impersonation_tokens
         {
         }
         /// <summary>
-        /// Lists all impersonation tokens for a specified user. Administrators only.
+        /// Lists all impersonation tokens for a specified user. Administrators only. The `last_used_ips` attribute was [introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/242819) in GitLab 19.2 and made generally available in GitLab 19.4. The `granular_scopes` attribute was [introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/632315) in GitLab 19.5.
         /// </summary>
         /// <returns>A List&lt;global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesImpersonationToken&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -66,7 +66,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Impersonation_tokens
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// Creates an impersonation token. These tokens are used to act on behalf of a user and can perform API calls as well as Git read and write actions. These tokens are not visible to the associated user on their profile settings page. Token values are included with the response, but cannot be retrieved later. Administrators only.
+        /// Creates an impersonation token for a specified user. These tokens are used to act on behalf of a user and can perform API calls as well as Git read and write actions. These tokens are not visible to the associated user on their profile settings page. To create a fine-grained impersonation token, use `granular_scopes` instead of `scopes`. The scopes in `granular_scopes` apply to the user the token is for. With `selected_memberships`, that user must have access to each group and project listed. Either `scopes` or `granular_scopes` is required. Token values are included with the response, but cannot be retrieved later. Administrators only. The `last_used_ips` attribute was [introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/242819) in GitLab 19.2 and made generally available in GitLab 19.4. The `granular_scopes` parameter was [introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/243990) in GitLab 19.2, and the `granular_scopes` attribute in the response was [introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/632315) in GitLab 19.5.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesImpersonationTokenWithToken"/></returns>
         /// <param name="body">The request body</param>
@@ -86,7 +86,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Impersonation_tokens
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesImpersonationTokenWithToken>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesImpersonationTokenWithToken.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Lists all impersonation tokens for a specified user. Administrators only.
+        /// Lists all impersonation tokens for a specified user. Administrators only. The `last_used_ips` attribute was [introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/242819) in GitLab 19.2 and made generally available in GitLab 19.4. The `granular_scopes` attribute was [introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/632315) in GitLab 19.5.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -105,7 +105,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Impersonation_tokens
             return requestInfo;
         }
         /// <summary>
-        /// Creates an impersonation token. These tokens are used to act on behalf of a user and can perform API calls as well as Git read and write actions. These tokens are not visible to the associated user on their profile settings page. Token values are included with the response, but cannot be retrieved later. Administrators only.
+        /// Creates an impersonation token for a specified user. These tokens are used to act on behalf of a user and can perform API calls as well as Git read and write actions. These tokens are not visible to the associated user on their profile settings page. To create a fine-grained impersonation token, use `granular_scopes` instead of `scopes`. The scopes in `granular_scopes` apply to the user the token is for. With `selected_memberships`, that user must have access to each group and project listed. Either `scopes` or `granular_scopes` is required. Token values are included with the response, but cannot be retrieved later. Administrators only. The `last_used_ips` attribute was [introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/242819) in GitLab 19.2 and made generally available in GitLab 19.4. The `granular_scopes` parameter was [introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/243990) in GitLab 19.2, and the `granular_scopes` attribute in the response was [introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/632315) in GitLab 19.5.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -136,7 +136,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Impersonation_tokens
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Impersonation_tokens.Impersonation_tokensRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Lists all impersonation tokens for a specified user. Administrators only.
+        /// Lists all impersonation tokens for a specified user. Administrators only. The `last_used_ips` attribute was [introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/242819) in GitLab 19.2 and made generally available in GitLab 19.4. The `granular_scopes` attribute was [introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/632315) in GitLab 19.5.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Impersonation_tokensRequestBuilderGetQueryParameters 

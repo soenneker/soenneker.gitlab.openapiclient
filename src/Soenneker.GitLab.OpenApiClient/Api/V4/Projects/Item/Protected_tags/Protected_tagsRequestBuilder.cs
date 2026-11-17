@@ -66,7 +66,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Protected_tags
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// Protects a specified repository tag using a wildcard protected tag.
+        /// Protects a single repository tag, or several project repository tags by using a wildcard protected tag.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedTag"/></returns>
         /// <param name="body">The request body</param>
@@ -105,7 +105,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Protected_tags
             return requestInfo;
         }
         /// <summary>
-        /// Protects a specified repository tag using a wildcard protected tag.
+        /// Protects a single repository tag, or several project repository tags by using a wildcard protected tag.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

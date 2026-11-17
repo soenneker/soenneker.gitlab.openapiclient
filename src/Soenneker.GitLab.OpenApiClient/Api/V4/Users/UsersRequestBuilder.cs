@@ -47,7 +47,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users
         {
         }
         /// <summary>
-        /// Lists all users on the instance. This endpoint supports keyset pagination. In GitLab 17.0 and later, keyset pagination is used by default.
+        /// Lists all users on the instance. This endpoint supports keyset pagination. By default, offset pagination is limited to 50,000 results. Use keyset pagination to retrieve more. Only administrators and auditors can use the `created_after`, `created_before`, `two_factor`, and `without_projects` parameters. For other users, these parameters are ignored.
         /// </summary>
         /// <returns>A List&lt;global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -66,7 +66,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// Creates a user. Administrators only.
+        /// Creates a user. If `private_profile` is not set, it defaults to the instance setting for new user profiles. If `bio` is not set, it defaults to an empty string. Administrators only.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserWithAdmin"/></returns>
         /// <param name="body">The request body</param>
@@ -86,7 +86,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserWithAdmin>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserWithAdmin.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Lists all users on the instance. This endpoint supports keyset pagination. In GitLab 17.0 and later, keyset pagination is used by default.
+        /// Lists all users on the instance. This endpoint supports keyset pagination. By default, offset pagination is limited to 50,000 results. Use keyset pagination to retrieve more. Only administrators and auditors can use the `created_after`, `created_before`, `two_factor`, and `without_projects` parameters. For other users, these parameters are ignored.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -105,7 +105,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users
             return requestInfo;
         }
         /// <summary>
-        /// Creates a user. Administrators only.
+        /// Creates a user. If `private_profile` is not set, it defaults to the instance setting for new user profiles. If `bio` is not set, it defaults to an empty string. Administrators only.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -136,21 +136,21 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Users.UsersRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Lists all users on the instance. This endpoint supports keyset pagination. In GitLab 17.0 and later, keyset pagination is used by default.
+        /// Lists all users on the instance. This endpoint supports keyset pagination. By default, offset pagination is limited to 50,000 results. Use keyset pagination to retrieve more. Only administrators and auditors can use the `created_after`, `created_before`, `two_factor`, and `without_projects` parameters. For other users, these parameters are ignored.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class UsersRequestBuilderGetQueryParameters 
         {
-            /// <summary>If `true`, returns only active users.</summary>
+            /// <summary>If `true`, returns only active users. `false` has no effect.</summary>
             [QueryParameter("active")]
             public bool? Active { get; set; }
             /// <summary>If `true`, returns only administrators.</summary>
             [QueryParameter("admins")]
             public bool? Admins { get; set; }
-            /// <summary>If `true`, returns only auditor users.</summary>
+            /// <summary>If `true`, returns only auditor users. Premium and Ultimate only.</summary>
             [QueryParameter("auditors")]
             public bool? Auditors { get; set; }
-            /// <summary>If `true`, returns only blocked users.</summary>
+            /// <summary>If `true`, returns only blocked users. `false` has no effect.</summary>
             [QueryParameter("blocked")]
             public bool? Blocked { get; set; }
             /// <summary>Return users created on or after the specified time.</summary>
@@ -178,10 +178,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users
             /// <summary>If `true`, returns only bot or internal users.</summary>
             [QueryParameter("exclude_humans")]
             public bool? ExcludeHumans { get; set; }
-            /// <summary>If `true`, returns only users that are not internal.</summary>
+            /// <summary>If `true`, returns only users that are not internal. Internal users include the alert bot and the support bot. Bot users for projects and groups are not excluded.</summary>
             [QueryParameter("exclude_internal")]
             public bool? ExcludeInternal { get; set; }
-            /// <summary>If `true`, returns only external users.</summary>
+            /// <summary>If `true`, returns only external users. `false` has no effect.</summary>
             [QueryParameter("external")]
             public bool? External { get; set; }
             /// <summary>Return a single user with the specified external authentication provider UID. Use with `provider`. Administrators only. All or none of `extern_uid`, `provider` must be provided.</summary>
@@ -197,7 +197,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users
             /// <summary>If `true`, returns only regular users that are not bot or internal users.</summary>
             [QueryParameter("humans")]
             public bool? Humans { get; set; }
-            /// <summary>Sort results by the specified field.</summary>
+            /// <summary>Sort results by the specified field. Default is `id`.</summary>
             [QueryParameter("order_by")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4UsersOrderByParameter? OrderBy { get; set; }
             /// <summary>Page number of results to retrieve.</summary>
@@ -206,7 +206,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users
             /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
-            /// <summary>Name of the external authentication provider. All or none of `extern_uid`, `provider` must be provided.</summary>
+            /// <summary>Name of the external authentication provider. The `scim` provider is available in Premium and Ultimate only. All or none of `extern_uid`, `provider` must be provided.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("provider")]
@@ -226,7 +226,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users
             [QueryParameter("public_email")]
             public string PublicEmail { get; set; }
 #endif
-            /// <summary>Search for users by name, username, or public email.</summary>
+            /// <summary>Search for users by name, username, or public email. Administrators can also search private email addresses. Email matches must be exact. Name and username matches are fuzzy.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("search")]
@@ -239,10 +239,10 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users
             /// <summary>If `true`, excludes LDAP users from the results.</summary>
             [QueryParameter("skip_ldap")]
             public bool? SkipLdap { get; set; }
-            /// <summary>Sort results in ascending or descending order.</summary>
+            /// <summary>Sort results in ascending or descending order. Default is `desc`.</summary>
             [QueryParameter("sort")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4UsersSortParameter? Sort { get; set; }
-            /// <summary>Filter users by Two-factor authentication.</summary>
+            /// <summary>Filter users by two-factor authentication. Possible values are `enabled` and `disabled`. By default, returns all users.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("two_factor")]
@@ -252,7 +252,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users
             [QueryParameter("two_factor")]
             public string TwoFactor { get; set; }
 #endif
-            /// <summary>Return a single user with the specified username.</summary>
+            /// <summary>Return a single user with the specified username. The match is case-insensitive.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("username")]
@@ -265,7 +265,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users
             /// <summary>If `true`, includes [custom attributes](https://docs.gitlab.com/api/custom_attributes/) in the response. Administrators only.</summary>
             [QueryParameter("with_custom_attributes")]
             public bool? WithCustomAttributes { get; set; }
-            /// <summary>If `true`, excludes project bot users from the results.</summary>
+            /// <summary>If `true`, excludes bot users for projects and groups from the results.</summary>
             [QueryParameter("without_project_bots")]
             public bool? WithoutProjectBots { get; set; }
             /// <summary>If `true`, returns only users that do not have any projects.</summary>

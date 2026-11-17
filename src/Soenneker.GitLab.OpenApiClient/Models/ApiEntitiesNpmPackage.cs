@@ -21,6 +21,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             else if (parseNode.GetChildNode("dist-tags") is { } nullNodeDistTags && nullNodeDistTags.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DistTags = null;
             if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
             else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("time") is null) { _explicitNullValueTime = default!; _explicitNullProperties?.Remove("time"); }
+            else if (parseNode.GetChildNode("time") is { } nullNodeTime && nullNodeTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Time = null;
             if (parseNode.GetChildNode("versions") is null) { _explicitNullValueVersions = default!; _explicitNullProperties?.Remove("versions"); }
             else if (parseNode.GetChildNode("versions") is { } nullNodeVersions && nullNodeVersions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Versions = null;
         }
@@ -46,6 +48,16 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string _explicitNullValueName = default!;
+#endif
+        /// <summary>The time property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNpmPackageTimeProperty? Time { get => _explicitNullValueTime; set { _explicitNullValueTime = value; AdditionalData?.Remove("time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("time"); else _explicitNullProperties?.Remove("time"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNpmPackageTimeProperty? _explicitNullValueTime = default!;
+#nullable restore
+#else
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNpmPackageTimeProperty Time { get => _explicitNullValueTime; set { _explicitNullValueTime = value; AdditionalData?.Remove("time"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("time"); else _explicitNullProperties?.Remove("time"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNpmPackageTimeProperty _explicitNullValueTime = default!;
 #endif
         /// <summary>The versions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -84,6 +96,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             {
                 { "dist-tags", n => { DistTags = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNpmPackageDistTagsProperty>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNpmPackageDistTagsProperty.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
+                { "time", n => { Time = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNpmPackageTimeProperty>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNpmPackageTimeProperty.CreateFromDiscriminatorValue); } },
                 { "versions", n => { Versions = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNpmPackageVersionsProperty>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNpmPackageVersionsProperty.CreateFromDiscriminatorValue); } },
             };
         }
@@ -96,6 +109,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNpmPackageDistTagsProperty>("dist-tags", DistTags);
             writer.WriteStringValue("name", Name);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNpmPackageTimeProperty>("time", Time);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNpmPackageVersionsProperty>("versions", Versions);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

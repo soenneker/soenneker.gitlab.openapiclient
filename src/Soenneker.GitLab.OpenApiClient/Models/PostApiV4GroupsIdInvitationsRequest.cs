@@ -31,7 +31,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             else if (parseNode.GetChildNode("user_id") is { } nullNodeUserId && nullNodeUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserId = null;
         }
 
-        /// <summary>Access level to grant to the invited user. For a list of values, see [roles](https://docs.gitlab.com/user/permissions/#default-roles).</summary>
+        /// <summary>Access level to grant to the invited user. For a list of values, see [roles](https://docs.gitlab.com/user/permissions/#default-roles). On Premium and Ultimate, `5` (Minimal access) is also valid when `id` is a top-level group.</summary>
         public int? AccessLevel { get => _explicitNullValueAccessLevel; set { _explicitNullValueAccessLevel = value; AdditionalData?.Remove("access_level"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("access_level"); else _explicitNullProperties?.Remove("access_level"); } }
         private int? _explicitNullValueAccessLevel = default!;
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>

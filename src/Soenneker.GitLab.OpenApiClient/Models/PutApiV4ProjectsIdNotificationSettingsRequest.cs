@@ -69,25 +69,25 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Enable/disable this notification</summary>
+        /// <summary>Turn on notifications when a merge request you&apos;re eligible to approve is created.</summary>
         public bool? Approver { get => _explicitNullValueApprover; set { _explicitNullValueApprover = value; AdditionalData?.Remove("approver"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approver"); else _explicitNullProperties?.Remove("approver"); } }
         private bool? _explicitNullValueApprover = default!;
-        /// <summary>Enable/disable this notification</summary>
+        /// <summary>Turn on notifications when a merge request&apos;s reviewer is changed.</summary>
         public bool? ChangeReviewerMergeRequest { get => _explicitNullValueChangeReviewerMergeRequest; set { _explicitNullValueChangeReviewerMergeRequest = value; AdditionalData?.Remove("change_reviewer_merge_request"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("change_reviewer_merge_request"); else _explicitNullProperties?.Remove("change_reviewer_merge_request"); } }
         private bool? _explicitNullValueChangeReviewerMergeRequest = default!;
-        /// <summary>Enable/disable this notification</summary>
+        /// <summary>Turn on notifications when an issue is closed.</summary>
         public bool? CloseIssue { get => _explicitNullValueCloseIssue; set { _explicitNullValueCloseIssue = value; AdditionalData?.Remove("close_issue"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("close_issue"); else _explicitNullProperties?.Remove("close_issue"); } }
         private bool? _explicitNullValueCloseIssue = default!;
-        /// <summary>Enable/disable this notification</summary>
+        /// <summary>Turn on notifications when a merge request is closed.</summary>
         public bool? CloseMergeRequest { get => _explicitNullValueCloseMergeRequest; set { _explicitNullValueCloseMergeRequest = value; AdditionalData?.Remove("close_merge_request"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("close_merge_request"); else _explicitNullProperties?.Remove("close_merge_request"); } }
         private bool? _explicitNullValueCloseMergeRequest = default!;
-        /// <summary>Enable/disable this notification</summary>
+        /// <summary>Turn on notifications when a pipeline fails.</summary>
         public bool? FailedPipeline { get => _explicitNullValueFailedPipeline; set { _explicitNullValueFailedPipeline = value; AdditionalData?.Remove("failed_pipeline"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failed_pipeline"); else _explicitNullProperties?.Remove("failed_pipeline"); } }
         private bool? _explicitNullValueFailedPipeline = default!;
-        /// <summary>Enable/disable this notification</summary>
+        /// <summary>Turn on notifications when a previously failed pipeline is fixed.</summary>
         public bool? FixedPipeline { get => _explicitNullValueFixedPipeline; set { _explicitNullValueFixedPipeline = value; AdditionalData?.Remove("fixed_pipeline"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fixed_pipeline"); else _explicitNullProperties?.Remove("fixed_pipeline"); } }
         private bool? _explicitNullValueFixedPipeline = default!;
-        /// <summary>Enable/disable this notification</summary>
+        /// <summary>Turn on notifications when an issue is due tomorrow.</summary>
         public bool? IssueDue { get => _explicitNullValueIssueDue; set { _explicitNullValueIssueDue = value; AdditionalData?.Remove("issue_due"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issue_due"); else _explicitNullProperties?.Remove("issue_due"); } }
         private bool? _explicitNullValueIssueDue = default!;
         /// <summary>The project notification level</summary>
@@ -100,40 +100,40 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Level { get => _explicitNullValueLevel; set { _explicitNullValueLevel = value; AdditionalData?.Remove("level"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("level"); else _explicitNullProperties?.Remove("level"); } }
         private string _explicitNullValueLevel = default!;
 #endif
-        /// <summary>Enable/disable this notification</summary>
+        /// <summary>Turn on notifications when a merge request is merged.</summary>
         public bool? MergeMergeRequest { get => _explicitNullValueMergeMergeRequest; set { _explicitNullValueMergeMergeRequest = value; AdditionalData?.Remove("merge_merge_request"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_merge_request"); else _explicitNullProperties?.Remove("merge_merge_request"); } }
         private bool? _explicitNullValueMergeMergeRequest = default!;
-        /// <summary>Enable/disable this notification</summary>
+        /// <summary>Turn on notifications when a merge request is set to auto-merge.</summary>
         public bool? MergeWhenPipelineSucceeds { get => _explicitNullValueMergeWhenPipelineSucceeds; set { _explicitNullValueMergeWhenPipelineSucceeds = value; AdditionalData?.Remove("merge_when_pipeline_succeeds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_when_pipeline_succeeds"); else _explicitNullProperties?.Remove("merge_when_pipeline_succeeds"); } }
         private bool? _explicitNullValueMergeWhenPipelineSucceeds = default!;
-        /// <summary>Enable/disable this notification</summary>
+        /// <summary>Turn on notifications when a project is moved.</summary>
         public bool? MovedProject { get => _explicitNullValueMovedProject; set { _explicitNullValueMovedProject = value; AdditionalData?.Remove("moved_project"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("moved_project"); else _explicitNullProperties?.Remove("moved_project"); } }
         private bool? _explicitNullValueMovedProject = default!;
-        /// <summary>Enable/disable this notification</summary>
+        /// <summary>Turn on notifications when a new issue is created.</summary>
         public bool? NewIssue { get => _explicitNullValueNewIssue; set { _explicitNullValueNewIssue = value; AdditionalData?.Remove("new_issue"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_issue"); else _explicitNullProperties?.Remove("new_issue"); } }
         private bool? _explicitNullValueNewIssue = default!;
-        /// <summary>Enable/disable this notification</summary>
+        /// <summary>Turn on notifications when a new merge request is created.</summary>
         public bool? NewMergeRequest { get => _explicitNullValueNewMergeRequest; set { _explicitNullValueNewMergeRequest = value; AdditionalData?.Remove("new_merge_request"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_merge_request"); else _explicitNullProperties?.Remove("new_merge_request"); } }
         private bool? _explicitNullValueNewMergeRequest = default!;
-        /// <summary>Enable/disable this notification</summary>
+        /// <summary>Turn on notifications when a new comment is added.</summary>
         public bool? NewNote { get => _explicitNullValueNewNote; set { _explicitNullValueNewNote = value; AdditionalData?.Remove("new_note"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_note"); else _explicitNullProperties?.Remove("new_note"); } }
         private bool? _explicitNullValueNewNote = default!;
-        /// <summary>Enable/disable this notification</summary>
+        /// <summary>Turn on notifications when a new release is published.</summary>
         public bool? NewRelease { get => _explicitNullValueNewRelease; set { _explicitNullValueNewRelease = value; AdditionalData?.Remove("new_release"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_release"); else _explicitNullProperties?.Remove("new_release"); } }
         private bool? _explicitNullValueNewRelease = default!;
-        /// <summary>Enable/disable this notification</summary>
+        /// <summary>Turn on notifications when someone pushes to a merge request.</summary>
         public bool? PushToMergeRequest { get => _explicitNullValuePushToMergeRequest; set { _explicitNullValuePushToMergeRequest = value; AdditionalData?.Remove("push_to_merge_request"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("push_to_merge_request"); else _explicitNullProperties?.Remove("push_to_merge_request"); } }
         private bool? _explicitNullValuePushToMergeRequest = default!;
-        /// <summary>Enable/disable this notification</summary>
+        /// <summary>Turn on notifications when an issue is reassigned.</summary>
         public bool? ReassignIssue { get => _explicitNullValueReassignIssue; set { _explicitNullValueReassignIssue = value; AdditionalData?.Remove("reassign_issue"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reassign_issue"); else _explicitNullProperties?.Remove("reassign_issue"); } }
         private bool? _explicitNullValueReassignIssue = default!;
-        /// <summary>Enable/disable this notification</summary>
+        /// <summary>Turn on notifications when a merge request is reassigned.</summary>
         public bool? ReassignMergeRequest { get => _explicitNullValueReassignMergeRequest; set { _explicitNullValueReassignMergeRequest = value; AdditionalData?.Remove("reassign_merge_request"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reassign_merge_request"); else _explicitNullProperties?.Remove("reassign_merge_request"); } }
         private bool? _explicitNullValueReassignMergeRequest = default!;
-        /// <summary>Enable/disable this notification</summary>
+        /// <summary>Turn on notifications when an issue is reopened.</summary>
         public bool? ReopenIssue { get => _explicitNullValueReopenIssue; set { _explicitNullValueReopenIssue = value; AdditionalData?.Remove("reopen_issue"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reopen_issue"); else _explicitNullProperties?.Remove("reopen_issue"); } }
         private bool? _explicitNullValueReopenIssue = default!;
-        /// <summary>Enable/disable this notification</summary>
+        /// <summary>Turn on notifications when a merge request is reopened.</summary>
         public bool? ReopenMergeRequest { get => _explicitNullValueReopenMergeRequest; set { _explicitNullValueReopenMergeRequest = value; AdditionalData?.Remove("reopen_merge_request"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reopen_merge_request"); else _explicitNullProperties?.Remove("reopen_merge_request"); } }
         private bool? _explicitNullValueReopenMergeRequest = default!;
         /// <summary>Enable/disable this notification</summary>
@@ -145,7 +145,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Enable/disable this notification</summary>
         public bool? ServiceAccountSuccessPipeline { get => _explicitNullValueServiceAccountSuccessPipeline; set { _explicitNullValueServiceAccountSuccessPipeline = value; AdditionalData?.Remove("service_account_success_pipeline"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("service_account_success_pipeline"); else _explicitNullProperties?.Remove("service_account_success_pipeline"); } }
         private bool? _explicitNullValueServiceAccountSuccessPipeline = default!;
-        /// <summary>Enable/disable this notification</summary>
+        /// <summary>Turn on notifications when a pipeline completes successfully.</summary>
         public bool? SuccessPipeline { get => _explicitNullValueSuccessPipeline; set { _explicitNullValueSuccessPipeline = value; AdditionalData?.Remove("success_pipeline"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("success_pipeline"); else _explicitNullProperties?.Remove("success_pipeline"); } }
         private bool? _explicitNullValueSuccessPipeline = default!;
         /// <summary>

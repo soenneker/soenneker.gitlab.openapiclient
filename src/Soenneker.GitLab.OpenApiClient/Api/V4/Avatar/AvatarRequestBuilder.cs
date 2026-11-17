@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Avatar
         {
         }
         /// <summary>
-        /// Returns the Gravatar URL for the user with the given public email address.
+        /// Returns the avatar URL for the user with the given public email address. If no account is associated with the email address, returns the URL from an external avatar service. This endpoint does not require authentication.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAvatar"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Avatar
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAvatar>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAvatar.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Returns the Gravatar URL for the user with the given public email address.
+        /// Returns the avatar URL for the user with the given public email address. If no account is associated with the email address, returns the URL from an external avatar service. This endpoint does not require authentication.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -80,7 +80,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Avatar
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Avatar.AvatarRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Returns the Gravatar URL for the user with the given public email address.
+        /// Returns the avatar URL for the user with the given public email address. If no account is associated with the email address, returns the URL from an external avatar service. This endpoint does not require authentication.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class AvatarRequestBuilderGetQueryParameters 

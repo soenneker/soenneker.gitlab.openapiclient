@@ -66,7 +66,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Invitations
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// Adds a member to a project. You can specify a user ID or invite a user by email.
+        /// Adds a member to a project. You can specify a user ID or invite a user by email. You must have the Maintainer or Owner role for the project, and group membership lock must be disabled. On GitLab Self-Managed, an administrator must add the user if new user accounts or user invitations are not allowed, and must approve the invitation if administrator approval for role promotions is enabled. If an invitation fails, the response has a `status` of `error` and a `message` object that maps each email address or username to its error. To enable Manage non-billable promotions, enable the `enable_member_promotion_management` application setting. Users whose requests are queued for administrator approval are listed in `queued_users`.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesInvitation"/></returns>
         /// <param name="body">The request body</param>
@@ -105,7 +105,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Invitations
             return requestInfo;
         }
         /// <summary>
-        /// Adds a member to a project. You can specify a user ID or invite a user by email.
+        /// Adds a member to a project. You can specify a user ID or invite a user by email. You must have the Maintainer or Owner role for the project, and group membership lock must be disabled. On GitLab Self-Managed, an administrator must add the user if new user accounts or user invitations are not allowed, and must approve the invitation if administrator approval for role promotions is enabled. If an invitation fails, the response has a `status` of `error` and a `message` object that maps each email address or username to its error. To enable Manage non-billable promotions, enable the `enable_member_promotion_management` application setting. Users whose requests are queued for administrator approval are listed in `queued_users`.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

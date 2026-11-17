@@ -55,7 +55,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Maximum time (in seconds) for blob downloads during Geo sync.</summary>
+        /// <summary>Maximum time (in seconds) for blob downloads during Geo sync. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/work_items/569919) in GitLab 18.10.</summary>
         public int? BlobDownloadTimeout { get => _explicitNullValueBlobDownloadTimeout; set { _explicitNullValueBlobDownloadTimeout = value; AdditionalData?.Remove("blob_download_timeout"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("blob_download_timeout"); else _explicitNullProperties?.Remove("blob_download_timeout"); } }
         private int? _explicitNullValueBlobDownloadTimeout = default!;
         /// <summary>Number of consecutive checksum mismatches on a secondary site before it reports the resource to the primary for self-heal re-verification. Read from the secondary site, and has no effect when set on the primary.</summary>

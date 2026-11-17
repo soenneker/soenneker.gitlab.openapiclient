@@ -51,7 +51,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The author_email_regex property</summary>
+        /// <summary>Allow only commit author emails that match this regular expression.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? AuthorEmailRegex { get => _explicitNullValueAuthorEmailRegex; set { _explicitNullValueAuthorEmailRegex = value; AdditionalData?.Remove("author_email_regex"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("author_email_regex"); else _explicitNullProperties?.Remove("author_email_regex"); } }
@@ -61,7 +61,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string AuthorEmailRegex { get => _explicitNullValueAuthorEmailRegex; set { _explicitNullValueAuthorEmailRegex = value; AdditionalData?.Remove("author_email_regex"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("author_email_regex"); else _explicitNullProperties?.Remove("author_email_regex"); } }
         private string _explicitNullValueAuthorEmailRegex = default!;
 #endif
-        /// <summary>The branch_name_regex property</summary>
+        /// <summary>Allow only branch names that match this regular expression.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? BranchNameRegex { get => _explicitNullValueBranchNameRegex; set { _explicitNullValueBranchNameRegex = value; AdditionalData?.Remove("branch_name_regex"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("branch_name_regex"); else _explicitNullProperties?.Remove("branch_name_regex"); } }
@@ -71,13 +71,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string BranchNameRegex { get => _explicitNullValueBranchNameRegex; set { _explicitNullValueBranchNameRegex = value; AdditionalData?.Remove("branch_name_regex"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("branch_name_regex"); else _explicitNullProperties?.Remove("branch_name_regex"); } }
         private string _explicitNullValueBranchNameRegex = default!;
 #endif
-        /// <summary>The commit_committer_check property</summary>
+        /// <summary>If `true`, allows commits from users only if the committer email is one of their own verified emails.</summary>
         public bool? CommitCommitterCheck { get => _explicitNullValueCommitCommitterCheck; set { _explicitNullValueCommitCommitterCheck = value; AdditionalData?.Remove("commit_committer_check"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commit_committer_check"); else _explicitNullProperties?.Remove("commit_committer_check"); } }
         private bool? _explicitNullValueCommitCommitterCheck = default!;
-        /// <summary>The commit_committer_name_check property</summary>
+        /// <summary>If `true`, allows commits from users only if the commit author name is consistent with their GitLab account name.</summary>
         public bool? CommitCommitterNameCheck { get => _explicitNullValueCommitCommitterNameCheck; set { _explicitNullValueCommitCommitterNameCheck = value; AdditionalData?.Remove("commit_committer_name_check"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commit_committer_name_check"); else _explicitNullProperties?.Remove("commit_committer_name_check"); } }
         private bool? _explicitNullValueCommitCommitterNameCheck = default!;
-        /// <summary>The commit_message_negative_regex property</summary>
+        /// <summary>Reject commit messages matching this regular expression.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CommitMessageNegativeRegex { get => _explicitNullValueCommitMessageNegativeRegex; set { _explicitNullValueCommitMessageNegativeRegex = value; AdditionalData?.Remove("commit_message_negative_regex"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commit_message_negative_regex"); else _explicitNullProperties?.Remove("commit_message_negative_regex"); } }
@@ -87,7 +87,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string CommitMessageNegativeRegex { get => _explicitNullValueCommitMessageNegativeRegex; set { _explicitNullValueCommitMessageNegativeRegex = value; AdditionalData?.Remove("commit_message_negative_regex"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commit_message_negative_regex"); else _explicitNullProperties?.Remove("commit_message_negative_regex"); } }
         private string _explicitNullValueCommitMessageNegativeRegex = default!;
 #endif
-        /// <summary>The commit_message_regex property</summary>
+        /// <summary>Allow only commit messages that match this regular expression.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CommitMessageRegex { get => _explicitNullValueCommitMessageRegex; set { _explicitNullValueCommitMessageRegex = value; AdditionalData?.Remove("commit_message_regex"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commit_message_regex"); else _explicitNullProperties?.Remove("commit_message_regex"); } }
@@ -97,13 +97,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string CommitMessageRegex { get => _explicitNullValueCommitMessageRegex; set { _explicitNullValueCommitMessageRegex = value; AdditionalData?.Remove("commit_message_regex"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commit_message_regex"); else _explicitNullProperties?.Remove("commit_message_regex"); } }
         private string _explicitNullValueCommitMessageRegex = default!;
 #endif
-        /// <summary>The created_at property</summary>
+        /// <summary>Date and time when the push rule was created.</summary>
         public DateTimeOffset? CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; AdditionalData?.Remove("created_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_at"); else _explicitNullProperties?.Remove("created_at"); } }
         private DateTimeOffset? _explicitNullValueCreatedAt = default!;
-        /// <summary>The deny_delete_tag property</summary>
+        /// <summary>If `true`, denies deleting a tag.</summary>
         public bool? DenyDeleteTag { get => _explicitNullValueDenyDeleteTag; set { _explicitNullValueDenyDeleteTag = value; AdditionalData?.Remove("deny_delete_tag"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deny_delete_tag"); else _explicitNullProperties?.Remove("deny_delete_tag"); } }
         private bool? _explicitNullValueDenyDeleteTag = default!;
-        /// <summary>The file_name_regex property</summary>
+        /// <summary>Reject filenames matching this regular expression.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? FileNameRegex { get => _explicitNullValueFileNameRegex; set { _explicitNullValueFileNameRegex = value; AdditionalData?.Remove("file_name_regex"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file_name_regex"); else _explicitNullProperties?.Remove("file_name_regex"); } }
@@ -113,22 +113,22 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string FileNameRegex { get => _explicitNullValueFileNameRegex; set { _explicitNullValueFileNameRegex = value; AdditionalData?.Remove("file_name_regex"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file_name_regex"); else _explicitNullProperties?.Remove("file_name_regex"); } }
         private string _explicitNullValueFileNameRegex = default!;
 #endif
-        /// <summary>The id property</summary>
+        /// <summary>ID of the push rule.</summary>
         public long? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private long? _explicitNullValueId = default!;
-        /// <summary>The max_file_size property</summary>
+        /// <summary>Maximum file size (MB) allowed.</summary>
         public int? MaxFileSize { get => _explicitNullValueMaxFileSize; set { _explicitNullValueMaxFileSize = value; AdditionalData?.Remove("max_file_size"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("max_file_size"); else _explicitNullProperties?.Remove("max_file_size"); } }
         private int? _explicitNullValueMaxFileSize = default!;
-        /// <summary>The member_check property</summary>
+        /// <summary>If `true`, allows only GitLab users to author commits.</summary>
         public bool? MemberCheck { get => _explicitNullValueMemberCheck; set { _explicitNullValueMemberCheck = value; AdditionalData?.Remove("member_check"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("member_check"); else _explicitNullProperties?.Remove("member_check"); } }
         private bool? _explicitNullValueMemberCheck = default!;
-        /// <summary>The prevent_secrets property</summary>
+        /// <summary>If `true`, rejects files that are likely to contain secrets.</summary>
         public bool? PreventSecrets { get => _explicitNullValuePreventSecrets; set { _explicitNullValuePreventSecrets = value; AdditionalData?.Remove("prevent_secrets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prevent_secrets"); else _explicitNullProperties?.Remove("prevent_secrets"); } }
         private bool? _explicitNullValuePreventSecrets = default!;
-        /// <summary>The reject_non_dco_commits property</summary>
+        /// <summary>If `true`, rejects a commit when it is not DCO certified.</summary>
         public bool? RejectNonDcoCommits { get => _explicitNullValueRejectNonDcoCommits; set { _explicitNullValueRejectNonDcoCommits = value; AdditionalData?.Remove("reject_non_dco_commits"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reject_non_dco_commits"); else _explicitNullProperties?.Remove("reject_non_dco_commits"); } }
         private bool? _explicitNullValueRejectNonDcoCommits = default!;
-        /// <summary>The reject_unsigned_commits property</summary>
+        /// <summary>If `true`, rejects a commit when it is not signed.</summary>
         public bool? RejectUnsignedCommits { get => _explicitNullValueRejectUnsignedCommits; set { _explicitNullValueRejectUnsignedCommits = value; AdditionalData?.Remove("reject_unsigned_commits"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reject_unsigned_commits"); else _explicitNullProperties?.Remove("reject_unsigned_commits"); } }
         private bool? _explicitNullValueRejectUnsignedCommits = default!;
         /// <summary>

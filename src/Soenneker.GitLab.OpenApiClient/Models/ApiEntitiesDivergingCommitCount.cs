@@ -25,10 +25,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The ahead property</summary>
+        /// <summary>Number of commits in `to` that are not in `from`.</summary>
         public int? Ahead { get => _explicitNullValueAhead; set { _explicitNullValueAhead = value; AdditionalData?.Remove("ahead"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ahead"); else _explicitNullProperties?.Remove("ahead"); } }
         private int? _explicitNullValueAhead = default!;
-        /// <summary>The behind property</summary>
+        /// <summary>Number of commits in `from` that are not in `to`.</summary>
         public int? Behind { get => _explicitNullValueBehind; set { _explicitNullValueBehind = value; AdditionalData?.Remove("behind"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("behind"); else _explicitNullProperties?.Remove("behind"); } }
         private int? _explicitNullValueBehind = default!;
         /// <summary>

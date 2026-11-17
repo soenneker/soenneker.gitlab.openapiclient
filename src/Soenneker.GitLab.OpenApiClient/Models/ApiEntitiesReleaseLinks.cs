@@ -7,10 +7,11 @@ using System.IO;
 using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
+    /// <summary>
+    /// Links of the release.
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public partial class ApiEntitiesReleaseLinks : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
     , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
         // Track explicitly assigned nulls separately from absent properties.
         private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
@@ -35,7 +36,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The closed_issues_url property</summary>
+        /// <summary>HTTP URL of the release&apos;s closed issues.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ClosedIssuesUrl { get => _explicitNullValueClosedIssuesUrl; set { _explicitNullValueClosedIssuesUrl = value; AdditionalData?.Remove("closed_issues_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("closed_issues_url"); else _explicitNullProperties?.Remove("closed_issues_url"); } }
@@ -45,7 +46,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string ClosedIssuesUrl { get => _explicitNullValueClosedIssuesUrl; set { _explicitNullValueClosedIssuesUrl = value; AdditionalData?.Remove("closed_issues_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("closed_issues_url"); else _explicitNullProperties?.Remove("closed_issues_url"); } }
         private string _explicitNullValueClosedIssuesUrl = default!;
 #endif
-        /// <summary>The closed_merge_requests_url property</summary>
+        /// <summary>HTTP URL of the release&apos;s closed merge requests.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ClosedMergeRequestsUrl { get => _explicitNullValueClosedMergeRequestsUrl; set { _explicitNullValueClosedMergeRequestsUrl = value; AdditionalData?.Remove("closed_merge_requests_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("closed_merge_requests_url"); else _explicitNullProperties?.Remove("closed_merge_requests_url"); } }
@@ -55,7 +56,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string ClosedMergeRequestsUrl { get => _explicitNullValueClosedMergeRequestsUrl; set { _explicitNullValueClosedMergeRequestsUrl = value; AdditionalData?.Remove("closed_merge_requests_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("closed_merge_requests_url"); else _explicitNullProperties?.Remove("closed_merge_requests_url"); } }
         private string _explicitNullValueClosedMergeRequestsUrl = default!;
 #endif
-        /// <summary>The edit_url property</summary>
+        /// <summary>HTTP URL of the release&apos;s edit page.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? EditUrl { get => _explicitNullValueEditUrl; set { _explicitNullValueEditUrl = value; AdditionalData?.Remove("edit_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("edit_url"); else _explicitNullProperties?.Remove("edit_url"); } }
@@ -65,7 +66,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string EditUrl { get => _explicitNullValueEditUrl; set { _explicitNullValueEditUrl = value; AdditionalData?.Remove("edit_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("edit_url"); else _explicitNullProperties?.Remove("edit_url"); } }
         private string _explicitNullValueEditUrl = default!;
 #endif
-        /// <summary>The merged_merge_requests_url property</summary>
+        /// <summary>HTTP URL of the release&apos;s merged merge requests.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? MergedMergeRequestsUrl { get => _explicitNullValueMergedMergeRequestsUrl; set { _explicitNullValueMergedMergeRequestsUrl = value; AdditionalData?.Remove("merged_merge_requests_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merged_merge_requests_url"); else _explicitNullProperties?.Remove("merged_merge_requests_url"); } }
@@ -75,7 +76,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string MergedMergeRequestsUrl { get => _explicitNullValueMergedMergeRequestsUrl; set { _explicitNullValueMergedMergeRequestsUrl = value; AdditionalData?.Remove("merged_merge_requests_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merged_merge_requests_url"); else _explicitNullProperties?.Remove("merged_merge_requests_url"); } }
         private string _explicitNullValueMergedMergeRequestsUrl = default!;
 #endif
-        /// <summary>The opened_issues_url property</summary>
+        /// <summary>HTTP URL of the release&apos;s open issues.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? OpenedIssuesUrl { get => _explicitNullValueOpenedIssuesUrl; set { _explicitNullValueOpenedIssuesUrl = value; AdditionalData?.Remove("opened_issues_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("opened_issues_url"); else _explicitNullProperties?.Remove("opened_issues_url"); } }
@@ -85,7 +86,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string OpenedIssuesUrl { get => _explicitNullValueOpenedIssuesUrl; set { _explicitNullValueOpenedIssuesUrl = value; AdditionalData?.Remove("opened_issues_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("opened_issues_url"); else _explicitNullProperties?.Remove("opened_issues_url"); } }
         private string _explicitNullValueOpenedIssuesUrl = default!;
 #endif
-        /// <summary>The opened_merge_requests_url property</summary>
+        /// <summary>HTTP URL of the release&apos;s open merge requests.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? OpenedMergeRequestsUrl { get => _explicitNullValueOpenedMergeRequestsUrl; set { _explicitNullValueOpenedMergeRequestsUrl = value; AdditionalData?.Remove("opened_merge_requests_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("opened_merge_requests_url"); else _explicitNullProperties?.Remove("opened_merge_requests_url"); } }
@@ -95,7 +96,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string OpenedMergeRequestsUrl { get => _explicitNullValueOpenedMergeRequestsUrl; set { _explicitNullValueOpenedMergeRequestsUrl = value; AdditionalData?.Remove("opened_merge_requests_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("opened_merge_requests_url"); else _explicitNullProperties?.Remove("opened_merge_requests_url"); } }
         private string _explicitNullValueOpenedMergeRequestsUrl = default!;
 #endif
-        /// <summary>The self property</summary>
+        /// <summary>HTTP URL of the release.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Self { get => _explicitNullValueSelf; set { _explicitNullValueSelf = value; AdditionalData?.Remove("self"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("self"); else _explicitNullProperties?.Remove("self"); } }

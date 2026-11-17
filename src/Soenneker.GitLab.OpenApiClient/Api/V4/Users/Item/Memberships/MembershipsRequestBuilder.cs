@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Memberships
         {
         }
         /// <summary>
-        /// Lists all project and group memberships for a specified user. Administrators only.
+        /// Lists all project and group memberships for a specified user. Only direct memberships are returned. Inherited memberships, for example in subgroups, are not included. Administrators only.
         /// </summary>
         /// <returns>A List&lt;global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMembership&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -53,7 +53,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Memberships
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// Lists all project and group memberships for a specified user. Administrators only.
+        /// Lists all project and group memberships for a specified user. Only direct memberships are returned. Inherited memberships, for example in subgroups, are not included. Administrators only.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -81,7 +81,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Memberships
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Memberships.MembershipsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Lists all project and group memberships for a specified user. Administrators only.
+        /// Lists all project and group memberships for a specified user. Only direct memberships are returned. Inherited memberships, for example in subgroups, are not included. Administrators only.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class MembershipsRequestBuilderGetQueryParameters 

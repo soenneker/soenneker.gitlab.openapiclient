@@ -69,7 +69,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Protected_environmen
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedEnvironment>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedEnvironment.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Updates a specified protected environment for a group.
+        /// Updates a specified protected environment for a group. Each `user_id` must belong to a user with at least the Maintainer role for the group. Each `group_id` must belong to the group, one of its subgroups, or a group it is shared with. To update an existing entry, pass its `id` in the `deploy_access_levels` or `approval_rules` hash.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedEnvironment"/></returns>
         /// <param name="body">The request body</param>
@@ -126,7 +126,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Protected_environmen
             return requestInfo;
         }
         /// <summary>
-        /// Updates a specified protected environment for a group.
+        /// Updates a specified protected environment for a group. Each `user_id` must belong to a user with at least the Maintainer role for the group. Each `group_id` must belong to the group, one of its subgroups, or a group it is shared with. To update an existing entry, pass its `id` in the `deploy_access_levels` or `approval_rules` hash.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

@@ -69,7 +69,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Protected_branches.I
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroupProtectedBranch>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroupProtectedBranch.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Updates a protected branch for a specified group.
+        /// Updates a protected branch for a specified group. Each element of `allowed_to_push`, `allowed_to_merge`, and `allowed_to_unprotect` takes the form `{access_level: integer}` or `{member_role_id: integer}`. Each access level must be a valid access level. The custom role referenced by `member_role_id` must belong to the same top-level group as the protected branch. To update an access level, include its `id` in the hash. To delete an access level, include its `id` and set `_destroy` to `true`.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroupProtectedBranch"/></returns>
         /// <param name="body">The request body</param>
@@ -126,7 +126,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Protected_branches.I
             return requestInfo;
         }
         /// <summary>
-        /// Updates a protected branch for a specified group.
+        /// Updates a protected branch for a specified group. Each element of `allowed_to_push`, `allowed_to_merge`, and `allowed_to_unprotect` takes the form `{access_level: integer}` or `{member_role_id: integer}`. Each access level must be a valid access level. The custom role referenced by `member_role_id` must belong to the same top-level group as the protected branch. To update an access level, include its `id` in the hash. To delete an access level, include its `id` and set `_destroy` to `true`.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

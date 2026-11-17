@@ -66,7 +66,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Protected_environmen
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// Protects a specified environment for a group.
+        /// Protects a specified environment for a group. Each `user_id` must belong to a user with at least the Maintainer role for the group. Each `group_id` must belong to the group, one of its subgroups, or a group it is shared with.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedEnvironment"/></returns>
         /// <param name="body">The request body</param>
@@ -105,7 +105,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Protected_environmen
             return requestInfo;
         }
         /// <summary>
-        /// Protects a specified environment for a group.
+        /// Protects a specified environment for a group. Each `user_id` must belong to a user with at least the Maintainer role for the group. Each `group_id` must belong to the group, one of its subgroups, or a group it is shared with.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

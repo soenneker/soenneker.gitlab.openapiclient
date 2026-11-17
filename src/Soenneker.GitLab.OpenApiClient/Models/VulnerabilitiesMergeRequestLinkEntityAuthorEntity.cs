@@ -83,7 +83,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string AvatarPath { get => _explicitNullValueAvatarPath; set { _explicitNullValueAvatarPath = value; AdditionalData?.Remove("avatar_path"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("avatar_path"); else _explicitNullProperties?.Remove("avatar_path"); } }
         private string _explicitNullValueAvatarPath = default!;
 #endif
-        /// <summary>The avatar_url property</summary>
+        /// <summary>URL of the user&apos;s avatar.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? AvatarUrl { get => _explicitNullValueAvatarUrl; set { _explicitNullValueAvatarUrl = value; AdditionalData?.Remove("avatar_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("avatar_url"); else _explicitNullProperties?.Remove("avatar_url"); } }
@@ -106,13 +106,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The human property</summary>
         public bool? Human { get => _explicitNullValueHuman; set { _explicitNullValueHuman = value; AdditionalData?.Remove("human"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("human"); else _explicitNullProperties?.Remove("human"); } }
         private bool? _explicitNullValueHuman = default!;
-        /// <summary>The id property</summary>
+        /// <summary>ID of the user.</summary>
         public long? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private long? _explicitNullValueId = default!;
-        /// <summary>The locked property</summary>
+        /// <summary>If `true`, the user account is locked, and the user cannot sign in until the lock expires or an administrator unlocks the account.</summary>
         public bool? Locked { get => _explicitNullValueLocked; set { _explicitNullValueLocked = value; AdditionalData?.Remove("locked"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locked"); else _explicitNullProperties?.Remove("locked"); } }
         private bool? _explicitNullValueLocked = default!;
-        /// <summary>The name property</summary>
+        /// <summary>Name of the user. For a bot user, `****` if the current user cannot read the bot&apos;s project or group.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
@@ -132,7 +132,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Path { get => _explicitNullValuePath; set { _explicitNullValuePath = value; AdditionalData?.Remove("path"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("path"); else _explicitNullProperties?.Remove("path"); } }
         private string _explicitNullValuePath = default!;
 #endif
-        /// <summary>The public_email property</summary>
+        /// <summary>Public email address of the user.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PublicEmail { get => _explicitNullValuePublicEmail; set { _explicitNullValuePublicEmail = value; AdditionalData?.Remove("public_email"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("public_email"); else _explicitNullProperties?.Remove("public_email"); } }
@@ -152,7 +152,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string ShowStatus { get => _explicitNullValueShowStatus; set { _explicitNullValueShowStatus = value; AdditionalData?.Remove("show_status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("show_status"); else _explicitNullProperties?.Remove("show_status"); } }
         private string _explicitNullValueShowStatus = default!;
 #endif
-        /// <summary>The state property</summary>
+        /// <summary>State of the user account. Possible values: `active`, `blocked`, `ldap_blocked`, `blocked_pending_approval`, `banned`, or `deactivated`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? State { get => _explicitNullValueState; set { _explicitNullValueState = value; AdditionalData?.Remove("state"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("state"); else _explicitNullProperties?.Remove("state"); } }
@@ -172,7 +172,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string StatusTooltipHtml { get => _explicitNullValueStatusTooltipHtml; set { _explicitNullValueStatusTooltipHtml = value; AdditionalData?.Remove("status_tooltip_html"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status_tooltip_html"); else _explicitNullProperties?.Remove("status_tooltip_html"); } }
         private string _explicitNullValueStatusTooltipHtml = default!;
 #endif
-        /// <summary>The username property</summary>
+        /// <summary>Username of the user.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Username { get => _explicitNullValueUsername; set { _explicitNullValueUsername = value; AdditionalData?.Remove("username"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("username"); else _explicitNullProperties?.Remove("username"); } }
@@ -182,7 +182,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Username { get => _explicitNullValueUsername; set { _explicitNullValueUsername = value; AdditionalData?.Remove("username"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("username"); else _explicitNullProperties?.Remove("username"); } }
         private string _explicitNullValueUsername = default!;
 #endif
-        /// <summary>The web_url property</summary>
+        /// <summary>URL of the user&apos;s profile.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? WebUrl { get => _explicitNullValueWebUrl; set { _explicitNullValueWebUrl = value; AdditionalData?.Remove("web_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("web_url"); else _explicitNullProperties?.Remove("web_url"); } }

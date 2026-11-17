@@ -37,19 +37,19 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The allow_force_push property</summary>
+        /// <summary>If `true`, force push is allowed on the branch.</summary>
         public bool? AllowForcePush { get => _explicitNullValueAllowForcePush; set { _explicitNullValueAllowForcePush = value; AdditionalData?.Remove("allow_force_push"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allow_force_push"); else _explicitNullProperties?.Remove("allow_force_push"); } }
         private bool? _explicitNullValueAllowForcePush = default!;
-        /// <summary>The code_owner_approval_required property</summary>
+        /// <summary>If `true`, code owner approval is required for pushes to the branch.</summary>
         public bool? CodeOwnerApprovalRequired { get => _explicitNullValueCodeOwnerApprovalRequired; set { _explicitNullValueCodeOwnerApprovalRequired = value; AdditionalData?.Remove("code_owner_approval_required"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("code_owner_approval_required"); else _explicitNullProperties?.Remove("code_owner_approval_required"); } }
         private bool? _explicitNullValueCodeOwnerApprovalRequired = default!;
-        /// <summary>The id property</summary>
+        /// <summary>ID of the protected branch.</summary>
         public long? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private long? _explicitNullValueId = default!;
-        /// <summary>The inherited property</summary>
+        /// <summary>If `true`, the protection settings are inherited from a group. Premium and Ultimate only.</summary>
         public bool? Inherited { get => _explicitNullValueInherited; set { _explicitNullValueInherited = value; AdditionalData?.Remove("inherited"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inherited"); else _explicitNullProperties?.Remove("inherited"); } }
         private bool? _explicitNullValueInherited = default!;
-        /// <summary>The merge_access_levels property</summary>
+        /// <summary>Array of merge access level configurations.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedRefAccess>? MergeAccessLevels { get => _explicitNullValueMergeAccessLevels; set { _explicitNullValueMergeAccessLevels = value; AdditionalData?.Remove("merge_access_levels"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_access_levels"); else _explicitNullProperties?.Remove("merge_access_levels"); } }
@@ -59,7 +59,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedRefAccess> MergeAccessLevels { get => _explicitNullValueMergeAccessLevels; set { _explicitNullValueMergeAccessLevels = value; AdditionalData?.Remove("merge_access_levels"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_access_levels"); else _explicitNullProperties?.Remove("merge_access_levels"); } }
         private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedRefAccess> _explicitNullValueMergeAccessLevels = default!;
 #endif
-        /// <summary>The name property</summary>
+        /// <summary>Name of the protected branch.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
@@ -69,7 +69,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string _explicitNullValueName = default!;
 #endif
-        /// <summary>The push_access_levels property</summary>
+        /// <summary>Array of push access level configurations.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedRefAccess>? PushAccessLevels { get => _explicitNullValuePushAccessLevels; set { _explicitNullValuePushAccessLevels = value; AdditionalData?.Remove("push_access_levels"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("push_access_levels"); else _explicitNullProperties?.Remove("push_access_levels"); } }
@@ -79,7 +79,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedRefAccess> PushAccessLevels { get => _explicitNullValuePushAccessLevels; set { _explicitNullValuePushAccessLevels = value; AdditionalData?.Remove("push_access_levels"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("push_access_levels"); else _explicitNullProperties?.Remove("push_access_levels"); } }
         private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedRefAccess> _explicitNullValuePushAccessLevels = default!;
 #endif
-        /// <summary>The unprotect_access_levels property</summary>
+        /// <summary>Array of unprotect access level configurations.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedRefAccess>? UnprotectAccessLevels { get => _explicitNullValueUnprotectAccessLevels; set { _explicitNullValueUnprotectAccessLevels = value; AdditionalData?.Remove("unprotect_access_levels"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unprotect_access_levels"); else _explicitNullProperties?.Remove("unprotect_access_levels"); } }

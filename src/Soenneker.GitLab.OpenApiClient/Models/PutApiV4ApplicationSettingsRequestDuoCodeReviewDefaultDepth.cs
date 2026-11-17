@@ -3,17 +3,17 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
-    /// <summary>Default review depth for GitLab Duo Code Review Flow. One of `standard` or `deep`. Beta.</summary>
+    /// <summary>Default review depth for GitLab Duo Code Review Flow. One of `lite` or `standard`. Beta.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum PutApiV4ApplicationSettingsRequestDuoCodeReviewDefaultDepth
     {
+        [EnumMember(Value = "lite")]
+        #pragma warning disable CS1591
+        Lite,
+        #pragma warning restore CS1591
         [EnumMember(Value = "standard")]
         #pragma warning disable CS1591
         Standard,
-        #pragma warning restore CS1591
-        [EnumMember(Value = "deep")]
-        #pragma warning disable CS1591
-        Deep,
         #pragma warning restore CS1591
     }
 }

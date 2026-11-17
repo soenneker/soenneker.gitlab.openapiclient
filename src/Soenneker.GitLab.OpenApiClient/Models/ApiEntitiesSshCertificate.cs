@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The created_at property</summary>
         public DateTimeOffset? CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; AdditionalData?.Remove("created_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_at"); else _explicitNullProperties?.Remove("created_at"); } }
         private DateTimeOffset? _explicitNullValueCreatedAt = default!;
-        /// <summary>SHA256 fingerprint of the SSH certificate authority public key</summary>
+        /// <summary>SHA256 fingerprint of the SSH certificate authority public key. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/work_items/629633) in GitLab 19.5.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Fingerprint { get => _explicitNullValueFingerprint; set { _explicitNullValueFingerprint = value; AdditionalData?.Remove("fingerprint"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fingerprint"); else _explicitNullProperties?.Remove("fingerprint"); } }

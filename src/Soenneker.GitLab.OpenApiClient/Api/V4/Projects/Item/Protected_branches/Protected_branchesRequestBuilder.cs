@@ -47,7 +47,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Protected_branches
         {
         }
         /// <summary>
-        /// Lists all protected branches for a specified project.
+        /// Lists all protected branches for a specified project. If a wildcard is set, it is returned instead of the exact name of the branches that match that wildcard.
         /// </summary>
         /// <returns>A List&lt;global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedBranch&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -66,7 +66,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Protected_branches
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// Protects a specified repository branch or several project repository branches using a wildcard protected branch.
+        /// Protects a specified repository branch or several project repository branches using a wildcard protected branch. You can set multiple access levels for `allowed_to_push` and `allowed_to_merge`. The most permissive access level determines who can perform the action. Do not include `id` in the `allowed_to_push`, `allowed_to_merge`, or `allowed_to_unprotect` arrays. An `id` that does not match an existing record returns `404 Not Found`. Unlike the UI, the API does not clear other access levels when an element sets `access_level` to `0` (No access).
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedBranch"/></returns>
         /// <param name="body">The request body</param>
@@ -86,7 +86,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Protected_branches
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedBranch>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedBranch.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Lists all protected branches for a specified project.
+        /// Lists all protected branches for a specified project. If a wildcard is set, it is returned instead of the exact name of the branches that match that wildcard.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -105,7 +105,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Protected_branches
             return requestInfo;
         }
         /// <summary>
-        /// Protects a specified repository branch or several project repository branches using a wildcard protected branch.
+        /// Protects a specified repository branch or several project repository branches using a wildcard protected branch. You can set multiple access levels for `allowed_to_push` and `allowed_to_merge`. The most permissive access level determines who can perform the action. Do not include `id` in the `allowed_to_push`, `allowed_to_merge`, or `allowed_to_unprotect` arrays. An `id` that does not match an existing record returns `404 Not Found`. Unlike the UI, the API does not clear other access levels when an element sets `access_level` to `0` (No access).
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -136,7 +136,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Protected_branches
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Protected_branches.Protected_branchesRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Lists all protected branches for a specified project.
+        /// Lists all protected branches for a specified project. If a wildcard is set, it is returned instead of the exact name of the branches that match that wildcard.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Protected_branchesRequestBuilderGetQueryParameters 

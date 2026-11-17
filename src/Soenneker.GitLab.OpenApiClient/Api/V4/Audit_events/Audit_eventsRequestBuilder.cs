@@ -47,7 +47,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Audit_events
         {
         }
         /// <summary>
-        /// Lists all available instance audit events, limited to a maximum of 30 days for each query.
+        /// Lists all available instance audit events, limited to a maximum of 30 days for each query. Offset-based pagination was deprecated in GitLab 17.8 and is planned for removal in GitLab 20.0. Use keyset-based pagination instead. This change is a breaking change.
         /// </summary>
         /// <returns>A List&lt;global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAuditEvent&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -66,7 +66,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Audit_events
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// Lists all available instance audit events, limited to a maximum of 30 days for each query.
+        /// Lists all available instance audit events, limited to a maximum of 30 days for each query. Offset-based pagination was deprecated in GitLab 17.8 and is planned for removal in GitLab 20.0. Use keyset-based pagination instead. This change is a breaking change.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -94,7 +94,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Audit_events
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Audit_events.Audit_eventsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Lists all available instance audit events, limited to a maximum of 30 days for each query.
+        /// Lists all available instance audit events, limited to a maximum of 30 days for each query. Offset-based pagination was deprecated in GitLab 17.8 and is planned for removal in GitLab 20.0. Use keyset-based pagination instead. This change is a breaking change.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Audit_eventsRequestBuilderGetQueryParameters 

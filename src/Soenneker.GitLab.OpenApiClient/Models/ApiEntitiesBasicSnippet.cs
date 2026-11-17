@@ -55,10 +55,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic Author { get => _explicitNullValueAuthor; set { _explicitNullValueAuthor = value; AdditionalData?.Remove("author"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("author"); else _explicitNullProperties?.Remove("author"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserBasic _explicitNullValueAuthor = default!;
 #endif
-        /// <summary>The created_at property</summary>
+        /// <summary>Date and time when the snippet was created.</summary>
         public DateTimeOffset? CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; AdditionalData?.Remove("created_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_at"); else _explicitNullProperties?.Remove("created_at"); } }
         private DateTimeOffset? _explicitNullValueCreatedAt = default!;
-        /// <summary>The description property</summary>
+        /// <summary>Description of the snippet.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
@@ -68,7 +68,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Description { get => _explicitNullValueDescription; set { _explicitNullValueDescription = value; AdditionalData?.Remove("description"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description"); else _explicitNullProperties?.Remove("description"); } }
         private string _explicitNullValueDescription = default!;
 #endif
-        /// <summary>The http_url_to_repo property</summary>
+        /// <summary>HTTP URL to the snippet repository. Returned only if the snippet repository exists.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? HttpUrlToRepo { get => _explicitNullValueHttpUrlToRepo; set { _explicitNullValueHttpUrlToRepo = value; AdditionalData?.Remove("http_url_to_repo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("http_url_to_repo"); else _explicitNullProperties?.Remove("http_url_to_repo"); } }
@@ -78,13 +78,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string HttpUrlToRepo { get => _explicitNullValueHttpUrlToRepo; set { _explicitNullValueHttpUrlToRepo = value; AdditionalData?.Remove("http_url_to_repo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("http_url_to_repo"); else _explicitNullProperties?.Remove("http_url_to_repo"); } }
         private string _explicitNullValueHttpUrlToRepo = default!;
 #endif
-        /// <summary>The id property</summary>
+        /// <summary>ID of the snippet.</summary>
         public long? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private long? _explicitNullValueId = default!;
-        /// <summary>The project_id property</summary>
+        /// <summary>ID of the project the snippet belongs to. `null` for personal snippets.</summary>
         public long? ProjectId { get => _explicitNullValueProjectId; set { _explicitNullValueProjectId = value; AdditionalData?.Remove("project_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_id"); else _explicitNullProperties?.Remove("project_id"); } }
         private long? _explicitNullValueProjectId = default!;
-        /// <summary>The raw_url property</summary>
+        /// <summary>URL to the raw snippet content.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? RawUrl { get => _explicitNullValueRawUrl; set { _explicitNullValueRawUrl = value; AdditionalData?.Remove("raw_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("raw_url"); else _explicitNullProperties?.Remove("raw_url"); } }
@@ -94,7 +94,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string RawUrl { get => _explicitNullValueRawUrl; set { _explicitNullValueRawUrl = value; AdditionalData?.Remove("raw_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("raw_url"); else _explicitNullProperties?.Remove("raw_url"); } }
         private string _explicitNullValueRawUrl = default!;
 #endif
-        /// <summary>The ssh_url_to_repo property</summary>
+        /// <summary>SSH URL to the snippet repository. Returned only if the snippet repository exists.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SshUrlToRepo { get => _explicitNullValueSshUrlToRepo; set { _explicitNullValueSshUrlToRepo = value; AdditionalData?.Remove("ssh_url_to_repo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ssh_url_to_repo"); else _explicitNullProperties?.Remove("ssh_url_to_repo"); } }
@@ -104,7 +104,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string SshUrlToRepo { get => _explicitNullValueSshUrlToRepo; set { _explicitNullValueSshUrlToRepo = value; AdditionalData?.Remove("ssh_url_to_repo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ssh_url_to_repo"); else _explicitNullProperties?.Remove("ssh_url_to_repo"); } }
         private string _explicitNullValueSshUrlToRepo = default!;
 #endif
-        /// <summary>The title property</summary>
+        /// <summary>Title of the snippet.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; AdditionalData?.Remove("title"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
@@ -114,10 +114,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; AdditionalData?.Remove("title"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
         private string _explicitNullValueTitle = default!;
 #endif
-        /// <summary>The updated_at property</summary>
+        /// <summary>Date and time when the snippet was last updated.</summary>
         public DateTimeOffset? UpdatedAt { get => _explicitNullValueUpdatedAt; set { _explicitNullValueUpdatedAt = value; AdditionalData?.Remove("updated_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updated_at"); else _explicitNullProperties?.Remove("updated_at"); } }
         private DateTimeOffset? _explicitNullValueUpdatedAt = default!;
-        /// <summary>The visibility property</summary>
+        /// <summary>Visibility level of the snippet.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Visibility { get => _explicitNullValueVisibility; set { _explicitNullValueVisibility = value; AdditionalData?.Remove("visibility"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visibility"); else _explicitNullProperties?.Remove("visibility"); } }
@@ -127,7 +127,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Visibility { get => _explicitNullValueVisibility; set { _explicitNullValueVisibility = value; AdditionalData?.Remove("visibility"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visibility"); else _explicitNullProperties?.Remove("visibility"); } }
         private string _explicitNullValueVisibility = default!;
 #endif
-        /// <summary>The web_url property</summary>
+        /// <summary>URL to the snippet in the GitLab UI.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? WebUrl { get => _explicitNullValueWebUrl; set { _explicitNullValueWebUrl = value; AdditionalData?.Remove("web_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("web_url"); else _explicitNullProperties?.Remove("web_url"); } }

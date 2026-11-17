@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.User.Support_pin
         {
         }
         /// <summary>
-        /// Retrieves a Support PIN for the currently authenticated user. GitLab Support may ask for this PIN to validate your identity.
+        /// Retrieves a Support PIN for the currently authenticated user. GitLab Support may ask for this PIN to validate your identity. This feature was introduced in GitLab 17.8.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserSupportPin"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.User.Support_pin
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserSupportPin>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserSupportPin.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Creates a Support PIN. The PIN expires seven days after creation. GitLab Support may ask for this PIN to validate your identity.
+        /// Creates a Support PIN for your user account. The PIN expires seven days after creation. GitLab Support may ask for this PIN to validate your identity. This feature was introduced in GitLab 17.8.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserSupportPin"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -70,7 +70,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.User.Support_pin
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserSupportPin>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserSupportPin.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Retrieves a Support PIN for the currently authenticated user. GitLab Support may ask for this PIN to validate your identity.
+        /// Retrieves a Support PIN for the currently authenticated user. GitLab Support may ask for this PIN to validate your identity. This feature was introduced in GitLab 17.8.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -89,7 +89,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.User.Support_pin
             return requestInfo;
         }
         /// <summary>
-        /// Creates a Support PIN. The PIN expires seven days after creation. GitLab Support may ask for this PIN to validate your identity.
+        /// Creates a Support PIN for your user account. The PIN expires seven days after creation. GitLab Support may ask for this PIN to validate your identity. This feature was introduced in GitLab 17.8.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

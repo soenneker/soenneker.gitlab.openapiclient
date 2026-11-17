@@ -35,7 +35,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The email property</summary>
+        /// <summary>Email address of the service account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; AdditionalData?.Remove("email"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
@@ -48,10 +48,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The external property</summary>
         public bool? External { get => _explicitNullValueExternal; set { _explicitNullValueExternal = value; AdditionalData?.Remove("external"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external"); else _explicitNullProperties?.Remove("external"); } }
         private bool? _explicitNullValueExternal = default!;
-        /// <summary>The id property</summary>
+        /// <summary>ID of the user.</summary>
         public long? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private long? _explicitNullValueId = default!;
-        /// <summary>The name property</summary>
+        /// <summary>Name of the user. For a bot user, `****` if the current user cannot read the bot&apos;s project or group.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
@@ -61,7 +61,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string _explicitNullValueName = default!;
 #endif
-        /// <summary>The public_email property</summary>
+        /// <summary>Public email address of the user.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PublicEmail { get => _explicitNullValuePublicEmail; set { _explicitNullValuePublicEmail = value; AdditionalData?.Remove("public_email"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("public_email"); else _explicitNullProperties?.Remove("public_email"); } }
@@ -71,7 +71,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string PublicEmail { get => _explicitNullValuePublicEmail; set { _explicitNullValuePublicEmail = value; AdditionalData?.Remove("public_email"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("public_email"); else _explicitNullProperties?.Remove("public_email"); } }
         private string _explicitNullValuePublicEmail = default!;
 #endif
-        /// <summary>The unconfirmed_email property</summary>
+        /// <summary>Email address awaiting confirmation. Returned only when a confirmation is pending.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? UnconfirmedEmail { get => _explicitNullValueUnconfirmedEmail; set { _explicitNullValueUnconfirmedEmail = value; AdditionalData?.Remove("unconfirmed_email"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unconfirmed_email"); else _explicitNullProperties?.Remove("unconfirmed_email"); } }
@@ -81,7 +81,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string UnconfirmedEmail { get => _explicitNullValueUnconfirmedEmail; set { _explicitNullValueUnconfirmedEmail = value; AdditionalData?.Remove("unconfirmed_email"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unconfirmed_email"); else _explicitNullProperties?.Remove("unconfirmed_email"); } }
         private string _explicitNullValueUnconfirmedEmail = default!;
 #endif
-        /// <summary>The username property</summary>
+        /// <summary>Username of the user.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Username { get => _explicitNullValueUsername; set { _explicitNullValueUsername = value; AdditionalData?.Remove("username"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("username"); else _explicitNullProperties?.Remove("username"); } }

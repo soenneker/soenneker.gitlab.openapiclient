@@ -31,6 +31,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             else if (parseNode.GetChildNode("glab_version") is { } nullNodeGlabVersion && nullNodeGlabVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GlabVersion = null;
             if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
             else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("parent_external_xid") is null) { _explicitNullValueParentExternalXid = default!; _explicitNullProperties?.Remove("parent_external_xid"); }
+            else if (parseNode.GetChildNode("parent_external_xid") is { } nullNodeParentExternalXid && nullNodeParentExternalXid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ParentExternalXid = null;
             if (parseNode.GetChildNode("session_finished_at") is null) { _explicitNullValueSessionFinishedAt = default!; _explicitNullProperties?.Remove("session_finished_at"); }
             else if (parseNode.GetChildNode("session_finished_at") is { } nullNodeSessionFinishedAt && nullNodeSessionFinishedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SessionFinishedAt = null;
             if (parseNode.GetChildNode("session_started_at") is null) { _explicitNullValueSessionStartedAt = default!; _explicitNullProperties?.Remove("session_started_at"); }
@@ -110,6 +112,16 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The id property</summary>
         public int? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private int? _explicitNullValueId = default!;
+        /// <summary>The parent_external_xid property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ParentExternalXid { get => _explicitNullValueParentExternalXid; set { _explicitNullValueParentExternalXid = value; AdditionalData?.Remove("parent_external_xid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parent_external_xid"); else _explicitNullProperties?.Remove("parent_external_xid"); } }
+        private string? _explicitNullValueParentExternalXid = default!;
+#nullable restore
+#else
+        public string ParentExternalXid { get => _explicitNullValueParentExternalXid; set { _explicitNullValueParentExternalXid = value; AdditionalData?.Remove("parent_external_xid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parent_external_xid"); else _explicitNullProperties?.Remove("parent_external_xid"); } }
+        private string _explicitNullValueParentExternalXid = default!;
+#endif
         /// <summary>The session_finished_at property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -195,6 +207,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "flow_type", n => { FlowType = n.GetStringValue(); } },
                 { "glab_version", n => { GlabVersion = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetIntValue(); } },
+                { "parent_external_xid", n => { ParentExternalXid = n.GetStringValue(); } },
                 { "session_finished_at", n => { SessionFinishedAt = n.GetStringValue(); } },
                 { "session_started_at", n => { SessionStartedAt = n.GetStringValue(); } },
                 { "status", n => { Status = n.GetStringValue(); } },
@@ -217,6 +230,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("flow_type", FlowType);
             writer.WriteStringValue("glab_version", GlabVersion);
             writer.WriteIntValue("id", Id);
+            writer.WriteStringValue("parent_external_xid", ParentExternalXid);
             writer.WriteStringValue("session_finished_at", SessionFinishedAt);
             writer.WriteStringValue("session_started_at", SessionStartedAt);
             writer.WriteStringValue("status", Status);

@@ -65,7 +65,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string _explicitNullValueName = default!;
 #endif
-        /// <summary>Array of approved scopes. For a list of possible values, see [access token scopes](https://docs.gitlab.com/security/tokens/access_token_scopes/). Mutually exclusive with `granular_scopes`.</summary>
+        /// <summary>Array of approved scopes. For a list of possible values, see [access token scopes](https://docs.gitlab.com/security/tokens/access_token_scopes/). Required if `granular_scopes` is not provided. Mutually exclusive with `granular_scopes`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? Scopes { get => _explicitNullValueScopes; set { _explicitNullValueScopes = value; AdditionalData?.Remove("scopes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scopes"); else _explicitNullProperties?.Remove("scopes"); } }

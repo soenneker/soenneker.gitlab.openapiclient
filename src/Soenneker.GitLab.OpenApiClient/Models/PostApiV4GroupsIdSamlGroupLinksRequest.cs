@@ -27,7 +27,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             else if (parseNode.GetChildNode("saml_group_name") is { } nullNodeSamlGroupName && nullNodeSamlGroupName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SamlGroupName = null;
         }
 
-        /// <summary>Default access level for members of the SAML group.</summary>
+        /// <summary>Default access level for members of the SAML group. Possible values: `10` (Guest), `15` (Planner), `20` (Reporter), `25` (Security Manager), `30` (Developer), `40` (Maintainer), or `50` (Owner). `5` (Minimal access) is also valid when `id` is a top-level group.</summary>
         public int? AccessLevel { get => _explicitNullValueAccessLevel; set { _explicitNullValueAccessLevel = value; AdditionalData?.Remove("access_level"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("access_level"); else _explicitNullProperties?.Remove("access_level"); } }
         private int? _explicitNullValueAccessLevel = default!;
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -35,7 +35,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>ID of the member role for members of the SAML group.</summary>
         public int? MemberRoleId { get => _explicitNullValueMemberRoleId; set { _explicitNullValueMemberRoleId = value; AdditionalData?.Remove("member_role_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("member_role_id"); else _explicitNullProperties?.Remove("member_role_id"); } }
         private int? _explicitNullValueMemberRoleId = default!;
-        /// <summary>Unique [provider name](https://docs.gitlab.com/integration/saml/#configure-saml-support-in-gitlab) that must match for this group link to be applied.</summary>
+        /// <summary>Unique [provider name](https://docs.gitlab.com/integration/saml/#configure-saml-support-in-gitlab) that must match for this group link to be applied. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/548725) in GitLab 18.2.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Provider { get => _explicitNullValueProvider; set { _explicitNullValueProvider = value; AdditionalData?.Remove("provider"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("provider"); else _explicitNullProperties?.Remove("provider"); } }

@@ -29,6 +29,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             else if (parseNode.GetChildNode("goal") is { } nullNodeGoal && nullNodeGoal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Goal = null;
             if (parseNode.GetChildNode("idempotency_key") is null) { _explicitNullValueIdempotencyKey = default!; _explicitNullProperties?.Remove("idempotency_key"); }
             else if (parseNode.GetChildNode("idempotency_key") is { } nullNodeIdempotencyKey && nullNodeIdempotencyKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IdempotencyKey = null;
+            if (parseNode.GetChildNode("parent_idempotency_key") is null) { _explicitNullValueParentIdempotencyKey = default!; _explicitNullProperties?.Remove("parent_idempotency_key"); }
+            else if (parseNode.GetChildNode("parent_idempotency_key") is { } nullNodeParentIdempotencyKey && nullNodeParentIdempotencyKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ParentIdempotencyKey = null;
             if (parseNode.GetChildNode("started_at") is null) { _explicitNullValueStartedAt = default!; _explicitNullProperties?.Remove("started_at"); }
             else if (parseNode.GetChildNode("started_at") is { } nullNodeStartedAt && nullNodeStartedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartedAt = null;
             if (parseNode.GetChildNode("sync_type") is null) { _explicitNullValueSyncType = default!; _explicitNullProperties?.Remove("sync_type"); }
@@ -85,6 +87,16 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string IdempotencyKey { get => _explicitNullValueIdempotencyKey; set { _explicitNullValueIdempotencyKey = value; AdditionalData?.Remove("idempotency_key"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("idempotency_key"); else _explicitNullProperties?.Remove("idempotency_key"); } }
         private string _explicitNullValueIdempotencyKey = default!;
 #endif
+        /// <summary>Client-generated key shared by the sessions of one agent run, one session for each project the agent worked in. Not used for idempotency.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ParentIdempotencyKey { get => _explicitNullValueParentIdempotencyKey; set { _explicitNullValueParentIdempotencyKey = value; AdditionalData?.Remove("parent_idempotency_key"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parent_idempotency_key"); else _explicitNullProperties?.Remove("parent_idempotency_key"); } }
+        private string? _explicitNullValueParentIdempotencyKey = default!;
+#nullable restore
+#else
+        public string ParentIdempotencyKey { get => _explicitNullValueParentIdempotencyKey; set { _explicitNullValueParentIdempotencyKey = value; AdditionalData?.Remove("parent_idempotency_key"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parent_idempotency_key"); else _explicitNullProperties?.Remove("parent_idempotency_key"); } }
+        private string _explicitNullValueParentIdempotencyKey = default!;
+#endif
         /// <summary>Session start time, supports backfill.</summary>
         public DateTimeOffset? StartedAt { get => _explicitNullValueStartedAt; set { _explicitNullValueStartedAt = value; AdditionalData?.Remove("started_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("started_at"); else _explicitNullProperties?.Remove("started_at"); } }
         private DateTimeOffset? _explicitNullValueStartedAt = default!;
@@ -132,6 +144,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "glab_version", n => { GlabVersion = n.GetStringValue(); } },
                 { "goal", n => { Goal = n.GetStringValue(); } },
                 { "idempotency_key", n => { IdempotencyKey = n.GetStringValue(); } },
+                { "parent_idempotency_key", n => { ParentIdempotencyKey = n.GetStringValue(); } },
                 { "started_at", n => { StartedAt = n.GetDateTimeOffsetValue(); } },
                 { "sync_type", n => { var parsed = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdAiAgentSessionsRequestSyncType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueSyncType = default; _explicitNullProperties?.Remove("sync_type"); AdditionalData["sync_type"] = unknown; } else { SyncType = parsed; AdditionalData.Remove("sync_type"); } } },
                 { "workflow_definition", n => { WorkflowDefinition = n.GetStringValue(); } },
@@ -150,6 +163,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("glab_version", GlabVersion);
             writer.WriteStringValue("goal", Goal);
             writer.WriteStringValue("idempotency_key", IdempotencyKey);
+            writer.WriteStringValue("parent_idempotency_key", ParentIdempotencyKey);
             writer.WriteDateTimeOffsetValue("started_at", StartedAt);
             writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdAiAgentSessionsRequestSyncType>("sync_type", SyncType);
             writer.WriteStringValue("workflow_definition", WorkflowDefinition);

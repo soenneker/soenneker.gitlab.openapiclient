@@ -66,7 +66,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Protected_environm
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// Protects a specified environment for a project.
+        /// Protects a specified environment for a project. Each `user_id` must belong to a user with at least the Developer role for the project. Each `group_id` must belong to a group the project is shared with.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedEnvironment"/></returns>
         /// <param name="body">The request body</param>
@@ -105,7 +105,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Protected_environm
             return requestInfo;
         }
         /// <summary>
-        /// Protects a specified environment for a project.
+        /// Protects a specified environment for a project. Each `user_id` must belong to a user with at least the Developer role for the project. Each `group_id` must belong to a group the project is shared with.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

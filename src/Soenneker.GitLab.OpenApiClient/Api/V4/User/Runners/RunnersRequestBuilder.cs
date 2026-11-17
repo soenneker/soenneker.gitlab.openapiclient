@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.User.Runners
         {
         }
         /// <summary>
-        /// Create a new runner
+        /// Creates a runner linked to the current user. The user is listed as the owner for audit purposes, but runner availability is based on `runner_type`. The `token` value is included in the response, but cannot be retrieved later. For `instance_type`, requires an administrator. For `group_type`, requires an administrator, the Owner role for the group, or a custom role with the `admin_runners` permission. For `project_type`, requires an administrator, at least the Maintainer role for the project, or a custom role with the `admin_runners` permission. For `group_type` and `project_type`, users who are not administrators can create the runner only when runner registration is allowed for the group or project. Requires a token with the `create_runner` or `api` scope.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiRunnerRegistrationDetails"/></returns>
         /// <param name="body">The request body</param>
@@ -54,7 +54,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.User.Runners
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiRunnerRegistrationDetails>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiRunnerRegistrationDetails.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Create a new runner
+        /// Creates a runner linked to the current user. The user is listed as the owner for audit purposes, but runner availability is based on `runner_type`. The `token` value is included in the response, but cannot be retrieved later. For `instance_type`, requires an administrator. For `group_type`, requires an administrator, the Owner role for the group, or a custom role with the `admin_runners` permission. For `project_type`, requires an administrator, at least the Maintainer role for the project, or a custom role with the `admin_runners` permission. For `group_type` and `project_type`, users who are not administrators can create the runner only when runner registration is allowed for the group or project. Requires a token with the `create_runner` or `api` scope.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

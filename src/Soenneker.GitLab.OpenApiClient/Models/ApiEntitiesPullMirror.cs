@@ -45,13 +45,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The enabled property</summary>
+        /// <summary>If `true`, the mirror is active.</summary>
         public bool? Enabled { get => _explicitNullValueEnabled; set { _explicitNullValueEnabled = value; AdditionalData?.Remove("enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enabled"); else _explicitNullProperties?.Remove("enabled"); } }
         private bool? _explicitNullValueEnabled = default!;
-        /// <summary>The id property</summary>
+        /// <summary>ID of the mirror configuration.</summary>
         public long? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private long? _explicitNullValueId = default!;
-        /// <summary>The last_error property</summary>
+        /// <summary>Most recent error message. `null` if no error occurred.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? LastError { get => _explicitNullValueLastError; set { _explicitNullValueLastError = value; AdditionalData?.Remove("last_error"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_error"); else _explicitNullProperties?.Remove("last_error"); } }
@@ -61,16 +61,16 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string LastError { get => _explicitNullValueLastError; set { _explicitNullValueLastError = value; AdditionalData?.Remove("last_error"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_error"); else _explicitNullProperties?.Remove("last_error"); } }
         private string _explicitNullValueLastError = default!;
 #endif
-        /// <summary>The last_successful_update_at property</summary>
+        /// <summary>Timestamp of the last successful mirror update.</summary>
         public DateTimeOffset? LastSuccessfulUpdateAt { get => _explicitNullValueLastSuccessfulUpdateAt; set { _explicitNullValueLastSuccessfulUpdateAt = value; AdditionalData?.Remove("last_successful_update_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_successful_update_at"); else _explicitNullProperties?.Remove("last_successful_update_at"); } }
         private DateTimeOffset? _explicitNullValueLastSuccessfulUpdateAt = default!;
-        /// <summary>The last_update_at property</summary>
+        /// <summary>Timestamp of the most recent mirror update attempt.</summary>
         public DateTimeOffset? LastUpdateAt { get => _explicitNullValueLastUpdateAt; set { _explicitNullValueLastUpdateAt = value; AdditionalData?.Remove("last_update_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_update_at"); else _explicitNullProperties?.Remove("last_update_at"); } }
         private DateTimeOffset? _explicitNullValueLastUpdateAt = default!;
-        /// <summary>The last_update_started_at property</summary>
+        /// <summary>Timestamp when the last mirror update started.</summary>
         public DateTimeOffset? LastUpdateStartedAt { get => _explicitNullValueLastUpdateStartedAt; set { _explicitNullValueLastUpdateStartedAt = value; AdditionalData?.Remove("last_update_started_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_update_started_at"); else _explicitNullProperties?.Remove("last_update_started_at"); } }
         private DateTimeOffset? _explicitNullValueLastUpdateStartedAt = default!;
-        /// <summary>The mirror_branch_regex property</summary>
+        /// <summary>Regular expression that filters which branches are mirrored. `null` if not set.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? MirrorBranchRegex { get => _explicitNullValueMirrorBranchRegex; set { _explicitNullValueMirrorBranchRegex = value; AdditionalData?.Remove("mirror_branch_regex"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mirror_branch_regex"); else _explicitNullProperties?.Remove("mirror_branch_regex"); } }
@@ -80,16 +80,16 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string MirrorBranchRegex { get => _explicitNullValueMirrorBranchRegex; set { _explicitNullValueMirrorBranchRegex = value; AdditionalData?.Remove("mirror_branch_regex"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mirror_branch_regex"); else _explicitNullProperties?.Remove("mirror_branch_regex"); } }
         private string _explicitNullValueMirrorBranchRegex = default!;
 #endif
-        /// <summary>The mirror_overwrites_diverged_branches property</summary>
+        /// <summary>If `true`, the mirror overwrites diverged branches.</summary>
         public bool? MirrorOverwritesDivergedBranches { get => _explicitNullValueMirrorOverwritesDivergedBranches; set { _explicitNullValueMirrorOverwritesDivergedBranches = value; AdditionalData?.Remove("mirror_overwrites_diverged_branches"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mirror_overwrites_diverged_branches"); else _explicitNullProperties?.Remove("mirror_overwrites_diverged_branches"); } }
         private bool? _explicitNullValueMirrorOverwritesDivergedBranches = default!;
-        /// <summary>The mirror_trigger_builds property</summary>
+        /// <summary>If `true`, mirror updates trigger pipelines.</summary>
         public bool? MirrorTriggerBuilds { get => _explicitNullValueMirrorTriggerBuilds; set { _explicitNullValueMirrorTriggerBuilds = value; AdditionalData?.Remove("mirror_trigger_builds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mirror_trigger_builds"); else _explicitNullProperties?.Remove("mirror_trigger_builds"); } }
         private bool? _explicitNullValueMirrorTriggerBuilds = default!;
-        /// <summary>The only_mirror_protected_branches property</summary>
+        /// <summary>If `true`, only protected branches are mirrored. `null` if not set.</summary>
         public bool? OnlyMirrorProtectedBranches { get => _explicitNullValueOnlyMirrorProtectedBranches; set { _explicitNullValueOnlyMirrorProtectedBranches = value; AdditionalData?.Remove("only_mirror_protected_branches"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("only_mirror_protected_branches"); else _explicitNullProperties?.Remove("only_mirror_protected_branches"); } }
         private bool? _explicitNullValueOnlyMirrorProtectedBranches = default!;
-        /// <summary>The update_status property</summary>
+        /// <summary>Status of the mirror update. One of `none`, `scheduled`, `started`, `finished`, `failed`, or `canceled`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? UpdateStatus { get => _explicitNullValueUpdateStatus; set { _explicitNullValueUpdateStatus = value; AdditionalData?.Remove("update_status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("update_status"); else _explicitNullProperties?.Remove("update_status"); } }
@@ -99,7 +99,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string UpdateStatus { get => _explicitNullValueUpdateStatus; set { _explicitNullValueUpdateStatus = value; AdditionalData?.Remove("update_status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("update_status"); else _explicitNullProperties?.Remove("update_status"); } }
         private string _explicitNullValueUpdateStatus = default!;
 #endif
-        /// <summary>The url property</summary>
+        /// <summary>URL of the mirrored repository, with credentials masked.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; AdditionalData?.Remove("url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }

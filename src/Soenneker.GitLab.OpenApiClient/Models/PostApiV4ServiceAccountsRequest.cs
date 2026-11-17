@@ -29,7 +29,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Email address of the user account. If omitted, generates a no-reply email address. Custom email addresses require confirmation, unless the email confirmation settings are [turned off](https://docs.gitlab.com/administration/settings/sign_up_restrictions/#confirm-user-email).</summary>
+        /// <summary>Email address of the user account. If omitted, generates a no-reply email address prefixed with `service_account_`. Custom email addresses require confirmation, unless the email confirmation settings are [turned off](https://docs.gitlab.com/administration/settings/sign_up_restrictions/#confirm-user-email). [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/178689) in GitLab 17.9.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; AdditionalData?.Remove("email"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
@@ -39,7 +39,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; AdditionalData?.Remove("email"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
         private string _explicitNullValueEmail = default!;
 #endif
-        /// <summary>Flag indicating the user is an external user</summary>
+        /// <summary>Flag indicating the user is an external user. Default is `true`. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/583452) in GitLab 19.5.</summary>
         public bool? External { get => _explicitNullValueExternal; set { _explicitNullValueExternal = value; AdditionalData?.Remove("external"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external"); else _explicitNullProperties?.Remove("external"); } }
         private bool? _explicitNullValueExternal = default!;
         /// <summary>Name of the user. If omitted, uses `Service account user`.</summary>

@@ -47,7 +47,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Keys
         {
         }
         /// <summary>
-        /// Lists all SSH keys for a specified user account.
+        /// Lists all SSH keys for a specified user account. This endpoint does not require authentication.
         /// </summary>
         /// <returns>A List&lt;global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSshKey&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -66,7 +66,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Keys
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// Adds an SSH key for a specified user account. Administrators only.
+        /// Adds an SSH key for a specified user account. This also adds an audit event. If the key or its fingerprint is already in use, returns a validation error with the message `has already been taken`. Administrators only.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSshKey"/></returns>
         /// <param name="body">The request body</param>
@@ -86,7 +86,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Keys
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSshKey>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSshKey.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Lists all SSH keys for a specified user account.
+        /// Lists all SSH keys for a specified user account. This endpoint does not require authentication.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -105,7 +105,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Keys
             return requestInfo;
         }
         /// <summary>
-        /// Adds an SSH key for a specified user account. Administrators only.
+        /// Adds an SSH key for a specified user account. This also adds an audit event. If the key or its fingerprint is already in use, returns a validation error with the message `has already been taken`. Administrators only.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -136,7 +136,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Keys
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Keys.KeysRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Lists all SSH keys for a specified user account.
+        /// Lists all SSH keys for a specified user account. This endpoint does not require authentication.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class KeysRequestBuilderGetQueryParameters 

@@ -36,20 +36,19 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Saml_group_links.Ite
         /// <summary>
         /// Deletes a SAML group link for the group
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSamlGroupLink"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSamlGroupLink?> DeleteAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Saml_group_links.Item.WithSamlGroupNameItemRequestBuilder.WithSamlGroupNameItemRequestBuilderDeleteQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task DeleteAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Saml_group_links.Item.WithSamlGroupNameItemRequestBuilder.WithSamlGroupNameItemRequestBuilderDeleteQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSamlGroupLink> DeleteAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Saml_group_links.Item.WithSamlGroupNameItemRequestBuilder.WithSamlGroupNameItemRequestBuilderDeleteQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task DeleteAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Saml_group_links.Item.WithSamlGroupNameItemRequestBuilder.WithSamlGroupNameItemRequestBuilderDeleteQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSamlGroupLink>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSamlGroupLink.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
+            await RequestAdapter.SendNoContentAsync(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get a SAML group link for the group
@@ -85,7 +84,6 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Saml_group_links.Ite
 #endif
             var requestInfo = new RequestInformation(Method.DELETE, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
-            requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
         }
         /// <summary>
@@ -122,7 +120,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Saml_group_links.Ite
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithSamlGroupNameItemRequestBuilderDeleteQueryParameters 
         {
-            /// <summary>Unique [provider name](https://docs.gitlab.com/integration/saml/#configure-saml-support-in-gitlab) used to disambiguate when multiple links exist with the same name. Required when multiple links exist with the same `saml_group_name`.</summary>
+            /// <summary>Unique [provider name](https://docs.gitlab.com/integration/saml/#configure-saml-support-in-gitlab) used to disambiguate when multiple links exist with the same name. Required when multiple links exist with the same `saml_group_name`. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/548725) in GitLab 18.2.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("provider")]
@@ -139,7 +137,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Saml_group_links.Ite
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithSamlGroupNameItemRequestBuilderGetQueryParameters 
         {
-            /// <summary>Unique [provider name](https://docs.gitlab.com/integration/saml/#configure-saml-support-in-gitlab) used to disambiguate when multiple links exist with the same name. Required when multiple links exist with the same `saml_group_name`.</summary>
+            /// <summary>Unique [provider name](https://docs.gitlab.com/integration/saml/#configure-saml-support-in-gitlab) used to disambiguate when multiple links exist with the same name. Required when multiple links exist with the same `saml_group_name`. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/548725) in GitLab 18.2.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("provider")]

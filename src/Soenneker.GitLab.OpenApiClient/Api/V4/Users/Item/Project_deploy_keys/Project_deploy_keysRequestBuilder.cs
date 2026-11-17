@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Project_deploy_keys
         {
         }
         /// <summary>
-        /// Lists all project deploy keys accessible to a specified user.
+        /// Lists all project deploy keys accessible to a specified user. Only keys enabled in projects common to the specified user and the authenticated user are listed, where both have at least the Maintainer role.
         /// </summary>
         /// <returns>A List&lt;global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDeployKey&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -53,7 +53,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Project_deploy_keys
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// Lists all project deploy keys accessible to a specified user.
+        /// Lists all project deploy keys accessible to a specified user. Only keys enabled in projects common to the specified user and the authenticated user are listed, where both have at least the Maintainer role.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -81,7 +81,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Project_deploy_keys
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Project_deploy_keys.Project_deploy_keysRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Lists all project deploy keys accessible to a specified user.
+        /// Lists all project deploy keys accessible to a specified user. Only keys enabled in projects common to the specified user and the authenticated user are listed, where both have at least the Maintainer role.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Project_deploy_keysRequestBuilderGetQueryParameters 

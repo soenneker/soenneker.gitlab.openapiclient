@@ -69,7 +69,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Protected_branches
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedBranch>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedBranch.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Updates a protected branch for a specified project.
+        /// Updates a protected branch for a specified project. Each element of `allowed_to_push`, `allowed_to_merge`, and `allowed_to_unprotect` takes the form `{user_id: integer}`, `{group_id: integer}`, `{member_role_id: integer}`, or `{access_level: integer}`. `allowed_to_push` also accepts `{deploy_key_id: integer}`. To update an existing access level record, include its `id` in the hash. To delete one, include its `id` and set `_destroy` to `true`. A user must have access to the project, and a group must have the project shared with it. A deploy key must be enabled for the project and have write access to the project repository.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProtectedBranch"/></returns>
         /// <param name="body">The request body</param>
@@ -126,7 +126,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Protected_branches
             return requestInfo;
         }
         /// <summary>
-        /// Updates a protected branch for a specified project.
+        /// Updates a protected branch for a specified project. Each element of `allowed_to_push`, `allowed_to_merge`, and `allowed_to_unprotect` takes the form `{user_id: integer}`, `{group_id: integer}`, `{member_role_id: integer}`, or `{access_level: integer}`. `allowed_to_push` also accepts `{deploy_key_id: integer}`. To update an existing access level record, include its `id` in the hash. To delete one, include its `id` and set `_destroy` to `true`. A user must have access to the project, and a group must have the project shared with it. A deploy key must be enabled for the project and have write access to the project repository.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

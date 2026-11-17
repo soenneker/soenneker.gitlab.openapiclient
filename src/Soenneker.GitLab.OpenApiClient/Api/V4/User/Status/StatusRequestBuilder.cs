@@ -52,7 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.User.Status
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserStatus>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserStatus.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Sets the status of the currently authenticated user. Any parameters that are not passed are ignored. This operation is similar but distinct from the Set a user status operation.
+        /// Sets the status of the currently authenticated user. Any parameters that are not passed are ignored. To clear a field, pass `null` explicitly. This operation is similar but distinct from the Set a user status operation.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesUserStatus"/></returns>
         /// <param name="body">The request body</param>
@@ -111,7 +111,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.User.Status
             return requestInfo;
         }
         /// <summary>
-        /// Sets the status of the currently authenticated user. Any parameters that are not passed are ignored. This operation is similar but distinct from the Set a user status operation.
+        /// Sets the status of the currently authenticated user. Any parameters that are not passed are ignored. To clear a field, pass `null` explicitly. This operation is similar but distinct from the Set a user status operation.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

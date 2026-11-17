@@ -33,7 +33,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Uploads.Item.Item
         {
         }
         /// <summary>
-        /// Deletes an uploaded file with a specified secret and filename. You must have the Maintainer or Owner role for the project.
+        /// Deletes an uploaded file with a specified secret and filename. You must have the Maintainer or Owner role for the project. This feature was introduced in GitLab 17.4.
         /// </summary>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -50,7 +50,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Uploads.Item.Item
             await RequestAdapter.SendNoContentAsync(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Downloads an uploaded file with a specified secret and filename. You must have the Guest, Planner, Reporter, Developer, Maintainer, or Owner role for the project.
+        /// Downloads an uploaded file with a specified secret and filename. You must have the Guest, Planner, Reporter, Developer, Maintainer, or Owner role for the project. For a file linked from a description or comment, take the secret and filename from the link. On a rendered page, the link has the format `https://gitlab.example.com/-/project/&lt;project_id&gt;/uploads/&lt;secret&gt;/&lt;filename&gt;`. To get the API URL, replace `/-/project/` with `/api/v4/projects/`. In raw Markdown, the link is `/uploads/&lt;secret&gt;/&lt;filename&gt;` and does not include the project or group. Files that belong to a group, for example in an epic, use the group uploads endpoint. Use the filename from the link, not from the original file. GitLab can change the filename on upload, for example by replacing spaces with underscores. This feature was introduced in GitLab 17.4.
         /// </summary>
         /// <returns>A <see cref="Stream"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -68,7 +68,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Uploads.Item.Item
             return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Deletes an uploaded file with a specified secret and filename. You must have the Maintainer or Owner role for the project.
+        /// Deletes an uploaded file with a specified secret and filename. You must have the Maintainer or Owner role for the project. This feature was introduced in GitLab 17.4.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -86,7 +86,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Uploads.Item.Item
             return requestInfo;
         }
         /// <summary>
-        /// Downloads an uploaded file with a specified secret and filename. You must have the Guest, Planner, Reporter, Developer, Maintainer, or Owner role for the project.
+        /// Downloads an uploaded file with a specified secret and filename. You must have the Guest, Planner, Reporter, Developer, Maintainer, or Owner role for the project. For a file linked from a description or comment, take the secret and filename from the link. On a rendered page, the link has the format `https://gitlab.example.com/-/project/&lt;project_id&gt;/uploads/&lt;secret&gt;/&lt;filename&gt;`. To get the API URL, replace `/-/project/` with `/api/v4/projects/`. In raw Markdown, the link is `/uploads/&lt;secret&gt;/&lt;filename&gt;` and does not include the project or group. Files that belong to a group, for example in an epic, use the group uploads endpoint. Use the filename from the link, not from the original file. GitLab can change the filename on upload, for example by replacing spaces with underscores. This feature was introduced in GitLab 17.4.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

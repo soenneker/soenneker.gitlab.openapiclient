@@ -27,7 +27,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Array of users, groups, deploy keys, or access levels allowed to create protected branches</summary>
+        /// <summary>Array of users, groups, deploy keys, or access levels allowed to create protected tags. Each element is a hash with one of `user_id`, `group_id`, `deploy_key_id`, or `access_level`. `user_id`, `group_id`, and `access_level` are Premium and Ultimate only. `deploy_key_id` [introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/166866) in GitLab 17.5.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdProtectedTagsRequestAllowedToCreateItemProperty>? AllowedToCreate { get => _explicitNullValueAllowedToCreate; set { _explicitNullValueAllowedToCreate = value; AdditionalData?.Remove("allowed_to_create"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_to_create"); else _explicitNullProperties?.Remove("allowed_to_create"); } }

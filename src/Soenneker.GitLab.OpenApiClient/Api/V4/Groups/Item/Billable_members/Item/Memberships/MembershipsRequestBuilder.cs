@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Billable_members.Ite
         {
         }
         /// <summary>
-        /// Lists all memberships for a specified billable member of a group. The response represents only direct memberships. Inherited memberships are not included.
+        /// Lists all projects and groups that a specified billable member of a group is a member of. Only projects and groups in the group hierarchy are included. The response represents only direct memberships. Inherited memberships are not included. This operation works on top-level groups only. It does not work on subgroups. You must have permission to administer members of the group.
         /// </summary>
         /// <returns>A List&lt;global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBillableMembership&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -53,7 +53,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Billable_members.Ite
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// Lists all memberships for a specified billable member of a group. The response represents only direct memberships. Inherited memberships are not included.
+        /// Lists all projects and groups that a specified billable member of a group is a member of. Only projects and groups in the group hierarchy are included. The response represents only direct memberships. Inherited memberships are not included. This operation works on top-level groups only. It does not work on subgroups. You must have permission to administer members of the group.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -81,7 +81,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Billable_members.Ite
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Billable_members.Item.Memberships.MembershipsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Lists all memberships for a specified billable member of a group. The response represents only direct memberships. Inherited memberships are not included.
+        /// Lists all projects and groups that a specified billable member of a group is a member of. Only projects and groups in the group hierarchy are included. The response represents only direct memberships. Inherited memberships are not included. This operation works on top-level groups only. It does not work on subgroups. You must have permission to administer members of the group.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class MembershipsRequestBuilderGetQueryParameters 

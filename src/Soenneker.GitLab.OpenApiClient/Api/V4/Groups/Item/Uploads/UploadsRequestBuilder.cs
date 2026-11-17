@@ -53,7 +53,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Uploads
         {
         }
         /// <summary>
-        /// Lists all uploads for a specified group sorted by `created_at` in descending order. You must have the Maintainer or Owner role for the group.
+        /// Lists all uploads for a specified group sorted by `created_at` in descending order. You must have the Maintainer or Owner role for the group. This feature was introduced in GitLab 17.2.
         /// </summary>
         /// <returns>A List&lt;global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMarkdownUploadAdmin&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -72,7 +72,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Uploads
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// Uploads a file to the specified group. Returns a markdown-formatted link to the file.
+        /// Uploads a file to the specified group. Returns a markdown-formatted link to the file. This feature was introduced in GitLab 19.0.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroupUpload"/></returns>
         /// <param name="body">The request body</param>
@@ -92,7 +92,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Uploads
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroupUpload>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroupUpload.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Lists all uploads for a specified group sorted by `created_at` in descending order. You must have the Maintainer or Owner role for the group.
+        /// Lists all uploads for a specified group sorted by `created_at` in descending order. You must have the Maintainer or Owner role for the group. This feature was introduced in GitLab 17.2.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -111,7 +111,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Uploads
             return requestInfo;
         }
         /// <summary>
-        /// Uploads a file to the specified group. Returns a markdown-formatted link to the file.
+        /// Uploads a file to the specified group. Returns a markdown-formatted link to the file. This feature was introduced in GitLab 19.0.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -142,7 +142,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Uploads
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Uploads.UploadsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Lists all uploads for a specified group sorted by `created_at` in descending order. You must have the Maintainer or Owner role for the group.
+        /// Lists all uploads for a specified group sorted by `created_at` in descending order. You must have the Maintainer or Owner role for the group. This feature was introduced in GitLab 17.2.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class UploadsRequestBuilderGetQueryParameters 

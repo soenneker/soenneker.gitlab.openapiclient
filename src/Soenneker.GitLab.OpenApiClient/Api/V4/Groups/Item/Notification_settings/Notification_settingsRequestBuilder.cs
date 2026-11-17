@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Notification_setting
         {
         }
         /// <summary>
-        /// Retrieves the notification level for a specified group.
+        /// Retrieves the notification level for a specified group. For the `custom` level, the response also includes an `events` object with the setting of each notification event: `true` if the notification is turned on, `false` if it is turned off, and `null` if it uses the default setting.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNotificationSetting"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Notification_setting
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNotificationSetting>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNotificationSetting.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Updates the notification settings for a specified group.
+        /// Updates the notification settings for a specified group. The response includes the notification `level`. For the `custom` level, the response also includes an `events` object with the setting of each notification event: `true` if the notification is turned on, `false` if it is turned off, and `null` if it uses the default setting.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNotificationSetting"/></returns>
         /// <param name="body">The request body</param>
@@ -72,7 +72,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Notification_setting
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNotificationSetting>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNotificationSetting.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Retrieves the notification level for a specified group.
+        /// Retrieves the notification level for a specified group. For the `custom` level, the response also includes an `events` object with the setting of each notification event: `true` if the notification is turned on, `false` if it is turned off, and `null` if it uses the default setting.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -91,7 +91,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Notification_setting
             return requestInfo;
         }
         /// <summary>
-        /// Updates the notification settings for a specified group.
+        /// Updates the notification settings for a specified group. The response includes the notification `level`. For the `custom` level, the response also includes an `events` object with the setting of each notification event: `true` if the notification is turned on, `false` if it is turned off, and `null` if it uses the default setting.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

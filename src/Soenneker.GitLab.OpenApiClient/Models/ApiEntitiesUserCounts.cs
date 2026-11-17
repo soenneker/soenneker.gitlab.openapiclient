@@ -31,19 +31,19 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The assigned_issues property</summary>
+        /// <summary>Number of open issues assigned to the current user.</summary>
         public int? AssignedIssues { get => _explicitNullValueAssignedIssues; set { _explicitNullValueAssignedIssues = value; AdditionalData?.Remove("assigned_issues"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assigned_issues"); else _explicitNullProperties?.Remove("assigned_issues"); } }
         private int? _explicitNullValueAssignedIssues = default!;
-        /// <summary>The assigned_merge_requests property</summary>
+        /// <summary>Number of active merge requests assigned to the current user.</summary>
         public int? AssignedMergeRequests { get => _explicitNullValueAssignedMergeRequests; set { _explicitNullValueAssignedMergeRequests = value; AdditionalData?.Remove("assigned_merge_requests"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assigned_merge_requests"); else _explicitNullProperties?.Remove("assigned_merge_requests"); } }
         private int? _explicitNullValueAssignedMergeRequests = default!;
-        /// <summary>The merge_requests property</summary>
+        /// <summary>Deprecated. Use `assigned_merge_requests` instead.</summary>
         public int? MergeRequests { get => _explicitNullValueMergeRequests; set { _explicitNullValueMergeRequests = value; AdditionalData?.Remove("merge_requests"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_requests"); else _explicitNullProperties?.Remove("merge_requests"); } }
         private int? _explicitNullValueMergeRequests = default!;
-        /// <summary>The review_requested_merge_requests property</summary>
+        /// <summary>Number of open merge requests the current user is requested to review.</summary>
         public int? ReviewRequestedMergeRequests { get => _explicitNullValueReviewRequestedMergeRequests; set { _explicitNullValueReviewRequestedMergeRequests = value; AdditionalData?.Remove("review_requested_merge_requests"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("review_requested_merge_requests"); else _explicitNullProperties?.Remove("review_requested_merge_requests"); } }
         private int? _explicitNullValueReviewRequestedMergeRequests = default!;
-        /// <summary>The todos property</summary>
+        /// <summary>Number of pending to-do items for the current user.</summary>
         public int? Todos { get => _explicitNullValueTodos; set { _explicitNullValueTodos = value; AdditionalData?.Remove("todos"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("todos"); else _explicitNullProperties?.Remove("todos"); } }
         private int? _explicitNullValueTodos = default!;
         /// <summary>

@@ -25,12 +25,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             else if (parseNode.GetChildNode("user_id") is { } nullNodeUserId && nullNodeUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserId = null;
         }
 
-        /// <summary>The active property</summary>
+        /// <summary>If `true`, the identity is active. Returned only for SCIM identities.</summary>
         public bool? Active { get => _explicitNullValueActive; set { _explicitNullValueActive = value; AdditionalData?.Remove("active"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("active"); else _explicitNullProperties?.Remove("active"); } }
         private bool? _explicitNullValueActive = default!;
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The extern_uid property</summary>
+        /// <summary>External UID for the user.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ExternUid { get => _explicitNullValueExternUid; set { _explicitNullValueExternUid = value; AdditionalData?.Remove("extern_uid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extern_uid"); else _explicitNullProperties?.Remove("extern_uid"); } }
@@ -40,7 +40,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string ExternUid { get => _explicitNullValueExternUid; set { _explicitNullValueExternUid = value; AdditionalData?.Remove("extern_uid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("extern_uid"); else _explicitNullProperties?.Remove("extern_uid"); } }
         private string _explicitNullValueExternUid = default!;
 #endif
-        /// <summary>The user_id property</summary>
+        /// <summary>ID of the user.</summary>
         public int? UserId { get => _explicitNullValueUserId; set { _explicitNullValueUserId = value; AdditionalData?.Remove("user_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_id"); else _explicitNullProperties?.Remove("user_id"); } }
         private int? _explicitNullValueUserId = default!;
         /// <summary>

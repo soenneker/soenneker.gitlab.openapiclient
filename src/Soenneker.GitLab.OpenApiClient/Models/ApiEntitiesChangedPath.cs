@@ -31,7 +31,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The new_mode property</summary>
+        /// <summary>New file mode.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? NewMode { get => _explicitNullValueNewMode; set { _explicitNullValueNewMode = value; AdditionalData?.Remove("new_mode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_mode"); else _explicitNullProperties?.Remove("new_mode"); } }
@@ -41,7 +41,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string NewMode { get => _explicitNullValueNewMode; set { _explicitNullValueNewMode = value; AdditionalData?.Remove("new_mode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_mode"); else _explicitNullProperties?.Remove("new_mode"); } }
         private string _explicitNullValueNewMode = default!;
 #endif
-        /// <summary>The old_mode property</summary>
+        /// <summary>Previous file mode.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? OldMode { get => _explicitNullValueOldMode; set { _explicitNullValueOldMode = value; AdditionalData?.Remove("old_mode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("old_mode"); else _explicitNullProperties?.Remove("old_mode"); } }
@@ -51,7 +51,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string OldMode { get => _explicitNullValueOldMode; set { _explicitNullValueOldMode = value; AdditionalData?.Remove("old_mode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("old_mode"); else _explicitNullProperties?.Remove("old_mode"); } }
         private string _explicitNullValueOldMode = default!;
 #endif
-        /// <summary>The old_path property</summary>
+        /// <summary>Previous path of the file. Same as `path` unless the file was renamed or copied.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? OldPath { get => _explicitNullValueOldPath; set { _explicitNullValueOldPath = value; AdditionalData?.Remove("old_path"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("old_path"); else _explicitNullProperties?.Remove("old_path"); } }
@@ -61,7 +61,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string OldPath { get => _explicitNullValueOldPath; set { _explicitNullValueOldPath = value; AdditionalData?.Remove("old_path"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("old_path"); else _explicitNullProperties?.Remove("old_path"); } }
         private string _explicitNullValueOldPath = default!;
 #endif
-        /// <summary>The path property</summary>
+        /// <summary>Path of the file.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Path { get => _explicitNullValuePath; set { _explicitNullValuePath = value; AdditionalData?.Remove("path"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("path"); else _explicitNullProperties?.Remove("path"); } }
@@ -71,7 +71,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Path { get => _explicitNullValuePath; set { _explicitNullValuePath = value; AdditionalData?.Remove("path"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("path"); else _explicitNullProperties?.Remove("path"); } }
         private string _explicitNullValuePath = default!;
 #endif
-        /// <summary>The status property</summary>
+        /// <summary>Change type. One of `ADDED`, `MODIFIED`, `DELETED`, `RENAMED`, `TYPE_CHANGE`, or `COPIED`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; AdditionalData?.Remove("status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }

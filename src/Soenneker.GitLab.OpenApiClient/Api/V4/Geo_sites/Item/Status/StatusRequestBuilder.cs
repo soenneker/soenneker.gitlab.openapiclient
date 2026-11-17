@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Geo_sites.Item.Status
         {
         }
         /// <summary>
-        /// Retrieves the status for a specified Geo site.
+        /// Retrieves the status for a specified Geo site. When the legacy `geo_upload_replication` and `geo_upload_force_primary_checksumming` feature flags are disabled, the `uploads_*` fields are the sum of the values for each upload type. The `health_status` field is either `Healthy` or `Unhealthy`. The `health` field can be empty, `Healthy`, or contain the actual error message.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGeoSiteStatus"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Geo_sites.Item.Status
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGeoSiteStatus>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGeoSiteStatus.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Retrieves the status for a specified Geo site.
+        /// Retrieves the status for a specified Geo site. When the legacy `geo_upload_replication` and `geo_upload_force_primary_checksumming` feature flags are disabled, the `uploads_*` fields are the sum of the values for each upload type. The `health_status` field is either `Healthy` or `Unhealthy`. The `health` field can be empty, `Healthy`, or contain the actual error message.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -80,7 +80,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Geo_sites.Item.Status
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Geo_sites.Item.Status.StatusRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Retrieves the status for a specified Geo site.
+        /// Retrieves the status for a specified Geo site. When the legacy `geo_upload_replication` and `geo_upload_force_primary_checksumming` feature flags are disabled, the `uploads_*` fields are the sum of the values for each upload type. The `health_status` field is either `Healthy` or `Unhealthy`. The `health` field can be empty, `Healthy`, or contain the actual error message.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class StatusRequestBuilderGetQueryParameters 
