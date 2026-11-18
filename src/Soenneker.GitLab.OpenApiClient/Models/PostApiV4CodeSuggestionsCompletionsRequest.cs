@@ -108,7 +108,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(7)
             {
                 { "context", n => { Context = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4CodeSuggestionsCompletionsRequestContextItem>(global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4CodeSuggestionsCompletionsRequestContextItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "current_file", n => { CurrentFile = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4CodeSuggestionsCompletionsRequestCurrentFile>(global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4CodeSuggestionsCompletionsRequestCurrentFile.CreateFromDiscriminatorValue); } },

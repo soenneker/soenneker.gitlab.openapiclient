@@ -296,7 +296,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(21)
             {
                 { "allow_git_fetch", n => { AllowGitFetch = n.GetStringValue(); } },
                 { "artifacts", n => { Artifacts = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestArtifacts>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestArtifacts.CreateFromDiscriminatorValue)?.AsList(); } },

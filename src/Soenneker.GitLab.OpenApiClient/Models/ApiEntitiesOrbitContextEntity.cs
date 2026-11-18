@@ -37,7 +37,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The error property</summary>
+        /// <summary>Error with a `code`: `invalid_token`, `unsupported_type`, or `not_found`. Present when `found` is `false`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesOrbitContextEntityErrorProperty? Error { get => _explicitNullValueError; set { _explicitNullValueError = value; AdditionalData?.Remove("error"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error"); else _explicitNullProperties?.Remove("error"); } }
@@ -47,7 +47,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesOrbitContextEntityErrorProperty Error { get => _explicitNullValueError; set { _explicitNullValueError = value; AdditionalData?.Remove("error"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error"); else _explicitNullProperties?.Remove("error"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesOrbitContextEntityErrorProperty _explicitNullValueError = default!;
 #endif
-        /// <summary>The expansion property</summary>
+        /// <summary>`null` when `expand` is `false` or the token was not found. Otherwise, `result` or `error` with a `code`, plus `query`: the named query that ran or would have run, with `name` and `parameters` (`node_ids` and `limit`). `query` is absent for `expansion_unsupported_type`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesOrbitContextEntityExpansionProperty? Expansion { get => _explicitNullValueExpansion; set { _explicitNullValueExpansion = value; AdditionalData?.Remove("expansion"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expansion"); else _explicitNullProperties?.Remove("expansion"); } }
@@ -57,10 +57,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesOrbitContextEntityExpansionProperty Expansion { get => _explicitNullValueExpansion; set { _explicitNullValueExpansion = value; AdditionalData?.Remove("expansion"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expansion"); else _explicitNullProperties?.Remove("expansion"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesOrbitContextEntityExpansionProperty _explicitNullValueExpansion = default!;
 #endif
-        /// <summary>The found property</summary>
+        /// <summary>If `true`, the entity exists and the user can read it.</summary>
         public bool? Found { get => _explicitNullValueFound; set { _explicitNullValueFound = value; AdditionalData?.Remove("found"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("found"); else _explicitNullProperties?.Remove("found"); } }
         private bool? _explicitNullValueFound = default!;
-        /// <summary>The id property</summary>
+        /// <summary>Global database ID, in the same form as the node IDs in the graph result, or the branch name or commit SHA. For `iid` and `path@ref` forms, `null` when `found` is `false`. For `Type[id]` and GID tokens, the ID that was sent.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
@@ -70,7 +70,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string _explicitNullValueId = default!;
 #endif
-        /// <summary>The resolved_token property</summary>
+        /// <summary>Token in `Type[id]` form, or `path@ref` for a branch or commit. Present only when `found` is `true`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ResolvedToken { get => _explicitNullValueResolvedToken; set { _explicitNullValueResolvedToken = value; AdditionalData?.Remove("resolved_token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resolved_token"); else _explicitNullProperties?.Remove("resolved_token"); } }
@@ -80,7 +80,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string ResolvedToken { get => _explicitNullValueResolvedToken; set { _explicitNullValueResolvedToken = value; AdditionalData?.Remove("resolved_token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resolved_token"); else _explicitNullProperties?.Remove("resolved_token"); } }
         private string _explicitNullValueResolvedToken = default!;
 #endif
-        /// <summary>The summary property</summary>
+        /// <summary>Summary of a found entity. Contains `namespace_path` and `project_path`. `project_path` is `null` for group work items. Other fields can be added.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesOrbitContextEntitySummaryProperty? Summary { get => _explicitNullValueSummary; set { _explicitNullValueSummary = value; AdditionalData?.Remove("summary"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("summary"); else _explicitNullProperties?.Remove("summary"); } }
@@ -90,7 +90,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesOrbitContextEntitySummaryProperty Summary { get => _explicitNullValueSummary; set { _explicitNullValueSummary = value; AdditionalData?.Remove("summary"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("summary"); else _explicitNullProperties?.Remove("summary"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesOrbitContextEntitySummaryProperty _explicitNullValueSummary = default!;
 #endif
-        /// <summary>The token property</summary>
+        /// <summary>Token as sent.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; AdditionalData?.Remove("token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
@@ -100,7 +100,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Token { get => _explicitNullValueToken; set { _explicitNullValueToken = value; AdditionalData?.Remove("token"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("token"); else _explicitNullProperties?.Remove("token"); } }
         private string _explicitNullValueToken = default!;
 #endif
-        /// <summary>The type property</summary>
+        /// <summary>Type of the entity. Possible values: `MergeRequest`, `WorkItem`, `Job`, `Pipeline`, `Branch`, or `Commit`. `null` when `found` is `false`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
@@ -133,7 +133,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(8)
             {
                 { "error", n => { Error = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesOrbitContextEntityErrorProperty>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesOrbitContextEntityErrorProperty.CreateFromDiscriminatorValue); } },
                 { "expansion", n => { Expansion = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesOrbitContextEntityExpansionProperty>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesOrbitContextEntityExpansionProperty.CreateFromDiscriminatorValue); } },

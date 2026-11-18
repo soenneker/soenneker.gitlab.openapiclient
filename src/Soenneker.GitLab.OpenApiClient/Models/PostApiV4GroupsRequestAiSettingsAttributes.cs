@@ -127,7 +127,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(16)
             {
                 { "ai_catalog_restricted_to_group_hierarchy", n => { AiCatalogRestrictedToGroupHierarchy = n.GetBoolValue(); } },
                 { "ai_usage_data_collection_enabled", n => { AiUsageDataCollectionEnabled = n.GetBoolValue(); } },

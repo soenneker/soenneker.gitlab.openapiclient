@@ -7227,7 +7227,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(605)
             {
                 { "abuse_report_uploads_checksum_failed_count", n => { AbuseReportUploadsChecksumFailedCount = n.GetStringValue(); } },
                 { "abuse_report_uploads_checksum_total_count", n => { AbuseReportUploadsChecksumTotalCount = n.GetStringValue(); } },

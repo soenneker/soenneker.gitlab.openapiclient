@@ -108,7 +108,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(10)
             {
                 { "approvals_before_merge", n => { ApprovalsBeforeMerge = n.GetIntValue(); } },
                 { "approver_groups", n => { ApproverGroups = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApproverGroup>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApproverGroup.CreateFromDiscriminatorValue)?.AsList(); } },

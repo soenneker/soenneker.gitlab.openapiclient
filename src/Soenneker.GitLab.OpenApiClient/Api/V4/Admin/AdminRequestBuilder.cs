@@ -14,6 +14,7 @@ using Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Migrations;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Search;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Security;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Sidekiq;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Token;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Zoekt;
 using System.Collections.Generic;
 using System.IO;
@@ -86,6 +87,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Sidekiq.SidekiqRequestBuilder Sidekiq
         {
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Sidekiq.SidekiqRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The token property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Token.TokenRequestBuilder Token
+        {
+            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Token.TokenRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The zoekt property</summary>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Zoekt.ZoektRequestBuilder Zoekt

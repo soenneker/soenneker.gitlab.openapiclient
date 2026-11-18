@@ -188,7 +188,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Impersonation_tokens
             [QueryParameter("sort")]
             public string Sort { get; set; }
 #endif
-            /// <summary>Return tokens with the specified state.</summary>
+            /// <summary>Return tokens with the specified state. `all` returns tokens in any state.</summary>
             [QueryParameter("state")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4UsersUserIdImpersonationTokensStateParameter? State { get; set; }
         }

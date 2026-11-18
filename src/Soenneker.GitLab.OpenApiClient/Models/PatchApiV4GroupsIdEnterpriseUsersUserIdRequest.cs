@@ -29,7 +29,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>If `true`, the user can create groups.</summary>
+        /// <summary>If `true`, the user can create groups. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/240990) in GitLab 19.2.</summary>
         public bool? CanCreateGroup { get => _explicitNullValueCanCreateGroup; set { _explicitNullValueCanCreateGroup = value; AdditionalData?.Remove("can_create_group"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("can_create_group"); else _explicitNullProperties?.Remove("can_create_group"); } }
         private bool? _explicitNullValueCanCreateGroup = default!;
         /// <summary>Email address of the user account. Must be from a verified [group domain](https://docs.gitlab.com/user/enterprise_user/#manage-group-domains).</summary>
@@ -52,7 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string _explicitNullValueName = default!;
 #endif
-        /// <summary>Maximum number of projects the user can create.</summary>
+        /// <summary>Maximum number of projects the user can create. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/240990) in GitLab 19.2.</summary>
         public int? ProjectsLimit { get => _explicitNullValueProjectsLimit; set { _explicitNullValueProjectsLimit = value; AdditionalData?.Remove("projects_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("projects_limit"); else _explicitNullProperties?.Remove("projects_limit"); } }
         private int? _explicitNullValueProjectsLimit = default!;
         /// <summary>
@@ -78,7 +78,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "can_create_group", n => { CanCreateGroup = n.GetBoolValue(); } },
                 { "email", n => { Email = n.GetStringValue(); } },

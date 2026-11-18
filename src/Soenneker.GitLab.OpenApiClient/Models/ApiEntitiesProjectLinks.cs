@@ -7,10 +7,11 @@ using System.IO;
 using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
+    /// <summary>
+    /// Links to API endpoints related to the project.
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public partial class ApiEntitiesProjectLinks : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
     , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
         // Track explicitly assigned nulls separately from absent properties.
         private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
@@ -37,7 +38,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The cluster_agents property</summary>
+        /// <summary>URL to the project&apos;s cluster agents.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ClusterAgents { get => _explicitNullValueClusterAgents; set { _explicitNullValueClusterAgents = value; AdditionalData?.Remove("cluster_agents"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cluster_agents"); else _explicitNullProperties?.Remove("cluster_agents"); } }
@@ -47,7 +48,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string ClusterAgents { get => _explicitNullValueClusterAgents; set { _explicitNullValueClusterAgents = value; AdditionalData?.Remove("cluster_agents"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cluster_agents"); else _explicitNullProperties?.Remove("cluster_agents"); } }
         private string _explicitNullValueClusterAgents = default!;
 #endif
-        /// <summary>The events property</summary>
+        /// <summary>URL to the project&apos;s events.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Events { get => _explicitNullValueEvents; set { _explicitNullValueEvents = value; AdditionalData?.Remove("events"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("events"); else _explicitNullProperties?.Remove("events"); } }
@@ -57,7 +58,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Events { get => _explicitNullValueEvents; set { _explicitNullValueEvents = value; AdditionalData?.Remove("events"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("events"); else _explicitNullProperties?.Remove("events"); } }
         private string _explicitNullValueEvents = default!;
 #endif
-        /// <summary>The issues property</summary>
+        /// <summary>URL to the project&apos;s issues. Returned only if issues are available to the user.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Issues { get => _explicitNullValueIssues; set { _explicitNullValueIssues = value; AdditionalData?.Remove("issues"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issues"); else _explicitNullProperties?.Remove("issues"); } }
@@ -67,7 +68,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Issues { get => _explicitNullValueIssues; set { _explicitNullValueIssues = value; AdditionalData?.Remove("issues"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issues"); else _explicitNullProperties?.Remove("issues"); } }
         private string _explicitNullValueIssues = default!;
 #endif
-        /// <summary>The labels property</summary>
+        /// <summary>URL to the project&apos;s labels.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Labels { get => _explicitNullValueLabels; set { _explicitNullValueLabels = value; AdditionalData?.Remove("labels"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("labels"); else _explicitNullProperties?.Remove("labels"); } }
@@ -77,7 +78,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Labels { get => _explicitNullValueLabels; set { _explicitNullValueLabels = value; AdditionalData?.Remove("labels"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("labels"); else _explicitNullProperties?.Remove("labels"); } }
         private string _explicitNullValueLabels = default!;
 #endif
-        /// <summary>The members property</summary>
+        /// <summary>URL to the project&apos;s members.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Members { get => _explicitNullValueMembers; set { _explicitNullValueMembers = value; AdditionalData?.Remove("members"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("members"); else _explicitNullProperties?.Remove("members"); } }
@@ -87,7 +88,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Members { get => _explicitNullValueMembers; set { _explicitNullValueMembers = value; AdditionalData?.Remove("members"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("members"); else _explicitNullProperties?.Remove("members"); } }
         private string _explicitNullValueMembers = default!;
 #endif
-        /// <summary>The merge_requests property</summary>
+        /// <summary>URL to the project&apos;s merge requests. Returned only if merge requests are available to the user.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? MergeRequests { get => _explicitNullValueMergeRequests; set { _explicitNullValueMergeRequests = value; AdditionalData?.Remove("merge_requests"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_requests"); else _explicitNullProperties?.Remove("merge_requests"); } }
@@ -97,7 +98,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string MergeRequests { get => _explicitNullValueMergeRequests; set { _explicitNullValueMergeRequests = value; AdditionalData?.Remove("merge_requests"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_requests"); else _explicitNullProperties?.Remove("merge_requests"); } }
         private string _explicitNullValueMergeRequests = default!;
 #endif
-        /// <summary>The repo_branches property</summary>
+        /// <summary>URL to the project&apos;s repository branches.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? RepoBranches { get => _explicitNullValueRepoBranches; set { _explicitNullValueRepoBranches = value; AdditionalData?.Remove("repo_branches"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("repo_branches"); else _explicitNullProperties?.Remove("repo_branches"); } }
@@ -107,7 +108,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string RepoBranches { get => _explicitNullValueRepoBranches; set { _explicitNullValueRepoBranches = value; AdditionalData?.Remove("repo_branches"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("repo_branches"); else _explicitNullProperties?.Remove("repo_branches"); } }
         private string _explicitNullValueRepoBranches = default!;
 #endif
-        /// <summary>The self property</summary>
+        /// <summary>URL to the project resource.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Self { get => _explicitNullValueSelf; set { _explicitNullValueSelf = value; AdditionalData?.Remove("self"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("self"); else _explicitNullProperties?.Remove("self"); } }
@@ -140,7 +141,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(8)
             {
                 { "cluster_agents", n => { ClusterAgents = n.GetStringValue(); } },
                 { "events", n => { Events = n.GetStringValue(); } },

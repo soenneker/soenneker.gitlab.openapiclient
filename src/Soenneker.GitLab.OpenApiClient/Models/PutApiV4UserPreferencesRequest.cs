@@ -108,7 +108,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(10)
             {
                 { "emoji_skin_tone", n => { var parsed = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4UserPreferencesRequestEmojiSkinTone>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueEmojiSkinTone = default; _explicitNullProperties?.Remove("emoji_skin_tone"); AdditionalData["emoji_skin_tone"] = unknown; } else { EmojiSkinTone = parsed; AdditionalData.Remove("emoji_skin_tone"); } } },
                 { "mobile_push_working_days", n => { MobilePushWorkingDays = n.GetCollectionOfEnumValues<global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4UserPreferencesRequestMobilePushWorkingDaysItem>()?.AsList(); } },

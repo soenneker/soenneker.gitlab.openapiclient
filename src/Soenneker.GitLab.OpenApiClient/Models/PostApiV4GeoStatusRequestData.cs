@@ -145,7 +145,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(14)
             {
                 { "cursor_last_event_date", n => { CursorLastEventDate = n.GetDateTimeOffsetValue(); } },
                 { "cursor_last_event_id", n => { CursorLastEventId = n.GetIntValue(); } },

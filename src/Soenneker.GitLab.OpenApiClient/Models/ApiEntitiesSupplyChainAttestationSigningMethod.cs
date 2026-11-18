@@ -3,10 +3,9 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
+    /// <summary>Method used to sign the attestation. If `ATTEST_METHOD` is not set, defaults to `local_ca`, except for public projects on GitLab.com, which default to `sigstore`.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public enum ApiEntitiesSupplyChainAttestationSigningMethod
-    #pragma warning restore CS1591
     {
         [EnumMember(Value = "sigstore")]
         #pragma warning disable CS1591

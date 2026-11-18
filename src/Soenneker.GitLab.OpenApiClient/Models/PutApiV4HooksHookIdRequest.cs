@@ -182,7 +182,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(15)
             {
                 { "branch_filter_strategy", n => { var parsed = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4HooksHookIdRequestBranchFilterStrategy>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueBranchFilterStrategy = default; _explicitNullProperties?.Remove("branch_filter_strategy"); AdditionalData["branch_filter_strategy"] = unknown; } else { BranchFilterStrategy = parsed; AdditionalData.Remove("branch_filter_strategy"); } } },
                 { "custom_headers", n => { CustomHeaders = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4HooksHookIdRequestCustomHeadersItem>(global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4HooksHookIdRequestCustomHeadersItem.CreateFromDiscriminatorValue)?.AsList(); } },

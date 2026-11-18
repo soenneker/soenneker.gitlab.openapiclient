@@ -85,7 +85,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "availability", n => { Availability = n.GetStringValue(); } },
                 { "clear_status_after", n => { var parsed = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PatchApiV4UserStatusRequestClearStatusAfter>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueClearStatusAfter = default; _explicitNullProperties?.Remove("clear_status_after"); AdditionalData["clear_status_after"] = unknown; } else { ClearStatusAfter = parsed; AdditionalData.Remove("clear_status_after"); } } },

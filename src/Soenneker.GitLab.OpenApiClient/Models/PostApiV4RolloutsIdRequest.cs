@@ -104,7 +104,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(5)
             {
                 { "channel_tokens", n => { ChannelTokens = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4RolloutsIdRequestChannelTokensItem>(global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4RolloutsIdRequestChannelTokensItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "data", n => { Data = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4RolloutsIdRequestData>(global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4RolloutsIdRequestData.CreateFromDiscriminatorValue); } },

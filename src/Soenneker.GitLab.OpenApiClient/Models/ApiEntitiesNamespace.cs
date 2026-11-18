@@ -86,7 +86,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string AvatarUrl { get => _explicitNullValueAvatarUrl; set { _explicitNullValueAvatarUrl = value; AdditionalData?.Remove("avatar_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("avatar_url"); else _explicitNullProperties?.Remove("avatar_url"); } }
         private string _explicitNullValueAvatarUrl = default!;
 #endif
-        /// <summary>Number of billable members in the namespace. `null` unless the user has the Owner role, is an auditor, or is an administrator.</summary>
+        /// <summary>Number of billable members in the namespace. `null` if the user does not have permission to view billing for the namespace. If the `skip_subgroup_billable_members_count` feature flag is enabled, also `null` for subgroups.</summary>
         public int? BillableMembersCount { get => _explicitNullValueBillableMembersCount; set { _explicitNullValueBillableMembersCount = value; AdditionalData?.Remove("billable_members_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billable_members_count"); else _explicitNullProperties?.Remove("billable_members_count"); } }
         private int? _explicitNullValueBillableMembersCount = default!;
         /// <summary>The ci_minutes_usage property</summary>
@@ -221,7 +221,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(24)
             {
                 { "additional_purchased_storage_ends_on", n => { AdditionalPurchasedStorageEndsOn = n.GetDateValue(); } },
                 { "additional_purchased_storage_size", n => { AdditionalPurchasedStorageSize = n.GetIntValue(); } },

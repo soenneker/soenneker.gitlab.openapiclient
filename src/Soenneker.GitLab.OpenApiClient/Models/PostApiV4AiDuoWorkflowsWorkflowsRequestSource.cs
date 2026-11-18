@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
-    /// <summary>Where the session was triggered from in the UI.</summary>
+    /// <summary>Where the session was triggered from: a GitLab feature entry point, such as `merge_request_code_conflict`, or the client surface that created the session, such as `duo_cli_run` or `ide_extension`. Stored as the session `source_type`.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum PostApiV4AiDuoWorkflowsWorkflowsRequestSource
     {

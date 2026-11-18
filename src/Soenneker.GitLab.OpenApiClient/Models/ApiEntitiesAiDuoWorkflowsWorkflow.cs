@@ -61,7 +61,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The agent_privileges property</summary>
+        /// <summary>Privilege IDs assigned to the agent.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<int?>? AgentPrivileges { get => _explicitNullValueAgentPrivileges; set { _explicitNullValueAgentPrivileges = value; AdditionalData?.Remove("agent_privileges"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("agent_privileges"); else _explicitNullProperties?.Remove("agent_privileges"); } }
@@ -71,7 +71,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public List<int?> AgentPrivileges { get => _explicitNullValueAgentPrivileges; set { _explicitNullValueAgentPrivileges = value; AdditionalData?.Remove("agent_privileges"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("agent_privileges"); else _explicitNullProperties?.Remove("agent_privileges"); } }
         private List<int?> _explicitNullValueAgentPrivileges = default!;
 #endif
-        /// <summary>The agent_privileges_names property</summary>
+        /// <summary>Names corresponding to `agent_privileges`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? AgentPrivilegesNames { get => _explicitNullValueAgentPrivilegesNames; set { _explicitNullValueAgentPrivilegesNames = value; AdditionalData?.Remove("agent_privileges_names"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("agent_privileges_names"); else _explicitNullProperties?.Remove("agent_privileges_names"); } }
@@ -81,13 +81,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public List<string> AgentPrivilegesNames { get => _explicitNullValueAgentPrivilegesNames; set { _explicitNullValueAgentPrivilegesNames = value; AdditionalData?.Remove("agent_privileges_names"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("agent_privileges_names"); else _explicitNullProperties?.Remove("agent_privileges_names"); } }
         private List<string> _explicitNullValueAgentPrivilegesNames = default!;
 #endif
-        /// <summary>The ai_catalog_item_version_id property</summary>
+        /// <summary>ID of the AI Catalog item version. `null` if not set.</summary>
         public int? AiCatalogItemVersionId { get => _explicitNullValueAiCatalogItemVersionId; set { _explicitNullValueAiCatalogItemVersionId = value; AdditionalData?.Remove("ai_catalog_item_version_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ai_catalog_item_version_id"); else _explicitNullProperties?.Remove("ai_catalog_item_version_id"); } }
         private int? _explicitNullValueAiCatalogItemVersionId = default!;
-        /// <summary>The allow_agent_to_request_user property</summary>
+        /// <summary>If `true`, the agent can pause for user input.</summary>
         public bool? AllowAgentToRequestUser { get => _explicitNullValueAllowAgentToRequestUser; set { _explicitNullValueAllowAgentToRequestUser = value; AdditionalData?.Remove("allow_agent_to_request_user"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allow_agent_to_request_user"); else _explicitNullProperties?.Remove("allow_agent_to_request_user"); } }
         private bool? _explicitNullValueAllowAgentToRequestUser = default!;
-        /// <summary>The environment property</summary>
+        /// <summary>Execution environment. `null` if not set.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Environment { get => _explicitNullValueEnvironment; set { _explicitNullValueEnvironment = value; AdditionalData?.Remove("environment"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("environment"); else _explicitNullProperties?.Remove("environment"); } }
@@ -97,7 +97,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Environment { get => _explicitNullValueEnvironment; set { _explicitNullValueEnvironment = value; AdditionalData?.Remove("environment"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("environment"); else _explicitNullProperties?.Remove("environment"); } }
         private string _explicitNullValueEnvironment = default!;
 #endif
-        /// <summary>The gitlab_url property</summary>
+        /// <summary>Base URL of the GitLab instance.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? GitlabUrl { get => _explicitNullValueGitlabUrl; set { _explicitNullValueGitlabUrl = value; AdditionalData?.Remove("gitlab_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gitlab_url"); else _explicitNullProperties?.Remove("gitlab_url"); } }
@@ -107,10 +107,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string GitlabUrl { get => _explicitNullValueGitlabUrl; set { _explicitNullValueGitlabUrl = value; AdditionalData?.Remove("gitlab_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gitlab_url"); else _explicitNullProperties?.Remove("gitlab_url"); } }
         private string _explicitNullValueGitlabUrl = default!;
 #endif
-        /// <summary>The id property</summary>
+        /// <summary>ID of the flow.</summary>
         public int? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private int? _explicitNullValueId = default!;
-        /// <summary>The image property</summary>
+        /// <summary>Container image for CI pipeline execution. `null` if not set.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Image { get => _explicitNullValueImage; set { _explicitNullValueImage = value; AdditionalData?.Remove("image"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image"); else _explicitNullProperties?.Remove("image"); } }
@@ -120,16 +120,16 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Image { get => _explicitNullValueImage; set { _explicitNullValueImage = value; AdditionalData?.Remove("image"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image"); else _explicitNullProperties?.Remove("image"); } }
         private string _explicitNullValueImage = default!;
 #endif
-        /// <summary>The incremental_checkpoints_enabled property</summary>
+        /// <summary>If `true`, the workflow stores checkpoints incrementally. `true` for all new workflows. Older workflows can return `false`.</summary>
         public bool? IncrementalCheckpointsEnabled { get => _explicitNullValueIncrementalCheckpointsEnabled; set { _explicitNullValueIncrementalCheckpointsEnabled = value; AdditionalData?.Remove("incremental_checkpoints_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("incremental_checkpoints_enabled"); else _explicitNullProperties?.Remove("incremental_checkpoints_enabled"); } }
         private bool? _explicitNullValueIncrementalCheckpointsEnabled = default!;
-        /// <summary>The mcp_enabled property</summary>
+        /// <summary>If `true`, MCP (Model Context Protocol) tools are enabled for the flow.</summary>
         public bool? McpEnabled { get => _explicitNullValueMcpEnabled; set { _explicitNullValueMcpEnabled = value; AdditionalData?.Remove("mcp_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mcp_enabled"); else _explicitNullProperties?.Remove("mcp_enabled"); } }
         private bool? _explicitNullValueMcpEnabled = default!;
-        /// <summary>The namespace_id property</summary>
+        /// <summary>ID of the associated namespace. `null` if not set.</summary>
         public int? NamespaceId { get => _explicitNullValueNamespaceId; set { _explicitNullValueNamespaceId = value; AdditionalData?.Remove("namespace_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("namespace_id"); else _explicitNullProperties?.Remove("namespace_id"); } }
         private int? _explicitNullValueNamespaceId = default!;
-        /// <summary>The pre_approved_agent_privileges property</summary>
+        /// <summary>Privilege IDs the agent can use without asking for approval.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<int?>? PreApprovedAgentPrivileges { get => _explicitNullValuePreApprovedAgentPrivileges; set { _explicitNullValuePreApprovedAgentPrivileges = value; AdditionalData?.Remove("pre_approved_agent_privileges"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pre_approved_agent_privileges"); else _explicitNullProperties?.Remove("pre_approved_agent_privileges"); } }
@@ -139,7 +139,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public List<int?> PreApprovedAgentPrivileges { get => _explicitNullValuePreApprovedAgentPrivileges; set { _explicitNullValuePreApprovedAgentPrivileges = value; AdditionalData?.Remove("pre_approved_agent_privileges"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pre_approved_agent_privileges"); else _explicitNullProperties?.Remove("pre_approved_agent_privileges"); } }
         private List<int?> _explicitNullValuePreApprovedAgentPrivileges = default!;
 #endif
-        /// <summary>The pre_approved_agent_privileges_names property</summary>
+        /// <summary>Names corresponding to `pre_approved_agent_privileges`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? PreApprovedAgentPrivilegesNames { get => _explicitNullValuePreApprovedAgentPrivilegesNames; set { _explicitNullValuePreApprovedAgentPrivilegesNames = value; AdditionalData?.Remove("pre_approved_agent_privileges_names"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pre_approved_agent_privileges_names"); else _explicitNullProperties?.Remove("pre_approved_agent_privileges_names"); } }
@@ -149,10 +149,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public List<string> PreApprovedAgentPrivilegesNames { get => _explicitNullValuePreApprovedAgentPrivilegesNames; set { _explicitNullValuePreApprovedAgentPrivilegesNames = value; AdditionalData?.Remove("pre_approved_agent_privileges_names"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pre_approved_agent_privileges_names"); else _explicitNullProperties?.Remove("pre_approved_agent_privileges_names"); } }
         private List<string> _explicitNullValuePreApprovedAgentPrivilegesNames = default!;
 #endif
-        /// <summary>The project_id property</summary>
+        /// <summary>ID of the associated project. `null` if not set.</summary>
         public int? ProjectId { get => _explicitNullValueProjectId; set { _explicitNullValueProjectId = value; AdditionalData?.Remove("project_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_id"); else _explicitNullProperties?.Remove("project_id"); } }
         private int? _explicitNullValueProjectId = default!;
-        /// <summary>The status property</summary>
+        /// <summary>Current flow status. Possible values: `created`, `running`, `paused`, `finished`, `failed`, `stopped`, `input_required`, `plan_approval_required`, `tool_call_approval_required`, or `idle`. GitLab might add new values.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; AdditionalData?.Remove("status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
@@ -162,7 +162,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; AdditionalData?.Remove("status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
         private string _explicitNullValueStatus = default!;
 #endif
-        /// <summary>The summary property</summary>
+        /// <summary>Short text summary of the workflow.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Summary { get => _explicitNullValueSummary; set { _explicitNullValueSummary = value; AdditionalData?.Remove("summary"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("summary"); else _explicitNullProperties?.Remove("summary"); } }
@@ -172,7 +172,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Summary { get => _explicitNullValueSummary; set { _explicitNullValueSummary = value; AdditionalData?.Remove("summary"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("summary"); else _explicitNullProperties?.Remove("summary"); } }
         private string _explicitNullValueSummary = default!;
 #endif
-        /// <summary>The title property</summary>
+        /// <summary>Title of the session.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; AdditionalData?.Remove("title"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
@@ -182,7 +182,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; AdditionalData?.Remove("title"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
         private string _explicitNullValueTitle = default!;
 #endif
-        /// <summary>The web_url property</summary>
+        /// <summary>URL of the session in the GitLab UI. For a group session, the URL is on the top-level group.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? WebUrl { get => _explicitNullValueWebUrl; set { _explicitNullValueWebUrl = value; AdditionalData?.Remove("web_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("web_url"); else _explicitNullProperties?.Remove("web_url"); } }
@@ -192,7 +192,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string WebUrl { get => _explicitNullValueWebUrl; set { _explicitNullValueWebUrl = value; AdditionalData?.Remove("web_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("web_url"); else _explicitNullProperties?.Remove("web_url"); } }
         private string _explicitNullValueWebUrl = default!;
 #endif
-        /// <summary>The workflow_definition property</summary>
+        /// <summary>Flow type identifier.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? WorkflowDefinition { get => _explicitNullValueWorkflowDefinition; set { _explicitNullValueWorkflowDefinition = value; AdditionalData?.Remove("workflow_definition"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflow_definition"); else _explicitNullProperties?.Remove("workflow_definition"); } }
@@ -202,7 +202,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string WorkflowDefinition { get => _explicitNullValueWorkflowDefinition; set { _explicitNullValueWorkflowDefinition = value; AdditionalData?.Remove("workflow_definition"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflow_definition"); else _explicitNullProperties?.Remove("workflow_definition"); } }
         private string _explicitNullValueWorkflowDefinition = default!;
 #endif
-        /// <summary>The workload property</summary>
+        /// <summary>Information about the workload: its `id` and a status `message`. The `id` is `null` if no workload was created, for example when `start_workflow` is not `true`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiDuoWorkflowsWorkflowWorkloadProperty? Workload { get => _explicitNullValueWorkload; set { _explicitNullValueWorkload = value; AdditionalData?.Remove("workload"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workload"); else _explicitNullProperties?.Remove("workload"); } }
@@ -235,7 +235,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(20)
             {
                 { "agent_privileges", n => { AgentPrivileges = n.GetCollectionOfPrimitiveValues<int?>()?.AsList(); } },
                 { "agent_privileges_names", n => { AgentPrivilegesNames = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },

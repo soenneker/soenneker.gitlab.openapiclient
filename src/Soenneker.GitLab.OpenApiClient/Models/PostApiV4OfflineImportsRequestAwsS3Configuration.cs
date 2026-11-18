@@ -89,7 +89,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "aws_access_key_id", n => { AwsAccessKeyId = n.GetStringValue(); } },
                 { "aws_secret_access_key", n => { AwsSecretAccessKey = n.GetStringValue(); } },

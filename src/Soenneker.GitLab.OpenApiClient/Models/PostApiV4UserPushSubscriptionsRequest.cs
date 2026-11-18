@@ -119,7 +119,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(8)
             {
                 { "apns_environment", n => { var parsed = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4UserPushSubscriptionsRequestApnsEnvironment>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueApnsEnvironment = default; _explicitNullProperties?.Remove("apns_environment"); AdditionalData["apns_environment"] = unknown; } else { ApnsEnvironment = parsed; AdditionalData.Remove("apns_environment"); } } },
                 { "app_version", n => { AppVersion = n.GetStringValue(); } },

@@ -47,7 +47,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Cluster_agents.Ite
         {
         }
         /// <summary>
-        /// Lists all agent URL configurations for a specified agent. You must have the Developer, Maintainer, or Owner role to use this endpoint. This feature was introduced in GitLab 17.4.
+        /// Lists all agent URL configurations for a specified agent. You must have the Developer, Maintainer, or Owner role to use this endpoint. Either `public_key` or `client_cert` is set, but never both. This feature was introduced in GitLab 17.4.
         /// </summary>
         /// <returns>A List&lt;global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesClustersAgentUrlConfiguration&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -66,7 +66,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Cluster_agents.Ite
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// Creates an agent URL configuration. You must have the Maintainer or Owner role to use this endpoint. An agent can have only one URL configuration at the time. This feature was introduced in GitLab 17.4.
+        /// Creates an agent URL configuration. You must have the Maintainer or Owner role to use this endpoint. An agent can have only one URL configuration at the time. If `client_cert` and `client_key` are not provided, a private-public key pair is generated and JWT authentication is used instead of mTLS. This feature was introduced in GitLab 17.4.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesClustersAgentUrlConfiguration"/></returns>
         /// <param name="body">The request body</param>
@@ -86,7 +86,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Cluster_agents.Ite
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesClustersAgentUrlConfiguration>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesClustersAgentUrlConfiguration.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Lists all agent URL configurations for a specified agent. You must have the Developer, Maintainer, or Owner role to use this endpoint. This feature was introduced in GitLab 17.4.
+        /// Lists all agent URL configurations for a specified agent. You must have the Developer, Maintainer, or Owner role to use this endpoint. Either `public_key` or `client_cert` is set, but never both. This feature was introduced in GitLab 17.4.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -105,7 +105,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Cluster_agents.Ite
             return requestInfo;
         }
         /// <summary>
-        /// Creates an agent URL configuration. You must have the Maintainer or Owner role to use this endpoint. An agent can have only one URL configuration at the time. This feature was introduced in GitLab 17.4.
+        /// Creates an agent URL configuration. You must have the Maintainer or Owner role to use this endpoint. An agent can have only one URL configuration at the time. If `client_cert` and `client_key` are not provided, a private-public key pair is generated and JWT authentication is used instead of mTLS. This feature was introduced in GitLab 17.4.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

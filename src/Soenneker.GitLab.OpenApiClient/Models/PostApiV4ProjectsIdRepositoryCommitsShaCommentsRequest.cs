@@ -78,7 +78,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "line", n => { Line = n.GetIntValue(); } },
                 { "line_type", n => { var parsed = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdRepositoryCommitsShaCommentsRequestLineType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueLineType = default; _explicitNullProperties?.Remove("line_type"); AdditionalData["line_type"] = unknown; } else { LineType = parsed; AdditionalData.Remove("line_type"); } } },

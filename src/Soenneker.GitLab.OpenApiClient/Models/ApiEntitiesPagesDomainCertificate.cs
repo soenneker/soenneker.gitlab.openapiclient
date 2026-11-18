@@ -29,7 +29,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The certificate property</summary>
+        /// <summary>Full SSL certificate in PEM format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Certificate { get => _explicitNullValueCertificate; set { _explicitNullValueCertificate = value; AdditionalData?.Remove("certificate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("certificate"); else _explicitNullProperties?.Remove("certificate"); } }
@@ -39,7 +39,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Certificate { get => _explicitNullValueCertificate; set { _explicitNullValueCertificate = value; AdditionalData?.Remove("certificate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("certificate"); else _explicitNullProperties?.Remove("certificate"); } }
         private string _explicitNullValueCertificate = default!;
 #endif
-        /// <summary>The certificate_text property</summary>
+        /// <summary>Human-readable text of the SSL certificate, with details such as the issuer, validity period, and subject.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CertificateText { get => _explicitNullValueCertificateText; set { _explicitNullValueCertificateText = value; AdditionalData?.Remove("certificate_text"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("certificate_text"); else _explicitNullProperties?.Remove("certificate_text"); } }
@@ -49,17 +49,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string CertificateText { get => _explicitNullValueCertificateText; set { _explicitNullValueCertificateText = value; AdditionalData?.Remove("certificate_text"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("certificate_text"); else _explicitNullProperties?.Remove("certificate_text"); } }
         private string _explicitNullValueCertificateText = default!;
 #endif
-        /// <summary>The expired property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Expired { get => _explicitNullValueExpired; set { _explicitNullValueExpired = value; AdditionalData?.Remove("expired"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expired"); else _explicitNullProperties?.Remove("expired"); } }
-        private string? _explicitNullValueExpired = default!;
-#nullable restore
-#else
-        public string Expired { get => _explicitNullValueExpired; set { _explicitNullValueExpired = value; AdditionalData?.Remove("expired"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expired"); else _explicitNullProperties?.Remove("expired"); } }
-        private string _explicitNullValueExpired = default!;
-#endif
-        /// <summary>The subject property</summary>
+        /// <summary>If `true`, the SSL certificate has expired.</summary>
+        public bool? Expired { get => _explicitNullValueExpired; set { _explicitNullValueExpired = value; AdditionalData?.Remove("expired"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expired"); else _explicitNullProperties?.Remove("expired"); } }
+        private bool? _explicitNullValueExpired = default!;
+        /// <summary>Subject of the SSL certificate, usually with information about the domain.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Subject { get => _explicitNullValueSubject; set { _explicitNullValueSubject = value; AdditionalData?.Remove("subject"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subject"); else _explicitNullProperties?.Remove("subject"); } }
@@ -92,11 +85,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "certificate", n => { Certificate = n.GetStringValue(); } },
                 { "certificate_text", n => { CertificateText = n.GetStringValue(); } },
-                { "expired", n => { Expired = n.GetStringValue(); } },
+                { "expired", n => { Expired = n.GetBoolValue(); } },
                 { "subject", n => { Subject = n.GetStringValue(); } },
             };
         }
@@ -109,7 +102,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("certificate", Certificate);
             writer.WriteStringValue("certificate_text", CertificateText);
-            writer.WriteStringValue("expired", Expired);
+            writer.WriteBoolValue("expired", Expired);
             writer.WriteStringValue("subject", Subject);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

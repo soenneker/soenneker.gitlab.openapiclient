@@ -129,7 +129,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(10)
             {
                 { "broadcast_type", n => { var parsed = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4BroadcastMessagesIdRequestBroadcastType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueBroadcastType = default; _explicitNullProperties?.Remove("broadcast_type"); AdditionalData["broadcast_type"] = unknown; } else { BroadcastType = parsed; AdditionalData.Remove("broadcast_type"); } } },
                 { "color", n => { Color = n.GetStringValue(); } },

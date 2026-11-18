@@ -47,7 +47,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Freeze_periods
         {
         }
         /// <summary>
-        /// Lists all freeze periods for a specified project.
+        /// Lists all freeze periods for a specified project, sorted by `created_at` in ascending order. You must have the Reporter, Developer, Maintainer, or Owner role for the project.
         /// </summary>
         /// <returns>A List&lt;global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFreezePeriod&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -86,7 +86,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Freeze_periods
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFreezePeriod>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFreezePeriod.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Lists all freeze periods for a specified project.
+        /// Lists all freeze periods for a specified project, sorted by `created_at` in ascending order. You must have the Reporter, Developer, Maintainer, or Owner role for the project.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -136,7 +136,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Freeze_periods
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Freeze_periods.Freeze_periodsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Lists all freeze periods for a specified project.
+        /// Lists all freeze periods for a specified project, sorted by `created_at` in ascending order. You must have the Reporter, Developer, Maintainer, or Owner role for the project.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Freeze_periodsRequestBuilderGetQueryParameters 

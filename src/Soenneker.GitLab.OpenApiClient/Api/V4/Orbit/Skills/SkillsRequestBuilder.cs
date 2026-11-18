@@ -47,7 +47,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Orbit.Skills
         {
         }
         /// <summary>
-        /// Lists the Orbit skills deployed with the connected knowledge graph service.
+        /// Lists the Orbit skills deployed with the connected knowledge graph service. The response includes an `ETag` header derived from the sorted skill names and versions, and a `Cache-Control` header set to `private, max-age=0, must-revalidate`. Sending the `ETag` value in the `If-None-Match` request header revalidates the list. A matching value returns `304 Not Modified` with no response body. This feature was introduced in GitLab 19.5.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesOrbitSkillCollection"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -65,7 +65,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Orbit.Skills
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesOrbitSkillCollection>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesOrbitSkillCollection.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Lists the Orbit skills deployed with the connected knowledge graph service.
+        /// Lists the Orbit skills deployed with the connected knowledge graph service. The response includes an `ETag` header derived from the sorted skill names and versions, and a `Cache-Control` header set to `private, max-age=0, must-revalidate`. Sending the `ETag` value in the `If-None-Match` request header revalidates the list. A matching value returns `304 Not Modified` with no response body. This feature was introduced in GitLab 19.5.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

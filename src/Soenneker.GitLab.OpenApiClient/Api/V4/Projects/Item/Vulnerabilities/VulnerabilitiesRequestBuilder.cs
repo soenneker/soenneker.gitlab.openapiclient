@@ -66,7 +66,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Vulnerabilities
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// Creates a new vulnerability from a confirmed finding.
+        /// Creates a new vulnerability from a confirmed finding. The new vulnerability takes its `title` from the `name` of the finding, and its `severity` from the finding. Its author is the authenticated user. Returns status code `403` if the authenticated user does not have permission to create a vulnerability. Returns status code `400` if the finding is not found or is already attached to a vulnerability.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesVulnerability"/></returns>
         /// <param name="body">The request body</param>
@@ -105,7 +105,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Vulnerabilities
             return requestInfo;
         }
         /// <summary>
-        /// Creates a new vulnerability from a confirmed finding.
+        /// Creates a new vulnerability from a confirmed finding. The new vulnerability takes its `title` from the `name` of the finding, and its `severity` from the finding. Its author is the authenticated user. Returns status code `403` if the authenticated user does not have permission to create a vulnerability. Returns status code `400` if the finding is not found or is already attached to a vulnerability.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

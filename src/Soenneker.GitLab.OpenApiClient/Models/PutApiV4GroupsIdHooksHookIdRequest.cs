@@ -267,7 +267,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(32)
             {
                 { "branch_filter_strategy", n => { var parsed = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdHooksHookIdRequestBranchFilterStrategy>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueBranchFilterStrategy = default; _explicitNullProperties?.Remove("branch_filter_strategy"); AdditionalData["branch_filter_strategy"] = unknown; } else { BranchFilterStrategy = parsed; AdditionalData.Remove("branch_filter_strategy"); } } },
                 { "confidential_issues_events", n => { ConfidentialIssuesEvents = n.GetBoolValue(); } },

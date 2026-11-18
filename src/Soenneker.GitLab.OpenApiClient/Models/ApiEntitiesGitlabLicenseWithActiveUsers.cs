@@ -131,7 +131,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(13)
             {
                 { "active_users", n => { ActiveUsers = n.GetIntValue(); } },
                 { "add_ons", n => { AddOns = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGitlabLicenseWithActiveUsersAddOnsProperty>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGitlabLicenseWithActiveUsersAddOnsProperty.CreateFromDiscriminatorValue); } },

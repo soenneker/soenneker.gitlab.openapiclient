@@ -71,7 +71,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "minimum_access_level_for_delete", n => { var parsed = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PatchApiV4ProjectsIdPackagesProtectionRulesPackageProtectionRuleIdRequestMinimumAccessLevelForDelete>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueMinimumAccessLevelForDelete = default; _explicitNullProperties?.Remove("minimum_access_level_for_delete"); AdditionalData["minimum_access_level_for_delete"] = unknown; } else { MinimumAccessLevelForDelete = parsed; AdditionalData.Remove("minimum_access_level_for_delete"); } } },
                 { "minimum_access_level_for_push", n => { var parsed = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PatchApiV4ProjectsIdPackagesProtectionRulesPackageProtectionRuleIdRequestMinimumAccessLevelForPush>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueMinimumAccessLevelForPush = default; _explicitNullProperties?.Remove("minimum_access_level_for_push"); AdditionalData["minimum_access_level_for_push"] = unknown; } else { MinimumAccessLevelForPush = parsed; AdditionalData.Remove("minimum_access_level_for_push"); } } },

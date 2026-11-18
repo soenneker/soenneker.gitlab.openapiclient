@@ -33,7 +33,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Google_cloud.Setup
         {
         }
         /// <summary>
-        /// Retrieves the setup script for Google Cloud integration.
+        /// Retrieves the setup script for Google Cloud integration. You must have the Maintainer or Owner role for the project. Only the Google Artifact Management integration is supported. The script creates IAM policies to access Google Artifact Registry. The Artifact Registry Reader role is granted to members with at least the Reporter role. The Artifact Registry Writer role is granted to members with at least the Developer role.
         /// </summary>
         /// <returns>A <see cref="string"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -51,7 +51,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Google_cloud.Setup
             return await RequestAdapter.SendPrimitiveAsync<string>(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Retrieves the setup script for Google Cloud integration.
+        /// Retrieves the setup script for Google Cloud integration. You must have the Maintainer or Owner role for the project. Only the Google Artifact Management integration is supported. The script creates IAM policies to access Google Artifact Registry. The Artifact Registry Reader role is granted to members with at least the Reporter role. The Artifact Registry Writer role is granted to members with at least the Developer role.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -79,7 +79,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Google_cloud.Setup
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Google_cloud.Setup.IntegrationsSh.IntegrationsShRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Retrieves the setup script for Google Cloud integration.
+        /// Retrieves the setup script for Google Cloud integration. You must have the Maintainer or Owner role for the project. Only the Google Artifact Management integration is supported. The script creates IAM policies to access Google Artifact Registry. The Artifact Registry Reader role is granted to members with at least the Reporter role. The Artifact Registry Writer role is granted to members with at least the Developer role.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class IntegrationsShRequestBuilderGetQueryParameters 

@@ -78,7 +78,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "blocked_merge_request", n => { BlockedMergeRequest = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequestBasic>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequestBasic.CreateFromDiscriminatorValue); } },
                 { "blocking_merge_request", n => { BlockingMergeRequest = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequestBasic>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequestBasic.CreateFromDiscriminatorValue); } },

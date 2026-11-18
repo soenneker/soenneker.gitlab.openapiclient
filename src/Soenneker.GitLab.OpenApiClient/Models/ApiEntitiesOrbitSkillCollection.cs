@@ -25,7 +25,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The server_version property</summary>
+        /// <summary>Version of the deployed Orbit service.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ServerVersion { get => _explicitNullValueServerVersion; set { _explicitNullValueServerVersion = value; AdditionalData?.Remove("server_version"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("server_version"); else _explicitNullProperties?.Remove("server_version"); } }
@@ -35,7 +35,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string ServerVersion { get => _explicitNullValueServerVersion; set { _explicitNullValueServerVersion = value; AdditionalData?.Remove("server_version"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("server_version"); else _explicitNullProperties?.Remove("server_version"); } }
         private string _explicitNullValueServerVersion = default!;
 #endif
-        /// <summary>The skills property</summary>
+        /// <summary>Deployed skills.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesOrbitSkillSummary>? Skills { get => _explicitNullValueSkills; set { _explicitNullValueSkills = value; AdditionalData?.Remove("skills"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("skills"); else _explicitNullProperties?.Remove("skills"); } }

@@ -177,7 +177,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Ability to archive or unarchive a subgroup. This ability does not allow archiving top-level groups. Archiving unlinks projects from their fork networks and closes their open cross-fork merge requests, and unarchiving does not restore either.</summary>
         public bool? ArchiveSubgroup { get => _explicitNullValueArchiveSubgroup; set { _explicitNullValueArchiveSubgroup = value; AdditionalData?.Remove("archive_subgroup"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("archive_subgroup"); else _explicitNullProperties?.Remove("archive_subgroup"); } }
         private bool? _explicitNullValueArchiveSubgroup = default!;
-        /// <summary>Base access level for the custom role.</summary>
+        /// <summary>Base access level for the custom role. Valid values are 5 (Minimal Access), 10 (Guest), 15 (Planner), 20 (Reporter), 25 (Security Manager), 30 (Developer), and 40 (Maintainer).</summary>
         public int? BaseAccessLevel { get => _explicitNullValueBaseAccessLevel; set { _explicitNullValueBaseAccessLevel = value; AdditionalData?.Remove("base_access_level"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("base_access_level"); else _explicitNullProperties?.Remove("base_access_level"); } }
         private int? _explicitNullValueBaseAccessLevel = default!;
         /// <summary>Create security scan profiles.</summary>
@@ -361,7 +361,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(51)
             {
                 { "admin_ai_catalog_item", n => { AdminAiCatalogItem = n.GetBoolValue(); } },
                 { "admin_ai_catalog_item_consumer", n => { AdminAiCatalogItemConsumer = n.GetBoolValue(); } },

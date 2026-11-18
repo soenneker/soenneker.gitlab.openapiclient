@@ -33,7 +33,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Workflows.Item.
         {
         }
         /// <summary>
-        /// Creates and starts a new session with the flow, goal, noteable, source, privileges and trigger of the given workflow. The original workflow is not modified.
+        /// Creates and starts a new session with the flow, goal, noteable, source, privileges and trigger of the given workflow. The new session runs from the beginning. The original workflow is not modified and keeps its `failed` or `stopped` status. Only project-level workflows with a `failed` or `stopped` status can be restarted. Other workflows return `403 Forbidden`. Restarting a workflow while a restart of it is in progress returns `409 Conflict`. The response describes the new session, so `id` is the ID of the new session.
         /// </summary>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -50,7 +50,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Workflows.Item.
             await RequestAdapter.SendNoContentAsync(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Creates and starts a new session with the flow, goal, noteable, source, privileges and trigger of the given workflow. The original workflow is not modified.
+        /// Creates and starts a new session with the flow, goal, noteable, source, privileges and trigger of the given workflow. The new session runs from the beginning. The original workflow is not modified and keeps its `failed` or `stopped` status. Only project-level workflows with a `failed` or `stopped` status can be restarted. Other workflows return `403 Forbidden`. Restarting a workflow while a restart of it is in progress returns `409 Conflict`. The response describes the new session, so `id` is the ID of the new session.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

@@ -152,7 +152,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(9)
             {
                 { "aws_s3_configuration", n => { AwsS3Configuration = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4OfflineImportsRequestAwsS3Configuration>(global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4OfflineImportsRequestAwsS3Configuration.CreateFromDiscriminatorValue); } },
                 { "bucket", n => { Bucket = n.GetStringValue(); } },

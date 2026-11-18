@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Feature_flags_sett
         {
         }
         /// <summary>
-        /// Retrieves the feature flag settings of a specified project.
+        /// Retrieves the feature flag settings of a specified project. Enforcement of `minimum_role` is behind a feature flag named `feature_flag_management_permissions`, disabled by default. This feature was introduced in GitLab 19.4.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFeatureFlagSettings"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Feature_flags_sett
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFeatureFlagSettings>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFeatureFlagSettings.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Updates the feature flag settings of a specified project.
+        /// Updates the feature flag settings of a specified project. You must have the Maintainer or Owner role for the project. To change `minimum_role` from `owner` or `no_one_allowed`, you must have the Owner role. Enforcement of `minimum_role` is behind a feature flag named `feature_flag_management_permissions`, disabled by default. This feature was introduced in GitLab 19.4.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFeatureFlagSettings"/></returns>
         /// <param name="body">The request body</param>
@@ -72,7 +72,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Feature_flags_sett
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFeatureFlagSettings>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFeatureFlagSettings.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Retrieves the feature flag settings of a specified project.
+        /// Retrieves the feature flag settings of a specified project. Enforcement of `minimum_role` is behind a feature flag named `feature_flag_management_permissions`, disabled by default. This feature was introduced in GitLab 19.4.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -91,7 +91,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Feature_flags_sett
             return requestInfo;
         }
         /// <summary>
-        /// Updates the feature flag settings of a specified project.
+        /// Updates the feature flag settings of a specified project. You must have the Maintainer or Owner role for the project. To change `minimum_role` from `owner` or `no_one_allowed`, you must have the Owner role. Enforcement of `minimum_role` is behind a feature flag named `feature_flag_management_permissions`, disabled by default. This feature was introduced in GitLab 19.4.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

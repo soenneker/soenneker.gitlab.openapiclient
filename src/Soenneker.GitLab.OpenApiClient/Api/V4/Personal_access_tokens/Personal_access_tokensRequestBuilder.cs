@@ -53,7 +53,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Personal_access_tokens
         {
         }
         /// <summary>
-        /// Lists all personal access tokens accessible by the authenticated user. For administrators, returns all personal access tokens in the instance. For non-administrators, returns all of their personal access tokens.
+        /// Lists all personal access tokens accessible by the authenticated user. For administrators, returns all personal access tokens in the instance. For non-administrators, returns all of their personal access tokens. The `granular_scopes` attribute is present only for tokens created with granular scopes. In each granular scope, `project_id` is set when the scope targets a project, and `group_id` when it targets a group. Both are `null` for scopes with `access` of `user`, `instance`, `all_memberships`, or `personal_projects`. The `granular_scopes` attribute was [introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/589500) in GitLab 19.2.
         /// </summary>
         /// <returns>A List&lt;global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPersonalAccessToken&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -72,7 +72,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Personal_access_tokens
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// Lists all personal access tokens accessible by the authenticated user. For administrators, returns all personal access tokens in the instance. For non-administrators, returns all of their personal access tokens.
+        /// Lists all personal access tokens accessible by the authenticated user. For administrators, returns all personal access tokens in the instance. For non-administrators, returns all of their personal access tokens. The `granular_scopes` attribute is present only for tokens created with granular scopes. In each granular scope, `project_id` is set when the scope targets a project, and `group_id` when it targets a group. Both are `null` for scopes with `access` of `user`, `instance`, `all_memberships`, or `personal_projects`. The `granular_scopes` attribute was [introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/589500) in GitLab 19.2.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -100,7 +100,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Personal_access_tokens
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Personal_access_tokens.Personal_access_tokensRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Lists all personal access tokens accessible by the authenticated user. For administrators, returns all personal access tokens in the instance. For non-administrators, returns all of their personal access tokens.
+        /// Lists all personal access tokens accessible by the authenticated user. For administrators, returns all personal access tokens in the instance. For non-administrators, returns all of their personal access tokens. The `granular_scopes` attribute is present only for tokens created with granular scopes. In each granular scope, `project_id` is set when the scope targets a project, and `group_id` when it targets a group. Both are `null` for scopes with `access` of `user`, `instance`, `all_memberships`, or `personal_projects`. The `granular_scopes` attribute was [introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/589500) in GitLab 19.2.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Personal_access_tokensRequestBuilderGetQueryParameters 
@@ -152,7 +152,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Personal_access_tokens
             [QueryParameter("sort")]
             public string Sort { get; set; }
 #endif
-            /// <summary>Return tokens with the specified state.</summary>
+            /// <summary>Return tokens with the specified state. `all` returns tokens in any state.</summary>
             [QueryParameter("state")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4PersonalAccessTokensStateParameter? State { get; set; }
             /// <summary>Filter personal access tokens by user ID. Non-administrators can only filter their own tokens.</summary>

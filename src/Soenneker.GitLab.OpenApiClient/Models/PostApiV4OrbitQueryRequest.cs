@@ -40,7 +40,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Response format: raw, llm, or gql</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4OrbitQueryRequestResponseFormat? ResponseFormat { get => _explicitNullValueResponseFormat; set { _explicitNullValueResponseFormat = value; AdditionalData?.Remove("response_format"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("response_format"); else _explicitNullProperties?.Remove("response_format"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4OrbitQueryRequestResponseFormat? _explicitNullValueResponseFormat = default!;
-        /// <summary>Optional frontend source subtype (e.g. code_intelligence)</summary>
+        /// <summary>Subtype of a request from the GitLab UI. Only `code_intelligence` has an effect. The API ignores the attribute for requests that do not come from a GitLab UI session.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SourceType { get => _explicitNullValueSourceType; set { _explicitNullValueSourceType = value; AdditionalData?.Remove("source_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source_type"); else _explicitNullProperties?.Remove("source_type"); } }

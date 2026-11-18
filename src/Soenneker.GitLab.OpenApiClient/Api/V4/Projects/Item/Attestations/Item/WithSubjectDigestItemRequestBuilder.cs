@@ -40,7 +40,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Attestations.Item
         {
         }
         /// <summary>
-        /// Lists all attestations for a specified project and artifact hash. This feature was introduced in GitLab 18.7.
+        /// Lists all attestations for a specified project and artifact SHA-256 hash. This feature was introduced in GitLab 18.7.
         /// </summary>
         /// <returns>A List&lt;global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSupplyChainAttestation&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -59,7 +59,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Attestations.Item
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// Lists all attestations for a specified project and artifact hash. This feature was introduced in GitLab 18.7.
+        /// Lists all attestations for a specified project and artifact SHA-256 hash. This feature was introduced in GitLab 18.7.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

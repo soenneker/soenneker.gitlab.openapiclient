@@ -100,7 +100,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(5)
             {
                 { "api_url", n => { ApiUrl = n.GetStringValue(); } },
                 { "authorization_type", n => { var parsed = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4GroupsIdClustersUserRequestPlatformKubernetesAttributesAuthorizationType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAuthorizationType = default; _explicitNullProperties?.Remove("authorization_type"); AdditionalData["authorization_type"] = unknown; } else { AuthorizationType = parsed; AdditionalData.Remove("authorization_type"); } } },

@@ -47,7 +47,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Deployments
         {
         }
         /// <summary>
-        /// Lists all deployments in a project.
+        /// Lists all deployments in a project. Some filters, sort orders, and statuses work only in certain combinations. Returns `400 Bad Request` when a request filters by `updated_after` or `updated_before` without `order_by=updated_at`, filters by `finished_after` or `finished_before` without both `order_by=finished_at` and `status=success`, sets `order_by=finished_at` without filtering by `finished_after`, `finished_before`, or a `status` of `success`, `failed`, or `canceled`, or combines `updated_after` or `updated_before` with `finished_after` or `finished_before`.
         /// </summary>
         /// <returns>A List&lt;global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDeployment&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -66,7 +66,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Deployments
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// Creates a deployment.
+        /// Creates a deployment. The response includes the `approvals` and `pending_approval_count` properties.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDeploymentExtended"/></returns>
         /// <param name="body">The request body</param>
@@ -86,7 +86,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Deployments
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDeploymentExtended>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDeploymentExtended.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Lists all deployments in a project.
+        /// Lists all deployments in a project. Some filters, sort orders, and statuses work only in certain combinations. Returns `400 Bad Request` when a request filters by `updated_after` or `updated_before` without `order_by=updated_at`, filters by `finished_after` or `finished_before` without both `order_by=finished_at` and `status=success`, sets `order_by=finished_at` without filtering by `finished_after`, `finished_before`, or a `status` of `success`, `failed`, or `canceled`, or combines `updated_after` or `updated_before` with `finished_after` or `finished_before`.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -105,7 +105,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Deployments
             return requestInfo;
         }
         /// <summary>
-        /// Creates a deployment.
+        /// Creates a deployment. The response includes the `approvals` and `pending_approval_count` properties.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -136,7 +136,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Deployments
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Deployments.DeploymentsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Lists all deployments in a project.
+        /// Lists all deployments in a project. Some filters, sort orders, and statuses work only in certain combinations. Returns `400 Bad Request` when a request filters by `updated_after` or `updated_before` without `order_by=updated_at`, filters by `finished_after` or `finished_before` without both `order_by=finished_at` and `status=success`, sets `order_by=finished_at` without filtering by `finished_after`, `finished_before`, or a `status` of `success`, `failed`, or `canceled`, or combines `updated_after` or `updated_before` with `finished_after` or `finished_before`.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class DeploymentsRequestBuilderGetQueryParameters 

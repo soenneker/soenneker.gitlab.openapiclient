@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Compliance_externa
         {
         }
         /// <summary>
-        /// Sets the status of a specified external control. Use this operation to inform GitLab that a control has passed or failed a check by an external service.
+        /// Sets the status of a specified external control. Use this operation to inform GitLab that a control haspassed, failed, or does not apply to the project. Controls with the `not_applicable` status do not count aspassed or failed.Requests must use HMAC, timestamp, and nonce authentication, with these headers:| Header | Required | Description ||--------|----------|-------------|| `X-Gitlab-Timestamp` | Yes | Current Unix timestamp. Requests 15 seconds old or older are rejected. || `X-Gitlab-Nonce` | Yes | Random string of exactly 32 characters, to prevent replay attacks. || `X-Gitlab-Hmac-Sha256` | Yes | HMAC-SHA256 signature of the request. |To compute the HMAC-SHA256 signature:1. Concatenate these values in this order: the `X-Gitlab-Timestamp` value, the `X-Gitlab-Nonce` value,   the entire path of the request, and the `status` value formatted as `status=&lt;status&gt;`.1. Compute the HMAC-SHA256 of the concatenated string with your secret key.This feature was introduced in GitLab 17.11.
         /// </summary>
         /// <returns>A <see cref="Stream"/></returns>
         /// <param name="body">The request body</param>
@@ -54,7 +54,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Compliance_externa
             return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Sets the status of a specified external control. Use this operation to inform GitLab that a control has passed or failed a check by an external service.
+        /// Sets the status of a specified external control. Use this operation to inform GitLab that a control haspassed, failed, or does not apply to the project. Controls with the `not_applicable` status do not count aspassed or failed.Requests must use HMAC, timestamp, and nonce authentication, with these headers:| Header | Required | Description ||--------|----------|-------------|| `X-Gitlab-Timestamp` | Yes | Current Unix timestamp. Requests 15 seconds old or older are rejected. || `X-Gitlab-Nonce` | Yes | Random string of exactly 32 characters, to prevent replay attacks. || `X-Gitlab-Hmac-Sha256` | Yes | HMAC-SHA256 signature of the request. |To compute the HMAC-SHA256 signature:1. Concatenate these values in this order: the `X-Gitlab-Timestamp` value, the `X-Gitlab-Nonce` value,   the entire path of the request, and the `status` value formatted as `status=&lt;status&gt;`.1. Compute the HMAC-SHA256 of the concatenated string with your secret key.This feature was introduced in GitLab 17.11.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

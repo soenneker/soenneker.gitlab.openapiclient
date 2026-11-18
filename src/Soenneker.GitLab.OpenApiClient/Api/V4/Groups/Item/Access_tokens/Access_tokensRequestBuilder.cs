@@ -53,7 +53,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Access_tokens
         {
         }
         /// <summary>
-        /// Lists all group access tokens for a specified group.
+        /// Lists all group access tokens for a specified group. The `last_used_ips` attribute was [introduced](https://gitlab.com/gitlab-org/gitlab/-/work_items/600347) in GitLab 19.2 and made generally available in GitLab 19.4.
         /// </summary>
         /// <returns>A List&lt;global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesResourceAccessToken&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -72,7 +72,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Access_tokens
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// Creates a group access token for a specified group. You cannot create a token with an access level greater than your account. For example, a user with the Maintainer role cannot create a group access token with the Owner role. You must use a personal access token with this endpoint. You cannot authenticate with a group access token.
+        /// Creates a group access token for a specified group. You cannot create a token with an access level greater than your account. For example, a user with the Maintainer role cannot create a group access token with the Owner role. You must use a personal access token with this endpoint. You cannot authenticate with a group access token. You must have the Owner role for the group.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesResourceAccessTokenWithToken"/></returns>
         /// <param name="body">The request body</param>
@@ -92,7 +92,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Access_tokens
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesResourceAccessTokenWithToken>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesResourceAccessTokenWithToken.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Lists all group access tokens for a specified group.
+        /// Lists all group access tokens for a specified group. The `last_used_ips` attribute was [introduced](https://gitlab.com/gitlab-org/gitlab/-/work_items/600347) in GitLab 19.2 and made generally available in GitLab 19.4.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -111,7 +111,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Access_tokens
             return requestInfo;
         }
         /// <summary>
-        /// Creates a group access token for a specified group. You cannot create a token with an access level greater than your account. For example, a user with the Maintainer role cannot create a group access token with the Owner role. You must use a personal access token with this endpoint. You cannot authenticate with a group access token.
+        /// Creates a group access token for a specified group. You cannot create a token with an access level greater than your account. For example, a user with the Maintainer role cannot create a group access token with the Owner role. You must use a personal access token with this endpoint. You cannot authenticate with a group access token. You must have the Owner role for the group.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -142,7 +142,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Access_tokens
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Access_tokens.Access_tokensRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Lists all group access tokens for a specified group.
+        /// Lists all group access tokens for a specified group. The `last_used_ips` attribute was [introduced](https://gitlab.com/gitlab-org/gitlab/-/work_items/600347) in GitLab 19.2 and made generally available in GitLab 19.4.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Access_tokensRequestBuilderGetQueryParameters 
@@ -188,7 +188,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Access_tokens
             [QueryParameter("sort")]
             public string Sort { get; set; }
 #endif
-            /// <summary>Return tokens with the specified state.</summary>
+            /// <summary>Return tokens with the specified state. `all` returns tokens in any state.</summary>
             [QueryParameter("state")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4GroupsIdAccessTokensStateParameter? State { get; set; }
         }

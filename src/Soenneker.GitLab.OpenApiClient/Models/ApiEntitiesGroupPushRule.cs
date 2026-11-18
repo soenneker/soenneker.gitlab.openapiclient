@@ -154,7 +154,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(15)
             {
                 { "author_email_regex", n => { AuthorEmailRegex = n.GetStringValue(); } },
                 { "branch_name_regex", n => { BranchNameRegex = n.GetStringValue(); } },

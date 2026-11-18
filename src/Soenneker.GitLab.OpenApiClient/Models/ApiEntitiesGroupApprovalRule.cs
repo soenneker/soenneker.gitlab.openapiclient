@@ -148,7 +148,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(11)
             {
                 { "applies_to_all_protected_branches", n => { AppliesToAllProtectedBranches = n.GetBoolValue(); } },
                 { "approvals_required", n => { ApprovalsRequired = n.GetIntValue(); } },

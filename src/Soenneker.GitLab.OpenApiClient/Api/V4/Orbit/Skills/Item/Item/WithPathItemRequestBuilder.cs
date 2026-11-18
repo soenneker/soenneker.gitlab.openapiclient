@@ -33,7 +33,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Orbit.Skills.Item.Item
         {
         }
         /// <summary>
-        /// Retrieves a UTF-8 file from a deployed Orbit skill as raw text.
+        /// Retrieves a UTF-8 file from a deployed Orbit skill as raw text. It fetches `SKILL.md` directly or follows relative links to files in the same skill tree. The response is the file content, not a JSON object. Markdown files (`.md`) have the content type `text/markdown; charset=utf-8`. Other files have the content type `text/plain; charset=utf-8`. The endpoint never returns a skill file as HTML. Only exact paths listed in the skill manifest are available. Unknown paths return `404 Not Found`. A path with a `.` segment returns `404 Not Found`. A path with a `..` segment returns `400 Bad Request`. Malformed paths can return `400 Bad Request`. API error responses are JSON, rather than raw file content. Requests blocked by path traversal middleware can return a plain-text error. The response includes a strong `ETag` from the SHA-256 of the file and a `Cache-Control` header set to `private, max-age=0, must-revalidate`. Sending the `ETag` in `If-None-Match` returns `304 Not Modified` when the file is unchanged. `HEAD` returns the same headers without a body. This feature was introduced in GitLab 19.5.
         /// </summary>
         /// <returns>A <see cref="Stream"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -51,7 +51,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Orbit.Skills.Item.Item
             return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Retrieves a UTF-8 file from a deployed Orbit skill as raw text.
+        /// Retrieves a UTF-8 file from a deployed Orbit skill as raw text. It fetches `SKILL.md` directly or follows relative links to files in the same skill tree. The response is the file content, not a JSON object. Markdown files (`.md`) have the content type `text/markdown; charset=utf-8`. Other files have the content type `text/plain; charset=utf-8`. The endpoint never returns a skill file as HTML. Only exact paths listed in the skill manifest are available. Unknown paths return `404 Not Found`. A path with a `.` segment returns `404 Not Found`. A path with a `..` segment returns `400 Bad Request`. Malformed paths can return `400 Bad Request`. API error responses are JSON, rather than raw file content. Requests blocked by path traversal middleware can return a plain-text error. The response includes a strong `ETag` from the SHA-256 of the file and a `Cache-Control` header set to `private, max-age=0, must-revalidate`. Sending the `ETag` in `If-None-Match` returns `304 Not Modified` when the file is unchanged. `HEAD` returns the same headers without a body. This feature was introduced in GitLab 19.5.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

@@ -85,7 +85,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "cloud_event_id", n => { CloudEventId = n.GetStringValue(); } },
                 { "details", n => { Details = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdAiAgentAuditEventsRequestEventsItemDetailsProperty>(global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdAiAgentAuditEventsRequestEventsItemDetailsProperty.CreateFromDiscriminatorValue); } },

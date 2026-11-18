@@ -92,7 +92,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "dist-tags", n => { DistTags = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNpmPackageDistTagsProperty>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNpmPackageDistTagsProperty.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },

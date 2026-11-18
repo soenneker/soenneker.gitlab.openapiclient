@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
-    /// <summary>Auto stop setting for the environment.</summary>
+    /// <summary>Auto stop setting for the environment. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/428625) in GitLab 17.8.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum PutApiV4ProjectsIdEnvironmentsEnvironmentIdRequestAutoStopSetting
     {

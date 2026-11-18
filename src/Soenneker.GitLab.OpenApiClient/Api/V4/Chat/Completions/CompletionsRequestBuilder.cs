@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Chat.Completions
         {
         }
         /// <summary>
-        /// Generates a response for a GitLab Duo Chat question.
+        /// Generates a response for a GitLab Duo Chat question. Requests to this endpoint are proxied to the AI Gateway. This feature was introduced in GitLab 16.7.
         /// </summary>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -53,7 +53,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Chat.Completions
             await RequestAdapter.SendNoContentAsync(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Generates a response for a GitLab Duo Chat question.
+        /// Generates a response for a GitLab Duo Chat question. Requests to this endpoint are proxied to the AI Gateway. This feature was introduced in GitLab 16.7.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

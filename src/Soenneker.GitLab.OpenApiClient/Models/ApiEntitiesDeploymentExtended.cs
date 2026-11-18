@@ -47,7 +47,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The approvals property</summary>
+        /// <summary>Approvals and rejections of the deployment. Premium and Ultimate only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDeploymentsApproval>? Approvals { get => _explicitNullValueApprovals; set { _explicitNullValueApprovals = value; AdditionalData?.Remove("approvals"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("approvals"); else _explicitNullProperties?.Remove("approvals"); } }
@@ -96,7 +96,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The iid property</summary>
         public int? Iid { get => _explicitNullValueIid; set { _explicitNullValueIid = value; AdditionalData?.Remove("iid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("iid"); else _explicitNullProperties?.Remove("iid"); } }
         private int? _explicitNullValueIid = default!;
-        /// <summary>The pending_approval_count property</summary>
+        /// <summary>Number of approvals the deployment still needs. Is `0` unless the environment is protected. Premium and Ultimate only.</summary>
         public int? PendingApprovalCount { get => _explicitNullValuePendingApprovalCount; set { _explicitNullValuePendingApprovalCount = value; AdditionalData?.Remove("pending_approval_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pending_approval_count"); else _explicitNullProperties?.Remove("pending_approval_count"); } }
         private int? _explicitNullValuePendingApprovalCount = default!;
         /// <summary>The ref property</summary>
@@ -165,7 +165,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(13)
             {
                 { "approval_summary", n => { ApprovalSummary = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDeploymentsApprovalSummary>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDeploymentsApprovalSummary.CreateFromDiscriminatorValue); } },
                 { "approvals", n => { Approvals = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDeploymentsApproval>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDeploymentsApproval.CreateFromDiscriminatorValue)?.AsList(); } },

@@ -35,10 +35,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The agent_id property</summary>
+        /// <summary>ID of the agent the URL configuration belongs to.</summary>
         public long? AgentId { get => _explicitNullValueAgentId; set { _explicitNullValueAgentId = value; AdditionalData?.Remove("agent_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("agent_id"); else _explicitNullProperties?.Remove("agent_id"); } }
         private long? _explicitNullValueAgentId = default!;
-        /// <summary>The ca_cert property</summary>
+        /// <summary>CA certificate in PEM format to verify the agent endpoint.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CaCert { get => _explicitNullValueCaCert; set { _explicitNullValueCaCert = value; AdditionalData?.Remove("ca_cert"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ca_cert"); else _explicitNullProperties?.Remove("ca_cert"); } }
@@ -48,7 +48,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string CaCert { get => _explicitNullValueCaCert; set { _explicitNullValueCaCert = value; AdditionalData?.Remove("ca_cert"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ca_cert"); else _explicitNullProperties?.Remove("ca_cert"); } }
         private string _explicitNullValueCaCert = default!;
 #endif
-        /// <summary>The client_cert property</summary>
+        /// <summary>Client certificate in PEM format, if mTLS authentication is used.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ClientCert { get => _explicitNullValueClientCert; set { _explicitNullValueClientCert = value; AdditionalData?.Remove("client_cert"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_cert"); else _explicitNullProperties?.Remove("client_cert"); } }
@@ -58,10 +58,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string ClientCert { get => _explicitNullValueClientCert; set { _explicitNullValueClientCert = value; AdditionalData?.Remove("client_cert"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_cert"); else _explicitNullProperties?.Remove("client_cert"); } }
         private string _explicitNullValueClientCert = default!;
 #endif
-        /// <summary>The id property</summary>
+        /// <summary>ID of the URL configuration.</summary>
         public long? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private long? _explicitNullValueId = default!;
-        /// <summary>The public_key property</summary>
+        /// <summary>Base64-encoded public key, if JWT authentication is used.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PublicKey { get => _explicitNullValuePublicKey; set { _explicitNullValuePublicKey = value; AdditionalData?.Remove("public_key"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("public_key"); else _explicitNullProperties?.Remove("public_key"); } }
@@ -71,7 +71,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string PublicKey { get => _explicitNullValuePublicKey; set { _explicitNullValuePublicKey = value; AdditionalData?.Remove("public_key"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("public_key"); else _explicitNullProperties?.Remove("public_key"); } }
         private string _explicitNullValuePublicKey = default!;
 #endif
-        /// <summary>The tls_host property</summary>
+        /// <summary>TLS host name to verify the server name in the agent endpoint.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? TlsHost { get => _explicitNullValueTlsHost; set { _explicitNullValueTlsHost = value; AdditionalData?.Remove("tls_host"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tls_host"); else _explicitNullProperties?.Remove("tls_host"); } }
@@ -81,7 +81,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string TlsHost { get => _explicitNullValueTlsHost; set { _explicitNullValueTlsHost = value; AdditionalData?.Remove("tls_host"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tls_host"); else _explicitNullProperties?.Remove("tls_host"); } }
         private string _explicitNullValueTlsHost = default!;
 #endif
-        /// <summary>The url property</summary>
+        /// <summary>Agent URL for this URL configuration.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; AdditionalData?.Remove("url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
@@ -114,7 +114,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(7)
             {
                 { "agent_id", n => { AgentId = n.GetLongValue(); } },
                 { "ca_cert", n => { CaCert = n.GetStringValue(); } },

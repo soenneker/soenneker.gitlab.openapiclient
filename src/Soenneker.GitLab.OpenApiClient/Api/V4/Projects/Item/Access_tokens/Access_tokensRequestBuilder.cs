@@ -53,7 +53,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Access_tokens
         {
         }
         /// <summary>
-        /// Lists all project access tokens for a specified project.
+        /// Lists all project access tokens for a specified project. The `last_used_ips` attribute was [introduced](https://gitlab.com/gitlab-org/gitlab/-/work_items/600347) in GitLab 19.2 and made generally available in GitLab 19.4.
         /// </summary>
         /// <returns>A List&lt;global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesResourceAccessToken&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -92,7 +92,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Access_tokens
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesResourceAccessTokenWithToken>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesResourceAccessTokenWithToken.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Lists all project access tokens for a specified project.
+        /// Lists all project access tokens for a specified project. The `last_used_ips` attribute was [introduced](https://gitlab.com/gitlab-org/gitlab/-/work_items/600347) in GitLab 19.2 and made generally available in GitLab 19.4.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -142,7 +142,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Access_tokens
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Access_tokens.Access_tokensRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Lists all project access tokens for a specified project.
+        /// Lists all project access tokens for a specified project. The `last_used_ips` attribute was [introduced](https://gitlab.com/gitlab-org/gitlab/-/work_items/600347) in GitLab 19.2 and made generally available in GitLab 19.4.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Access_tokensRequestBuilderGetQueryParameters 
@@ -188,7 +188,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Access_tokens
             [QueryParameter("sort")]
             public string Sort { get; set; }
 #endif
-            /// <summary>Return tokens with the specified state.</summary>
+            /// <summary>Return tokens with the specified state. `all` returns tokens in any state.</summary>
             [QueryParameter("state")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4ProjectsIdAccessTokensStateParameter? State { get; set; }
         }

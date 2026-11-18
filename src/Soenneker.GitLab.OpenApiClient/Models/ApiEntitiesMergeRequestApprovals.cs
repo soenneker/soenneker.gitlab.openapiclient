@@ -234,7 +234,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(24)
             {
                 { "approval_rules_left", n => { ApprovalRulesLeft = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApprovalRuleShort>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApprovalRuleShort.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "approvals_left", n => { ApprovalsLeft = n.GetIntValue(); } },

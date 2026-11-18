@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Deployments.Item.M
         {
         }
         /// <summary>
-        /// Lists all merge requests shipped with a specified deployment.
+        /// Lists all merge requests shipped with a specified deployment. Not all deployments can be associated with merge requests.
         /// </summary>
         /// <returns>A List&lt;global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMergeRequestBasic&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -53,7 +53,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Deployments.Item.M
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// Lists all merge requests shipped with a specified deployment.
+        /// Lists all merge requests shipped with a specified deployment. Not all deployments can be associated with merge requests.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -81,7 +81,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Deployments.Item.M
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Deployments.Item.Merge_requests.Merge_requestsRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Lists all merge requests shipped with a specified deployment.
+        /// Lists all merge requests shipped with a specified deployment. Not all deployments can be associated with merge requests.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Merge_requestsRequestBuilderGetQueryParameters 

@@ -47,13 +47,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The build_id property</summary>
+        /// <summary>ID of the CI/CD job that produced the attestation.</summary>
         public long? BuildId { get => _explicitNullValueBuildId; set { _explicitNullValueBuildId = value; AdditionalData?.Remove("build_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("build_id"); else _explicitNullProperties?.Remove("build_id"); } }
         private long? _explicitNullValueBuildId = default!;
-        /// <summary>The created_at property</summary>
+        /// <summary>Date and time the attestation was created.</summary>
         public DateTimeOffset? CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; AdditionalData?.Remove("created_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_at"); else _explicitNullProperties?.Remove("created_at"); } }
         private DateTimeOffset? _explicitNullValueCreatedAt = default!;
-        /// <summary>The download_url property</summary>
+        /// <summary>URL to download the attestation bundle.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? DownloadUrl { get => _explicitNullValueDownloadUrl; set { _explicitNullValueDownloadUrl = value; AdditionalData?.Remove("download_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("download_url"); else _explicitNullProperties?.Remove("download_url"); } }
@@ -63,16 +63,16 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string DownloadUrl { get => _explicitNullValueDownloadUrl; set { _explicitNullValueDownloadUrl = value; AdditionalData?.Remove("download_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("download_url"); else _explicitNullProperties?.Remove("download_url"); } }
         private string _explicitNullValueDownloadUrl = default!;
 #endif
-        /// <summary>The expire_at property</summary>
+        /// <summary>Date and time the attestation expires.</summary>
         public DateTimeOffset? ExpireAt { get => _explicitNullValueExpireAt; set { _explicitNullValueExpireAt = value; AdditionalData?.Remove("expire_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expire_at"); else _explicitNullProperties?.Remove("expire_at"); } }
         private DateTimeOffset? _explicitNullValueExpireAt = default!;
-        /// <summary>The id property</summary>
+        /// <summary>ID of the attestation.</summary>
         public long? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private long? _explicitNullValueId = default!;
-        /// <summary>The iid property</summary>
+        /// <summary>Internal ID of the attestation in the project.</summary>
         public int? Iid { get => _explicitNullValueIid; set { _explicitNullValueIid = value; AdditionalData?.Remove("iid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("iid"); else _explicitNullProperties?.Remove("iid"); } }
         private int? _explicitNullValueIid = default!;
-        /// <summary>The predicate_kind property</summary>
+        /// <summary>Kind of predicate. One of `provenance` or `sbom`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PredicateKind { get => _explicitNullValuePredicateKind; set { _explicitNullValuePredicateKind = value; AdditionalData?.Remove("predicate_kind"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("predicate_kind"); else _explicitNullProperties?.Remove("predicate_kind"); } }
@@ -82,7 +82,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string PredicateKind { get => _explicitNullValuePredicateKind; set { _explicitNullValuePredicateKind = value; AdditionalData?.Remove("predicate_kind"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("predicate_kind"); else _explicitNullProperties?.Remove("predicate_kind"); } }
         private string _explicitNullValuePredicateKind = default!;
 #endif
-        /// <summary>The predicate_type property</summary>
+        /// <summary>URI of the predicate type.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PredicateType { get => _explicitNullValuePredicateType; set { _explicitNullValuePredicateType = value; AdditionalData?.Remove("predicate_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("predicate_type"); else _explicitNullProperties?.Remove("predicate_type"); } }
@@ -92,13 +92,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string PredicateType { get => _explicitNullValuePredicateType; set { _explicitNullValuePredicateType = value; AdditionalData?.Remove("predicate_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("predicate_type"); else _explicitNullProperties?.Remove("predicate_type"); } }
         private string _explicitNullValuePredicateType = default!;
 #endif
-        /// <summary>The project_id property</summary>
+        /// <summary>ID of the project.</summary>
         public long? ProjectId { get => _explicitNullValueProjectId; set { _explicitNullValueProjectId = value; AdditionalData?.Remove("project_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_id"); else _explicitNullProperties?.Remove("project_id"); } }
         private long? _explicitNullValueProjectId = default!;
-        /// <summary>The signing_method property</summary>
+        /// <summary>Method used to sign the attestation. If `ATTEST_METHOD` is not set, defaults to `local_ca`, except for public projects on GitLab.com, which default to `sigstore`.</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSupplyChainAttestationSigningMethod? SigningMethod { get => _explicitNullValueSigningMethod; set { _explicitNullValueSigningMethod = value; AdditionalData?.Remove("signing_method"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signing_method"); else _explicitNullProperties?.Remove("signing_method"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSupplyChainAttestationSigningMethod? _explicitNullValueSigningMethod = default!;
-        /// <summary>The status property</summary>
+        /// <summary>Status of the attestation. One of `success` or `error`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; AdditionalData?.Remove("status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
@@ -108,7 +108,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; AdditionalData?.Remove("status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
         private string _explicitNullValueStatus = default!;
 #endif
-        /// <summary>The subject_digest property</summary>
+        /// <summary>Hex-encoded SHA-256 hash of the artifact.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SubjectDigest { get => _explicitNullValueSubjectDigest; set { _explicitNullValueSubjectDigest = value; AdditionalData?.Remove("subject_digest"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subject_digest"); else _explicitNullProperties?.Remove("subject_digest"); } }
@@ -118,7 +118,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string SubjectDigest { get => _explicitNullValueSubjectDigest; set { _explicitNullValueSubjectDigest = value; AdditionalData?.Remove("subject_digest"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subject_digest"); else _explicitNullProperties?.Remove("subject_digest"); } }
         private string _explicitNullValueSubjectDigest = default!;
 #endif
-        /// <summary>The updated_at property</summary>
+        /// <summary>Date and time the attestation was last updated.</summary>
         public DateTimeOffset? UpdatedAt { get => _explicitNullValueUpdatedAt; set { _explicitNullValueUpdatedAt = value; AdditionalData?.Remove("updated_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updated_at"); else _explicitNullProperties?.Remove("updated_at"); } }
         private DateTimeOffset? _explicitNullValueUpdatedAt = default!;
         /// <summary>
@@ -144,7 +144,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(13)
             {
                 { "build_id", n => { BuildId = n.GetLongValue(); } },
                 { "created_at", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },

@@ -80,7 +80,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The granular property</summary>
         public bool? Granular { get => _explicitNullValueGranular; set { _explicitNullValueGranular = value; AdditionalData?.Remove("granular"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("granular"); else _explicitNullProperties?.Remove("granular"); } }
         private bool? _explicitNullValueGranular = default!;
-        /// <summary>The granular_scopes property</summary>
+        /// <summary>Granular scopes of the token, each with `access`, `permissions`, `group_id`, and `project_id`. Returned only for tokens created with granular scopes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGranularScope>? GranularScopes { get => _explicitNullValueGranularScopes; set { _explicitNullValueGranularScopes = value; AdditionalData?.Remove("granular_scopes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("granular_scopes"); else _explicitNullProperties?.Remove("granular_scopes"); } }
@@ -171,7 +171,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(17)
             {
                 { "access_level", n => { AccessLevel = n.GetIntValue(); } },
                 { "active", n => { Active = n.GetBoolValue(); } },

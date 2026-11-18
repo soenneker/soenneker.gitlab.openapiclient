@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Deploy_tokens
         {
         }
         /// <summary>
-        /// Lists all deploy tokens for the instance.
+        /// Lists all deploy tokens for the instance. Requires administrator access.
         /// </summary>
         /// <returns>A List&lt;global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDeployToken&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -53,7 +53,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Deploy_tokens
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// Lists all deploy tokens for the instance.
+        /// Lists all deploy tokens for the instance. Requires administrator access.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -81,7 +81,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Deploy_tokens
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Deploy_tokens.Deploy_tokensRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Lists all deploy tokens for the instance.
+        /// Lists all deploy tokens for the instance. Requires administrator access.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Deploy_tokensRequestBuilderGetQueryParameters 

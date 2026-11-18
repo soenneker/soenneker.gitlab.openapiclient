@@ -71,7 +71,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "approval_rule_id", n => { ApprovalRuleId = n.GetIntValue(); } },
                 { "approval_rule_type", n => { var parsed = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdMergeRequestsMergeRequestIidSuggestedReviewersRequestSuggestionsItemApprovalRuleType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueApprovalRuleType = default; _explicitNullProperties?.Remove("approval_rule_type"); AdditionalData["approval_rule_type"] = unknown; } else { ApprovalRuleType = parsed; AdditionalData.Remove("approval_rule_type"); } } },

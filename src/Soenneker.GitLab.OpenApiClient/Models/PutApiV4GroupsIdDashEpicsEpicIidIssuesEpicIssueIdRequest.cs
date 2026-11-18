@@ -80,7 +80,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "move_after_id", n => { MoveAfterId = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdDashEpicsEpicIidIssuesEpicIssueIdRequestMoveAfterId>(global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdDashEpicsEpicIidIssuesEpicIssueIdRequestMoveAfterId.CreateFromDiscriminatorValue); } },
                 { "move_before_id", n => { MoveBeforeId = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdDashEpicsEpicIidIssuesEpicIssueIdRequestMoveBeforeId>(global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4GroupsIdDashEpicsEpicIidIssuesEpicIssueIdRequestMoveBeforeId.CreateFromDiscriminatorValue); } },

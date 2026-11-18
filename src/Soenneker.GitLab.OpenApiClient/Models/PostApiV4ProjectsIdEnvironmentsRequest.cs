@@ -37,7 +37,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Auto stop setting for the environment.</summary>
+        /// <summary>Auto stop setting for the environment. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/428625) in GitLab 17.8.</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdEnvironmentsRequestAutoStopSetting? AutoStopSetting { get => _explicitNullValueAutoStopSetting; set { _explicitNullValueAutoStopSetting = value; AdditionalData?.Remove("auto_stop_setting"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auto_stop_setting"); else _explicitNullProperties?.Remove("auto_stop_setting"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdEnvironmentsRequestAutoStopSetting? _explicitNullValueAutoStopSetting = default!;
         /// <summary>ID of the cluster agent to associate with the environment. When updating an environment, set to `null` to remove it.</summary>
@@ -63,7 +63,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string ExternalUrl { get => _explicitNullValueExternalUrl; set { _explicitNullValueExternalUrl = value; AdditionalData?.Remove("external_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_url"); else _explicitNullProperties?.Remove("external_url"); } }
         private string _explicitNullValueExternalUrl = default!;
 #endif
-        /// <summary>Flux resource path to associate with the environment, for example `helm.toolkit.fluxcd.io/v2/namespaces/gitlab-agent/helmreleases/gitlab-agent`. When updating an environment, set to `null` to remove it.</summary>
+        /// <summary>Flux resource path to associate with the environment. Must be the full resource path, for example `helm.toolkit.fluxcd.io/v2/namespaces/gitlab-agent/helmreleases/gitlab-agent`. When updating an environment, set to `null` to remove it.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? FluxResourcePath { get => _explicitNullValueFluxResourcePath; set { _explicitNullValueFluxResourcePath = value; AdditionalData?.Remove("flux_resource_path"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flux_resource_path"); else _explicitNullProperties?.Remove("flux_resource_path"); } }
@@ -119,7 +119,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(8)
             {
                 { "auto_stop_setting", n => { var parsed = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdEnvironmentsRequestAutoStopSetting>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAutoStopSetting = default; _explicitNullProperties?.Remove("auto_stop_setting"); AdditionalData["auto_stop_setting"] = unknown; } else { AutoStopSetting = parsed; AdditionalData.Remove("auto_stop_setting"); } } },
                 { "cluster_agent_id", n => { ClusterAgentId = n.GetIntValue(); } },

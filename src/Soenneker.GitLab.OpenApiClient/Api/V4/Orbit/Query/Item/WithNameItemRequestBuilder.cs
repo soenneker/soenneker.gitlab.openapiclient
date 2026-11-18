@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Orbit.Query.Item
         {
         }
         /// <summary>
-        /// Executes a server-defined named query against the Orbit gRPC service. Requires a JSON request body: form encoding stringifies nested parameter values, which the per-query parameter schemas reject.
+        /// Executes a server-defined named query against the Orbit gRPC service. Orbit defines its named queries on the server, so they stay in step with the query language and the schema. For programmatic use, this endpoint is preferred over `POST /orbit/query`. The GraphQL field `Query.orbit.queryTemplates` lists the named queries. Each query template has a `name`, a `description`, and the GQL `query` it runs. The `name` of a query template is passed as `:name` in the path. Requires a JSON request body: form encoding stringifies nested parameter values, which the per-query parameter schemas reject. This endpoint can return the same errors as `POST /orbit/query`.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.OrbitQueryResponse"/></returns>
         /// <param name="body">The request body</param>
@@ -54,7 +54,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Orbit.Query.Item
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.OrbitQueryResponse>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.OrbitQueryResponse.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Executes a server-defined named query against the Orbit gRPC service. Requires a JSON request body: form encoding stringifies nested parameter values, which the per-query parameter schemas reject.
+        /// Executes a server-defined named query against the Orbit gRPC service. Orbit defines its named queries on the server, so they stay in step with the query language and the schema. For programmatic use, this endpoint is preferred over `POST /orbit/query`. The GraphQL field `Query.orbit.queryTemplates` lists the named queries. Each query template has a `name`, a `description`, and the GQL `query` it runs. The `name` of a query template is passed as `:name` in the path. Requires a JSON request body: form encoding stringifies nested parameter values, which the per-query parameter schemas reject. This endpoint can return the same errors as `POST /orbit/query`.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

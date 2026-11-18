@@ -136,7 +136,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(10)
             {
                 { "agent_identity_id", n => { AgentIdentityId = n.GetIntValue(); } },
                 { "agent_type", n => { var parsed = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4ProjectsIdAiAgentSessionsRequestAgentType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAgentType = default; _explicitNullProperties?.Remove("agent_type"); AdditionalData["agent_type"] = unknown; } else { AgentType = parsed; AdditionalData.Remove("agent_type"); } } },

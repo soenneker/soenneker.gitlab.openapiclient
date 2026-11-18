@@ -75,7 +75,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public List<int?> AgentPrivileges { get => _explicitNullValueAgentPrivileges; set { _explicitNullValueAgentPrivileges = value; AdditionalData?.Remove("agent_privileges"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("agent_privileges"); else _explicitNullProperties?.Remove("agent_privileges"); } }
         private List<int?> _explicitNullValueAgentPrivileges = default!;
 #endif
-        /// <summary>The ID of AI Catalog ItemConsumer that configures which catalog item to execute.</summary>
+        /// <summary>The ID of AI Catalog ItemConsumer that configures which catalog item to execute. Requires `project_id`. If `workflow_definition` is also set, `ai_catalog_item_consumer_id` takes precedence.</summary>
         public int? AiCatalogItemConsumerId { get => _explicitNullValueAiCatalogItemConsumerId; set { _explicitNullValueAiCatalogItemConsumerId = value; AdditionalData?.Remove("ai_catalog_item_consumer_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ai_catalog_item_consumer_id"); else _explicitNullProperties?.Remove("ai_catalog_item_consumer_id"); } }
         private int? _explicitNullValueAiCatalogItemConsumerId = default!;
         /// <summary>ID of the AI Catalog item version that sourced the flow configuration used by the workflow.</summary>
@@ -97,7 +97,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Goal { get => _explicitNullValueGoal; set { _explicitNullValueGoal = value; AdditionalData?.Remove("goal"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("goal"); else _explicitNullProperties?.Remove("goal"); } }
         private string _explicitNullValueGoal = default!;
 #endif
-        /// <summary>Container image to use for the flow. Applies only when the flow runs in a CI pipeline.</summary>
+        /// <summary>Container image to use for the flow. Applies only when the flow runs in a CI pipeline. Must meet the custom image requirements for flows.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Image { get => _explicitNullValueImage; set { _explicitNullValueImage = value; AdditionalData?.Remove("image"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("image"); else _explicitNullProperties?.Remove("image"); } }
@@ -143,10 +143,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string ProjectId { get => _explicitNullValueProjectId; set { _explicitNullValueProjectId = value; AdditionalData?.Remove("project_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_id"); else _explicitNullProperties?.Remove("project_id"); } }
         private string _explicitNullValueProjectId = default!;
 #endif
-        /// <summary>Where the session was triggered from in the UI.</summary>
+        /// <summary>Where the session was triggered from: a GitLab feature entry point, such as `merge_request_code_conflict`, or the client surface that created the session, such as `duo_cli_run` or `ide_extension`. Stored as the session `source_type`.</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4AiDuoWorkflowsWorkflowsRequestSource? Source { get => _explicitNullValueSource; set { _explicitNullValueSource = value; AdditionalData?.Remove("source"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source"); else _explicitNullProperties?.Remove("source"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4AiDuoWorkflowsWorkflowsRequestSource? _explicitNullValueSource = default!;
-        /// <summary>Source branch for the flow. When not specified, a flow whose goal names a pipeline or merge request, such as fix_pipeline/v1, uses its branch, and other flows use the default branch. Applies only when the flow runs in a CI pipeline.</summary>
+        /// <summary>Source branch for the flow. When not specified, a flow whose goal names a pipeline or merge request, such as fix_pipeline/v1, uses its branch, and other flows use the default branch. For a flow whose goal names a pipeline, the `merge_request` and `pipeline` entries in `additional_context` are also filled in from the pipeline. Applies only when the flow runs in a CI pipeline.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SourceBranch { get => _explicitNullValueSourceBranch; set { _explicitNullValueSourceBranch = value; AdditionalData?.Remove("source_branch"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source_branch"); else _explicitNullProperties?.Remove("source_branch"); } }
@@ -159,7 +159,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>When true, starts the flow after creating it.</summary>
         public bool? StartWorkflow { get => _explicitNullValueStartWorkflow; set { _explicitNullValueStartWorkflow = value; AdditionalData?.Remove("start_workflow"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start_workflow"); else _explicitNullProperties?.Remove("start_workflow"); } }
         private bool? _explicitNullValueStartWorkflow = default!;
-        /// <summary>workflow type based on its capability</summary>
+        /// <summary>workflow type based on its capability. If `ai_catalog_item_consumer_id` is also set, `ai_catalog_item_consumer_id` takes precedence.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? WorkflowDefinition { get => _explicitNullValueWorkflowDefinition; set { _explicitNullValueWorkflowDefinition = value; AdditionalData?.Remove("workflow_definition"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("workflow_definition"); else _explicitNullProperties?.Remove("workflow_definition"); } }
@@ -192,7 +192,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(17)
             {
                 { "additional_context", n => { AdditionalContext = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4AiDuoWorkflowsWorkflowsRequestAdditionalContextItem>(global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4AiDuoWorkflowsWorkflowsRequestAdditionalContextItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "agent_privileges", n => { AgentPrivileges = n.GetCollectionOfPrimitiveValues<int?>()?.AsList(); } },

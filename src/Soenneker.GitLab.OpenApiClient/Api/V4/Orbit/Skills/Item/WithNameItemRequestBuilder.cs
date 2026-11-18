@@ -47,7 +47,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Orbit.Skills.Item
         {
         }
         /// <summary>
-        /// Retrieves a complete deployed Orbit skill tree. HEAD requests retrieve only skill metadata.
+        /// Retrieves a complete deployed Orbit skill tree. HEAD requests retrieve only skill metadata. The response includes a `Cache-Control` header set to `private, max-age=0, must-revalidate`, and an `ETag` header set to `&quot;&lt;version&gt;&quot;`. Sending the current `ETag` value in the `If-None-Match` request header revalidates a cached skill tree. A matching value returns `304 Not Modified` with no response body. This feature was introduced in GitLab 19.5.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesOrbitSkill"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -65,7 +65,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Orbit.Skills.Item
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesOrbitSkill>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesOrbitSkill.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Retrieves a complete deployed Orbit skill tree. HEAD requests retrieve only skill metadata.
+        /// Retrieves a complete deployed Orbit skill tree. HEAD requests retrieve only skill metadata. The response includes a `Cache-Control` header set to `private, max-age=0, must-revalidate`, and an `ETag` header set to `&quot;&lt;version&gt;&quot;`. Sending the current `ETag` value in the `If-None-Match` request header revalidates a cached skill tree. A matching value returns `304 Not Modified` with no response body. This feature was introduced in GitLab 19.5.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

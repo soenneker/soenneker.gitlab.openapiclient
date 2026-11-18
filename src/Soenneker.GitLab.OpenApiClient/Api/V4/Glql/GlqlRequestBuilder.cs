@@ -40,7 +40,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Glql
         {
         }
         /// <summary>
-        /// Executes a GLQL query to search and filter GitLab resources.
+        /// Executes a GLQL query to search and filter GitLab resources. Queries are rate limited by the SHA-256 hash of the query. Queries that time out are tracked, and a query that times out too often is temporarily blocked. This feature was introduced in GitLab 18.7.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGlqlResult"/></returns>
         /// <param name="body">The request body</param>
@@ -60,7 +60,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Glql
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGlqlResult>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGlqlResult.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Executes a GLQL query to search and filter GitLab resources.
+        /// Executes a GLQL query to search and filter GitLab resources. Queries are rate limited by the SHA-256 hash of the query. Queries that time out are tracked, and a query that times out too often is temporarily blocked. This feature was introduced in GitLab 18.7.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

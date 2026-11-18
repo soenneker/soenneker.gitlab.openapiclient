@@ -25,7 +25,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Cursor for pagination. Use the `data.pageInfo.endCursor` value from a previous query to fetch the next page of results.</summary>
+        /// <summary>Cursor for pagination. Use the `data.pageInfo.endCursor` value from a previous query to fetch the next page of results. Only forward pagination is supported.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? After { get => _explicitNullValueAfter; set { _explicitNullValueAfter = value; AdditionalData?.Remove("after"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("after"); else _explicitNullProperties?.Remove("after"); } }
@@ -35,7 +35,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string After { get => _explicitNullValueAfter; set { _explicitNullValueAfter = value; AdditionalData?.Remove("after"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("after"); else _explicitNullProperties?.Remove("after"); } }
         private string _explicitNullValueAfter = default!;
 #endif
-        /// <summary>GLQL query that may include YAML configuration. Maximum size is 10,000 bytes. See [query formats](https://docs.gitlab.com/api/glql/#query-formats) for details.</summary>
+        /// <summary>GLQL query that may include YAML configuration. Maximum size is 10,000 bytes. See [query formats](https://docs.gitlab.com/api/glql/#query-formats) for details. Pass a plain GLQL query, or YAML with the query in the `query` key and the configuration options as other top-level keys. The YAML configuration accepts these options: `fields`, a comma-separated list of GLQL fields to return, default `title`; `group`, the group to scope the query to, which cannot be used with `project`; `project`, the project to scope the query to, in the format `group/project`; `limit`, the maximum number of results from 1 to 100, default `100`; and `sort`, the sort order in the format `field direction`, such as `created desc`. A `group` or `project` set in the query takes precedence over the option.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? GlqlYaml { get => _explicitNullValueGlqlYaml; set { _explicitNullValueGlqlYaml = value; AdditionalData?.Remove("glql_yaml"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("glql_yaml"); else _explicitNullProperties?.Remove("glql_yaml"); } }

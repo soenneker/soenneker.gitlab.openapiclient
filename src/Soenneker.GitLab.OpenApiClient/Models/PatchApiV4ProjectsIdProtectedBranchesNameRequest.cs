@@ -95,7 +95,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(6)
             {
                 { "allow_force_push", n => { AllowForcePush = n.GetBoolValue(); } },
                 { "allowed_to_merge", n => { AllowedToMerge = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.PatchApiV4ProjectsIdProtectedBranchesNameRequestAllowedToMergeItemProperty>(global::Soenneker.GitLab.OpenApiClient.Models.PatchApiV4ProjectsIdProtectedBranchesNameRequestAllowedToMergeItemProperty.CreateFromDiscriminatorValue)?.AsList(); } },

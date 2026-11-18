@@ -37,16 +37,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The auto_ssl_enabled property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? AutoSslEnabled { get => _explicitNullValueAutoSslEnabled; set { _explicitNullValueAutoSslEnabled = value; AdditionalData?.Remove("auto_ssl_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auto_ssl_enabled"); else _explicitNullProperties?.Remove("auto_ssl_enabled"); } }
-        private string? _explicitNullValueAutoSslEnabled = default!;
-#nullable restore
-#else
-        public string AutoSslEnabled { get => _explicitNullValueAutoSslEnabled; set { _explicitNullValueAutoSslEnabled = value; AdditionalData?.Remove("auto_ssl_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auto_ssl_enabled"); else _explicitNullProperties?.Remove("auto_ssl_enabled"); } }
-        private string _explicitNullValueAutoSslEnabled = default!;
-#endif
+        /// <summary>If `true`, automatic generation of SSL certificates with Let&apos;s Encrypt is enabled for the domain.</summary>
+        public bool? AutoSslEnabled { get => _explicitNullValueAutoSslEnabled; set { _explicitNullValueAutoSslEnabled = value; AdditionalData?.Remove("auto_ssl_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auto_ssl_enabled"); else _explicitNullProperties?.Remove("auto_ssl_enabled"); } }
+        private bool? _explicitNullValueAutoSslEnabled = default!;
         /// <summary>The certificate_expiration property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -57,7 +50,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPagesDomainCertificateExpiration CertificateExpiration { get => _explicitNullValueCertificateExpiration; set { _explicitNullValueCertificateExpiration = value; AdditionalData?.Remove("certificate_expiration"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("certificate_expiration"); else _explicitNullProperties?.Remove("certificate_expiration"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPagesDomainCertificateExpiration _explicitNullValueCertificateExpiration = default!;
 #endif
-        /// <summary>The domain property</summary>
+        /// <summary>Custom domain name of the Pages site.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Domain { get => _explicitNullValueDomain; set { _explicitNullValueDomain = value; AdditionalData?.Remove("domain"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("domain"); else _explicitNullProperties?.Remove("domain"); } }
@@ -67,27 +60,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Domain { get => _explicitNullValueDomain; set { _explicitNullValueDomain = value; AdditionalData?.Remove("domain"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("domain"); else _explicitNullProperties?.Remove("domain"); } }
         private string _explicitNullValueDomain = default!;
 #endif
-        /// <summary>The enabled_until property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? EnabledUntil { get => _explicitNullValueEnabledUntil; set { _explicitNullValueEnabledUntil = value; AdditionalData?.Remove("enabled_until"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enabled_until"); else _explicitNullProperties?.Remove("enabled_until"); } }
-        private string? _explicitNullValueEnabledUntil = default!;
-#nullable restore
-#else
-        public string EnabledUntil { get => _explicitNullValueEnabledUntil; set { _explicitNullValueEnabledUntil = value; AdditionalData?.Remove("enabled_until"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enabled_until"); else _explicitNullProperties?.Remove("enabled_until"); } }
-        private string _explicitNullValueEnabledUntil = default!;
-#endif
-        /// <summary>The project_id property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? ProjectId { get => _explicitNullValueProjectId; set { _explicitNullValueProjectId = value; AdditionalData?.Remove("project_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_id"); else _explicitNullProperties?.Remove("project_id"); } }
-        private string? _explicitNullValueProjectId = default!;
-#nullable restore
-#else
-        public string ProjectId { get => _explicitNullValueProjectId; set { _explicitNullValueProjectId = value; AdditionalData?.Remove("project_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_id"); else _explicitNullProperties?.Remove("project_id"); } }
-        private string _explicitNullValueProjectId = default!;
-#endif
-        /// <summary>The url property</summary>
+        /// <summary>Date until which the domain is enabled. Updated periodically as the domain is reverified.</summary>
+        public DateTimeOffset? EnabledUntil { get => _explicitNullValueEnabledUntil; set { _explicitNullValueEnabledUntil = value; AdditionalData?.Remove("enabled_until"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enabled_until"); else _explicitNullProperties?.Remove("enabled_until"); } }
+        private DateTimeOffset? _explicitNullValueEnabledUntil = default!;
+        /// <summary>ID of the project the Pages domain belongs to.</summary>
+        public int? ProjectId { get => _explicitNullValueProjectId; set { _explicitNullValueProjectId = value; AdditionalData?.Remove("project_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_id"); else _explicitNullProperties?.Remove("project_id"); } }
+        private int? _explicitNullValueProjectId = default!;
+        /// <summary>Full URL of the Pages site, including the protocol.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; AdditionalData?.Remove("url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
@@ -97,7 +76,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; AdditionalData?.Remove("url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
         private string _explicitNullValueUrl = default!;
 #endif
-        /// <summary>The verification_code property</summary>
+        /// <summary>Unique record used to verify domain ownership.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? VerificationCode { get => _explicitNullValueVerificationCode; set { _explicitNullValueVerificationCode = value; AdditionalData?.Remove("verification_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verification_code"); else _explicitNullProperties?.Remove("verification_code"); } }
@@ -107,16 +86,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string VerificationCode { get => _explicitNullValueVerificationCode; set { _explicitNullValueVerificationCode = value; AdditionalData?.Remove("verification_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verification_code"); else _explicitNullProperties?.Remove("verification_code"); } }
         private string _explicitNullValueVerificationCode = default!;
 #endif
-        /// <summary>The verified property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Verified { get => _explicitNullValueVerified; set { _explicitNullValueVerified = value; AdditionalData?.Remove("verified"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verified"); else _explicitNullProperties?.Remove("verified"); } }
-        private string? _explicitNullValueVerified = default!;
-#nullable restore
-#else
-        public string Verified { get => _explicitNullValueVerified; set { _explicitNullValueVerified = value; AdditionalData?.Remove("verified"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verified"); else _explicitNullProperties?.Remove("verified"); } }
-        private string _explicitNullValueVerified = default!;
-#endif
+        /// <summary>If `true`, the domain is verified.</summary>
+        public bool? Verified { get => _explicitNullValueVerified; set { _explicitNullValueVerified = value; AdditionalData?.Remove("verified"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verified"); else _explicitNullProperties?.Remove("verified"); } }
+        private bool? _explicitNullValueVerified = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPagesDomainBasic"/> and sets the default values.
         /// </summary>
@@ -140,16 +112,16 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(8)
             {
-                { "auto_ssl_enabled", n => { AutoSslEnabled = n.GetStringValue(); } },
+                { "auto_ssl_enabled", n => { AutoSslEnabled = n.GetBoolValue(); } },
                 { "certificate_expiration", n => { CertificateExpiration = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPagesDomainCertificateExpiration>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPagesDomainCertificateExpiration.CreateFromDiscriminatorValue); } },
                 { "domain", n => { Domain = n.GetStringValue(); } },
-                { "enabled_until", n => { EnabledUntil = n.GetStringValue(); } },
-                { "project_id", n => { ProjectId = n.GetStringValue(); } },
+                { "enabled_until", n => { EnabledUntil = n.GetDateTimeOffsetValue(); } },
+                { "project_id", n => { ProjectId = n.GetIntValue(); } },
                 { "url", n => { Url = n.GetStringValue(); } },
                 { "verification_code", n => { VerificationCode = n.GetStringValue(); } },
-                { "verified", n => { Verified = n.GetStringValue(); } },
+                { "verified", n => { Verified = n.GetBoolValue(); } },
             };
         }
         /// <summary>
@@ -159,14 +131,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("auto_ssl_enabled", AutoSslEnabled);
+            writer.WriteBoolValue("auto_ssl_enabled", AutoSslEnabled);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPagesDomainCertificateExpiration>("certificate_expiration", CertificateExpiration);
             writer.WriteStringValue("domain", Domain);
-            writer.WriteStringValue("enabled_until", EnabledUntil);
-            writer.WriteStringValue("project_id", ProjectId);
+            writer.WriteDateTimeOffsetValue("enabled_until", EnabledUntil);
+            writer.WriteIntValue("project_id", ProjectId);
             writer.WriteStringValue("url", Url);
             writer.WriteStringValue("verification_code", VerificationCode);
-            writer.WriteStringValue("verified", Verified);
+            writer.WriteBoolValue("verified", Verified);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

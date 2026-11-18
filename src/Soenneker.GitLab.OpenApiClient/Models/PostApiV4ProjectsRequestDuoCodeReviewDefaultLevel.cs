@@ -3,9 +3,9 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
-    /// <summary>Default review depth for GitLab Duo Code Review Flow. One of `lite` or `standard`. Beta.</summary>
+    /// <summary>[Beta] Default review level for GitLab Duo Code Review Flow. One of `lite` or `standard`</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    public enum PutApiV4ApplicationSettingsRequestDuoCodeReviewDefaultDepth
+    public enum PostApiV4ProjectsRequestDuoCodeReviewDefaultLevel
     {
         [EnumMember(Value = "lite")]
         #pragma warning disable CS1591

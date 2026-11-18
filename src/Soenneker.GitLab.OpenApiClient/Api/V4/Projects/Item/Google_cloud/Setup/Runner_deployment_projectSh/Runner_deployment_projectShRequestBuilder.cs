@@ -33,7 +33,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Google_cloud.Setup
         {
         }
         /// <summary>
-        /// Retrieves the configuration script for Google Cloud runner provisioning.
+        /// Retrieves the configuration script for Google Cloud runner provisioning. You must have the Maintainer or Owner role for the project. The script enables required services in the specified Google Cloud project, and creates a `GRITProvisioner` role and a `grit-provisioner` service account.
         /// </summary>
         /// <returns>A <see cref="string"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -51,7 +51,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Google_cloud.Setup
             return await RequestAdapter.SendPrimitiveAsync<string>(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Retrieves the configuration script for Google Cloud runner provisioning.
+        /// Retrieves the configuration script for Google Cloud runner provisioning. You must have the Maintainer or Owner role for the project. The script enables required services in the specified Google Cloud project, and creates a `GRITProvisioner` role and a `grit-provisioner` service account.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -79,7 +79,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Google_cloud.Setup
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Google_cloud.Setup.Runner_deployment_projectSh.Runner_deployment_projectShRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Retrieves the configuration script for Google Cloud runner provisioning.
+        /// Retrieves the configuration script for Google Cloud runner provisioning. You must have the Maintainer or Owner role for the project. The script enables required services in the specified Google Cloud project, and creates a `GRITProvisioner` role and a `grit-provisioner` service account.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class Runner_deployment_projectShRequestBuilderGetQueryParameters 

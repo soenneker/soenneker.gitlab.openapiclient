@@ -357,10 +357,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             else if (parseNode.GetChildNode("duo_cli_enabled") is { } nullNodeDuoCliEnabled && nullNodeDuoCliEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DuoCliEnabled = null;
             if (parseNode.GetChildNode("duo_code_review_decisions_enabled") is null) { _explicitNullValueDuoCodeReviewDecisionsEnabled = default!; _explicitNullProperties?.Remove("duo_code_review_decisions_enabled"); }
             else if (parseNode.GetChildNode("duo_code_review_decisions_enabled") is { } nullNodeDuoCodeReviewDecisionsEnabled && nullNodeDuoCodeReviewDecisionsEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DuoCodeReviewDecisionsEnabled = null;
-            if (parseNode.GetChildNode("duo_code_review_default_depth") is null) { _explicitNullValueDuoCodeReviewDefaultDepth = default!; _explicitNullProperties?.Remove("duo_code_review_default_depth"); }
-            else if (parseNode.GetChildNode("duo_code_review_default_depth") is { } nullNodeDuoCodeReviewDefaultDepth && nullNodeDuoCodeReviewDefaultDepth.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DuoCodeReviewDefaultDepth = null;
-            if (parseNode.GetChildNode("duo_code_review_depth_allowed") is null) { _explicitNullValueDuoCodeReviewDepthAllowed = default!; _explicitNullProperties?.Remove("duo_code_review_depth_allowed"); }
-            else if (parseNode.GetChildNode("duo_code_review_depth_allowed") is { } nullNodeDuoCodeReviewDepthAllowed && nullNodeDuoCodeReviewDepthAllowed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DuoCodeReviewDepthAllowed = null;
+            if (parseNode.GetChildNode("duo_code_review_default_level") is null) { _explicitNullValueDuoCodeReviewDefaultLevel = default!; _explicitNullProperties?.Remove("duo_code_review_default_level"); }
+            else if (parseNode.GetChildNode("duo_code_review_default_level") is { } nullNodeDuoCodeReviewDefaultLevel && nullNodeDuoCodeReviewDefaultLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DuoCodeReviewDefaultLevel = null;
+            if (parseNode.GetChildNode("duo_code_review_level_allowed") is null) { _explicitNullValueDuoCodeReviewLevelAllowed = default!; _explicitNullProperties?.Remove("duo_code_review_level_allowed"); }
+            else if (parseNode.GetChildNode("duo_code_review_level_allowed") is { } nullNodeDuoCodeReviewLevelAllowed && nullNodeDuoCodeReviewLevelAllowed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DuoCodeReviewLevelAllowed = null;
             if (parseNode.GetChildNode("duo_custom_agents_availability") is null) { _explicitNullValueDuoCustomAgentsAvailability = default!; _explicitNullProperties?.Remove("duo_custom_agents_availability"); }
             else if (parseNode.GetChildNode("duo_custom_agents_availability") is { } nullNodeDuoCustomAgentsAvailability && nullNodeDuoCustomAgentsAvailability.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DuoCustomAgentsAvailability = null;
             if (parseNode.GetChildNode("duo_custom_agents_enabled") is null) { _explicitNullValueDuoCustomAgentsEnabled = default!; _explicitNullProperties?.Remove("duo_custom_agents_enabled"); }
@@ -673,6 +673,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             else if (parseNode.GetChildNode("group_secrets_limit") is { } nullNodeGroupSecretsLimit && nullNodeGroupSecretsLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GroupSecretsLimit = null;
             if (parseNode.GetChildNode("group_shared_groups_api_limit") is null) { _explicitNullValueGroupSharedGroupsApiLimit = default!; _explicitNullProperties?.Remove("group_shared_groups_api_limit"); }
             else if (parseNode.GetChildNode("group_shared_groups_api_limit") is { } nullNodeGroupSharedGroupsApiLimit && nullNodeGroupSharedGroupsApiLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GroupSharedGroupsApiLimit = null;
+            if (parseNode.GetChildNode("hand_raise_lead_create_limit") is null) { _explicitNullValueHandRaiseLeadCreateLimit = default!; _explicitNullProperties?.Remove("hand_raise_lead_create_limit"); }
+            else if (parseNode.GetChildNode("hand_raise_lead_create_limit") is { } nullNodeHandRaiseLeadCreateLimit && nullNodeHandRaiseLeadCreateLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HandRaiseLeadCreateLimit = null;
             if (parseNode.GetChildNode("hashed_storage_enabled") is null) { _explicitNullValueHashedStorageEnabled = default!; _explicitNullProperties?.Remove("hashed_storage_enabled"); }
             else if (parseNode.GetChildNode("hashed_storage_enabled") is { } nullNodeHashedStorageEnabled && nullNodeHashedStorageEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HashedStorageEnabled = null;
             if (parseNode.GetChildNode("helm_max_packages_count") is null) { _explicitNullValueHelmMaxPackagesCount = default!; _explicitNullProperties?.Remove("helm_max_packages_count"); }
@@ -739,6 +741,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             else if (parseNode.GetChildNode("ipv6_rate_limit_prefix_length") is { } nullNodeIpv6RateLimitPrefixLength && nullNodeIpv6RateLimitPrefixLength.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ipv6RateLimitPrefixLength = null;
             if (parseNode.GetChildNode("issuable_csv_import_limit") is null) { _explicitNullValueIssuableCsvImportLimit = default!; _explicitNullProperties?.Remove("issuable_csv_import_limit"); }
             else if (parseNode.GetChildNode("issuable_csv_import_limit") is { } nullNodeIssuableCsvImportLimit && nullNodeIssuableCsvImportLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssuableCsvImportLimit = null;
+            if (parseNode.GetChildNode("issues_analytics_limit") is null) { _explicitNullValueIssuesAnalyticsLimit = default!; _explicitNullProperties?.Remove("issues_analytics_limit"); }
+            else if (parseNode.GetChildNode("issues_analytics_limit") is { } nullNodeIssuesAnalyticsLimit && nullNodeIssuesAnalyticsLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssuesAnalyticsLimit = null;
             if (parseNode.GetChildNode("issues_create_limit") is null) { _explicitNullValueIssuesCreateLimit = default!; _explicitNullProperties?.Remove("issues_create_limit"); }
             else if (parseNode.GetChildNode("issues_create_limit") is { } nullNodeIssuesCreateLimit && nullNodeIssuesCreateLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssuesCreateLimit = null;
             if (parseNode.GetChildNode("jira_connect_additional_audience_url") is null) { _explicitNullValueJiraConnectAdditionalAudienceUrl = default!; _explicitNullProperties?.Remove("jira_connect_additional_audience_url"); }
@@ -873,14 +877,22 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             else if (parseNode.GetChildNode("mcp_server_enabled") is { } nullNodeMcpServerEnabled && nullNodeMcpServerEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) McpServerEnabled = null;
             if (parseNode.GetChildNode("members_delete_limit") is null) { _explicitNullValueMembersDeleteLimit = default!; _explicitNullProperties?.Remove("members_delete_limit"); }
             else if (parseNode.GetChildNode("members_delete_limit") is { } nullNodeMembersDeleteLimit && nullNodeMembersDeleteLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MembersDeleteLimit = null;
+            if (parseNode.GetChildNode("merge_request_diff_download_request_limit") is null) { _explicitNullValueMergeRequestDiffDownloadRequestLimit = default!; _explicitNullProperties?.Remove("merge_request_diff_download_request_limit"); }
+            else if (parseNode.GetChildNode("merge_request_diff_download_request_limit") is { } nullNodeMergeRequestDiffDownloadRequestLimit && nullNodeMergeRequestDiffDownloadRequestLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MergeRequestDiffDownloadRequestLimit = null;
             if (parseNode.GetChildNode("merge_request_diff_resources_request_limit") is null) { _explicitNullValueMergeRequestDiffResourcesRequestLimit = default!; _explicitNullProperties?.Remove("merge_request_diff_resources_request_limit"); }
             else if (parseNode.GetChildNode("merge_request_diff_resources_request_limit") is { } nullNodeMergeRequestDiffResourcesRequestLimit && nullNodeMergeRequestDiffResourcesRequestLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MergeRequestDiffResourcesRequestLimit = null;
             if (parseNode.GetChildNode("merge_request_diffs_page_request_limit") is null) { _explicitNullValueMergeRequestDiffsPageRequestLimit = default!; _explicitNullProperties?.Remove("merge_request_diffs_page_request_limit"); }
             else if (parseNode.GetChildNode("merge_request_diffs_page_request_limit") is { } nullNodeMergeRequestDiffsPageRequestLimit && nullNodeMergeRequestDiffsPageRequestLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MergeRequestDiffsPageRequestLimit = null;
             if (parseNode.GetChildNode("merge_requests_create_limit") is null) { _explicitNullValueMergeRequestsCreateLimit = default!; _explicitNullProperties?.Remove("merge_requests_create_limit"); }
             else if (parseNode.GetChildNode("merge_requests_create_limit") is { } nullNodeMergeRequestsCreateLimit && nullNodeMergeRequestsCreateLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MergeRequestsCreateLimit = null;
+            if (parseNode.GetChildNode("merge_requests_merge_ref_limit") is null) { _explicitNullValueMergeRequestsMergeRefLimit = default!; _explicitNullProperties?.Remove("merge_requests_merge_ref_limit"); }
+            else if (parseNode.GetChildNode("merge_requests_merge_ref_limit") is { } nullNodeMergeRequestsMergeRefLimit && nullNodeMergeRequestsMergeRefLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MergeRequestsMergeRefLimit = null;
+            if (parseNode.GetChildNode("merge_requests_read_diffs_limit") is null) { _explicitNullValueMergeRequestsReadDiffsLimit = default!; _explicitNullProperties?.Remove("merge_requests_read_diffs_limit"); }
+            else if (parseNode.GetChildNode("merge_requests_read_diffs_limit") is { } nullNodeMergeRequestsReadDiffsLimit && nullNodeMergeRequestsReadDiffsLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MergeRequestsReadDiffsLimit = null;
             if (parseNode.GetChildNode("merge_requests_rebase_limit") is null) { _explicitNullValueMergeRequestsRebaseLimit = default!; _explicitNullProperties?.Remove("merge_requests_rebase_limit"); }
             else if (parseNode.GetChildNode("merge_requests_rebase_limit") is { } nullNodeMergeRequestsRebaseLimit && nullNodeMergeRequestsRebaseLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MergeRequestsRebaseLimit = null;
+            if (parseNode.GetChildNode("merge_requests_update_limit") is null) { _explicitNullValueMergeRequestsUpdateLimit = default!; _explicitNullProperties?.Remove("merge_requests_update_limit"); }
+            else if (parseNode.GetChildNode("merge_requests_update_limit") is { } nullNodeMergeRequestsUpdateLimit && nullNodeMergeRequestsUpdateLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MergeRequestsUpdateLimit = null;
             if (parseNode.GetChildNode("merge_train_removal_limit_per_user") is null) { _explicitNullValueMergeTrainRemovalLimitPerUser = default!; _explicitNullProperties?.Remove("merge_train_removal_limit_per_user"); }
             else if (parseNode.GetChildNode("merge_train_removal_limit_per_user") is { } nullNodeMergeTrainRemovalLimitPerUser && nullNodeMergeTrainRemovalLimitPerUser.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MergeTrainRemovalLimitPerUser = null;
             if (parseNode.GetChildNode("metrics_method_call_threshold") is null) { _explicitNullValueMetricsMethodCallThreshold = default!; _explicitNullProperties?.Remove("metrics_method_call_threshold"); }
@@ -1031,6 +1043,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             else if (parseNode.GetChildNode("project_export_enabled") is { } nullNodeProjectExportEnabled && nullNodeProjectExportEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProjectExportEnabled = null;
             if (parseNode.GetChildNode("project_export_limit") is null) { _explicitNullValueProjectExportLimit = default!; _explicitNullProperties?.Remove("project_export_limit"); }
             else if (parseNode.GetChildNode("project_export_limit") is { } nullNodeProjectExportLimit && nullNodeProjectExportLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProjectExportLimit = null;
+            if (parseNode.GetChildNode("project_export_limit_per_root_namespace") is null) { _explicitNullValueProjectExportLimitPerRootNamespace = default!; _explicitNullProperties?.Remove("project_export_limit_per_root_namespace"); }
+            else if (parseNode.GetChildNode("project_export_limit_per_root_namespace") is { } nullNodeProjectExportLimitPerRootNamespace && nullNodeProjectExportLimitPerRootNamespace.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProjectExportLimitPerRootNamespace = null;
             if (parseNode.GetChildNode("project_hooks_create_limit") is null) { _explicitNullValueProjectHooksCreateLimit = default!; _explicitNullProperties?.Remove("project_hooks_create_limit"); }
             else if (parseNode.GetChildNode("project_hooks_create_limit") is { } nullNodeProjectHooksCreateLimit && nullNodeProjectHooksCreateLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProjectHooksCreateLimit = null;
             if (parseNode.GetChildNode("project_import_limit") is null) { _explicitNullValueProjectImportLimit = default!; _explicitNullProperties?.Remove("project_import_limit"); }
@@ -1055,6 +1069,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             else if (parseNode.GetChildNode("project_repositories_blame_unauthenticated_limit") is { } nullNodeProjectRepositoriesBlameUnauthenticatedLimit && nullNodeProjectRepositoriesBlameUnauthenticatedLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProjectRepositoriesBlameUnauthenticatedLimit = null;
             if (parseNode.GetChildNode("project_repositories_blobs_batch_limit") is null) { _explicitNullValueProjectRepositoriesBlobsBatchLimit = default!; _explicitNullProperties?.Remove("project_repositories_blobs_batch_limit"); }
             else if (parseNode.GetChildNode("project_repositories_blobs_batch_limit") is { } nullNodeProjectRepositoriesBlobsBatchLimit && nullNodeProjectRepositoriesBlobsBatchLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProjectRepositoriesBlobsBatchLimit = null;
+            if (parseNode.GetChildNode("project_repositories_compare_limit") is null) { _explicitNullValueProjectRepositoriesCompareLimit = default!; _explicitNullProperties?.Remove("project_repositories_compare_limit"); }
+            else if (parseNode.GetChildNode("project_repositories_compare_limit") is { } nullNodeProjectRepositoriesCompareLimit && nullNodeProjectRepositoriesCompareLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProjectRepositoriesCompareLimit = null;
+            if (parseNode.GetChildNode("project_repositories_compare_unauthenticated_limit") is null) { _explicitNullValueProjectRepositoriesCompareUnauthenticatedLimit = default!; _explicitNullProperties?.Remove("project_repositories_compare_unauthenticated_limit"); }
+            else if (parseNode.GetChildNode("project_repositories_compare_unauthenticated_limit") is { } nullNodeProjectRepositoriesCompareUnauthenticatedLimit && nullNodeProjectRepositoriesCompareUnauthenticatedLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProjectRepositoriesCompareUnauthenticatedLimit = null;
             if (parseNode.GetChildNode("project_repository_commits_api_limit") is null) { _explicitNullValueProjectRepositoryCommitsApiLimit = default!; _explicitNullProperties?.Remove("project_repository_commits_api_limit"); }
             else if (parseNode.GetChildNode("project_repository_commits_api_limit") is { } nullNodeProjectRepositoryCommitsApiLimit && nullNodeProjectRepositoryCommitsApiLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProjectRepositoryCommitsApiLimit = null;
             if (parseNode.GetChildNode("project_runner_token_expiration_interval") is null) { _explicitNullValueProjectRunnerTokenExpirationInterval = default!; _explicitNullProperties?.Remove("project_runner_token_expiration_interval"); }
@@ -1275,6 +1293,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             else if (parseNode.GetChildNode("static_objects_external_storage_auth_token") is { } nullNodeStaticObjectsExternalStorageAuthToken && nullNodeStaticObjectsExternalStorageAuthToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StaticObjectsExternalStorageAuthToken = null;
             if (parseNode.GetChildNode("static_objects_external_storage_url") is null) { _explicitNullValueStaticObjectsExternalStorageUrl = default!; _explicitNullProperties?.Remove("static_objects_external_storage_url"); }
             else if (parseNode.GetChildNode("static_objects_external_storage_url") is { } nullNodeStaticObjectsExternalStorageUrl && nullNodeStaticObjectsExternalStorageUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StaticObjectsExternalStorageUrl = null;
+            if (parseNode.GetChildNode("subscriptions_payment_form_per_hour_limit") is null) { _explicitNullValueSubscriptionsPaymentFormPerHourLimit = default!; _explicitNullProperties?.Remove("subscriptions_payment_form_per_hour_limit"); }
+            else if (parseNode.GetChildNode("subscriptions_payment_form_per_hour_limit") is { } nullNodeSubscriptionsPaymentFormPerHourLimit && nullNodeSubscriptionsPaymentFormPerHourLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubscriptionsPaymentFormPerHourLimit = null;
+            if (parseNode.GetChildNode("subscriptions_validate_payment_method_per_hour_limit") is null) { _explicitNullValueSubscriptionsValidatePaymentMethodPerHourLimit = default!; _explicitNullProperties?.Remove("subscriptions_validate_payment_method_per_hour_limit"); }
+            else if (parseNode.GetChildNode("subscriptions_validate_payment_method_per_hour_limit") is { } nullNodeSubscriptionsValidatePaymentMethodPerHourLimit && nullNodeSubscriptionsValidatePaymentMethodPerHourLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubscriptionsValidatePaymentMethodPerHourLimit = null;
             if (parseNode.GetChildNode("subscription_usage_per_day_limit") is null) { _explicitNullValueSubscriptionUsagePerDayLimit = default!; _explicitNullProperties?.Remove("subscription_usage_per_day_limit"); }
             else if (parseNode.GetChildNode("subscription_usage_per_day_limit") is { } nullNodeSubscriptionUsagePerDayLimit && nullNodeSubscriptionUsagePerDayLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SubscriptionUsagePerDayLimit = null;
             if (parseNode.GetChildNode("subscription_usage_per_hour_limit") is null) { _explicitNullValueSubscriptionUsagePerHourLimit = default!; _explicitNullProperties?.Remove("subscription_usage_per_hour_limit"); }
@@ -1409,6 +1431,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             else if (parseNode.GetChildNode("tool_approval_for_session_enabled") is { } nullNodeToolApprovalForSessionEnabled && nullNodeToolApprovalForSessionEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ToolApprovalForSessionEnabled = null;
             if (parseNode.GetChildNode("top_level_group_creation_enabled") is null) { _explicitNullValueTopLevelGroupCreationEnabled = default!; _explicitNullProperties?.Remove("top_level_group_creation_enabled"); }
             else if (parseNode.GetChildNode("top_level_group_creation_enabled") is { } nullNodeTopLevelGroupCreationEnabled && nullNodeTopLevelGroupCreationEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TopLevelGroupCreationEnabled = null;
+            if (parseNode.GetChildNode("trial_create_limit") is null) { _explicitNullValueTrialCreateLimit = default!; _explicitNullProperties?.Remove("trial_create_limit"); }
+            else if (parseNode.GetChildNode("trial_create_limit") is { } nullNodeTrialCreateLimit && nullNodeTrialCreateLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrialCreateLimit = null;
             if (parseNode.GetChildNode("two_factor_grace_period") is null) { _explicitNullValueTwoFactorGracePeriod = default!; _explicitNullProperties?.Remove("two_factor_grace_period"); }
             else if (parseNode.GetChildNode("two_factor_grace_period") is { } nullNodeTwoFactorGracePeriod && nullNodeTwoFactorGracePeriod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TwoFactorGracePeriod = null;
             if (parseNode.GetChildNode("unconfirmed_users_delete_after_days") is null) { _explicitNullValueUnconfirmedUsersDeleteAfterDays = default!; _explicitNullProperties?.Remove("unconfirmed_users_delete_after_days"); }
@@ -3219,19 +3243,19 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string DuoCodeReviewDecisionsEnabled { get => _explicitNullValueDuoCodeReviewDecisionsEnabled; set { _explicitNullValueDuoCodeReviewDecisionsEnabled = value; AdditionalData?.Remove("duo_code_review_decisions_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duo_code_review_decisions_enabled"); else _explicitNullProperties?.Remove("duo_code_review_decisions_enabled"); } }
         private string _explicitNullValueDuoCodeReviewDecisionsEnabled = default!;
 #endif
-        /// <summary>The duo_code_review_default_depth property</summary>
+        /// <summary>The duo_code_review_default_level property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DuoCodeReviewDefaultDepth { get => _explicitNullValueDuoCodeReviewDefaultDepth; set { _explicitNullValueDuoCodeReviewDefaultDepth = value; AdditionalData?.Remove("duo_code_review_default_depth"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duo_code_review_default_depth"); else _explicitNullProperties?.Remove("duo_code_review_default_depth"); } }
-        private string? _explicitNullValueDuoCodeReviewDefaultDepth = default!;
+        public string? DuoCodeReviewDefaultLevel { get => _explicitNullValueDuoCodeReviewDefaultLevel; set { _explicitNullValueDuoCodeReviewDefaultLevel = value; AdditionalData?.Remove("duo_code_review_default_level"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duo_code_review_default_level"); else _explicitNullProperties?.Remove("duo_code_review_default_level"); } }
+        private string? _explicitNullValueDuoCodeReviewDefaultLevel = default!;
 #nullable restore
 #else
-        public string DuoCodeReviewDefaultDepth { get => _explicitNullValueDuoCodeReviewDefaultDepth; set { _explicitNullValueDuoCodeReviewDefaultDepth = value; AdditionalData?.Remove("duo_code_review_default_depth"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duo_code_review_default_depth"); else _explicitNullProperties?.Remove("duo_code_review_default_depth"); } }
-        private string _explicitNullValueDuoCodeReviewDefaultDepth = default!;
+        public string DuoCodeReviewDefaultLevel { get => _explicitNullValueDuoCodeReviewDefaultLevel; set { _explicitNullValueDuoCodeReviewDefaultLevel = value; AdditionalData?.Remove("duo_code_review_default_level"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duo_code_review_default_level"); else _explicitNullProperties?.Remove("duo_code_review_default_level"); } }
+        private string _explicitNullValueDuoCodeReviewDefaultLevel = default!;
 #endif
-        /// <summary>The duo_code_review_depth_allowed property</summary>
-        public bool? DuoCodeReviewDepthAllowed { get => _explicitNullValueDuoCodeReviewDepthAllowed; set { _explicitNullValueDuoCodeReviewDepthAllowed = value; AdditionalData?.Remove("duo_code_review_depth_allowed"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duo_code_review_depth_allowed"); else _explicitNullProperties?.Remove("duo_code_review_depth_allowed"); } }
-        private bool? _explicitNullValueDuoCodeReviewDepthAllowed = default!;
+        /// <summary>The duo_code_review_level_allowed property</summary>
+        public bool? DuoCodeReviewLevelAllowed { get => _explicitNullValueDuoCodeReviewLevelAllowed; set { _explicitNullValueDuoCodeReviewLevelAllowed = value; AdditionalData?.Remove("duo_code_review_level_allowed"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duo_code_review_level_allowed"); else _explicitNullProperties?.Remove("duo_code_review_level_allowed"); } }
+        private bool? _explicitNullValueDuoCodeReviewLevelAllowed = default!;
         /// <summary>The duo_custom_agents_availability property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -4757,6 +4781,16 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string GroupSharedGroupsApiLimit { get => _explicitNullValueGroupSharedGroupsApiLimit; set { _explicitNullValueGroupSharedGroupsApiLimit = value; AdditionalData?.Remove("group_shared_groups_api_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_shared_groups_api_limit"); else _explicitNullProperties?.Remove("group_shared_groups_api_limit"); } }
         private string _explicitNullValueGroupSharedGroupsApiLimit = default!;
 #endif
+        /// <summary>The hand_raise_lead_create_limit property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? HandRaiseLeadCreateLimit { get => _explicitNullValueHandRaiseLeadCreateLimit; set { _explicitNullValueHandRaiseLeadCreateLimit = value; AdditionalData?.Remove("hand_raise_lead_create_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hand_raise_lead_create_limit"); else _explicitNullProperties?.Remove("hand_raise_lead_create_limit"); } }
+        private string? _explicitNullValueHandRaiseLeadCreateLimit = default!;
+#nullable restore
+#else
+        public string HandRaiseLeadCreateLimit { get => _explicitNullValueHandRaiseLeadCreateLimit; set { _explicitNullValueHandRaiseLeadCreateLimit = value; AdditionalData?.Remove("hand_raise_lead_create_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hand_raise_lead_create_limit"); else _explicitNullProperties?.Remove("hand_raise_lead_create_limit"); } }
+        private string _explicitNullValueHandRaiseLeadCreateLimit = default!;
+#endif
         /// <summary>The hashed_storage_enabled property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -5086,6 +5120,16 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string IssuableCsvImportLimit { get => _explicitNullValueIssuableCsvImportLimit; set { _explicitNullValueIssuableCsvImportLimit = value; AdditionalData?.Remove("issuable_csv_import_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issuable_csv_import_limit"); else _explicitNullProperties?.Remove("issuable_csv_import_limit"); } }
         private string _explicitNullValueIssuableCsvImportLimit = default!;
+#endif
+        /// <summary>The issues_analytics_limit property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? IssuesAnalyticsLimit { get => _explicitNullValueIssuesAnalyticsLimit; set { _explicitNullValueIssuesAnalyticsLimit = value; AdditionalData?.Remove("issues_analytics_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issues_analytics_limit"); else _explicitNullProperties?.Remove("issues_analytics_limit"); } }
+        private string? _explicitNullValueIssuesAnalyticsLimit = default!;
+#nullable restore
+#else
+        public string IssuesAnalyticsLimit { get => _explicitNullValueIssuesAnalyticsLimit; set { _explicitNullValueIssuesAnalyticsLimit = value; AdditionalData?.Remove("issues_analytics_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issues_analytics_limit"); else _explicitNullProperties?.Remove("issues_analytics_limit"); } }
+        private string _explicitNullValueIssuesAnalyticsLimit = default!;
 #endif
         /// <summary>The issues_create_limit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -5715,6 +5759,16 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string MembersDeleteLimit { get => _explicitNullValueMembersDeleteLimit; set { _explicitNullValueMembersDeleteLimit = value; AdditionalData?.Remove("members_delete_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("members_delete_limit"); else _explicitNullProperties?.Remove("members_delete_limit"); } }
         private string _explicitNullValueMembersDeleteLimit = default!;
 #endif
+        /// <summary>The merge_request_diff_download_request_limit property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? MergeRequestDiffDownloadRequestLimit { get => _explicitNullValueMergeRequestDiffDownloadRequestLimit; set { _explicitNullValueMergeRequestDiffDownloadRequestLimit = value; AdditionalData?.Remove("merge_request_diff_download_request_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_request_diff_download_request_limit"); else _explicitNullProperties?.Remove("merge_request_diff_download_request_limit"); } }
+        private string? _explicitNullValueMergeRequestDiffDownloadRequestLimit = default!;
+#nullable restore
+#else
+        public string MergeRequestDiffDownloadRequestLimit { get => _explicitNullValueMergeRequestDiffDownloadRequestLimit; set { _explicitNullValueMergeRequestDiffDownloadRequestLimit = value; AdditionalData?.Remove("merge_request_diff_download_request_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_request_diff_download_request_limit"); else _explicitNullProperties?.Remove("merge_request_diff_download_request_limit"); } }
+        private string _explicitNullValueMergeRequestDiffDownloadRequestLimit = default!;
+#endif
         /// <summary>The merge_request_diff_resources_request_limit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -5745,6 +5799,26 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string MergeRequestsCreateLimit { get => _explicitNullValueMergeRequestsCreateLimit; set { _explicitNullValueMergeRequestsCreateLimit = value; AdditionalData?.Remove("merge_requests_create_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_requests_create_limit"); else _explicitNullProperties?.Remove("merge_requests_create_limit"); } }
         private string _explicitNullValueMergeRequestsCreateLimit = default!;
 #endif
+        /// <summary>The merge_requests_merge_ref_limit property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? MergeRequestsMergeRefLimit { get => _explicitNullValueMergeRequestsMergeRefLimit; set { _explicitNullValueMergeRequestsMergeRefLimit = value; AdditionalData?.Remove("merge_requests_merge_ref_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_requests_merge_ref_limit"); else _explicitNullProperties?.Remove("merge_requests_merge_ref_limit"); } }
+        private string? _explicitNullValueMergeRequestsMergeRefLimit = default!;
+#nullable restore
+#else
+        public string MergeRequestsMergeRefLimit { get => _explicitNullValueMergeRequestsMergeRefLimit; set { _explicitNullValueMergeRequestsMergeRefLimit = value; AdditionalData?.Remove("merge_requests_merge_ref_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_requests_merge_ref_limit"); else _explicitNullProperties?.Remove("merge_requests_merge_ref_limit"); } }
+        private string _explicitNullValueMergeRequestsMergeRefLimit = default!;
+#endif
+        /// <summary>The merge_requests_read_diffs_limit property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? MergeRequestsReadDiffsLimit { get => _explicitNullValueMergeRequestsReadDiffsLimit; set { _explicitNullValueMergeRequestsReadDiffsLimit = value; AdditionalData?.Remove("merge_requests_read_diffs_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_requests_read_diffs_limit"); else _explicitNullProperties?.Remove("merge_requests_read_diffs_limit"); } }
+        private string? _explicitNullValueMergeRequestsReadDiffsLimit = default!;
+#nullable restore
+#else
+        public string MergeRequestsReadDiffsLimit { get => _explicitNullValueMergeRequestsReadDiffsLimit; set { _explicitNullValueMergeRequestsReadDiffsLimit = value; AdditionalData?.Remove("merge_requests_read_diffs_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_requests_read_diffs_limit"); else _explicitNullProperties?.Remove("merge_requests_read_diffs_limit"); } }
+        private string _explicitNullValueMergeRequestsReadDiffsLimit = default!;
+#endif
         /// <summary>The merge_requests_rebase_limit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -5754,6 +5828,16 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string MergeRequestsRebaseLimit { get => _explicitNullValueMergeRequestsRebaseLimit; set { _explicitNullValueMergeRequestsRebaseLimit = value; AdditionalData?.Remove("merge_requests_rebase_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_requests_rebase_limit"); else _explicitNullProperties?.Remove("merge_requests_rebase_limit"); } }
         private string _explicitNullValueMergeRequestsRebaseLimit = default!;
+#endif
+        /// <summary>The merge_requests_update_limit property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? MergeRequestsUpdateLimit { get => _explicitNullValueMergeRequestsUpdateLimit; set { _explicitNullValueMergeRequestsUpdateLimit = value; AdditionalData?.Remove("merge_requests_update_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_requests_update_limit"); else _explicitNullProperties?.Remove("merge_requests_update_limit"); } }
+        private string? _explicitNullValueMergeRequestsUpdateLimit = default!;
+#nullable restore
+#else
+        public string MergeRequestsUpdateLimit { get => _explicitNullValueMergeRequestsUpdateLimit; set { _explicitNullValueMergeRequestsUpdateLimit = value; AdditionalData?.Remove("merge_requests_update_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_requests_update_limit"); else _explicitNullProperties?.Remove("merge_requests_update_limit"); } }
+        private string _explicitNullValueMergeRequestsUpdateLimit = default!;
 #endif
         /// <summary>The merge_train_removal_limit_per_user property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -6505,6 +6589,16 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string ProjectExportLimit { get => _explicitNullValueProjectExportLimit; set { _explicitNullValueProjectExportLimit = value; AdditionalData?.Remove("project_export_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_export_limit"); else _explicitNullProperties?.Remove("project_export_limit"); } }
         private string _explicitNullValueProjectExportLimit = default!;
 #endif
+        /// <summary>The project_export_limit_per_root_namespace property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ProjectExportLimitPerRootNamespace { get => _explicitNullValueProjectExportLimitPerRootNamespace; set { _explicitNullValueProjectExportLimitPerRootNamespace = value; AdditionalData?.Remove("project_export_limit_per_root_namespace"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_export_limit_per_root_namespace"); else _explicitNullProperties?.Remove("project_export_limit_per_root_namespace"); } }
+        private string? _explicitNullValueProjectExportLimitPerRootNamespace = default!;
+#nullable restore
+#else
+        public string ProjectExportLimitPerRootNamespace { get => _explicitNullValueProjectExportLimitPerRootNamespace; set { _explicitNullValueProjectExportLimitPerRootNamespace = value; AdditionalData?.Remove("project_export_limit_per_root_namespace"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_export_limit_per_root_namespace"); else _explicitNullProperties?.Remove("project_export_limit_per_root_namespace"); } }
+        private string _explicitNullValueProjectExportLimitPerRootNamespace = default!;
+#endif
         /// <summary>The project_hooks_create_limit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -6624,6 +6718,26 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string ProjectRepositoriesBlobsBatchLimit { get => _explicitNullValueProjectRepositoriesBlobsBatchLimit; set { _explicitNullValueProjectRepositoriesBlobsBatchLimit = value; AdditionalData?.Remove("project_repositories_blobs_batch_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_repositories_blobs_batch_limit"); else _explicitNullProperties?.Remove("project_repositories_blobs_batch_limit"); } }
         private string _explicitNullValueProjectRepositoriesBlobsBatchLimit = default!;
+#endif
+        /// <summary>The project_repositories_compare_limit property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ProjectRepositoriesCompareLimit { get => _explicitNullValueProjectRepositoriesCompareLimit; set { _explicitNullValueProjectRepositoriesCompareLimit = value; AdditionalData?.Remove("project_repositories_compare_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_repositories_compare_limit"); else _explicitNullProperties?.Remove("project_repositories_compare_limit"); } }
+        private string? _explicitNullValueProjectRepositoriesCompareLimit = default!;
+#nullable restore
+#else
+        public string ProjectRepositoriesCompareLimit { get => _explicitNullValueProjectRepositoriesCompareLimit; set { _explicitNullValueProjectRepositoriesCompareLimit = value; AdditionalData?.Remove("project_repositories_compare_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_repositories_compare_limit"); else _explicitNullProperties?.Remove("project_repositories_compare_limit"); } }
+        private string _explicitNullValueProjectRepositoriesCompareLimit = default!;
+#endif
+        /// <summary>The project_repositories_compare_unauthenticated_limit property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ProjectRepositoriesCompareUnauthenticatedLimit { get => _explicitNullValueProjectRepositoriesCompareUnauthenticatedLimit; set { _explicitNullValueProjectRepositoriesCompareUnauthenticatedLimit = value; AdditionalData?.Remove("project_repositories_compare_unauthenticated_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_repositories_compare_unauthenticated_limit"); else _explicitNullProperties?.Remove("project_repositories_compare_unauthenticated_limit"); } }
+        private string? _explicitNullValueProjectRepositoriesCompareUnauthenticatedLimit = default!;
+#nullable restore
+#else
+        public string ProjectRepositoriesCompareUnauthenticatedLimit { get => _explicitNullValueProjectRepositoriesCompareUnauthenticatedLimit; set { _explicitNullValueProjectRepositoriesCompareUnauthenticatedLimit = value; AdditionalData?.Remove("project_repositories_compare_unauthenticated_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_repositories_compare_unauthenticated_limit"); else _explicitNullProperties?.Remove("project_repositories_compare_unauthenticated_limit"); } }
+        private string _explicitNullValueProjectRepositoriesCompareUnauthenticatedLimit = default!;
 #endif
         /// <summary>The project_repository_commits_api_limit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -7725,6 +7839,26 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string StaticObjectsExternalStorageUrl { get => _explicitNullValueStaticObjectsExternalStorageUrl; set { _explicitNullValueStaticObjectsExternalStorageUrl = value; AdditionalData?.Remove("static_objects_external_storage_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("static_objects_external_storage_url"); else _explicitNullProperties?.Remove("static_objects_external_storage_url"); } }
         private string _explicitNullValueStaticObjectsExternalStorageUrl = default!;
 #endif
+        /// <summary>The subscriptions_payment_form_per_hour_limit property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? SubscriptionsPaymentFormPerHourLimit { get => _explicitNullValueSubscriptionsPaymentFormPerHourLimit; set { _explicitNullValueSubscriptionsPaymentFormPerHourLimit = value; AdditionalData?.Remove("subscriptions_payment_form_per_hour_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscriptions_payment_form_per_hour_limit"); else _explicitNullProperties?.Remove("subscriptions_payment_form_per_hour_limit"); } }
+        private string? _explicitNullValueSubscriptionsPaymentFormPerHourLimit = default!;
+#nullable restore
+#else
+        public string SubscriptionsPaymentFormPerHourLimit { get => _explicitNullValueSubscriptionsPaymentFormPerHourLimit; set { _explicitNullValueSubscriptionsPaymentFormPerHourLimit = value; AdditionalData?.Remove("subscriptions_payment_form_per_hour_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscriptions_payment_form_per_hour_limit"); else _explicitNullProperties?.Remove("subscriptions_payment_form_per_hour_limit"); } }
+        private string _explicitNullValueSubscriptionsPaymentFormPerHourLimit = default!;
+#endif
+        /// <summary>The subscriptions_validate_payment_method_per_hour_limit property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? SubscriptionsValidatePaymentMethodPerHourLimit { get => _explicitNullValueSubscriptionsValidatePaymentMethodPerHourLimit; set { _explicitNullValueSubscriptionsValidatePaymentMethodPerHourLimit = value; AdditionalData?.Remove("subscriptions_validate_payment_method_per_hour_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscriptions_validate_payment_method_per_hour_limit"); else _explicitNullProperties?.Remove("subscriptions_validate_payment_method_per_hour_limit"); } }
+        private string? _explicitNullValueSubscriptionsValidatePaymentMethodPerHourLimit = default!;
+#nullable restore
+#else
+        public string SubscriptionsValidatePaymentMethodPerHourLimit { get => _explicitNullValueSubscriptionsValidatePaymentMethodPerHourLimit; set { _explicitNullValueSubscriptionsValidatePaymentMethodPerHourLimit = value; AdditionalData?.Remove("subscriptions_validate_payment_method_per_hour_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subscriptions_validate_payment_method_per_hour_limit"); else _explicitNullProperties?.Remove("subscriptions_validate_payment_method_per_hour_limit"); } }
+        private string _explicitNullValueSubscriptionsValidatePaymentMethodPerHourLimit = default!;
+#endif
         /// <summary>The subscription_usage_per_day_limit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -8394,6 +8528,16 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string TopLevelGroupCreationEnabled { get => _explicitNullValueTopLevelGroupCreationEnabled; set { _explicitNullValueTopLevelGroupCreationEnabled = value; AdditionalData?.Remove("top_level_group_creation_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("top_level_group_creation_enabled"); else _explicitNullProperties?.Remove("top_level_group_creation_enabled"); } }
         private string _explicitNullValueTopLevelGroupCreationEnabled = default!;
+#endif
+        /// <summary>The trial_create_limit property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? TrialCreateLimit { get => _explicitNullValueTrialCreateLimit; set { _explicitNullValueTrialCreateLimit = value; AdditionalData?.Remove("trial_create_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trial_create_limit"); else _explicitNullProperties?.Remove("trial_create_limit"); } }
+        private string? _explicitNullValueTrialCreateLimit = default!;
+#nullable restore
+#else
+        public string TrialCreateLimit { get => _explicitNullValueTrialCreateLimit; set { _explicitNullValueTrialCreateLimit = value; AdditionalData?.Remove("trial_create_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trial_create_limit"); else _explicitNullProperties?.Remove("trial_create_limit"); } }
+        private string _explicitNullValueTrialCreateLimit = default!;
 #endif
         /// <summary>The two_factor_grace_period property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -9081,7 +9225,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(775)
             {
                 { "abuse_notification_email", n => { AbuseNotificationEmail = n.GetStringValue(); } },
                 { "active_context_pause_indexing", n => { ActiveContextPauseIndexing = n.GetStringValue(); } },
@@ -9253,8 +9397,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "duo_chat_expiration_days", n => { DuoChatExpirationDays = n.GetStringValue(); } },
                 { "duo_cli_enabled", n => { DuoCliEnabled = n.GetStringValue(); } },
                 { "duo_code_review_decisions_enabled", n => { DuoCodeReviewDecisionsEnabled = n.GetStringValue(); } },
-                { "duo_code_review_default_depth", n => { DuoCodeReviewDefaultDepth = n.GetStringValue(); } },
-                { "duo_code_review_depth_allowed", n => { DuoCodeReviewDepthAllowed = n.GetBoolValue(); } },
+                { "duo_code_review_default_level", n => { DuoCodeReviewDefaultLevel = n.GetStringValue(); } },
+                { "duo_code_review_level_allowed", n => { DuoCodeReviewLevelAllowed = n.GetBoolValue(); } },
                 { "duo_custom_agents_availability", n => { DuoCustomAgentsAvailability = n.GetStringValue(); } },
                 { "duo_custom_agents_enabled", n => { DuoCustomAgentsEnabled = n.GetBoolValue(); } },
                 { "duo_custom_flows_availability", n => { DuoCustomFlowsAvailability = n.GetStringValue(); } },
@@ -9411,6 +9555,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "group_secrets_limit", n => { GroupSecretsLimit = n.GetStringValue(); } },
                 { "group_shared_groups_api_limit", n => { GroupSharedGroupsApiLimit = n.GetStringValue(); } },
                 { "groups_api_limit", n => { GroupsApiLimit = n.GetStringValue(); } },
+                { "hand_raise_lead_create_limit", n => { HandRaiseLeadCreateLimit = n.GetStringValue(); } },
                 { "hashed_storage_enabled", n => { HashedStorageEnabled = n.GetStringValue(); } },
                 { "helm_max_packages_count", n => { HelmMaxPackagesCount = n.GetStringValue(); } },
                 { "help_page_documentation_base_url", n => { HelpPageDocumentationBaseUrl = n.GetStringValue(); } },
@@ -9444,6 +9589,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "invitation_flow_enforcement", n => { InvitationFlowEnforcement = n.GetStringValue(); } },
                 { "ipv6_rate_limit_prefix_length", n => { Ipv6RateLimitPrefixLength = n.GetStringValue(); } },
                 { "issuable_csv_import_limit", n => { IssuableCsvImportLimit = n.GetStringValue(); } },
+                { "issues_analytics_limit", n => { IssuesAnalyticsLimit = n.GetStringValue(); } },
                 { "issues_create_limit", n => { IssuesCreateLimit = n.GetStringValue(); } },
                 { "jira_connect_additional_audience_url", n => { JiraConnectAdditionalAudienceUrl = n.GetStringValue(); } },
                 { "jira_connect_application_key", n => { JiraConnectApplicationKey = n.GetStringValue(); } },
@@ -9511,10 +9657,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "max_yaml_size_bytes", n => { MaxYamlSizeBytes = n.GetStringValue(); } },
                 { "mcp_server_enabled", n => { McpServerEnabled = n.GetStringValue(); } },
                 { "members_delete_limit", n => { MembersDeleteLimit = n.GetStringValue(); } },
+                { "merge_request_diff_download_request_limit", n => { MergeRequestDiffDownloadRequestLimit = n.GetStringValue(); } },
                 { "merge_request_diff_resources_request_limit", n => { MergeRequestDiffResourcesRequestLimit = n.GetStringValue(); } },
                 { "merge_request_diffs_page_request_limit", n => { MergeRequestDiffsPageRequestLimit = n.GetStringValue(); } },
                 { "merge_requests_create_limit", n => { MergeRequestsCreateLimit = n.GetStringValue(); } },
+                { "merge_requests_merge_ref_limit", n => { MergeRequestsMergeRefLimit = n.GetStringValue(); } },
+                { "merge_requests_read_diffs_limit", n => { MergeRequestsReadDiffsLimit = n.GetStringValue(); } },
                 { "merge_requests_rebase_limit", n => { MergeRequestsRebaseLimit = n.GetStringValue(); } },
+                { "merge_requests_update_limit", n => { MergeRequestsUpdateLimit = n.GetStringValue(); } },
                 { "merge_train_removal_limit_per_user", n => { MergeTrainRemovalLimitPerUser = n.GetStringValue(); } },
                 { "metrics_method_call_threshold", n => { MetricsMethodCallThreshold = n.GetStringValue(); } },
                 { "milestone_destroy_limit", n => { MilestoneDestroyLimit = n.GetStringValue(); } },
@@ -9590,6 +9740,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "project_download_export_limit", n => { ProjectDownloadExportLimit = n.GetStringValue(); } },
                 { "project_export_enabled", n => { ProjectExportEnabled = n.GetStringValue(); } },
                 { "project_export_limit", n => { ProjectExportLimit = n.GetStringValue(); } },
+                { "project_export_limit_per_root_namespace", n => { ProjectExportLimitPerRootNamespace = n.GetStringValue(); } },
                 { "project_hooks_create_limit", n => { ProjectHooksCreateLimit = n.GetStringValue(); } },
                 { "project_import_limit", n => { ProjectImportLimit = n.GetStringValue(); } },
                 { "project_invited_groups_api_limit", n => { ProjectInvitedGroupsApiLimit = n.GetStringValue(); } },
@@ -9602,6 +9753,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "project_repositories_blame_limit", n => { ProjectRepositoriesBlameLimit = n.GetStringValue(); } },
                 { "project_repositories_blame_unauthenticated_limit", n => { ProjectRepositoriesBlameUnauthenticatedLimit = n.GetStringValue(); } },
                 { "project_repositories_blobs_batch_limit", n => { ProjectRepositoriesBlobsBatchLimit = n.GetStringValue(); } },
+                { "project_repositories_compare_limit", n => { ProjectRepositoriesCompareLimit = n.GetStringValue(); } },
+                { "project_repositories_compare_unauthenticated_limit", n => { ProjectRepositoriesCompareUnauthenticatedLimit = n.GetStringValue(); } },
                 { "project_repository_commits_api_limit", n => { ProjectRepositoryCommitsApiLimit = n.GetStringValue(); } },
                 { "project_runner_token_expiration_interval", n => { ProjectRunnerTokenExpirationInterval = n.GetStringValue(); } },
                 { "project_secrets_limit", n => { ProjectSecretsLimit = n.GetStringValue(); } },
@@ -9715,6 +9868,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "subscription_usage_per_day_limit", n => { SubscriptionUsagePerDayLimit = n.GetStringValue(); } },
                 { "subscription_usage_per_hour_limit", n => { SubscriptionUsagePerHourLimit = n.GetStringValue(); } },
                 { "subscription_usage_per_minute_limit", n => { SubscriptionUsagePerMinuteLimit = n.GetStringValue(); } },
+                { "subscriptions_payment_form_per_hour_limit", n => { SubscriptionsPaymentFormPerHourLimit = n.GetStringValue(); } },
+                { "subscriptions_validate_payment_method_per_hour_limit", n => { SubscriptionsValidatePaymentMethodPerHourLimit = n.GetStringValue(); } },
                 { "system_hooks_create_limit", n => { SystemHooksCreateLimit = n.GetStringValue(); } },
                 { "tags_create_limit", n => { TagsCreateLimit = n.GetStringValue(); } },
                 { "terminal_max_session_time", n => { TerminalMaxSessionTime = n.GetStringValue(); } },
@@ -9779,6 +9934,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "tool_approval_for_session_availability", n => { ToolApprovalForSessionAvailability = n.GetStringValue(); } },
                 { "tool_approval_for_session_enabled", n => { ToolApprovalForSessionEnabled = n.GetStringValue(); } },
                 { "top_level_group_creation_enabled", n => { TopLevelGroupCreationEnabled = n.GetStringValue(); } },
+                { "trial_create_limit", n => { TrialCreateLimit = n.GetStringValue(); } },
                 { "two_factor_grace_period", n => { TwoFactorGracePeriod = n.GetStringValue(); } },
                 { "unconfirmed_users_delete_after_days", n => { UnconfirmedUsersDeleteAfterDays = n.GetStringValue(); } },
                 { "unique_ips_limit_enabled", n => { UniqueIpsLimitEnabled = n.GetStringValue(); } },
@@ -10025,8 +10181,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("duo_chat_expiration_days", DuoChatExpirationDays);
             writer.WriteStringValue("duo_cli_enabled", DuoCliEnabled);
             writer.WriteStringValue("duo_code_review_decisions_enabled", DuoCodeReviewDecisionsEnabled);
-            writer.WriteStringValue("duo_code_review_default_depth", DuoCodeReviewDefaultDepth);
-            writer.WriteBoolValue("duo_code_review_depth_allowed", DuoCodeReviewDepthAllowed);
+            writer.WriteStringValue("duo_code_review_default_level", DuoCodeReviewDefaultLevel);
+            writer.WriteBoolValue("duo_code_review_level_allowed", DuoCodeReviewLevelAllowed);
             writer.WriteStringValue("duo_custom_agents_availability", DuoCustomAgentsAvailability);
             writer.WriteBoolValue("duo_custom_agents_enabled", DuoCustomAgentsEnabled);
             writer.WriteStringValue("duo_custom_flows_availability", DuoCustomFlowsAvailability);
@@ -10183,6 +10339,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("groups_api_limit", GroupsApiLimit);
             writer.WriteStringValue("group_secrets_limit", GroupSecretsLimit);
             writer.WriteStringValue("group_shared_groups_api_limit", GroupSharedGroupsApiLimit);
+            writer.WriteStringValue("hand_raise_lead_create_limit", HandRaiseLeadCreateLimit);
             writer.WriteStringValue("hashed_storage_enabled", HashedStorageEnabled);
             writer.WriteStringValue("helm_max_packages_count", HelmMaxPackagesCount);
             writer.WriteStringValue("help_page_documentation_base_url", HelpPageDocumentationBaseUrl);
@@ -10216,6 +10373,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("invitation_flow_enforcement", InvitationFlowEnforcement);
             writer.WriteStringValue("ipv6_rate_limit_prefix_length", Ipv6RateLimitPrefixLength);
             writer.WriteStringValue("issuable_csv_import_limit", IssuableCsvImportLimit);
+            writer.WriteStringValue("issues_analytics_limit", IssuesAnalyticsLimit);
             writer.WriteStringValue("issues_create_limit", IssuesCreateLimit);
             writer.WriteStringValue("jira_connect_additional_audience_url", JiraConnectAdditionalAudienceUrl);
             writer.WriteStringValue("jira_connect_application_key", JiraConnectApplicationKey);
@@ -10283,10 +10441,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("max_yaml_size_bytes", MaxYamlSizeBytes);
             writer.WriteStringValue("mcp_server_enabled", McpServerEnabled);
             writer.WriteStringValue("members_delete_limit", MembersDeleteLimit);
+            writer.WriteStringValue("merge_request_diff_download_request_limit", MergeRequestDiffDownloadRequestLimit);
             writer.WriteStringValue("merge_request_diff_resources_request_limit", MergeRequestDiffResourcesRequestLimit);
             writer.WriteStringValue("merge_request_diffs_page_request_limit", MergeRequestDiffsPageRequestLimit);
             writer.WriteStringValue("merge_requests_create_limit", MergeRequestsCreateLimit);
+            writer.WriteStringValue("merge_requests_merge_ref_limit", MergeRequestsMergeRefLimit);
+            writer.WriteStringValue("merge_requests_read_diffs_limit", MergeRequestsReadDiffsLimit);
             writer.WriteStringValue("merge_requests_rebase_limit", MergeRequestsRebaseLimit);
+            writer.WriteStringValue("merge_requests_update_limit", MergeRequestsUpdateLimit);
             writer.WriteStringValue("merge_train_removal_limit_per_user", MergeTrainRemovalLimitPerUser);
             writer.WriteStringValue("metrics_method_call_threshold", MetricsMethodCallThreshold);
             writer.WriteStringValue("milestone_destroy_limit", MilestoneDestroyLimit);
@@ -10362,6 +10524,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("project_download_export_limit", ProjectDownloadExportLimit);
             writer.WriteStringValue("project_export_enabled", ProjectExportEnabled);
             writer.WriteStringValue("project_export_limit", ProjectExportLimit);
+            writer.WriteStringValue("project_export_limit_per_root_namespace", ProjectExportLimitPerRootNamespace);
             writer.WriteStringValue("project_hooks_create_limit", ProjectHooksCreateLimit);
             writer.WriteStringValue("project_import_limit", ProjectImportLimit);
             writer.WriteStringValue("project_invited_groups_api_limit", ProjectInvitedGroupsApiLimit);
@@ -10374,6 +10537,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("project_repositories_blame_limit", ProjectRepositoriesBlameLimit);
             writer.WriteStringValue("project_repositories_blame_unauthenticated_limit", ProjectRepositoriesBlameUnauthenticatedLimit);
             writer.WriteStringValue("project_repositories_blobs_batch_limit", ProjectRepositoriesBlobsBatchLimit);
+            writer.WriteStringValue("project_repositories_compare_limit", ProjectRepositoriesCompareLimit);
+            writer.WriteStringValue("project_repositories_compare_unauthenticated_limit", ProjectRepositoriesCompareUnauthenticatedLimit);
             writer.WriteStringValue("project_repository_commits_api_limit", ProjectRepositoryCommitsApiLimit);
             writer.WriteStringValue("project_runner_token_expiration_interval", ProjectRunnerTokenExpirationInterval);
             writer.WriteStringValue("projects_api_limit", ProjectsApiLimit);
@@ -10484,6 +10649,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("spam_check_endpoint_url", SpamCheckEndpointUrl);
             writer.WriteStringValue("static_objects_external_storage_auth_token", StaticObjectsExternalStorageAuthToken);
             writer.WriteStringValue("static_objects_external_storage_url", StaticObjectsExternalStorageUrl);
+            writer.WriteStringValue("subscriptions_payment_form_per_hour_limit", SubscriptionsPaymentFormPerHourLimit);
+            writer.WriteStringValue("subscriptions_validate_payment_method_per_hour_limit", SubscriptionsValidatePaymentMethodPerHourLimit);
             writer.WriteStringValue("subscription_usage_per_day_limit", SubscriptionUsagePerDayLimit);
             writer.WriteStringValue("subscription_usage_per_hour_limit", SubscriptionUsagePerHourLimit);
             writer.WriteStringValue("subscription_usage_per_minute_limit", SubscriptionUsagePerMinuteLimit);
@@ -10551,6 +10718,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("tool_approval_for_session_availability", ToolApprovalForSessionAvailability);
             writer.WriteStringValue("tool_approval_for_session_enabled", ToolApprovalForSessionEnabled);
             writer.WriteStringValue("top_level_group_creation_enabled", TopLevelGroupCreationEnabled);
+            writer.WriteStringValue("trial_create_limit", TrialCreateLimit);
             writer.WriteStringValue("two_factor_grace_period", TwoFactorGracePeriod);
             writer.WriteStringValue("unconfirmed_users_delete_after_days", UnconfirmedUsersDeleteAfterDays);
             writer.WriteStringValue("unique_ips_limit_enabled", UniqueIpsLimitEnabled);

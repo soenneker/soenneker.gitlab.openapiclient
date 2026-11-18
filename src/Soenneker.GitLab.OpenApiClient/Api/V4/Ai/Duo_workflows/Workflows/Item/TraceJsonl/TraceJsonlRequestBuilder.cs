@@ -33,7 +33,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Workflows.Item.
         {
         }
         /// <summary>
-        /// Returns the full trace of a workflow session as JSON Lines (JSONL). Each line is a JSON object representing one checkpoint event in chronological order.
+        /// Returns the trace of a workflow session as JSON Lines (JSONL), with the `application/x-ndjson` content type. The first line holds the session goal, if set. The other lines are entries from the `ui_chat_log`, `plan`, and `status` channels. Each line is a JSON object with a `channel` key. A `ui_chat_log` line also carries the fields of the entry, such as `message_type`, `content`, and `status`. For workflows that use incremental checkpoint storage, the default trace covers all threads of the session, including messages from before any context compaction. Returns `403 Forbidden` if the user must complete identity verification before using GitLab Duo Agent Platform.
         /// </summary>
         /// <returns>A <see cref="Stream"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -51,7 +51,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Workflows.Item.
             return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Returns the full trace of a workflow session as JSON Lines (JSONL). Each line is a JSON object representing one checkpoint event in chronological order.
+        /// Returns the trace of a workflow session as JSON Lines (JSONL), with the `application/x-ndjson` content type. The first line holds the session goal, if set. The other lines are entries from the `ui_chat_log`, `plan`, and `status` channels. Each line is a JSON object with a `channel` key. A `ui_chat_log` line also carries the fields of the entry, such as `message_type`, `content`, and `status`. For workflows that use incremental checkpoint storage, the default trace covers all threads of the session, including messages from before any context compaction. Returns `403 Forbidden` if the user must complete identity verification before using GitLab Duo Agent Platform.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -78,7 +78,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Workflows.Item.
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Ai.Duo_workflows.Workflows.Item.TraceJsonl.TraceJsonlRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Returns the full trace of a workflow session as JSON Lines (JSONL). Each line is a JSON object representing one checkpoint event in chronological order.
+        /// Returns the trace of a workflow session as JSON Lines (JSONL), with the `application/x-ndjson` content type. The first line holds the session goal, if set. The other lines are entries from the `ui_chat_log`, `plan`, and `status` channels. Each line is a JSON object with a `channel` key. A `ui_chat_log` line also carries the fields of the entry, such as `message_type`, `content`, and `status`. For workflows that use incremental checkpoint storage, the default trace covers all threads of the session, including messages from before any context compaction. Returns `403 Forbidden` if the user must complete identity verification before using GitLab Duo Agent Platform.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class TraceJsonlRequestBuilderGetQueryParameters 

@@ -185,7 +185,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(17)
             {
                 { "checksum_mismatch_report_threshold", n => { ChecksumMismatchReportThreshold = n.GetIntValue(); } },
                 { "checksum_mismatch_self_heal_cooldown_minutes", n => { ChecksumMismatchSelfHealCooldownMinutes = n.GetIntValue(); } },

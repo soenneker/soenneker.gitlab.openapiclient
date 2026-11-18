@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
     /// <summary>
-    /// Metadata of the additional context.
+    /// Metadata of the additional context. The value depends on `category`.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PostApiV4ChatCompletionsRequestAdditionalContextItemMetadataProperty : IAdditionalDataHolder, IParsable
