@@ -27,7 +27,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Target service audience.</summary>
+        /// <summary>Target service audience. Required unless a CI/CD ID token names it in its target_audience claim. When both are sent, they must match.</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4TokenExchangeRequestAudience? Audience { get => _explicitNullValueAudience; set { _explicitNullValueAudience = value; AdditionalData?.Remove("audience"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audience"); else _explicitNullProperties?.Remove("audience"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4TokenExchangeRequestAudience? _explicitNullValueAudience = default!;
         /// <summary>Requested token lifetime in seconds. The granted lifetime may be shorter than requested depending on the authentication method used to call this endpoint or the audience.</summary>

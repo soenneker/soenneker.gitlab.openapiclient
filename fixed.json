@@ -789,7 +789,7 @@
           "Token exchange"
         ],
         "summary": "Issue a short-lived JWT for a single modular-service audience",
-        "description": "Issues a short-lived RS256 JWT scoped to one modular-service audience (such as the Artifact Registry). Claims include the requesting user id (sub), organization id, and deployment realm (saas / self-managed). When called with a CI/CD ID token, the claims also carry its build metadata, and an ID token older than 15 minutes is refused. Presented to the corresponding backend and verified against the instance JWKS. The response uses the RFC 8693 names. token and access_token have the same value, with access_token preferred where possible.",
+        "description": "Issues a short-lived RS256 JWT scoped to one modular-service audience (such as the Artifact Registry). Claims include the requesting user id (sub), organization id, and deployment realm (saas / self-managed). When called with a CI/CD ID token, the claims also carry its build metadata, a target_audience claim in the ID token names the audience, and an ID token older than 15 minutes is refused. Presented to the corresponding backend and verified against the instance JWKS. The response uses the RFC 8693 names. token and access_token have the same value, with access_token preferred where possible.",
         "operationId": "PostApiV4TokenExchange",
         "requestBody": {
           "content": {
@@ -798,8 +798,7 @@
                 "$ref": "#/components/schemas/PostApiV4TokenExchangeRequest"
               }
             }
-          },
-          "required": true
+          }
         },
         "responses": {
           "201": {
@@ -1753,6 +1752,256 @@
           },
           "422": {
             "description": "Unprocessable entity"
+          }
+        },
+        "x-gitlab-lifecycle": "experiment"
+      }
+    },
+    "/api/v4/ai/duo_workflows/workflows/{id}/capsules/authorize": {
+      "post": {
+        "tags": [
+          "GitLab Duo workflows"
+        ],
+        "summary": "Authorize a session capsule upload",
+        "description": "Workhorse calls this endpoint before it accepts the capsule file.",
+        "operationId": "PostApiV4AiDuoWorkflowsWorkflowsWorkflowIdCapsulesAuthorize",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The ID of the session",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            },
+            "example": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "422": {
+            "description": "Unprocessable entity"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        },
+        "x-gitlab-lifecycle": "experiment"
+      }
+    },
+    "/api/v4/ai/duo_workflows/workflows/{id}/capsules": {
+      "post": {
+        "tags": [
+          "GitLab Duo workflows"
+        ],
+        "summary": "Upload a session capsule",
+        "description": "Stores a tar of the session state that a CI job did not push, so the job that resumes the session can restore it.",
+        "operationId": "PostApiV4AiDuoWorkflowsWorkflowsWorkflowIdCapsules",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The ID of the session",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            },
+            "example": 1
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "$ref": "#/components/schemas/PostApiV4AiDuoWorkflowsWorkflowsWorkflowIdCapsulesRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesAiDuoWorkflowsSessionCapsule"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Validation failed"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "422": {
+            "description": "Unprocessable entity"
+          },
+          "200": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesAiDuoWorkflowsSessionCapsule"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
+          }
+        },
+        "x-gitlab-lifecycle": "experiment"
+      },
+      "get": {
+        "tags": [
+          "GitLab Duo workflows"
+        ],
+        "summary": "List session capsules",
+        "description": "Lists the capsules of a session that have not expired, newest first.",
+        "operationId": "GetApiV4AiDuoWorkflowsWorkflowsWorkflowIdCapsules",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The ID of the session",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            },
+            "example": 1
+          },
+          {
+            "name": "thread_ts",
+            "in": "query",
+            "description": "Return only capsules taken at this checkpoint thread",
+            "schema": {
+              "maxLength": 255,
+              "type": "string",
+              "nullable": true
+            },
+            "example": "1f0a3b2c-4d5e-6f70-8192-a3b4c5d6e7f8"
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "Page number of results to retrieve.",
+            "schema": {
+              "type": "integer",
+              "default": 1,
+              "nullable": true
+            },
+            "example": 1
+          },
+          {
+            "name": "per_page",
+            "in": "query",
+            "description": "Number of items to list per page.",
+            "schema": {
+              "type": "integer",
+              "default": 20,
+              "nullable": true
+            },
+            "example": 20
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetApiV4AiDuoWorkflowsWorkflowsWorkflowIdCapsules200ResponseSchema"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        },
+        "x-gitlab-lifecycle": "experiment"
+      }
+    },
+    "/api/v4/ai/duo_workflows/workflows/{id}/capsules/{capsuleId}/download": {
+      "get": {
+        "tags": [
+          "GitLab Duo workflows"
+        ],
+        "summary": "Download a session capsule",
+        "description": "Downloads the capsule tar file. Expired capsules are not found.",
+        "operationId": "GetApiV4AiDuoWorkflowsWorkflowsWorkflowIdCapsulesCapsuleIdDownload",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The ID of the session",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            },
+            "example": 1
+          },
+          {
+            "name": "capsuleId",
+            "in": "path",
+            "description": "The ID of the capsule, or \u0060latest\u0060 for the newest capsule",
+            "required": true,
+            "schema": {
+              "pattern": "^(?:latest|\\d\u002B)$",
+              "type": "string"
+            },
+            "example": "latest"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/x-tar": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetApiV4AiDuoWorkflowsWorkflowsWorkflowIdCapsulesCapsuleIdDownload200XTarResponseSchema"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "400": {
+            "description": "Bad Request"
           }
         },
         "x-gitlab-lifecycle": "experiment"
@@ -10032,7 +10281,14 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetApiV4GroupsIdHooksHookIdEvents200ResponseSchema"
+                }
+              }
+            }
           },
           "400": {
             "description": "Bad request"
@@ -57301,7 +57557,14 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetApiV4ProjectsIdHooksHookIdEvents200ResponseSchema"
+                }
+              }
+            }
           },
           "400": {
             "description": "Bad request"
@@ -123236,6 +123499,41 @@
           }
         }
       },
+      "ApiEntitiesAiDuoWorkflowsSessionCapsule": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "example": 1
+          },
+          "workflow_id": {
+            "type": "integer",
+            "example": 1
+          },
+          "thread_ts": {
+            "type": "string",
+            "example": "1f0a3b2c-4d5e-6f70-8192-a3b4c5d6e7f8"
+          },
+          "size": {
+            "type": "integer",
+            "example": 4096
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2026-10-14T10:43:27.633Z"
+          },
+          "expire_at": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2026-11-13T10:43:27.624Z"
+          },
+          "download_url": {
+            "type": "string",
+            "example": "https://gitlab.example.com/api/v4/ai/duo_workflows/workflows/1/capsules/1/download"
+          }
+        }
+      },
       "ApiEntitiesAiDuoWorkflowsWorkflow": {
         "type": "object",
         "properties": {
@@ -126593,6 +126891,51 @@
           }
         }
       },
+      "ApiEntitiesWebHookLog": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64",
+            "example": 1
+          },
+          "url": {
+            "type": "string",
+            "example": "https://example.com"
+          },
+          "trigger": {
+            "type": "string",
+            "example": "push_hooks"
+          },
+          "request_headers": {
+            "$ref": "#/components/schemas/ApiEntitiesWebHookLogRequestHeadersProperty"
+          },
+          "request_data": {
+            "$ref": "#/components/schemas/ApiEntitiesWebHookLogRequestDataProperty"
+          },
+          "response_headers": {
+            "$ref": "#/components/schemas/ApiEntitiesWebHookLogResponseHeadersProperty"
+          },
+          "response_body": {
+            "type": "string",
+            "example": "\u0022{\\\u0022success\\\u0022:true}\u0022"
+          },
+          "execution_duration": {
+            "type": "number",
+            "format": "float",
+            "example": 98.29
+          },
+          "response_status": {
+            "type": "string",
+            "example": "200"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2012-05-28T04:42:42-07:00"
+          }
+        }
+      },
       "ApiEntitiesIdentityDetail": {
         "type": "object",
         "properties": {
@@ -129292,13 +129635,19 @@
             "type": "string"
           },
           "namespaces": {
-            "$ref": "#/components/schemas/ApiEntitiesNamespaceBasic"
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ApiEntitiesNamespaceBasic"
+            }
           },
           "updated_at": {
             "type": "string"
           },
           "storage_shards": {
-            "$ref": "#/components/schemas/StorageShardEntity"
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/StorageShardEntity"
+            }
           },
           "storage_shards_match": {
             "type": "string"
@@ -131198,13 +131547,19 @@
             "type": "string"
           },
           "namespaces": {
-            "$ref": "#/components/schemas/ApiEntitiesNamespaceBasic"
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ApiEntitiesNamespaceBasic"
+            }
           },
           "updated_at": {
             "type": "string"
           },
           "storage_shards": {
-            "$ref": "#/components/schemas/StorageShardEntity"
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/StorageShardEntity"
+            }
           },
           "storage_shards_match": {
             "type": "string"
@@ -137626,6 +137981,9 @@
             "type": "string"
           },
           "hand_raise_lead_create_limit": {
+            "type": "string"
+          },
+          "user_add_on_assignment_bulk_create_limit": {
             "type": "string"
           },
           "duo_workflow_oauth_application_id": {
@@ -152211,9 +152569,6 @@
         }
       },
       "PostApiV4TokenExchangeRequest": {
-        "required": [
-          "audience"
-        ],
         "type": "object",
         "properties": {
           "audience": {
@@ -152596,6 +152951,27 @@
             "description": "Internal ID of the merge request that the workflow is associated with. Requires \u0060project_id\u0060.",
             "nullable": true,
             "example": 123
+          }
+        }
+      },
+      "PostApiV4AiDuoWorkflowsWorkflowsWorkflowIdCapsulesRequest": {
+        "required": [
+          "file"
+        ],
+        "type": "object",
+        "properties": {
+          "file": {
+            "type": "string",
+            "description": "The capsule tar file",
+            "format": "binary",
+            "nullable": true
+          },
+          "thread_ts": {
+            "maxLength": 255,
+            "type": "string",
+            "description": "The checkpoint thread the capsule was taken at",
+            "nullable": true,
+            "example": "1f0a3b2c-4d5e-6f70-8192-a3b4c5d6e7f8"
           }
         }
       },
@@ -158747,7 +159123,7 @@
           },
           "pages_domain_create_limit": {
             "type": "integer",
-            "description": "Maximum number of Pages custom domains each user can create per day. Default: \u006020\u0060. Set to \u00600\u0060 to disable the rate limit. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/work_items/635642) in GitLab 19.6.",
+            "description": "Maximum number of Pages custom domains each user can create per day. Default: \u006050\u0060. Set to \u00600\u0060 to disable the rate limit. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/work_items/635642) in GitLab 19.6.",
             "nullable": true
           },
           "pages_domain_verify_limit": {
@@ -160631,6 +161007,11 @@
           "hand_raise_lead_create_limit": {
             "type": "integer",
             "description": "Maximum number of hand-raise lead requests per hour per user. Default: \u006010\u0060. Set to \u00600\u0060 to disable the rate limit.",
+            "nullable": true
+          },
+          "user_add_on_assignment_bulk_create_limit": {
+            "type": "integer",
+            "description": "Maximum number of \u0060userAddOnAssignmentBulkCreate\u0060 GraphQL mutation calls per minute per user. Default: \u00600\u0060. Set to \u00600\u0060 to disable the rate limit.",
             "nullable": true
           },
           "group_owners_can_manage_default_branch_protection": {
@@ -189753,6 +190134,16 @@
           "$ref": "#/components/schemas/ApiEntitiesAiExternalAgentsSession"
         }
       },
+      "GetApiV4AiDuoWorkflowsWorkflowsWorkflowIdCapsules200ResponseSchema": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ApiEntitiesAiDuoWorkflowsSessionCapsule"
+        }
+      },
+      "GetApiV4AiDuoWorkflowsWorkflowsWorkflowIdCapsulesCapsuleIdDownload200XTarResponseSchema": {
+        "type": "string",
+        "format": "binary"
+      },
       "GetApiV4AiDuoWorkflowsWorkflowsIdCheckpoints200ResponseSchema": {
         "type": "array",
         "items": {
@@ -189925,6 +190316,12 @@
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/ApiEntitiesGroupHook"
+        }
+      },
+      "GetApiV4GroupsIdHooksHookIdEvents200ResponseSchema": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ApiEntitiesWebHookLog"
         }
       },
       "GetApiV4GroupsIdSamlIdentities200ResponseSchema": {
@@ -190902,6 +191299,12 @@
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/ApiEntitiesProjectHook"
+        }
+      },
+      "GetApiV4ProjectsIdHooksHookIdEvents200ResponseSchema": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ApiEntitiesWebHookLog"
         }
       },
       "GetApiV4ProjectsIdExportDownload200OctetStreamResponseSchema": {
@@ -191899,6 +192302,25 @@
       },
       "ApiEntitiesGroupHookCustomHeadersItemProperty": {
         "type": "object"
+      },
+      "ApiEntitiesWebHookLogRequestHeadersProperty": {
+        "type": "object",
+        "example": {
+          "Content-Type": "application/json"
+        }
+      },
+      "ApiEntitiesWebHookLogRequestDataProperty": {
+        "type": "object",
+        "example": {
+          "user_id": 72,
+          "event_name": "push"
+        }
+      },
+      "ApiEntitiesWebHookLogResponseHeadersProperty": {
+        "type": "object",
+        "example": {
+          "Content-Type": "application/json"
+        }
       },
       "ApiEntitiesGitlabLicenseWithActiveUsersLicenseeProperty": {
         "type": "object",
@@ -194059,13 +194481,13 @@
         }
       },
       "PostApiV4TokenExchangeRequestAudience": {
-        "minLength": 1,
         "enum": [
           "gitlab-artifact-registry",
           "gitlab-autoflow"
         ],
         "type": "string",
-        "description": "Target service audience.",
+        "description": "Target service audience. Required unless a CI/CD ID token names it in its target_audience claim. When both are sent, they must match.",
+        "nullable": true,
         "x-ms-enum": {
           "name": "PostApiV4TokenExchangeRequestAudience",
           "modelAsString": false,
@@ -221180,6 +221602,11 @@
       "x-displayName": "VS Code"
     },
     {
+      "name": "Validity checks",
+      "description": "Use this API to check whether raw token values are still active.\n\n\u003E [!note]\n\u003E The availability of this feature is controlled by a feature flag.\n\u003E While the feature flag is disabled, requests return \u0060404 Not Found\u0060.\n\u003E This feature is available for testing, but not ready for production use.\n\n## History\n\n- Endpoint to verify raw tokens introduced in GitLab 19.7\n  [with a feature flag](https://docs.gitlab.com/administration/feature_flags/) named \u0060validity_checks_raw_token_api\u0060.\n  Disabled by default.",
+      "x-displayName": "Validity checks"
+    },
+    {
       "name": "Virtual registries",
       "description": "Use this API to manage the Maven and npm\n[virtual registries](https://docs.gitlab.com/user/packages/virtual_registry/) of a group, along with\nthe [upstream registries](https://docs.gitlab.com/user/packages/virtual_registry/#manage-upstream-registries)\nthey proxy. You can test the connection to an upstream, inspect its\n[cache](https://docs.gitlab.com/user/packages/virtual_registry/#caching-system) entries, and purge\nthe cache of a registry or an upstream.",
       "externalDocs": {
@@ -221315,6 +221742,25 @@
     },
     "ApiEntitiesGroupHookCustomHeadersItem": {
       "type": "object"
+    },
+    "ApiEntitiesWebHookLogRequestHeaders": {
+      "type": "object",
+      "example": {
+        "Content-Type": "application/json"
+      }
+    },
+    "ApiEntitiesWebHookLogRequestData": {
+      "type": "object",
+      "example": {
+        "user_id": 72,
+        "event_name": "push"
+      }
+    },
+    "ApiEntitiesWebHookLogResponseHeaders": {
+      "type": "object",
+      "example": {
+        "Content-Type": "application/json"
+      }
     },
     "ApiEntitiesGitlabLicenseWithActiveUsersLicensee": {
       "type": "object",
@@ -221985,6 +222431,16 @@
         "$ref": "#/components/schemas/ApiEntitiesAiExternalAgentsSession"
       }
     },
+    "GetApiV4AiDuoWorkflowsWorkflowsWorkflowIdCapsules200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesAiDuoWorkflowsSessionCapsule"
+      }
+    },
+    "GetApiV4AiDuoWorkflowsWorkflowsWorkflowIdCapsulesCapsuleIdDownload200XTarResponse": {
+      "type": "string",
+      "format": "binary"
+    },
     "GetApiV4AiDuoWorkflowsWorkflowsIdCheckpoints200Response": {
       "type": "array",
       "items": {
@@ -222157,6 +222613,12 @@
       "type": "array",
       "items": {
         "$ref": "#/components/schemas/ApiEntitiesGroupHook"
+      }
+    },
+    "GetApiV4GroupsIdHooksHookIdEvents200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesWebHookLog"
       }
     },
     "GetApiV4GroupsIdSamlIdentities200Response": {
@@ -223134,6 +223596,12 @@
       "type": "array",
       "items": {
         "$ref": "#/components/schemas/ApiEntitiesProjectHook"
+      }
+    },
+    "GetApiV4ProjectsIdHooksHookIdEvents200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesWebHookLog"
       }
     },
     "GetApiV4ProjectsIdExportDownload200OctetStreamResponse": {

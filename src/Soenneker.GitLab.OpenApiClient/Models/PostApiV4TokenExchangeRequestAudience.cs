@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
-    /// <summary>Target service audience.</summary>
+    /// <summary>Target service audience. Required unless a CI/CD ID token names it in its target_audience claim. When both are sent, they must match.</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum PostApiV4TokenExchangeRequestAudience
     {

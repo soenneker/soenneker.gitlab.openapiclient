@@ -1457,6 +1457,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             else if (parseNode.GetChildNode("use_clickhouse_for_analytics") is { } nullNodeUseClickhouseForAnalytics && nullNodeUseClickhouseForAnalytics.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UseClickhouseForAnalytics = null;
             if (parseNode.GetChildNode("use_nats_for_audit_streaming") is null) { _explicitNullValueUseNatsForAuditStreaming = default!; _explicitNullProperties?.Remove("use_nats_for_audit_streaming"); }
             else if (parseNode.GetChildNode("use_nats_for_audit_streaming") is { } nullNodeUseNatsForAuditStreaming && nullNodeUseNatsForAuditStreaming.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UseNatsForAuditStreaming = null;
+            if (parseNode.GetChildNode("user_add_on_assignment_bulk_create_limit") is null) { _explicitNullValueUserAddOnAssignmentBulkCreateLimit = default!; _explicitNullProperties?.Remove("user_add_on_assignment_bulk_create_limit"); }
+            else if (parseNode.GetChildNode("user_add_on_assignment_bulk_create_limit") is { } nullNodeUserAddOnAssignmentBulkCreateLimit && nullNodeUserAddOnAssignmentBulkCreateLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserAddOnAssignmentBulkCreateLimit = null;
             if (parseNode.GetChildNode("user_contributed_projects_api_limit") is null) { _explicitNullValueUserContributedProjectsApiLimit = default!; _explicitNullProperties?.Remove("user_contributed_projects_api_limit"); }
             else if (parseNode.GetChildNode("user_contributed_projects_api_limit") is { } nullNodeUserContributedProjectsApiLimit && nullNodeUserContributedProjectsApiLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserContributedProjectsApiLimit = null;
             if (parseNode.GetChildNode("user_deactivation_emails_enabled") is null) { _explicitNullValueUserDeactivationEmailsEnabled = default!; _explicitNullProperties?.Remove("user_deactivation_emails_enabled"); }
@@ -8652,6 +8654,16 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The use_nats_for_audit_streaming property</summary>
         public bool? UseNatsForAuditStreaming { get => _explicitNullValueUseNatsForAuditStreaming; set { _explicitNullValueUseNatsForAuditStreaming = value; AdditionalData?.Remove("use_nats_for_audit_streaming"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("use_nats_for_audit_streaming"); else _explicitNullProperties?.Remove("use_nats_for_audit_streaming"); } }
         private bool? _explicitNullValueUseNatsForAuditStreaming = default!;
+        /// <summary>The user_add_on_assignment_bulk_create_limit property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? UserAddOnAssignmentBulkCreateLimit { get => _explicitNullValueUserAddOnAssignmentBulkCreateLimit; set { _explicitNullValueUserAddOnAssignmentBulkCreateLimit = value; AdditionalData?.Remove("user_add_on_assignment_bulk_create_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_add_on_assignment_bulk_create_limit"); else _explicitNullProperties?.Remove("user_add_on_assignment_bulk_create_limit"); } }
+        private string? _explicitNullValueUserAddOnAssignmentBulkCreateLimit = default!;
+#nullable restore
+#else
+        public string UserAddOnAssignmentBulkCreateLimit { get => _explicitNullValueUserAddOnAssignmentBulkCreateLimit; set { _explicitNullValueUserAddOnAssignmentBulkCreateLimit = value; AdditionalData?.Remove("user_add_on_assignment_bulk_create_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_add_on_assignment_bulk_create_limit"); else _explicitNullProperties?.Remove("user_add_on_assignment_bulk_create_limit"); } }
+        private string _explicitNullValueUserAddOnAssignmentBulkCreateLimit = default!;
+#endif
         /// <summary>The user_contributed_projects_api_limit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -9225,7 +9237,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(775)
+            return new Dictionary<string, Action<IParseNode>>(776)
             {
                 { "abuse_notification_email", n => { AbuseNotificationEmail = n.GetStringValue(); } },
                 { "active_context_pause_indexing", n => { ActiveContextPauseIndexing = n.GetStringValue(); } },
@@ -9947,6 +9959,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "usage_ping_generation_enabled", n => { UsagePingGenerationEnabled = n.GetStringValue(); } },
                 { "use_clickhouse_for_analytics", n => { UseClickhouseForAnalytics = n.GetStringValue(); } },
                 { "use_nats_for_audit_streaming", n => { UseNatsForAuditStreaming = n.GetBoolValue(); } },
+                { "user_add_on_assignment_bulk_create_limit", n => { UserAddOnAssignmentBulkCreateLimit = n.GetStringValue(); } },
                 { "user_contributed_projects_api_limit", n => { UserContributedProjectsApiLimit = n.GetStringValue(); } },
                 { "user_deactivation_emails_enabled", n => { UserDeactivationEmailsEnabled = n.GetStringValue(); } },
                 { "user_default_external", n => { UserDefaultExternal = n.GetStringValue(); } },
@@ -10731,6 +10744,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("usage_ping_generation_enabled", UsagePingGenerationEnabled);
             writer.WriteStringValue("use_clickhouse_for_analytics", UseClickhouseForAnalytics);
             writer.WriteBoolValue("use_nats_for_audit_streaming", UseNatsForAuditStreaming);
+            writer.WriteStringValue("user_add_on_assignment_bulk_create_limit", UserAddOnAssignmentBulkCreateLimit);
             writer.WriteStringValue("user_contributed_projects_api_limit", UserContributedProjectsApiLimit);
             writer.WriteStringValue("user_deactivation_emails_enabled", UserDeactivationEmailsEnabled);
             writer.WriteStringValue("user_default_external", UserDefaultExternal);

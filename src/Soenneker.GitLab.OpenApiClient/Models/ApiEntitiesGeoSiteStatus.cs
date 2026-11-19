@@ -4037,12 +4037,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The namespaces property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNamespaceBasic? Namespaces { get => _explicitNullValueNamespaces; set { _explicitNullValueNamespaces = value; AdditionalData?.Remove("namespaces"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("namespaces"); else _explicitNullProperties?.Remove("namespaces"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNamespaceBasic? _explicitNullValueNamespaces = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNamespaceBasic>? Namespaces { get => _explicitNullValueNamespaces; set { _explicitNullValueNamespaces = value; AdditionalData?.Remove("namespaces"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("namespaces"); else _explicitNullProperties?.Remove("namespaces"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNamespaceBasic>? _explicitNullValueNamespaces = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNamespaceBasic Namespaces { get => _explicitNullValueNamespaces; set { _explicitNullValueNamespaces = value; AdditionalData?.Remove("namespaces"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("namespaces"); else _explicitNullProperties?.Remove("namespaces"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNamespaceBasic _explicitNullValueNamespaces = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNamespaceBasic> Namespaces { get => _explicitNullValueNamespaces; set { _explicitNullValueNamespaces = value; AdditionalData?.Remove("namespaces"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("namespaces"); else _explicitNullProperties?.Remove("namespaces"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNamespaceBasic> _explicitNullValueNamespaces = default!;
 #endif
         /// <summary>The organization_detail_uploads_checksum_failed_count property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -5997,12 +5997,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The storage_shards property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.StorageShardEntity? StorageShards { get => _explicitNullValueStorageShards; set { _explicitNullValueStorageShards = value; AdditionalData?.Remove("storage_shards"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("storage_shards"); else _explicitNullProperties?.Remove("storage_shards"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.StorageShardEntity? _explicitNullValueStorageShards = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.StorageShardEntity>? StorageShards { get => _explicitNullValueStorageShards; set { _explicitNullValueStorageShards = value; AdditionalData?.Remove("storage_shards"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("storage_shards"); else _explicitNullProperties?.Remove("storage_shards"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.StorageShardEntity>? _explicitNullValueStorageShards = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.StorageShardEntity StorageShards { get => _explicitNullValueStorageShards; set { _explicitNullValueStorageShards = value; AdditionalData?.Remove("storage_shards"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("storage_shards"); else _explicitNullProperties?.Remove("storage_shards"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.StorageShardEntity _explicitNullValueStorageShards = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.StorageShardEntity> StorageShards { get => _explicitNullValueStorageShards; set { _explicitNullValueStorageShards = value; AdditionalData?.Remove("storage_shards"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("storage_shards"); else _explicitNullProperties?.Remove("storage_shards"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.StorageShardEntity> _explicitNullValueStorageShards = default!;
 #endif
         /// <summary>The storage_shards_match property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -7517,7 +7517,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "merge_request_diffs_verified_count", n => { MergeRequestDiffsVerifiedCount = n.GetStringValue(); } },
                 { "merge_request_diffs_verified_in_percentage", n => { MergeRequestDiffsVerifiedInPercentage = n.GetStringValue(); } },
                 { "missing_oauth_application", n => { MissingOauthApplication = n.GetStringValue(); } },
-                { "namespaces", n => { Namespaces = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNamespaceBasic>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNamespaceBasic.CreateFromDiscriminatorValue); } },
+                { "namespaces", n => { Namespaces = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNamespaceBasic>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNamespaceBasic.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "organization_detail_uploads_checksum_failed_count", n => { OrganizationDetailUploadsChecksumFailedCount = n.GetStringValue(); } },
                 { "organization_detail_uploads_checksum_total_count", n => { OrganizationDetailUploadsChecksumTotalCount = n.GetStringValue(); } },
                 { "organization_detail_uploads_checksummed_count", n => { OrganizationDetailUploadsChecksummedCount = n.GetStringValue(); } },
@@ -7713,7 +7713,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "snippet_repositories_verification_total_count", n => { SnippetRepositoriesVerificationTotalCount = n.GetStringValue(); } },
                 { "snippet_repositories_verified_count", n => { SnippetRepositoriesVerifiedCount = n.GetStringValue(); } },
                 { "snippet_repositories_verified_in_percentage", n => { SnippetRepositoriesVerifiedInPercentage = n.GetStringValue(); } },
-                { "storage_shards", n => { StorageShards = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.StorageShardEntity>(global::Soenneker.GitLab.OpenApiClient.Models.StorageShardEntity.CreateFromDiscriminatorValue); } },
+                { "storage_shards", n => { StorageShards = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.StorageShardEntity>(global::Soenneker.GitLab.OpenApiClient.Models.StorageShardEntity.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "storage_shards_match", n => { StorageShardsMatch = n.GetStringValue(); } },
                 { "supply_chain_attestations_checksum_failed_count", n => { SupplyChainAttestationsChecksumFailedCount = n.GetStringValue(); } },
                 { "supply_chain_attestations_checksum_total_count", n => { SupplyChainAttestationsChecksumTotalCount = n.GetStringValue(); } },
@@ -8131,7 +8131,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("merge_request_diffs_verified_count", MergeRequestDiffsVerifiedCount);
             writer.WriteStringValue("merge_request_diffs_verified_in_percentage", MergeRequestDiffsVerifiedInPercentage);
             writer.WriteStringValue("missing_oauth_application", MissingOauthApplication);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNamespaceBasic>("namespaces", Namespaces);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesNamespaceBasic>("namespaces", Namespaces);
             writer.WriteStringValue("organization_detail_uploads_checksum_failed_count", OrganizationDetailUploadsChecksumFailedCount);
             writer.WriteStringValue("organization_detail_uploads_checksummed_count", OrganizationDetailUploadsChecksummedCount);
             writer.WriteStringValue("organization_detail_uploads_checksum_total_count", OrganizationDetailUploadsChecksumTotalCount);
@@ -8327,7 +8327,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("snippet_repositories_verification_total_count", SnippetRepositoriesVerificationTotalCount);
             writer.WriteStringValue("snippet_repositories_verified_count", SnippetRepositoriesVerifiedCount);
             writer.WriteStringValue("snippet_repositories_verified_in_percentage", SnippetRepositoriesVerifiedInPercentage);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.StorageShardEntity>("storage_shards", StorageShards);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.StorageShardEntity>("storage_shards", StorageShards);
             writer.WriteStringValue("storage_shards_match", StorageShardsMatch);
             writer.WriteStringValue("supply_chain_attestations_checksum_failed_count", SupplyChainAttestationsChecksumFailedCount);
             writer.WriteStringValue("supply_chain_attestations_checksummed_count", SupplyChainAttestationsChecksummedCount);
