@@ -144,7 +144,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Repository.Branche
             /// <summary>Page number of results to retrieve.</summary>
             [QueryParameter("page")]
             public int? Page { get; set; }
-            /// <summary>Name of the branch to start the pagination from. Used for keyset pagination.</summary>
+            /// <summary>Token for the next page of results, from the `Link` header of the previous response. Do not create or edit this token. Used for keyset pagination.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("page_token")]

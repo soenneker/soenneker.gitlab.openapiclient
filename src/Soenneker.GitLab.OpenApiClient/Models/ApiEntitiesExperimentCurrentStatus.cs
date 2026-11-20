@@ -28,12 +28,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The gates property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFeatureGate? Gates { get => _explicitNullValueGates; set { _explicitNullValueGates = value; AdditionalData?.Remove("gates"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gates"); else _explicitNullProperties?.Remove("gates"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFeatureGate? _explicitNullValueGates = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFeatureGate>? Gates { get => _explicitNullValueGates; set { _explicitNullValueGates = value; AdditionalData?.Remove("gates"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gates"); else _explicitNullProperties?.Remove("gates"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFeatureGate>? _explicitNullValueGates = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFeatureGate Gates { get => _explicitNullValueGates; set { _explicitNullValueGates = value; AdditionalData?.Remove("gates"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gates"); else _explicitNullProperties?.Remove("gates"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFeatureGate _explicitNullValueGates = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFeatureGate> Gates { get => _explicitNullValueGates; set { _explicitNullValueGates = value; AdditionalData?.Remove("gates"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gates"); else _explicitNullProperties?.Remove("gates"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFeatureGate> _explicitNullValueGates = default!;
 #endif
         /// <summary>The state property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -70,7 +70,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "gates", n => { Gates = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFeatureGate>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFeatureGate.CreateFromDiscriminatorValue); } },
+                { "gates", n => { Gates = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFeatureGate>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFeatureGate.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "state", n => { State = n.GetStringValue(); } },
             };
         }
@@ -81,7 +81,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFeatureGate>("gates", Gates);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFeatureGate>("gates", Gates);
             writer.WriteStringValue("state", State);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

@@ -4,6 +4,7 @@ using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Import.Git;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Import.Github;
 using Soenneker.GitLab.OpenApiClient.Models;
 using System.Collections.Generic;
 using System.IO;
@@ -22,6 +23,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Import
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Import.Git.GitRequestBuilder Git
         {
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Import.Git.GitRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The github property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Import.Github.GithubRequestBuilder Github
+        {
+            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Import.Github.GithubRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Import.ImportRequestBuilder"/> and sets the default values.

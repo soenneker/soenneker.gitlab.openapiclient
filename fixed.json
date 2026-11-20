@@ -8806,7 +8806,14 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetApiV4GroupsIdManagePersonalAccessTokens200ResponseSchema"
+                }
+              }
+            }
           },
           "404": {
             "description": "Not Found"
@@ -9084,7 +9091,14 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetApiV4GroupsIdManageResourceAccessTokens200ResponseSchema"
+                }
+              }
+            }
           },
           "404": {
             "description": "Not Found"
@@ -41462,7 +41476,8 @@
             "schema": {
               "type": "integer",
               "nullable": true
-            }
+            },
+            "example": 1
           },
           {
             "name": "page",
@@ -71034,7 +71049,14 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetApiV4GroupsIdPendingMembers200ResponseSchema"
+                }
+              }
+            }
           },
           "404": {
             "description": "Not Found"
@@ -77665,7 +77687,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/JiraConnectSubscriptionEntity"
+                  "$ref": "#/components/schemas/ApiEntitiesJiraForgeSubscriptions"
                 }
               }
             }
@@ -88378,6 +88400,74 @@
         }
       }
     },
+    "/api/v4/projects/{id}/import/github/sync/restore": {
+      "post": {
+        "tags": [
+          "Project import"
+        ],
+        "summary": "Restore GitHub updates with a new personal access token",
+        "description": "Reconnects a project that was imported from GitHub with a personal access token and with continuous sync, after GitHub updates were disconnected because the token was revoked or expired. The new token replaces the stored one. It must be able to read the GitHub repository the project was imported from. If the token cannot manage repository webhooks, GitHub updates are restored without a webhook and the response has a \u0060warning\u0060. Changes are then checked on a schedule. This endpoint shares a rate limit with starting imports. Requires the Maintainer role for the project.",
+        "operationId": "PostApiV4ProjectsIdImportGithubSyncRestore",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID or URL-encoded path of the project.",
+            "required": true,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PostApiV4ProjectsIdImportGithubSyncRestoreRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "409": {
+            "description": "Conflict"
+          },
+          "422": {
+            "description": "Unprocessable entity"
+          },
+          "429": {
+            "description": "Too many requests"
+          },
+          "503": {
+            "description": "Service unavailable"
+          }
+        },
+        "x-gitlab-tier": "premium"
+      }
+    },
     "/api/v4/import/bitbucket_server": {
       "post": {
         "tags": [
@@ -94758,7 +94848,8 @@
               "type": "string",
               "format": "date-time",
               "nullable": true
-            }
+            },
+            "example": "2015-12-24T15:51:21.880Z"
           },
           {
             "name": "limit",
@@ -117141,7 +117232,7 @@
           {
             "name": "page_token",
             "in": "query",
-            "description": "Name of the branch to start the pagination from. Used for keyset pagination.",
+            "description": "Token for the next page of results, from the \u0060Link\u0060 header of the previous response. Do not create or edit this token. Used for keyset pagination.",
             "schema": {
               "type": "string",
               "nullable": true
@@ -117161,6 +117252,9 @@
           },
           "404": {
             "description": "404 Project Not Found"
+          },
+          "422": {
+            "description": "Unprocessable entity"
           },
           "400": {
             "description": "Bad Request"
@@ -126236,6 +126330,80 @@
           }
         }
       },
+      "ApiEntitiesPersonalAccessToken": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64",
+            "example": 2
+          },
+          "name": {
+            "type": "string",
+            "example": "John Doe"
+          },
+          "revoked": {
+            "type": "boolean"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "description": {
+            "type": "string",
+            "example": "Token to manage api"
+          },
+          "scopes": {
+            "type": "array",
+            "items": {
+              "description": "Fallback array item schema"
+            },
+            "example": [
+              "api"
+            ]
+          },
+          "user_id": {
+            "type": "integer",
+            "format": "int64",
+            "example": 3
+          },
+          "last_used_at": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2020-08-31T15:53:00.073Z"
+          },
+          "last_used_ips": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "The five most recent unique IP addresses that have authenticated with this token. When the limit is reached, the oldest IP address is removed. The list updates once per minute per token.",
+            "example": [
+              "127.0.0.1",
+              "127.0.0.2",
+              "127.0.0.3"
+            ]
+          },
+          "granular_scopes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ApiEntitiesGranularScope"
+            },
+            "description": "Granular scopes of the token, each with \u0060access\u0060, \u0060permissions\u0060, \u0060group_id\u0060, and \u0060project_id\u0060. Returned only for tokens created with granular scopes."
+          },
+          "active": {
+            "type": "boolean"
+          },
+          "granular": {
+            "type": "boolean"
+          },
+          "expires_at": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2020-08-31T15:53:00.073Z"
+          }
+        }
+      },
       "ApiEntitiesPersonalAccessTokenWithToken": {
         "type": "object",
         "properties": {
@@ -126311,6 +126479,90 @@
           "token": {
             "type": "string",
             "example": "glpat-\u003Cexample-token\u003E"
+          }
+        }
+      },
+      "ApiEntitiesResourceAccessToken": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64",
+            "example": 2
+          },
+          "name": {
+            "type": "string",
+            "example": "John Doe"
+          },
+          "revoked": {
+            "type": "boolean"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "description": {
+            "type": "string",
+            "example": "Token to manage api"
+          },
+          "scopes": {
+            "type": "array",
+            "items": {
+              "description": "Fallback array item schema"
+            },
+            "example": [
+              "api"
+            ]
+          },
+          "user_id": {
+            "type": "integer",
+            "format": "int64",
+            "example": 3
+          },
+          "last_used_at": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2020-08-31T15:53:00.073Z"
+          },
+          "last_used_ips": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "The five most recent unique IP addresses that have authenticated with this token. When the limit is reached, the oldest IP address is removed. The list updates once per minute per token.",
+            "example": [
+              "127.0.0.1",
+              "127.0.0.2",
+              "127.0.0.3"
+            ]
+          },
+          "granular_scopes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ApiEntitiesGranularScope"
+            },
+            "description": "Granular scopes of the token, each with \u0060access\u0060, \u0060permissions\u0060, \u0060group_id\u0060, and \u0060project_id\u0060. Returned only for tokens created with granular scopes."
+          },
+          "active": {
+            "type": "boolean"
+          },
+          "granular": {
+            "type": "boolean"
+          },
+          "expires_at": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2020-08-31T15:53:00.073Z"
+          },
+          "access_level": {
+            "$ref": "#/components/schemas/ApiEntitiesResourceAccessTokenAccessLevel"
+          },
+          "resource_type": {
+            "$ref": "#/components/schemas/ApiEntitiesResourceAccessTokenResourceType"
+          },
+          "resource_id": {
+            "type": "integer",
+            "example": 1234
           }
         }
       },
@@ -131625,7 +131877,10 @@
             "example": "on"
           },
           "gates": {
-            "$ref": "#/components/schemas/ApiEntitiesFeatureGate"
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ApiEntitiesFeatureGate"
+            }
           }
         }
       },
@@ -136471,6 +136726,9 @@
           "mirror_available": {
             "type": "string"
           },
+          "ml_experiment_tracking_run_retention_days": {
+            "type": "string"
+          },
           "notify_on_unknown_sign_in": {
             "type": "string"
           },
@@ -137326,6 +137584,9 @@
           "work_item_update_limit": {
             "type": "string"
           },
+          "track_namespace_visits_limit": {
+            "type": "string"
+          },
           "github_gists_import_limit": {
             "type": "string"
           },
@@ -137929,6 +138190,21 @@
           "issues_analytics_limit": {
             "type": "string"
           },
+          "dast_configuration_show_limit": {
+            "type": "string"
+          },
+          "scanned_resources_artifacts_count_limit": {
+            "type": "string"
+          },
+          "scanned_resources_artifacts_size_limit_megabytes": {
+            "type": "string"
+          },
+          "scanned_resources_csv_download_limit": {
+            "type": "string"
+          },
+          "scanned_resources_pipelines_query_limit": {
+            "type": "string"
+          },
           "merge_train_removal_limit_per_user": {
             "type": "string"
           },
@@ -137984,6 +138260,18 @@
             "type": "string"
           },
           "user_add_on_assignment_bulk_create_limit": {
+            "type": "string"
+          },
+          "billed_users_scan_per_minute_limit": {
+            "type": "string"
+          },
+          "billed_users_scan_per_hour_limit": {
+            "type": "string"
+          },
+          "billed_users_scan_per_day_limit": {
+            "type": "string"
+          },
+          "seat_usage_export_limit": {
             "type": "string"
           },
           "duo_workflow_oauth_application_id": {
@@ -138428,80 +138716,6 @@
           "action": {
             "type": "string",
             "example": "add"
-          }
-        }
-      },
-      "ApiEntitiesPersonalAccessToken": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int64",
-            "example": 2
-          },
-          "name": {
-            "type": "string",
-            "example": "John Doe"
-          },
-          "revoked": {
-            "type": "boolean"
-          },
-          "created_at": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "description": {
-            "type": "string",
-            "example": "Token to manage api"
-          },
-          "scopes": {
-            "type": "array",
-            "items": {
-              "description": "Fallback array item schema"
-            },
-            "example": [
-              "api"
-            ]
-          },
-          "user_id": {
-            "type": "integer",
-            "format": "int64",
-            "example": 3
-          },
-          "last_used_at": {
-            "type": "string",
-            "format": "date-time",
-            "example": "2020-08-31T15:53:00.073Z"
-          },
-          "last_used_ips": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "description": "The five most recent unique IP addresses that have authenticated with this token. When the limit is reached, the oldest IP address is removed. The list updates once per minute per token.",
-            "example": [
-              "127.0.0.1",
-              "127.0.0.2",
-              "127.0.0.3"
-            ]
-          },
-          "granular_scopes": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ApiEntitiesGranularScope"
-            },
-            "description": "Granular scopes of the token, each with \u0060access\u0060, \u0060permissions\u0060, \u0060group_id\u0060, and \u0060project_id\u0060. Returned only for tokens created with granular scopes."
-          },
-          "active": {
-            "type": "boolean"
-          },
-          "granular": {
-            "type": "boolean"
-          },
-          "expires_at": {
-            "type": "string",
-            "format": "date-time",
-            "example": "2020-08-31T15:53:00.073Z"
           }
         }
       },
@@ -139901,90 +140115,6 @@
           "token": {
             "type": "string",
             "example": "glpat-\u003Cexample-token\u003E"
-          }
-        }
-      },
-      "ApiEntitiesResourceAccessToken": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int64",
-            "example": 2
-          },
-          "name": {
-            "type": "string",
-            "example": "John Doe"
-          },
-          "revoked": {
-            "type": "boolean"
-          },
-          "created_at": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "description": {
-            "type": "string",
-            "example": "Token to manage api"
-          },
-          "scopes": {
-            "type": "array",
-            "items": {
-              "description": "Fallback array item schema"
-            },
-            "example": [
-              "api"
-            ]
-          },
-          "user_id": {
-            "type": "integer",
-            "format": "int64",
-            "example": 3
-          },
-          "last_used_at": {
-            "type": "string",
-            "format": "date-time",
-            "example": "2020-08-31T15:53:00.073Z"
-          },
-          "last_used_ips": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "description": "The five most recent unique IP addresses that have authenticated with this token. When the limit is reached, the oldest IP address is removed. The list updates once per minute per token.",
-            "example": [
-              "127.0.0.1",
-              "127.0.0.2",
-              "127.0.0.3"
-            ]
-          },
-          "granular_scopes": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ApiEntitiesGranularScope"
-            },
-            "description": "Granular scopes of the token, each with \u0060access\u0060, \u0060permissions\u0060, \u0060group_id\u0060, and \u0060project_id\u0060. Returned only for tokens created with granular scopes."
-          },
-          "active": {
-            "type": "boolean"
-          },
-          "granular": {
-            "type": "boolean"
-          },
-          "expires_at": {
-            "type": "string",
-            "format": "date-time",
-            "example": "2020-08-31T15:53:00.073Z"
-          },
-          "access_level": {
-            "$ref": "#/components/schemas/ApiEntitiesResourceAccessTokenAccessLevel"
-          },
-          "resource_type": {
-            "$ref": "#/components/schemas/ApiEntitiesResourceAccessTokenResourceType"
-          },
-          "resource_id": {
-            "type": "integer",
-            "example": 1234
           }
         }
       },
@@ -147142,6 +147272,35 @@
           }
         }
       },
+      "ApiEntitiesPendingMember": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "name": {
+            "type": "string"
+          },
+          "username": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "web_url": {
+            "type": "string"
+          },
+          "invited": {
+            "type": "boolean"
+          },
+          "avatar_url": {
+            "type": "string"
+          },
+          "approved": {
+            "type": "boolean"
+          }
+        }
+      },
       "ApiEntitiesBillableMembership": {
         "type": "object",
         "properties": {
@@ -147692,6 +147851,17 @@
           },
           "group": {
             "$ref": "#/components/schemas/JiraConnectGroupEntity"
+          }
+        }
+      },
+      "ApiEntitiesJiraForgeSubscriptions": {
+        "type": "object",
+        "properties": {
+          "subscriptions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/JiraConnectSubscriptionEntity"
+            }
           }
         }
       },
@@ -150297,7 +150467,10 @@
             "$ref": "#/components/schemas/TestReportSummaryEntityTotalProperty"
           },
           "test_suites": {
-            "$ref": "#/components/schemas/TestSuiteSummaryEntity"
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TestSuiteSummaryEntity"
+            }
           }
         }
       },
@@ -157429,6 +157602,9 @@
           },
           "tags": {
             "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PostApiV4ProjectsIdMlMlflowApi20MlflowRegisteredModelsCreateRequestTagsItem"
+            },
             "description": "Additional metadata for the registered model.",
             "nullable": true
           }
@@ -157483,6 +157659,9 @@
           },
           "tags": {
             "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PostApiV4ProjectsIdMlMlflowApi20MlflowRunsCreateRequestTagsItem"
+            },
             "description": "Tags to store with the run. Tags are stored but not displayed.",
             "nullable": true
           },
@@ -157695,6 +157874,9 @@
           },
           "tags": {
             "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PostApiV4ProjectsIdMlMlflowApi20MlflowModelVersionsCreateRequestTagsItem"
+            },
             "description": "Additional metadata for a model version.",
             "nullable": true
           },
@@ -157757,6 +157939,9 @@
           },
           "tags": {
             "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PostApiV4ProjectsIdMlMlflowApi20MlflowExperimentsCreateRequestTagsItem"
+            },
             "description": "Tags containing metadata about the experiment.",
             "nullable": true
           },
@@ -160275,6 +160460,11 @@
             "description": "If \u0060true\u0060, project Maintainers can configure repository mirroring. If \u0060false\u0060, only administrators can configure repository mirroring.",
             "nullable": true
           },
+          "ml_experiment_tracking_run_retention_days": {
+            "type": "integer",
+            "description": "Number of days to keep model experiment runs that no model version uses, and experiments that have no runs left. Deletion starts no earlier than one period after retention is turned on. \u00600\u0060 keeps all runs and experiments. Maximum: \u006036500\u0060. Default: \u00600\u0060. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/270962) in GitLab 19.7.",
+            "nullable": true
+          },
           "notify_on_unknown_sign_in": {
             "type": "string",
             "description": "If \u0060true\u0060, sends a notification when a sign-in from an unknown IP address occurs.",
@@ -160914,6 +161104,31 @@
             "description": "Maximum number of Insights chart queries per minute for each user or IP address, for each group or project. Default: \u00600\u0060, which disables the rate limit. GitLab.com uses \u006060\u0060.",
             "nullable": true
           },
+          "dast_configuration_show_limit": {
+            "type": "integer",
+            "description": "Maximum number of DAST configuration page views per minute for each user. Default: \u00600\u0060, which disables the rate limit.",
+            "nullable": true
+          },
+          "scanned_resources_artifacts_count_limit": {
+            "type": "integer",
+            "description": "Maximum number of DAST and API fuzzing artifacts parsed for the scanned resources CSV and GraphQL fields of a pipeline. Default: \u00600\u0060, which disables the limit.",
+            "nullable": true
+          },
+          "scanned_resources_artifacts_size_limit_megabytes": {
+            "type": "integer",
+            "description": "Maximum total size, in megabytes, of DAST and API fuzzing artifacts parsed for the scanned resources CSV and GraphQL fields of a pipeline. Default: \u00600\u0060, which disables the limit.",
+            "nullable": true
+          },
+          "scanned_resources_csv_download_limit": {
+            "type": "integer",
+            "description": "Maximum number of scanned resources CSV downloads per minute for each user. Default: \u00600\u0060, which disables the rate limit.",
+            "nullable": true
+          },
+          "scanned_resources_pipelines_query_limit": {
+            "type": "integer",
+            "description": "Maximum number of pipelines per minute for each user whose \u0060scannedResources\u0060 or \u0060scannedResourcesCount\u0060 GraphQL fields are requested. Default: \u00600\u0060, which disables the rate limit.",
+            "nullable": true
+          },
           "issues_analytics_limit": {
             "type": "integer",
             "description": "Maximum number of issue analytics chart requests a user can make every minute in a group or project. For unauthenticated requests, the limit applies to each IP address. Default: \u006060\u0060. Set to \u00600\u0060 to disable the rate limit.",
@@ -161012,6 +161227,26 @@
           "user_add_on_assignment_bulk_create_limit": {
             "type": "integer",
             "description": "Maximum number of \u0060userAddOnAssignmentBulkCreate\u0060 GraphQL mutation calls per minute per user. Default: \u00600\u0060. Set to \u00600\u0060 to disable the rate limit.",
+            "nullable": true
+          },
+          "billed_users_scan_per_minute_limit": {
+            "type": "integer",
+            "description": "Maximum number of requests that calculate billable users per minute per user per top-level group. Default: \u0060500\u0060. Set to \u00600\u0060 to disable the rate limit.",
+            "nullable": true
+          },
+          "billed_users_scan_per_hour_limit": {
+            "type": "integer",
+            "description": "Maximum number of requests that calculate billable users per hour per user per top-level group. Default: \u00602500\u0060. Set to \u00600\u0060 to disable the rate limit.",
+            "nullable": true
+          },
+          "billed_users_scan_per_day_limit": {
+            "type": "integer",
+            "description": "Maximum number of requests that calculate billable users per day per user per top-level group. Default: \u006020000\u0060. Set to \u00600\u0060 to disable the rate limit.",
+            "nullable": true
+          },
+          "seat_usage_export_limit": {
+            "type": "integer",
+            "description": "Maximum number of seat usage CSV exports per hour per user per top-level group. Default: \u006010\u0060. Set to \u00600\u0060 to disable the rate limit.",
             "nullable": true
           },
           "group_owners_can_manage_default_branch_protection": {
@@ -161867,6 +162102,10 @@
             "nullable": true
           },
           "work_item_update_limit": {
+            "type": "string",
+            "nullable": true
+          },
+          "track_namespace_visits_limit": {
             "type": "string",
             "nullable": true
           },
@@ -164440,7 +164679,8 @@
           "organization_id": {
             "type": "integer",
             "description": "The organization id for the topic. This parameter is experimental and might be changed or removed without notice.",
-            "nullable": true
+            "nullable": true,
+            "example": 1
           }
         }
       },
@@ -178684,6 +178924,19 @@
           }
         }
       },
+      "PostApiV4ProjectsIdImportGithubSyncRestoreRequest": {
+        "required": [
+          "personal_access_token"
+        ],
+        "type": "object",
+        "properties": {
+          "personal_access_token": {
+            "minLength": 1,
+            "type": "string",
+            "description": "New GitHub personal access token."
+          }
+        }
+      },
       "PostApiV4ImportBitbucketServerRequest": {
         "required": [
           "bitbucket_server_url",
@@ -182656,13 +182909,15 @@
             "type": "string",
             "description": "Starting time, in UTC. When creating a message, defaults to the current time.",
             "format": "date-time",
-            "nullable": true
+            "nullable": true,
+            "example": "2015-12-24T15:51:21.880Z"
           },
           "ends_at": {
             "type": "string",
             "description": "Ending time, in UTC. When creating a message, defaults to one hour after the current time.",
             "format": "date-time",
-            "nullable": true
+            "nullable": true,
+            "example": "2015-12-24T16:51:21.880Z"
           },
           "color": {
             "type": "string",
@@ -184856,6 +185111,42 @@
           }
         }
       },
+      "PostApiV4ProjectsIdMlMlflowApi20MlflowRegisteredModelsCreateRequestTagsItem": {
+        "required": [
+          "key"
+        ],
+        "type": "object",
+        "properties": {
+          "key": {
+            "type": "string",
+            "description": "Name of the tag.",
+            "nullable": true
+          },
+          "value": {
+            "type": "string",
+            "description": "Value of the tag.",
+            "nullable": true
+          }
+        }
+      },
+      "PostApiV4ProjectsIdMlMlflowApi20MlflowRunsCreateRequestTagsItem": {
+        "required": [
+          "key"
+        ],
+        "type": "object",
+        "properties": {
+          "key": {
+            "type": "string",
+            "description": "Name of the tag.",
+            "nullable": true
+          },
+          "value": {
+            "type": "string",
+            "description": "Value of the tag.",
+            "nullable": true
+          }
+        }
+      },
       "PostApiV4ProjectsIdMlMlflowApi20MlflowRunsLogBatchRequestMetricsItem": {
         "required": [
           "key",
@@ -184909,6 +185200,42 @@
         "required": [
           "key",
           "value"
+        ],
+        "type": "object",
+        "properties": {
+          "key": {
+            "type": "string",
+            "description": "Name of the tag.",
+            "nullable": true
+          },
+          "value": {
+            "type": "string",
+            "description": "Value of the tag.",
+            "nullable": true
+          }
+        }
+      },
+      "PostApiV4ProjectsIdMlMlflowApi20MlflowModelVersionsCreateRequestTagsItem": {
+        "required": [
+          "key"
+        ],
+        "type": "object",
+        "properties": {
+          "key": {
+            "type": "string",
+            "description": "Name of the tag.",
+            "nullable": true
+          },
+          "value": {
+            "type": "string",
+            "description": "Value of the tag.",
+            "nullable": true
+          }
+        }
+      },
+      "PostApiV4ProjectsIdMlMlflowApi20MlflowExperimentsCreateRequestTagsItem": {
+        "required": [
+          "key"
         ],
         "type": "object",
         "properties": {
@@ -190294,6 +190621,18 @@
           "$ref": "#/components/schemas/ApiEntitiesManagedLicense"
         }
       },
+      "GetApiV4GroupsIdManagePersonalAccessTokens200ResponseSchema": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ApiEntitiesPersonalAccessToken"
+        }
+      },
+      "GetApiV4GroupsIdManageResourceAccessTokens200ResponseSchema": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ApiEntitiesResourceAccessToken"
+        }
+      },
       "GetApiV4GroupsIdManageSshKeys200ResponseSchema": {
         "type": "array",
         "items": {
@@ -191509,6 +191848,12 @@
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/ApiEntitiesMember"
+        }
+      },
+      "GetApiV4GroupsIdPendingMembers200ResponseSchema": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ApiEntitiesPendingMember"
         }
       },
       "GetApiV4GroupsIdBillableMembers200ResponseSchema": {
@@ -193059,6 +193404,39 @@
           ]
         }
       },
+      "ApiEntitiesResourceAccessTokenAccessLevel": {
+        "enum": [
+          10,
+          20,
+          30,
+          40,
+          50
+        ],
+        "type": "integer",
+        "example": 40
+      },
+      "ApiEntitiesResourceAccessTokenResourceType": {
+        "enum": [
+          "project",
+          "group"
+        ],
+        "type": "string",
+        "example": "project",
+        "x-ms-enum": {
+          "name": "ApiEntitiesResourceAccessTokenResourceType",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "project",
+              "name": "Project"
+            },
+            {
+              "value": "group",
+              "name": "Group"
+            }
+          ]
+        }
+      },
       "ApiEntitiesMemberRoleBaseAccessLevel": {
         "enum": [
           5,
@@ -193504,39 +193882,6 @@
         "example": "project",
         "x-ms-enum": {
           "name": "ApiEntitiesResourceAccessTokenWithTokenResourceType",
-          "modelAsString": false,
-          "values": [
-            {
-              "value": "project",
-              "name": "Project"
-            },
-            {
-              "value": "group",
-              "name": "Group"
-            }
-          ]
-        }
-      },
-      "ApiEntitiesResourceAccessTokenAccessLevel": {
-        "enum": [
-          10,
-          20,
-          30,
-          40,
-          50
-        ],
-        "type": "integer",
-        "example": 40
-      },
-      "ApiEntitiesResourceAccessTokenResourceType": {
-        "enum": [
-          "project",
-          "group"
-        ],
-        "type": "string",
-        "example": "project",
-        "x-ms-enum": {
-          "name": "ApiEntitiesResourceAccessTokenResourceType",
           "modelAsString": false,
           "values": [
             {
@@ -220728,7 +221073,7 @@
     },
     {
       "name": "Epics",
-      "description": "\u003E [!warning]\n\u003E The Epics REST API was [deprecated](https://gitlab.com/gitlab-org/gitlab/-/issues/460668) in GitLab 17.0\n\u003E and is planned for removal in v5 of the API. From GitLab 17.4 to 18.0, if\n\u003E [the new look for epics](https://docs.gitlab.com/user/group/epics/#epics-as-work-items) is enabled,\n\u003E or in GitLab 18.1 and later, use the Work Items API instead. For more information, see\n\u003E [migrate epic APIs to work items](https://docs.gitlab.com/api/graphql/epic_work_items_api_migration_guide/).\n\u003E This change is a breaking change.\n\nUse this API to manage [epics](https://docs.gitlab.com/user/group/epics/), the issues assigned to\nthem, their child and [related epics](https://docs.gitlab.com/user/group/epics/linked_epics/), and\n[group epic boards](https://docs.gitlab.com/user/group/epics/epic_boards/).\n\nEvery call to this API must be authenticated. If a user is not a member of a private group, a \u0060GET\u0060\nrequest on that group results in a \u0060404\u0060 status code.\n\nEpics are available only in GitLab [Premium and Ultimate](https://about.gitlab.com/pricing/). If the\nEpics or Related Epics feature is not available, a \u0060403\u0060 status code is returned.\n\nThe legacy epic ID is not the same as the work item ID. Only the \u0060iid\u0060 matches. Epic responses include\n\u0060work_item_id\u0060, the ID of the corresponding work item. In the Work Items GraphQL API, a \u0060work_item_id\u0060\nof \u0060123\u0060 is the Global ID \u0060gid://gitlab/WorkItem/123\u0060.\n\nIn epic responses, \u0060end_date\u0060 is deprecated in favor of \u0060due_date\u0060, \u0060start_date_from_milestones\u0060 in\nfavor of \u0060start_date_from_inherited_source\u0060, and \u0060due_date_from_milestones\u0060 in favor of\n\u0060due_date_from_inherited_source\u0060.",
+      "description": "\u003E [!warning]\n\u003E The Epics REST API was [deprecated](https://gitlab.com/gitlab-org/gitlab/-/issues/460668) in GitLab 17.0\n\u003E and is planned for removal in v5 of the API. From GitLab 17.4 to 18.0, if\n\u003E [the new look for epics](https://docs.gitlab.com/user/group/epics/#epics-as-work-items) is enabled,\n\u003E or in GitLab 18.1 and later, use the Work Items API instead. For more information, see\n\u003E [migrate epic APIs to work items](https://docs.gitlab.com/api/graphql/epic_work_items_api_migration_guide/).\n\u003E This change is a breaking change.\n\nUse this API to manage [epics](https://docs.gitlab.com/user/group/epics/), the issues assigned to\nthem, their child and [related epics](https://docs.gitlab.com/user/work_items/linked_items/), and\n[group epic boards](https://docs.gitlab.com/user/group/epics/epic_boards/).\n\nEvery call to this API must be authenticated. If a user is not a member of a private group, a \u0060GET\u0060\nrequest on that group results in a \u0060404\u0060 status code.\n\nEpics are available only in GitLab [Premium and Ultimate](https://about.gitlab.com/pricing/). If the\nEpics or Related Epics feature is not available, a \u0060403\u0060 status code is returned.\n\nThe legacy epic ID is not the same as the work item ID. Only the \u0060iid\u0060 matches. Epic responses include\n\u0060work_item_id\u0060, the ID of the corresponding work item. In the Work Items GraphQL API, a \u0060work_item_id\u0060\nof \u0060123\u0060 is the Global ID \u0060gid://gitlab/WorkItem/123\u0060.\n\nIn epic responses, \u0060end_date\u0060 is deprecated in favor of \u0060due_date\u0060, \u0060start_date_from_milestones\u0060 in\nfavor of \u0060start_date_from_inherited_source\u0060, and \u0060due_date_from_milestones\u0060 in favor of\n\u0060due_date_from_inherited_source\u0060.",
       "externalDocs": {
         "url": "https://docs.gitlab.com/api/group_epic_boards/"
       },
@@ -220912,7 +221257,7 @@
     },
     {
       "name": "Issues",
-      "description": "Use this API to manage [issues](https://docs.gitlab.com/user/project/issues/), their\n[links to related issues](https://docs.gitlab.com/user/project/issues/related_issues/), and issue\nstatistics. You can:\n\n- Create, update, and delete issues.\n- Manage issue metadata, like assignees, labels, milestones, and time tracking.\n- Cross-reference issues and merge requests.\n- Track issue movement and promotion between projects and epics.\n- Retrieve statistics about issues.\n\nIf a user is not a member of a private project, a \u0060GET\u0060 request on that project results in a \u0060404\u0060\nstatus code.\n\nTo help avoid abuse, administrators can limit the number of requests each user can make each minute\nto create an issue.\n\n\u003E [!note]\n\u003E The \u0060references.relative\u0060 attribute is relative to the group or project of the issue being requested.\n\u003E When an issue is fetched from its project, the \u0060relative\u0060 format is the same as the \u0060short\u0060 format.\n\u003E When requested across groups or projects, it\u0027s expected to be the same as the \u0060full\u0060 format.",
+      "description": "Use this API to manage [issues](https://docs.gitlab.com/user/project/issues/), their\n[links to related issues](https://docs.gitlab.com/user/work_items/linked_items/), and issue\nstatistics. You can:\n\n- Create, update, and delete issues.\n- Manage issue metadata, like assignees, labels, milestones, and time tracking.\n- Cross-reference issues and merge requests.\n- Track issue movement and promotion between projects and epics.\n- Retrieve statistics about issues.\n\nIf a user is not a member of a private project, a \u0060GET\u0060 request on that project results in a \u0060404\u0060\nstatus code.\n\nTo help avoid abuse, administrators can limit the number of requests each user can make each minute\nto create an issue.\n\n\u003E [!note]\n\u003E The \u0060references.relative\u0060 attribute is relative to the group or project of the issue being requested.\n\u003E When an issue is fetched from its project, the \u0060relative\u0060 format is the same as the \u0060short\u0060 format.\n\u003E When requested across groups or projects, it\u0027s expected to be the same as the \u0060full\u0060 format.",
       "externalDocs": {
         "url": "https://docs.gitlab.com/api/issues/"
       },
@@ -222591,6 +222936,18 @@
         "$ref": "#/components/schemas/ApiEntitiesManagedLicense"
       }
     },
+    "GetApiV4GroupsIdManagePersonalAccessTokens200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesPersonalAccessToken"
+      }
+    },
+    "GetApiV4GroupsIdManageResourceAccessTokens200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesResourceAccessToken"
+      }
+    },
     "GetApiV4GroupsIdManageSshKeys200Response": {
       "type": "array",
       "items": {
@@ -223814,6 +224171,12 @@
       "type": "array",
       "items": {
         "$ref": "#/components/schemas/ApiEntitiesMember"
+      }
+    },
+    "GetApiV4GroupsIdPendingMembers200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesPendingMember"
       }
     },
     "GetApiV4GroupsIdBillableMembers200Response": {

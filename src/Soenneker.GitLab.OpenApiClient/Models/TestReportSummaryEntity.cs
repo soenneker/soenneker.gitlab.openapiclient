@@ -28,12 +28,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The test_suites property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.TestSuiteSummaryEntity? TestSuites { get => _explicitNullValueTestSuites; set { _explicitNullValueTestSuites = value; AdditionalData?.Remove("test_suites"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("test_suites"); else _explicitNullProperties?.Remove("test_suites"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.TestSuiteSummaryEntity? _explicitNullValueTestSuites = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.TestSuiteSummaryEntity>? TestSuites { get => _explicitNullValueTestSuites; set { _explicitNullValueTestSuites = value; AdditionalData?.Remove("test_suites"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("test_suites"); else _explicitNullProperties?.Remove("test_suites"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.TestSuiteSummaryEntity>? _explicitNullValueTestSuites = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.TestSuiteSummaryEntity TestSuites { get => _explicitNullValueTestSuites; set { _explicitNullValueTestSuites = value; AdditionalData?.Remove("test_suites"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("test_suites"); else _explicitNullProperties?.Remove("test_suites"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.TestSuiteSummaryEntity _explicitNullValueTestSuites = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.TestSuiteSummaryEntity> TestSuites { get => _explicitNullValueTestSuites; set { _explicitNullValueTestSuites = value; AdditionalData?.Remove("test_suites"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("test_suites"); else _explicitNullProperties?.Remove("test_suites"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.TestSuiteSummaryEntity> _explicitNullValueTestSuites = default!;
 #endif
         /// <summary>The total property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -70,7 +70,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "test_suites", n => { TestSuites = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.TestSuiteSummaryEntity>(global::Soenneker.GitLab.OpenApiClient.Models.TestSuiteSummaryEntity.CreateFromDiscriminatorValue); } },
+                { "test_suites", n => { TestSuites = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.TestSuiteSummaryEntity>(global::Soenneker.GitLab.OpenApiClient.Models.TestSuiteSummaryEntity.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "total", n => { Total = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.TestReportSummaryEntityTotalProperty>(global::Soenneker.GitLab.OpenApiClient.Models.TestReportSummaryEntityTotalProperty.CreateFromDiscriminatorValue); } },
             };
         }
@@ -81,7 +81,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.TestSuiteSummaryEntity>("test_suites", TestSuites);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.TestSuiteSummaryEntity>("test_suites", TestSuites);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.TestReportSummaryEntityTotalProperty>("total", Total);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
