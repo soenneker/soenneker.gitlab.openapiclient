@@ -29,6 +29,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             else if (parseNode.GetChildNode("project_id") is { } nullNodeProjectId && nullNodeProjectId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProjectId = null;
             if (parseNode.GetChildNode("root_namespace_id") is null) { _explicitNullValueRootNamespaceId = default!; _explicitNullProperties?.Remove("root_namespace_id"); }
             else if (parseNode.GetChildNode("root_namespace_id") is { } nullNodeRootNamespaceId && nullNodeRootNamespaceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RootNamespaceId = null;
+            if (parseNode.GetChildNode("user_selected_effort") is null) { _explicitNullValueUserSelectedEffort = default!; _explicitNullProperties?.Remove("user_selected_effort"); }
+            else if (parseNode.GetChildNode("user_selected_effort") is { } nullNodeUserSelectedEffort && nullNodeUserSelectedEffort.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserSelectedEffort = null;
             if (parseNode.GetChildNode("user_selected_model_identifier") is null) { _explicitNullValueUserSelectedModelIdentifier = default!; _explicitNullProperties?.Remove("user_selected_model_identifier"); }
             else if (parseNode.GetChildNode("user_selected_model_identifier") is { } nullNodeUserSelectedModelIdentifier && nullNodeUserSelectedModelIdentifier.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserSelectedModelIdentifier = null;
         }
@@ -81,6 +83,16 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string RootNamespaceId { get => _explicitNullValueRootNamespaceId; set { _explicitNullValueRootNamespaceId = value; AdditionalData?.Remove("root_namespace_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("root_namespace_id"); else _explicitNullProperties?.Remove("root_namespace_id"); } }
         private string _explicitNullValueRootNamespaceId = default!;
 #endif
+        /// <summary>Reasoning effort level the user selected for this session</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? UserSelectedEffort { get => _explicitNullValueUserSelectedEffort; set { _explicitNullValueUserSelectedEffort = value; AdditionalData?.Remove("user_selected_effort"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_selected_effort"); else _explicitNullProperties?.Remove("user_selected_effort"); } }
+        private string? _explicitNullValueUserSelectedEffort = default!;
+#nullable restore
+#else
+        public string UserSelectedEffort { get => _explicitNullValueUserSelectedEffort; set { _explicitNullValueUserSelectedEffort = value; AdditionalData?.Remove("user_selected_effort"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_selected_effort"); else _explicitNullProperties?.Remove("user_selected_effort"); } }
+        private string _explicitNullValueUserSelectedEffort = default!;
+#endif
         /// <summary>Identifier of the model the user selected for this session</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -114,7 +126,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(7)
+            return new Dictionary<string, Action<IParseNode>>(8)
             {
                 { "ai_catalog_item_version_id", n => { AiCatalogItemVersionId = n.GetIntValue(); } },
                 { "client_type", n => { ClientType = n.GetStringValue(); } },
@@ -122,6 +134,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "namespace_id", n => { NamespaceId = n.GetStringValue(); } },
                 { "project_id", n => { ProjectId = n.GetStringValue(); } },
                 { "root_namespace_id", n => { RootNamespaceId = n.GetStringValue(); } },
+                { "user_selected_effort", n => { UserSelectedEffort = n.GetStringValue(); } },
                 { "user_selected_model_identifier", n => { UserSelectedModelIdentifier = n.GetStringValue(); } },
             };
         }
@@ -138,6 +151,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("namespace_id", NamespaceId);
             writer.WriteStringValue("project_id", ProjectId);
             writer.WriteStringValue("root_namespace_id", RootNamespaceId);
+            writer.WriteStringValue("user_selected_effort", UserSelectedEffort);
             writer.WriteStringValue("user_selected_model_identifier", UserSelectedModelIdentifier);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

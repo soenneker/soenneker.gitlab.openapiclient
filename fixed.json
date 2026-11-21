@@ -137395,6 +137395,9 @@
           "bulk_import_max_download_file_size": {
             "type": "string"
           },
+          "max_import_record_size": {
+            "type": "string"
+          },
           "silent_admin_exports_enabled": {
             "type": "string"
           },
@@ -153479,6 +153482,13 @@
             "nullable": true,
             "example": "claude_sonnet_4_5"
           },
+          "user_selected_effort": {
+            "maxLength": 255,
+            "type": "string",
+            "description": "Reasoning effort level the user selected for this session",
+            "nullable": true,
+            "example": "high"
+          },
           "detached": {
             "type": "boolean",
             "description": "When true, asks Workhorse to answer once the run has started and keep it going after the request ends.",
@@ -159242,6 +159252,11 @@
           "max_import_size": {
             "type": "integer",
             "description": "Maximum import size in MB",
+            "nullable": true
+          },
+          "max_import_record_size": {
+            "type": "integer",
+            "description": "Maximum size in MiB of a single record in an import file. Set to \u00600\u0060 for unlimited. Default is \u006050\u0060. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/work_items/631025) in GitLab 19.7.",
             "nullable": true
           },
           "max_import_remote_file_size": {

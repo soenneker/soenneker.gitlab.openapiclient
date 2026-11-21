@@ -851,6 +851,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             else if (parseNode.GetChildNode("max_http_response_size_limit") is { } nullNodeMaxHttpResponseSizeLimit && nullNodeMaxHttpResponseSizeLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxHttpResponseSizeLimit = null;
             if (parseNode.GetChildNode("max_http_response_xml_structural_chars") is null) { _explicitNullValueMaxHttpResponseXmlStructuralChars = default!; _explicitNullProperties?.Remove("max_http_response_xml_structural_chars"); }
             else if (parseNode.GetChildNode("max_http_response_xml_structural_chars") is { } nullNodeMaxHttpResponseXmlStructuralChars && nullNodeMaxHttpResponseXmlStructuralChars.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxHttpResponseXmlStructuralChars = null;
+            if (parseNode.GetChildNode("max_import_record_size") is null) { _explicitNullValueMaxImportRecordSize = default!; _explicitNullProperties?.Remove("max_import_record_size"); }
+            else if (parseNode.GetChildNode("max_import_record_size") is { } nullNodeMaxImportRecordSize && nullNodeMaxImportRecordSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxImportRecordSize = null;
             if (parseNode.GetChildNode("max_import_remote_file_size") is null) { _explicitNullValueMaxImportRemoteFileSize = default!; _explicitNullProperties?.Remove("max_import_remote_file_size"); }
             else if (parseNode.GetChildNode("max_import_remote_file_size") is { } nullNodeMaxImportRemoteFileSize && nullNodeMaxImportRemoteFileSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxImportRemoteFileSize = null;
             if (parseNode.GetChildNode("max_import_size") is null) { _explicitNullValueMaxImportSize = default!; _explicitNullProperties?.Remove("max_import_size"); }
@@ -4678,6 +4680,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string MaxHttpResponseXmlStructuralChars { get => _explicitNullValueMaxHttpResponseXmlStructuralChars; set { _explicitNullValueMaxHttpResponseXmlStructuralChars = value; AdditionalData?.Remove("max_http_response_xml_structural_chars"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("max_http_response_xml_structural_chars"); else _explicitNullProperties?.Remove("max_http_response_xml_structural_chars"); } }
         private string _explicitNullValueMaxHttpResponseXmlStructuralChars = default!;
 #endif
+        /// <summary>Maximum size in MiB of a single record in an import file. Set to `0` for unlimited. Default is `50`. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/work_items/631025) in GitLab 19.7.</summary>
+        public int? MaxImportRecordSize { get => _explicitNullValueMaxImportRecordSize; set { _explicitNullValueMaxImportRecordSize = value; AdditionalData?.Remove("max_import_record_size"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("max_import_record_size"); else _explicitNullProperties?.Remove("max_import_record_size"); } }
+        private int? _explicitNullValueMaxImportRecordSize = default!;
         /// <summary>Maximum remote file size in MB for imports from external object storages</summary>
         public int? MaxImportRemoteFileSize { get => _explicitNullValueMaxImportRemoteFileSize; set { _explicitNullValueMaxImportRemoteFileSize = value; AdditionalData?.Remove("max_import_remote_file_size"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("max_import_remote_file_size"); else _explicitNullProperties?.Remove("max_import_remote_file_size"); } }
         private int? _explicitNullValueMaxImportRemoteFileSize = default!;
@@ -7649,7 +7654,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(786)
+            return new Dictionary<string, Action<IParseNode>>(787)
             {
                 { "abuse_notification_email", n => { AbuseNotificationEmail = n.GetStringValue(); } },
                 { "active_context_pause_indexing", n => { ActiveContextPauseIndexing = n.GetBoolValue(); } },
@@ -8068,6 +8073,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "max_http_response_json_structural_chars", n => { MaxHttpResponseJsonStructuralChars = n.GetStringValue(); } },
                 { "max_http_response_size_limit", n => { MaxHttpResponseSizeLimit = n.GetStringValue(); } },
                 { "max_http_response_xml_structural_chars", n => { MaxHttpResponseXmlStructuralChars = n.GetStringValue(); } },
+                { "max_import_record_size", n => { MaxImportRecordSize = n.GetIntValue(); } },
                 { "max_import_remote_file_size", n => { MaxImportRemoteFileSize = n.GetIntValue(); } },
                 { "max_import_size", n => { MaxImportSize = n.GetIntValue(); } },
                 { "max_login_attempts", n => { MaxLoginAttempts = n.GetStringValue(); } },
@@ -8863,6 +8869,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("max_http_response_json_structural_chars", MaxHttpResponseJsonStructuralChars);
             writer.WriteStringValue("max_http_response_size_limit", MaxHttpResponseSizeLimit);
             writer.WriteStringValue("max_http_response_xml_structural_chars", MaxHttpResponseXmlStructuralChars);
+            writer.WriteIntValue("max_import_record_size", MaxImportRecordSize);
             writer.WriteIntValue("max_import_remote_file_size", MaxImportRemoteFileSize);
             writer.WriteIntValue("max_import_size", MaxImportSize);
             writer.WriteStringValue("max_login_attempts", MaxLoginAttempts);
