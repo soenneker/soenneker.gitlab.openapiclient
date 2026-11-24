@@ -26,12 +26,16 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             else if (parseNode.GetChildNode("allow_all_unix_sockets") is { } nullNodeAllowAllUnixSockets && nullNodeAllowAllUnixSockets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowAllUnixSockets = null;
             if (parseNode.GetChildNode("allow_project_extension") is null) { _explicitNullValueAllowProjectExtension = default!; _explicitNullProperties?.Remove("allow_project_extension"); }
             else if (parseNode.GetChildNode("allow_project_extension") is { } nullNodeAllowProjectExtension && nullNodeAllowProjectExtension.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowProjectExtension = null;
+            if (parseNode.GetChildNode("auto_model_routing_enabled") is null) { _explicitNullValueAutoModelRoutingEnabled = default!; _explicitNullProperties?.Remove("auto_model_routing_enabled"); }
+            else if (parseNode.GetChildNode("auto_model_routing_enabled") is { } nullNodeAutoModelRoutingEnabled && nullNodeAutoModelRoutingEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutoModelRoutingEnabled = null;
             if (parseNode.GetChildNode("duo_agent_platform_enabled") is null) { _explicitNullValueDuoAgentPlatformEnabled = default!; _explicitNullProperties?.Remove("duo_agent_platform_enabled"); }
             else if (parseNode.GetChildNode("duo_agent_platform_enabled") is { } nullNodeDuoAgentPlatformEnabled && nullNodeDuoAgentPlatformEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DuoAgentPlatformEnabled = null;
             if (parseNode.GetChildNode("duo_workflow_file_attachments_enabled") is null) { _explicitNullValueDuoWorkflowFileAttachmentsEnabled = default!; _explicitNullProperties?.Remove("duo_workflow_file_attachments_enabled"); }
             else if (parseNode.GetChildNode("duo_workflow_file_attachments_enabled") is { } nullNodeDuoWorkflowFileAttachmentsEnabled && nullNodeDuoWorkflowFileAttachmentsEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DuoWorkflowFileAttachmentsEnabled = null;
             if (parseNode.GetChildNode("duo_workflow_mcp_enabled") is null) { _explicitNullValueDuoWorkflowMcpEnabled = default!; _explicitNullProperties?.Remove("duo_workflow_mcp_enabled"); }
             else if (parseNode.GetChildNode("duo_workflow_mcp_enabled") is { } nullNodeDuoWorkflowMcpEnabled && nullNodeDuoWorkflowMcpEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DuoWorkflowMcpEnabled = null;
+            if (parseNode.GetChildNode("external_agent_audit_event_content_enabled") is null) { _explicitNullValueExternalAgentAuditEventContentEnabled = default!; _explicitNullProperties?.Remove("external_agent_audit_event_content_enabled"); }
+            else if (parseNode.GetChildNode("external_agent_audit_event_content_enabled") is { } nullNodeExternalAgentAuditEventContentEnabled && nullNodeExternalAgentAuditEventContentEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalAgentAuditEventContentEnabled = null;
             if (parseNode.GetChildNode("foundational_agents_default_enabled") is null) { _explicitNullValueFoundationalAgentsDefaultEnabled = default!; _explicitNullProperties?.Remove("foundational_agents_default_enabled"); }
             else if (parseNode.GetChildNode("foundational_agents_default_enabled") is { } nullNodeFoundationalAgentsDefaultEnabled && nullNodeFoundationalAgentsDefaultEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FoundationalAgentsDefaultEnabled = null;
             if (parseNode.GetChildNode("include_recommended_allowed") is null) { _explicitNullValueIncludeRecommendedAllowed = default!; _explicitNullProperties?.Remove("include_recommended_allowed"); }
@@ -66,6 +70,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Whether to allow projects to extend the network access domain allowlist</summary>
         public bool? AllowProjectExtension { get => _explicitNullValueAllowProjectExtension; set { _explicitNullValueAllowProjectExtension = value; AdditionalData?.Remove("allow_project_extension"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allow_project_extension"); else _explicitNullProperties?.Remove("allow_project_extension"); } }
         private bool? _explicitNullValueAllowProjectExtension = default!;
+        /// <summary>Whether Auto model routing is turned on for Duo Developer. Can only be set on top-level groups. GitLab.com only.</summary>
+        public bool? AutoModelRoutingEnabled { get => _explicitNullValueAutoModelRoutingEnabled; set { _explicitNullValueAutoModelRoutingEnabled = value; AdditionalData?.Remove("auto_model_routing_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auto_model_routing_enabled"); else _explicitNullProperties?.Remove("auto_model_routing_enabled"); } }
+        private bool? _explicitNullValueAutoModelRoutingEnabled = default!;
         /// <summary>Whether Duo Agent Platform features are enabled</summary>
         public bool? DuoAgentPlatformEnabled { get => _explicitNullValueDuoAgentPlatformEnabled; set { _explicitNullValueDuoAgentPlatformEnabled = value; AdditionalData?.Remove("duo_agent_platform_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duo_agent_platform_enabled"); else _explicitNullProperties?.Remove("duo_agent_platform_enabled"); } }
         private bool? _explicitNullValueDuoAgentPlatformEnabled = default!;
@@ -75,6 +82,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Enable MCP support for Duo Agent Platform</summary>
         public bool? DuoWorkflowMcpEnabled { get => _explicitNullValueDuoWorkflowMcpEnabled; set { _explicitNullValueDuoWorkflowMcpEnabled = value; AdditionalData?.Remove("duo_workflow_mcp_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duo_workflow_mcp_enabled"); else _explicitNullProperties?.Remove("duo_workflow_mcp_enabled"); } }
         private bool? _explicitNullValueDuoWorkflowMcpEnabled = default!;
+        /// <summary>Whether AI audit events from external agent sessions that glab uploads keep prompts, tool arguments and other content. When `false`, they keep metadata only. Can only be set on top-level groups.</summary>
+        public bool? ExternalAgentAuditEventContentEnabled { get => _explicitNullValueExternalAgentAuditEventContentEnabled; set { _explicitNullValueExternalAgentAuditEventContentEnabled = value; AdditionalData?.Remove("external_agent_audit_event_content_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_agent_audit_event_content_enabled"); else _explicitNullProperties?.Remove("external_agent_audit_event_content_enabled"); } }
+        private bool? _explicitNullValueExternalAgentAuditEventContentEnabled = default!;
         /// <summary>Whether new foundational agents are enabled by default</summary>
         public bool? FoundationalAgentsDefaultEnabled { get => _explicitNullValueFoundationalAgentsDefaultEnabled; set { _explicitNullValueFoundationalAgentsDefaultEnabled = value; AdditionalData?.Remove("foundational_agents_default_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("foundational_agents_default_enabled"); else _explicitNullProperties?.Remove("foundational_agents_default_enabled"); } }
         private bool? _explicitNullValueFoundationalAgentsDefaultEnabled = default!;
@@ -127,15 +137,17 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(16)
+            return new Dictionary<string, Action<IParseNode>>(18)
             {
                 { "ai_catalog_restricted_to_group_hierarchy", n => { AiCatalogRestrictedToGroupHierarchy = n.GetBoolValue(); } },
                 { "ai_usage_data_collection_enabled", n => { AiUsageDataCollectionEnabled = n.GetBoolValue(); } },
                 { "allow_all_unix_sockets", n => { AllowAllUnixSockets = n.GetBoolValue(); } },
                 { "allow_project_extension", n => { AllowProjectExtension = n.GetBoolValue(); } },
+                { "auto_model_routing_enabled", n => { AutoModelRoutingEnabled = n.GetBoolValue(); } },
                 { "duo_agent_platform_enabled", n => { DuoAgentPlatformEnabled = n.GetBoolValue(); } },
                 { "duo_workflow_file_attachments_enabled", n => { DuoWorkflowFileAttachmentsEnabled = n.GetBoolValue(); } },
                 { "duo_workflow_mcp_enabled", n => { DuoWorkflowMcpEnabled = n.GetBoolValue(); } },
+                { "external_agent_audit_event_content_enabled", n => { ExternalAgentAuditEventContentEnabled = n.GetBoolValue(); } },
                 { "foundational_agents_default_enabled", n => { FoundationalAgentsDefaultEnabled = n.GetBoolValue(); } },
                 { "include_recommended_allowed", n => { IncludeRecommendedAllowed = n.GetBoolValue(); } },
                 { "minimum_access_level_enable_on_projects", n => { MinimumAccessLevelEnableOnProjects = n.GetIntValue(); } },
@@ -158,9 +170,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteBoolValue("ai_usage_data_collection_enabled", AiUsageDataCollectionEnabled);
             writer.WriteBoolValue("allow_all_unix_sockets", AllowAllUnixSockets);
             writer.WriteBoolValue("allow_project_extension", AllowProjectExtension);
+            writer.WriteBoolValue("auto_model_routing_enabled", AutoModelRoutingEnabled);
             writer.WriteBoolValue("duo_agent_platform_enabled", DuoAgentPlatformEnabled);
             writer.WriteBoolValue("duo_workflow_file_attachments_enabled", DuoWorkflowFileAttachmentsEnabled);
             writer.WriteBoolValue("duo_workflow_mcp_enabled", DuoWorkflowMcpEnabled);
+            writer.WriteBoolValue("external_agent_audit_event_content_enabled", ExternalAgentAuditEventContentEnabled);
             writer.WriteBoolValue("foundational_agents_default_enabled", FoundationalAgentsDefaultEnabled);
             writer.WriteBoolValue("include_recommended_allowed", IncludeRecommendedAllowed);
             writer.WriteIntValue("minimum_access_level_enable_on_projects", MinimumAccessLevelEnableOnProjects);

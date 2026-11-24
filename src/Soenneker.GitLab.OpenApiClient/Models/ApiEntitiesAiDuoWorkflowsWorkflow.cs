@@ -45,6 +45,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             else if (parseNode.GetChildNode("pre_approved_agent_privileges_names") is { } nullNodePreApprovedAgentPrivilegesNames && nullNodePreApprovedAgentPrivilegesNames.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreApprovedAgentPrivilegesNames = null;
             if (parseNode.GetChildNode("project_id") is null) { _explicitNullValueProjectId = default!; _explicitNullProperties?.Remove("project_id"); }
             else if (parseNode.GetChildNode("project_id") is { } nullNodeProjectId && nullNodeProjectId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProjectId = null;
+            if (parseNode.GetChildNode("service_account_id") is null) { _explicitNullValueServiceAccountId = default!; _explicitNullProperties?.Remove("service_account_id"); }
+            else if (parseNode.GetChildNode("service_account_id") is { } nullNodeServiceAccountId && nullNodeServiceAccountId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ServiceAccountId = null;
             if (parseNode.GetChildNode("status") is null) { _explicitNullValueStatus = default!; _explicitNullProperties?.Remove("status"); }
             else if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
             if (parseNode.GetChildNode("summary") is null) { _explicitNullValueSummary = default!; _explicitNullProperties?.Remove("summary"); }
@@ -152,6 +154,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>ID of the associated project. `null` if not set.</summary>
         public int? ProjectId { get => _explicitNullValueProjectId; set { _explicitNullValueProjectId = value; AdditionalData?.Remove("project_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_id"); else _explicitNullProperties?.Remove("project_id"); } }
         private int? _explicitNullValueProjectId = default!;
+        /// <summary>ID of the service account the flow runs as. `null` if not set.</summary>
+        public int? ServiceAccountId { get => _explicitNullValueServiceAccountId; set { _explicitNullValueServiceAccountId = value; AdditionalData?.Remove("service_account_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("service_account_id"); else _explicitNullProperties?.Remove("service_account_id"); } }
+        private int? _explicitNullValueServiceAccountId = default!;
         /// <summary>Current flow status. Possible values: `created`, `running`, `paused`, `finished`, `failed`, `stopped`, `input_required`, `plan_approval_required`, `tool_call_approval_required`, or `idle`. GitLab might add new values.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -235,7 +240,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(20)
+            return new Dictionary<string, Action<IParseNode>>(21)
             {
                 { "agent_privileges", n => { AgentPrivileges = n.GetCollectionOfPrimitiveValues<int?>()?.AsList(); } },
                 { "agent_privileges_names", n => { AgentPrivilegesNames = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
@@ -251,6 +256,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "pre_approved_agent_privileges", n => { PreApprovedAgentPrivileges = n.GetCollectionOfPrimitiveValues<int?>()?.AsList(); } },
                 { "pre_approved_agent_privileges_names", n => { PreApprovedAgentPrivilegesNames = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "project_id", n => { ProjectId = n.GetIntValue(); } },
+                { "service_account_id", n => { ServiceAccountId = n.GetIntValue(); } },
                 { "status", n => { Status = n.GetStringValue(); } },
                 { "summary", n => { Summary = n.GetStringValue(); } },
                 { "title", n => { Title = n.GetStringValue(); } },
@@ -280,6 +286,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<int?>("pre_approved_agent_privileges", PreApprovedAgentPrivileges);
             writer.WriteCollectionOfPrimitiveValues<string>("pre_approved_agent_privileges_names", PreApprovedAgentPrivilegesNames);
             writer.WriteIntValue("project_id", ProjectId);
+            writer.WriteIntValue("service_account_id", ServiceAccountId);
             writer.WriteStringValue("status", Status);
             writer.WriteStringValue("summary", Summary);
             writer.WriteStringValue("title", Title);

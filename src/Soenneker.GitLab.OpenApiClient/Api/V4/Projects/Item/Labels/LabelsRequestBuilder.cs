@@ -263,7 +263,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Labels
             /// <summary>Number of items to list per page.</summary>
             [QueryParameter("per_page")]
             public int? PerPage { get; set; }
-            /// <summary>Keyword to filter labels by.</summary>
+            /// <summary>Keyword to filter labels by. Returns labels with an exact, case-insensitive name match first.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("search")]

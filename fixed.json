@@ -911,6 +911,9 @@
           "401": {
             "description": "Unauthorized"
           },
+          "403": {
+            "description": "Forbidden"
+          },
           "404": {
             "description": "Not found"
           },
@@ -974,6 +977,9 @@
           },
           "401": {
             "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
           },
           "404": {
             "description": "Not found"
@@ -34887,7 +34893,7 @@
           {
             "name": "search",
             "in": "query",
-            "description": "Keyword to filter labels by.",
+            "description": "Keyword to filter labels by. Returns labels with an exact, case-insensitive name match first.",
             "schema": {
               "type": "string",
               "nullable": true
@@ -35487,7 +35493,7 @@
           {
             "name": "search",
             "in": "query",
-            "description": "Keyword to filter labels by.",
+            "description": "Keyword to filter labels by. Returns labels with an exact, case-insensitive name match first.",
             "schema": {
               "type": "string",
               "nullable": true
@@ -123648,6 +123654,10 @@
             "type": "integer",
             "description": "ID of the associated namespace. \u0060null\u0060 if not set."
           },
+          "service_account_id": {
+            "type": "integer",
+            "description": "ID of the service account the flow runs as. \u0060null\u0060 if not set."
+          },
           "agent_privileges": {
             "type": "array",
             "items": {
@@ -125063,6 +125073,14 @@
           "lock_duo_features_enabled": {
             "type": "boolean",
             "description": "If \u0060true\u0060, the GitLab Duo features enabled setting is enforced for all subgroups. Premium and Ultimate only."
+          },
+          "duo_code_suggestions_enabled": {
+            "type": "boolean",
+            "description": "If \u0060true\u0060, GitLab Duo Code Suggestions is turned on for the group. Premium and Ultimate only."
+          },
+          "lock_duo_code_suggestions_enabled": {
+            "type": "boolean",
+            "description": "If \u0060true\u0060, the Code Suggestions enabled setting is enforced for all subgroups. Premium and Ultimate only."
           },
           "auto_duo_code_review_enabled": {
             "type": "string"
@@ -137515,6 +137533,9 @@
           "create_organization_api_limit": {
             "type": "string"
           },
+          "delete_merged_branches_limit": {
+            "type": "string"
+          },
           "cross_reference_checks_limit": {
             "type": "string"
           },
@@ -138082,6 +138103,12 @@
           "duo_scheduled_automations_availability": {
             "type": "string"
           },
+          "duo_code_suggestions_enabled": {
+            "type": "boolean"
+          },
+          "duo_code_suggestions_availability": {
+            "type": "string"
+          },
           "duo_custom_agents_enabled": {
             "type": "boolean"
           },
@@ -138560,6 +138587,9 @@
             "type": "boolean"
           },
           "lock_duo_external_agents_enabled": {
+            "type": "boolean"
+          },
+          "lock_duo_code_suggestions_enabled": {
             "type": "boolean"
           },
           "duo_workflows_default_image_registry": {
@@ -151359,6 +151389,10 @@
             "type": "boolean",
             "example": false
           },
+          "external_agent_audit_event_content_enabled": {
+            "type": "boolean",
+            "example": true
+          },
           "include_recommended_allowed": {
             "type": "boolean",
             "example": false
@@ -151562,6 +151596,14 @@
           "lock_duo_features_enabled": {
             "type": "boolean",
             "description": "If \u0060true\u0060, the GitLab Duo features enabled setting is enforced for all subgroups. Premium and Ultimate only."
+          },
+          "duo_code_suggestions_enabled": {
+            "type": "boolean",
+            "description": "If \u0060true\u0060, GitLab Duo Code Suggestions is turned on for the group. Premium and Ultimate only."
+          },
+          "lock_duo_code_suggestions_enabled": {
+            "type": "boolean",
+            "description": "If \u0060true\u0060, the Code Suggestions enabled setting is enforced for all subgroups. Premium and Ultimate only."
           },
           "auto_duo_code_review_enabled": {
             "type": "string"
@@ -161418,6 +161460,16 @@
             "description": "If \u0060true\u0060, enforces the scheduled automations enabled setting for all groups.",
             "nullable": true
           },
+          "duo_code_suggestions_enabled": {
+            "type": "boolean",
+            "description": "If \u0060true\u0060, allows GitLab Duo Code Suggestions for the instance. Defaults to \u0060true\u0060. GitLab Self-Managed, Premium and Ultimate only.",
+            "nullable": true
+          },
+          "lock_duo_code_suggestions_enabled": {
+            "type": "boolean",
+            "description": "If \u0060true\u0060, enforces the Code Suggestions enabled setting for all groups. Always \u0060true\u0060 when \u0060duo_code_suggestions_enabled\u0060 is \u0060false\u0060. Becomes \u0060false\u0060 when \u0060duo_code_suggestions_enabled\u0060 changes to \u0060true\u0060, unless the same request sets this attribute. GitLab Self-Managed, Premium and Ultimate only.",
+            "nullable": true
+          },
           "duo_workflows_default_image_registry": {
             "type": "string",
             "description": "Default container registry for Duo Agent Platform foundational flow images.",
@@ -162064,6 +162116,10 @@
             "type": "string",
             "nullable": true
           },
+          "delete_merged_branches_limit": {
+            "type": "string",
+            "nullable": true
+          },
           "cross_reference_checks_limit": {
             "type": "string",
             "nullable": true
@@ -162369,6 +162425,10 @@
             "nullable": true
           },
           "duo_scheduled_automations_availability": {
+            "type": "string",
+            "nullable": true
+          },
+          "duo_code_suggestions_availability": {
             "type": "string",
             "nullable": true
           },
@@ -181544,6 +181604,11 @@
             "description": "Allow GitLab Duo flows in this group to run on a schedule",
             "nullable": true
           },
+          "duo_code_suggestions_availability": {
+            "type": "boolean",
+            "description": "Enable GitLab Duo Code Suggestions for this group",
+            "nullable": true
+          },
           "duo_custom_agents_availability": {
             "type": "boolean",
             "description": "Enable GitLab Duo custom agents for this group",
@@ -181752,6 +181817,11 @@
           "duo_scheduled_automations_availability": {
             "type": "boolean",
             "description": "Allow GitLab Duo flows in this group to run on a schedule",
+            "nullable": true
+          },
+          "duo_code_suggestions_availability": {
+            "type": "boolean",
+            "description": "Enable GitLab Duo Code Suggestions for this group",
             "nullable": true
           },
           "duo_custom_agents_availability": {
@@ -185419,9 +185489,14 @@
             "type": "integer",
             "description": "Maximum number of dependency management security update scheduler jobs to run concurrently across the Sidekiq fleet.",
             "nullable": true
+          },
+          "security_update_scheduler_project_period_in_seconds": {
+            "type": "integer",
+            "description": "Seconds between dependency management security update scheduler runs for each project. Default: \u0060300\u0060. Maximum: \u006086400\u0060. Set to \u00600\u0060 to remove the limit.",
+            "nullable": true
           }
         },
-        "description": "Dependency management settings. Set \u0060security_update_scheduler_max_concurrency\u0060 (integer) to cap the number of security update scheduler jobs that run concurrently across the Sidekiq fleet. Default: \u006030\u0060. Capped at \u0060200\u0060. Set to \u00600\u0060 to remove the concurrency limit. Ultimate only. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/239173) in GitLab 19.1.",
+        "description": "Dependency management settings. Set \u0060security_update_scheduler_max_concurrency\u0060 (integer) to cap the number of security update scheduler jobs that run concurrently across the Sidekiq fleet. Default: \u006030\u0060. Capped at \u0060200\u0060. Set to \u00600\u0060 to remove the concurrency limit. Set \u0060security_update_scheduler_project_period_in_seconds\u0060 (integer) to the seconds between security update scheduler runs for each project. Default: \u0060300\u0060. Maximum: \u006086400\u0060. Set the period to \u00600\u0060 to remove the rate limit. Ultimate only. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/239173) in GitLab 19.1.",
         "nullable": true
       },
       "PutApiV4ApplicationSettingsRequestCodeDropdownCustomClientsItem": {
@@ -188527,6 +188602,11 @@
             "description": "Allow file attachments in GitLab Duo Chat for this top-level group. Can only be set on top-level groups. GitLab.com only.",
             "nullable": true
           },
+          "external_agent_audit_event_content_enabled": {
+            "type": "boolean",
+            "description": "Whether AI audit events from external agent sessions that glab uploads keep prompts, tool arguments and other content. When \u0060false\u0060, they keep metadata only. Can only be set on top-level groups.",
+            "nullable": true
+          },
           "foundational_agents_default_enabled": {
             "type": "boolean",
             "description": "Whether new foundational agents are enabled by default",
@@ -188553,6 +188633,11 @@
           "require_sandbox": {
             "type": "boolean",
             "description": "Whether flows that run on GitLab Runner fail when the execution environment sandbox is unavailable. Applies only to top-level groups on GitLab.com.",
+            "nullable": true
+          },
+          "auto_model_routing_enabled": {
+            "type": "boolean",
+            "description": "Whether Auto model routing is turned on for Duo Developer. Can only be set on top-level groups. GitLab.com only.",
             "nullable": true
           },
           "minimum_access_level_execute": {
@@ -188661,6 +188746,11 @@
             "description": "Allow file attachments in GitLab Duo Chat for this top-level group. Can only be set on top-level groups. GitLab.com only.",
             "nullable": true
           },
+          "external_agent_audit_event_content_enabled": {
+            "type": "boolean",
+            "description": "Whether AI audit events from external agent sessions that glab uploads keep prompts, tool arguments and other content. When \u0060false\u0060, they keep metadata only. Can only be set on top-level groups.",
+            "nullable": true
+          },
           "foundational_agents_default_enabled": {
             "type": "boolean",
             "description": "Whether new foundational agents are enabled by default",
@@ -188687,6 +188777,11 @@
           "require_sandbox": {
             "type": "boolean",
             "description": "Whether flows that run on GitLab Runner fail when the execution environment sandbox is unavailable. Applies only to top-level groups on GitLab.com.",
+            "nullable": true
+          },
+          "auto_model_routing_enabled": {
+            "type": "boolean",
+            "description": "Whether Auto model routing is turned on for Duo Developer. Can only be set on top-level groups. GitLab.com only.",
             "nullable": true
           },
           "minimum_access_level_execute": {

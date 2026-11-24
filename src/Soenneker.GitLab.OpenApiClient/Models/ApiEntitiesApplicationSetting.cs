@@ -283,6 +283,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             else if (parseNode.GetChildNode("delay_user_account_self_deletion") is { } nullNodeDelayUserAccountSelfDeletion && nullNodeDelayUserAccountSelfDeletion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DelayUserAccountSelfDeletion = null;
             if (parseNode.GetChildNode("delete_inactive_projects") is null) { _explicitNullValueDeleteInactiveProjects = default!; _explicitNullProperties?.Remove("delete_inactive_projects"); }
             else if (parseNode.GetChildNode("delete_inactive_projects") is { } nullNodeDeleteInactiveProjects && nullNodeDeleteInactiveProjects.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeleteInactiveProjects = null;
+            if (parseNode.GetChildNode("delete_merged_branches_limit") is null) { _explicitNullValueDeleteMergedBranchesLimit = default!; _explicitNullProperties?.Remove("delete_merged_branches_limit"); }
+            else if (parseNode.GetChildNode("delete_merged_branches_limit") is { } nullNodeDeleteMergedBranchesLimit && nullNodeDeleteMergedBranchesLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeleteMergedBranchesLimit = null;
             if (parseNode.GetChildNode("delete_unconfirmed_users") is null) { _explicitNullValueDeleteUnconfirmedUsers = default!; _explicitNullProperties?.Remove("delete_unconfirmed_users"); }
             else if (parseNode.GetChildNode("delete_unconfirmed_users") is { } nullNodeDeleteUnconfirmedUsers && nullNodeDeleteUnconfirmedUsers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeleteUnconfirmedUsers = null;
             if (parseNode.GetChildNode("deletion_adjourned_period") is null) { _explicitNullValueDeletionAdjournedPeriod = default!; _explicitNullProperties?.Remove("deletion_adjourned_period"); }
@@ -369,6 +371,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             else if (parseNode.GetChildNode("duo_code_review_default_level") is { } nullNodeDuoCodeReviewDefaultLevel && nullNodeDuoCodeReviewDefaultLevel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DuoCodeReviewDefaultLevel = null;
             if (parseNode.GetChildNode("duo_code_review_level_allowed") is null) { _explicitNullValueDuoCodeReviewLevelAllowed = default!; _explicitNullProperties?.Remove("duo_code_review_level_allowed"); }
             else if (parseNode.GetChildNode("duo_code_review_level_allowed") is { } nullNodeDuoCodeReviewLevelAllowed && nullNodeDuoCodeReviewLevelAllowed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DuoCodeReviewLevelAllowed = null;
+            if (parseNode.GetChildNode("duo_code_suggestions_availability") is null) { _explicitNullValueDuoCodeSuggestionsAvailability = default!; _explicitNullProperties?.Remove("duo_code_suggestions_availability"); }
+            else if (parseNode.GetChildNode("duo_code_suggestions_availability") is { } nullNodeDuoCodeSuggestionsAvailability && nullNodeDuoCodeSuggestionsAvailability.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DuoCodeSuggestionsAvailability = null;
+            if (parseNode.GetChildNode("duo_code_suggestions_enabled") is null) { _explicitNullValueDuoCodeSuggestionsEnabled = default!; _explicitNullProperties?.Remove("duo_code_suggestions_enabled"); }
+            else if (parseNode.GetChildNode("duo_code_suggestions_enabled") is { } nullNodeDuoCodeSuggestionsEnabled && nullNodeDuoCodeSuggestionsEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DuoCodeSuggestionsEnabled = null;
             if (parseNode.GetChildNode("duo_custom_agents_availability") is null) { _explicitNullValueDuoCustomAgentsAvailability = default!; _explicitNullProperties?.Remove("duo_custom_agents_availability"); }
             else if (parseNode.GetChildNode("duo_custom_agents_availability") is { } nullNodeDuoCustomAgentsAvailability && nullNodeDuoCustomAgentsAvailability.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DuoCustomAgentsAvailability = null;
             if (parseNode.GetChildNode("duo_custom_agents_enabled") is null) { _explicitNullValueDuoCustomAgentsEnabled = default!; _explicitNullProperties?.Remove("duo_custom_agents_enabled"); }
@@ -791,6 +797,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             else if (parseNode.GetChildNode("local_markdown_version") is { } nullNodeLocalMarkdownVersion && nullNodeLocalMarkdownVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LocalMarkdownVersion = null;
             if (parseNode.GetChildNode("lock_built_in_project_templates_enabled") is null) { _explicitNullValueLockBuiltInProjectTemplatesEnabled = default!; _explicitNullProperties?.Remove("lock_built_in_project_templates_enabled"); }
             else if (parseNode.GetChildNode("lock_built_in_project_templates_enabled") is { } nullNodeLockBuiltInProjectTemplatesEnabled && nullNodeLockBuiltInProjectTemplatesEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LockBuiltInProjectTemplatesEnabled = null;
+            if (parseNode.GetChildNode("lock_duo_code_suggestions_enabled") is null) { _explicitNullValueLockDuoCodeSuggestionsEnabled = default!; _explicitNullProperties?.Remove("lock_duo_code_suggestions_enabled"); }
+            else if (parseNode.GetChildNode("lock_duo_code_suggestions_enabled") is { } nullNodeLockDuoCodeSuggestionsEnabled && nullNodeLockDuoCodeSuggestionsEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LockDuoCodeSuggestionsEnabled = null;
             if (parseNode.GetChildNode("lock_duo_custom_agents_enabled") is null) { _explicitNullValueLockDuoCustomAgentsEnabled = default!; _explicitNullProperties?.Remove("lock_duo_custom_agents_enabled"); }
             else if (parseNode.GetChildNode("lock_duo_custom_agents_enabled") is { } nullNodeLockDuoCustomAgentsEnabled && nullNodeLockDuoCustomAgentsEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LockDuoCustomAgentsEnabled = null;
             if (parseNode.GetChildNode("lock_duo_custom_flows_enabled") is null) { _explicitNullValueLockDuoCustomFlowsEnabled = default!; _explicitNullProperties?.Remove("lock_duo_custom_flows_enabled"); }
@@ -2899,6 +2907,16 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string DeleteInactiveProjects { get => _explicitNullValueDeleteInactiveProjects; set { _explicitNullValueDeleteInactiveProjects = value; AdditionalData?.Remove("delete_inactive_projects"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("delete_inactive_projects"); else _explicitNullProperties?.Remove("delete_inactive_projects"); } }
         private string _explicitNullValueDeleteInactiveProjects = default!;
 #endif
+        /// <summary>The delete_merged_branches_limit property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? DeleteMergedBranchesLimit { get => _explicitNullValueDeleteMergedBranchesLimit; set { _explicitNullValueDeleteMergedBranchesLimit = value; AdditionalData?.Remove("delete_merged_branches_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("delete_merged_branches_limit"); else _explicitNullProperties?.Remove("delete_merged_branches_limit"); } }
+        private string? _explicitNullValueDeleteMergedBranchesLimit = default!;
+#nullable restore
+#else
+        public string DeleteMergedBranchesLimit { get => _explicitNullValueDeleteMergedBranchesLimit; set { _explicitNullValueDeleteMergedBranchesLimit = value; AdditionalData?.Remove("delete_merged_branches_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("delete_merged_branches_limit"); else _explicitNullProperties?.Remove("delete_merged_branches_limit"); } }
+        private string _explicitNullValueDeleteMergedBranchesLimit = default!;
+#endif
         /// <summary>The delete_unconfirmed_users property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -3322,6 +3340,19 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The duo_code_review_level_allowed property</summary>
         public bool? DuoCodeReviewLevelAllowed { get => _explicitNullValueDuoCodeReviewLevelAllowed; set { _explicitNullValueDuoCodeReviewLevelAllowed = value; AdditionalData?.Remove("duo_code_review_level_allowed"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duo_code_review_level_allowed"); else _explicitNullProperties?.Remove("duo_code_review_level_allowed"); } }
         private bool? _explicitNullValueDuoCodeReviewLevelAllowed = default!;
+        /// <summary>The duo_code_suggestions_availability property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? DuoCodeSuggestionsAvailability { get => _explicitNullValueDuoCodeSuggestionsAvailability; set { _explicitNullValueDuoCodeSuggestionsAvailability = value; AdditionalData?.Remove("duo_code_suggestions_availability"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duo_code_suggestions_availability"); else _explicitNullProperties?.Remove("duo_code_suggestions_availability"); } }
+        private string? _explicitNullValueDuoCodeSuggestionsAvailability = default!;
+#nullable restore
+#else
+        public string DuoCodeSuggestionsAvailability { get => _explicitNullValueDuoCodeSuggestionsAvailability; set { _explicitNullValueDuoCodeSuggestionsAvailability = value; AdditionalData?.Remove("duo_code_suggestions_availability"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duo_code_suggestions_availability"); else _explicitNullProperties?.Remove("duo_code_suggestions_availability"); } }
+        private string _explicitNullValueDuoCodeSuggestionsAvailability = default!;
+#endif
+        /// <summary>The duo_code_suggestions_enabled property</summary>
+        public bool? DuoCodeSuggestionsEnabled { get => _explicitNullValueDuoCodeSuggestionsEnabled; set { _explicitNullValueDuoCodeSuggestionsEnabled = value; AdditionalData?.Remove("duo_code_suggestions_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duo_code_suggestions_enabled"); else _explicitNullProperties?.Remove("duo_code_suggestions_enabled"); } }
+        private bool? _explicitNullValueDuoCodeSuggestionsEnabled = default!;
         /// <summary>The duo_custom_agents_availability property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -5390,6 +5421,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The lock_built_in_project_templates_enabled property</summary>
         public bool? LockBuiltInProjectTemplatesEnabled { get => _explicitNullValueLockBuiltInProjectTemplatesEnabled; set { _explicitNullValueLockBuiltInProjectTemplatesEnabled = value; AdditionalData?.Remove("lock_built_in_project_templates_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lock_built_in_project_templates_enabled"); else _explicitNullProperties?.Remove("lock_built_in_project_templates_enabled"); } }
         private bool? _explicitNullValueLockBuiltInProjectTemplatesEnabled = default!;
+        /// <summary>The lock_duo_code_suggestions_enabled property</summary>
+        public bool? LockDuoCodeSuggestionsEnabled { get => _explicitNullValueLockDuoCodeSuggestionsEnabled; set { _explicitNullValueLockDuoCodeSuggestionsEnabled = value; AdditionalData?.Remove("lock_duo_code_suggestions_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lock_duo_code_suggestions_enabled"); else _explicitNullProperties?.Remove("lock_duo_code_suggestions_enabled"); } }
+        private bool? _explicitNullValueLockDuoCodeSuggestionsEnabled = default!;
         /// <summary>The lock_duo_custom_agents_enabled property</summary>
         public bool? LockDuoCustomAgentsEnabled { get => _explicitNullValueLockDuoCustomAgentsEnabled; set { _explicitNullValueLockDuoCustomAgentsEnabled = value; AdditionalData?.Remove("lock_duo_custom_agents_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lock_duo_custom_agents_enabled"); else _explicitNullProperties?.Remove("lock_duo_custom_agents_enabled"); } }
         private bool? _explicitNullValueLockDuoCustomAgentsEnabled = default!;
@@ -9381,7 +9415,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(788)
+            return new Dictionary<string, Action<IParseNode>>(792)
             {
                 { "abuse_notification_email", n => { AbuseNotificationEmail = n.GetStringValue(); } },
                 { "active_context_pause_indexing", n => { ActiveContextPauseIndexing = n.GetStringValue(); } },
@@ -9516,6 +9550,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "default_syntax_highlighting_theme", n => { DefaultSyntaxHighlightingTheme = n.GetStringValue(); } },
                 { "delay_user_account_self_deletion", n => { DelayUserAccountSelfDeletion = n.GetStringValue(); } },
                 { "delete_inactive_projects", n => { DeleteInactiveProjects = n.GetStringValue(); } },
+                { "delete_merged_branches_limit", n => { DeleteMergedBranchesLimit = n.GetStringValue(); } },
                 { "delete_unconfirmed_users", n => { DeleteUnconfirmedUsers = n.GetStringValue(); } },
                 { "deletion_adjourned_period", n => { DeletionAdjournedPeriod = n.GetStringValue(); } },
                 { "deny_all_requests_except_allowed", n => { DenyAllRequestsExceptAllowed = n.GetStringValue(); } },
@@ -9559,6 +9594,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "duo_code_review_decisions_enabled", n => { DuoCodeReviewDecisionsEnabled = n.GetStringValue(); } },
                 { "duo_code_review_default_level", n => { DuoCodeReviewDefaultLevel = n.GetStringValue(); } },
                 { "duo_code_review_level_allowed", n => { DuoCodeReviewLevelAllowed = n.GetBoolValue(); } },
+                { "duo_code_suggestions_availability", n => { DuoCodeSuggestionsAvailability = n.GetStringValue(); } },
+                { "duo_code_suggestions_enabled", n => { DuoCodeSuggestionsEnabled = n.GetBoolValue(); } },
                 { "duo_custom_agents_availability", n => { DuoCustomAgentsAvailability = n.GetStringValue(); } },
                 { "duo_custom_agents_enabled", n => { DuoCustomAgentsEnabled = n.GetBoolValue(); } },
                 { "duo_custom_flows_availability", n => { DuoCustomFlowsAvailability = n.GetStringValue(); } },
@@ -9770,6 +9807,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "label_delete_limit", n => { LabelDeleteLimit = n.GetStringValue(); } },
                 { "local_markdown_version", n => { LocalMarkdownVersion = n.GetStringValue(); } },
                 { "lock_built_in_project_templates_enabled", n => { LockBuiltInProjectTemplatesEnabled = n.GetBoolValue(); } },
+                { "lock_duo_code_suggestions_enabled", n => { LockDuoCodeSuggestionsEnabled = n.GetBoolValue(); } },
                 { "lock_duo_custom_agents_enabled", n => { LockDuoCustomAgentsEnabled = n.GetBoolValue(); } },
                 { "lock_duo_custom_flows_enabled", n => { LockDuoCustomFlowsEnabled = n.GetBoolValue(); } },
                 { "lock_duo_external_agents_enabled", n => { LockDuoExternalAgentsEnabled = n.GetBoolValue(); } },
@@ -10313,6 +10351,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("default_syntax_highlighting_theme", DefaultSyntaxHighlightingTheme);
             writer.WriteStringValue("delay_user_account_self_deletion", DelayUserAccountSelfDeletion);
             writer.WriteStringValue("delete_inactive_projects", DeleteInactiveProjects);
+            writer.WriteStringValue("delete_merged_branches_limit", DeleteMergedBranchesLimit);
             writer.WriteStringValue("delete_unconfirmed_users", DeleteUnconfirmedUsers);
             writer.WriteStringValue("deletion_adjourned_period", DeletionAdjournedPeriod);
             writer.WriteStringValue("deny_all_requests_except_allowed", DenyAllRequestsExceptAllowed);
@@ -10356,6 +10395,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("duo_code_review_decisions_enabled", DuoCodeReviewDecisionsEnabled);
             writer.WriteStringValue("duo_code_review_default_level", DuoCodeReviewDefaultLevel);
             writer.WriteBoolValue("duo_code_review_level_allowed", DuoCodeReviewLevelAllowed);
+            writer.WriteStringValue("duo_code_suggestions_availability", DuoCodeSuggestionsAvailability);
+            writer.WriteBoolValue("duo_code_suggestions_enabled", DuoCodeSuggestionsEnabled);
             writer.WriteStringValue("duo_custom_agents_availability", DuoCustomAgentsAvailability);
             writer.WriteBoolValue("duo_custom_agents_enabled", DuoCustomAgentsEnabled);
             writer.WriteStringValue("duo_custom_flows_availability", DuoCustomFlowsAvailability);
@@ -10567,6 +10608,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("label_delete_limit", LabelDeleteLimit);
             writer.WriteStringValue("local_markdown_version", LocalMarkdownVersion);
             writer.WriteBoolValue("lock_built_in_project_templates_enabled", LockBuiltInProjectTemplatesEnabled);
+            writer.WriteBoolValue("lock_duo_code_suggestions_enabled", LockDuoCodeSuggestionsEnabled);
             writer.WriteBoolValue("lock_duo_custom_agents_enabled", LockDuoCustomAgentsEnabled);
             writer.WriteBoolValue("lock_duo_custom_flows_enabled", LockDuoCustomFlowsEnabled);
             writer.WriteBoolValue("lock_duo_external_agents_enabled", LockDuoExternalAgentsEnabled);

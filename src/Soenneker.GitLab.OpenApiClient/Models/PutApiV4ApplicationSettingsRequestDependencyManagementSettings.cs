@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
     /// <summary>
-    /// Dependency management settings. Set `security_update_scheduler_max_concurrency` (integer) to cap the number of security update scheduler jobs that run concurrently across the Sidekiq fleet. Default: `30`. Capped at `200`. Set to `0` to remove the concurrency limit. Ultimate only. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/239173) in GitLab 19.1.
+    /// Dependency management settings. Set `security_update_scheduler_max_concurrency` (integer) to cap the number of security update scheduler jobs that run concurrently across the Sidekiq fleet. Default: `30`. Capped at `200`. Set to `0` to remove the concurrency limit. Set `security_update_scheduler_project_period_in_seconds` (integer) to the seconds between security update scheduler runs for each project. Default: `300`. Maximum: `86400`. Set the period to `0` to remove the rate limit. Ultimate only. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/239173) in GitLab 19.1.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PutApiV4ApplicationSettingsRequestDependencyManagementSettings : IAdditionalDataHolder, IParsable
@@ -20,6 +20,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             if (parseNode.GetChildNode("security_update_scheduler_max_concurrency") is null) { _explicitNullValueSecurityUpdateSchedulerMaxConcurrency = default!; _explicitNullProperties?.Remove("security_update_scheduler_max_concurrency"); }
             else if (parseNode.GetChildNode("security_update_scheduler_max_concurrency") is { } nullNodeSecurityUpdateSchedulerMaxConcurrency && nullNodeSecurityUpdateSchedulerMaxConcurrency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SecurityUpdateSchedulerMaxConcurrency = null;
+            if (parseNode.GetChildNode("security_update_scheduler_project_period_in_seconds") is null) { _explicitNullValueSecurityUpdateSchedulerProjectPeriodInSeconds = default!; _explicitNullProperties?.Remove("security_update_scheduler_project_period_in_seconds"); }
+            else if (parseNode.GetChildNode("security_update_scheduler_project_period_in_seconds") is { } nullNodeSecurityUpdateSchedulerProjectPeriodInSeconds && nullNodeSecurityUpdateSchedulerProjectPeriodInSeconds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SecurityUpdateSchedulerProjectPeriodInSeconds = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,6 +29,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Maximum number of dependency management security update scheduler jobs to run concurrently across the Sidekiq fleet.</summary>
         public int? SecurityUpdateSchedulerMaxConcurrency { get => _explicitNullValueSecurityUpdateSchedulerMaxConcurrency; set { _explicitNullValueSecurityUpdateSchedulerMaxConcurrency = value; AdditionalData?.Remove("security_update_scheduler_max_concurrency"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("security_update_scheduler_max_concurrency"); else _explicitNullProperties?.Remove("security_update_scheduler_max_concurrency"); } }
         private int? _explicitNullValueSecurityUpdateSchedulerMaxConcurrency = default!;
+        /// <summary>Seconds between dependency management security update scheduler runs for each project. Default: `300`. Maximum: `86400`. Set to `0` to remove the limit.</summary>
+        public int? SecurityUpdateSchedulerProjectPeriodInSeconds { get => _explicitNullValueSecurityUpdateSchedulerProjectPeriodInSeconds; set { _explicitNullValueSecurityUpdateSchedulerProjectPeriodInSeconds = value; AdditionalData?.Remove("security_update_scheduler_project_period_in_seconds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("security_update_scheduler_project_period_in_seconds"); else _explicitNullProperties?.Remove("security_update_scheduler_project_period_in_seconds"); } }
+        private int? _explicitNullValueSecurityUpdateSchedulerProjectPeriodInSeconds = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ApplicationSettingsRequestDependencyManagementSettings"/> and sets the default values.
         /// </summary>
@@ -55,6 +60,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "security_update_scheduler_max_concurrency", n => { SecurityUpdateSchedulerMaxConcurrency = n.GetIntValue(); } },
+                { "security_update_scheduler_project_period_in_seconds", n => { SecurityUpdateSchedulerProjectPeriodInSeconds = n.GetIntValue(); } },
             };
         }
         /// <summary>
@@ -65,6 +71,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("security_update_scheduler_max_concurrency", SecurityUpdateSchedulerMaxConcurrency);
+            writer.WriteIntValue("security_update_scheduler_project_period_in_seconds", SecurityUpdateSchedulerProjectPeriodInSeconds);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
