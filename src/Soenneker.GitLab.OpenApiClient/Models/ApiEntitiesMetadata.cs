@@ -31,10 +31,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The enterprise property</summary>
+        /// <summary>If `true`, the instance runs GitLab Enterprise Edition.</summary>
         public bool? Enterprise { get => _explicitNullValueEnterprise; set { _explicitNullValueEnterprise = value; AdditionalData?.Remove("enterprise"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enterprise"); else _explicitNullProperties?.Remove("enterprise"); } }
         private bool? _explicitNullValueEnterprise = default!;
-        /// <summary>The kas property</summary>
+        /// <summary>Metadata about the GitLab agent server for Kubernetes (KAS).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMetadataKas? Kas { get => _explicitNullValueKas; set { _explicitNullValueKas = value; AdditionalData?.Remove("kas"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("kas"); else _explicitNullProperties?.Remove("kas"); } }
@@ -44,7 +44,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMetadataKas Kas { get => _explicitNullValueKas; set { _explicitNullValueKas = value; AdditionalData?.Remove("kas"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("kas"); else _explicitNullProperties?.Remove("kas"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMetadataKas _explicitNullValueKas = default!;
 #endif
-        /// <summary>The plan property</summary>
+        /// <summary>Plan of the license the instance runs under. An active trial license reports its plan the same way as a paid license. `free` on an instance with no license or with an expired trial. An expired paid license still reports its plan, because its licensed features remain available. `null` where subscriptions are scoped for each namespace rather than for an instance, such as GitLab.com.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Plan { get => _explicitNullValuePlan; set { _explicitNullValuePlan = value; AdditionalData?.Remove("plan"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("plan"); else _explicitNullProperties?.Remove("plan"); } }
@@ -54,7 +54,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Plan { get => _explicitNullValuePlan; set { _explicitNullValuePlan = value; AdditionalData?.Remove("plan"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("plan"); else _explicitNullProperties?.Remove("plan"); } }
         private string _explicitNullValuePlan = default!;
 #endif
-        /// <summary>The revision property</summary>
+        /// <summary>Revision of the GitLab instance.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Revision { get => _explicitNullValueRevision; set { _explicitNullValueRevision = value; AdditionalData?.Remove("revision"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("revision"); else _explicitNullProperties?.Remove("revision"); } }
@@ -64,7 +64,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Revision { get => _explicitNullValueRevision; set { _explicitNullValueRevision = value; AdditionalData?.Remove("revision"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("revision"); else _explicitNullProperties?.Remove("revision"); } }
         private string _explicitNullValueRevision = default!;
 #endif
-        /// <summary>The version property</summary>
+        /// <summary>Version of the GitLab instance.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Version { get => _explicitNullValueVersion; set { _explicitNullValueVersion = value; AdditionalData?.Remove("version"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("version"); else _explicitNullProperties?.Remove("version"); } }

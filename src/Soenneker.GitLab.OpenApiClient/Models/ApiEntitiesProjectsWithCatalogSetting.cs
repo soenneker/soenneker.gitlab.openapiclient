@@ -453,7 +453,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>If `true`, fork pipelines can run in the parent project. Can be set only through the API. Returned only for users with at least the Maintainer role.</summary>
         public bool? CiAllowForkPipelinesToRunInParentProject { get => _explicitNullValueCiAllowForkPipelinesToRunInParentProject; set { _explicitNullValueCiAllowForkPipelinesToRunInParentProject = value; AdditionalData?.Remove("ci_allow_fork_pipelines_to_run_in_parent_project"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ci_allow_fork_pipelines_to_run_in_parent_project"); else _explicitNullProperties?.Remove("ci_allow_fork_pipelines_to_run_in_parent_project"); } }
         private bool? _explicitNullValueCiAllowForkPipelinesToRunInParentProject = default!;
-        /// <summary>The cicd_catalog_enabled property</summary>
+        /// <summary>Whether the project is published to the CI/CD Catalog. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/463043) in GitLab 19.3.</summary>
         public bool? CicdCatalogEnabled { get => _explicitNullValueCicdCatalogEnabled; set { _explicitNullValueCicdCatalogEnabled = value; AdditionalData?.Remove("cicd_catalog_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cicd_catalog_enabled"); else _explicitNullProperties?.Remove("cicd_catalog_enabled"); } }
         private bool? _explicitNullValueCicdCatalogEnabled = default!;
         /// <summary>Path to the CI/CD configuration file.</summary>

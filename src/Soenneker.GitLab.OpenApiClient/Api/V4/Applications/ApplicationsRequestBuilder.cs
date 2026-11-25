@@ -47,7 +47,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Applications
         {
         }
         /// <summary>
-        /// List all registered applications
+        /// List all registered applications. The `secret` value is not returned.
         /// </summary>
         /// <returns>A List&lt;global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplication&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -66,7 +66,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Applications
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// This feature was introduced in GitLab 10.5. The granular_scopes parameter requires the granular_oauth_tokens feature flag.
+        /// Creates an application. Declaring granular scopes records the fine-grained permissions of the application, as a set of access levels and permissions. GitLab creates the application and stores this set in one step. If GitLab rejects the set, it does not create the application. While an application has granular scopes, GitLab adds the `granular` scope to its `scopes`. The granular_scopes parameter requires the granular_oauth_tokens feature flag.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationWithSecret"/></returns>
         /// <param name="body">The request body</param>
@@ -86,7 +86,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Applications
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationWithSecret>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationWithSecret.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// List all registered applications
+        /// List all registered applications. The `secret` value is not returned.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -105,7 +105,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Applications
             return requestInfo;
         }
         /// <summary>
-        /// This feature was introduced in GitLab 10.5. The granular_scopes parameter requires the granular_oauth_tokens feature flag.
+        /// Creates an application. Declaring granular scopes records the fine-grained permissions of the application, as a set of access levels and permissions. GitLab creates the application and stores this set in one step. If GitLab rejects the set, it does not create the application. While an application has granular scopes, GitLab adds the `granular` scope to its `scopes`. The granular_scopes parameter requires the granular_oauth_tokens feature flag.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

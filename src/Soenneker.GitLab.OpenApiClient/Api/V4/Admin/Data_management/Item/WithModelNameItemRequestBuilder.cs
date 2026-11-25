@@ -53,7 +53,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Data_management.Item
         {
         }
         /// <summary>
-        /// Retrieves information about a data model in an instance. Only available to administrators.
+        /// Retrieves information about a data model in an instance. Only available to administrators. Supports keyset pagination on the primary key of the model. To use keyset pagination, set `pagination=keyset`. By default, keyset pagination returns 20 records per page in ascending order. Use `sort` to set the order and `per_page` to set the number of records per page.
         /// </summary>
         /// <returns>A List&lt;global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAdminModel&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -72,7 +72,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Data_management.Item
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// Retrieves information about a data model in an instance. Only available to administrators.
+        /// Retrieves information about a data model in an instance. Only available to administrators. Supports keyset pagination on the primary key of the model. To use keyset pagination, set `pagination=keyset`. By default, keyset pagination returns 20 records per page in ascending order. Use `sort` to set the order and `per_page` to set the number of records per page.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -100,7 +100,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Data_management.Item
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Data_management.Item.WithModelNameItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Retrieves information about a data model in an instance. Only available to administrators.
+        /// Retrieves information about a data model in an instance. Only available to administrators. Supports keyset pagination on the primary key of the model. To use keyset pagination, set `pagination=keyset`. By default, keyset pagination returns 20 records per page in ascending order. Use `sort` to set the order and `per_page` to set the number of records per page.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithModelNameItemRequestBuilderGetQueryParameters 

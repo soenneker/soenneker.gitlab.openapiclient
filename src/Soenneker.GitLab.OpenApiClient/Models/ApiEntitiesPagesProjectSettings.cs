@@ -47,7 +47,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>If `true`, unique domain is enabled.</summary>
         public bool? IsUniqueDomainEnabled { get => _explicitNullValueIsUniqueDomainEnabled; set { _explicitNullValueIsUniqueDomainEnabled = value; AdditionalData?.Remove("is_unique_domain_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_unique_domain_enabled"); else _explicitNullProperties?.Remove("is_unique_domain_enabled"); } }
         private bool? _explicitNullValueIsUniqueDomainEnabled = default!;
-        /// <summary>Primary domain that all Pages requests are redirected to.</summary>
+        /// <summary>Primary domain that all Pages requests are redirected to. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/481334) in GitLab 17.8.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PagesPrimaryDomain { get => _explicitNullValuePagesPrimaryDomain; set { _explicitNullValuePagesPrimaryDomain = value; AdditionalData?.Remove("pages_primary_domain"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pages_primary_domain"); else _explicitNullProperties?.Remove("pages_primary_domain"); } }

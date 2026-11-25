@@ -49,19 +49,19 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Explicit class limit. null when the worker has no explicit limit.</summary>
         public int? ClassLimit { get => _explicitNullValueClassLimit; set { _explicitNullValueClassLimit = value; AdditionalData?.Remove("class_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("class_limit"); else _explicitNullProperties?.Remove("class_limit"); } }
         private int? _explicitNullValueClassLimit = default!;
-        /// <summary>The default_limit_requires_shard_context property</summary>
+        /// <summary>If `true`, the default limit is derived from shard size and cannot be reported outside a Sidekiq process. `false` when `sidekiq_concurrency_limit_default_calculation` is disabled, because the default is then `0`.</summary>
         public bool? DefaultLimitRequiresShardContext { get => _explicitNullValueDefaultLimitRequiresShardContext; set { _explicitNullValueDefaultLimitRequiresShardContext = value; AdditionalData?.Remove("default_limit_requires_shard_context"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_limit_requires_shard_context"); else _explicitNullProperties?.Remove("default_limit_requires_shard_context"); } }
         private bool? _explicitNullValueDefaultLimitRequiresShardContext = default!;
-        /// <summary>The deferred_jobs property</summary>
+        /// <summary>Approximate number of deferred jobs.</summary>
         public int? DeferredJobs { get => _explicitNullValueDeferredJobs; set { _explicitNullValueDeferredJobs = value; AdditionalData?.Remove("deferred_jobs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deferred_jobs"); else _explicitNullProperties?.Remove("deferred_jobs"); } }
         private int? _explicitNullValueDeferredJobs = default!;
-        /// <summary>The disabled_for_worker property</summary>
+        /// <summary>If `true`, the worker-specific bypass flag disables enforcement in the client and server middleware.</summary>
         public bool? DisabledForWorker { get => _explicitNullValueDisabledForWorker; set { _explicitNullValueDisabledForWorker = value; AdditionalData?.Remove("disabled_for_worker"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("disabled_for_worker"); else _explicitNullProperties?.Remove("disabled_for_worker"); } }
         private bool? _explicitNullValueDisabledForWorker = default!;
         /// <summary>Effective limit. Zero means unlimited. Negative values mean paused. null means unknown without shard context.</summary>
         public int? EffectiveLimit { get => _explicitNullValueEffectiveLimit; set { _explicitNullValueEffectiveLimit = value; AdditionalData?.Remove("effective_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("effective_limit"); else _explicitNullProperties?.Remove("effective_limit"); } }
         private int? _explicitNullValueEffectiveLimit = default!;
-        /// <summary>The middleware_enabled property</summary>
+        /// <summary>If `true`, the concurrency limit middleware is enabled.</summary>
         public bool? MiddlewareEnabled { get => _explicitNullValueMiddlewareEnabled; set { _explicitNullValueMiddlewareEnabled = value; AdditionalData?.Remove("middleware_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("middleware_enabled"); else _explicitNullProperties?.Remove("middleware_enabled"); } }
         private bool? _explicitNullValueMiddlewareEnabled = default!;
         /// <summary>Temporary override, or null when absent.</summary>
@@ -70,10 +70,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Remaining override lifetime in seconds, or null when absent.</summary>
         public int? OverrideTtl { get => _explicitNullValueOverrideTtl; set { _explicitNullValueOverrideTtl = value; AdditionalData?.Remove("override_ttl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("override_ttl"); else _explicitNullProperties?.Remove("override_ttl"); } }
         private int? _explicitNullValueOverrideTtl = default!;
-        /// <summary>The running_jobs property</summary>
+        /// <summary>Approximate number of running jobs.</summary>
         public int? RunningJobs { get => _explicitNullValueRunningJobs; set { _explicitNullValueRunningJobs = value; AdditionalData?.Remove("running_jobs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("running_jobs"); else _explicitNullProperties?.Remove("running_jobs"); } }
         private int? _explicitNullValueRunningJobs = default!;
-        /// <summary>The worker_class property</summary>
+        /// <summary>Registered worker class name.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? WorkerClass { get => _explicitNullValueWorkerClass; set { _explicitNullValueWorkerClass = value; AdditionalData?.Remove("worker_class"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("worker_class"); else _explicitNullProperties?.Remove("worker_class"); } }

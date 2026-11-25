@@ -23,6 +23,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             else if (parseNode.GetChildNode("expires_in") is { } nullNodeExpiresIn && nullNodeExpiresIn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExpiresIn = null;
             if (parseNode.GetChildNode("issued_token_type") is null) { _explicitNullValueIssuedTokenType = default!; _explicitNullProperties?.Remove("issued_token_type"); }
             else if (parseNode.GetChildNode("issued_token_type") is { } nullNodeIssuedTokenType && nullNodeIssuedTokenType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IssuedTokenType = null;
+            if (parseNode.GetChildNode("scope") is null) { _explicitNullValueScope = default!; _explicitNullProperties?.Remove("scope"); }
+            else if (parseNode.GetChildNode("scope") is { } nullNodeScope && nullNodeScope.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Scope = null;
             if (parseNode.GetChildNode("token") is null) { _explicitNullValueToken = default!; _explicitNullProperties?.Remove("token"); }
             else if (parseNode.GetChildNode("token") is { } nullNodeToken && nullNodeToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Token = null;
             if (parseNode.GetChildNode("token_type") is null) { _explicitNullValueTokenType = default!; _explicitNullProperties?.Remove("token_type"); }
@@ -53,6 +55,16 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string IssuedTokenType { get => _explicitNullValueIssuedTokenType; set { _explicitNullValueIssuedTokenType = value; AdditionalData?.Remove("issued_token_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issued_token_type"); else _explicitNullProperties?.Remove("issued_token_type"); } }
         private string _explicitNullValueIssuedTokenType = default!;
+#endif
+        /// <summary>The actions granted on the resource. Only for an audience bound to a resource.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Scope { get => _explicitNullValueScope; set { _explicitNullValueScope = value; AdditionalData?.Remove("scope"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scope"); else _explicitNullProperties?.Remove("scope"); } }
+        private string? _explicitNullValueScope = default!;
+#nullable restore
+#else
+        public string Scope { get => _explicitNullValueScope; set { _explicitNullValueScope = value; AdditionalData?.Remove("scope"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scope"); else _explicitNullProperties?.Remove("scope"); } }
+        private string _explicitNullValueScope = default!;
 #endif
         /// <summary>Same value as access_token, for clients that read token, such as Docker&apos;s registry token auth flow.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -97,11 +109,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(5)
+            return new Dictionary<string, Action<IParseNode>>(6)
             {
                 { "access_token", n => { AccessToken = n.GetStringValue(); } },
                 { "expires_in", n => { ExpiresIn = n.GetIntValue(); } },
                 { "issued_token_type", n => { IssuedTokenType = n.GetStringValue(); } },
+                { "scope", n => { Scope = n.GetStringValue(); } },
                 { "token", n => { Token = n.GetStringValue(); } },
                 { "token_type", n => { TokenType = n.GetStringValue(); } },
             };
@@ -116,6 +129,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("access_token", AccessToken);
             writer.WriteIntValue("expires_in", ExpiresIn);
             writer.WriteStringValue("issued_token_type", IssuedTokenType);
+            writer.WriteStringValue("scope", Scope);
             writer.WriteStringValue("token", Token);
             writer.WriteStringValue("token_type", TokenType);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);

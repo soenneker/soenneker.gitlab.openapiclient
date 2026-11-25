@@ -60,22 +60,22 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The providers property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Providers { get => _explicitNullValueProviders; set { _explicitNullValueProviders = value; AdditionalData?.Remove("providers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("providers"); else _explicitNullProperties?.Remove("providers"); } }
-        private string? _explicitNullValueProviders = default!;
+        public List<string>? Providers { get => _explicitNullValueProviders; set { _explicitNullValueProviders = value; AdditionalData?.Remove("providers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("providers"); else _explicitNullProperties?.Remove("providers"); } }
+        private List<string>? _explicitNullValueProviders = default!;
 #nullable restore
 #else
-        public string Providers { get => _explicitNullValueProviders; set { _explicitNullValueProviders = value; AdditionalData?.Remove("providers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("providers"); else _explicitNullProperties?.Remove("providers"); } }
-        private string _explicitNullValueProviders = default!;
+        public List<string> Providers { get => _explicitNullValueProviders; set { _explicitNullValueProviders = value; AdditionalData?.Remove("providers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("providers"); else _explicitNullProperties?.Remove("providers"); } }
+        private List<string> _explicitNullValueProviders = default!;
 #endif
         /// <summary>The root property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Root { get => _explicitNullValueRoot; set { _explicitNullValueRoot = value; AdditionalData?.Remove("root"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("root"); else _explicitNullProperties?.Remove("root"); } }
-        private string? _explicitNullValueRoot = default!;
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesTerraformModuleVersionRootProperty? Root { get => _explicitNullValueRoot; set { _explicitNullValueRoot = value; AdditionalData?.Remove("root"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("root"); else _explicitNullProperties?.Remove("root"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesTerraformModuleVersionRootProperty? _explicitNullValueRoot = default!;
 #nullable restore
 #else
-        public string Root { get => _explicitNullValueRoot; set { _explicitNullValueRoot = value; AdditionalData?.Remove("root"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("root"); else _explicitNullProperties?.Remove("root"); } }
-        private string _explicitNullValueRoot = default!;
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesTerraformModuleVersionRootProperty Root { get => _explicitNullValueRoot; set { _explicitNullValueRoot = value; AdditionalData?.Remove("root"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("root"); else _explicitNullProperties?.Remove("root"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesTerraformModuleVersionRootProperty _explicitNullValueRoot = default!;
 #endif
         /// <summary>The source property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -90,12 +90,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The submodules property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Submodules { get => _explicitNullValueSubmodules; set { _explicitNullValueSubmodules = value; AdditionalData?.Remove("submodules"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("submodules"); else _explicitNullProperties?.Remove("submodules"); } }
-        private string? _explicitNullValueSubmodules = default!;
+        public List<string>? Submodules { get => _explicitNullValueSubmodules; set { _explicitNullValueSubmodules = value; AdditionalData?.Remove("submodules"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("submodules"); else _explicitNullProperties?.Remove("submodules"); } }
+        private List<string>? _explicitNullValueSubmodules = default!;
 #nullable restore
 #else
-        public string Submodules { get => _explicitNullValueSubmodules; set { _explicitNullValueSubmodules = value; AdditionalData?.Remove("submodules"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("submodules"); else _explicitNullProperties?.Remove("submodules"); } }
-        private string _explicitNullValueSubmodules = default!;
+        public List<string> Submodules { get => _explicitNullValueSubmodules; set { _explicitNullValueSubmodules = value; AdditionalData?.Remove("submodules"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("submodules"); else _explicitNullProperties?.Remove("submodules"); } }
+        private List<string> _explicitNullValueSubmodules = default!;
 #endif
         /// <summary>The version property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -110,12 +110,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The versions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Versions { get => _explicitNullValueVersions; set { _explicitNullValueVersions = value; AdditionalData?.Remove("versions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("versions"); else _explicitNullProperties?.Remove("versions"); } }
-        private string? _explicitNullValueVersions = default!;
+        public List<string>? Versions { get => _explicitNullValueVersions; set { _explicitNullValueVersions = value; AdditionalData?.Remove("versions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("versions"); else _explicitNullProperties?.Remove("versions"); } }
+        private List<string>? _explicitNullValueVersions = default!;
 #nullable restore
 #else
-        public string Versions { get => _explicitNullValueVersions; set { _explicitNullValueVersions = value; AdditionalData?.Remove("versions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("versions"); else _explicitNullProperties?.Remove("versions"); } }
-        private string _explicitNullValueVersions = default!;
+        public List<string> Versions { get => _explicitNullValueVersions; set { _explicitNullValueVersions = value; AdditionalData?.Remove("versions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("versions"); else _explicitNullProperties?.Remove("versions"); } }
+        private List<string> _explicitNullValueVersions = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesTerraformModuleVersion"/> and sets the default values.
@@ -144,12 +144,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             {
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "provider", n => { Provider = n.GetStringValue(); } },
-                { "providers", n => { Providers = n.GetStringValue(); } },
-                { "root", n => { Root = n.GetStringValue(); } },
+                { "providers", n => { Providers = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "root", n => { Root = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesTerraformModuleVersionRootProperty>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesTerraformModuleVersionRootProperty.CreateFromDiscriminatorValue); } },
                 { "source", n => { Source = n.GetStringValue(); } },
-                { "submodules", n => { Submodules = n.GetStringValue(); } },
+                { "submodules", n => { Submodules = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "version", n => { Version = n.GetStringValue(); } },
-                { "versions", n => { Versions = n.GetStringValue(); } },
+                { "versions", n => { Versions = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
             };
         }
         /// <summary>
@@ -161,12 +161,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("provider", Provider);
-            writer.WriteStringValue("providers", Providers);
-            writer.WriteStringValue("root", Root);
+            writer.WriteCollectionOfPrimitiveValues<string>("providers", Providers);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesTerraformModuleVersionRootProperty>("root", Root);
             writer.WriteStringValue("source", Source);
-            writer.WriteStringValue("submodules", Submodules);
+            writer.WriteCollectionOfPrimitiveValues<string>("submodules", Submodules);
             writer.WriteStringValue("version", Version);
-            writer.WriteStringValue("versions", Versions);
+            writer.WriteCollectionOfPrimitiveValues<string>("versions", Versions);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -48,10 +48,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>CI artifacts size in bytes.</summary>
         public int? BuildArtifactsSize { get => _explicitNullValueBuildArtifactsSize; set { _explicitNullValueBuildArtifactsSize = value; AdditionalData?.Remove("build_artifacts_size"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("build_artifacts_size"); else _explicitNullProperties?.Remove("build_artifacts_size"); } }
         private int? _explicitNullValueBuildArtifactsSize = default!;
-        /// <summary>container registry size in bytes.</summary>
+        /// <summary>Total storage size in bytes used by all container repositories in the group and its subgroups. `0` when the container registry metadata database is not enabled.</summary>
         public int? ContainerRegistrySize { get => _explicitNullValueContainerRegistrySize; set { _explicitNullValueContainerRegistrySize = value; AdditionalData?.Remove("container_registry_size"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("container_registry_size"); else _explicitNullProperties?.Remove("container_registry_size"); } }
         private int? _explicitNullValueContainerRegistrySize = default!;
-        /// <summary>Indicates whether the deduplicated container registry size for the namespace is an estimated value or not.</summary>
+        /// <summary>Indicates whether the deduplicated container registry size for the namespace is an estimated value or not. `true` when the size is estimated due to performance constraints.</summary>
         public bool? ContainerRegistrySizeIsEstimated { get => _explicitNullValueContainerRegistrySizeIsEstimated; set { _explicitNullValueContainerRegistrySizeIsEstimated = value; AdditionalData?.Remove("container_registry_size_is_estimated"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("container_registry_size_is_estimated"); else _explicitNullProperties?.Remove("container_registry_size_is_estimated"); } }
         private bool? _explicitNullValueContainerRegistrySizeIsEstimated = default!;
         /// <summary>Dependency Proxy sizes in bytes.</summary>

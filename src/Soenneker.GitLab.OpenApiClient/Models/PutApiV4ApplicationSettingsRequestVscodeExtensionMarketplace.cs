@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
     /// <summary>
-    /// Settings for VS Code Extension Marketplace.
+    /// Settings for VS Code Extension Marketplace. Used by the Web IDE and workspaces.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PutApiV4ApplicationSettingsRequestVscodeExtensionMarketplace : IAdditionalDataHolder, IParsable

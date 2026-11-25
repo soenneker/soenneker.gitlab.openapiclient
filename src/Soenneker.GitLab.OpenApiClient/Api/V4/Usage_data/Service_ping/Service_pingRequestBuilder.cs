@@ -33,7 +33,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Usage_data.Service_ping
         {
         }
         /// <summary>
-        /// Retrieves the Service Ping payload from the application cache as JSON. If no cached payload is available, returns an empty response. Requires a personal access token with the `read_service_ping` scope. Introduced in GitLab 16.9.
+        /// Retrieves the Service Ping payload from the application cache as JSON. If no cached payload is available, returns an empty response. If the payload is empty, check that Service Ping is enabled and wait for the cron job to run, or generate the payload manually. Requires a personal access token with the `read_service_ping` scope.
         /// </summary>
         /// <returns>A <see cref="Stream"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -51,7 +51,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Usage_data.Service_ping
             return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Retrieves the Service Ping payload from the application cache as JSON. If no cached payload is available, returns an empty response. Requires a personal access token with the `read_service_ping` scope. Introduced in GitLab 16.9.
+        /// Retrieves the Service Ping payload from the application cache as JSON. If no cached payload is available, returns an empty response. If the payload is empty, check that Service Ping is enabled and wait for the cron job to run, or generate the payload manually. Requires a personal access token with the `read_service_ping` scope.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

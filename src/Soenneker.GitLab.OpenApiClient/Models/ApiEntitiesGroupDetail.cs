@@ -791,22 +791,22 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The unique_project_download_limit_alertlist property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UniqueProjectDownloadLimitAlertlist { get => _explicitNullValueUniqueProjectDownloadLimitAlertlist; set { _explicitNullValueUniqueProjectDownloadLimitAlertlist = value; AdditionalData?.Remove("unique_project_download_limit_alertlist"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unique_project_download_limit_alertlist"); else _explicitNullProperties?.Remove("unique_project_download_limit_alertlist"); } }
-        private string? _explicitNullValueUniqueProjectDownloadLimitAlertlist = default!;
+        public List<int?>? UniqueProjectDownloadLimitAlertlist { get => _explicitNullValueUniqueProjectDownloadLimitAlertlist; set { _explicitNullValueUniqueProjectDownloadLimitAlertlist = value; AdditionalData?.Remove("unique_project_download_limit_alertlist"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unique_project_download_limit_alertlist"); else _explicitNullProperties?.Remove("unique_project_download_limit_alertlist"); } }
+        private List<int?>? _explicitNullValueUniqueProjectDownloadLimitAlertlist = default!;
 #nullable restore
 #else
-        public string UniqueProjectDownloadLimitAlertlist { get => _explicitNullValueUniqueProjectDownloadLimitAlertlist; set { _explicitNullValueUniqueProjectDownloadLimitAlertlist = value; AdditionalData?.Remove("unique_project_download_limit_alertlist"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unique_project_download_limit_alertlist"); else _explicitNullProperties?.Remove("unique_project_download_limit_alertlist"); } }
-        private string _explicitNullValueUniqueProjectDownloadLimitAlertlist = default!;
+        public List<int?> UniqueProjectDownloadLimitAlertlist { get => _explicitNullValueUniqueProjectDownloadLimitAlertlist; set { _explicitNullValueUniqueProjectDownloadLimitAlertlist = value; AdditionalData?.Remove("unique_project_download_limit_alertlist"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unique_project_download_limit_alertlist"); else _explicitNullProperties?.Remove("unique_project_download_limit_alertlist"); } }
+        private List<int?> _explicitNullValueUniqueProjectDownloadLimitAlertlist = default!;
 #endif
         /// <summary>The unique_project_download_limit_allowlist property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UniqueProjectDownloadLimitAllowlist { get => _explicitNullValueUniqueProjectDownloadLimitAllowlist; set { _explicitNullValueUniqueProjectDownloadLimitAllowlist = value; AdditionalData?.Remove("unique_project_download_limit_allowlist"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unique_project_download_limit_allowlist"); else _explicitNullProperties?.Remove("unique_project_download_limit_allowlist"); } }
-        private string? _explicitNullValueUniqueProjectDownloadLimitAllowlist = default!;
+        public List<string>? UniqueProjectDownloadLimitAllowlist { get => _explicitNullValueUniqueProjectDownloadLimitAllowlist; set { _explicitNullValueUniqueProjectDownloadLimitAllowlist = value; AdditionalData?.Remove("unique_project_download_limit_allowlist"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unique_project_download_limit_allowlist"); else _explicitNullProperties?.Remove("unique_project_download_limit_allowlist"); } }
+        private List<string>? _explicitNullValueUniqueProjectDownloadLimitAllowlist = default!;
 #nullable restore
 #else
-        public string UniqueProjectDownloadLimitAllowlist { get => _explicitNullValueUniqueProjectDownloadLimitAllowlist; set { _explicitNullValueUniqueProjectDownloadLimitAllowlist = value; AdditionalData?.Remove("unique_project_download_limit_allowlist"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unique_project_download_limit_allowlist"); else _explicitNullProperties?.Remove("unique_project_download_limit_allowlist"); } }
-        private string _explicitNullValueUniqueProjectDownloadLimitAllowlist = default!;
+        public List<string> UniqueProjectDownloadLimitAllowlist { get => _explicitNullValueUniqueProjectDownloadLimitAllowlist; set { _explicitNullValueUniqueProjectDownloadLimitAllowlist = value; AdditionalData?.Remove("unique_project_download_limit_allowlist"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unique_project_download_limit_allowlist"); else _explicitNullProperties?.Remove("unique_project_download_limit_allowlist"); } }
+        private List<string> _explicitNullValueUniqueProjectDownloadLimitAllowlist = default!;
 #endif
         /// <summary>The unique_project_download_limit_interval_in_seconds property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -965,8 +965,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "subgroup_creation_level", n => { SubgroupCreationLevel = n.GetStringValue(); } },
                 { "two_factor_grace_period", n => { TwoFactorGracePeriod = n.GetIntValue(); } },
                 { "unique_project_download_limit", n => { UniqueProjectDownloadLimit = n.GetStringValue(); } },
-                { "unique_project_download_limit_alertlist", n => { UniqueProjectDownloadLimitAlertlist = n.GetStringValue(); } },
-                { "unique_project_download_limit_allowlist", n => { UniqueProjectDownloadLimitAllowlist = n.GetStringValue(); } },
+                { "unique_project_download_limit_alertlist", n => { UniqueProjectDownloadLimitAlertlist = n.GetCollectionOfPrimitiveValues<int?>()?.AsList(); } },
+                { "unique_project_download_limit_allowlist", n => { UniqueProjectDownloadLimitAllowlist = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "unique_project_download_limit_interval_in_seconds", n => { UniqueProjectDownloadLimitIntervalInSeconds = n.GetStringValue(); } },
                 { "visibility", n => { Visibility = n.GetStringValue(); } },
                 { "web_based_commit_signing_enabled", n => { WebBasedCommitSigningEnabled = n.GetStringValue(); } },
@@ -1063,8 +1063,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("subgroup_creation_level", SubgroupCreationLevel);
             writer.WriteIntValue("two_factor_grace_period", TwoFactorGracePeriod);
             writer.WriteStringValue("unique_project_download_limit", UniqueProjectDownloadLimit);
-            writer.WriteStringValue("unique_project_download_limit_alertlist", UniqueProjectDownloadLimitAlertlist);
-            writer.WriteStringValue("unique_project_download_limit_allowlist", UniqueProjectDownloadLimitAllowlist);
+            writer.WriteCollectionOfPrimitiveValues<int?>("unique_project_download_limit_alertlist", UniqueProjectDownloadLimitAlertlist);
+            writer.WriteCollectionOfPrimitiveValues<string>("unique_project_download_limit_allowlist", UniqueProjectDownloadLimitAllowlist);
             writer.WriteStringValue("unique_project_download_limit_interval_in_seconds", UniqueProjectDownloadLimitIntervalInSeconds);
             writer.WriteStringValue("visibility", Visibility);
             writer.WriteStringValue("web_based_commit_signing_enabled", WebBasedCommitSigningEnabled);

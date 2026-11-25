@@ -167,6 +167,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             else if (parseNode.GetChildNode("ci_max_runner_managers_per_runner") is { } nullNodeCiMaxRunnerManagersPerRunner && nullNodeCiMaxRunnerManagersPerRunner.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CiMaxRunnerManagersPerRunner = null;
             if (parseNode.GetChildNode("ci_max_total_yaml_size_bytes") is null) { _explicitNullValueCiMaxTotalYamlSizeBytes = default!; _explicitNullProperties?.Remove("ci_max_total_yaml_size_bytes"); }
             else if (parseNode.GetChildNode("ci_max_total_yaml_size_bytes") is { } nullNodeCiMaxTotalYamlSizeBytes && nullNodeCiMaxTotalYamlSizeBytes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CiMaxTotalYamlSizeBytes = null;
+            if (parseNode.GetChildNode("ci_minutes_usage_projects_per_hour_limit") is null) { _explicitNullValueCiMinutesUsageProjectsPerHourLimit = default!; _explicitNullProperties?.Remove("ci_minutes_usage_projects_per_hour_limit"); }
+            else if (parseNode.GetChildNode("ci_minutes_usage_projects_per_hour_limit") is { } nullNodeCiMinutesUsageProjectsPerHourLimit && nullNodeCiMinutesUsageProjectsPerHourLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CiMinutesUsageProjectsPerHourLimit = null;
+            if (parseNode.GetChildNode("ci_minutes_usage_projects_per_minute_limit") is null) { _explicitNullValueCiMinutesUsageProjectsPerMinuteLimit = default!; _explicitNullProperties?.Remove("ci_minutes_usage_projects_per_minute_limit"); }
+            else if (parseNode.GetChildNode("ci_minutes_usage_projects_per_minute_limit") is { } nullNodeCiMinutesUsageProjectsPerMinuteLimit && nullNodeCiMinutesUsageProjectsPerMinuteLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CiMinutesUsageProjectsPerMinuteLimit = null;
             if (parseNode.GetChildNode("ci_partitions_in_seconds_limit") is null) { _explicitNullValueCiPartitionsInSecondsLimit = default!; _explicitNullProperties?.Remove("ci_partitions_in_seconds_limit"); }
             else if (parseNode.GetChildNode("ci_partitions_in_seconds_limit") is { } nullNodeCiPartitionsInSecondsLimit && nullNodeCiPartitionsInSecondsLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CiPartitionsInSecondsLimit = null;
             if (parseNode.GetChildNode("ci_partitions_in_seconds_limit_human_readable") is null) { _explicitNullValueCiPartitionsInSecondsLimitHumanReadable = default!; _explicitNullProperties?.Remove("ci_partitions_in_seconds_limit_human_readable"); }
@@ -645,6 +649,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             else if (parseNode.GetChildNode("grafana_url") is { } nullNodeGrafanaUrl && nullNodeGrafanaUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GrafanaUrl = null;
             if (parseNode.GetChildNode("granular_tokens_enforced_after") is null) { _explicitNullValueGranularTokensEnforcedAfter = default!; _explicitNullProperties?.Remove("granular_tokens_enforced_after"); }
             else if (parseNode.GetChildNode("granular_tokens_enforced_after") is { } nullNodeGranularTokensEnforcedAfter && nullNodeGranularTokensEnforcedAfter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GranularTokensEnforcedAfter = null;
+            if (parseNode.GetChildNode("graphql_participant_fields_request_limit") is null) { _explicitNullValueGraphqlParticipantFieldsRequestLimit = default!; _explicitNullProperties?.Remove("graphql_participant_fields_request_limit"); }
+            else if (parseNode.GetChildNode("graphql_participant_fields_request_limit") is { } nullNodeGraphqlParticipantFieldsRequestLimit && nullNodeGraphqlParticipantFieldsRequestLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GraphqlParticipantFieldsRequestLimit = null;
             if (parseNode.GetChildNode("gravatar_enabled") is null) { _explicitNullValueGravatarEnabled = default!; _explicitNullProperties?.Remove("gravatar_enabled"); }
             else if (parseNode.GetChildNode("gravatar_enabled") is { } nullNodeGravatarEnabled && nullNodeGravatarEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GravatarEnabled = null;
             if (parseNode.GetChildNode("group_api_limit") is null) { _explicitNullValueGroupApiLimit = default!; _explicitNullProperties?.Remove("group_api_limit"); }
@@ -1649,7 +1655,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string AfterSignUpText { get => _explicitNullValueAfterSignUpText; set { _explicitNullValueAfterSignUpText = value; AdditionalData?.Remove("after_sign_up_text"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("after_sign_up_text"); else _explicitNullProperties?.Remove("after_sign_up_text"); } }
         private string _explicitNullValueAfterSignUpText = default!;
 #endif
-        /// <summary>Maximum requests a user can make per 8 hours to aiAction endpoint</summary>
+        /// <summary>Maximum requests a user can make per 8 hours to aiAction endpoint. Default: `160`. Must be greater than `0`.</summary>
         public int? AiActionApiRateLimit { get => _explicitNullValueAiActionApiRateLimit; set { _explicitNullValueAiActionApiRateLimit = value; AdditionalData?.Remove("ai_action_api_rate_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ai_action_api_rate_limit"); else _explicitNullProperties?.Remove("ai_action_api_rate_limit"); } }
         private int? _explicitNullValueAiActionApiRateLimit = default!;
         /// <summary>The ai_audit_events_streaming_enabled property</summary>
@@ -1662,7 +1668,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string AiAuditEventsStreamingEnabled { get => _explicitNullValueAiAuditEventsStreamingEnabled; set { _explicitNullValueAiAuditEventsStreamingEnabled = value; AdditionalData?.Remove("ai_audit_events_streaming_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ai_audit_events_streaming_enabled"); else _explicitNullProperties?.Remove("ai_audit_events_streaming_enabled"); } }
         private string _explicitNullValueAiAuditEventsStreamingEnabled = default!;
 #endif
-        /// <summary>Generate API key at http://www.akismet.com</summary>
+        /// <summary>API key for Akismet spam protection. Generate API key at http://www.akismet.com</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? AkismetApiKey { get => _explicitNullValueAkismetApiKey; set { _explicitNullValueAkismetApiKey = value; AdditionalData?.Remove("akismet_api_key"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("akismet_api_key"); else _explicitNullProperties?.Remove("akismet_api_key"); } }
@@ -1672,7 +1678,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string AkismetApiKey { get => _explicitNullValueAkismetApiKey; set { _explicitNullValueAkismetApiKey = value; AdditionalData?.Remove("akismet_api_key"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("akismet_api_key"); else _explicitNullProperties?.Remove("akismet_api_key"); } }
         private string _explicitNullValueAkismetApiKey = default!;
 #endif
-        /// <summary>If `true`, helps prevent bots from creating issues. Requires `akismet_api_key`.</summary>
+        /// <summary>If `true`, enables Akismet spam protection, which helps prevent bots from creating issues. Requires `akismet_api_key`.</summary>
         public bool? AkismetEnabled { get => _explicitNullValueAkismetEnabled; set { _explicitNullValueAkismetEnabled = value; AdditionalData?.Remove("akismet_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("akismet_enabled"); else _explicitNullProperties?.Remove("akismet_enabled"); } }
         private bool? _explicitNullValueAkismetEnabled = default!;
         /// <summary>If `true`, allows users to delete their accounts. Premium and Ultimate only.</summary>
@@ -1861,10 +1867,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public List<string> AssetProxyAllowlist { get => _explicitNullValueAssetProxyAllowlist; set { _explicitNullValueAssetProxyAllowlist = value; AdditionalData?.Remove("asset_proxy_allowlist"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("asset_proxy_allowlist"); else _explicitNullProperties?.Remove("asset_proxy_allowlist"); } }
         private List<string> _explicitNullValueAssetProxyAllowlist = default!;
 #endif
-        /// <summary>Enable proxying of assets</summary>
+        /// <summary>Enable proxying of assets. Requires `asset_proxy_url` and `asset_proxy_secret_key`. GitLab restart is required to apply changes.</summary>
         public bool? AssetProxyEnabled { get => _explicitNullValueAssetProxyEnabled; set { _explicitNullValueAssetProxyEnabled = value; AdditionalData?.Remove("asset_proxy_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("asset_proxy_enabled"); else _explicitNullProperties?.Remove("asset_proxy_enabled"); } }
         private bool? _explicitNullValueAssetProxyEnabled = default!;
-        /// <summary>Shared secret with the asset proxy server</summary>
+        /// <summary>Shared secret with the asset proxy server. GitLab restart is required to apply changes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? AssetProxySecretKey { get => _explicitNullValueAssetProxySecretKey; set { _explicitNullValueAssetProxySecretKey = value; AdditionalData?.Remove("asset_proxy_secret_key"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("asset_proxy_secret_key"); else _explicitNullProperties?.Remove("asset_proxy_secret_key"); } }
@@ -1874,7 +1880,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string AssetProxySecretKey { get => _explicitNullValueAssetProxySecretKey; set { _explicitNullValueAssetProxySecretKey = value; AdditionalData?.Remove("asset_proxy_secret_key"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("asset_proxy_secret_key"); else _explicitNullProperties?.Remove("asset_proxy_secret_key"); } }
         private string _explicitNullValueAssetProxySecretKey = default!;
 #endif
-        /// <summary>URL of the asset proxy server</summary>
+        /// <summary>URL of the asset proxy server. GitLab restart is required to apply changes.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? AssetProxyUrl { get => _explicitNullValueAssetProxyUrl; set { _explicitNullValueAssetProxyUrl = value; AdditionalData?.Remove("asset_proxy_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("asset_proxy_url"); else _explicitNullProperties?.Remove("asset_proxy_url"); } }
@@ -1894,10 +1900,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public List<string> AssetProxyWhitelist { get => _explicitNullValueAssetProxyWhitelist; set { _explicitNullValueAssetProxyWhitelist = value; AdditionalData?.Remove("asset_proxy_whitelist"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("asset_proxy_whitelist"); else _explicitNullProperties?.Remove("asset_proxy_whitelist"); } }
         private List<string> _explicitNullValueAssetProxyWhitelist = default!;
 #endif
-        /// <summary>Maximum number of requests per minute per user to the instance audit events API.</summary>
+        /// <summary>Maximum number of requests per minute per user to the instance audit events API. Default: `200`. Set to `0` to disable the rate limit. GitLab Self-Managed, Premium and Ultimate only. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/248055) in GitLab 19.4.</summary>
         public int? AuditEventsApiLimit { get => _explicitNullValueAuditEventsApiLimit; set { _explicitNullValueAuditEventsApiLimit = value; AdditionalData?.Remove("audit_events_api_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audit_events_api_limit"); else _explicitNullProperties?.Remove("audit_events_api_limit"); } }
         private int? _explicitNullValueAuditEventsApiLimit = default!;
-        /// <summary>If `true`, runs cleanup workers that permanently delete authentication login history older than one year, and previously revoked OAuth access tokens and grants older than one month. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/work_items/579002) in GitLab 18.7.</summary>
+        /// <summary>If `true`, runs cleanup workers that permanently delete authentication login history older than one year, and previously revoked OAuth access tokens and grants older than one month. Default is `false`. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/work_items/579002) in GitLab 18.7.</summary>
         public bool? AuthnDataRetentionCleanupEnabled { get => _explicitNullValueAuthnDataRetentionCleanupEnabled; set { _explicitNullValueAuthnDataRetentionCleanupEnabled = value; AdditionalData?.Remove("authn_data_retention_cleanup_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authn_data_retention_cleanup_enabled"); else _explicitNullProperties?.Remove("authn_data_retention_cleanup_enabled"); } }
         private bool? _explicitNullValueAuthnDataRetentionCleanupEnabled = default!;
         /// <summary>If `true`, GitLab uses the `authorized_keys` file to authenticate SSH keys, which supports Git over SSH without additional configuration. Disable only if you have configured your OpenSSH server to use `AuthorizedKeysCommand`. Defaults to `true`.</summary>
@@ -1991,7 +1997,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Maximum number of requests that calculate billable users per minute per user per top-level group. Default: `500`. Set to `0` to disable the rate limit.</summary>
         public int? BilledUsersScanPerMinuteLimit { get => _explicitNullValueBilledUsersScanPerMinuteLimit; set { _explicitNullValueBilledUsersScanPerMinuteLimit = value; AdditionalData?.Remove("billed_users_scan_per_minute_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billed_users_scan_per_minute_limit"); else _explicitNullProperties?.Remove("billed_users_scan_per_minute_limit"); } }
         private int? _explicitNullValueBilledUsersScanPerMinuteLimit = default!;
-        /// <summary>The block_jwt_for_reclaimed_paths property</summary>
+        /// <summary>If `true`, blocks CI/CD JWT and OIDC token generation for projects that have reclaimed a previously used namespace path. Default is `true`. Disable only if you accept the authentication bypass risk of namespace path reclamation. GitLab Self-Managed and GitLab Dedicated only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? BlockJwtForReclaimedPaths { get => _explicitNullValueBlockJwtForReclaimedPaths; set { _explicitNullValueBlockJwtForReclaimedPaths = value; AdditionalData?.Remove("block_jwt_for_reclaimed_paths"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("block_jwt_for_reclaimed_paths"); else _explicitNullProperties?.Remove("block_jwt_for_reclaimed_paths"); } }
@@ -2098,13 +2104,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Sampling rate for CI job telemetry, ranging from 0.0 to 1.0.</summary>
         public double? CiJobTelemetrySamplingRate { get => _explicitNullValueCiJobTelemetrySamplingRate; set { _explicitNullValueCiJobTelemetrySamplingRate = value; AdditionalData?.Remove("ci_job_telemetry_sampling_rate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ci_job_telemetry_sampling_rate"); else _explicitNullProperties?.Remove("ci_job_telemetry_sampling_rate"); } }
         private double? _explicitNullValueCiJobTelemetrySamplingRate = default!;
-        /// <summary>Job log update interval when the job log is not open, in seconds.</summary>
+        /// <summary>Job log update interval when the job log is not open, in seconds. Must be between `3` and `3600`. Default is `60`.</summary>
         public int? CiJobTraceUpdateInterval { get => _explicitNullValueCiJobTraceUpdateInterval; set { _explicitNullValueCiJobTraceUpdateInterval = value; AdditionalData?.Remove("ci_job_trace_update_interval"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ci_job_trace_update_interval"); else _explicitNullProperties?.Remove("ci_job_trace_update_interval"); } }
         private int? _explicitNullValueCiJobTraceUpdateInterval = default!;
-        /// <summary>Job log update interval when the job log is open, in seconds.</summary>
+        /// <summary>Job log update interval when the job log is open, in seconds. Must be between `3` and `3600` and less than or equal to `ci_job_trace_update_interval`. Default is `3`.</summary>
         public int? CiJobTraceUpdateIntervalWhenBeingWatched { get => _explicitNullValueCiJobTraceUpdateIntervalWhenBeingWatched; set { _explicitNullValueCiJobTraceUpdateIntervalWhenBeingWatched = value; AdditionalData?.Remove("ci_job_trace_update_interval_when_being_watched"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ci_job_trace_update_interval_when_being_watched"); else _explicitNullProperties?.Remove("ci_job_trace_update_interval_when_being_watched"); } }
         private int? _explicitNullValueCiJobTraceUpdateIntervalWhenBeingWatched = default!;
-        /// <summary>If `true`, `GET /projects/:id/ci/lint` requires authentication, including for public projects.</summary>
+        /// <summary>If `true`, `GET /projects/:id/ci/lint` requires authentication, including for public projects. Default is `false`.</summary>
         public bool? CiLintApiRequireAuthentication { get => _explicitNullValueCiLintApiRequireAuthentication; set { _explicitNullValueCiLintApiRequireAuthentication = value; AdditionalData?.Remove("ci_lint_api_require_authentication"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ci_lint_api_require_authentication"); else _explicitNullProperties?.Remove("ci_lint_api_require_authentication"); } }
         private bool? _explicitNullValueCiLintApiRequireAuthentication = default!;
         /// <summary>Maximum number of CI Lint requests per minute per user. Set to `0` for unlimited requests. Disabled by default.</summary>
@@ -2129,6 +2135,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string CiMaxTotalYamlSizeBytes { get => _explicitNullValueCiMaxTotalYamlSizeBytes; set { _explicitNullValueCiMaxTotalYamlSizeBytes = value; AdditionalData?.Remove("ci_max_total_yaml_size_bytes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ci_max_total_yaml_size_bytes"); else _explicitNullProperties?.Remove("ci_max_total_yaml_size_bytes"); } }
         private string _explicitNullValueCiMaxTotalYamlSizeBytes = default!;
 #endif
+        /// <summary>Maximum number of `ciMinutesUsage` GraphQL requests that select `projects`, per hour per user. Default: `600`. Set to `0` to disable the rate limit.</summary>
+        public int? CiMinutesUsageProjectsPerHourLimit { get => _explicitNullValueCiMinutesUsageProjectsPerHourLimit; set { _explicitNullValueCiMinutesUsageProjectsPerHourLimit = value; AdditionalData?.Remove("ci_minutes_usage_projects_per_hour_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ci_minutes_usage_projects_per_hour_limit"); else _explicitNullProperties?.Remove("ci_minutes_usage_projects_per_hour_limit"); } }
+        private int? _explicitNullValueCiMinutesUsageProjectsPerHourLimit = default!;
+        /// <summary>Maximum number of `ciMinutesUsage` GraphQL requests that select `projects`, per minute per user. Default: `60`. Set to `0` to disable the rate limit.</summary>
+        public int? CiMinutesUsageProjectsPerMinuteLimit { get => _explicitNullValueCiMinutesUsageProjectsPerMinuteLimit; set { _explicitNullValueCiMinutesUsageProjectsPerMinuteLimit = value; AdditionalData?.Remove("ci_minutes_usage_projects_per_minute_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ci_minutes_usage_projects_per_minute_limit"); else _explicitNullProperties?.Remove("ci_minutes_usage_projects_per_minute_limit"); } }
+        private int? _explicitNullValueCiMinutesUsageProjectsPerMinuteLimit = default!;
         /// <summary>Time window, in seconds, before new CI partitions are created and the system switches to the next set of partitions. Must be between 1 month and 6 months. Default is 1 month (`2592000`). Write-only. Not returned in GET responses. Deprecated. Use `ci_partitions_in_seconds_limit_human_readable` instead. Scheduled for removal in API v5.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -2174,7 +2186,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string CiTelemetryOtelEndpoint { get => _explicitNullValueCiTelemetryOtelEndpoint; set { _explicitNullValueCiTelemetryOtelEndpoint = value; AdditionalData?.Remove("ci_telemetry_otel_endpoint"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ci_telemetry_otel_endpoint"); else _explicitNullProperties?.Remove("ci_telemetry_otel_endpoint"); } }
         private string _explicitNullValueCiTelemetryOtelEndpoint = default!;
 #endif
-        /// <summary>Custom &quot;Open with&quot; clients shown in the project Code dropdown list</summary>
+        /// <summary>Custom &quot;Open with&quot; clients shown in the project Code dropdown list. Each entry has a `name` and at least one of `ssh_url_template` or `http_url_template`, each containing `{url}` exactly once.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ApplicationSettingsRequestCodeDropdownCustomClientsItem>? CodeDropdownCustomClients { get => _explicitNullValueCodeDropdownCustomClients; set { _explicitNullValueCodeDropdownCustomClients = value; AdditionalData?.Remove("code_dropdown_custom_clients"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("code_dropdown_custom_clients"); else _explicitNullProperties?.Remove("code_dropdown_custom_clients"); } }
@@ -2209,10 +2221,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Maximum number of simultaneous pull request import jobs for the GitHub, Bitbucket Cloud, and Bitbucket Server importers. Default is `200`.</summary>
         public int? ConcurrentPullRequestImportJobsLimit { get => _explicitNullValueConcurrentPullRequestImportJobsLimit; set { _explicitNullValueConcurrentPullRequestImportJobsLimit = value; AdditionalData?.Remove("concurrent_pull_request_import_jobs_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("concurrent_pull_request_import_jobs_limit"); else _explicitNullProperties?.Remove("concurrent_pull_request_import_jobs_limit"); } }
         private int? _explicitNullValueConcurrentPullRequestImportJobsLimit = default!;
-        /// <summary>Maximum number of simultaneous batch export jobs to process.</summary>
+        /// <summary>Maximum number of simultaneous batch export jobs to process. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/169122) in GitLab 17.6.</summary>
         public int? ConcurrentRelationBatchExportLimit { get => _explicitNullValueConcurrentRelationBatchExportLimit; set { _explicitNullValueConcurrentRelationBatchExportLimit = value; AdditionalData?.Remove("concurrent_relation_batch_export_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("concurrent_relation_batch_export_limit"); else _explicitNullProperties?.Remove("concurrent_relation_batch_export_limit"); } }
         private int? _explicitNullValueConcurrentRelationBatchExportLimit = default!;
-        /// <summary>The concurrent_relation_export_limit property</summary>
+        /// <summary>Maximum number of simultaneous project file exports to process. Default: `25`. Behind a feature flag named `limit_concurrent_project_exports`, disabled by default. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/work_items/599092) in GitLab 19.4.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ConcurrentRelationExportLimit { get => _explicitNullValueConcurrentRelationExportLimit; set { _explicitNullValueConcurrentRelationExportLimit = value; AdditionalData?.Remove("concurrent_relation_export_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("concurrent_relation_export_limit"); else _explicitNullProperties?.Remove("concurrent_relation_export_limit"); } }
@@ -2275,7 +2287,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Duration, in minutes, that container registry authorization tokens remain valid.</summary>
         public int? ContainerRegistryTokenExpireDelay { get => _explicitNullValueContainerRegistryTokenExpireDelay; set { _explicitNullValueContainerRegistryTokenExpireDelay = value; AdditionalData?.Remove("container_registry_token_expire_delay"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("container_registry_token_expire_delay"); else _explicitNullProperties?.Remove("container_registry_token_expire_delay"); } }
         private int? _explicitNullValueContainerRegistryTokenExpireDelay = default!;
-        /// <summary>The create_organization_api_limit property</summary>
+        /// <summary>Maximum number of requests every minute for each user to `POST /organizations`. Default: `10`. Set to `0` to disable the rate limit.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? CreateOrganizationApiLimit { get => _explicitNullValueCreateOrganizationApiLimit; set { _explicitNullValueCreateOrganizationApiLimit = value; AdditionalData?.Remove("create_organization_api_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("create_organization_api_limit"); else _explicitNullProperties?.Remove("create_organization_api_limit"); } }
@@ -2439,7 +2451,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Default minimum role required to create projects. Can take: `0` _(No one)_, `1` _(Maintainers)_, `2` _(Developers)_, `3` _(Administrators)_, or `4` _(Owners)_.</summary>
         public int? DefaultProjectCreation { get => _explicitNullValueDefaultProjectCreation; set { _explicitNullValueDefaultProjectCreation = value; AdditionalData?.Remove("default_project_creation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_project_creation"); else _explicitNullProperties?.Remove("default_project_creation"); } }
         private int? _explicitNullValueDefaultProjectCreation = default!;
-        /// <summary>If `true`, enables default project deletion protection so only administrators can delete projects. GitLab Self-Managed, Premium and Ultimate only.</summary>
+        /// <summary>If `true`, enables default project deletion protection so only administrators can delete projects. Default is `false`. GitLab Self-Managed, Premium and Ultimate only.</summary>
         public bool? DefaultProjectDeletionProtection { get => _explicitNullValueDefaultProjectDeletionProtection; set { _explicitNullValueDefaultProjectDeletionProtection = value; AdditionalData?.Remove("default_project_deletion_protection"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_project_deletion_protection"); else _explicitNullProperties?.Remove("default_project_deletion_protection"); } }
         private bool? _explicitNullValueDefaultProjectDeletionProtection = default!;
         /// <summary>Maximum number of personal projects per user. Default is `100000`.</summary>
@@ -2448,7 +2460,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>What visibility level new projects receive. Default is `private`. Cannot be set to any levels in `restricted_visibility_levels`.</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ApplicationSettingsRequestDefaultProjectVisibility? DefaultProjectVisibility { get => _explicitNullValueDefaultProjectVisibility; set { _explicitNullValueDefaultProjectVisibility = value; AdditionalData?.Remove("default_project_visibility"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_project_visibility"); else _explicitNullProperties?.Remove("default_project_visibility"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ApplicationSettingsRequestDefaultProjectVisibility? _explicitNullValueDefaultProjectVisibility = default!;
-        /// <summary>Enable the delete source branch option by default for new projects</summary>
+        /// <summary>Enable the delete source branch option by default for new projects. Default is `true`.</summary>
         public bool? DefaultRemoveSourceBranchAfterMerge { get => _explicitNullValueDefaultRemoveSourceBranchAfterMerge; set { _explicitNullValueDefaultRemoveSourceBranchAfterMerge = value; AdditionalData?.Remove("default_remove_source_branch_after_merge"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_remove_source_branch_after_merge"); else _explicitNullProperties?.Remove("default_remove_source_branch_after_merge"); } }
         private bool? _explicitNullValueDefaultRemoveSourceBranchAfterMerge = default!;
         /// <summary>The default_search_scope property</summary>
@@ -2534,7 +2546,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string DenyAllRequestsExceptAllowed { get => _explicitNullValueDenyAllRequestsExceptAllowed; set { _explicitNullValueDenyAllRequestsExceptAllowed = value; AdditionalData?.Remove("deny_all_requests_except_allowed"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("deny_all_requests_except_allowed"); else _explicitNullProperties?.Remove("deny_all_requests_except_allowed"); } }
         private string _explicitNullValueDenyAllRequestsExceptAllowed = default!;
 #endif
-        /// <summary>The dependency_firewall_policies_per_configuration_limit property</summary>
+        /// <summary>Maximum number of dependency firewall policies allowed for each security policy configuration. Default: `5`. Maximum: `20`. Ultimate only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? DependencyFirewallPoliciesPerConfigurationLimit { get => _explicitNullValueDependencyFirewallPoliciesPerConfigurationLimit; set { _explicitNullValueDependencyFirewallPoliciesPerConfigurationLimit = value; AdditionalData?.Remove("dependency_firewall_policies_per_configuration_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dependency_firewall_policies_per_configuration_limit"); else _explicitNullProperties?.Remove("dependency_firewall_policies_per_configuration_limit"); } }
@@ -2554,7 +2566,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ApplicationSettingsRequestDependencyManagementSettings DependencyManagementSettings { get => _explicitNullValueDependencyManagementSettings; set { _explicitNullValueDependencyManagementSettings = value; AdditionalData?.Remove("dependency_management_settings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dependency_management_settings"); else _explicitNullProperties?.Remove("dependency_management_settings"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ApplicationSettingsRequestDependencyManagementSettings _explicitNullValueDependencyManagementSettings = default!;
 #endif
-        /// <summary>The dependency_scanning_sbom_scan_api_download_limit property</summary>
+        /// <summary>Maximum number of scan result downloads every hour for each project through the dependency scanning SBOM scan API. Default: `6000`. Set to `0` to disable the rate limit. Ultimate only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? DependencyScanningSbomScanApiDownloadLimit { get => _explicitNullValueDependencyScanningSbomScanApiDownloadLimit; set { _explicitNullValueDependencyScanningSbomScanApiDownloadLimit = value; AdditionalData?.Remove("dependency_scanning_sbom_scan_api_download_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dependency_scanning_sbom_scan_api_download_limit"); else _explicitNullProperties?.Remove("dependency_scanning_sbom_scan_api_download_limit"); } }
@@ -2564,7 +2576,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string DependencyScanningSbomScanApiDownloadLimit { get => _explicitNullValueDependencyScanningSbomScanApiDownloadLimit; set { _explicitNullValueDependencyScanningSbomScanApiDownloadLimit = value; AdditionalData?.Remove("dependency_scanning_sbom_scan_api_download_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dependency_scanning_sbom_scan_api_download_limit"); else _explicitNullProperties?.Remove("dependency_scanning_sbom_scan_api_download_limit"); } }
         private string _explicitNullValueDependencyScanningSbomScanApiDownloadLimit = default!;
 #endif
-        /// <summary>The dependency_scanning_sbom_scan_api_upload_limit property</summary>
+        /// <summary>Maximum number of SBOM uploads every hour for each project through the dependency scanning SBOM scan API. Default: `400`. Set to `0` to disable the rate limit. Ultimate only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? DependencyScanningSbomScanApiUploadLimit { get => _explicitNullValueDependencyScanningSbomScanApiUploadLimit; set { _explicitNullValueDependencyScanningSbomScanApiUploadLimit = value; AdditionalData?.Remove("dependency_scanning_sbom_scan_api_upload_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dependency_scanning_sbom_scan_api_upload_limit"); else _explicitNullProperties?.Remove("dependency_scanning_sbom_scan_api_upload_limit"); } }
@@ -2574,7 +2586,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string DependencyScanningSbomScanApiUploadLimit { get => _explicitNullValueDependencyScanningSbomScanApiUploadLimit; set { _explicitNullValueDependencyScanningSbomScanApiUploadLimit = value; AdditionalData?.Remove("dependency_scanning_sbom_scan_api_upload_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dependency_scanning_sbom_scan_api_upload_limit"); else _explicitNullProperties?.Remove("dependency_scanning_sbom_scan_api_upload_limit"); } }
         private string _explicitNullValueDependencyScanningSbomScanApiUploadLimit = default!;
 #endif
-        /// <summary>Maximum work item, merge request, and vulnerability description and comment content size in bytes.</summary>
+        /// <summary>Maximum work item, merge request, and vulnerability description and comment content size in bytes. Default is `1048576`.</summary>
         public int? DescriptionAndNoteMaxSize { get => _explicitNullValueDescriptionAndNoteMaxSize; set { _explicitNullValueDescriptionAndNoteMaxSize = value; AdditionalData?.Remove("description_and_note_max_size"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("description_and_note_max_size"); else _explicitNullProperties?.Remove("description_and_note_max_size"); } }
         private int? _explicitNullValueDescriptionAndNoteMaxSize = default!;
         /// <summary>If `true`, enables [Diagrams.net integration](https://docs.gitlab.com/administration/integration/diagrams_net/). Requires `diagramsnet_url`. Defaults to `true`.</summary>
@@ -2640,7 +2652,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string DiffMaxVersions { get => _explicitNullValueDiffMaxVersions; set { _explicitNullValueDiffMaxVersions = value; AdditionalData?.Remove("diff_max_versions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("diff_max_versions"); else _explicitNullProperties?.Remove("diff_max_versions"); } }
         private string _explicitNullValueDiffMaxVersions = default!;
 #endif
-        /// <summary>Stop administrators from connecting to non-trusted OAuth applications.</summary>
+        /// <summary>Stop administrators from connecting to non-trusted OAuth applications that have the `api`, `read_api`, `read_repository`, `write_repository`, `read_registry`, `write_registry`, `sudo`, `admin_mode`, or `read_service_ping` scopes.</summary>
         public bool? DisableAdminOauthScopes { get => _explicitNullValueDisableAdminOauthScopes; set { _explicitNullValueDisableAdminOauthScopes = value; AdditionalData?.Remove("disable_admin_oauth_scopes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("disable_admin_oauth_scopes"); else _explicitNullProperties?.Remove("disable_admin_oauth_scopes"); } }
         private bool? _explicitNullValueDisableAdminOauthScopes = default!;
         /// <summary>If `true`, disables direct connections for Code Suggestions for users.</summary>
@@ -2757,10 +2769,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Maximum number of draft note create requests per minute for each user. Default: `0`, which disables the rate limit. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/work_items/636471) in GitLab 19.6.</summary>
         public int? DraftNotesCreateLimit { get => _explicitNullValueDraftNotesCreateLimit; set { _explicitNullValueDraftNotesCreateLimit = value; AdditionalData?.Remove("draft_notes_create_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("draft_notes_create_limit"); else _explicitNullProperties?.Remove("draft_notes_create_limit"); } }
         private int? _explicitNullValueDraftNotesCreateLimit = default!;
-        /// <summary>Restrictions on the complexity of uploaded DSA keys. A value of -1 disables all DSA keys.</summary>
+        /// <summary>Minimum allowed size of uploaded DSA keys, in bits (key length for RSA and DSA, curve size for the others). A value of -1 disables all DSA keys. Default is `0` (no restriction).</summary>
         public int? DsaKeyRestriction { get => _explicitNullValueDsaKeyRestriction; set { _explicitNullValueDsaKeyRestriction = value; AdditionalData?.Remove("dsa_key_restriction"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dsa_key_restriction"); else _explicitNullProperties?.Remove("dsa_key_restriction"); } }
         private int? _explicitNullValueDsaKeyRestriction = default!;
-        /// <summary>The duo_agent_platform_enabled property</summary>
+        /// <summary>If `true`, turns on GitLab Duo Agent Platform features for this instance. Default: `true`. GitLab Self-Managed, Premium and Ultimate only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? DuoAgentPlatformEnabled { get => _explicitNullValueDuoAgentPlatformEnabled; set { _explicitNullValueDuoAgentPlatformEnabled = value; AdditionalData?.Remove("duo_agent_platform_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duo_agent_platform_enabled"); else _explicitNullProperties?.Remove("duo_agent_platform_enabled"); } }
@@ -2790,7 +2802,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string DuoAutoModeEnabled { get => _explicitNullValueDuoAutoModeEnabled; set { _explicitNullValueDuoAutoModeEnabled = value; AdditionalData?.Remove("duo_auto_mode_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duo_auto_mode_enabled"); else _explicitNullProperties?.Remove("duo_auto_mode_enabled"); } }
         private string _explicitNullValueDuoAutoModeEnabled = default!;
 #endif
-        /// <summary>The duo_availability property</summary>
+        /// <summary>GitLab Duo availability setting for this instance. Valid values are `always_on`, `default_on`, `default_off`, and `never_on`. `default_on` and `default_off` turn GitLab Duo on and off by default. `always_on` and `never_on` lock GitLab Duo on and off for a top-level group. `never_on` also turns off experiment and beta GitLab Duo features. Sets `duo_features_enabled` and `lock_duo_features_enabled`. GitLab Self-Managed, Premium and Ultimate only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? DuoAvailability { get => _explicitNullValueDuoAvailability; set { _explicitNullValueDuoAvailability = value; AdditionalData?.Remove("duo_availability"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duo_availability"); else _explicitNullProperties?.Remove("duo_availability"); } }
@@ -2947,13 +2959,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string DuoScheduledAutomationsAvailability { get => _explicitNullValueDuoScheduledAutomationsAvailability; set { _explicitNullValueDuoScheduledAutomationsAvailability = value; AdditionalData?.Remove("duo_scheduled_automations_availability"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duo_scheduled_automations_availability"); else _explicitNullProperties?.Remove("duo_scheduled_automations_availability"); } }
         private string _explicitNullValueDuoScheduledAutomationsAvailability = default!;
 #endif
-        /// <summary>If `true`, allows GitLab Duo flows to run on a schedule for the instance. Defaults to `true`.</summary>
+        /// <summary>If `true`, allows GitLab Duo flows to run on a schedule for the instance. Defaults to `true`. GitLab Self-Managed, Premium and Ultimate only. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/work_items/634139) in GitLab 19.6.</summary>
         public bool? DuoScheduledAutomationsEnabled { get => _explicitNullValueDuoScheduledAutomationsEnabled; set { _explicitNullValueDuoScheduledAutomationsEnabled = value; AdditionalData?.Remove("duo_scheduled_automations_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duo_scheduled_automations_enabled"); else _explicitNullProperties?.Remove("duo_scheduled_automations_enabled"); } }
         private bool? _explicitNullValueDuoScheduledAutomationsEnabled = default!;
         /// <summary>ID of the project to use as the Duo Code Review custom instructions template for this instance.</summary>
         public int? DuoTemplateProjectId { get => _explicitNullValueDuoTemplateProjectId; set { _explicitNullValueDuoTemplateProjectId = value; AdditionalData?.Remove("duo_template_project_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duo_template_project_id"); else _explicitNullProperties?.Remove("duo_template_project_id"); } }
         private int? _explicitNullValueDuoTemplateProjectId = default!;
-        /// <summary>The duo_token_usage_tracking_enabled property</summary>
+        /// <summary>If `true`, GitLab records the input and output tokens that each GitLab Duo Non-Agentic Chat request uses, by user and model. Defaults to `true`. GitLab Self-Managed, Premium and Ultimate only. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/work_items/631777) in GitLab 19.6.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? DuoTokenUsageTrackingEnabled { get => _explicitNullValueDuoTokenUsageTrackingEnabled; set { _explicitNullValueDuoTokenUsageTrackingEnabled = value; AdditionalData?.Remove("duo_token_usage_tracking_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duo_token_usage_tracking_enabled"); else _explicitNullProperties?.Remove("duo_token_usage_tracking_enabled"); } }
@@ -2963,7 +2975,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string DuoTokenUsageTrackingEnabled { get => _explicitNullValueDuoTokenUsageTrackingEnabled; set { _explicitNullValueDuoTokenUsageTrackingEnabled = value; AdditionalData?.Remove("duo_token_usage_tracking_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duo_token_usage_tracking_enabled"); else _explicitNullProperties?.Remove("duo_token_usage_tracking_enabled"); } }
         private string _explicitNullValueDuoTokenUsageTrackingEnabled = default!;
 #endif
-        /// <summary>The duo_workflow_file_attachments_enabled property</summary>
+        /// <summary>If `true`, users can attach files to GitLab Duo Chat messages. Defaults to `false`. GitLab Self-Managed and GitLab Dedicated, Premium and Ultimate only. [Introduced](https://gitlab.com/groups/gitlab-org/-/work_items/20481) in GitLab 19.6.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? DuoWorkflowFileAttachmentsEnabled { get => _explicitNullValueDuoWorkflowFileAttachmentsEnabled; set { _explicitNullValueDuoWorkflowFileAttachmentsEnabled = value; AdditionalData?.Remove("duo_workflow_file_attachments_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duo_workflow_file_attachments_enabled"); else _explicitNullProperties?.Remove("duo_workflow_file_attachments_enabled"); } }
@@ -3003,16 +3015,16 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string DynamicClientRegistrationEnabled { get => _explicitNullValueDynamicClientRegistrationEnabled; set { _explicitNullValueDynamicClientRegistrationEnabled = value; AdditionalData?.Remove("dynamic_client_registration_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dynamic_client_registration_enabled"); else _explicitNullProperties?.Remove("dynamic_client_registration_enabled"); } }
         private string _explicitNullValueDynamicClientRegistrationEnabled = default!;
 #endif
-        /// <summary>Restrictions on the complexity of uploaded ECDSA keys. A value of -1 disables all ECDSA keys.</summary>
+        /// <summary>Minimum allowed size of uploaded ECDSA keys, in bits (key length for RSA and DSA, curve size for the others). A value of -1 disables all ECDSA keys. Default is `0` (no restriction).</summary>
         public int? EcdsaKeyRestriction { get => _explicitNullValueEcdsaKeyRestriction; set { _explicitNullValueEcdsaKeyRestriction = value; AdditionalData?.Remove("ecdsa_key_restriction"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ecdsa_key_restriction"); else _explicitNullProperties?.Remove("ecdsa_key_restriction"); } }
         private int? _explicitNullValueEcdsaKeyRestriction = default!;
-        /// <summary>Restrictions on the complexity of uploaded ECDSA_SK keys. A value of -1 disables all ECDSA_SK keys.</summary>
+        /// <summary>Minimum allowed size of uploaded ECDSA_SK keys, in bits (key length for RSA and DSA, curve size for the others). A value of -1 disables all ECDSA_SK keys. Default is `0` (no restriction).</summary>
         public int? EcdsaSkKeyRestriction { get => _explicitNullValueEcdsaSkKeyRestriction; set { _explicitNullValueEcdsaSkKeyRestriction = value; AdditionalData?.Remove("ecdsa_sk_key_restriction"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ecdsa_sk_key_restriction"); else _explicitNullProperties?.Remove("ecdsa_sk_key_restriction"); } }
         private int? _explicitNullValueEcdsaSkKeyRestriction = default!;
-        /// <summary>Restrictions on the complexity of uploaded ED25519 keys. A value of -1 disables all ED25519 keys.</summary>
+        /// <summary>Minimum allowed size of uploaded ED25519 keys, in bits (key length for RSA and DSA, curve size for the others). A value of -1 disables all ED25519 keys. Default is `0` (no restriction).</summary>
         public int? Ed25519KeyRestriction { get => _explicitNullValueEd25519KeyRestriction; set { _explicitNullValueEd25519KeyRestriction = value; AdditionalData?.Remove("ed25519_key_restriction"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ed25519_key_restriction"); else _explicitNullProperties?.Remove("ed25519_key_restriction"); } }
         private int? _explicitNullValueEd25519KeyRestriction = default!;
-        /// <summary>Restrictions on the complexity of uploaded ED25519_SK keys. A value of -1 disables all ED25519_SK keys.</summary>
+        /// <summary>Minimum allowed size of uploaded ED25519_SK keys, in bits (key length for RSA and DSA, curve size for the others). A value of -1 disables all ED25519_SK keys. Default is `0` (no restriction).</summary>
         public int? Ed25519SkKeyRestriction { get => _explicitNullValueEd25519SkKeyRestriction; set { _explicitNullValueEd25519SkKeyRestriction = value; AdditionalData?.Remove("ed25519_sk_key_restriction"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ed25519_sk_key_restriction"); else _explicitNullProperties?.Remove("ed25519_sk_key_restriction"); } }
         private int? _explicitNullValueEd25519SkKeyRestriction = default!;
         /// <summary>Access key ID for the EKS integration IAM user.</summary>
@@ -3362,7 +3374,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Specifies whether users must confirm their email address before signing in. `off` does not require confirmation, `soft` allows sign-in during a confirmation period, and `hard` requires confirmation before sign-in.</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ApplicationSettingsRequestEmailConfirmationSetting? EmailConfirmationSetting { get => _explicitNullValueEmailConfirmationSetting; set { _explicitNullValueEmailConfirmationSetting = value; AdditionalData?.Remove("email_confirmation_setting"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_confirmation_setting"); else _explicitNullProperties?.Remove("email_confirmation_setting"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ApplicationSettingsRequestEmailConfirmationSetting? _explicitNullValueEmailConfirmationSetting = default!;
-        /// <summary>If `true`, enables email-based one-time passwords (OTP) as a multi-factor authentication method. Requires `require_email_verification_on_account_locked` to be `true`.</summary>
+        /// <summary>If `true`, enables email-based one-time passwords (OTP) as a multi-factor authentication method. Requires `require_email_verification_on_account_locked` to be `true`. Default is `false`.</summary>
         public bool? EmailOtpEnabled { get => _explicitNullValueEmailOtpEnabled; set { _explicitNullValueEmailOtpEnabled = value; AdditionalData?.Remove("email_otp_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_otp_enabled"); else _explicitNullProperties?.Remove("email_otp_enabled"); } }
         private bool? _explicitNullValueEmailOtpEnabled = default!;
         /// <summary>Regular expression that is checked against the email used during registration.</summary>
@@ -3702,7 +3714,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Gitaly fast operation timeout, in seconds. Set to 0 to disable timeouts.</summary>
         public int? GitalyTimeoutFast { get => _explicitNullValueGitalyTimeoutFast; set { _explicitNullValueGitalyTimeoutFast = value; AdditionalData?.Remove("gitaly_timeout_fast"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gitaly_timeout_fast"); else _explicitNullProperties?.Remove("gitaly_timeout_fast"); } }
         private int? _explicitNullValueGitalyTimeoutFast = default!;
-        /// <summary>Medium Gitaly timeout, in seconds. Set to 0 to disable timeouts.</summary>
+        /// <summary>Medium Gitaly timeout, in seconds. Must be between `gitaly_timeout_fast` and `gitaly_timeout_default`. Set to 0 to disable timeouts.</summary>
         public int? GitalyTimeoutMedium { get => _explicitNullValueGitalyTimeoutMedium; set { _explicitNullValueGitalyTimeoutMedium = value; AdditionalData?.Remove("gitaly_timeout_medium"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gitaly_timeout_medium"); else _explicitNullProperties?.Remove("gitaly_timeout_medium"); } }
         private int? _explicitNullValueGitalyTimeoutMedium = default!;
         /// <summary>Maximum number of GitHub gists import requests per minute, per user. Default: `6`. Set to `0` to disable the rate limit.</summary>
@@ -3758,7 +3770,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Maximum number of Git operations one user or deploy key can perform every minute across all repositories. Default: `6000`. Set to `0` to disable the limit. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/267274) in GitLab 19.6. This attribute is in beta and might be changed or removed without notice.</summary>
         public int? GitlabShellOperationPerActorLimit { get => _explicitNullValueGitlabShellOperationPerActorLimit; set { _explicitNullValueGitlabShellOperationPerActorLimit = value; AdditionalData?.Remove("gitlab_shell_operation_per_actor_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gitlab_shell_operation_per_actor_limit"); else _explicitNullProperties?.Remove("gitlab_shell_operation_per_actor_limit"); } }
         private int? _explicitNullValueGitlabShellOperationPerActorLimit = default!;
-        /// <summary>If `true`, enables [Ona integration](https://docs.gitlab.com/integration/gitpod/). Requires `gitpod_url`.</summary>
+        /// <summary>If `true`, enables [Ona integration](https://docs.gitlab.com/integration/gitpod/). Default is `false`. Requires `gitpod_url`.</summary>
         public bool? GitpodEnabled { get => _explicitNullValueGitpodEnabled; set { _explicitNullValueGitpodEnabled = value; AdditionalData?.Remove("gitpod_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gitpod_enabled"); else _explicitNullProperties?.Remove("gitpod_enabled"); } }
         private bool? _explicitNullValueGitpodEnabled = default!;
         /// <summary>Ona instance URL for the integration.</summary>
@@ -3973,10 +3985,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string GranularTokensEnforcedAfter { get => _explicitNullValueGranularTokensEnforcedAfter; set { _explicitNullValueGranularTokensEnforcedAfter = value; AdditionalData?.Remove("granular_tokens_enforced_after"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("granular_tokens_enforced_after"); else _explicitNullProperties?.Remove("granular_tokens_enforced_after"); } }
         private string _explicitNullValueGranularTokensEnforcedAfter = default!;
 #endif
+        /// <summary>Maximum number of GraphQL requests per minute for each user, or for each IP address for unauthenticated requests, that resolve the `participants` and `subscribed` fields more than 20 times in total. Default: `100`. Set to `0` to disable the rate limit. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/271502) in GitLab 19.7.</summary>
+        public int? GraphqlParticipantFieldsRequestLimit { get => _explicitNullValueGraphqlParticipantFieldsRequestLimit; set { _explicitNullValueGraphqlParticipantFieldsRequestLimit = value; AdditionalData?.Remove("graphql_participant_fields_request_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("graphql_participant_fields_request_limit"); else _explicitNullProperties?.Remove("graphql_participant_fields_request_limit"); } }
+        private int? _explicitNullValueGraphqlParticipantFieldsRequestLimit = default!;
         /// <summary>If `true`, enables the Gravatar service.</summary>
         public bool? GravatarEnabled { get => _explicitNullValueGravatarEnabled; set { _explicitNullValueGravatarEnabled = value; AdditionalData?.Remove("gravatar_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gravatar_enabled"); else _explicitNullProperties?.Remove("gravatar_enabled"); } }
         private bool? _explicitNullValueGravatarEnabled = default!;
-        /// <summary>The group_api_limit property</summary>
+        /// <summary>Maximum number of requests every minute for each user or IP address to `GET /groups/:id`. Default: `400`. Set to `0` to disable the rate limit.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? GroupApiLimit { get => _explicitNullValueGroupApiLimit; set { _explicitNullValueGroupApiLimit = value; AdditionalData?.Remove("group_api_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_api_limit"); else _explicitNullProperties?.Remove("group_api_limit"); } }
@@ -3986,7 +4001,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string GroupApiLimit { get => _explicitNullValueGroupApiLimit; set { _explicitNullValueGroupApiLimit = value; AdditionalData?.Remove("group_api_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_api_limit"); else _explicitNullProperties?.Remove("group_api_limit"); } }
         private string _explicitNullValueGroupApiLimit = default!;
 #endif
-        /// <summary>The group_archive_unarchive_api_limit property</summary>
+        /// <summary>Maximum number of requests every minute for each user or IP address to `POST /groups/:id/archive` and `POST /groups/:id/unarchive`. Default: `60`. Set to `0` to disable the rate limit.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? GroupArchiveUnarchiveApiLimit { get => _explicitNullValueGroupArchiveUnarchiveApiLimit; set { _explicitNullValueGroupArchiveUnarchiveApiLimit = value; AdditionalData?.Remove("group_archive_unarchive_api_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_archive_unarchive_api_limit"); else _explicitNullProperties?.Remove("group_archive_unarchive_api_limit"); } }
@@ -3996,10 +4011,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string GroupArchiveUnarchiveApiLimit { get => _explicitNullValueGroupArchiveUnarchiveApiLimit; set { _explicitNullValueGroupArchiveUnarchiveApiLimit = value; AdditionalData?.Remove("group_archive_unarchive_api_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_archive_unarchive_api_limit"); else _explicitNullProperties?.Remove("group_archive_unarchive_api_limit"); } }
         private string _explicitNullValueGroupArchiveUnarchiveApiLimit = default!;
 #endif
-        /// <summary>Maximum number of requests per minute per user per group to the group audit events API.</summary>
+        /// <summary>Maximum number of requests per minute per user per group to the group audit events API. Default: `200`. Set to `0` to disable the rate limit. GitLab Self-Managed, Premium and Ultimate only. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/255336) in GitLab 19.5.</summary>
         public int? GroupAuditEventsApiLimit { get => _explicitNullValueGroupAuditEventsApiLimit; set { _explicitNullValueGroupAuditEventsApiLimit = value; AdditionalData?.Remove("group_audit_events_api_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_audit_events_api_limit"); else _explicitNullProperties?.Remove("group_audit_events_api_limit"); } }
         private int? _explicitNullValueGroupAuditEventsApiLimit = default!;
-        /// <summary>The group_create_limit property</summary>
+        /// <summary>Maximum number of requests every day for each user to `POST /groups`. Default: `200`. Set to `0` to disable the rate limit. Behind a feature flag named `namespace_create_rate_limit`, disabled by default. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/245318) in GitLab 19.3.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? GroupCreateLimit { get => _explicitNullValueGroupCreateLimit; set { _explicitNullValueGroupCreateLimit = value; AdditionalData?.Remove("group_create_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_create_limit"); else _explicitNullProperties?.Remove("group_create_limit"); } }
@@ -4009,7 +4024,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string GroupCreateLimit { get => _explicitNullValueGroupCreateLimit; set { _explicitNullValueGroupCreateLimit = value; AdditionalData?.Remove("group_create_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_create_limit"); else _explicitNullProperties?.Remove("group_create_limit"); } }
         private string _explicitNullValueGroupCreateLimit = default!;
 #endif
-        /// <summary>The group_download_export_limit property</summary>
+        /// <summary>Maximum number of group export downloads every minute for each user and group. Default: `1`. Set to `0` to disable the rate limit.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? GroupDownloadExportLimit { get => _explicitNullValueGroupDownloadExportLimit; set { _explicitNullValueGroupDownloadExportLimit = value; AdditionalData?.Remove("group_download_export_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_download_export_limit"); else _explicitNullProperties?.Remove("group_download_export_limit"); } }
@@ -4019,7 +4034,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string GroupDownloadExportLimit { get => _explicitNullValueGroupDownloadExportLimit; set { _explicitNullValueGroupDownloadExportLimit = value; AdditionalData?.Remove("group_download_export_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_download_export_limit"); else _explicitNullProperties?.Remove("group_download_export_limit"); } }
         private string _explicitNullValueGroupDownloadExportLimit = default!;
 #endif
-        /// <summary>The group_export_limit property</summary>
+        /// <summary>Maximum number of group exports every minute for each user. Default: `6`. Set to `0` to disable the rate limit.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? GroupExportLimit { get => _explicitNullValueGroupExportLimit; set { _explicitNullValueGroupExportLimit = value; AdditionalData?.Remove("group_export_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_export_limit"); else _explicitNullProperties?.Remove("group_export_limit"); } }
@@ -4039,7 +4054,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string GroupHooksCreateLimit { get => _explicitNullValueGroupHooksCreateLimit; set { _explicitNullValueGroupHooksCreateLimit = value; AdditionalData?.Remove("group_hooks_create_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_hooks_create_limit"); else _explicitNullProperties?.Remove("group_hooks_create_limit"); } }
         private string _explicitNullValueGroupHooksCreateLimit = default!;
 #endif
-        /// <summary>The group_import_limit property</summary>
+        /// <summary>Maximum number of group imports every minute for each user. Default: `6`. Set to `0` to disable the rate limit.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? GroupImportLimit { get => _explicitNullValueGroupImportLimit; set { _explicitNullValueGroupImportLimit = value; AdditionalData?.Remove("group_import_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_import_limit"); else _explicitNullProperties?.Remove("group_import_limit"); } }
@@ -4049,7 +4064,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string GroupImportLimit { get => _explicitNullValueGroupImportLimit; set { _explicitNullValueGroupImportLimit = value; AdditionalData?.Remove("group_import_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_import_limit"); else _explicitNullProperties?.Remove("group_import_limit"); } }
         private string _explicitNullValueGroupImportLimit = default!;
 #endif
-        /// <summary>The group_invited_groups_api_limit property</summary>
+        /// <summary>Maximum number of requests every minute for each user or IP address to `GET /groups/:id/invited_groups`. Default: `60`. Set to `0` to disable the rate limit.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? GroupInvitedGroupsApiLimit { get => _explicitNullValueGroupInvitedGroupsApiLimit; set { _explicitNullValueGroupInvitedGroupsApiLimit = value; AdditionalData?.Remove("group_invited_groups_api_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_invited_groups_api_limit"); else _explicitNullProperties?.Remove("group_invited_groups_api_limit"); } }
@@ -4062,7 +4077,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>If `true`, allows group owners to manage default branch protection in their groups. If `false`, group owners cannot override the instance default branch protection. GitLab Self-Managed, Premium and Ultimate only.</summary>
         public bool? GroupOwnersCanManageDefaultBranchProtection { get => _explicitNullValueGroupOwnersCanManageDefaultBranchProtection; set { _explicitNullValueGroupOwnersCanManageDefaultBranchProtection = value; AdditionalData?.Remove("group_owners_can_manage_default_branch_protection"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_owners_can_manage_default_branch_protection"); else _explicitNullProperties?.Remove("group_owners_can_manage_default_branch_protection"); } }
         private bool? _explicitNullValueGroupOwnersCanManageDefaultBranchProtection = default!;
-        /// <summary>The group_projects_api_limit property</summary>
+        /// <summary>Maximum number of requests every minute for each user or IP address to `GET /groups/:id/projects`. Default: `600`. Set to `0` to disable the rate limit.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? GroupProjectsApiLimit { get => _explicitNullValueGroupProjectsApiLimit; set { _explicitNullValueGroupProjectsApiLimit = value; AdditionalData?.Remove("group_projects_api_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_projects_api_limit"); else _explicitNullProperties?.Remove("group_projects_api_limit"); } }
@@ -4072,16 +4087,16 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string GroupProjectsApiLimit { get => _explicitNullValueGroupProjectsApiLimit; set { _explicitNullValueGroupProjectsApiLimit = value; AdditionalData?.Remove("group_projects_api_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_projects_api_limit"); else _explicitNullProperties?.Remove("group_projects_api_limit"); } }
         private string _explicitNullValueGroupProjectsApiLimit = default!;
 #endif
-        /// <summary>Maximum number of group relations export downloads per minute per user for each group during direct transfer migrations. Set to `0` to disable the rate limit.</summary>
+        /// <summary>Maximum number of group relations export downloads per minute per user for each group during direct transfer migrations. Default: `100`. Set to `0` to disable the rate limit. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/634958) in GitLab 19.6.</summary>
         public int? GroupRelationsExportDownloadLimit { get => _explicitNullValueGroupRelationsExportDownloadLimit; set { _explicitNullValueGroupRelationsExportDownloadLimit = value; AdditionalData?.Remove("group_relations_export_download_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_relations_export_download_limit"); else _explicitNullProperties?.Remove("group_relations_export_download_limit"); } }
         private int? _explicitNullValueGroupRelationsExportDownloadLimit = default!;
-        /// <summary>Maximum number of group relations export requests per minute per user for each group during direct transfer migrations. Set to `0` to disable the rate limit.</summary>
+        /// <summary>Maximum number of group relations export requests per minute per user for each group during direct transfer migrations. Default: `6`. Set to `0` to disable the rate limit. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/634958) in GitLab 19.6.</summary>
         public int? GroupRelationsExportLimit { get => _explicitNullValueGroupRelationsExportLimit; set { _explicitNullValueGroupRelationsExportLimit = value; AdditionalData?.Remove("group_relations_export_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_relations_export_limit"); else _explicitNullProperties?.Remove("group_relations_export_limit"); } }
         private int? _explicitNullValueGroupRelationsExportLimit = default!;
         /// <summary>Set the expiration time (in seconds) of authentication tokens of newly registered group runners. Minimum value is 7200 seconds. For more information, see [Automatically rotate authentication tokens](https://docs.gitlab.com/ci/runners/configure_runners/#automatically-rotate-runner-authentication-tokens).</summary>
         public int? GroupRunnerTokenExpirationInterval { get => _explicitNullValueGroupRunnerTokenExpirationInterval; set { _explicitNullValueGroupRunnerTokenExpirationInterval = value; AdditionalData?.Remove("group_runner_token_expiration_interval"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_runner_token_expiration_interval"); else _explicitNullProperties?.Remove("group_runner_token_expiration_interval"); } }
         private int? _explicitNullValueGroupRunnerTokenExpirationInterval = default!;
-        /// <summary>The groups_api_limit property</summary>
+        /// <summary>Maximum number of requests every minute for each user or IP address to `GET /groups`. Default: `200`. Set to `0` to disable the rate limit.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? GroupsApiLimit { get => _explicitNullValueGroupsApiLimit; set { _explicitNullValueGroupsApiLimit = value; AdditionalData?.Remove("groups_api_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("groups_api_limit"); else _explicitNullProperties?.Remove("groups_api_limit"); } }
@@ -4101,7 +4116,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string GroupSecretsLimit { get => _explicitNullValueGroupSecretsLimit; set { _explicitNullValueGroupSecretsLimit = value; AdditionalData?.Remove("group_secrets_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_secrets_limit"); else _explicitNullProperties?.Remove("group_secrets_limit"); } }
         private string _explicitNullValueGroupSecretsLimit = default!;
 #endif
-        /// <summary>The group_shared_groups_api_limit property</summary>
+        /// <summary>Maximum number of requests every minute for each user or IP address to `GET /groups/:id/groups/shared`. Default: `60`. Set to `0` to disable the rate limit.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? GroupSharedGroupsApiLimit { get => _explicitNullValueGroupSharedGroupsApiLimit; set { _explicitNullValueGroupSharedGroupsApiLimit = value; AdditionalData?.Remove("group_shared_groups_api_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_shared_groups_api_limit"); else _explicitNullProperties?.Remove("group_shared_groups_api_limit"); } }
@@ -4124,7 +4139,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string HashedStorageEnabled { get => _explicitNullValueHashedStorageEnabled; set { _explicitNullValueHashedStorageEnabled = value; AdditionalData?.Remove("hashed_storage_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hashed_storage_enabled"); else _explicitNullProperties?.Remove("hashed_storage_enabled"); } }
         private string _explicitNullValueHashedStorageEnabled = default!;
 #endif
-        /// <summary>The helm_max_packages_count property</summary>
+        /// <summary>Maximum number of Helm packages that can be listed for each channel. Must be at least `1`. Default is `1000`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? HelmMaxPackagesCount { get => _explicitNullValueHelmMaxPackagesCount; set { _explicitNullValueHelmMaxPackagesCount = value; AdditionalData?.Remove("helm_max_packages_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("helm_max_packages_count"); else _explicitNullProperties?.Remove("helm_max_packages_count"); } }
@@ -4187,7 +4202,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string HomePageUrl { get => _explicitNullValueHomePageUrl; set { _explicitNullValueHomePageUrl = value; AdditionalData?.Remove("home_page_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("home_page_url"); else _explicitNullProperties?.Remove("home_page_url"); } }
         private string _explicitNullValueHomePageUrl = default!;
 #endif
-        /// <summary>Enable automatic repository housekeeping (git repack, git gc)</summary>
+        /// <summary>Enable automatic repository housekeeping (git repack, git gc). When `true`, also set either `housekeeping_optimize_repository_period` or all of `housekeeping_full_repack_period`, `housekeeping_gc_period`, and `housekeeping_incremental_repack_period`.</summary>
         public bool? HousekeepingEnabled { get => _explicitNullValueHousekeepingEnabled; set { _explicitNullValueHousekeepingEnabled = value; AdditionalData?.Remove("housekeeping_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("housekeeping_enabled"); else _explicitNullProperties?.Remove("housekeeping_enabled"); } }
         private bool? _explicitNullValueHousekeepingEnabled = default!;
         /// <summary>Number of Git pushes after which a full `git repack` is run. Deprecated. Use `housekeeping_optimize_repository_period` instead. All or none of `housekeeping_full_repack_period`, `housekeeping_gc_period`, `housekeeping_incremental_repack_period` must be provided.</summary>
@@ -4225,10 +4240,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string IframeRenderingAllowlistRaw { get => _explicitNullValueIframeRenderingAllowlistRaw; set { _explicitNullValueIframeRenderingAllowlistRaw = value; AdditionalData?.Remove("iframe_rendering_allowlist_raw"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("iframe_rendering_allowlist_raw"); else _explicitNullProperties?.Remove("iframe_rendering_allowlist_raw"); } }
         private string _explicitNullValueIframeRenderingAllowlistRaw = default!;
 #endif
-        /// <summary>If `true`, allows rendering of iframes in Markdown.</summary>
+        /// <summary>If `true`, allows rendering of iframes in Markdown. Default is `false`.</summary>
         public bool? IframeRenderingEnabled { get => _explicitNullValueIframeRenderingEnabled; set { _explicitNullValueIframeRenderingEnabled = value; AdditionalData?.Remove("iframe_rendering_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("iframe_rendering_enabled"); else _explicitNullProperties?.Remove("iframe_rendering_enabled"); } }
         private bool? _explicitNullValueIframeRenderingEnabled = default!;
-        /// <summary>The import_jobs_concurrency_limit property</summary>
+        /// <summary>Maximum number of concurrently running jobs for each import worker type: project and group file-based import, direct transfer, and the GitHub, Bitbucket Cloud, Bitbucket Server, and Jira importer stages. Applied independently for each worker type. Default is `100`. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/250280) in GitLab 19.1.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ImportJobsConcurrencyLimit { get => _explicitNullValueImportJobsConcurrencyLimit; set { _explicitNullValueImportJobsConcurrencyLimit = value; AdditionalData?.Remove("import_jobs_concurrency_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("import_jobs_concurrency_limit"); else _explicitNullProperties?.Remove("import_jobs_concurrency_limit"); } }
@@ -4298,7 +4313,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string IncludeOptionalMetricsInServicePing { get => _explicitNullValueIncludeOptionalMetricsInServicePing; set { _explicitNullValueIncludeOptionalMetricsInServicePing = value; AdditionalData?.Remove("include_optional_metrics_in_service_ping"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("include_optional_metrics_in_service_ping"); else _explicitNullProperties?.Remove("include_optional_metrics_in_service_ping"); } }
         private string _explicitNullValueIncludeOptionalMetricsInServicePing = default!;
 #endif
-        /// <summary>Maximum number of Insights chart queries per minute for each user or IP address, for each group or project. Default: `0`, which disables the rate limit. GitLab.com uses `60`.</summary>
+        /// <summary>Maximum number of Insights chart queries per minute for each user or IP address, for each group or project. Default: `0`, which disables the rate limit. GitLab.com uses `60`. Ultimate only.</summary>
         public int? InsightsQueryLimit { get => _explicitNullValueInsightsQueryLimit; set { _explicitNullValueInsightsQueryLimit = value; AdditionalData?.Remove("insights_query_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("insights_query_limit"); else _explicitNullProperties?.Remove("insights_query_limit"); } }
         private int? _explicitNullValueInsightsQueryLimit = default!;
         /// <summary>The instance_level_ai_beta_features_enabled property</summary>
@@ -4321,7 +4336,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string InstanceTokenPrefix { get => _explicitNullValueInstanceTokenPrefix; set { _explicitNullValueInstanceTokenPrefix = value; AdditionalData?.Remove("instance_token_prefix"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("instance_token_prefix"); else _explicitNullProperties?.Remove("instance_token_prefix"); } }
         private string _explicitNullValueInstanceTokenPrefix = default!;
 #endif
-        /// <summary>If `true`, enables Invisible CAPTCHA spam detection during account creation.</summary>
+        /// <summary>If `true`, enables Invisible CAPTCHA spam detection during account creation. Default is `false`.</summary>
         public bool? InvisibleCaptchaEnabled { get => _explicitNullValueInvisibleCaptchaEnabled; set { _explicitNullValueInvisibleCaptchaEnabled = value; AdditionalData?.Remove("invisible_captcha_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invisible_captcha_enabled"); else _explicitNullProperties?.Remove("invisible_captcha_enabled"); } }
         private bool? _explicitNullValueInvisibleCaptchaEnabled = default!;
         /// <summary>The invitation_flow_enforcement property</summary>
@@ -4344,7 +4359,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Ipv6RateLimitPrefixLength { get => _explicitNullValueIpv6RateLimitPrefixLength; set { _explicitNullValueIpv6RateLimitPrefixLength = value; AdditionalData?.Remove("ipv6_rate_limit_prefix_length"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ipv6_rate_limit_prefix_length"); else _explicitNullProperties?.Remove("ipv6_rate_limit_prefix_length"); } }
         private string _explicitNullValueIpv6RateLimitPrefixLength = default!;
 #endif
-        /// <summary>The issuable_csv_import_limit property</summary>
+        /// <summary>Maximum number of CSV imports of issues, work items, and requirements every hour for each user. Default: `20`. Set to `0` to disable the rate limit. Behind a feature flag named `issuable_csv_import_rate_limit`, disabled by default. This parameter is in beta and might be changed or removed without notice.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? IssuableCsvImportLimit { get => _explicitNullValueIssuableCsvImportLimit; set { _explicitNullValueIssuableCsvImportLimit = value; AdditionalData?.Remove("issuable_csv_import_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issuable_csv_import_limit"); else _explicitNullProperties?.Remove("issuable_csv_import_limit"); } }
@@ -4357,7 +4372,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Maximum number of issue analytics chart requests a user can make every minute in a group or project. For unauthenticated requests, the limit applies to each IP address. Default: `60`. Set to `0` to disable the rate limit.</summary>
         public int? IssuesAnalyticsLimit { get => _explicitNullValueIssuesAnalyticsLimit; set { _explicitNullValueIssuesAnalyticsLimit = value; AdditionalData?.Remove("issues_analytics_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issues_analytics_limit"); else _explicitNullProperties?.Remove("issues_analytics_limit"); } }
         private int? _explicitNullValueIssuesAnalyticsLimit = default!;
-        /// <summary>Maximum number of issue creation requests allowed per minute per user. Set to 0 for unlimited requests per minute.</summary>
+        /// <summary>Maximum number of issue creation requests allowed per minute per user. Set to 0 for unlimited requests per minute. Default is `300`.</summary>
         public int? IssuesCreateLimit { get => _explicitNullValueIssuesCreateLimit; set { _explicitNullValueIssuesCreateLimit = value; AdditionalData?.Remove("issues_create_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issues_create_limit"); else _explicitNullProperties?.Remove("issues_create_limit"); } }
         private int? _explicitNullValueIssuesCreateLimit = default!;
         /// <summary>The jira_connect_additional_audience_url property</summary>
@@ -4423,16 +4438,16 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string JiraForgeAppId { get => _explicitNullValueJiraForgeAppId; set { _explicitNullValueJiraForgeAppId = value; AdditionalData?.Remove("jira_forge_app_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("jira_forge_app_id"); else _explicitNullProperties?.Remove("jira_forge_app_id"); } }
         private string _explicitNullValueJiraForgeAppId = default!;
 #endif
-        /// <summary>Maximum number of job cancellations allowed per minute for a given project.</summary>
+        /// <summary>Maximum number of job cancellations allowed per minute for a given project. Default: `150`.</summary>
         public int? JobCancelLimitPerUserProject { get => _explicitNullValueJobCancelLimitPerUserProject; set { _explicitNullValueJobCancelLimitPerUserProject = value; AdditionalData?.Remove("job_cancel_limit_per_user_project"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("job_cancel_limit_per_user_project"); else _explicitNullProperties?.Remove("job_cancel_limit_per_user_project"); } }
         private int? _explicitNullValueJobCancelLimitPerUserProject = default!;
-        /// <summary>Maximum number of job erasures allowed per minute for a given project.</summary>
+        /// <summary>Maximum number of job erasures allowed per minute for a given project. Default: `400`.</summary>
         public int? JobEraseLimitPerUserProject { get => _explicitNullValueJobEraseLimitPerUserProject; set { _explicitNullValueJobEraseLimitPerUserProject = value; AdditionalData?.Remove("job_erase_limit_per_user_project"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("job_erase_limit_per_user_project"); else _explicitNullProperties?.Remove("job_erase_limit_per_user_project"); } }
         private int? _explicitNullValueJobEraseLimitPerUserProject = default!;
-        /// <summary>Maximum number of manual job runs allowed per minute for a given project.</summary>
+        /// <summary>Maximum number of manual job runs allowed per minute for a given project. Default: `200`.</summary>
         public int? JobPlayLimitPerUserProject { get => _explicitNullValueJobPlayLimitPerUserProject; set { _explicitNullValueJobPlayLimitPerUserProject = value; AdditionalData?.Remove("job_play_limit_per_user_project"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("job_play_limit_per_user_project"); else _explicitNullProperties?.Remove("job_play_limit_per_user_project"); } }
         private int? _explicitNullValueJobPlayLimitPerUserProject = default!;
-        /// <summary>Maximum number of job retries allowed per minute for a given project.</summary>
+        /// <summary>Maximum number of job retries allowed per minute for a given project. Default: `320`.</summary>
         public int? JobRetryLimitPerUserProject { get => _explicitNullValueJobRetryLimitPerUserProject; set { _explicitNullValueJobRetryLimitPerUserProject = value; AdditionalData?.Remove("job_retry_limit_per_user_project"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("job_retry_limit_per_user_project"); else _explicitNullProperties?.Remove("job_retry_limit_per_user_project"); } }
         private int? _explicitNullValueJobRetryLimitPerUserProject = default!;
         /// <summary>If `true`, prevents the deletion of the artifacts from the most recent successful jobs, regardless of the expiry time. Defaults to `true`.</summary>
@@ -4455,7 +4470,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string KrokiDiagramProxyEnabled { get => _explicitNullValueKrokiDiagramProxyEnabled; set { _explicitNullValueKrokiDiagramProxyEnabled = value; AdditionalData?.Remove("kroki_diagram_proxy_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("kroki_diagram_proxy_enabled"); else _explicitNullProperties?.Remove("kroki_diagram_proxy_enabled"); } }
         private string _explicitNullValueKrokiDiagramProxyEnabled = default!;
 #endif
-        /// <summary>If `true`, enables [Kroki integration](https://docs.gitlab.com/administration/integration/kroki/). Requires `kroki_url`.</summary>
+        /// <summary>If `true`, enables [Kroki integration](https://docs.gitlab.com/administration/integration/kroki/). Default is `false`. Requires `kroki_url`.</summary>
         public bool? KrokiEnabled { get => _explicitNullValueKrokiEnabled; set { _explicitNullValueKrokiEnabled = value; AdditionalData?.Remove("kroki_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("kroki_enabled"); else _explicitNullProperties?.Remove("kroki_enabled"); } }
         private bool? _explicitNullValueKrokiEnabled = default!;
         /// <summary>Additional formats supported by the Kroki instance. Possible values are `true` or `false` for formats `bpmn`, `blockdiag`, `excalidraw`, and `mermaid` in the format `&lt;format&gt;: true` or `&lt;format&gt;: false`.</summary>
@@ -4478,7 +4493,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string KrokiUrl { get => _explicitNullValueKrokiUrl; set { _explicitNullValueKrokiUrl = value; AdditionalData?.Remove("kroki_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("kroki_url"); else _explicitNullProperties?.Remove("kroki_url"); } }
         private string _explicitNullValueKrokiUrl = default!;
 #endif
-        /// <summary>The label_delete_limit property</summary>
+        /// <summary>Maximum number of project and group label deletions every minute for each user. Default: `500`. Set to `0` to disable the rate limit. Behind a feature flag named `label_delete_rate_limit`, disabled by default. This parameter is in beta and might be changed or removed without notice.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? LabelDeleteLimit { get => _explicitNullValueLabelDeleteLimit; set { _explicitNullValueLabelDeleteLimit = value; AdditionalData?.Remove("label_delete_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("label_delete_limit"); else _explicitNullProperties?.Remove("label_delete_limit"); } }
@@ -4497,13 +4512,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>If `true`, enforces the Code Suggestions enabled setting for all groups. Always `true` when `duo_code_suggestions_enabled` is `false`. Becomes `false` when `duo_code_suggestions_enabled` changes to `true`, unless the same request sets this attribute. GitLab Self-Managed, Premium and Ultimate only.</summary>
         public bool? LockDuoCodeSuggestionsEnabled { get => _explicitNullValueLockDuoCodeSuggestionsEnabled; set { _explicitNullValueLockDuoCodeSuggestionsEnabled = value; AdditionalData?.Remove("lock_duo_code_suggestions_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lock_duo_code_suggestions_enabled"); else _explicitNullProperties?.Remove("lock_duo_code_suggestions_enabled"); } }
         private bool? _explicitNullValueLockDuoCodeSuggestionsEnabled = default!;
-        /// <summary>If `true`, enforces the custom agents enabled setting for all groups. GitLab Self-Managed, Premium and Ultimate only. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/work_items/594615) in GitLab 19.0.</summary>
+        /// <summary>If `true`, enforces the custom agents enabled setting for all groups. Default is `false`. GitLab Self-Managed, Premium and Ultimate only. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/work_items/594615) in GitLab 19.0.</summary>
         public bool? LockDuoCustomAgentsEnabled { get => _explicitNullValueLockDuoCustomAgentsEnabled; set { _explicitNullValueLockDuoCustomAgentsEnabled = value; AdditionalData?.Remove("lock_duo_custom_agents_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lock_duo_custom_agents_enabled"); else _explicitNullProperties?.Remove("lock_duo_custom_agents_enabled"); } }
         private bool? _explicitNullValueLockDuoCustomAgentsEnabled = default!;
-        /// <summary>If `true`, enforces the custom flows enabled setting for all groups. GitLab Self-Managed, Premium and Ultimate only. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/work_items/594615) in GitLab 19.0.</summary>
+        /// <summary>If `true`, enforces the custom flows enabled setting for all groups. Default is `false`. GitLab Self-Managed, Premium and Ultimate only. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/work_items/594615) in GitLab 19.0.</summary>
         public bool? LockDuoCustomFlowsEnabled { get => _explicitNullValueLockDuoCustomFlowsEnabled; set { _explicitNullValueLockDuoCustomFlowsEnabled = value; AdditionalData?.Remove("lock_duo_custom_flows_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lock_duo_custom_flows_enabled"); else _explicitNullProperties?.Remove("lock_duo_custom_flows_enabled"); } }
         private bool? _explicitNullValueLockDuoCustomFlowsEnabled = default!;
-        /// <summary>If `true`, enforces the external agents enabled setting for all groups. GitLab Self-Managed, Premium and Ultimate only. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/work_items/594615) in GitLab 19.0.</summary>
+        /// <summary>If `true`, enforces the external agents enabled setting for all groups. Default is `false`. GitLab Self-Managed, Premium and Ultimate only. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/work_items/594615) in GitLab 19.0.</summary>
         public bool? LockDuoExternalAgentsEnabled { get => _explicitNullValueLockDuoExternalAgentsEnabled; set { _explicitNullValueLockDuoExternalAgentsEnabled = value; AdditionalData?.Remove("lock_duo_external_agents_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lock_duo_external_agents_enabled"); else _explicitNullProperties?.Remove("lock_duo_external_agents_enabled"); } }
         private bool? _explicitNullValueLockDuoExternalAgentsEnabled = default!;
         /// <summary>If `true`, enforces the GitLab Duo features enabled setting for all subgroups. GitLab Self-Managed, Premium and Ultimate only.</summary>
@@ -4512,7 +4527,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>If `true`, enforces the GitLab Duo remote flows enabled setting for all subgroups.</summary>
         public bool? LockDuoRemoteFlowsEnabled { get => _explicitNullValueLockDuoRemoteFlowsEnabled; set { _explicitNullValueLockDuoRemoteFlowsEnabled = value; AdditionalData?.Remove("lock_duo_remote_flows_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lock_duo_remote_flows_enabled"); else _explicitNullProperties?.Remove("lock_duo_remote_flows_enabled"); } }
         private bool? _explicitNullValueLockDuoRemoteFlowsEnabled = default!;
-        /// <summary>If `true`, enforces the scheduled automations enabled setting for all groups.</summary>
+        /// <summary>If `true`, enforces the scheduled automations enabled setting for all groups. Defaults to `false`. GitLab Self-Managed, Premium and Ultimate only. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/work_items/634139) in GitLab 19.6.</summary>
         public bool? LockDuoScheduledAutomationsEnabled { get => _explicitNullValueLockDuoScheduledAutomationsEnabled; set { _explicitNullValueLockDuoScheduledAutomationsEnabled = value; AdditionalData?.Remove("lock_duo_scheduled_automations_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lock_duo_scheduled_automations_enabled"); else _explicitNullProperties?.Remove("lock_duo_scheduled_automations_enabled"); } }
         private bool? _explicitNullValueLockDuoScheduledAutomationsEnabled = default!;
         /// <summary>The lock_memberships_to_ldap property</summary>
@@ -4571,7 +4586,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Logging field schema version (v0, v1, …). Cannot be downgraded.</summary>
         public int? LoggingFieldSchemaVersion { get => _explicitNullValueLoggingFieldSchemaVersion; set { _explicitNullValueLoggingFieldSchemaVersion = value; AdditionalData?.Remove("logging_field_schema_version"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("logging_field_schema_version"); else _explicitNullProperties?.Remove("logging_field_schema_version"); } }
         private int? _explicitNullValueLoggingFieldSchemaVersion = default!;
-        /// <summary>Helps prevent brute-force attacks</summary>
+        /// <summary>If `true`, enables reCAPTCHA for login, which helps prevent brute-force attacks.</summary>
         public bool? LoginRecaptchaProtectionEnabled { get => _explicitNullValueLoginRecaptchaProtectionEnabled; set { _explicitNullValueLoginRecaptchaProtectionEnabled = value; AdditionalData?.Remove("login_recaptcha_protection_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("login_recaptcha_protection_enabled"); else _explicitNullProperties?.Remove("login_recaptcha_protection_enabled"); } }
         private bool? _explicitNullValueLoginRecaptchaProtectionEnabled = default!;
         /// <summary>Enable Mailgun event receiver</summary>
@@ -4645,7 +4660,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Maximum decompressed file size for imported archives in MB. Set to `0` for unlimited. Default is `25600`.</summary>
         public int? MaxDecompressedArchiveSize { get => _explicitNullValueMaxDecompressedArchiveSize; set { _explicitNullValueMaxDecompressedArchiveSize = value; AdditionalData?.Remove("max_decompressed_archive_size"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("max_decompressed_archive_size"); else _explicitNullProperties?.Remove("max_decompressed_archive_size"); } }
         private int? _explicitNullValueMaxDecompressedArchiveSize = default!;
-        /// <summary>Maximum export size in MB</summary>
+        /// <summary>Maximum export size in MB. Set to `0` for unlimited. Default is `0`.</summary>
         public int? MaxExportSize { get => _explicitNullValueMaxExportSize; set { _explicitNullValueMaxExportSize = value; AdditionalData?.Remove("max_export_size"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("max_export_size"); else _explicitNullProperties?.Remove("max_export_size"); } }
         private int? _explicitNullValueMaxExportSize = default!;
         /// <summary>Maximum object count for GitHub API responses. Set to `0` for unlimited. The count is an estimate based on the number of `:`, `,`, `{`, and `[` characters in the response.</summary>
@@ -4720,7 +4735,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Maximum remote file size in MB for imports from external object storages</summary>
         public int? MaxImportRemoteFileSize { get => _explicitNullValueMaxImportRemoteFileSize; set { _explicitNullValueMaxImportRemoteFileSize = value; AdditionalData?.Remove("max_import_remote_file_size"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("max_import_remote_file_size"); else _explicitNullProperties?.Remove("max_import_remote_file_size"); } }
         private int? _explicitNullValueMaxImportRemoteFileSize = default!;
-        /// <summary>Maximum import size in MB</summary>
+        /// <summary>Maximum import size in MB. Set to `0` for unlimited. Default is `0`.</summary>
         public int? MaxImportSize { get => _explicitNullValueMaxImportSize; set { _explicitNullValueMaxImportSize = value; AdditionalData?.Remove("max_import_size"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("max_import_size"); else _explicitNullProperties?.Remove("max_import_size"); } }
         private int? _explicitNullValueMaxImportSize = default!;
         /// <summary>Maximum number of sign-in attempts before locking out the user.</summary>
@@ -4798,7 +4813,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string McpServerEnabled { get => _explicitNullValueMcpServerEnabled; set { _explicitNullValueMcpServerEnabled = value; AdditionalData?.Remove("mcp_server_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mcp_server_enabled"); else _explicitNullProperties?.Remove("mcp_server_enabled"); } }
         private string _explicitNullValueMcpServerEnabled = default!;
 #endif
-        /// <summary>The members_delete_limit property</summary>
+        /// <summary>Maximum number of member deletions every minute for each user in each project or group. Default: `60`. Set to `0` to disable the rate limit.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? MembersDeleteLimit { get => _explicitNullValueMembersDeleteLimit; set { _explicitNullValueMembersDeleteLimit = value; AdditionalData?.Remove("members_delete_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("members_delete_limit"); else _explicitNullProperties?.Remove("members_delete_limit"); } }
@@ -4952,7 +4967,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Maximum duration, in seconds, between refreshes of namespace statistics. Defaults to `300`.</summary>
         public int? NamespaceAggregationScheduleLeaseDurationInSeconds { get => _explicitNullValueNamespaceAggregationScheduleLeaseDurationInSeconds; set { _explicitNullValueNamespaceAggregationScheduleLeaseDurationInSeconds = value; AdditionalData?.Remove("namespace_aggregation_schedule_lease_duration_in_seconds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("namespace_aggregation_schedule_lease_duration_in_seconds"); else _explicitNullProperties?.Remove("namespace_aggregation_schedule_lease_duration_in_seconds"); } }
         private int? _explicitNullValueNamespaceAggregationScheduleLeaseDurationInSeconds = default!;
-        /// <summary>The notes_create_limit property</summary>
+        /// <summary>Maximum number of note creation requests every minute for each user. Default: `300`. Set to `0` to disable the rate limit.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? NotesCreateLimit { get => _explicitNullValueNotesCreateLimit; set { _explicitNullValueNotesCreateLimit = value; AdditionalData?.Remove("notes_create_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notes_create_limit"); else _explicitNullProperties?.Remove("notes_create_limit"); } }
@@ -4962,7 +4977,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string NotesCreateLimit { get => _explicitNullValueNotesCreateLimit; set { _explicitNullValueNotesCreateLimit = value; AdditionalData?.Remove("notes_create_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notes_create_limit"); else _explicitNullProperties?.Remove("notes_create_limit"); } }
         private string _explicitNullValueNotesCreateLimit = default!;
 #endif
-        /// <summary>The notes_create_limit_allowlist_raw property</summary>
+        /// <summary>Raw newline-, comma-, or whitespace-separated list of usernames excluded from the `notes_create_limit` rate limit. Maximum: 100 usernames.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? NotesCreateLimitAllowlistRaw { get => _explicitNullValueNotesCreateLimitAllowlistRaw; set { _explicitNullValueNotesCreateLimitAllowlistRaw = value; AdditionalData?.Remove("notes_create_limit_allowlist_raw"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notes_create_limit_allowlist_raw"); else _explicitNullProperties?.Remove("notes_create_limit_allowlist_raw"); } }
@@ -4985,7 +5000,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>If `true`, forwards npm package requests to `npmjs.org` when not found in the GitLab package registry. Premium and Ultimate only.</summary>
         public bool? NpmPackageRequestsForwarding { get => _explicitNullValueNpmPackageRequestsForwarding; set { _explicitNullValueNpmPackageRequestsForwarding = value; AdditionalData?.Remove("npm_package_requests_forwarding"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("npm_package_requests_forwarding"); else _explicitNullProperties?.Remove("npm_package_requests_forwarding"); } }
         private bool? _explicitNullValueNpmPackageRequestsForwarding = default!;
-        /// <summary>The nuget_skip_metadata_url_validation property</summary>
+        /// <summary>If `true`, skips metadata URL validation for NuGet packages. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/145887) in GitLab 17.0.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? NugetSkipMetadataUrlValidation { get => _explicitNullValueNugetSkipMetadataUrlValidation; set { _explicitNullValueNugetSkipMetadataUrlValidation = value; AdditionalData?.Remove("nuget_skip_metadata_url_validation"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nuget_skip_metadata_url_validation"); else _explicitNullProperties?.Remove("nuget_skip_metadata_url_validation"); } }
@@ -5147,7 +5162,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string PackageRegistryCleanupPoliciesWorkerCapacity { get => _explicitNullValuePackageRegistryCleanupPoliciesWorkerCapacity; set { _explicitNullValuePackageRegistryCleanupPoliciesWorkerCapacity = value; AdditionalData?.Remove("package_registry_cleanup_policies_worker_capacity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("package_registry_cleanup_policies_worker_capacity"); else _explicitNullProperties?.Remove("package_registry_cleanup_policies_worker_capacity"); } }
         private string _explicitNullValuePackageRegistryCleanupPoliciesWorkerCapacity = default!;
 #endif
-        /// <summary>The pages_deployments_api_limit property</summary>
+        /// <summary>Maximum number of times every minute the GraphQL `pagesDeployments` field can be resolved for each user. Each project a query resolves the field for counts once. Unauthenticated requests are limited for each IP address. Default: `2000`. Set to `0` to disable the rate limit. Behind a feature flag named `pages_deployments_api_rate_limit`, disabled by default. While the flag is disabled, requests over the limit are logged but not blocked. This parameter is in beta and might be changed or removed without notice.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PagesDeploymentsApiLimit { get => _explicitNullValuePagesDeploymentsApiLimit; set { _explicitNullValuePagesDeploymentsApiLimit = value; AdditionalData?.Remove("pages_deployments_api_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pages_deployments_api_limit"); else _explicitNullProperties?.Remove("pages_deployments_api_limit"); } }
@@ -5157,7 +5172,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string PagesDeploymentsApiLimit { get => _explicitNullValuePagesDeploymentsApiLimit; set { _explicitNullValuePagesDeploymentsApiLimit = value; AdditionalData?.Remove("pages_deployments_api_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pages_deployments_api_limit"); else _explicitNullProperties?.Remove("pages_deployments_api_limit"); } }
         private string _explicitNullValuePagesDeploymentsApiLimit = default!;
 #endif
-        /// <summary>Maximum number of Pages custom domains each user can create per day. Default: `50`. Set to `0` to disable the rate limit. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/work_items/635642) in GitLab 19.6.</summary>
+        /// <summary>Maximum number of Pages custom domains each user can create per day. Default: `50`. Set to `0` to disable the rate limit. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/268633) in GitLab 19.6.</summary>
         public int? PagesDomainCreateLimit { get => _explicitNullValuePagesDomainCreateLimit; set { _explicitNullValuePagesDomainCreateLimit = value; AdditionalData?.Remove("pages_domain_create_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pages_domain_create_limit"); else _explicitNullProperties?.Remove("pages_domain_create_limit"); } }
         private int? _explicitNullValuePagesDomainCreateLimit = default!;
         /// <summary>If `true`, requires users to prove ownership of custom domains. Domain verification is an essential security measure for public GitLab sites. Users are required to demonstrate they control a domain before it is enabled.</summary>
@@ -5170,7 +5185,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string PagesDomainVerificationEnabled { get => _explicitNullValuePagesDomainVerificationEnabled; set { _explicitNullValuePagesDomainVerificationEnabled = value; AdditionalData?.Remove("pages_domain_verification_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pages_domain_verification_enabled"); else _explicitNullProperties?.Remove("pages_domain_verification_enabled"); } }
         private string _explicitNullValuePagesDomainVerificationEnabled = default!;
 #endif
-        /// <summary>Maximum number of Pages custom domain verification requests per minute for each user. Default: `5`. Set to `0` to disable the rate limit. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/work_items/635642) in GitLab 19.6.</summary>
+        /// <summary>Maximum number of Pages custom domain verification requests per minute for each user. Default: `5`. Set to `0` to disable the rate limit. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/268633) in GitLab 19.6.</summary>
         public int? PagesDomainVerifyLimit { get => _explicitNullValuePagesDomainVerifyLimit; set { _explicitNullValuePagesDomainVerifyLimit = value; AdditionalData?.Remove("pages_domain_verify_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pages_domain_verify_limit"); else _explicitNullProperties?.Remove("pages_domain_verify_limit"); } }
         private int? _explicitNullValuePagesDomainVerifyLimit = default!;
         /// <summary>The pages_extra_deployments_default_expiry_seconds property</summary>
@@ -5282,7 +5297,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string PersonalAccessTokenPrefix { get => _explicitNullValuePersonalAccessTokenPrefix; set { _explicitNullValuePersonalAccessTokenPrefix = value; AdditionalData?.Remove("personal_access_token_prefix"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("personal_access_token_prefix"); else _explicitNullProperties?.Remove("personal_access_token_prefix"); } }
         private string _explicitNullValuePersonalAccessTokenPrefix = default!;
 #endif
-        /// <summary>The pg_ash_sample_interval_seconds property</summary>
+        /// <summary>Seconds between active session history samples. Must be between `1` and `60`. Default is `1`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PgAshSampleIntervalSeconds { get => _explicitNullValuePgAshSampleIntervalSeconds; set { _explicitNullValuePgAshSampleIntervalSeconds = value; AdditionalData?.Remove("pg_ash_sample_interval_seconds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pg_ash_sample_interval_seconds"); else _explicitNullProperties?.Remove("pg_ash_sample_interval_seconds"); } }
@@ -5292,7 +5307,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string PgAshSampleIntervalSeconds { get => _explicitNullValuePgAshSampleIntervalSeconds; set { _explicitNullValuePgAshSampleIntervalSeconds = value; AdditionalData?.Remove("pg_ash_sample_interval_seconds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pg_ash_sample_interval_seconds"); else _explicitNullProperties?.Remove("pg_ash_sample_interval_seconds"); } }
         private string _explicitNullValuePgAshSampleIntervalSeconds = default!;
 #endif
-        /// <summary>The pg_ash_sampling_enabled property</summary>
+        /// <summary>If `true`, samples active session history. Has no effect until pg_ash is installed. Default is `false`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PgAshSamplingEnabled { get => _explicitNullValuePgAshSamplingEnabled; set { _explicitNullValuePgAshSamplingEnabled = value; AdditionalData?.Remove("pg_ash_sampling_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pg_ash_sampling_enabled"); else _explicitNullProperties?.Remove("pg_ash_sampling_enabled"); } }
@@ -5302,13 +5317,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string PgAshSamplingEnabled { get => _explicitNullValuePgAshSamplingEnabled; set { _explicitNullValuePgAshSamplingEnabled = value; AdditionalData?.Remove("pg_ash_sampling_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pg_ash_sampling_enabled"); else _explicitNullProperties?.Remove("pg_ash_sampling_enabled"); } }
         private string _explicitNullValuePgAshSamplingEnabled = default!;
 #endif
-        /// <summary>Maximum number of pipeline cancellations allowed per minute for a given project.</summary>
+        /// <summary>Maximum number of pipeline cancellations allowed per minute for a given project. Default: `120`.</summary>
         public int? PipelineCancelLimitPerUserProject { get => _explicitNullValuePipelineCancelLimitPerUserProject; set { _explicitNullValuePipelineCancelLimitPerUserProject = value; AdditionalData?.Remove("pipeline_cancel_limit_per_user_project"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pipeline_cancel_limit_per_user_project"); else _explicitNullProperties?.Remove("pipeline_cancel_limit_per_user_project"); } }
         private int? _explicitNullValuePipelineCancelLimitPerUserProject = default!;
-        /// <summary>Maximum number of pipeline deletions allowed per minute for a given project.</summary>
+        /// <summary>Maximum number of pipeline deletions allowed per minute for a given project. Default: `400`.</summary>
         public int? PipelineDeleteLimitPerUserProject { get => _explicitNullValuePipelineDeleteLimitPerUserProject; set { _explicitNullValuePipelineDeleteLimitPerUserProject = value; AdditionalData?.Remove("pipeline_delete_limit_per_user_project"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pipeline_delete_limit_per_user_project"); else _explicitNullProperties?.Remove("pipeline_delete_limit_per_user_project"); } }
         private int? _explicitNullValuePipelineDeleteLimitPerUserProject = default!;
-        /// <summary>The pipeline_execution_policies_per_configuration_limit property</summary>
+        /// <summary>Maximum number of pipeline execution policies allowed for each security policy configuration. Default: `5`. Maximum: `20`. Ultimate only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? PipelineExecutionPoliciesPerConfigurationLimit { get => _explicitNullValuePipelineExecutionPoliciesPerConfigurationLimit; set { _explicitNullValuePipelineExecutionPoliciesPerConfigurationLimit = value; AdditionalData?.Remove("pipeline_execution_policies_per_configuration_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pipeline_execution_policies_per_configuration_limit"); else _explicitNullProperties?.Remove("pipeline_execution_policies_per_configuration_limit"); } }
@@ -5324,7 +5339,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Maximum number of pipeline creation requests allowed per minute per user. Set to `0` for unlimited requests.</summary>
         public int? PipelineLimitPerUser { get => _explicitNullValuePipelineLimitPerUser; set { _explicitNullValuePipelineLimitPerUser = value; AdditionalData?.Remove("pipeline_limit_per_user"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pipeline_limit_per_user"); else _explicitNullProperties?.Remove("pipeline_limit_per_user"); } }
         private int? _explicitNullValuePipelineLimitPerUser = default!;
-        /// <summary>Maximum number of pipeline retries allowed per minute for a given project.</summary>
+        /// <summary>Maximum number of pipeline retries allowed per minute for a given project. Default: `200`.</summary>
         public int? PipelineRetryLimitPerUserProject { get => _explicitNullValuePipelineRetryLimitPerUserProject; set { _explicitNullValuePipelineRetryLimitPerUserProject = value; AdditionalData?.Remove("pipeline_retry_limit_per_user_project"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pipeline_retry_limit_per_user_project"); else _explicitNullProperties?.Remove("pipeline_retry_limit_per_user_project"); } }
         private int? _explicitNullValuePipelineRetryLimitPerUserProject = default!;
         /// <summary>Maximum number of pipeline schedule changes (create, update, delete, take ownership) allowed per minute for a given user.</summary>
@@ -5343,7 +5358,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string PlantumlDiagramProxyEnabled { get => _explicitNullValuePlantumlDiagramProxyEnabled; set { _explicitNullValuePlantumlDiagramProxyEnabled = value; AdditionalData?.Remove("plantuml_diagram_proxy_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("plantuml_diagram_proxy_enabled"); else _explicitNullProperties?.Remove("plantuml_diagram_proxy_enabled"); } }
         private string _explicitNullValuePlantumlDiagramProxyEnabled = default!;
 #endif
-        /// <summary>If `true`, enables [PlantUML integration](https://docs.gitlab.com/administration/integration/plantuml/). Requires `plantuml_url`.</summary>
+        /// <summary>If `true`, enables [PlantUML integration](https://docs.gitlab.com/administration/integration/plantuml/). Default is `false`. Requires `plantuml_url`.</summary>
         public bool? PlantumlEnabled { get => _explicitNullValuePlantumlEnabled; set { _explicitNullValuePlantumlEnabled = value; AdditionalData?.Remove("plantuml_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("plantuml_enabled"); else _explicitNullProperties?.Remove("plantuml_enabled"); } }
         private bool? _explicitNullValuePlantumlEnabled = default!;
         /// <summary>The PlantUML server URL</summary>
@@ -5405,7 +5420,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string ProductAnalyticsEnabled { get => _explicitNullValueProductAnalyticsEnabled; set { _explicitNullValueProductAnalyticsEnabled = value; AdditionalData?.Remove("product_analytics_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_analytics_enabled"); else _explicitNullProperties?.Remove("product_analytics_enabled"); } }
         private string _explicitNullValueProductAnalyticsEnabled = default!;
 #endif
-        /// <summary>The project_api_limit property</summary>
+        /// <summary>Maximum number of requests every minute for each user or IP address to `GET /projects/:id`. Default: `400`. Set to `0` to disable the rate limit.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ProjectApiLimit { get => _explicitNullValueProjectApiLimit; set { _explicitNullValueProjectApiLimit = value; AdditionalData?.Remove("project_api_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_api_limit"); else _explicitNullProperties?.Remove("project_api_limit"); } }
@@ -5415,10 +5430,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string ProjectApiLimit { get => _explicitNullValueProjectApiLimit; set { _explicitNullValueProjectApiLimit = value; AdditionalData?.Remove("project_api_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_api_limit"); else _explicitNullProperties?.Remove("project_api_limit"); } }
         private string _explicitNullValueProjectApiLimit = default!;
 #endif
-        /// <summary>Maximum number of requests per minute per user per project to the project audit events API.</summary>
+        /// <summary>Maximum number of requests per minute per user per project to the project audit events API. Default: `200`. Set to `0` to disable the rate limit. GitLab Self-Managed, Premium and Ultimate only. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/253781) in GitLab 19.5.</summary>
         public int? ProjectAuditEventsApiLimit { get => _explicitNullValueProjectAuditEventsApiLimit; set { _explicitNullValueProjectAuditEventsApiLimit = value; AdditionalData?.Remove("project_audit_events_api_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_audit_events_api_limit"); else _explicitNullProperties?.Remove("project_audit_events_api_limit"); } }
         private int? _explicitNullValueProjectAuditEventsApiLimit = default!;
-        /// <summary>The project_create_limit property</summary>
+        /// <summary>Maximum number of requests every day for each user to `POST /projects`. Default: `200`. Set to `0` to disable the rate limit. Behind a feature flag named `namespace_create_rate_limit`, disabled by default. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/245318) in GitLab 19.3.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ProjectCreateLimit { get => _explicitNullValueProjectCreateLimit; set { _explicitNullValueProjectCreateLimit = value; AdditionalData?.Remove("project_create_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_create_limit"); else _explicitNullProperties?.Remove("project_create_limit"); } }
@@ -5428,7 +5443,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string ProjectCreateLimit { get => _explicitNullValueProjectCreateLimit; set { _explicitNullValueProjectCreateLimit = value; AdditionalData?.Remove("project_create_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_create_limit"); else _explicitNullProperties?.Remove("project_create_limit"); } }
         private string _explicitNullValueProjectCreateLimit = default!;
 #endif
-        /// <summary>The project_download_export_limit property</summary>
+        /// <summary>Maximum number of project export downloads every minute for each user and project. Default: `1`. Set to `0` to disable the rate limit.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ProjectDownloadExportLimit { get => _explicitNullValueProjectDownloadExportLimit; set { _explicitNullValueProjectDownloadExportLimit = value; AdditionalData?.Remove("project_download_export_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_download_export_limit"); else _explicitNullProperties?.Remove("project_download_export_limit"); } }
@@ -5441,7 +5456,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>If `true`, enables project export.</summary>
         public bool? ProjectExportEnabled { get => _explicitNullValueProjectExportEnabled; set { _explicitNullValueProjectExportEnabled = value; AdditionalData?.Remove("project_export_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_export_enabled"); else _explicitNullProperties?.Remove("project_export_enabled"); } }
         private bool? _explicitNullValueProjectExportEnabled = default!;
-        /// <summary>The project_export_limit property</summary>
+        /// <summary>Maximum number of project exports every minute for each user. Default: `6`. Set to `0` to disable the rate limit.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ProjectExportLimit { get => _explicitNullValueProjectExportLimit; set { _explicitNullValueProjectExportLimit = value; AdditionalData?.Remove("project_export_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_export_limit"); else _explicitNullProperties?.Remove("project_export_limit"); } }
@@ -5464,7 +5479,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string ProjectHooksCreateLimit { get => _explicitNullValueProjectHooksCreateLimit; set { _explicitNullValueProjectHooksCreateLimit = value; AdditionalData?.Remove("project_hooks_create_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_hooks_create_limit"); else _explicitNullProperties?.Remove("project_hooks_create_limit"); } }
         private string _explicitNullValueProjectHooksCreateLimit = default!;
 #endif
-        /// <summary>The project_import_limit property</summary>
+        /// <summary>Maximum number of project imports every minute for each user. Default: `6`. Set to `0` to disable the rate limit.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ProjectImportLimit { get => _explicitNullValueProjectImportLimit; set { _explicitNullValueProjectImportLimit = value; AdditionalData?.Remove("project_import_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_import_limit"); else _explicitNullProperties?.Remove("project_import_limit"); } }
@@ -5474,7 +5489,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string ProjectImportLimit { get => _explicitNullValueProjectImportLimit; set { _explicitNullValueProjectImportLimit = value; AdditionalData?.Remove("project_import_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_import_limit"); else _explicitNullProperties?.Remove("project_import_limit"); } }
         private string _explicitNullValueProjectImportLimit = default!;
 #endif
-        /// <summary>The project_invited_groups_api_limit property</summary>
+        /// <summary>Maximum number of requests every minute for each user or IP address to `GET /projects/:id/invited_groups`. Default: `60`. Set to `0` to disable the rate limit.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ProjectInvitedGroupsApiLimit { get => _explicitNullValueProjectInvitedGroupsApiLimit; set { _explicitNullValueProjectInvitedGroupsApiLimit = value; AdditionalData?.Remove("project_invited_groups_api_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_invited_groups_api_limit"); else _explicitNullProperties?.Remove("project_invited_groups_api_limit"); } }
@@ -5484,10 +5499,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string ProjectInvitedGroupsApiLimit { get => _explicitNullValueProjectInvitedGroupsApiLimit; set { _explicitNullValueProjectInvitedGroupsApiLimit = value; AdditionalData?.Remove("project_invited_groups_api_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_invited_groups_api_limit"); else _explicitNullProperties?.Remove("project_invited_groups_api_limit"); } }
         private string _explicitNullValueProjectInvitedGroupsApiLimit = default!;
 #endif
-        /// <summary>Maximum authenticated requests to /project/:id/jobs per minute</summary>
+        /// <summary>Maximum authenticated requests to /project/:id/jobs per minute. Default: `600`.</summary>
         public int? ProjectJobsApiRateLimit { get => _explicitNullValueProjectJobsApiRateLimit; set { _explicitNullValueProjectJobsApiRateLimit = value; AdditionalData?.Remove("project_jobs_api_rate_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_jobs_api_rate_limit"); else _explicitNullProperties?.Remove("project_jobs_api_rate_limit"); } }
         private int? _explicitNullValueProjectJobsApiRateLimit = default!;
-        /// <summary>The project_members_api_limit property</summary>
+        /// <summary>Maximum number of requests every minute for each user or IP address to `GET /projects/:id/members/all` and `GET /groups/:id/members/all`. Default: `200`. Set to `0` to disable the rate limit. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/578527) in GitLab 18.6.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ProjectMembersApiLimit { get => _explicitNullValueProjectMembersApiLimit; set { _explicitNullValueProjectMembersApiLimit = value; AdditionalData?.Remove("project_members_api_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_members_api_limit"); else _explicitNullProperties?.Remove("project_members_api_limit"); } }
@@ -5497,10 +5512,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string ProjectMembersApiLimit { get => _explicitNullValueProjectMembersApiLimit; set { _explicitNullValueProjectMembersApiLimit = value; AdditionalData?.Remove("project_members_api_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_members_api_limit"); else _explicitNullProperties?.Remove("project_members_api_limit"); } }
         private string _explicitNullValueProjectMembersApiLimit = default!;
 #endif
-        /// <summary>Maximum number of project relations export downloads per minute per user for each project during direct transfer migrations. Set to `0` to disable the rate limit.</summary>
+        /// <summary>Maximum number of project relations export downloads per minute per user for each project during direct transfer migrations. Default: `100`. Set to `0` to disable the rate limit. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/634958) in GitLab 19.6.</summary>
         public int? ProjectRelationsExportDownloadLimit { get => _explicitNullValueProjectRelationsExportDownloadLimit; set { _explicitNullValueProjectRelationsExportDownloadLimit = value; AdditionalData?.Remove("project_relations_export_download_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_relations_export_download_limit"); else _explicitNullProperties?.Remove("project_relations_export_download_limit"); } }
         private int? _explicitNullValueProjectRelationsExportDownloadLimit = default!;
-        /// <summary>Maximum number of project relations export requests per minute per user for each project during direct transfer migrations. Set to `0` to disable the rate limit.</summary>
+        /// <summary>Maximum number of project relations export requests per minute per user for each project during direct transfer migrations. Default: `6`. Set to `0` to disable the rate limit. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/634958) in GitLab 19.6.</summary>
         public int? ProjectRelationsExportLimit { get => _explicitNullValueProjectRelationsExportLimit; set { _explicitNullValueProjectRelationsExportLimit = value; AdditionalData?.Remove("project_relations_export_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_relations_export_limit"); else _explicitNullProperties?.Remove("project_relations_export_limit"); } }
         private int? _explicitNullValueProjectRelationsExportLimit = default!;
         /// <summary>The project_repositories_archive_limit property</summary>
@@ -5523,7 +5538,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string ProjectRepositoriesArchiveUnauthenticatedLimit { get => _explicitNullValueProjectRepositoriesArchiveUnauthenticatedLimit; set { _explicitNullValueProjectRepositoriesArchiveUnauthenticatedLimit = value; AdditionalData?.Remove("project_repositories_archive_unauthenticated_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_repositories_archive_unauthenticated_limit"); else _explicitNullProperties?.Remove("project_repositories_archive_unauthenticated_limit"); } }
         private string _explicitNullValueProjectRepositoriesArchiveUnauthenticatedLimit = default!;
 #endif
-        /// <summary>The project_repositories_blame_limit property</summary>
+        /// <summary>Maximum number of authenticated requests every minute to the file blame API (`GET /projects/:id/repository/files/:file_path/blame`) and the GraphQL `blame` field, for each user and project. Default: `400`. Set to `0` to disable the rate limit.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ProjectRepositoriesBlameLimit { get => _explicitNullValueProjectRepositoriesBlameLimit; set { _explicitNullValueProjectRepositoriesBlameLimit = value; AdditionalData?.Remove("project_repositories_blame_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_repositories_blame_limit"); else _explicitNullProperties?.Remove("project_repositories_blame_limit"); } }
@@ -5533,7 +5548,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string ProjectRepositoriesBlameLimit { get => _explicitNullValueProjectRepositoriesBlameLimit; set { _explicitNullValueProjectRepositoriesBlameLimit = value; AdditionalData?.Remove("project_repositories_blame_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_repositories_blame_limit"); else _explicitNullProperties?.Remove("project_repositories_blame_limit"); } }
         private string _explicitNullValueProjectRepositoriesBlameLimit = default!;
 #endif
-        /// <summary>The project_repositories_blame_unauthenticated_limit property</summary>
+        /// <summary>Maximum number of unauthenticated requests every minute to the file blame API (`GET /projects/:id/repository/files/:file_path/blame`) and the GraphQL `blame` field, for each IP address. Default: `400`. Set to `0` to disable the rate limit.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ProjectRepositoriesBlameUnauthenticatedLimit { get => _explicitNullValueProjectRepositoriesBlameUnauthenticatedLimit; set { _explicitNullValueProjectRepositoriesBlameUnauthenticatedLimit = value; AdditionalData?.Remove("project_repositories_blame_unauthenticated_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_repositories_blame_unauthenticated_limit"); else _explicitNullProperties?.Remove("project_repositories_blame_unauthenticated_limit"); } }
@@ -5543,7 +5558,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string ProjectRepositoriesBlameUnauthenticatedLimit { get => _explicitNullValueProjectRepositoriesBlameUnauthenticatedLimit; set { _explicitNullValueProjectRepositoriesBlameUnauthenticatedLimit = value; AdditionalData?.Remove("project_repositories_blame_unauthenticated_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_repositories_blame_unauthenticated_limit"); else _explicitNullProperties?.Remove("project_repositories_blame_unauthenticated_limit"); } }
         private string _explicitNullValueProjectRepositoriesBlameUnauthenticatedLimit = default!;
 #endif
-        /// <summary>The project_repositories_blobs_batch_limit property</summary>
+        /// <summary>Maximum number of requests every minute for each user and project to `POST /projects/:id/repository/blobs/batch`. Default: `5`. Set to `0` to disable the rate limit. The endpoint is behind a feature flag named `repository_blobs_batch_api`, disabled by default.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ProjectRepositoriesBlobsBatchLimit { get => _explicitNullValueProjectRepositoriesBlobsBatchLimit; set { _explicitNullValueProjectRepositoriesBlobsBatchLimit = value; AdditionalData?.Remove("project_repositories_blobs_batch_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_repositories_blobs_batch_limit"); else _explicitNullProperties?.Remove("project_repositories_blobs_batch_limit"); } }
@@ -5586,7 +5601,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Set the expiration time (in seconds) of authentication tokens of newly registered project runners. Minimum value is 7200 seconds. For more information, see [Automatically rotate authentication tokens](https://docs.gitlab.com/ci/runners/configure_runners/#automatically-rotate-runner-authentication-tokens).</summary>
         public int? ProjectRunnerTokenExpirationInterval { get => _explicitNullValueProjectRunnerTokenExpirationInterval; set { _explicitNullValueProjectRunnerTokenExpirationInterval = value; AdditionalData?.Remove("project_runner_token_expiration_interval"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("project_runner_token_expiration_interval"); else _explicitNullProperties?.Remove("project_runner_token_expiration_interval"); } }
         private int? _explicitNullValueProjectRunnerTokenExpirationInterval = default!;
-        /// <summary>The projects_api_limit property</summary>
+        /// <summary>Maximum number of authenticated requests every 10 minutes for each user to `GET /projects`. Default: `2000`. Set to `0` to disable the rate limit.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ProjectsApiLimit { get => _explicitNullValueProjectsApiLimit; set { _explicitNullValueProjectsApiLimit = value; AdditionalData?.Remove("projects_api_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("projects_api_limit"); else _explicitNullProperties?.Remove("projects_api_limit"); } }
@@ -5687,7 +5702,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>If `true`, enables reCAPTCHA. Requires `recaptcha_private_key` and `recaptcha_site_key`.</summary>
         public bool? RecaptchaEnabled { get => _explicitNullValueRecaptchaEnabled; set { _explicitNullValueRecaptchaEnabled = value; AdditionalData?.Remove("recaptcha_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recaptcha_enabled"); else _explicitNullProperties?.Remove("recaptcha_enabled"); } }
         private bool? _explicitNullValueRecaptchaEnabled = default!;
-        /// <summary>Generate private key at http://www.google.com/recaptcha</summary>
+        /// <summary>Private key for reCAPTCHA. Generate private key at http://www.google.com/recaptcha</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? RecaptchaPrivateKey { get => _explicitNullValueRecaptchaPrivateKey; set { _explicitNullValueRecaptchaPrivateKey = value; AdditionalData?.Remove("recaptcha_private_key"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recaptcha_private_key"); else _explicitNullProperties?.Remove("recaptcha_private_key"); } }
@@ -5697,7 +5712,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string RecaptchaPrivateKey { get => _explicitNullValueRecaptchaPrivateKey; set { _explicitNullValueRecaptchaPrivateKey = value; AdditionalData?.Remove("recaptcha_private_key"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recaptcha_private_key"); else _explicitNullProperties?.Remove("recaptcha_private_key"); } }
         private string _explicitNullValueRecaptchaPrivateKey = default!;
 #endif
-        /// <summary>Generate site key at http://www.google.com/recaptcha</summary>
+        /// <summary>Site key for reCAPTCHA. Generate site key at http://www.google.com/recaptcha</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? RecaptchaSiteKey { get => _explicitNullValueRecaptchaSiteKey; set { _explicitNullValueRecaptchaSiteKey = value; AdditionalData?.Remove("recaptcha_site_key"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recaptcha_site_key"); else _explicitNullProperties?.Remove("recaptcha_site_key"); } }
@@ -5867,13 +5882,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string RootMovedPermanentlyRedirection { get => _explicitNullValueRootMovedPermanentlyRedirection; set { _explicitNullValueRootMovedPermanentlyRedirection = value; AdditionalData?.Remove("root_moved_permanently_redirection"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("root_moved_permanently_redirection"); else _explicitNullProperties?.Remove("root_moved_permanently_redirection"); } }
         private string _explicitNullValueRootMovedPermanentlyRedirection = default!;
 #endif
-        /// <summary>Restrictions on the complexity of uploaded RSA keys. A value of -1 disables all RSA keys.</summary>
+        /// <summary>Minimum allowed size of uploaded RSA keys, in bits (key length for RSA and DSA, curve size for the others). A value of -1 disables all RSA keys. Default is `0` (no restriction).</summary>
         public int? RsaKeyRestriction { get => _explicitNullValueRsaKeyRestriction; set { _explicitNullValueRsaKeyRestriction = value; AdditionalData?.Remove("rsa_key_restriction"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rsa_key_restriction"); else _explicitNullProperties?.Remove("rsa_key_restriction"); } }
         private int? _explicitNullValueRsaKeyRestriction = default!;
         /// <summary>If `true`, forwards RubyGems package requests to `rubygems.org` when not found in the GitLab package registry. Premium and Ultimate only.</summary>
         public bool? RubygemsPackageRequestsForwarding { get => _explicitNullValueRubygemsPackageRequestsForwarding; set { _explicitNullValueRubygemsPackageRequestsForwarding = value; AdditionalData?.Remove("rubygems_package_requests_forwarding"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("rubygems_package_requests_forwarding"); else _explicitNullProperties?.Remove("rubygems_package_requests_forwarding"); } }
         private bool? _explicitNullValueRubygemsPackageRequestsForwarding = default!;
-        /// <summary>Maximum number of runner job list requests filtered by a completed status allowed per minute for a given user.</summary>
+        /// <summary>Maximum number of runner job list requests filtered by a completed status allowed per minute for a given user. Default: `330`.</summary>
         public int? RunnerJobListCompletedStatusesLimitPerUser { get => _explicitNullValueRunnerJobListCompletedStatusesLimitPerUser; set { _explicitNullValueRunnerJobListCompletedStatusesLimitPerUser = value; AdditionalData?.Remove("runner_job_list_completed_statuses_limit_per_user"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("runner_job_list_completed_statuses_limit_per_user"); else _explicitNullProperties?.Remove("runner_job_list_completed_statuses_limit_per_user"); } }
         private int? _explicitNullValueRunnerJobListCompletedStatusesLimitPerUser = default!;
         /// <summary>Maximum number of runner job list requests filtered to the user&apos;s projects allowed per minute for a given user.</summary>
@@ -5909,7 +5924,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string RunnerJobsRequestApiLimit { get => _explicitNullValueRunnerJobsRequestApiLimit; set { _explicitNullValueRunnerJobsRequestApiLimit = value; AdditionalData?.Remove("runner_jobs_request_api_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("runner_jobs_request_api_limit"); else _explicitNullProperties?.Remove("runner_jobs_request_api_limit"); } }
         private string _explicitNullValueRunnerJobsRequestApiLimit = default!;
 #endif
-        /// <summary>Maximum number of runner managers each runner can create every 10 minutes. Applies only when the `log_runner_manager_creation_limit` or `enforce_runner_manager_creation_limit` feature flag is enabled. Default: `1000`. To disable the limit, set to `0`.</summary>
+        /// <summary>Maximum number of runner managers each runner can create every 10 minutes. Applies only when the `log_runner_manager_creation_limit` or `enforce_runner_manager_creation_limit` feature flag is enabled. Default: `1000`. To disable the limit, set to `0`. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/267108) in GitLab 19.6.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? RunnerManagerCreationLimit { get => _explicitNullValueRunnerManagerCreationLimit; set { _explicitNullValueRunnerManagerCreationLimit = value; AdditionalData?.Remove("runner_manager_creation_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("runner_manager_creation_limit"); else _explicitNullProperties?.Remove("runner_manager_creation_limit"); } }
@@ -5935,7 +5950,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string ScanExecutionPoliciesActionLimit { get => _explicitNullValueScanExecutionPoliciesActionLimit; set { _explicitNullValueScanExecutionPoliciesActionLimit = value; AdditionalData?.Remove("scan_execution_policies_action_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scan_execution_policies_action_limit"); else _explicitNullProperties?.Remove("scan_execution_policies_action_limit"); } }
         private string _explicitNullValueScanExecutionPoliciesActionLimit = default!;
 #endif
-        /// <summary>The scan_execution_policies_per_configuration_limit property</summary>
+        /// <summary>Maximum number of scan execution policies allowed for each security policy configuration. Default: `5`. Maximum: `20`. Ultimate only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ScanExecutionPoliciesPerConfigurationLimit { get => _explicitNullValueScanExecutionPoliciesPerConfigurationLimit; set { _explicitNullValueScanExecutionPoliciesPerConfigurationLimit = value; AdditionalData?.Remove("scan_execution_policies_per_configuration_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scan_execution_policies_per_configuration_limit"); else _explicitNullProperties?.Remove("scan_execution_policies_per_configuration_limit"); } }
@@ -5977,7 +5992,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string SearchRateLimit { get => _explicitNullValueSearchRateLimit; set { _explicitNullValueSearchRateLimit = value; AdditionalData?.Remove("search_rate_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("search_rate_limit"); else _explicitNullProperties?.Remove("search_rate_limit"); } }
         private string _explicitNullValueSearchRateLimit = default!;
 #endif
-        /// <summary>The search_rate_limit_allowlist_raw property</summary>
+        /// <summary>Raw newline-, comma-, or whitespace-separated list of usernames excluded from the `search_rate_limit` rate limit. Maximum: 100 usernames.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SearchRateLimitAllowlistRaw { get => _explicitNullValueSearchRateLimitAllowlistRaw; set { _explicitNullValueSearchRateLimitAllowlistRaw = value; AdditionalData?.Remove("search_rate_limit_allowlist_raw"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("search_rate_limit_allowlist_raw"); else _explicitNullProperties?.Remove("search_rate_limit_allowlist_raw"); } }
@@ -6158,7 +6173,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>If `true`, sessions expire a number of minutes after the session was created rather than after the last activity. The session lifetime is defined by `session_expire_delay`.</summary>
         public bool? SessionExpireFromInit { get => _explicitNullValueSessionExpireFromInit; set { _explicitNullValueSessionExpireFromInit = value; AdditionalData?.Remove("session_expire_from_init"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("session_expire_from_init"); else _explicitNullProperties?.Remove("session_expire_from_init"); } }
         private bool? _explicitNullValueSessionExpireFromInit = default!;
-        /// <summary>Enable shared runners for new projects</summary>
+        /// <summary>Enable shared runners for new projects. Requires `shared_runners_text`.</summary>
         public bool? SharedRunnersEnabled { get => _explicitNullValueSharedRunnersEnabled; set { _explicitNullValueSharedRunnersEnabled = value; AdditionalData?.Remove("shared_runners_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shared_runners_enabled"); else _explicitNullProperties?.Remove("shared_runners_enabled"); } }
         private bool? _explicitNullValueSharedRunnersEnabled = default!;
         /// <summary>Set the maximum number of compute minutes that a group can use on instance runners per month. Premium and Ultimate only.</summary>
@@ -6349,7 +6364,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Enable Snowplow tracking</summary>
         public bool? SnowplowEnabled { get => _explicitNullValueSnowplowEnabled; set { _explicitNullValueSnowplowEnabled = value; AdditionalData?.Remove("snowplow_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("snowplow_enabled"); else _explicitNullProperties?.Remove("snowplow_enabled"); } }
         private bool? _explicitNullValueSnowplowEnabled = default!;
-        /// <summary>If `true`, enables Sourcegraph integration. Requires `sourcegraph_url`.</summary>
+        /// <summary>If `true`, enables Sourcegraph integration. Default is `false`. Requires `sourcegraph_url`.</summary>
         public bool? SourcegraphEnabled { get => _explicitNullValueSourcegraphEnabled; set { _explicitNullValueSourcegraphEnabled = value; AdditionalData?.Remove("sourcegraph_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sourcegraph_enabled"); else _explicitNullProperties?.Remove("sourcegraph_enabled"); } }
         private bool? _explicitNullValueSourcegraphEnabled = default!;
         /// <summary>If `true`, blocks Sourcegraph from being loaded on private and internal projects. Defaults to `true`.</summary>
@@ -6375,7 +6390,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string SpamCheckApiKey { get => _explicitNullValueSpamCheckApiKey; set { _explicitNullValueSpamCheckApiKey = value; AdditionalData?.Remove("spam_check_api_key"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("spam_check_api_key"); else _explicitNullProperties?.Remove("spam_check_api_key"); } }
         private string _explicitNullValueSpamCheckApiKey = default!;
 #endif
-        /// <summary>Enable Spam Check via external API endpoint</summary>
+        /// <summary>Enable Spam Check via external API endpoint. Default is `false`.</summary>
         public bool? SpamCheckEndpointEnabled { get => _explicitNullValueSpamCheckEndpointEnabled; set { _explicitNullValueSpamCheckEndpointEnabled = value; AdditionalData?.Remove("spam_check_endpoint_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("spam_check_endpoint_enabled"); else _explicitNullProperties?.Remove("spam_check_endpoint_enabled"); } }
         private bool? _explicitNullValueSpamCheckEndpointEnabled = default!;
         /// <summary>URL of the external Spamcheck service endpoint. Valid URI schemes are `grpc` or `tls`. Specifying `tls` forces communication to be encrypted.</summary>
@@ -6433,7 +6448,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string SystemHooksCreateLimit { get => _explicitNullValueSystemHooksCreateLimit; set { _explicitNullValueSystemHooksCreateLimit = value; AdditionalData?.Remove("system_hooks_create_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("system_hooks_create_limit"); else _explicitNullProperties?.Remove("system_hooks_create_limit"); } }
         private string _explicitNullValueSystemHooksCreateLimit = default!;
 #endif
-        /// <summary>The tags_create_limit property</summary>
+        /// <summary>Maximum number of tag creation requests allowed every 30 minutes for each project. Applies to the REST API endpoint for creating a tag, the GraphQL `tagCreate` mutation, tag creation in the UI, and the `/tag` quick action. Default: `100`. Set to `0` to disable the rate limit.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? TagsCreateLimit { get => _explicitNullValueTagsCreateLimit; set { _explicitNullValueTagsCreateLimit = value; AdditionalData?.Remove("tags_create_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tags_create_limit"); else _explicitNullProperties?.Remove("tags_create_limit"); } }
@@ -6519,7 +6534,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string ThrottleAuthenticatedDependencyProxyRequestsPerPeriod { get => _explicitNullValueThrottleAuthenticatedDependencyProxyRequestsPerPeriod; set { _explicitNullValueThrottleAuthenticatedDependencyProxyRequestsPerPeriod = value; AdditionalData?.Remove("throttle_authenticated_dependency_proxy_requests_per_period"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("throttle_authenticated_dependency_proxy_requests_per_period"); else _explicitNullProperties?.Remove("throttle_authenticated_dependency_proxy_requests_per_period"); } }
         private string _explicitNullValueThrottleAuthenticatedDependencyProxyRequestsPerPeriod = default!;
 #endif
-        /// <summary>The throttle_authenticated_deprecated_api_enabled property</summary>
+        /// <summary>If `true`, enforces the authenticated request rate limit for deprecated API endpoints. Default value: `false`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ThrottleAuthenticatedDeprecatedApiEnabled { get => _explicitNullValueThrottleAuthenticatedDeprecatedApiEnabled; set { _explicitNullValueThrottleAuthenticatedDeprecatedApiEnabled = value; AdditionalData?.Remove("throttle_authenticated_deprecated_api_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("throttle_authenticated_deprecated_api_enabled"); else _explicitNullProperties?.Remove("throttle_authenticated_deprecated_api_enabled"); } }
@@ -6529,7 +6544,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string ThrottleAuthenticatedDeprecatedApiEnabled { get => _explicitNullValueThrottleAuthenticatedDeprecatedApiEnabled; set { _explicitNullValueThrottleAuthenticatedDeprecatedApiEnabled = value; AdditionalData?.Remove("throttle_authenticated_deprecated_api_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("throttle_authenticated_deprecated_api_enabled"); else _explicitNullProperties?.Remove("throttle_authenticated_deprecated_api_enabled"); } }
         private string _explicitNullValueThrottleAuthenticatedDeprecatedApiEnabled = default!;
 #endif
-        /// <summary>The throttle_authenticated_deprecated_api_period_in_seconds property</summary>
+        /// <summary>Rate limit period in seconds. `throttle_authenticated_deprecated_api_enabled` must be `true`. Default value: `3600`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ThrottleAuthenticatedDeprecatedApiPeriodInSeconds { get => _explicitNullValueThrottleAuthenticatedDeprecatedApiPeriodInSeconds; set { _explicitNullValueThrottleAuthenticatedDeprecatedApiPeriodInSeconds = value; AdditionalData?.Remove("throttle_authenticated_deprecated_api_period_in_seconds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("throttle_authenticated_deprecated_api_period_in_seconds"); else _explicitNullProperties?.Remove("throttle_authenticated_deprecated_api_period_in_seconds"); } }
@@ -6539,7 +6554,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string ThrottleAuthenticatedDeprecatedApiPeriodInSeconds { get => _explicitNullValueThrottleAuthenticatedDeprecatedApiPeriodInSeconds; set { _explicitNullValueThrottleAuthenticatedDeprecatedApiPeriodInSeconds = value; AdditionalData?.Remove("throttle_authenticated_deprecated_api_period_in_seconds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("throttle_authenticated_deprecated_api_period_in_seconds"); else _explicitNullProperties?.Remove("throttle_authenticated_deprecated_api_period_in_seconds"); } }
         private string _explicitNullValueThrottleAuthenticatedDeprecatedApiPeriodInSeconds = default!;
 #endif
-        /// <summary>The throttle_authenticated_deprecated_api_requests_per_period property</summary>
+        /// <summary>Maximum requests in each period for each user. `throttle_authenticated_deprecated_api_enabled` must be `true`. Default value: `3600`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ThrottleAuthenticatedDeprecatedApiRequestsPerPeriod { get => _explicitNullValueThrottleAuthenticatedDeprecatedApiRequestsPerPeriod; set { _explicitNullValueThrottleAuthenticatedDeprecatedApiRequestsPerPeriod = value; AdditionalData?.Remove("throttle_authenticated_deprecated_api_requests_per_period"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("throttle_authenticated_deprecated_api_requests_per_period"); else _explicitNullProperties?.Remove("throttle_authenticated_deprecated_api_requests_per_period"); } }
@@ -6549,7 +6564,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string ThrottleAuthenticatedDeprecatedApiRequestsPerPeriod { get => _explicitNullValueThrottleAuthenticatedDeprecatedApiRequestsPerPeriod; set { _explicitNullValueThrottleAuthenticatedDeprecatedApiRequestsPerPeriod = value; AdditionalData?.Remove("throttle_authenticated_deprecated_api_requests_per_period"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("throttle_authenticated_deprecated_api_requests_per_period"); else _explicitNullProperties?.Remove("throttle_authenticated_deprecated_api_requests_per_period"); } }
         private string _explicitNullValueThrottleAuthenticatedDeprecatedApiRequestsPerPeriod = default!;
 #endif
-        /// <summary>The throttle_authenticated_files_api_enabled property</summary>
+        /// <summary>If `true`, enforces the authenticated request rate limit for the Repository files API. Default value: `false`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ThrottleAuthenticatedFilesApiEnabled { get => _explicitNullValueThrottleAuthenticatedFilesApiEnabled; set { _explicitNullValueThrottleAuthenticatedFilesApiEnabled = value; AdditionalData?.Remove("throttle_authenticated_files_api_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("throttle_authenticated_files_api_enabled"); else _explicitNullProperties?.Remove("throttle_authenticated_files_api_enabled"); } }
@@ -6559,7 +6574,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string ThrottleAuthenticatedFilesApiEnabled { get => _explicitNullValueThrottleAuthenticatedFilesApiEnabled; set { _explicitNullValueThrottleAuthenticatedFilesApiEnabled = value; AdditionalData?.Remove("throttle_authenticated_files_api_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("throttle_authenticated_files_api_enabled"); else _explicitNullProperties?.Remove("throttle_authenticated_files_api_enabled"); } }
         private string _explicitNullValueThrottleAuthenticatedFilesApiEnabled = default!;
 #endif
-        /// <summary>The throttle_authenticated_files_api_period_in_seconds property</summary>
+        /// <summary>Rate limit period in seconds. `throttle_authenticated_files_api_enabled` must be `true`. Default value: `15`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ThrottleAuthenticatedFilesApiPeriodInSeconds { get => _explicitNullValueThrottleAuthenticatedFilesApiPeriodInSeconds; set { _explicitNullValueThrottleAuthenticatedFilesApiPeriodInSeconds = value; AdditionalData?.Remove("throttle_authenticated_files_api_period_in_seconds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("throttle_authenticated_files_api_period_in_seconds"); else _explicitNullProperties?.Remove("throttle_authenticated_files_api_period_in_seconds"); } }
@@ -6569,7 +6584,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string ThrottleAuthenticatedFilesApiPeriodInSeconds { get => _explicitNullValueThrottleAuthenticatedFilesApiPeriodInSeconds; set { _explicitNullValueThrottleAuthenticatedFilesApiPeriodInSeconds = value; AdditionalData?.Remove("throttle_authenticated_files_api_period_in_seconds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("throttle_authenticated_files_api_period_in_seconds"); else _explicitNullProperties?.Remove("throttle_authenticated_files_api_period_in_seconds"); } }
         private string _explicitNullValueThrottleAuthenticatedFilesApiPeriodInSeconds = default!;
 #endif
-        /// <summary>The throttle_authenticated_files_api_requests_per_period property</summary>
+        /// <summary>Maximum requests in each period for each user. `throttle_authenticated_files_api_enabled` must be `true`. Default value: `500`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ThrottleAuthenticatedFilesApiRequestsPerPeriod { get => _explicitNullValueThrottleAuthenticatedFilesApiRequestsPerPeriod; set { _explicitNullValueThrottleAuthenticatedFilesApiRequestsPerPeriod = value; AdditionalData?.Remove("throttle_authenticated_files_api_requests_per_period"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("throttle_authenticated_files_api_requests_per_period"); else _explicitNullProperties?.Remove("throttle_authenticated_files_api_requests_per_period"); } }
@@ -6609,7 +6624,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string ThrottleAuthenticatedGitHttpRequestsPerPeriod { get => _explicitNullValueThrottleAuthenticatedGitHttpRequestsPerPeriod; set { _explicitNullValueThrottleAuthenticatedGitHttpRequestsPerPeriod = value; AdditionalData?.Remove("throttle_authenticated_git_http_requests_per_period"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("throttle_authenticated_git_http_requests_per_period"); else _explicitNullProperties?.Remove("throttle_authenticated_git_http_requests_per_period"); } }
         private string _explicitNullValueThrottleAuthenticatedGitHttpRequestsPerPeriod = default!;
 #endif
-        /// <summary>The throttle_authenticated_git_lfs_enabled property</summary>
+        /// <summary>If `true`, enforces the authenticated Git LFS request rate limit. Default value: `false`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ThrottleAuthenticatedGitLfsEnabled { get => _explicitNullValueThrottleAuthenticatedGitLfsEnabled; set { _explicitNullValueThrottleAuthenticatedGitLfsEnabled = value; AdditionalData?.Remove("throttle_authenticated_git_lfs_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("throttle_authenticated_git_lfs_enabled"); else _explicitNullProperties?.Remove("throttle_authenticated_git_lfs_enabled"); } }
@@ -6619,7 +6634,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string ThrottleAuthenticatedGitLfsEnabled { get => _explicitNullValueThrottleAuthenticatedGitLfsEnabled; set { _explicitNullValueThrottleAuthenticatedGitLfsEnabled = value; AdditionalData?.Remove("throttle_authenticated_git_lfs_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("throttle_authenticated_git_lfs_enabled"); else _explicitNullProperties?.Remove("throttle_authenticated_git_lfs_enabled"); } }
         private string _explicitNullValueThrottleAuthenticatedGitLfsEnabled = default!;
 #endif
-        /// <summary>The throttle_authenticated_git_lfs_period_in_seconds property</summary>
+        /// <summary>Rate limit period in seconds. `throttle_authenticated_git_lfs_enabled` must be `true`. Default value: `60`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ThrottleAuthenticatedGitLfsPeriodInSeconds { get => _explicitNullValueThrottleAuthenticatedGitLfsPeriodInSeconds; set { _explicitNullValueThrottleAuthenticatedGitLfsPeriodInSeconds = value; AdditionalData?.Remove("throttle_authenticated_git_lfs_period_in_seconds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("throttle_authenticated_git_lfs_period_in_seconds"); else _explicitNullProperties?.Remove("throttle_authenticated_git_lfs_period_in_seconds"); } }
@@ -6629,7 +6644,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string ThrottleAuthenticatedGitLfsPeriodInSeconds { get => _explicitNullValueThrottleAuthenticatedGitLfsPeriodInSeconds; set { _explicitNullValueThrottleAuthenticatedGitLfsPeriodInSeconds = value; AdditionalData?.Remove("throttle_authenticated_git_lfs_period_in_seconds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("throttle_authenticated_git_lfs_period_in_seconds"); else _explicitNullProperties?.Remove("throttle_authenticated_git_lfs_period_in_seconds"); } }
         private string _explicitNullValueThrottleAuthenticatedGitLfsPeriodInSeconds = default!;
 #endif
-        /// <summary>The throttle_authenticated_git_lfs_requests_per_period property</summary>
+        /// <summary>Maximum requests in each period for each user. `throttle_authenticated_git_lfs_enabled` must be `true`. Default value: `1000`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ThrottleAuthenticatedGitLfsRequestsPerPeriod { get => _explicitNullValueThrottleAuthenticatedGitLfsRequestsPerPeriod; set { _explicitNullValueThrottleAuthenticatedGitLfsRequestsPerPeriod = value; AdditionalData?.Remove("throttle_authenticated_git_lfs_requests_per_period"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("throttle_authenticated_git_lfs_requests_per_period"); else _explicitNullProperties?.Remove("throttle_authenticated_git_lfs_requests_per_period"); } }
@@ -6729,7 +6744,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string ThrottleAuthenticatedWebRequestsPerPeriod { get => _explicitNullValueThrottleAuthenticatedWebRequestsPerPeriod; set { _explicitNullValueThrottleAuthenticatedWebRequestsPerPeriod = value; AdditionalData?.Remove("throttle_authenticated_web_requests_per_period"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("throttle_authenticated_web_requests_per_period"); else _explicitNullProperties?.Remove("throttle_authenticated_web_requests_per_period"); } }
         private string _explicitNullValueThrottleAuthenticatedWebRequestsPerPeriod = default!;
 #endif
-        /// <summary>The throttle_incident_management_notification_enabled property</summary>
+        /// <summary>If `true`, enforces the inbound incident management alert rate limit for each project. Default value: `false`. GitLab Self-Managed and GitLab Dedicated, Ultimate only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ThrottleIncidentManagementNotificationEnabled { get => _explicitNullValueThrottleIncidentManagementNotificationEnabled; set { _explicitNullValueThrottleIncidentManagementNotificationEnabled = value; AdditionalData?.Remove("throttle_incident_management_notification_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("throttle_incident_management_notification_enabled"); else _explicitNullProperties?.Remove("throttle_incident_management_notification_enabled"); } }
@@ -6739,7 +6754,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string ThrottleIncidentManagementNotificationEnabled { get => _explicitNullValueThrottleIncidentManagementNotificationEnabled; set { _explicitNullValueThrottleIncidentManagementNotificationEnabled = value; AdditionalData?.Remove("throttle_incident_management_notification_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("throttle_incident_management_notification_enabled"); else _explicitNullProperties?.Remove("throttle_incident_management_notification_enabled"); } }
         private string _explicitNullValueThrottleIncidentManagementNotificationEnabled = default!;
 #endif
-        /// <summary>The throttle_incident_management_notification_period_in_seconds property</summary>
+        /// <summary>Rate limit period in seconds. `throttle_incident_management_notification_enabled` must be `true`. Default value: `3600`. GitLab Self-Managed and GitLab Dedicated, Ultimate only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ThrottleIncidentManagementNotificationPeriodInSeconds { get => _explicitNullValueThrottleIncidentManagementNotificationPeriodInSeconds; set { _explicitNullValueThrottleIncidentManagementNotificationPeriodInSeconds = value; AdditionalData?.Remove("throttle_incident_management_notification_period_in_seconds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("throttle_incident_management_notification_period_in_seconds"); else _explicitNullProperties?.Remove("throttle_incident_management_notification_period_in_seconds"); } }
@@ -6749,7 +6764,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string ThrottleIncidentManagementNotificationPeriodInSeconds { get => _explicitNullValueThrottleIncidentManagementNotificationPeriodInSeconds; set { _explicitNullValueThrottleIncidentManagementNotificationPeriodInSeconds = value; AdditionalData?.Remove("throttle_incident_management_notification_period_in_seconds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("throttle_incident_management_notification_period_in_seconds"); else _explicitNullProperties?.Remove("throttle_incident_management_notification_period_in_seconds"); } }
         private string _explicitNullValueThrottleIncidentManagementNotificationPeriodInSeconds = default!;
 #endif
-        /// <summary>The throttle_incident_management_notification_per_period property</summary>
+        /// <summary>Maximum inbound alert requests in each period for each project. `throttle_incident_management_notification_enabled` must be `true`. Default value: `3600`. GitLab Self-Managed and GitLab Dedicated, Ultimate only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ThrottleIncidentManagementNotificationPerPeriod { get => _explicitNullValueThrottleIncidentManagementNotificationPerPeriod; set { _explicitNullValueThrottleIncidentManagementNotificationPerPeriod = value; AdditionalData?.Remove("throttle_incident_management_notification_per_period"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("throttle_incident_management_notification_per_period"); else _explicitNullProperties?.Remove("throttle_incident_management_notification_per_period"); } }
@@ -6759,7 +6774,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string ThrottleIncidentManagementNotificationPerPeriod { get => _explicitNullValueThrottleIncidentManagementNotificationPerPeriod; set { _explicitNullValueThrottleIncidentManagementNotificationPerPeriod = value; AdditionalData?.Remove("throttle_incident_management_notification_per_period"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("throttle_incident_management_notification_per_period"); else _explicitNullProperties?.Remove("throttle_incident_management_notification_per_period"); } }
         private string _explicitNullValueThrottleIncidentManagementNotificationPerPeriod = default!;
 #endif
-        /// <summary>The throttle_protected_paths_enabled property</summary>
+        /// <summary>If `true`, enforces the rate limit on protected paths. Default value: `false`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ThrottleProtectedPathsEnabled { get => _explicitNullValueThrottleProtectedPathsEnabled; set { _explicitNullValueThrottleProtectedPathsEnabled = value; AdditionalData?.Remove("throttle_protected_paths_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("throttle_protected_paths_enabled"); else _explicitNullProperties?.Remove("throttle_protected_paths_enabled"); } }
@@ -6769,7 +6784,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string ThrottleProtectedPathsEnabled { get => _explicitNullValueThrottleProtectedPathsEnabled; set { _explicitNullValueThrottleProtectedPathsEnabled = value; AdditionalData?.Remove("throttle_protected_paths_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("throttle_protected_paths_enabled"); else _explicitNullProperties?.Remove("throttle_protected_paths_enabled"); } }
         private string _explicitNullValueThrottleProtectedPathsEnabled = default!;
 #endif
-        /// <summary>The throttle_protected_paths_period_in_seconds property</summary>
+        /// <summary>Rate limit period in seconds. `throttle_protected_paths_enabled` must be `true`. Default value: `60`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ThrottleProtectedPathsPeriodInSeconds { get => _explicitNullValueThrottleProtectedPathsPeriodInSeconds; set { _explicitNullValueThrottleProtectedPathsPeriodInSeconds = value; AdditionalData?.Remove("throttle_protected_paths_period_in_seconds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("throttle_protected_paths_period_in_seconds"); else _explicitNullProperties?.Remove("throttle_protected_paths_period_in_seconds"); } }
@@ -6779,7 +6794,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string ThrottleProtectedPathsPeriodInSeconds { get => _explicitNullValueThrottleProtectedPathsPeriodInSeconds; set { _explicitNullValueThrottleProtectedPathsPeriodInSeconds = value; AdditionalData?.Remove("throttle_protected_paths_period_in_seconds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("throttle_protected_paths_period_in_seconds"); else _explicitNullProperties?.Remove("throttle_protected_paths_period_in_seconds"); } }
         private string _explicitNullValueThrottleProtectedPathsPeriodInSeconds = default!;
 #endif
-        /// <summary>The throttle_protected_paths_requests_per_period property</summary>
+        /// <summary>Maximum requests in each period for each IP address. `throttle_protected_paths_enabled` must be `true`. Default value: `10`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ThrottleProtectedPathsRequestsPerPeriod { get => _explicitNullValueThrottleProtectedPathsRequestsPerPeriod; set { _explicitNullValueThrottleProtectedPathsRequestsPerPeriod = value; AdditionalData?.Remove("throttle_protected_paths_requests_per_period"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("throttle_protected_paths_requests_per_period"); else _explicitNullProperties?.Remove("throttle_protected_paths_requests_per_period"); } }
@@ -6819,7 +6834,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string ThrottleUnauthenticatedApiRequestsPerPeriod { get => _explicitNullValueThrottleUnauthenticatedApiRequestsPerPeriod; set { _explicitNullValueThrottleUnauthenticatedApiRequestsPerPeriod = value; AdditionalData?.Remove("throttle_unauthenticated_api_requests_per_period"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("throttle_unauthenticated_api_requests_per_period"); else _explicitNullProperties?.Remove("throttle_unauthenticated_api_requests_per_period"); } }
         private string _explicitNullValueThrottleUnauthenticatedApiRequestsPerPeriod = default!;
 #endif
-        /// <summary>The throttle_unauthenticated_deprecated_api_enabled property</summary>
+        /// <summary>If `true`, enforces the unauthenticated request rate limit for deprecated API endpoints. Default value: `false`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ThrottleUnauthenticatedDeprecatedApiEnabled { get => _explicitNullValueThrottleUnauthenticatedDeprecatedApiEnabled; set { _explicitNullValueThrottleUnauthenticatedDeprecatedApiEnabled = value; AdditionalData?.Remove("throttle_unauthenticated_deprecated_api_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("throttle_unauthenticated_deprecated_api_enabled"); else _explicitNullProperties?.Remove("throttle_unauthenticated_deprecated_api_enabled"); } }
@@ -6829,7 +6844,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string ThrottleUnauthenticatedDeprecatedApiEnabled { get => _explicitNullValueThrottleUnauthenticatedDeprecatedApiEnabled; set { _explicitNullValueThrottleUnauthenticatedDeprecatedApiEnabled = value; AdditionalData?.Remove("throttle_unauthenticated_deprecated_api_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("throttle_unauthenticated_deprecated_api_enabled"); else _explicitNullProperties?.Remove("throttle_unauthenticated_deprecated_api_enabled"); } }
         private string _explicitNullValueThrottleUnauthenticatedDeprecatedApiEnabled = default!;
 #endif
-        /// <summary>The throttle_unauthenticated_deprecated_api_period_in_seconds property</summary>
+        /// <summary>Rate limit period in seconds. `throttle_unauthenticated_deprecated_api_enabled` must be `true`. Default value: `3600`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ThrottleUnauthenticatedDeprecatedApiPeriodInSeconds { get => _explicitNullValueThrottleUnauthenticatedDeprecatedApiPeriodInSeconds; set { _explicitNullValueThrottleUnauthenticatedDeprecatedApiPeriodInSeconds = value; AdditionalData?.Remove("throttle_unauthenticated_deprecated_api_period_in_seconds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("throttle_unauthenticated_deprecated_api_period_in_seconds"); else _explicitNullProperties?.Remove("throttle_unauthenticated_deprecated_api_period_in_seconds"); } }
@@ -6839,7 +6854,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string ThrottleUnauthenticatedDeprecatedApiPeriodInSeconds { get => _explicitNullValueThrottleUnauthenticatedDeprecatedApiPeriodInSeconds; set { _explicitNullValueThrottleUnauthenticatedDeprecatedApiPeriodInSeconds = value; AdditionalData?.Remove("throttle_unauthenticated_deprecated_api_period_in_seconds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("throttle_unauthenticated_deprecated_api_period_in_seconds"); else _explicitNullProperties?.Remove("throttle_unauthenticated_deprecated_api_period_in_seconds"); } }
         private string _explicitNullValueThrottleUnauthenticatedDeprecatedApiPeriodInSeconds = default!;
 #endif
-        /// <summary>The throttle_unauthenticated_deprecated_api_requests_per_period property</summary>
+        /// <summary>Maximum requests in each period for each IP address. `throttle_unauthenticated_deprecated_api_enabled` must be `true`. Default value: `1800`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ThrottleUnauthenticatedDeprecatedApiRequestsPerPeriod { get => _explicitNullValueThrottleUnauthenticatedDeprecatedApiRequestsPerPeriod; set { _explicitNullValueThrottleUnauthenticatedDeprecatedApiRequestsPerPeriod = value; AdditionalData?.Remove("throttle_unauthenticated_deprecated_api_requests_per_period"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("throttle_unauthenticated_deprecated_api_requests_per_period"); else _explicitNullProperties?.Remove("throttle_unauthenticated_deprecated_api_requests_per_period"); } }
@@ -6859,7 +6874,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string ThrottleUnauthenticatedEnabled { get => _explicitNullValueThrottleUnauthenticatedEnabled; set { _explicitNullValueThrottleUnauthenticatedEnabled = value; AdditionalData?.Remove("throttle_unauthenticated_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("throttle_unauthenticated_enabled"); else _explicitNullProperties?.Remove("throttle_unauthenticated_enabled"); } }
         private string _explicitNullValueThrottleUnauthenticatedEnabled = default!;
 #endif
-        /// <summary>The throttle_unauthenticated_files_api_enabled property</summary>
+        /// <summary>If `true`, enforces the unauthenticated request rate limit for the Repository files API. Default value: `false`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ThrottleUnauthenticatedFilesApiEnabled { get => _explicitNullValueThrottleUnauthenticatedFilesApiEnabled; set { _explicitNullValueThrottleUnauthenticatedFilesApiEnabled = value; AdditionalData?.Remove("throttle_unauthenticated_files_api_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("throttle_unauthenticated_files_api_enabled"); else _explicitNullProperties?.Remove("throttle_unauthenticated_files_api_enabled"); } }
@@ -6869,7 +6884,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string ThrottleUnauthenticatedFilesApiEnabled { get => _explicitNullValueThrottleUnauthenticatedFilesApiEnabled; set { _explicitNullValueThrottleUnauthenticatedFilesApiEnabled = value; AdditionalData?.Remove("throttle_unauthenticated_files_api_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("throttle_unauthenticated_files_api_enabled"); else _explicitNullProperties?.Remove("throttle_unauthenticated_files_api_enabled"); } }
         private string _explicitNullValueThrottleUnauthenticatedFilesApiEnabled = default!;
 #endif
-        /// <summary>The throttle_unauthenticated_files_api_period_in_seconds property</summary>
+        /// <summary>Rate limit period in seconds. `throttle_unauthenticated_files_api_enabled` must be `true`. Default value: `15`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ThrottleUnauthenticatedFilesApiPeriodInSeconds { get => _explicitNullValueThrottleUnauthenticatedFilesApiPeriodInSeconds; set { _explicitNullValueThrottleUnauthenticatedFilesApiPeriodInSeconds = value; AdditionalData?.Remove("throttle_unauthenticated_files_api_period_in_seconds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("throttle_unauthenticated_files_api_period_in_seconds"); else _explicitNullProperties?.Remove("throttle_unauthenticated_files_api_period_in_seconds"); } }
@@ -6879,7 +6894,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string ThrottleUnauthenticatedFilesApiPeriodInSeconds { get => _explicitNullValueThrottleUnauthenticatedFilesApiPeriodInSeconds; set { _explicitNullValueThrottleUnauthenticatedFilesApiPeriodInSeconds = value; AdditionalData?.Remove("throttle_unauthenticated_files_api_period_in_seconds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("throttle_unauthenticated_files_api_period_in_seconds"); else _explicitNullProperties?.Remove("throttle_unauthenticated_files_api_period_in_seconds"); } }
         private string _explicitNullValueThrottleUnauthenticatedFilesApiPeriodInSeconds = default!;
 #endif
-        /// <summary>The throttle_unauthenticated_files_api_requests_per_period property</summary>
+        /// <summary>Maximum requests in each period for each IP address. `throttle_unauthenticated_files_api_enabled` must be `true`. Default value: `125`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ThrottleUnauthenticatedFilesApiRequestsPerPeriod { get => _explicitNullValueThrottleUnauthenticatedFilesApiRequestsPerPeriod; set { _explicitNullValueThrottleUnauthenticatedFilesApiRequestsPerPeriod = value; AdditionalData?.Remove("throttle_unauthenticated_files_api_requests_per_period"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("throttle_unauthenticated_files_api_requests_per_period"); else _explicitNullProperties?.Remove("throttle_unauthenticated_files_api_requests_per_period"); } }
@@ -7009,7 +7024,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string TimeTrackingLimitToHours { get => _explicitNullValueTimeTrackingLimitToHours; set { _explicitNullValueTimeTrackingLimitToHours = value; AdditionalData?.Remove("time_tracking_limit_to_hours"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("time_tracking_limit_to_hours"); else _explicitNullProperties?.Remove("time_tracking_limit_to_hours"); } }
         private string _explicitNullValueTimeTrackingLimitToHours = default!;
 #endif
-        /// <summary>The todos_list_api_limit property</summary>
+        /// <summary>Maximum number of requests every minute for each user to `GET /todos`. Default: `300`. Set to `0` to turn off the rate limit. Behind a feature flag named `todos_list_api_rate_limit`, disabled by default. This parameter is in beta and might be changed or removed without notice.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? TodosListApiLimit { get => _explicitNullValueTodosListApiLimit; set { _explicitNullValueTodosListApiLimit = value; AdditionalData?.Remove("todos_list_api_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("todos_list_api_limit"); else _explicitNullProperties?.Remove("todos_list_api_limit"); } }
@@ -7157,7 +7172,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Maximum number of `userAddOnAssignmentBulkCreate` GraphQL mutation calls per minute per user. Default: `0`. Set to `0` to disable the rate limit.</summary>
         public int? UserAddOnAssignmentBulkCreateLimit { get => _explicitNullValueUserAddOnAssignmentBulkCreateLimit; set { _explicitNullValueUserAddOnAssignmentBulkCreateLimit = value; AdditionalData?.Remove("user_add_on_assignment_bulk_create_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_add_on_assignment_bulk_create_limit"); else _explicitNullProperties?.Remove("user_add_on_assignment_bulk_create_limit"); } }
         private int? _explicitNullValueUserAddOnAssignmentBulkCreateLimit = default!;
-        /// <summary>The user_contributed_projects_api_limit property</summary>
+        /// <summary>Maximum number of requests every minute for each user or IP address to `GET /users/:user_id/contributed_projects`. Default: `100`. Set to `0` to disable the rate limit.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? UserContributedProjectsApiLimit { get => _explicitNullValueUserContributedProjectsApiLimit; set { _explicitNullValueUserContributedProjectsApiLimit = value; AdditionalData?.Remove("user_contributed_projects_api_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_contributed_projects_api_limit"); else _explicitNullProperties?.Remove("user_contributed_projects_api_limit"); } }
@@ -7210,7 +7225,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string UserOauthApplications { get => _explicitNullValueUserOauthApplications; set { _explicitNullValueUserOauthApplications = value; AdditionalData?.Remove("user_oauth_applications"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_oauth_applications"); else _explicitNullProperties?.Remove("user_oauth_applications"); } }
         private string _explicitNullValueUserOauthApplications = default!;
 #endif
-        /// <summary>The user_projects_api_limit property</summary>
+        /// <summary>Maximum number of requests every minute for each user or IP address to `GET /users/:user_id/projects`. Default: `300`. Set to `0` to disable the rate limit.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? UserProjectsApiLimit { get => _explicitNullValueUserProjectsApiLimit; set { _explicitNullValueUserProjectsApiLimit = value; AdditionalData?.Remove("user_projects_api_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_projects_api_limit"); else _explicitNullProperties?.Remove("user_projects_api_limit"); } }
@@ -7260,7 +7275,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string UsersApiLimitGpgKeys { get => _explicitNullValueUsersApiLimitGpgKeys; set { _explicitNullValueUsersApiLimitGpgKeys = value; AdditionalData?.Remove("users_api_limit_gpg_keys"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("users_api_limit_gpg_keys"); else _explicitNullProperties?.Remove("users_api_limit_gpg_keys"); } }
         private string _explicitNullValueUsersApiLimitGpgKeys = default!;
 #endif
-        /// <summary>The users_api_limit_ssh_key property</summary>
+        /// <summary>Maximum number of requests per minute, per user or IP address. Default: 120. Set to `0` to disable limits. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/181054) in GitLab 17.10.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? UsersApiLimitSshKey { get => _explicitNullValueUsersApiLimitSshKey; set { _explicitNullValueUsersApiLimitSshKey = value; AdditionalData?.Remove("users_api_limit_ssh_key"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("users_api_limit_ssh_key"); else _explicitNullProperties?.Remove("users_api_limit_ssh_key"); } }
@@ -7270,7 +7285,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string UsersApiLimitSshKey { get => _explicitNullValueUsersApiLimitSshKey; set { _explicitNullValueUsersApiLimitSshKey = value; AdditionalData?.Remove("users_api_limit_ssh_key"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("users_api_limit_ssh_key"); else _explicitNullProperties?.Remove("users_api_limit_ssh_key"); } }
         private string _explicitNullValueUsersApiLimitSshKey = default!;
 #endif
-        /// <summary>The users_api_limit_ssh_keys property</summary>
+        /// <summary>Maximum number of requests per minute, per user or IP address. Default: 120. Set to `0` to disable limits. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/181054) in GitLab 17.10.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? UsersApiLimitSshKeys { get => _explicitNullValueUsersApiLimitSshKeys; set { _explicitNullValueUsersApiLimitSshKeys = value; AdditionalData?.Remove("users_api_limit_ssh_keys"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("users_api_limit_ssh_keys"); else _explicitNullProperties?.Remove("users_api_limit_ssh_keys"); } }
@@ -7290,10 +7305,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string UsersApiLimitStatus { get => _explicitNullValueUsersApiLimitStatus; set { _explicitNullValueUsersApiLimitStatus = value; AdditionalData?.Remove("users_api_limit_status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("users_api_limit_status"); else _explicitNullProperties?.Remove("users_api_limit_status"); } }
         private string _explicitNullValueUsersApiLimitStatus = default!;
 #endif
-        /// <summary>Maximum number of calls to the `/users/:id` API per 10 minutes per user. Set to `0` for unlimited requests.</summary>
+        /// <summary>Maximum number of calls to the `/users/:id` API per 10 minutes per user. Set to `0` for unlimited requests. Default: `300`.</summary>
         public int? UsersGetByIdLimit { get => _explicitNullValueUsersGetByIdLimit; set { _explicitNullValueUsersGetByIdLimit = value; AdditionalData?.Remove("users_get_by_id_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("users_get_by_id_limit"); else _explicitNullProperties?.Remove("users_get_by_id_limit"); } }
         private int? _explicitNullValueUsersGetByIdLimit = default!;
-        /// <summary>The users_get_by_id_limit_allowlist_raw property</summary>
+        /// <summary>Raw newline-, comma-, or whitespace-separated list of usernames excluded from the `users_get_by_id_limit` rate limit. Maximum: 100 usernames.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? UsersGetByIdLimitAllowlistRaw { get => _explicitNullValueUsersGetByIdLimitAllowlistRaw; set { _explicitNullValueUsersGetByIdLimitAllowlistRaw = value; AdditionalData?.Remove("users_get_by_id_limit_allowlist_raw"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("users_get_by_id_limit_allowlist_raw"); else _explicitNullProperties?.Remove("users_get_by_id_limit_allowlist_raw"); } }
@@ -7313,7 +7328,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string UserShowAddSshKeyMessage { get => _explicitNullValueUserShowAddSshKeyMessage; set { _explicitNullValueUserShowAddSshKeyMessage = value; AdditionalData?.Remove("user_show_add_ssh_key_message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_show_add_ssh_key_message"); else _explicitNullProperties?.Remove("user_show_add_ssh_key_message"); } }
         private string _explicitNullValueUserShowAddSshKeyMessage = default!;
 #endif
-        /// <summary>The user_starred_projects_api_limit property</summary>
+        /// <summary>Maximum number of requests every minute for each user or IP address to `GET /users/:user_id/starred_projects`. Default: `100`. Set to `0` to disable the rate limit.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? UserStarredProjectsApiLimit { get => _explicitNullValueUserStarredProjectsApiLimit; set { _explicitNullValueUserStarredProjectsApiLimit = value; AdditionalData?.Remove("user_starred_projects_api_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_starred_projects_api_limit"); else _explicitNullProperties?.Remove("user_starred_projects_api_limit"); } }
@@ -7356,7 +7371,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Maximum number of requests on virtual registries endpoints, per IP address, per 15 seconds. Default: 4000. To disable limits, set to `0`. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/521692) in GitLab 17.11.</summary>
         public int? VirtualRegistriesEndpointsApiLimit { get => _explicitNullValueVirtualRegistriesEndpointsApiLimit; set { _explicitNullValueVirtualRegistriesEndpointsApiLimit = value; AdditionalData?.Remove("virtual_registries_endpoints_api_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("virtual_registries_endpoints_api_limit"); else _explicitNullProperties?.Remove("virtual_registries_endpoints_api_limit"); } }
         private int? _explicitNullValueVirtualRegistriesEndpointsApiLimit = default!;
-        /// <summary>Settings for VS Code Extension Marketplace.</summary>
+        /// <summary>Settings for VS Code Extension Marketplace. Used by the Web IDE and workspaces.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4ApplicationSettingsRequestVscodeExtensionMarketplace? VscodeExtensionMarketplace { get => _explicitNullValueVscodeExtensionMarketplace; set { _explicitNullValueVscodeExtensionMarketplace = value; AdditionalData?.Remove("vscode_extension_marketplace"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vscode_extension_marketplace"); else _explicitNullProperties?.Remove("vscode_extension_marketplace"); } }
@@ -7396,7 +7411,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string VscodeExtensionMarketplaceSingleOriginFallbackEnabled { get => _explicitNullValueVscodeExtensionMarketplaceSingleOriginFallbackEnabled; set { _explicitNullValueVscodeExtensionMarketplaceSingleOriginFallbackEnabled = value; AdditionalData?.Remove("vscode_extension_marketplace_single_origin_fallback_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vscode_extension_marketplace_single_origin_fallback_enabled"); else _explicitNullProperties?.Remove("vscode_extension_marketplace_single_origin_fallback_enabled"); } }
         private string _explicitNullValueVscodeExtensionMarketplaceSingleOriginFallbackEnabled = default!;
 #endif
-        /// <summary>The vulnerability_management_policies_per_configuration_limit property</summary>
+        /// <summary>Maximum number of vulnerability management policies allowed for each security policy configuration. Default: `5`. Maximum: `20`. Ultimate only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? VulnerabilityManagementPoliciesPerConfigurationLimit { get => _explicitNullValueVulnerabilityManagementPoliciesPerConfigurationLimit; set { _explicitNullValueVulnerabilityManagementPoliciesPerConfigurationLimit = value; AdditionalData?.Remove("vulnerability_management_policies_per_configuration_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vulnerability_management_policies_per_configuration_limit"); else _explicitNullProperties?.Remove("vulnerability_management_policies_per_configuration_limit"); } }
@@ -7435,7 +7450,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Maximum wiki page content size in bytes. Default: 5242880 bytes (5 MB). The minimum value is 1024 bytes.</summary>
         public int? WikiPageMaxContentBytes { get => _explicitNullValueWikiPageMaxContentBytes; set { _explicitNullValueWikiPageMaxContentBytes = value; AdditionalData?.Remove("wiki_page_max_content_bytes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wiki_page_max_content_bytes"); else _explicitNullProperties?.Remove("wiki_page_max_content_bytes"); } }
         private int? _explicitNullValueWikiPageMaxContentBytes = default!;
-        /// <summary>The wiki_read_request_limit_unauthenticated property</summary>
+        /// <summary>Maximum number of requests every minute from unauthenticated users to read a project or group wiki. Applies to the wiki pages in the UI and to the REST API endpoints that list and retrieve wiki pages. Default: `500`. Set to `0` to turn off the rate limit. Behind a feature flag named `wiki_read_unauthenticated_rate_limit_enforce`, disabled by default. This parameter is in beta and might be changed or removed without notice.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? WikiReadRequestLimitUnauthenticated { get => _explicitNullValueWikiReadRequestLimitUnauthenticated; set { _explicitNullValueWikiReadRequestLimitUnauthenticated = value; AdditionalData?.Remove("wiki_read_request_limit_unauthenticated"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wiki_read_request_limit_unauthenticated"); else _explicitNullProperties?.Remove("wiki_read_request_limit_unauthenticated"); } }
@@ -7445,7 +7460,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string WikiReadRequestLimitUnauthenticated { get => _explicitNullValueWikiReadRequestLimitUnauthenticated; set { _explicitNullValueWikiReadRequestLimitUnauthenticated = value; AdditionalData?.Remove("wiki_read_request_limit_unauthenticated"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wiki_read_request_limit_unauthenticated"); else _explicitNullProperties?.Remove("wiki_read_request_limit_unauthenticated"); } }
         private string _explicitNullValueWikiReadRequestLimitUnauthenticated = default!;
 #endif
-        /// <summary>The work_item_hierarchy_add_children_limit property</summary>
+        /// <summary>Maximum number of child items each user can add to work items or epics every minute. Applies to the `workItemHierarchyAddChildrenItems` GraphQL mutation, `childrenIds` in the `workItemUpdate` GraphQL mutation, the `/add_child` quick action, and the REST API endpoints for assigning an issue to an epic and assigning a child epic. Default: `300`. Set to `0` to disable the rate limit. Behind a feature flag named `work_item_hierarchy_add_children_limits`, disabled by default. This parameter is in beta and might be changed or removed without notice.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? WorkItemHierarchyAddChildrenLimit { get => _explicitNullValueWorkItemHierarchyAddChildrenLimit; set { _explicitNullValueWorkItemHierarchyAddChildrenLimit = value; AdditionalData?.Remove("work_item_hierarchy_add_children_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("work_item_hierarchy_add_children_limit"); else _explicitNullProperties?.Remove("work_item_hierarchy_add_children_limit"); } }
@@ -7688,7 +7703,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(791)
+            return new Dictionary<string, Action<IParseNode>>(794)
             {
                 { "abuse_notification_email", n => { AbuseNotificationEmail = n.GetStringValue(); } },
                 { "active_context_pause_indexing", n => { ActiveContextPauseIndexing = n.GetBoolValue(); } },
@@ -7765,6 +7780,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "ci_max_includes", n => { CiMaxIncludes = n.GetIntValue(); } },
                 { "ci_max_runner_managers_per_runner", n => { CiMaxRunnerManagersPerRunner = n.GetIntValue(); } },
                 { "ci_max_total_yaml_size_bytes", n => { CiMaxTotalYamlSizeBytes = n.GetStringValue(); } },
+                { "ci_minutes_usage_projects_per_hour_limit", n => { CiMinutesUsageProjectsPerHourLimit = n.GetIntValue(); } },
+                { "ci_minutes_usage_projects_per_minute_limit", n => { CiMinutesUsageProjectsPerMinuteLimit = n.GetIntValue(); } },
                 { "ci_partitions_in_seconds_limit", n => { CiPartitionsInSecondsLimit = n.GetStringValue(); } },
                 { "ci_partitions_in_seconds_limit_human_readable", n => { CiPartitionsInSecondsLimitHumanReadable = n.GetStringValue(); } },
                 { "ci_runner_manager_cap_cleanup_backlog_limit", n => { CiRunnerManagerCapCleanupBacklogLimit = n.GetIntValue(); } },
@@ -8004,6 +8021,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "grafana_enabled", n => { GrafanaEnabled = n.GetBoolValue(); } },
                 { "grafana_url", n => { GrafanaUrl = n.GetStringValue(); } },
                 { "granular_tokens_enforced_after", n => { GranularTokensEnforcedAfter = n.GetStringValue(); } },
+                { "graphql_participant_fields_request_limit", n => { GraphqlParticipantFieldsRequestLimit = n.GetIntValue(); } },
                 { "gravatar_enabled", n => { GravatarEnabled = n.GetBoolValue(); } },
                 { "group_api_limit", n => { GroupApiLimit = n.GetStringValue(); } },
                 { "group_archive_unarchive_api_limit", n => { GroupArchiveUnarchiveApiLimit = n.GetStringValue(); } },
@@ -8565,6 +8583,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteIntValue("ci_max_includes", CiMaxIncludes);
             writer.WriteIntValue("ci_max_runner_managers_per_runner", CiMaxRunnerManagersPerRunner);
             writer.WriteStringValue("ci_max_total_yaml_size_bytes", CiMaxTotalYamlSizeBytes);
+            writer.WriteIntValue("ci_minutes_usage_projects_per_hour_limit", CiMinutesUsageProjectsPerHourLimit);
+            writer.WriteIntValue("ci_minutes_usage_projects_per_minute_limit", CiMinutesUsageProjectsPerMinuteLimit);
             writer.WriteStringValue("ci_partitions_in_seconds_limit", CiPartitionsInSecondsLimit);
             writer.WriteStringValue("ci_partitions_in_seconds_limit_human_readable", CiPartitionsInSecondsLimitHumanReadable);
             writer.WriteIntValue("ci_runner_manager_cap_cleanup_backlog_limit", CiRunnerManagerCapCleanupBacklogLimit);
@@ -8804,6 +8824,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteBoolValue("grafana_enabled", GrafanaEnabled);
             writer.WriteStringValue("grafana_url", GrafanaUrl);
             writer.WriteStringValue("granular_tokens_enforced_after", GranularTokensEnforcedAfter);
+            writer.WriteIntValue("graphql_participant_fields_request_limit", GraphqlParticipantFieldsRequestLimit);
             writer.WriteBoolValue("gravatar_enabled", GravatarEnabled);
             writer.WriteStringValue("group_api_limit", GroupApiLimit);
             writer.WriteStringValue("group_archive_unarchive_api_limit", GroupArchiveUnarchiveApiLimit);

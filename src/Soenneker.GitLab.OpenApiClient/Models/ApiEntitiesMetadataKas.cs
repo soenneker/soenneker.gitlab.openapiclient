@@ -7,10 +7,11 @@ using System.IO;
 using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
+    /// <summary>
+    /// Metadata about the GitLab agent server for Kubernetes (KAS).
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public partial class ApiEntitiesMetadataKas : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
     , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
         // Track explicitly assigned nulls separately from absent properties.
         private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
@@ -29,10 +30,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The enabled property</summary>
+        /// <summary>If `true`, KAS is enabled.</summary>
         public bool? Enabled { get => _explicitNullValueEnabled; set { _explicitNullValueEnabled = value; AdditionalData?.Remove("enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enabled"); else _explicitNullProperties?.Remove("enabled"); } }
         private bool? _explicitNullValueEnabled = default!;
-        /// <summary>The externalK8sProxyUrl property</summary>
+        /// <summary>URL the Kubernetes tooling uses to communicate with the KAS Kubernetes API proxy. `null` if `kas.enabled` is `false`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ExternalK8sProxyUrl { get => _explicitNullValueExternalK8sProxyUrl; set { _explicitNullValueExternalK8sProxyUrl = value; AdditionalData?.Remove("externalK8sProxyUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("externalK8sProxyUrl"); else _explicitNullProperties?.Remove("externalK8sProxyUrl"); } }
@@ -42,7 +43,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string ExternalK8sProxyUrl { get => _explicitNullValueExternalK8sProxyUrl; set { _explicitNullValueExternalK8sProxyUrl = value; AdditionalData?.Remove("externalK8sProxyUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("externalK8sProxyUrl"); else _explicitNullProperties?.Remove("externalK8sProxyUrl"); } }
         private string _explicitNullValueExternalK8sProxyUrl = default!;
 #endif
-        /// <summary>The externalUrl property</summary>
+        /// <summary>URL the agents use to communicate with KAS. `null` if `kas.enabled` is `false`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ExternalUrl { get => _explicitNullValueExternalUrl; set { _explicitNullValueExternalUrl = value; AdditionalData?.Remove("externalUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("externalUrl"); else _explicitNullProperties?.Remove("externalUrl"); } }
@@ -52,7 +53,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string ExternalUrl { get => _explicitNullValueExternalUrl; set { _explicitNullValueExternalUrl = value; AdditionalData?.Remove("externalUrl"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("externalUrl"); else _explicitNullProperties?.Remove("externalUrl"); } }
         private string _explicitNullValueExternalUrl = default!;
 #endif
-        /// <summary>The version property</summary>
+        /// <summary>Version of KAS. `null` if `kas.enabled` is `false` or the instance failed to fetch server information from KAS.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Version { get => _explicitNullValueVersion; set { _explicitNullValueVersion = value; AdditionalData?.Remove("version"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("version"); else _explicitNullProperties?.Remove("version"); } }

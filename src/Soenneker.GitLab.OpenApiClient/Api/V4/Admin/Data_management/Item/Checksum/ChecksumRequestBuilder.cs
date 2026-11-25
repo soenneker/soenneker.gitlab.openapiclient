@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Data_management.Item.Check
         {
         }
         /// <summary>
-        /// Recalculates checksums for selected records of a specified model, filtered by `checksum_state` and `identifiers` parameters if provided. The request enqueues a background job to perform the recalculation. Only available to administrators on primary Geo sites.
+        /// Recalculates checksums for selected records of a specified model, filtered by `checksum_state` and `identifiers` parameters if provided. The request enqueues a background job to perform the recalculation. Only available to administrators on primary Geo sites. If no records match `identifiers`, returns `status` `success` with the message `No records matched the given identifiers.`
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAdminModel"/></returns>
         /// <param name="body">The request body</param>
@@ -54,7 +54,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Data_management.Item.Check
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAdminModel>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAdminModel.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Recalculates checksums for selected records of a specified model, filtered by `checksum_state` and `identifiers` parameters if provided. The request enqueues a background job to perform the recalculation. Only available to administrators on primary Geo sites.
+        /// Recalculates checksums for selected records of a specified model, filtered by `checksum_state` and `identifiers` parameters if provided. The request enqueues a background job to perform the recalculation. Only available to administrators on primary Geo sites. If no records match `identifiers`, returns `status` `success` with the message `No records matched the given identifiers.`
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

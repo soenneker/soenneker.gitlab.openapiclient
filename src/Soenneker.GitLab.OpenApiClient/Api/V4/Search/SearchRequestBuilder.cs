@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Search
         {
         }
         /// <summary>
-        /// Searches for a term across the entire GitLab instance. The response depends on the requested scope.
+        /// Searches for a term across the entire GitLab instance. The response depends on the requested scope.The `blobs` scope searches code. It is available only when advanced search or exact code search is enabled.The `wiki_blobs` scope searches wikis. The `commits`, `notes`, and `wiki_blobs` scopes are available onlywhen advanced search is enabled.The `blobs` and `wiki_blobs` scopes support the `filename`, `path`, and `extension` filters. To use a filter,include it in the search query, for example `a query filename:some_name*`. Filters support wildcards (`*`)for glob matching. Elasticsearch syntax might not work with exact code search. For exact code search, useregular expressions instead of Elasticsearch wildcard queries.In `blobs` and `wiki_blobs` results, `filename` is deprecated in favor of `path`. Both return the full pathof the file in the repository. In a future release, `filename` is planned to return only the file name.In `issues` results, `assignee` is deprecated in favor of `assignees`.To filter `work_items` results by more than one type, pass `type` as an array, for example`type[]=task&amp;type[]=issue`.
         /// </summary>
         /// <returns>A <see cref="Stream"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Search
             return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Searches for a term across the entire GitLab instance. The response depends on the requested scope.
+        /// Searches for a term across the entire GitLab instance. The response depends on the requested scope.The `blobs` scope searches code. It is available only when advanced search or exact code search is enabled.The `wiki_blobs` scope searches wikis. The `commits`, `notes`, and `wiki_blobs` scopes are available onlywhen advanced search is enabled.The `blobs` and `wiki_blobs` scopes support the `filename`, `path`, and `extension` filters. To use a filter,include it in the search query, for example `a query filename:some_name*`. Filters support wildcards (`*`)for glob matching. Elasticsearch syntax might not work with exact code search. For exact code search, useregular expressions instead of Elasticsearch wildcard queries.In `blobs` and `wiki_blobs` results, `filename` is deprecated in favor of `path`. Both return the full pathof the file in the repository. In a future release, `filename` is planned to return only the file name.In `issues` results, `assignee` is deprecated in favor of `assignees`.To filter `work_items` results by more than one type, pass `type` as an array, for example`type[]=task&amp;type[]=issue`.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -79,12 +79,12 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Search
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Search.SearchRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Searches for a term across the entire GitLab instance. The response depends on the requested scope.
+        /// Searches for a term across the entire GitLab instance. The response depends on the requested scope.The `blobs` scope searches code. It is available only when advanced search or exact code search is enabled.The `wiki_blobs` scope searches wikis. The `commits`, `notes`, and `wiki_blobs` scopes are available onlywhen advanced search is enabled.The `blobs` and `wiki_blobs` scopes support the `filename`, `path`, and `extension` filters. To use a filter,include it in the search query, for example `a query filename:some_name*`. Filters support wildcards (`*`)for glob matching. Elasticsearch syntax might not work with exact code search. For exact code search, useregular expressions instead of Elasticsearch wildcard queries.In `blobs` and `wiki_blobs` results, `filename` is deprecated in favor of `path`. Both return the full pathof the file in the repository. In a future release, `filename` is planned to return only the file name.In `issues` results, `assignee` is deprecated in favor of `assignees`.To filter `work_items` results by more than one type, pass `type` as an array, for example`type[]=task&amp;type[]=issue`.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class SearchRequestBuilderGetQueryParameters 
         {
-            /// <summary>Filter by author username. A username that matches no user is ignored. Available with advanced search and the issues, merge_requests and work_items scopes.</summary>
+            /// <summary>Filter by author username. A username that matches no user is ignored. Available with advanced search and the issues, merge_requests and work_items scopes. Premium and Ultimate only. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/493214) in GitLab 19.5.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("author_username")]
@@ -113,7 +113,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Search
             /// <summary>If `true`, includes archived projects in the search. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/work_items/493281) in GitLab 18.7.</summary>
             [QueryParameter("include_archived")]
             public bool? IncludeArchived { get; set; }
-            /// <summary>Filter by label name. A result must carry every name that resolves to an existing label; names that match no label are ignored. Maximum 30 names. Available with advanced search and the issues, merge_requests and work_items scopes.</summary>
+            /// <summary>Filter by label name. A result must carry every name that resolves to an existing label; names that match no label are ignored. Maximum 30 names. Available with advanced search and the issues, merge_requests and work_items scopes. Premium and Ultimate only. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/493214) in GitLab 19.5.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("label_name")]
@@ -133,7 +133,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Search
             [QueryParameter("not")]
             public string Not { get; set; }
 #endif
-            /// <summary>Exclude results authored by this username</summary>
+            /// <summary>Exclude results authored by this username. Combining a filter with its own negation matches either condition, which widens the result set. Available with advanced search and the issues, merge_requests and work_items scopes. Premium and Ultimate only. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/493214) in GitLab 19.5.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("not%5Bauthor_username%5D")]
@@ -143,7 +143,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Search
             [QueryParameter("not%5Bauthor_username%5D")]
             public string NotauthorUsername { get; set; }
 #endif
-            /// <summary>Exclude merge requests with this source branch</summary>
+            /// <summary>Exclude merge requests with this source branch. Combining a filter with its own negation matches either condition, which widens the result set. Available with advanced search and the merge_requests scope. Premium and Ultimate only. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/493214) in GitLab 19.5.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("not%5Bsource_branch%5D")]
@@ -153,7 +153,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Search
             [QueryParameter("not%5Bsource_branch%5D")]
             public string NotsourceBranch { get; set; }
 #endif
-            /// <summary>Exclude merge requests with this target branch</summary>
+            /// <summary>Exclude merge requests with this target branch. Combining a filter with its own negation matches either condition, which widens the result set. Available with advanced search and the merge_requests scope. Premium and Ultimate only. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/493214) in GitLab 19.5.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("not%5Btarget_branch%5D")]
@@ -175,7 +175,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Search
             /// <summary>If `true`, uses regular expressions to search for code. If omitted, regular expressions are used. Available for exact code search. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/work_items/521686) in GitLab 18.9.</summary>
             [QueryParameter("regex")]
             public bool? Regex { get; set; }
-            /// <summary>Scope of the search.</summary>
+            /// <summary>Scope of the search. The `blobs` scope requires advanced search or exact code search. The `commits`, `notes`, and `wiki_blobs` scopes require advanced search.</summary>
             [QueryParameter("scope")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4SearchScopeParameter? Scope { get; set; }
             /// <summary>Search query.</summary>
@@ -188,7 +188,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Search
             [QueryParameter("search")]
             public string Search { get; set; }
 #endif
-            /// <summary>Filter merge requests by source branch. Available with advanced search and the merge_requests scope.</summary>
+            /// <summary>Filter merge requests by source branch. Available with advanced search and the merge_requests scope. Premium and Ultimate only. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/493214) in GitLab 19.5.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("source_branch")]
@@ -201,7 +201,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Search
             /// <summary>Filter results by state. Applies only to the `issues`, `work_items`, and `merge_requests` scopes.</summary>
             [QueryParameter("state")]
             public global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4SearchStateParameter? State { get; set; }
-            /// <summary>Filter merge requests by target branch. Available with advanced search and the merge_requests scope.</summary>
+            /// <summary>Filter merge requests by target branch. Available with advanced search and the merge_requests scope. Premium and Ultimate only. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/493214) in GitLab 19.5.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("target_branch")]

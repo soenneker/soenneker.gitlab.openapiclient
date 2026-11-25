@@ -17,6 +17,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
+            if (parseNode.GetChildNode("content_key") is null) { _explicitNullValueContentKey = default!; _explicitNullProperties?.Remove("content_key"); }
+            else if (parseNode.GetChildNode("content_key") is { } nullNodeContentKey && nullNodeContentKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContentKey = null;
             if (parseNode.GetChildNode("created_at") is null) { _explicitNullValueCreatedAt = default!; _explicitNullProperties?.Remove("created_at"); }
             else if (parseNode.GetChildNode("created_at") is { } nullNodeCreatedAt && nullNodeCreatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedAt = null;
             if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
@@ -25,6 +27,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>`present` when a content key younger than 90 days is stored for this device, `missing` otherwise.</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMobilePushSubscriptionContentKey? ContentKey { get => _explicitNullValueContentKey; set { _explicitNullValueContentKey = value; AdditionalData?.Remove("content_key"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("content_key"); else _explicitNullProperties?.Remove("content_key"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMobilePushSubscriptionContentKey? _explicitNullValueContentKey = default!;
         /// <summary>Date and time when the subscription was created.</summary>
         public DateTimeOffset? CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; AdditionalData?.Remove("created_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_at"); else _explicitNullProperties?.Remove("created_at"); } }
         private DateTimeOffset? _explicitNullValueCreatedAt = default!;
@@ -56,6 +61,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "content_key", n => { var parsed = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMobilePushSubscriptionContentKey>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueContentKey = default; _explicitNullProperties?.Remove("content_key"); AdditionalData["content_key"] = unknown; } else { ContentKey = parsed; AdditionalData.Remove("content_key"); } } },
                 { "created_at", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "id", n => { Id = n.GetLongValue(); } },
             };
@@ -67,6 +73,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMobilePushSubscriptionContentKey>("content_key", ContentKey);
             writer.WriteDateTimeOffsetValue("created_at", CreatedAt);
             writer.WriteLongValue("id", Id);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);

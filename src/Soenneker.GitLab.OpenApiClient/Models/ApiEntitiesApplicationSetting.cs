@@ -159,6 +159,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             else if (parseNode.GetChildNode("ci_max_runner_managers_per_runner") is { } nullNodeCiMaxRunnerManagersPerRunner && nullNodeCiMaxRunnerManagersPerRunner.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CiMaxRunnerManagersPerRunner = null;
             if (parseNode.GetChildNode("ci_max_total_yaml_size_bytes") is null) { _explicitNullValueCiMaxTotalYamlSizeBytes = default!; _explicitNullProperties?.Remove("ci_max_total_yaml_size_bytes"); }
             else if (parseNode.GetChildNode("ci_max_total_yaml_size_bytes") is { } nullNodeCiMaxTotalYamlSizeBytes && nullNodeCiMaxTotalYamlSizeBytes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CiMaxTotalYamlSizeBytes = null;
+            if (parseNode.GetChildNode("ci_minutes_usage_projects_per_hour_limit") is null) { _explicitNullValueCiMinutesUsageProjectsPerHourLimit = default!; _explicitNullProperties?.Remove("ci_minutes_usage_projects_per_hour_limit"); }
+            else if (parseNode.GetChildNode("ci_minutes_usage_projects_per_hour_limit") is { } nullNodeCiMinutesUsageProjectsPerHourLimit && nullNodeCiMinutesUsageProjectsPerHourLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CiMinutesUsageProjectsPerHourLimit = null;
+            if (parseNode.GetChildNode("ci_minutes_usage_projects_per_minute_limit") is null) { _explicitNullValueCiMinutesUsageProjectsPerMinuteLimit = default!; _explicitNullProperties?.Remove("ci_minutes_usage_projects_per_minute_limit"); }
+            else if (parseNode.GetChildNode("ci_minutes_usage_projects_per_minute_limit") is { } nullNodeCiMinutesUsageProjectsPerMinuteLimit && nullNodeCiMinutesUsageProjectsPerMinuteLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CiMinutesUsageProjectsPerMinuteLimit = null;
             if (parseNode.GetChildNode("ci_partitions_in_seconds_limit_human_readable") is null) { _explicitNullValueCiPartitionsInSecondsLimitHumanReadable = default!; _explicitNullProperties?.Remove("ci_partitions_in_seconds_limit_human_readable"); }
             else if (parseNode.GetChildNode("ci_partitions_in_seconds_limit_human_readable") is { } nullNodeCiPartitionsInSecondsLimitHumanReadable && nullNodeCiPartitionsInSecondsLimitHumanReadable.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CiPartitionsInSecondsLimitHumanReadable = null;
             if (parseNode.GetChildNode("ci_runner_manager_cap_cleanup_backlog_limit") is null) { _explicitNullValueCiRunnerManagerCapCleanupBacklogLimit = default!; _explicitNullProperties?.Remove("ci_runner_manager_cap_cleanup_backlog_limit"); }
@@ -651,6 +655,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             else if (parseNode.GetChildNode("grafana_url") is { } nullNodeGrafanaUrl && nullNodeGrafanaUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GrafanaUrl = null;
             if (parseNode.GetChildNode("granular_tokens_enforced_after") is null) { _explicitNullValueGranularTokensEnforcedAfter = default!; _explicitNullProperties?.Remove("granular_tokens_enforced_after"); }
             else if (parseNode.GetChildNode("granular_tokens_enforced_after") is { } nullNodeGranularTokensEnforcedAfter && nullNodeGranularTokensEnforcedAfter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GranularTokensEnforcedAfter = null;
+            if (parseNode.GetChildNode("graphql_participant_fields_request_limit") is null) { _explicitNullValueGraphqlParticipantFieldsRequestLimit = default!; _explicitNullProperties?.Remove("graphql_participant_fields_request_limit"); }
+            else if (parseNode.GetChildNode("graphql_participant_fields_request_limit") is { } nullNodeGraphqlParticipantFieldsRequestLimit && nullNodeGraphqlParticipantFieldsRequestLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GraphqlParticipantFieldsRequestLimit = null;
             if (parseNode.GetChildNode("gravatar_enabled") is null) { _explicitNullValueGravatarEnabled = default!; _explicitNullProperties?.Remove("gravatar_enabled"); }
             else if (parseNode.GetChildNode("gravatar_enabled") is { } nullNodeGravatarEnabled && nullNodeGravatarEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GravatarEnabled = null;
             if (parseNode.GetChildNode("group_api_limit") is null) { _explicitNullValueGroupApiLimit = default!; _explicitNullProperties?.Remove("group_api_limit"); }
@@ -1751,12 +1757,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The allowed_integrations property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AllowedIntegrations { get => _explicitNullValueAllowedIntegrations; set { _explicitNullValueAllowedIntegrations = value; AdditionalData?.Remove("allowed_integrations"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_integrations"); else _explicitNullProperties?.Remove("allowed_integrations"); } }
-        private string? _explicitNullValueAllowedIntegrations = default!;
+        public List<string>? AllowedIntegrations { get => _explicitNullValueAllowedIntegrations; set { _explicitNullValueAllowedIntegrations = value; AdditionalData?.Remove("allowed_integrations"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_integrations"); else _explicitNullProperties?.Remove("allowed_integrations"); } }
+        private List<string>? _explicitNullValueAllowedIntegrations = default!;
 #nullable restore
 #else
-        public string AllowedIntegrations { get => _explicitNullValueAllowedIntegrations; set { _explicitNullValueAllowedIntegrations = value; AdditionalData?.Remove("allowed_integrations"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_integrations"); else _explicitNullProperties?.Remove("allowed_integrations"); } }
-        private string _explicitNullValueAllowedIntegrations = default!;
+        public List<string> AllowedIntegrations { get => _explicitNullValueAllowedIntegrations; set { _explicitNullValueAllowedIntegrations = value; AdditionalData?.Remove("allowed_integrations"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowed_integrations"); else _explicitNullProperties?.Remove("allowed_integrations"); } }
+        private List<string> _explicitNullValueAllowedIntegrations = default!;
 #endif
         /// <summary>The allow_group_owners_to_manage_ldap property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -1881,12 +1887,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The asset_proxy_allowlist property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AssetProxyAllowlist { get => _explicitNullValueAssetProxyAllowlist; set { _explicitNullValueAssetProxyAllowlist = value; AdditionalData?.Remove("asset_proxy_allowlist"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("asset_proxy_allowlist"); else _explicitNullProperties?.Remove("asset_proxy_allowlist"); } }
-        private string? _explicitNullValueAssetProxyAllowlist = default!;
+        public List<string>? AssetProxyAllowlist { get => _explicitNullValueAssetProxyAllowlist; set { _explicitNullValueAssetProxyAllowlist = value; AdditionalData?.Remove("asset_proxy_allowlist"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("asset_proxy_allowlist"); else _explicitNullProperties?.Remove("asset_proxy_allowlist"); } }
+        private List<string>? _explicitNullValueAssetProxyAllowlist = default!;
 #nullable restore
 #else
-        public string AssetProxyAllowlist { get => _explicitNullValueAssetProxyAllowlist; set { _explicitNullValueAssetProxyAllowlist = value; AdditionalData?.Remove("asset_proxy_allowlist"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("asset_proxy_allowlist"); else _explicitNullProperties?.Remove("asset_proxy_allowlist"); } }
-        private string _explicitNullValueAssetProxyAllowlist = default!;
+        public List<string> AssetProxyAllowlist { get => _explicitNullValueAssetProxyAllowlist; set { _explicitNullValueAssetProxyAllowlist = value; AdditionalData?.Remove("asset_proxy_allowlist"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("asset_proxy_allowlist"); else _explicitNullProperties?.Remove("asset_proxy_allowlist"); } }
+        private List<string> _explicitNullValueAssetProxyAllowlist = default!;
 #endif
         /// <summary>The asset_proxy_enabled property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -1911,12 +1917,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The asset_proxy_whitelist property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AssetProxyWhitelist { get => _explicitNullValueAssetProxyWhitelist; set { _explicitNullValueAssetProxyWhitelist = value; AdditionalData?.Remove("asset_proxy_whitelist"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("asset_proxy_whitelist"); else _explicitNullProperties?.Remove("asset_proxy_whitelist"); } }
-        private string? _explicitNullValueAssetProxyWhitelist = default!;
+        public List<string>? AssetProxyWhitelist { get => _explicitNullValueAssetProxyWhitelist; set { _explicitNullValueAssetProxyWhitelist = value; AdditionalData?.Remove("asset_proxy_whitelist"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("asset_proxy_whitelist"); else _explicitNullProperties?.Remove("asset_proxy_whitelist"); } }
+        private List<string>? _explicitNullValueAssetProxyWhitelist = default!;
 #nullable restore
 #else
-        public string AssetProxyWhitelist { get => _explicitNullValueAssetProxyWhitelist; set { _explicitNullValueAssetProxyWhitelist = value; AdditionalData?.Remove("asset_proxy_whitelist"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("asset_proxy_whitelist"); else _explicitNullProperties?.Remove("asset_proxy_whitelist"); } }
-        private string _explicitNullValueAssetProxyWhitelist = default!;
+        public List<string> AssetProxyWhitelist { get => _explicitNullValueAssetProxyWhitelist; set { _explicitNullValueAssetProxyWhitelist = value; AdditionalData?.Remove("asset_proxy_whitelist"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("asset_proxy_whitelist"); else _explicitNullProperties?.Remove("asset_proxy_whitelist"); } }
+        private List<string> _explicitNullValueAssetProxyWhitelist = default!;
 #endif
         /// <summary>The audit_events_api_limit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -2174,12 +2180,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The ci_cd_catalog_projects_allowlist property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CiCdCatalogProjectsAllowlist { get => _explicitNullValueCiCdCatalogProjectsAllowlist; set { _explicitNullValueCiCdCatalogProjectsAllowlist = value; AdditionalData?.Remove("ci_cd_catalog_projects_allowlist"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ci_cd_catalog_projects_allowlist"); else _explicitNullProperties?.Remove("ci_cd_catalog_projects_allowlist"); } }
-        private string? _explicitNullValueCiCdCatalogProjectsAllowlist = default!;
+        public List<string>? CiCdCatalogProjectsAllowlist { get => _explicitNullValueCiCdCatalogProjectsAllowlist; set { _explicitNullValueCiCdCatalogProjectsAllowlist = value; AdditionalData?.Remove("ci_cd_catalog_projects_allowlist"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ci_cd_catalog_projects_allowlist"); else _explicitNullProperties?.Remove("ci_cd_catalog_projects_allowlist"); } }
+        private List<string>? _explicitNullValueCiCdCatalogProjectsAllowlist = default!;
 #nullable restore
 #else
-        public string CiCdCatalogProjectsAllowlist { get => _explicitNullValueCiCdCatalogProjectsAllowlist; set { _explicitNullValueCiCdCatalogProjectsAllowlist = value; AdditionalData?.Remove("ci_cd_catalog_projects_allowlist"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ci_cd_catalog_projects_allowlist"); else _explicitNullProperties?.Remove("ci_cd_catalog_projects_allowlist"); } }
-        private string _explicitNullValueCiCdCatalogProjectsAllowlist = default!;
+        public List<string> CiCdCatalogProjectsAllowlist { get => _explicitNullValueCiCdCatalogProjectsAllowlist; set { _explicitNullValueCiCdCatalogProjectsAllowlist = value; AdditionalData?.Remove("ci_cd_catalog_projects_allowlist"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ci_cd_catalog_projects_allowlist"); else _explicitNullProperties?.Remove("ci_cd_catalog_projects_allowlist"); } }
+        private List<string> _explicitNullValueCiCdCatalogProjectsAllowlist = default!;
 #endif
         /// <summary>The ci_cd_catalog_projects_allowlist_raw property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -2287,6 +2293,26 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string CiMaxTotalYamlSizeBytes { get => _explicitNullValueCiMaxTotalYamlSizeBytes; set { _explicitNullValueCiMaxTotalYamlSizeBytes = value; AdditionalData?.Remove("ci_max_total_yaml_size_bytes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ci_max_total_yaml_size_bytes"); else _explicitNullProperties?.Remove("ci_max_total_yaml_size_bytes"); } }
         private string _explicitNullValueCiMaxTotalYamlSizeBytes = default!;
 #endif
+        /// <summary>The ci_minutes_usage_projects_per_hour_limit property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CiMinutesUsageProjectsPerHourLimit { get => _explicitNullValueCiMinutesUsageProjectsPerHourLimit; set { _explicitNullValueCiMinutesUsageProjectsPerHourLimit = value; AdditionalData?.Remove("ci_minutes_usage_projects_per_hour_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ci_minutes_usage_projects_per_hour_limit"); else _explicitNullProperties?.Remove("ci_minutes_usage_projects_per_hour_limit"); } }
+        private string? _explicitNullValueCiMinutesUsageProjectsPerHourLimit = default!;
+#nullable restore
+#else
+        public string CiMinutesUsageProjectsPerHourLimit { get => _explicitNullValueCiMinutesUsageProjectsPerHourLimit; set { _explicitNullValueCiMinutesUsageProjectsPerHourLimit = value; AdditionalData?.Remove("ci_minutes_usage_projects_per_hour_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ci_minutes_usage_projects_per_hour_limit"); else _explicitNullProperties?.Remove("ci_minutes_usage_projects_per_hour_limit"); } }
+        private string _explicitNullValueCiMinutesUsageProjectsPerHourLimit = default!;
+#endif
+        /// <summary>The ci_minutes_usage_projects_per_minute_limit property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? CiMinutesUsageProjectsPerMinuteLimit { get => _explicitNullValueCiMinutesUsageProjectsPerMinuteLimit; set { _explicitNullValueCiMinutesUsageProjectsPerMinuteLimit = value; AdditionalData?.Remove("ci_minutes_usage_projects_per_minute_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ci_minutes_usage_projects_per_minute_limit"); else _explicitNullProperties?.Remove("ci_minutes_usage_projects_per_minute_limit"); } }
+        private string? _explicitNullValueCiMinutesUsageProjectsPerMinuteLimit = default!;
+#nullable restore
+#else
+        public string CiMinutesUsageProjectsPerMinuteLimit { get => _explicitNullValueCiMinutesUsageProjectsPerMinuteLimit; set { _explicitNullValueCiMinutesUsageProjectsPerMinuteLimit = value; AdditionalData?.Remove("ci_minutes_usage_projects_per_minute_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ci_minutes_usage_projects_per_minute_limit"); else _explicitNullProperties?.Remove("ci_minutes_usage_projects_per_minute_limit"); } }
+        private string _explicitNullValueCiMinutesUsageProjectsPerMinuteLimit = default!;
+#endif
         /// <summary>The ci_partitions_in_seconds_limit_human_readable property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -2360,12 +2386,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The code_dropdown_custom_clients property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CodeDropdownCustomClients { get => _explicitNullValueCodeDropdownCustomClients; set { _explicitNullValueCodeDropdownCustomClients = value; AdditionalData?.Remove("code_dropdown_custom_clients"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("code_dropdown_custom_clients"); else _explicitNullProperties?.Remove("code_dropdown_custom_clients"); } }
-        private string? _explicitNullValueCodeDropdownCustomClients = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationSettingCodeDropdownCustomClientsItemProperty>? CodeDropdownCustomClients { get => _explicitNullValueCodeDropdownCustomClients; set { _explicitNullValueCodeDropdownCustomClients = value; AdditionalData?.Remove("code_dropdown_custom_clients"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("code_dropdown_custom_clients"); else _explicitNullProperties?.Remove("code_dropdown_custom_clients"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationSettingCodeDropdownCustomClientsItemProperty>? _explicitNullValueCodeDropdownCustomClients = default!;
 #nullable restore
 #else
-        public string CodeDropdownCustomClients { get => _explicitNullValueCodeDropdownCustomClients; set { _explicitNullValueCodeDropdownCustomClients = value; AdditionalData?.Remove("code_dropdown_custom_clients"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("code_dropdown_custom_clients"); else _explicitNullProperties?.Remove("code_dropdown_custom_clients"); } }
-        private string _explicitNullValueCodeDropdownCustomClients = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationSettingCodeDropdownCustomClientsItemProperty> CodeDropdownCustomClients { get => _explicitNullValueCodeDropdownCustomClients; set { _explicitNullValueCodeDropdownCustomClients = value; AdditionalData?.Remove("code_dropdown_custom_clients"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("code_dropdown_custom_clients"); else _explicitNullProperties?.Remove("code_dropdown_custom_clients"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationSettingCodeDropdownCustomClientsItemProperty> _explicitNullValueCodeDropdownCustomClients = default!;
 #endif
         /// <summary>The code_suggestions_api_rate_limit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -2760,12 +2786,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The default_branch_protection_defaults property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DefaultBranchProtectionDefaults { get => _explicitNullValueDefaultBranchProtectionDefaults; set { _explicitNullValueDefaultBranchProtectionDefaults = value; AdditionalData?.Remove("default_branch_protection_defaults"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_branch_protection_defaults"); else _explicitNullProperties?.Remove("default_branch_protection_defaults"); } }
-        private string? _explicitNullValueDefaultBranchProtectionDefaults = default!;
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationSettingDefaultBranchProtectionDefaultsProperty? DefaultBranchProtectionDefaults { get => _explicitNullValueDefaultBranchProtectionDefaults; set { _explicitNullValueDefaultBranchProtectionDefaults = value; AdditionalData?.Remove("default_branch_protection_defaults"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_branch_protection_defaults"); else _explicitNullProperties?.Remove("default_branch_protection_defaults"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationSettingDefaultBranchProtectionDefaultsProperty? _explicitNullValueDefaultBranchProtectionDefaults = default!;
 #nullable restore
 #else
-        public string DefaultBranchProtectionDefaults { get => _explicitNullValueDefaultBranchProtectionDefaults; set { _explicitNullValueDefaultBranchProtectionDefaults = value; AdditionalData?.Remove("default_branch_protection_defaults"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_branch_protection_defaults"); else _explicitNullProperties?.Remove("default_branch_protection_defaults"); } }
-        private string _explicitNullValueDefaultBranchProtectionDefaults = default!;
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationSettingDefaultBranchProtectionDefaultsProperty DefaultBranchProtectionDefaults { get => _explicitNullValueDefaultBranchProtectionDefaults; set { _explicitNullValueDefaultBranchProtectionDefaults = value; AdditionalData?.Remove("default_branch_protection_defaults"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_branch_protection_defaults"); else _explicitNullProperties?.Remove("default_branch_protection_defaults"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationSettingDefaultBranchProtectionDefaultsProperty _explicitNullValueDefaultBranchProtectionDefaults = default!;
 #endif
         /// <summary>The default_ci_config_path property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -2960,12 +2986,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The dependency_management_settings property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DependencyManagementSettings { get => _explicitNullValueDependencyManagementSettings; set { _explicitNullValueDependencyManagementSettings = value; AdditionalData?.Remove("dependency_management_settings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dependency_management_settings"); else _explicitNullProperties?.Remove("dependency_management_settings"); } }
-        private string? _explicitNullValueDependencyManagementSettings = default!;
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationSettingDependencyManagementSettingsProperty? DependencyManagementSettings { get => _explicitNullValueDependencyManagementSettings; set { _explicitNullValueDependencyManagementSettings = value; AdditionalData?.Remove("dependency_management_settings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dependency_management_settings"); else _explicitNullProperties?.Remove("dependency_management_settings"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationSettingDependencyManagementSettingsProperty? _explicitNullValueDependencyManagementSettings = default!;
 #nullable restore
 #else
-        public string DependencyManagementSettings { get => _explicitNullValueDependencyManagementSettings; set { _explicitNullValueDependencyManagementSettings = value; AdditionalData?.Remove("dependency_management_settings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dependency_management_settings"); else _explicitNullProperties?.Remove("dependency_management_settings"); } }
-        private string _explicitNullValueDependencyManagementSettings = default!;
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationSettingDependencyManagementSettingsProperty DependencyManagementSettings { get => _explicitNullValueDependencyManagementSettings; set { _explicitNullValueDependencyManagementSettings = value; AdditionalData?.Remove("dependency_management_settings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dependency_management_settings"); else _explicitNullProperties?.Remove("dependency_management_settings"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationSettingDependencyManagementSettingsProperty _explicitNullValueDependencyManagementSettings = default!;
 #endif
         /// <summary>The dependency_scanning_sbom_scan_api_download_limit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -3090,12 +3116,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The disabled_oauth_sign_in_sources property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DisabledOauthSignInSources { get => _explicitNullValueDisabledOauthSignInSources; set { _explicitNullValueDisabledOauthSignInSources = value; AdditionalData?.Remove("disabled_oauth_sign_in_sources"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("disabled_oauth_sign_in_sources"); else _explicitNullProperties?.Remove("disabled_oauth_sign_in_sources"); } }
-        private string? _explicitNullValueDisabledOauthSignInSources = default!;
+        public List<string>? DisabledOauthSignInSources { get => _explicitNullValueDisabledOauthSignInSources; set { _explicitNullValueDisabledOauthSignInSources = value; AdditionalData?.Remove("disabled_oauth_sign_in_sources"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("disabled_oauth_sign_in_sources"); else _explicitNullProperties?.Remove("disabled_oauth_sign_in_sources"); } }
+        private List<string>? _explicitNullValueDisabledOauthSignInSources = default!;
 #nullable restore
 #else
-        public string DisabledOauthSignInSources { get => _explicitNullValueDisabledOauthSignInSources; set { _explicitNullValueDisabledOauthSignInSources = value; AdditionalData?.Remove("disabled_oauth_sign_in_sources"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("disabled_oauth_sign_in_sources"); else _explicitNullProperties?.Remove("disabled_oauth_sign_in_sources"); } }
-        private string _explicitNullValueDisabledOauthSignInSources = default!;
+        public List<string> DisabledOauthSignInSources { get => _explicitNullValueDisabledOauthSignInSources; set { _explicitNullValueDisabledOauthSignInSources = value; AdditionalData?.Remove("disabled_oauth_sign_in_sources"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("disabled_oauth_sign_in_sources"); else _explicitNullProperties?.Remove("disabled_oauth_sign_in_sources"); } }
+        private List<string> _explicitNullValueDisabledOauthSignInSources = default!;
 #endif
         /// <summary>The disable_feed_token property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -3170,12 +3196,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The domain_allowlist property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DomainAllowlist { get => _explicitNullValueDomainAllowlist; set { _explicitNullValueDomainAllowlist = value; AdditionalData?.Remove("domain_allowlist"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("domain_allowlist"); else _explicitNullProperties?.Remove("domain_allowlist"); } }
-        private string? _explicitNullValueDomainAllowlist = default!;
+        public List<string>? DomainAllowlist { get => _explicitNullValueDomainAllowlist; set { _explicitNullValueDomainAllowlist = value; AdditionalData?.Remove("domain_allowlist"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("domain_allowlist"); else _explicitNullProperties?.Remove("domain_allowlist"); } }
+        private List<string>? _explicitNullValueDomainAllowlist = default!;
 #nullable restore
 #else
-        public string DomainAllowlist { get => _explicitNullValueDomainAllowlist; set { _explicitNullValueDomainAllowlist = value; AdditionalData?.Remove("domain_allowlist"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("domain_allowlist"); else _explicitNullProperties?.Remove("domain_allowlist"); } }
-        private string _explicitNullValueDomainAllowlist = default!;
+        public List<string> DomainAllowlist { get => _explicitNullValueDomainAllowlist; set { _explicitNullValueDomainAllowlist = value; AdditionalData?.Remove("domain_allowlist"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("domain_allowlist"); else _explicitNullProperties?.Remove("domain_allowlist"); } }
+        private List<string> _explicitNullValueDomainAllowlist = default!;
 #endif
         /// <summary>The domain_allowlist_raw property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -3190,12 +3216,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The domain_denylist property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DomainDenylist { get => _explicitNullValueDomainDenylist; set { _explicitNullValueDomainDenylist = value; AdditionalData?.Remove("domain_denylist"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("domain_denylist"); else _explicitNullProperties?.Remove("domain_denylist"); } }
-        private string? _explicitNullValueDomainDenylist = default!;
+        public List<string>? DomainDenylist { get => _explicitNullValueDomainDenylist; set { _explicitNullValueDomainDenylist = value; AdditionalData?.Remove("domain_denylist"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("domain_denylist"); else _explicitNullProperties?.Remove("domain_denylist"); } }
+        private List<string>? _explicitNullValueDomainDenylist = default!;
 #nullable restore
 #else
-        public string DomainDenylist { get => _explicitNullValueDomainDenylist; set { _explicitNullValueDomainDenylist = value; AdditionalData?.Remove("domain_denylist"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("domain_denylist"); else _explicitNullProperties?.Remove("domain_denylist"); } }
-        private string _explicitNullValueDomainDenylist = default!;
+        public List<string> DomainDenylist { get => _explicitNullValueDomainDenylist; set { _explicitNullValueDomainDenylist = value; AdditionalData?.Remove("domain_denylist"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("domain_denylist"); else _explicitNullProperties?.Remove("domain_denylist"); } }
+        private List<string> _explicitNullValueDomainDenylist = default!;
 #endif
         /// <summary>The domain_denylist_enabled property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -3425,12 +3451,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The duo_namespace_access_rules property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DuoNamespaceAccessRules { get => _explicitNullValueDuoNamespaceAccessRules; set { _explicitNullValueDuoNamespaceAccessRules = value; AdditionalData?.Remove("duo_namespace_access_rules"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duo_namespace_access_rules"); else _explicitNullProperties?.Remove("duo_namespace_access_rules"); } }
-        private string? _explicitNullValueDuoNamespaceAccessRules = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationSettingDuoNamespaceAccessRulesItemProperty>? DuoNamespaceAccessRules { get => _explicitNullValueDuoNamespaceAccessRules; set { _explicitNullValueDuoNamespaceAccessRules = value; AdditionalData?.Remove("duo_namespace_access_rules"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duo_namespace_access_rules"); else _explicitNullProperties?.Remove("duo_namespace_access_rules"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationSettingDuoNamespaceAccessRulesItemProperty>? _explicitNullValueDuoNamespaceAccessRules = default!;
 #nullable restore
 #else
-        public string DuoNamespaceAccessRules { get => _explicitNullValueDuoNamespaceAccessRules; set { _explicitNullValueDuoNamespaceAccessRules = value; AdditionalData?.Remove("duo_namespace_access_rules"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duo_namespace_access_rules"); else _explicitNullProperties?.Remove("duo_namespace_access_rules"); } }
-        private string _explicitNullValueDuoNamespaceAccessRules = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationSettingDuoNamespaceAccessRulesItemProperty> DuoNamespaceAccessRules { get => _explicitNullValueDuoNamespaceAccessRules; set { _explicitNullValueDuoNamespaceAccessRules = value; AdditionalData?.Remove("duo_namespace_access_rules"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duo_namespace_access_rules"); else _explicitNullProperties?.Remove("duo_namespace_access_rules"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationSettingDuoNamespaceAccessRulesItemProperty> _explicitNullValueDuoNamespaceAccessRules = default!;
 #endif
         /// <summary>The duo_remote_flows_availability property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -3821,12 +3847,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The elasticsearch_namespace_ids property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ElasticsearchNamespaceIds { get => _explicitNullValueElasticsearchNamespaceIds; set { _explicitNullValueElasticsearchNamespaceIds = value; AdditionalData?.Remove("elasticsearch_namespace_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("elasticsearch_namespace_ids"); else _explicitNullProperties?.Remove("elasticsearch_namespace_ids"); } }
-        private string? _explicitNullValueElasticsearchNamespaceIds = default!;
+        public List<int?>? ElasticsearchNamespaceIds { get => _explicitNullValueElasticsearchNamespaceIds; set { _explicitNullValueElasticsearchNamespaceIds = value; AdditionalData?.Remove("elasticsearch_namespace_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("elasticsearch_namespace_ids"); else _explicitNullProperties?.Remove("elasticsearch_namespace_ids"); } }
+        private List<int?>? _explicitNullValueElasticsearchNamespaceIds = default!;
 #nullable restore
 #else
-        public string ElasticsearchNamespaceIds { get => _explicitNullValueElasticsearchNamespaceIds; set { _explicitNullValueElasticsearchNamespaceIds = value; AdditionalData?.Remove("elasticsearch_namespace_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("elasticsearch_namespace_ids"); else _explicitNullProperties?.Remove("elasticsearch_namespace_ids"); } }
-        private string _explicitNullValueElasticsearchNamespaceIds = default!;
+        public List<int?> ElasticsearchNamespaceIds { get => _explicitNullValueElasticsearchNamespaceIds; set { _explicitNullValueElasticsearchNamespaceIds = value; AdditionalData?.Remove("elasticsearch_namespace_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("elasticsearch_namespace_ids"); else _explicitNullProperties?.Remove("elasticsearch_namespace_ids"); } }
+        private List<int?> _explicitNullValueElasticsearchNamespaceIds = default!;
 #endif
         /// <summary>The elasticsearch_password property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -3851,12 +3877,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The elasticsearch_project_ids property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ElasticsearchProjectIds { get => _explicitNullValueElasticsearchProjectIds; set { _explicitNullValueElasticsearchProjectIds = value; AdditionalData?.Remove("elasticsearch_project_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("elasticsearch_project_ids"); else _explicitNullProperties?.Remove("elasticsearch_project_ids"); } }
-        private string? _explicitNullValueElasticsearchProjectIds = default!;
+        public List<int?>? ElasticsearchProjectIds { get => _explicitNullValueElasticsearchProjectIds; set { _explicitNullValueElasticsearchProjectIds = value; AdditionalData?.Remove("elasticsearch_project_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("elasticsearch_project_ids"); else _explicitNullProperties?.Remove("elasticsearch_project_ids"); } }
+        private List<int?>? _explicitNullValueElasticsearchProjectIds = default!;
 #nullable restore
 #else
-        public string ElasticsearchProjectIds { get => _explicitNullValueElasticsearchProjectIds; set { _explicitNullValueElasticsearchProjectIds = value; AdditionalData?.Remove("elasticsearch_project_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("elasticsearch_project_ids"); else _explicitNullProperties?.Remove("elasticsearch_project_ids"); } }
-        private string _explicitNullValueElasticsearchProjectIds = default!;
+        public List<int?> ElasticsearchProjectIds { get => _explicitNullValueElasticsearchProjectIds; set { _explicitNullValueElasticsearchProjectIds = value; AdditionalData?.Remove("elasticsearch_project_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("elasticsearch_project_ids"); else _explicitNullProperties?.Remove("elasticsearch_project_ids"); } }
+        private List<int?> _explicitNullValueElasticsearchProjectIds = default!;
 #endif
         /// <summary>The elasticsearch_replicas property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -3911,12 +3937,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The elasticsearch_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ElasticsearchUrl { get => _explicitNullValueElasticsearchUrl; set { _explicitNullValueElasticsearchUrl = value; AdditionalData?.Remove("elasticsearch_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("elasticsearch_url"); else _explicitNullProperties?.Remove("elasticsearch_url"); } }
-        private string? _explicitNullValueElasticsearchUrl = default!;
+        public List<string>? ElasticsearchUrl { get => _explicitNullValueElasticsearchUrl; set { _explicitNullValueElasticsearchUrl = value; AdditionalData?.Remove("elasticsearch_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("elasticsearch_url"); else _explicitNullProperties?.Remove("elasticsearch_url"); } }
+        private List<string>? _explicitNullValueElasticsearchUrl = default!;
 #nullable restore
 #else
-        public string ElasticsearchUrl { get => _explicitNullValueElasticsearchUrl; set { _explicitNullValueElasticsearchUrl = value; AdditionalData?.Remove("elasticsearch_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("elasticsearch_url"); else _explicitNullProperties?.Remove("elasticsearch_url"); } }
-        private string _explicitNullValueElasticsearchUrl = default!;
+        public List<string> ElasticsearchUrl { get => _explicitNullValueElasticsearchUrl; set { _explicitNullValueElasticsearchUrl = value; AdditionalData?.Remove("elasticsearch_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("elasticsearch_url"); else _explicitNullProperties?.Remove("elasticsearch_url"); } }
+        private List<string> _explicitNullValueElasticsearchUrl = default!;
 #endif
         /// <summary>The elasticsearch_username property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -4331,12 +4357,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The foundational_agents_statuses property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FoundationalAgentsStatuses { get => _explicitNullValueFoundationalAgentsStatuses; set { _explicitNullValueFoundationalAgentsStatuses = value; AdditionalData?.Remove("foundational_agents_statuses"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("foundational_agents_statuses"); else _explicitNullProperties?.Remove("foundational_agents_statuses"); } }
-        private string? _explicitNullValueFoundationalAgentsStatuses = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationSettingFoundationalAgentsStatusesItemProperty>? FoundationalAgentsStatuses { get => _explicitNullValueFoundationalAgentsStatuses; set { _explicitNullValueFoundationalAgentsStatuses = value; AdditionalData?.Remove("foundational_agents_statuses"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("foundational_agents_statuses"); else _explicitNullProperties?.Remove("foundational_agents_statuses"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationSettingFoundationalAgentsStatusesItemProperty>? _explicitNullValueFoundationalAgentsStatuses = default!;
 #nullable restore
 #else
-        public string FoundationalAgentsStatuses { get => _explicitNullValueFoundationalAgentsStatuses; set { _explicitNullValueFoundationalAgentsStatuses = value; AdditionalData?.Remove("foundational_agents_statuses"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("foundational_agents_statuses"); else _explicitNullProperties?.Remove("foundational_agents_statuses"); } }
-        private string _explicitNullValueFoundationalAgentsStatuses = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationSettingFoundationalAgentsStatusesItemProperty> FoundationalAgentsStatuses { get => _explicitNullValueFoundationalAgentsStatuses; set { _explicitNullValueFoundationalAgentsStatuses = value; AdditionalData?.Remove("foundational_agents_statuses"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("foundational_agents_statuses"); else _explicitNullProperties?.Remove("foundational_agents_statuses"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationSettingFoundationalAgentsStatusesItemProperty> _explicitNullValueFoundationalAgentsStatuses = default!;
 #endif
         /// <summary>The geo_node_allowed_ips property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -4428,7 +4454,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string GitlabProductUsageDataEnabled { get => _explicitNullValueGitlabProductUsageDataEnabled; set { _explicitNullValueGitlabProductUsageDataEnabled = value; AdditionalData?.Remove("gitlab_product_usage_data_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gitlab_product_usage_data_enabled"); else _explicitNullProperties?.Remove("gitlab_product_usage_data_enabled"); } }
         private string _explicitNullValueGitlabProductUsageDataEnabled = default!;
 #endif
-        /// <summary>The gitlab_product_usage_data_source property</summary>
+        /// <summary>Source of the `gitlab_product_usage_data_enabled` setting. Returns `environment` if the `GITLAB_PRODUCT_USAGE_DATA_ENABLED` environment variable is set, otherwise `database`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? GitlabProductUsageDataSource { get => _explicitNullValueGitlabProductUsageDataSource; set { _explicitNullValueGitlabProductUsageDataSource = value; AdditionalData?.Remove("gitlab_product_usage_data_source"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gitlab_product_usage_data_source"); else _explicitNullProperties?.Remove("gitlab_product_usage_data_source"); } }
@@ -4501,22 +4527,22 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The git_rate_limit_users_alertlist property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? GitRateLimitUsersAlertlist { get => _explicitNullValueGitRateLimitUsersAlertlist; set { _explicitNullValueGitRateLimitUsersAlertlist = value; AdditionalData?.Remove("git_rate_limit_users_alertlist"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("git_rate_limit_users_alertlist"); else _explicitNullProperties?.Remove("git_rate_limit_users_alertlist"); } }
-        private string? _explicitNullValueGitRateLimitUsersAlertlist = default!;
+        public List<int?>? GitRateLimitUsersAlertlist { get => _explicitNullValueGitRateLimitUsersAlertlist; set { _explicitNullValueGitRateLimitUsersAlertlist = value; AdditionalData?.Remove("git_rate_limit_users_alertlist"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("git_rate_limit_users_alertlist"); else _explicitNullProperties?.Remove("git_rate_limit_users_alertlist"); } }
+        private List<int?>? _explicitNullValueGitRateLimitUsersAlertlist = default!;
 #nullable restore
 #else
-        public string GitRateLimitUsersAlertlist { get => _explicitNullValueGitRateLimitUsersAlertlist; set { _explicitNullValueGitRateLimitUsersAlertlist = value; AdditionalData?.Remove("git_rate_limit_users_alertlist"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("git_rate_limit_users_alertlist"); else _explicitNullProperties?.Remove("git_rate_limit_users_alertlist"); } }
-        private string _explicitNullValueGitRateLimitUsersAlertlist = default!;
+        public List<int?> GitRateLimitUsersAlertlist { get => _explicitNullValueGitRateLimitUsersAlertlist; set { _explicitNullValueGitRateLimitUsersAlertlist = value; AdditionalData?.Remove("git_rate_limit_users_alertlist"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("git_rate_limit_users_alertlist"); else _explicitNullProperties?.Remove("git_rate_limit_users_alertlist"); } }
+        private List<int?> _explicitNullValueGitRateLimitUsersAlertlist = default!;
 #endif
         /// <summary>The git_rate_limit_users_allowlist property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? GitRateLimitUsersAllowlist { get => _explicitNullValueGitRateLimitUsersAllowlist; set { _explicitNullValueGitRateLimitUsersAllowlist = value; AdditionalData?.Remove("git_rate_limit_users_allowlist"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("git_rate_limit_users_allowlist"); else _explicitNullProperties?.Remove("git_rate_limit_users_allowlist"); } }
-        private string? _explicitNullValueGitRateLimitUsersAllowlist = default!;
+        public List<string>? GitRateLimitUsersAllowlist { get => _explicitNullValueGitRateLimitUsersAllowlist; set { _explicitNullValueGitRateLimitUsersAllowlist = value; AdditionalData?.Remove("git_rate_limit_users_allowlist"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("git_rate_limit_users_allowlist"); else _explicitNullProperties?.Remove("git_rate_limit_users_allowlist"); } }
+        private List<string>? _explicitNullValueGitRateLimitUsersAllowlist = default!;
 #nullable restore
 #else
-        public string GitRateLimitUsersAllowlist { get => _explicitNullValueGitRateLimitUsersAllowlist; set { _explicitNullValueGitRateLimitUsersAllowlist = value; AdditionalData?.Remove("git_rate_limit_users_allowlist"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("git_rate_limit_users_allowlist"); else _explicitNullProperties?.Remove("git_rate_limit_users_allowlist"); } }
-        private string _explicitNullValueGitRateLimitUsersAllowlist = default!;
+        public List<string> GitRateLimitUsersAllowlist { get => _explicitNullValueGitRateLimitUsersAllowlist; set { _explicitNullValueGitRateLimitUsersAllowlist = value; AdditionalData?.Remove("git_rate_limit_users_allowlist"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("git_rate_limit_users_allowlist"); else _explicitNullProperties?.Remove("git_rate_limit_users_allowlist"); } }
+        private List<string> _explicitNullValueGitRateLimitUsersAllowlist = default!;
 #endif
         /// <summary>The git_two_factor_session_expiry property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -4697,6 +4723,16 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string GranularTokensEnforcedAfter { get => _explicitNullValueGranularTokensEnforcedAfter; set { _explicitNullValueGranularTokensEnforcedAfter = value; AdditionalData?.Remove("granular_tokens_enforced_after"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("granular_tokens_enforced_after"); else _explicitNullProperties?.Remove("granular_tokens_enforced_after"); } }
         private string _explicitNullValueGranularTokensEnforcedAfter = default!;
+#endif
+        /// <summary>The graphql_participant_fields_request_limit property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? GraphqlParticipantFieldsRequestLimit { get => _explicitNullValueGraphqlParticipantFieldsRequestLimit; set { _explicitNullValueGraphqlParticipantFieldsRequestLimit = value; AdditionalData?.Remove("graphql_participant_fields_request_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("graphql_participant_fields_request_limit"); else _explicitNullProperties?.Remove("graphql_participant_fields_request_limit"); } }
+        private string? _explicitNullValueGraphqlParticipantFieldsRequestLimit = default!;
+#nullable restore
+#else
+        public string GraphqlParticipantFieldsRequestLimit { get => _explicitNullValueGraphqlParticipantFieldsRequestLimit; set { _explicitNullValueGraphqlParticipantFieldsRequestLimit = value; AdditionalData?.Remove("graphql_participant_fields_request_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("graphql_participant_fields_request_limit"); else _explicitNullProperties?.Remove("graphql_participant_fields_request_limit"); } }
+        private string _explicitNullValueGraphqlParticipantFieldsRequestLimit = default!;
 #endif
         /// <summary>The gravatar_enabled property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -4968,16 +5004,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string HomePageUrl { get => _explicitNullValueHomePageUrl; set { _explicitNullValueHomePageUrl = value; AdditionalData?.Remove("home_page_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("home_page_url"); else _explicitNullProperties?.Remove("home_page_url"); } }
         private string _explicitNullValueHomePageUrl = default!;
 #endif
-        /// <summary>The housekeeping_bitmaps_enabled property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? HousekeepingBitmapsEnabled { get => _explicitNullValueHousekeepingBitmapsEnabled; set { _explicitNullValueHousekeepingBitmapsEnabled = value; AdditionalData?.Remove("housekeeping_bitmaps_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("housekeeping_bitmaps_enabled"); else _explicitNullProperties?.Remove("housekeeping_bitmaps_enabled"); } }
-        private string? _explicitNullValueHousekeepingBitmapsEnabled = default!;
-#nullable restore
-#else
-        public string HousekeepingBitmapsEnabled { get => _explicitNullValueHousekeepingBitmapsEnabled; set { _explicitNullValueHousekeepingBitmapsEnabled = value; AdditionalData?.Remove("housekeeping_bitmaps_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("housekeeping_bitmaps_enabled"); else _explicitNullProperties?.Remove("housekeeping_bitmaps_enabled"); } }
-        private string _explicitNullValueHousekeepingBitmapsEnabled = default!;
-#endif
+        /// <summary>Deprecated. Git packfile bitmap creation is always enabled. Always returns `true`.</summary>
+        public bool? HousekeepingBitmapsEnabled { get => _explicitNullValueHousekeepingBitmapsEnabled; set { _explicitNullValueHousekeepingBitmapsEnabled = value; AdditionalData?.Remove("housekeeping_bitmaps_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("housekeeping_bitmaps_enabled"); else _explicitNullProperties?.Remove("housekeeping_bitmaps_enabled"); } }
+        private bool? _explicitNullValueHousekeepingBitmapsEnabled = default!;
         /// <summary>The housekeeping_enabled property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -5051,12 +5080,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The iframe_rendering_allowlist property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? IframeRenderingAllowlist { get => _explicitNullValueIframeRenderingAllowlist; set { _explicitNullValueIframeRenderingAllowlist = value; AdditionalData?.Remove("iframe_rendering_allowlist"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("iframe_rendering_allowlist"); else _explicitNullProperties?.Remove("iframe_rendering_allowlist"); } }
-        private string? _explicitNullValueIframeRenderingAllowlist = default!;
+        public List<string>? IframeRenderingAllowlist { get => _explicitNullValueIframeRenderingAllowlist; set { _explicitNullValueIframeRenderingAllowlist = value; AdditionalData?.Remove("iframe_rendering_allowlist"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("iframe_rendering_allowlist"); else _explicitNullProperties?.Remove("iframe_rendering_allowlist"); } }
+        private List<string>? _explicitNullValueIframeRenderingAllowlist = default!;
 #nullable restore
 #else
-        public string IframeRenderingAllowlist { get => _explicitNullValueIframeRenderingAllowlist; set { _explicitNullValueIframeRenderingAllowlist = value; AdditionalData?.Remove("iframe_rendering_allowlist"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("iframe_rendering_allowlist"); else _explicitNullProperties?.Remove("iframe_rendering_allowlist"); } }
-        private string _explicitNullValueIframeRenderingAllowlist = default!;
+        public List<string> IframeRenderingAllowlist { get => _explicitNullValueIframeRenderingAllowlist; set { _explicitNullValueIframeRenderingAllowlist = value; AdditionalData?.Remove("iframe_rendering_allowlist"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("iframe_rendering_allowlist"); else _explicitNullProperties?.Remove("iframe_rendering_allowlist"); } }
+        private List<string> _explicitNullValueIframeRenderingAllowlist = default!;
 #endif
         /// <summary>The iframe_rendering_allowlist_raw property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -5091,12 +5120,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The import_sources property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ImportSources { get => _explicitNullValueImportSources; set { _explicitNullValueImportSources = value; AdditionalData?.Remove("import_sources"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("import_sources"); else _explicitNullProperties?.Remove("import_sources"); } }
-        private string? _explicitNullValueImportSources = default!;
+        public List<string>? ImportSources { get => _explicitNullValueImportSources; set { _explicitNullValueImportSources = value; AdditionalData?.Remove("import_sources"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("import_sources"); else _explicitNullProperties?.Remove("import_sources"); } }
+        private List<string>? _explicitNullValueImportSources = default!;
 #nullable restore
 #else
-        public string ImportSources { get => _explicitNullValueImportSources; set { _explicitNullValueImportSources = value; AdditionalData?.Remove("import_sources"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("import_sources"); else _explicitNullProperties?.Remove("import_sources"); } }
-        private string _explicitNullValueImportSources = default!;
+        public List<string> ImportSources { get => _explicitNullValueImportSources; set { _explicitNullValueImportSources = value; AdditionalData?.Remove("import_sources"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("import_sources"); else _explicitNullProperties?.Remove("import_sources"); } }
+        private List<string> _explicitNullValueImportSources = default!;
 #endif
         /// <summary>The inactive_projects_delete_after_months property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -5261,12 +5290,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The jira_connect_domain_allowlist property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? JiraConnectDomainAllowlist { get => _explicitNullValueJiraConnectDomainAllowlist; set { _explicitNullValueJiraConnectDomainAllowlist = value; AdditionalData?.Remove("jira_connect_domain_allowlist"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("jira_connect_domain_allowlist"); else _explicitNullProperties?.Remove("jira_connect_domain_allowlist"); } }
-        private string? _explicitNullValueJiraConnectDomainAllowlist = default!;
+        public List<string>? JiraConnectDomainAllowlist { get => _explicitNullValueJiraConnectDomainAllowlist; set { _explicitNullValueJiraConnectDomainAllowlist = value; AdditionalData?.Remove("jira_connect_domain_allowlist"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("jira_connect_domain_allowlist"); else _explicitNullProperties?.Remove("jira_connect_domain_allowlist"); } }
+        private List<string>? _explicitNullValueJiraConnectDomainAllowlist = default!;
 #nullable restore
 #else
-        public string JiraConnectDomainAllowlist { get => _explicitNullValueJiraConnectDomainAllowlist; set { _explicitNullValueJiraConnectDomainAllowlist = value; AdditionalData?.Remove("jira_connect_domain_allowlist"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("jira_connect_domain_allowlist"); else _explicitNullProperties?.Remove("jira_connect_domain_allowlist"); } }
-        private string _explicitNullValueJiraConnectDomainAllowlist = default!;
+        public List<string> JiraConnectDomainAllowlist { get => _explicitNullValueJiraConnectDomainAllowlist; set { _explicitNullValueJiraConnectDomainAllowlist = value; AdditionalData?.Remove("jira_connect_domain_allowlist"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("jira_connect_domain_allowlist"); else _explicitNullProperties?.Remove("jira_connect_domain_allowlist"); } }
+        private List<string> _explicitNullValueJiraConnectDomainAllowlist = default!;
 #endif
         /// <summary>The jira_connect_domain_allowlist_raw property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -5381,12 +5410,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The kroki_formats property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? KrokiFormats { get => _explicitNullValueKrokiFormats; set { _explicitNullValueKrokiFormats = value; AdditionalData?.Remove("kroki_formats"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("kroki_formats"); else _explicitNullProperties?.Remove("kroki_formats"); } }
-        private string? _explicitNullValueKrokiFormats = default!;
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationSettingKrokiFormatsProperty? KrokiFormats { get => _explicitNullValueKrokiFormats; set { _explicitNullValueKrokiFormats = value; AdditionalData?.Remove("kroki_formats"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("kroki_formats"); else _explicitNullProperties?.Remove("kroki_formats"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationSettingKrokiFormatsProperty? _explicitNullValueKrokiFormats = default!;
 #nullable restore
 #else
-        public string KrokiFormats { get => _explicitNullValueKrokiFormats; set { _explicitNullValueKrokiFormats = value; AdditionalData?.Remove("kroki_formats"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("kroki_formats"); else _explicitNullProperties?.Remove("kroki_formats"); } }
-        private string _explicitNullValueKrokiFormats = default!;
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationSettingKrokiFormatsProperty KrokiFormats { get => _explicitNullValueKrokiFormats; set { _explicitNullValueKrokiFormats = value; AdditionalData?.Remove("kroki_formats"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("kroki_formats"); else _explicitNullProperties?.Remove("kroki_formats"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationSettingKrokiFormatsProperty _explicitNullValueKrokiFormats = default!;
 #endif
         /// <summary>The kroki_url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -6252,22 +6281,22 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The outbound_local_requests_whitelist property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OutboundLocalRequestsWhitelist { get => _explicitNullValueOutboundLocalRequestsWhitelist; set { _explicitNullValueOutboundLocalRequestsWhitelist = value; AdditionalData?.Remove("outbound_local_requests_whitelist"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outbound_local_requests_whitelist"); else _explicitNullProperties?.Remove("outbound_local_requests_whitelist"); } }
-        private string? _explicitNullValueOutboundLocalRequestsWhitelist = default!;
+        public List<string>? OutboundLocalRequestsWhitelist { get => _explicitNullValueOutboundLocalRequestsWhitelist; set { _explicitNullValueOutboundLocalRequestsWhitelist = value; AdditionalData?.Remove("outbound_local_requests_whitelist"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outbound_local_requests_whitelist"); else _explicitNullProperties?.Remove("outbound_local_requests_whitelist"); } }
+        private List<string>? _explicitNullValueOutboundLocalRequestsWhitelist = default!;
 #nullable restore
 #else
-        public string OutboundLocalRequestsWhitelist { get => _explicitNullValueOutboundLocalRequestsWhitelist; set { _explicitNullValueOutboundLocalRequestsWhitelist = value; AdditionalData?.Remove("outbound_local_requests_whitelist"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outbound_local_requests_whitelist"); else _explicitNullProperties?.Remove("outbound_local_requests_whitelist"); } }
-        private string _explicitNullValueOutboundLocalRequestsWhitelist = default!;
+        public List<string> OutboundLocalRequestsWhitelist { get => _explicitNullValueOutboundLocalRequestsWhitelist; set { _explicitNullValueOutboundLocalRequestsWhitelist = value; AdditionalData?.Remove("outbound_local_requests_whitelist"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("outbound_local_requests_whitelist"); else _explicitNullProperties?.Remove("outbound_local_requests_whitelist"); } }
+        private List<string> _explicitNullValueOutboundLocalRequestsWhitelist = default!;
 #endif
         /// <summary>The package_metadata_purl_types property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PackageMetadataPurlTypes { get => _explicitNullValuePackageMetadataPurlTypes; set { _explicitNullValuePackageMetadataPurlTypes = value; AdditionalData?.Remove("package_metadata_purl_types"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("package_metadata_purl_types"); else _explicitNullProperties?.Remove("package_metadata_purl_types"); } }
-        private string? _explicitNullValuePackageMetadataPurlTypes = default!;
+        public List<int?>? PackageMetadataPurlTypes { get => _explicitNullValuePackageMetadataPurlTypes; set { _explicitNullValuePackageMetadataPurlTypes = value; AdditionalData?.Remove("package_metadata_purl_types"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("package_metadata_purl_types"); else _explicitNullProperties?.Remove("package_metadata_purl_types"); } }
+        private List<int?>? _explicitNullValuePackageMetadataPurlTypes = default!;
 #nullable restore
 #else
-        public string PackageMetadataPurlTypes { get => _explicitNullValuePackageMetadataPurlTypes; set { _explicitNullValuePackageMetadataPurlTypes = value; AdditionalData?.Remove("package_metadata_purl_types"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("package_metadata_purl_types"); else _explicitNullProperties?.Remove("package_metadata_purl_types"); } }
-        private string _explicitNullValuePackageMetadataPurlTypes = default!;
+        public List<int?> PackageMetadataPurlTypes { get => _explicitNullValuePackageMetadataPurlTypes; set { _explicitNullValuePackageMetadataPurlTypes = value; AdditionalData?.Remove("package_metadata_purl_types"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("package_metadata_purl_types"); else _explicitNullProperties?.Remove("package_metadata_purl_types"); } }
+        private List<int?> _explicitNullValuePackageMetadataPurlTypes = default!;
 #endif
         /// <summary>The package_registry_allow_anyone_to_pull_option property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -7172,12 +7201,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The repository_storages_weighted property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RepositoryStoragesWeighted { get => _explicitNullValueRepositoryStoragesWeighted; set { _explicitNullValueRepositoryStoragesWeighted = value; AdditionalData?.Remove("repository_storages_weighted"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("repository_storages_weighted"); else _explicitNullProperties?.Remove("repository_storages_weighted"); } }
-        private string? _explicitNullValueRepositoryStoragesWeighted = default!;
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationSettingRepositoryStoragesWeightedProperty? RepositoryStoragesWeighted { get => _explicitNullValueRepositoryStoragesWeighted; set { _explicitNullValueRepositoryStoragesWeighted = value; AdditionalData?.Remove("repository_storages_weighted"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("repository_storages_weighted"); else _explicitNullProperties?.Remove("repository_storages_weighted"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationSettingRepositoryStoragesWeightedProperty? _explicitNullValueRepositoryStoragesWeighted = default!;
 #nullable restore
 #else
-        public string RepositoryStoragesWeighted { get => _explicitNullValueRepositoryStoragesWeighted; set { _explicitNullValueRepositoryStoragesWeighted = value; AdditionalData?.Remove("repository_storages_weighted"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("repository_storages_weighted"); else _explicitNullProperties?.Remove("repository_storages_weighted"); } }
-        private string _explicitNullValueRepositoryStoragesWeighted = default!;
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationSettingRepositoryStoragesWeightedProperty RepositoryStoragesWeighted { get => _explicitNullValueRepositoryStoragesWeighted; set { _explicitNullValueRepositoryStoragesWeighted = value; AdditionalData?.Remove("repository_storages_weighted"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("repository_storages_weighted"); else _explicitNullProperties?.Remove("repository_storages_weighted"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationSettingRepositoryStoragesWeightedProperty _explicitNullValueRepositoryStoragesWeighted = default!;
 #endif
         /// <summary>The require_admin_approval_after_user_signup property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -7252,22 +7281,22 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The resource_usage_limits property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ResourceUsageLimits { get => _explicitNullValueResourceUsageLimits; set { _explicitNullValueResourceUsageLimits = value; AdditionalData?.Remove("resource_usage_limits"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resource_usage_limits"); else _explicitNullProperties?.Remove("resource_usage_limits"); } }
-        private string? _explicitNullValueResourceUsageLimits = default!;
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationSettingResourceUsageLimitsProperty? ResourceUsageLimits { get => _explicitNullValueResourceUsageLimits; set { _explicitNullValueResourceUsageLimits = value; AdditionalData?.Remove("resource_usage_limits"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resource_usage_limits"); else _explicitNullProperties?.Remove("resource_usage_limits"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationSettingResourceUsageLimitsProperty? _explicitNullValueResourceUsageLimits = default!;
 #nullable restore
 #else
-        public string ResourceUsageLimits { get => _explicitNullValueResourceUsageLimits; set { _explicitNullValueResourceUsageLimits = value; AdditionalData?.Remove("resource_usage_limits"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resource_usage_limits"); else _explicitNullProperties?.Remove("resource_usage_limits"); } }
-        private string _explicitNullValueResourceUsageLimits = default!;
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationSettingResourceUsageLimitsProperty ResourceUsageLimits { get => _explicitNullValueResourceUsageLimits; set { _explicitNullValueResourceUsageLimits = value; AdditionalData?.Remove("resource_usage_limits"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resource_usage_limits"); else _explicitNullProperties?.Remove("resource_usage_limits"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationSettingResourceUsageLimitsProperty _explicitNullValueResourceUsageLimits = default!;
 #endif
         /// <summary>The restricted_visibility_levels property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RestrictedVisibilityLevels { get => _explicitNullValueRestrictedVisibilityLevels; set { _explicitNullValueRestrictedVisibilityLevels = value; AdditionalData?.Remove("restricted_visibility_levels"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("restricted_visibility_levels"); else _explicitNullProperties?.Remove("restricted_visibility_levels"); } }
-        private string? _explicitNullValueRestrictedVisibilityLevels = default!;
+        public List<string>? RestrictedVisibilityLevels { get => _explicitNullValueRestrictedVisibilityLevels; set { _explicitNullValueRestrictedVisibilityLevels = value; AdditionalData?.Remove("restricted_visibility_levels"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("restricted_visibility_levels"); else _explicitNullProperties?.Remove("restricted_visibility_levels"); } }
+        private List<string>? _explicitNullValueRestrictedVisibilityLevels = default!;
 #nullable restore
 #else
-        public string RestrictedVisibilityLevels { get => _explicitNullValueRestrictedVisibilityLevels; set { _explicitNullValueRestrictedVisibilityLevels = value; AdditionalData?.Remove("restricted_visibility_levels"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("restricted_visibility_levels"); else _explicitNullProperties?.Remove("restricted_visibility_levels"); } }
-        private string _explicitNullValueRestrictedVisibilityLevels = default!;
+        public List<string> RestrictedVisibilityLevels { get => _explicitNullValueRestrictedVisibilityLevels; set { _explicitNullValueRestrictedVisibilityLevels = value; AdditionalData?.Remove("restricted_visibility_levels"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("restricted_visibility_levels"); else _explicitNullProperties?.Remove("restricted_visibility_levels"); } }
+        private List<string> _explicitNullValueRestrictedVisibilityLevels = default!;
 #endif
         /// <summary>The root_moved_permanently_redirection property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -7782,12 +7811,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The sign_in_restrictions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SignInRestrictions { get => _explicitNullValueSignInRestrictions; set { _explicitNullValueSignInRestrictions = value; AdditionalData?.Remove("sign_in_restrictions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sign_in_restrictions"); else _explicitNullProperties?.Remove("sign_in_restrictions"); } }
-        private string? _explicitNullValueSignInRestrictions = default!;
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationSettingSignInRestrictionsProperty? SignInRestrictions { get => _explicitNullValueSignInRestrictions; set { _explicitNullValueSignInRestrictions = value; AdditionalData?.Remove("sign_in_restrictions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sign_in_restrictions"); else _explicitNullProperties?.Remove("sign_in_restrictions"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationSettingSignInRestrictionsProperty? _explicitNullValueSignInRestrictions = default!;
 #nullable restore
 #else
-        public string SignInRestrictions { get => _explicitNullValueSignInRestrictions; set { _explicitNullValueSignInRestrictions = value; AdditionalData?.Remove("sign_in_restrictions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sign_in_restrictions"); else _explicitNullProperties?.Remove("sign_in_restrictions"); } }
-        private string _explicitNullValueSignInRestrictions = default!;
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationSettingSignInRestrictionsProperty SignInRestrictions { get => _explicitNullValueSignInRestrictions; set { _explicitNullValueSignInRestrictions = value; AdditionalData?.Remove("sign_in_restrictions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sign_in_restrictions"); else _explicitNullProperties?.Remove("sign_in_restrictions"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationSettingSignInRestrictionsProperty _explicitNullValueSignInRestrictions = default!;
 #endif
         /// <summary>The signup_enabled property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -9035,12 +9064,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The valid_runner_registrars property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ValidRunnerRegistrars { get => _explicitNullValueValidRunnerRegistrars; set { _explicitNullValueValidRunnerRegistrars = value; AdditionalData?.Remove("valid_runner_registrars"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("valid_runner_registrars"); else _explicitNullProperties?.Remove("valid_runner_registrars"); } }
-        private string? _explicitNullValueValidRunnerRegistrars = default!;
+        public List<string>? ValidRunnerRegistrars { get => _explicitNullValueValidRunnerRegistrars; set { _explicitNullValueValidRunnerRegistrars = value; AdditionalData?.Remove("valid_runner_registrars"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("valid_runner_registrars"); else _explicitNullProperties?.Remove("valid_runner_registrars"); } }
+        private List<string>? _explicitNullValueValidRunnerRegistrars = default!;
 #nullable restore
 #else
-        public string ValidRunnerRegistrars { get => _explicitNullValueValidRunnerRegistrars; set { _explicitNullValueValidRunnerRegistrars = value; AdditionalData?.Remove("valid_runner_registrars"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("valid_runner_registrars"); else _explicitNullProperties?.Remove("valid_runner_registrars"); } }
-        private string _explicitNullValueValidRunnerRegistrars = default!;
+        public List<string> ValidRunnerRegistrars { get => _explicitNullValueValidRunnerRegistrars; set { _explicitNullValueValidRunnerRegistrars = value; AdditionalData?.Remove("valid_runner_registrars"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("valid_runner_registrars"); else _explicitNullProperties?.Remove("valid_runner_registrars"); } }
+        private List<string> _explicitNullValueValidRunnerRegistrars = default!;
 #endif
         /// <summary>The version_check_enabled property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -9065,12 +9094,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The vscode_extension_marketplace property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? VscodeExtensionMarketplace { get => _explicitNullValueVscodeExtensionMarketplace; set { _explicitNullValueVscodeExtensionMarketplace = value; AdditionalData?.Remove("vscode_extension_marketplace"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vscode_extension_marketplace"); else _explicitNullProperties?.Remove("vscode_extension_marketplace"); } }
-        private string? _explicitNullValueVscodeExtensionMarketplace = default!;
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationSettingVscodeExtensionMarketplaceProperty? VscodeExtensionMarketplace { get => _explicitNullValueVscodeExtensionMarketplace; set { _explicitNullValueVscodeExtensionMarketplace = value; AdditionalData?.Remove("vscode_extension_marketplace"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vscode_extension_marketplace"); else _explicitNullProperties?.Remove("vscode_extension_marketplace"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationSettingVscodeExtensionMarketplaceProperty? _explicitNullValueVscodeExtensionMarketplace = default!;
 #nullable restore
 #else
-        public string VscodeExtensionMarketplace { get => _explicitNullValueVscodeExtensionMarketplace; set { _explicitNullValueVscodeExtensionMarketplace = value; AdditionalData?.Remove("vscode_extension_marketplace"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vscode_extension_marketplace"); else _explicitNullProperties?.Remove("vscode_extension_marketplace"); } }
-        private string _explicitNullValueVscodeExtensionMarketplace = default!;
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationSettingVscodeExtensionMarketplaceProperty VscodeExtensionMarketplace { get => _explicitNullValueVscodeExtensionMarketplace; set { _explicitNullValueVscodeExtensionMarketplace = value; AdditionalData?.Remove("vscode_extension_marketplace"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("vscode_extension_marketplace"); else _explicitNullProperties?.Remove("vscode_extension_marketplace"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationSettingVscodeExtensionMarketplaceProperty _explicitNullValueVscodeExtensionMarketplace = default!;
 #endif
         /// <summary>The vscode_extension_marketplace_enabled property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -9415,7 +9444,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(792)
+            return new Dictionary<string, Action<IParseNode>>(795)
             {
                 { "abuse_notification_email", n => { AbuseNotificationEmail = n.GetStringValue(); } },
                 { "active_context_pause_indexing", n => { ActiveContextPauseIndexing = n.GetStringValue(); } },
@@ -9441,14 +9470,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "allow_runner_registration_token", n => { AllowRunnerRegistrationToken = n.GetStringValue(); } },
                 { "allow_s3_compatible_storage_for_offline_transfer", n => { AllowS3CompatibleStorageForOfflineTransfer = n.GetStringValue(); } },
                 { "allow_top_level_group_owners_to_create_service_accounts", n => { AllowTopLevelGroupOwnersToCreateServiceAccounts = n.GetStringValue(); } },
-                { "allowed_integrations", n => { AllowedIntegrations = n.GetStringValue(); } },
+                { "allowed_integrations", n => { AllowedIntegrations = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "anonymous_searches_allowed", n => { AnonymousSearchesAllowed = n.GetStringValue(); } },
                 { "archive_builds_in_human_readable", n => { ArchiveBuildsInHumanReadable = n.GetStringValue(); } },
                 { "asciidoc_max_includes", n => { AsciidocMaxIncludes = n.GetStringValue(); } },
-                { "asset_proxy_allowlist", n => { AssetProxyAllowlist = n.GetStringValue(); } },
+                { "asset_proxy_allowlist", n => { AssetProxyAllowlist = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "asset_proxy_enabled", n => { AssetProxyEnabled = n.GetStringValue(); } },
                 { "asset_proxy_url", n => { AssetProxyUrl = n.GetStringValue(); } },
-                { "asset_proxy_whitelist", n => { AssetProxyWhitelist = n.GetStringValue(); } },
+                { "asset_proxy_whitelist", n => { AssetProxyWhitelist = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "audit_events_api_limit", n => { AuditEventsApiLimit = n.GetStringValue(); } },
                 { "authn_data_retention_cleanup_enabled", n => { AuthnDataRetentionCleanupEnabled = n.GetStringValue(); } },
                 { "authorized_keys_enabled", n => { AuthorizedKeysEnabled = n.GetStringValue(); } },
@@ -9475,7 +9504,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "can_create_group", n => { CanCreateGroup = n.GetStringValue(); } },
                 { "can_create_organization", n => { CanCreateOrganization = n.GetStringValue(); } },
                 { "check_namespace_plan", n => { CheckNamespacePlan = n.GetStringValue(); } },
-                { "ci_cd_catalog_projects_allowlist", n => { CiCdCatalogProjectsAllowlist = n.GetStringValue(); } },
+                { "ci_cd_catalog_projects_allowlist", n => { CiCdCatalogProjectsAllowlist = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "ci_cd_catalog_projects_allowlist_raw", n => { CiCdCatalogProjectsAllowlistRaw = n.GetStringValue(); } },
                 { "ci_delete_pipelines_in_seconds_limit_human_readable", n => { CiDeletePipelinesInSecondsLimitHumanReadable = n.GetStringValue(); } },
                 { "ci_job_live_trace_enabled", n => { CiJobLiveTraceEnabled = n.GetStringValue(); } },
@@ -9488,6 +9517,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "ci_max_includes", n => { CiMaxIncludes = n.GetStringValue(); } },
                 { "ci_max_runner_managers_per_runner", n => { CiMaxRunnerManagersPerRunner = n.GetStringValue(); } },
                 { "ci_max_total_yaml_size_bytes", n => { CiMaxTotalYamlSizeBytes = n.GetStringValue(); } },
+                { "ci_minutes_usage_projects_per_hour_limit", n => { CiMinutesUsageProjectsPerHourLimit = n.GetStringValue(); } },
+                { "ci_minutes_usage_projects_per_minute_limit", n => { CiMinutesUsageProjectsPerMinuteLimit = n.GetStringValue(); } },
                 { "ci_partitions_in_seconds_limit_human_readable", n => { CiPartitionsInSecondsLimitHumanReadable = n.GetStringValue(); } },
                 { "ci_runner_manager_cap_cleanup_backlog_limit", n => { CiRunnerManagerCapCleanupBacklogLimit = n.GetStringValue(); } },
                 { "ci_runner_manager_cap_deletions_per_run", n => { CiRunnerManagerCapDeletionsPerRun = n.GetStringValue(); } },
@@ -9495,7 +9526,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "ci_stale_runner_managers_cleanup_backlog_limit", n => { CiStaleRunnerManagersCleanupBacklogLimit = n.GetStringValue(); } },
                 { "ci_stale_runner_managers_cleanup_deletions_per_run", n => { CiStaleRunnerManagersCleanupDeletionsPerRun = n.GetStringValue(); } },
                 { "ci_telemetry_otel_endpoint", n => { CiTelemetryOtelEndpoint = n.GetStringValue(); } },
-                { "code_dropdown_custom_clients", n => { CodeDropdownCustomClients = n.GetStringValue(); } },
+                { "code_dropdown_custom_clients", n => { CodeDropdownCustomClients = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationSettingCodeDropdownCustomClientsItemProperty>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationSettingCodeDropdownCustomClientsItemProperty.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "code_suggestions_api_rate_limit", n => { CodeSuggestionsApiRateLimit = n.GetStringValue(); } },
                 { "commit_email_hostname", n => { CommitEmailHostname = n.GetStringValue(); } },
                 { "concurrent_bitbucket_import_jobs_limit", n => { ConcurrentBitbucketImportJobsLimit = n.GetStringValue(); } },
@@ -9535,7 +9566,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "default_artifacts_expire_in", n => { DefaultArtifactsExpireIn = n.GetStringValue(); } },
                 { "default_branch_name", n => { DefaultBranchName = n.GetStringValue(); } },
                 { "default_branch_protection", n => { DefaultBranchProtection = n.GetStringValue(); } },
-                { "default_branch_protection_defaults", n => { DefaultBranchProtectionDefaults = n.GetStringValue(); } },
+                { "default_branch_protection_defaults", n => { DefaultBranchProtectionDefaults = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationSettingDefaultBranchProtectionDefaultsProperty>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationSettingDefaultBranchProtectionDefaultsProperty.CreateFromDiscriminatorValue); } },
                 { "default_ci_config_path", n => { DefaultCiConfigPath = n.GetStringValue(); } },
                 { "default_dark_syntax_highlighting_theme", n => { DefaultDarkSyntaxHighlightingTheme = n.GetStringValue(); } },
                 { "default_group_visibility", n => { DefaultGroupVisibility = n.GetStringValue(); } },
@@ -9555,7 +9586,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "deletion_adjourned_period", n => { DeletionAdjournedPeriod = n.GetStringValue(); } },
                 { "deny_all_requests_except_allowed", n => { DenyAllRequestsExceptAllowed = n.GetStringValue(); } },
                 { "dependency_firewall_policies_per_configuration_limit", n => { DependencyFirewallPoliciesPerConfigurationLimit = n.GetStringValue(); } },
-                { "dependency_management_settings", n => { DependencyManagementSettings = n.GetStringValue(); } },
+                { "dependency_management_settings", n => { DependencyManagementSettings = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationSettingDependencyManagementSettingsProperty>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationSettingDependencyManagementSettingsProperty.CreateFromDiscriminatorValue); } },
                 { "dependency_scanning_sbom_scan_api_download_limit", n => { DependencyScanningSbomScanApiDownloadLimit = n.GetStringValue(); } },
                 { "dependency_scanning_sbom_scan_api_upload_limit", n => { DependencyScanningSbomScanApiUploadLimit = n.GetStringValue(); } },
                 { "description_and_note_max_size", n => { DescriptionAndNoteMaxSize = n.GetStringValue(); } },
@@ -9572,13 +9603,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "disable_password_authentication_for_users_with_sso_identities", n => { DisablePasswordAuthenticationForUsersWithSsoIdentities = n.GetStringValue(); } },
                 { "disable_personal_access_tokens", n => { DisablePersonalAccessTokens = n.GetStringValue(); } },
                 { "disabled_direct_code_suggestions", n => { DisabledDirectCodeSuggestions = n.GetStringValue(); } },
-                { "disabled_oauth_sign_in_sources", n => { DisabledOauthSignInSources = n.GetStringValue(); } },
+                { "disabled_oauth_sign_in_sources", n => { DisabledOauthSignInSources = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "discussions_resolve_limit", n => { DiscussionsResolveLimit = n.GetStringValue(); } },
                 { "display_gitlab_credits_user_data", n => { DisplayGitlabCreditsUserData = n.GetStringValue(); } },
                 { "dns_rebinding_protection_enabled", n => { DnsRebindingProtectionEnabled = n.GetStringValue(); } },
-                { "domain_allowlist", n => { DomainAllowlist = n.GetStringValue(); } },
+                { "domain_allowlist", n => { DomainAllowlist = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "domain_allowlist_raw", n => { DomainAllowlistRaw = n.GetStringValue(); } },
-                { "domain_denylist", n => { DomainDenylist = n.GetStringValue(); } },
+                { "domain_denylist", n => { DomainDenylist = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "domain_denylist_enabled", n => { DomainDenylistEnabled = n.GetStringValue(); } },
                 { "domain_denylist_raw", n => { DomainDenylistRaw = n.GetStringValue(); } },
                 { "downstream_pipeline_trigger_limit_per_project_user_sha", n => { DownstreamPipelineTriggerLimitPerProjectUserSha = n.GetStringValue(); } },
@@ -9605,7 +9636,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "duo_features_enabled", n => { DuoFeaturesEnabled = n.GetStringValue(); } },
                 { "duo_foundational_flows_availability", n => { DuoFoundationalFlowsAvailability = n.GetStringValue(); } },
                 { "duo_foundational_flows_enabled", n => { DuoFoundationalFlowsEnabled = n.GetStringValue(); } },
-                { "duo_namespace_access_rules", n => { DuoNamespaceAccessRules = n.GetStringValue(); } },
+                { "duo_namespace_access_rules", n => { DuoNamespaceAccessRules = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationSettingDuoNamespaceAccessRulesItemProperty>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationSettingDuoNamespaceAccessRulesItemProperty.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "duo_remote_flows_availability", n => { DuoRemoteFlowsAvailability = n.GetStringValue(); } },
                 { "duo_remote_flows_enabled", n => { DuoRemoteFlowsEnabled = n.GetStringValue(); } },
                 { "duo_scheduled_automations_availability", n => { DuoScheduledAutomationsAvailability = n.GetStringValue(); } },
@@ -9646,16 +9677,16 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "elasticsearch_max_bulk_concurrency", n => { ElasticsearchMaxBulkConcurrency = n.GetStringValue(); } },
                 { "elasticsearch_max_bulk_size_mb", n => { ElasticsearchMaxBulkSizeMb = n.GetStringValue(); } },
                 { "elasticsearch_max_code_indexing_concurrency", n => { ElasticsearchMaxCodeIndexingConcurrency = n.GetStringValue(); } },
-                { "elasticsearch_namespace_ids", n => { ElasticsearchNamespaceIds = n.GetStringValue(); } },
+                { "elasticsearch_namespace_ids", n => { ElasticsearchNamespaceIds = n.GetCollectionOfPrimitiveValues<int?>()?.AsList(); } },
                 { "elasticsearch_password", n => { ElasticsearchPassword = n.GetStringValue(); } },
                 { "elasticsearch_pause_indexing", n => { ElasticsearchPauseIndexing = n.GetStringValue(); } },
-                { "elasticsearch_project_ids", n => { ElasticsearchProjectIds = n.GetStringValue(); } },
+                { "elasticsearch_project_ids", n => { ElasticsearchProjectIds = n.GetCollectionOfPrimitiveValues<int?>()?.AsList(); } },
                 { "elasticsearch_replicas", n => { ElasticsearchReplicas = n.GetStringValue(); } },
                 { "elasticsearch_requeue_workers", n => { ElasticsearchRequeueWorkers = n.GetStringValue(); } },
                 { "elasticsearch_retry_on_failure", n => { ElasticsearchRetryOnFailure = n.GetStringValue(); } },
                 { "elasticsearch_search", n => { ElasticsearchSearch = n.GetStringValue(); } },
                 { "elasticsearch_shards", n => { ElasticsearchShards = n.GetStringValue(); } },
-                { "elasticsearch_url", n => { ElasticsearchUrl = n.GetStringValue(); } },
+                { "elasticsearch_url", n => { ElasticsearchUrl = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "elasticsearch_username", n => { ElasticsearchUsername = n.GetStringValue(); } },
                 { "elasticsearch_worker_number_of_shards", n => { ElasticsearchWorkerNumberOfShards = n.GetStringValue(); } },
                 { "email_additional_text", n => { EmailAdditionalText = n.GetStringValue(); } },
@@ -9697,13 +9728,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "floc_enabled", n => { FlocEnabled = n.GetStringValue(); } },
                 { "force_pages_access_control", n => { ForcePagesAccessControl = n.GetStringValue(); } },
                 { "foundational_agents_default_enabled", n => { FoundationalAgentsDefaultEnabled = n.GetStringValue(); } },
-                { "foundational_agents_statuses", n => { FoundationalAgentsStatuses = n.GetStringValue(); } },
+                { "foundational_agents_statuses", n => { FoundationalAgentsStatuses = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationSettingFoundationalAgentsStatusesItemProperty>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationSettingFoundationalAgentsStatusesItemProperty.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "geo_node_allowed_ips", n => { GeoNodeAllowedIps = n.GetStringValue(); } },
                 { "geo_status_timeout", n => { GeoStatusTimeout = n.GetStringValue(); } },
                 { "git_push_per_project_limit", n => { GitPushPerProjectLimit = n.GetStringValue(); } },
                 { "git_push_pipeline_limit", n => { GitPushPipelineLimit = n.GetStringValue(); } },
-                { "git_rate_limit_users_alertlist", n => { GitRateLimitUsersAlertlist = n.GetStringValue(); } },
-                { "git_rate_limit_users_allowlist", n => { GitRateLimitUsersAllowlist = n.GetStringValue(); } },
+                { "git_rate_limit_users_alertlist", n => { GitRateLimitUsersAlertlist = n.GetCollectionOfPrimitiveValues<int?>()?.AsList(); } },
+                { "git_rate_limit_users_allowlist", n => { GitRateLimitUsersAllowlist = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "git_two_factor_session_expiry", n => { GitTwoFactorSessionExpiry = n.GetStringValue(); } },
                 { "gitaly_timeout_default", n => { GitalyTimeoutDefault = n.GetStringValue(); } },
                 { "gitaly_timeout_fast", n => { GitalyTimeoutFast = n.GetStringValue(); } },
@@ -9734,6 +9765,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "grafana_enabled", n => { GrafanaEnabled = n.GetStringValue(); } },
                 { "grafana_url", n => { GrafanaUrl = n.GetStringValue(); } },
                 { "granular_tokens_enforced_after", n => { GranularTokensEnforcedAfter = n.GetStringValue(); } },
+                { "graphql_participant_fields_request_limit", n => { GraphqlParticipantFieldsRequestLimit = n.GetStringValue(); } },
                 { "gravatar_enabled", n => { GravatarEnabled = n.GetStringValue(); } },
                 { "group_api_limit", n => { GroupApiLimit = n.GetStringValue(); } },
                 { "group_archive_unarchive_api_limit", n => { GroupArchiveUnarchiveApiLimit = n.GetStringValue(); } },
@@ -9761,7 +9793,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "help_page_text", n => { HelpPageText = n.GetStringValue(); } },
                 { "hide_third_party_offers", n => { HideThirdPartyOffers = n.GetStringValue(); } },
                 { "home_page_url", n => { HomePageUrl = n.GetStringValue(); } },
-                { "housekeeping_bitmaps_enabled", n => { HousekeepingBitmapsEnabled = n.GetStringValue(); } },
+                { "housekeeping_bitmaps_enabled", n => { HousekeepingBitmapsEnabled = n.GetBoolValue(); } },
                 { "housekeeping_enabled", n => { HousekeepingEnabled = n.GetStringValue(); } },
                 { "housekeeping_full_repack_period", n => { HousekeepingFullRepackPeriod = n.GetStringValue(); } },
                 { "housekeeping_gc_period", n => { HousekeepingGcPeriod = n.GetStringValue(); } },
@@ -9769,11 +9801,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "housekeeping_optimize_repository_period", n => { HousekeepingOptimizeRepositoryPeriod = n.GetStringValue(); } },
                 { "html_emails_enabled", n => { HtmlEmailsEnabled = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "iframe_rendering_allowlist", n => { IframeRenderingAllowlist = n.GetStringValue(); } },
+                { "iframe_rendering_allowlist", n => { IframeRenderingAllowlist = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "iframe_rendering_allowlist_raw", n => { IframeRenderingAllowlistRaw = n.GetStringValue(); } },
                 { "iframe_rendering_enabled", n => { IframeRenderingEnabled = n.GetStringValue(); } },
                 { "import_jobs_concurrency_limit", n => { ImportJobsConcurrencyLimit = n.GetStringValue(); } },
-                { "import_sources", n => { ImportSources = n.GetStringValue(); } },
+                { "import_sources", n => { ImportSources = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "inactive_projects_delete_after_months", n => { InactiveProjectsDeleteAfterMonths = n.GetStringValue(); } },
                 { "inactive_projects_min_size_mb", n => { InactiveProjectsMinSizeMb = n.GetStringValue(); } },
                 { "inactive_projects_send_warning_email_after_months", n => { InactiveProjectsSendWarningEmailAfterMonths = n.GetStringValue(); } },
@@ -9790,7 +9822,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "issues_create_limit", n => { IssuesCreateLimit = n.GetStringValue(); } },
                 { "jira_connect_additional_audience_url", n => { JiraConnectAdditionalAudienceUrl = n.GetStringValue(); } },
                 { "jira_connect_application_key", n => { JiraConnectApplicationKey = n.GetStringValue(); } },
-                { "jira_connect_domain_allowlist", n => { JiraConnectDomainAllowlist = n.GetStringValue(); } },
+                { "jira_connect_domain_allowlist", n => { JiraConnectDomainAllowlist = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "jira_connect_domain_allowlist_raw", n => { JiraConnectDomainAllowlistRaw = n.GetStringValue(); } },
                 { "jira_connect_proxy_url", n => { JiraConnectProxyUrl = n.GetStringValue(); } },
                 { "jira_connect_public_key_storage_enabled", n => { JiraConnectPublicKeyStorageEnabled = n.GetStringValue(); } },
@@ -9802,7 +9834,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "keep_latest_artifact", n => { KeepLatestArtifact = n.GetStringValue(); } },
                 { "kroki_diagram_proxy_enabled", n => { KrokiDiagramProxyEnabled = n.GetStringValue(); } },
                 { "kroki_enabled", n => { KrokiEnabled = n.GetStringValue(); } },
-                { "kroki_formats", n => { KrokiFormats = n.GetStringValue(); } },
+                { "kroki_formats", n => { KrokiFormats = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationSettingKrokiFormatsProperty>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationSettingKrokiFormatsProperty.CreateFromDiscriminatorValue); } },
                 { "kroki_url", n => { KrokiUrl = n.GetStringValue(); } },
                 { "label_delete_limit", n => { LabelDeleteLimit = n.GetStringValue(); } },
                 { "local_markdown_version", n => { LocalMarkdownVersion = n.GetStringValue(); } },
@@ -9894,8 +9926,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "orbit_rate_limit_allowlist_raw", n => { OrbitRateLimitAllowlistRaw = n.GetStringValue(); } },
                 { "organization_cluster_agent_authorization_enabled", n => { OrganizationClusterAgentAuthorizationEnabled = n.GetStringValue(); } },
                 { "outbound_local_requests_allowlist_raw", n => { OutboundLocalRequestsAllowlistRaw = n.GetStringValue(); } },
-                { "outbound_local_requests_whitelist", n => { OutboundLocalRequestsWhitelist = n.GetStringValue(); } },
-                { "package_metadata_purl_types", n => { PackageMetadataPurlTypes = n.GetStringValue(); } },
+                { "outbound_local_requests_whitelist", n => { OutboundLocalRequestsWhitelist = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "package_metadata_purl_types", n => { PackageMetadataPurlTypes = n.GetCollectionOfPrimitiveValues<int?>()?.AsList(); } },
                 { "package_registry_allow_anyone_to_pull_option", n => { PackageRegistryAllowAnyoneToPullOption = n.GetStringValue(); } },
                 { "package_registry_cleanup_policies_worker_capacity", n => { PackageRegistryCleanupPoliciesWorkerCapacity = n.GetStringValue(); } },
                 { "pages_deployments_api_limit", n => { PagesDeploymentsApiLimit = n.GetStringValue(); } },
@@ -9986,7 +10018,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "remember_me_enabled", n => { RememberMeEnabled = n.GetStringValue(); } },
                 { "repository_checks_enabled", n => { RepositoryChecksEnabled = n.GetStringValue(); } },
                 { "repository_size_limit", n => { RepositorySizeLimit = n.GetStringValue(); } },
-                { "repository_storages_weighted", n => { RepositoryStoragesWeighted = n.GetStringValue(); } },
+                { "repository_storages_weighted", n => { RepositoryStoragesWeighted = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationSettingRepositoryStoragesWeightedProperty>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationSettingRepositoryStoragesWeightedProperty.CreateFromDiscriminatorValue); } },
                 { "require_admin_approval_after_user_signup", n => { RequireAdminApprovalAfterUserSignup = n.GetStringValue(); } },
                 { "require_admin_two_factor_authentication", n => { RequireAdminTwoFactorAuthentication = n.GetStringValue(); } },
                 { "require_email_verification_on_account_locked", n => { RequireEmailVerificationOnAccountLocked = n.GetStringValue(); } },
@@ -9994,8 +10026,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "require_sha_for_merge", n => { RequireShaForMerge = n.GetStringValue(); } },
                 { "require_two_factor_authentication", n => { RequireTwoFactorAuthentication = n.GetStringValue(); } },
                 { "resource_access_token_notify_inherited", n => { ResourceAccessTokenNotifyInherited = n.GetStringValue(); } },
-                { "resource_usage_limits", n => { ResourceUsageLimits = n.GetStringValue(); } },
-                { "restricted_visibility_levels", n => { RestrictedVisibilityLevels = n.GetStringValue(); } },
+                { "resource_usage_limits", n => { ResourceUsageLimits = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationSettingResourceUsageLimitsProperty>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationSettingResourceUsageLimitsProperty.CreateFromDiscriminatorValue); } },
+                { "restricted_visibility_levels", n => { RestrictedVisibilityLevels = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "root_moved_permanently_redirection", n => { RootMovedPermanentlyRedirection = n.GetStringValue(); } },
                 { "rsa_key_restriction", n => { RsaKeyRestriction = n.GetStringValue(); } },
                 { "rubygems_package_requests_forwarding", n => { RubygemsPackageRequestsForwarding = n.GetStringValue(); } },
@@ -10046,7 +10078,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "sidekiq_job_limiter_limit_bytes", n => { SidekiqJobLimiterLimitBytes = n.GetStringValue(); } },
                 { "sidekiq_job_limiter_mode", n => { SidekiqJobLimiterMode = n.GetStringValue(); } },
                 { "sidekiq_timezone_override", n => { SidekiqTimezoneOverride = n.GetStringValue(); } },
-                { "sign_in_restrictions", n => { SignInRestrictions = n.GetStringValue(); } },
+                { "sign_in_restrictions", n => { SignInRestrictions = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationSettingSignInRestrictionsProperty>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationSettingSignInRestrictionsProperty.CreateFromDiscriminatorValue); } },
                 { "signin_enabled", n => { SigninEnabled = n.GetStringValue(); } },
                 { "signup_enabled", n => { SignupEnabled = n.GetStringValue(); } },
                 { "silent_admin_exports_enabled", n => { SilentAdminExportsEnabled = n.GetStringValue(); } },
@@ -10173,10 +10205,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "users_get_by_id_limit", n => { UsersGetByIdLimit = n.GetStringValue(); } },
                 { "users_get_by_id_limit_allowlist_raw", n => { UsersGetByIdLimitAllowlistRaw = n.GetStringValue(); } },
                 { "vac_project_ids_raw", n => { VacProjectIdsRaw = n.GetStringValue(); } },
-                { "valid_runner_registrars", n => { ValidRunnerRegistrars = n.GetStringValue(); } },
+                { "valid_runner_registrars", n => { ValidRunnerRegistrars = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "version_check_enabled", n => { VersionCheckEnabled = n.GetStringValue(); } },
                 { "virtual_registries_endpoints_api_limit", n => { VirtualRegistriesEndpointsApiLimit = n.GetStringValue(); } },
-                { "vscode_extension_marketplace", n => { VscodeExtensionMarketplace = n.GetStringValue(); } },
+                { "vscode_extension_marketplace", n => { VscodeExtensionMarketplace = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationSettingVscodeExtensionMarketplaceProperty>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationSettingVscodeExtensionMarketplaceProperty.CreateFromDiscriminatorValue); } },
                 { "vscode_extension_marketplace_enabled", n => { VscodeExtensionMarketplaceEnabled = n.GetStringValue(); } },
                 { "vscode_extension_marketplace_extension_host_domain", n => { VscodeExtensionMarketplaceExtensionHostDomain = n.GetStringValue(); } },
                 { "vscode_extension_marketplace_single_origin_fallback_enabled", n => { VscodeExtensionMarketplaceSingleOriginFallbackEnabled = n.GetStringValue(); } },
@@ -10233,7 +10265,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("allow_bypass_placeholder_confirmation", AllowBypassPlaceholderConfirmation);
             writer.WriteStringValue("allow_contribution_mapping_to_admins", AllowContributionMappingToAdmins);
             writer.WriteStringValue("allow_deploy_tokens_and_keys_with_external_authn", AllowDeployTokensAndKeysWithExternalAuthn);
-            writer.WriteStringValue("allowed_integrations", AllowedIntegrations);
+            writer.WriteCollectionOfPrimitiveValues<string>("allowed_integrations", AllowedIntegrations);
             writer.WriteStringValue("allow_group_owners_to_manage_ldap", AllowGroupOwnersToManageLdap);
             writer.WriteStringValue("allow_local_requests_from_hooks_and_services", AllowLocalRequestsFromHooksAndServices);
             writer.WriteStringValue("allow_local_requests_from_system_hooks", AllowLocalRequestsFromSystemHooks);
@@ -10246,10 +10278,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("anonymous_searches_allowed", AnonymousSearchesAllowed);
             writer.WriteStringValue("archive_builds_in_human_readable", ArchiveBuildsInHumanReadable);
             writer.WriteStringValue("asciidoc_max_includes", AsciidocMaxIncludes);
-            writer.WriteStringValue("asset_proxy_allowlist", AssetProxyAllowlist);
+            writer.WriteCollectionOfPrimitiveValues<string>("asset_proxy_allowlist", AssetProxyAllowlist);
             writer.WriteStringValue("asset_proxy_enabled", AssetProxyEnabled);
             writer.WriteStringValue("asset_proxy_url", AssetProxyUrl);
-            writer.WriteStringValue("asset_proxy_whitelist", AssetProxyWhitelist);
+            writer.WriteCollectionOfPrimitiveValues<string>("asset_proxy_whitelist", AssetProxyWhitelist);
             writer.WriteStringValue("audit_events_api_limit", AuditEventsApiLimit);
             writer.WriteStringValue("authn_data_retention_cleanup_enabled", AuthnDataRetentionCleanupEnabled);
             writer.WriteStringValue("authorized_keys_enabled", AuthorizedKeysEnabled);
@@ -10276,7 +10308,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("can_create_group", CanCreateGroup);
             writer.WriteStringValue("can_create_organization", CanCreateOrganization);
             writer.WriteStringValue("check_namespace_plan", CheckNamespacePlan);
-            writer.WriteStringValue("ci_cd_catalog_projects_allowlist", CiCdCatalogProjectsAllowlist);
+            writer.WriteCollectionOfPrimitiveValues<string>("ci_cd_catalog_projects_allowlist", CiCdCatalogProjectsAllowlist);
             writer.WriteStringValue("ci_cd_catalog_projects_allowlist_raw", CiCdCatalogProjectsAllowlistRaw);
             writer.WriteStringValue("ci_delete_pipelines_in_seconds_limit_human_readable", CiDeletePipelinesInSecondsLimitHumanReadable);
             writer.WriteStringValue("ci_job_live_trace_enabled", CiJobLiveTraceEnabled);
@@ -10289,6 +10321,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("ci_max_includes", CiMaxIncludes);
             writer.WriteStringValue("ci_max_runner_managers_per_runner", CiMaxRunnerManagersPerRunner);
             writer.WriteStringValue("ci_max_total_yaml_size_bytes", CiMaxTotalYamlSizeBytes);
+            writer.WriteStringValue("ci_minutes_usage_projects_per_hour_limit", CiMinutesUsageProjectsPerHourLimit);
+            writer.WriteStringValue("ci_minutes_usage_projects_per_minute_limit", CiMinutesUsageProjectsPerMinuteLimit);
             writer.WriteStringValue("ci_partitions_in_seconds_limit_human_readable", CiPartitionsInSecondsLimitHumanReadable);
             writer.WriteStringValue("ci_runner_manager_cap_cleanup_backlog_limit", CiRunnerManagerCapCleanupBacklogLimit);
             writer.WriteStringValue("ci_runner_manager_cap_deletions_per_run", CiRunnerManagerCapDeletionsPerRun);
@@ -10296,7 +10330,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("ci_stale_runner_managers_cleanup_backlog_limit", CiStaleRunnerManagersCleanupBacklogLimit);
             writer.WriteStringValue("ci_stale_runner_managers_cleanup_deletions_per_run", CiStaleRunnerManagersCleanupDeletionsPerRun);
             writer.WriteStringValue("ci_telemetry_otel_endpoint", CiTelemetryOtelEndpoint);
-            writer.WriteStringValue("code_dropdown_custom_clients", CodeDropdownCustomClients);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationSettingCodeDropdownCustomClientsItemProperty>("code_dropdown_custom_clients", CodeDropdownCustomClients);
             writer.WriteStringValue("code_suggestions_api_rate_limit", CodeSuggestionsApiRateLimit);
             writer.WriteStringValue("commit_email_hostname", CommitEmailHostname);
             writer.WriteStringValue("concurrent_bitbucket_import_jobs_limit", ConcurrentBitbucketImportJobsLimit);
@@ -10336,7 +10370,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("default_artifacts_expire_in", DefaultArtifactsExpireIn);
             writer.WriteStringValue("default_branch_name", DefaultBranchName);
             writer.WriteStringValue("default_branch_protection", DefaultBranchProtection);
-            writer.WriteStringValue("default_branch_protection_defaults", DefaultBranchProtectionDefaults);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationSettingDefaultBranchProtectionDefaultsProperty>("default_branch_protection_defaults", DefaultBranchProtectionDefaults);
             writer.WriteStringValue("default_ci_config_path", DefaultCiConfigPath);
             writer.WriteStringValue("default_dark_syntax_highlighting_theme", DefaultDarkSyntaxHighlightingTheme);
             writer.WriteStringValue("default_group_visibility", DefaultGroupVisibility);
@@ -10356,7 +10390,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("deletion_adjourned_period", DeletionAdjournedPeriod);
             writer.WriteStringValue("deny_all_requests_except_allowed", DenyAllRequestsExceptAllowed);
             writer.WriteStringValue("dependency_firewall_policies_per_configuration_limit", DependencyFirewallPoliciesPerConfigurationLimit);
-            writer.WriteStringValue("dependency_management_settings", DependencyManagementSettings);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationSettingDependencyManagementSettingsProperty>("dependency_management_settings", DependencyManagementSettings);
             writer.WriteStringValue("dependency_scanning_sbom_scan_api_download_limit", DependencyScanningSbomScanApiDownloadLimit);
             writer.WriteStringValue("dependency_scanning_sbom_scan_api_upload_limit", DependencyScanningSbomScanApiUploadLimit);
             writer.WriteStringValue("description_and_note_max_size", DescriptionAndNoteMaxSize);
@@ -10369,7 +10403,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("diff_max_versions", DiffMaxVersions);
             writer.WriteStringValue("disable_admin_oauth_scopes", DisableAdminOauthScopes);
             writer.WriteStringValue("disabled_direct_code_suggestions", DisabledDirectCodeSuggestions);
-            writer.WriteStringValue("disabled_oauth_sign_in_sources", DisabledOauthSignInSources);
+            writer.WriteCollectionOfPrimitiveValues<string>("disabled_oauth_sign_in_sources", DisabledOauthSignInSources);
             writer.WriteStringValue("disable_feed_token", DisableFeedToken);
             writer.WriteStringValue("disable_overriding_approvers_per_merge_request", DisableOverridingApproversPerMergeRequest);
             writer.WriteStringValue("disable_password_authentication_for_users_with_sso_identities", DisablePasswordAuthenticationForUsersWithSsoIdentities);
@@ -10377,9 +10411,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("discussions_resolve_limit", DiscussionsResolveLimit);
             writer.WriteStringValue("display_gitlab_credits_user_data", DisplayGitlabCreditsUserData);
             writer.WriteStringValue("dns_rebinding_protection_enabled", DnsRebindingProtectionEnabled);
-            writer.WriteStringValue("domain_allowlist", DomainAllowlist);
+            writer.WriteCollectionOfPrimitiveValues<string>("domain_allowlist", DomainAllowlist);
             writer.WriteStringValue("domain_allowlist_raw", DomainAllowlistRaw);
-            writer.WriteStringValue("domain_denylist", DomainDenylist);
+            writer.WriteCollectionOfPrimitiveValues<string>("domain_denylist", DomainDenylist);
             writer.WriteStringValue("domain_denylist_enabled", DomainDenylistEnabled);
             writer.WriteStringValue("domain_denylist_raw", DomainDenylistRaw);
             writer.WriteStringValue("downstream_pipeline_trigger_limit_per_project_user_sha", DownstreamPipelineTriggerLimitPerProjectUserSha);
@@ -10406,7 +10440,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("duo_features_enabled", DuoFeaturesEnabled);
             writer.WriteStringValue("duo_foundational_flows_availability", DuoFoundationalFlowsAvailability);
             writer.WriteStringValue("duo_foundational_flows_enabled", DuoFoundationalFlowsEnabled);
-            writer.WriteStringValue("duo_namespace_access_rules", DuoNamespaceAccessRules);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationSettingDuoNamespaceAccessRulesItemProperty>("duo_namespace_access_rules", DuoNamespaceAccessRules);
             writer.WriteStringValue("duo_remote_flows_availability", DuoRemoteFlowsAvailability);
             writer.WriteStringValue("duo_remote_flows_enabled", DuoRemoteFlowsEnabled);
             writer.WriteStringValue("duo_scheduled_automations_availability", DuoScheduledAutomationsAvailability);
@@ -10447,16 +10481,16 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("elasticsearch_max_bulk_concurrency", ElasticsearchMaxBulkConcurrency);
             writer.WriteStringValue("elasticsearch_max_bulk_size_mb", ElasticsearchMaxBulkSizeMb);
             writer.WriteStringValue("elasticsearch_max_code_indexing_concurrency", ElasticsearchMaxCodeIndexingConcurrency);
-            writer.WriteStringValue("elasticsearch_namespace_ids", ElasticsearchNamespaceIds);
+            writer.WriteCollectionOfPrimitiveValues<int?>("elasticsearch_namespace_ids", ElasticsearchNamespaceIds);
             writer.WriteStringValue("elasticsearch_password", ElasticsearchPassword);
             writer.WriteStringValue("elasticsearch_pause_indexing", ElasticsearchPauseIndexing);
-            writer.WriteStringValue("elasticsearch_project_ids", ElasticsearchProjectIds);
+            writer.WriteCollectionOfPrimitiveValues<int?>("elasticsearch_project_ids", ElasticsearchProjectIds);
             writer.WriteStringValue("elasticsearch_replicas", ElasticsearchReplicas);
             writer.WriteStringValue("elasticsearch_requeue_workers", ElasticsearchRequeueWorkers);
             writer.WriteStringValue("elasticsearch_retry_on_failure", ElasticsearchRetryOnFailure);
             writer.WriteStringValue("elasticsearch_search", ElasticsearchSearch);
             writer.WriteStringValue("elasticsearch_shards", ElasticsearchShards);
-            writer.WriteStringValue("elasticsearch_url", ElasticsearchUrl);
+            writer.WriteCollectionOfPrimitiveValues<string>("elasticsearch_url", ElasticsearchUrl);
             writer.WriteStringValue("elasticsearch_username", ElasticsearchUsername);
             writer.WriteStringValue("elasticsearch_worker_number_of_shards", ElasticsearchWorkerNumberOfShards);
             writer.WriteStringValue("email_additional_text", EmailAdditionalText);
@@ -10498,7 +10532,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("floc_enabled", FlocEnabled);
             writer.WriteStringValue("force_pages_access_control", ForcePagesAccessControl);
             writer.WriteStringValue("foundational_agents_default_enabled", FoundationalAgentsDefaultEnabled);
-            writer.WriteStringValue("foundational_agents_statuses", FoundationalAgentsStatuses);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationSettingFoundationalAgentsStatusesItemProperty>("foundational_agents_statuses", FoundationalAgentsStatuses);
             writer.WriteStringValue("geo_node_allowed_ips", GeoNodeAllowedIps);
             writer.WriteStringValue("geo_status_timeout", GeoStatusTimeout);
             writer.WriteStringValue("gitaly_timeout_default", GitalyTimeoutDefault);
@@ -10515,8 +10549,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("gitpod_url", GitpodUrl);
             writer.WriteStringValue("git_push_per_project_limit", GitPushPerProjectLimit);
             writer.WriteStringValue("git_push_pipeline_limit", GitPushPipelineLimit);
-            writer.WriteStringValue("git_rate_limit_users_alertlist", GitRateLimitUsersAlertlist);
-            writer.WriteStringValue("git_rate_limit_users_allowlist", GitRateLimitUsersAllowlist);
+            writer.WriteCollectionOfPrimitiveValues<int?>("git_rate_limit_users_alertlist", GitRateLimitUsersAlertlist);
+            writer.WriteCollectionOfPrimitiveValues<string>("git_rate_limit_users_allowlist", GitRateLimitUsersAllowlist);
             writer.WriteStringValue("git_two_factor_session_expiry", GitTwoFactorSessionExpiry);
             writer.WriteStringValue("global_search_block_anonymous_searches_enabled", GlobalSearchBlockAnonymousSearchesEnabled);
             writer.WriteStringValue("global_search_code_enabled", GlobalSearchCodeEnabled);
@@ -10535,6 +10569,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("grafana_enabled", GrafanaEnabled);
             writer.WriteStringValue("grafana_url", GrafanaUrl);
             writer.WriteStringValue("granular_tokens_enforced_after", GranularTokensEnforcedAfter);
+            writer.WriteStringValue("graphql_participant_fields_request_limit", GraphqlParticipantFieldsRequestLimit);
             writer.WriteStringValue("gravatar_enabled", GravatarEnabled);
             writer.WriteStringValue("group_api_limit", GroupApiLimit);
             writer.WriteStringValue("group_archive_unarchive_api_limit", GroupArchiveUnarchiveApiLimit);
@@ -10562,7 +10597,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("help_page_text", HelpPageText);
             writer.WriteStringValue("hide_third_party_offers", HideThirdPartyOffers);
             writer.WriteStringValue("home_page_url", HomePageUrl);
-            writer.WriteStringValue("housekeeping_bitmaps_enabled", HousekeepingBitmapsEnabled);
+            writer.WriteBoolValue("housekeeping_bitmaps_enabled", HousekeepingBitmapsEnabled);
             writer.WriteStringValue("housekeeping_enabled", HousekeepingEnabled);
             writer.WriteStringValue("housekeeping_full_repack_period", HousekeepingFullRepackPeriod);
             writer.WriteStringValue("housekeeping_gc_period", HousekeepingGcPeriod);
@@ -10570,11 +10605,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("housekeeping_optimize_repository_period", HousekeepingOptimizeRepositoryPeriod);
             writer.WriteStringValue("html_emails_enabled", HtmlEmailsEnabled);
             writer.WriteStringValue("id", Id);
-            writer.WriteStringValue("iframe_rendering_allowlist", IframeRenderingAllowlist);
+            writer.WriteCollectionOfPrimitiveValues<string>("iframe_rendering_allowlist", IframeRenderingAllowlist);
             writer.WriteStringValue("iframe_rendering_allowlist_raw", IframeRenderingAllowlistRaw);
             writer.WriteStringValue("iframe_rendering_enabled", IframeRenderingEnabled);
             writer.WriteStringValue("import_jobs_concurrency_limit", ImportJobsConcurrencyLimit);
-            writer.WriteStringValue("import_sources", ImportSources);
+            writer.WriteCollectionOfPrimitiveValues<string>("import_sources", ImportSources);
             writer.WriteStringValue("inactive_projects_delete_after_months", InactiveProjectsDeleteAfterMonths);
             writer.WriteStringValue("inactive_projects_min_size_mb", InactiveProjectsMinSizeMb);
             writer.WriteStringValue("inactive_projects_send_warning_email_after_months", InactiveProjectsSendWarningEmailAfterMonths);
@@ -10591,7 +10626,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("issues_create_limit", IssuesCreateLimit);
             writer.WriteStringValue("jira_connect_additional_audience_url", JiraConnectAdditionalAudienceUrl);
             writer.WriteStringValue("jira_connect_application_key", JiraConnectApplicationKey);
-            writer.WriteStringValue("jira_connect_domain_allowlist", JiraConnectDomainAllowlist);
+            writer.WriteCollectionOfPrimitiveValues<string>("jira_connect_domain_allowlist", JiraConnectDomainAllowlist);
             writer.WriteStringValue("jira_connect_domain_allowlist_raw", JiraConnectDomainAllowlistRaw);
             writer.WriteStringValue("jira_connect_proxy_url", JiraConnectProxyUrl);
             writer.WriteStringValue("jira_connect_public_key_storage_enabled", JiraConnectPublicKeyStorageEnabled);
@@ -10603,7 +10638,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("keep_latest_artifact", KeepLatestArtifact);
             writer.WriteStringValue("kroki_diagram_proxy_enabled", KrokiDiagramProxyEnabled);
             writer.WriteStringValue("kroki_enabled", KrokiEnabled);
-            writer.WriteStringValue("kroki_formats", KrokiFormats);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationSettingKrokiFormatsProperty>("kroki_formats", KrokiFormats);
             writer.WriteStringValue("kroki_url", KrokiUrl);
             writer.WriteStringValue("label_delete_limit", LabelDeleteLimit);
             writer.WriteStringValue("local_markdown_version", LocalMarkdownVersion);
@@ -10695,8 +10730,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("orbit_rate_limit_allowlist_raw", OrbitRateLimitAllowlistRaw);
             writer.WriteStringValue("organization_cluster_agent_authorization_enabled", OrganizationClusterAgentAuthorizationEnabled);
             writer.WriteStringValue("outbound_local_requests_allowlist_raw", OutboundLocalRequestsAllowlistRaw);
-            writer.WriteStringValue("outbound_local_requests_whitelist", OutboundLocalRequestsWhitelist);
-            writer.WriteStringValue("package_metadata_purl_types", PackageMetadataPurlTypes);
+            writer.WriteCollectionOfPrimitiveValues<string>("outbound_local_requests_whitelist", OutboundLocalRequestsWhitelist);
+            writer.WriteCollectionOfPrimitiveValues<int?>("package_metadata_purl_types", PackageMetadataPurlTypes);
             writer.WriteStringValue("package_registry_allow_anyone_to_pull_option", PackageRegistryAllowAnyoneToPullOption);
             writer.WriteStringValue("package_registry_cleanup_policies_worker_capacity", PackageRegistryCleanupPoliciesWorkerCapacity);
             writer.WriteStringValue("pages_deployments_api_limit", PagesDeploymentsApiLimit);
@@ -10787,7 +10822,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("remember_me_enabled", RememberMeEnabled);
             writer.WriteStringValue("repository_checks_enabled", RepositoryChecksEnabled);
             writer.WriteStringValue("repository_size_limit", RepositorySizeLimit);
-            writer.WriteStringValue("repository_storages_weighted", RepositoryStoragesWeighted);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationSettingRepositoryStoragesWeightedProperty>("repository_storages_weighted", RepositoryStoragesWeighted);
             writer.WriteStringValue("require_admin_approval_after_user_signup", RequireAdminApprovalAfterUserSignup);
             writer.WriteStringValue("require_admin_two_factor_authentication", RequireAdminTwoFactorAuthentication);
             writer.WriteStringValue("require_email_verification_on_account_locked", RequireEmailVerificationOnAccountLocked);
@@ -10795,8 +10830,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("require_sha_for_merge", RequireShaForMerge);
             writer.WriteStringValue("require_two_factor_authentication", RequireTwoFactorAuthentication);
             writer.WriteStringValue("resource_access_token_notify_inherited", ResourceAccessTokenNotifyInherited);
-            writer.WriteStringValue("resource_usage_limits", ResourceUsageLimits);
-            writer.WriteStringValue("restricted_visibility_levels", RestrictedVisibilityLevels);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationSettingResourceUsageLimitsProperty>("resource_usage_limits", ResourceUsageLimits);
+            writer.WriteCollectionOfPrimitiveValues<string>("restricted_visibility_levels", RestrictedVisibilityLevels);
             writer.WriteStringValue("root_moved_permanently_redirection", RootMovedPermanentlyRedirection);
             writer.WriteStringValue("rsa_key_restriction", RsaKeyRestriction);
             writer.WriteStringValue("rubygems_package_requests_forwarding", RubygemsPackageRequestsForwarding);
@@ -10848,7 +10883,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("sidekiq_job_limiter_mode", SidekiqJobLimiterMode);
             writer.WriteStringValue("sidekiq_timezone_override", SidekiqTimezoneOverride);
             writer.WriteStringValue("signin_enabled", SigninEnabled);
-            writer.WriteStringValue("sign_in_restrictions", SignInRestrictions);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationSettingSignInRestrictionsProperty>("sign_in_restrictions", SignInRestrictions);
             writer.WriteStringValue("signup_enabled", SignupEnabled);
             writer.WriteStringValue("silent_admin_exports_enabled", SilentAdminExportsEnabled);
             writer.WriteStringValue("silent_mode_enabled", SilentModeEnabled);
@@ -10974,10 +11009,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("user_show_add_ssh_key_message", UserShowAddSshKeyMessage);
             writer.WriteStringValue("user_starred_projects_api_limit", UserStarredProjectsApiLimit);
             writer.WriteStringValue("vac_project_ids_raw", VacProjectIdsRaw);
-            writer.WriteStringValue("valid_runner_registrars", ValidRunnerRegistrars);
+            writer.WriteCollectionOfPrimitiveValues<string>("valid_runner_registrars", ValidRunnerRegistrars);
             writer.WriteStringValue("version_check_enabled", VersionCheckEnabled);
             writer.WriteStringValue("virtual_registries_endpoints_api_limit", VirtualRegistriesEndpointsApiLimit);
-            writer.WriteStringValue("vscode_extension_marketplace", VscodeExtensionMarketplace);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationSettingVscodeExtensionMarketplaceProperty>("vscode_extension_marketplace", VscodeExtensionMarketplace);
             writer.WriteStringValue("vscode_extension_marketplace_enabled", VscodeExtensionMarketplaceEnabled);
             writer.WriteStringValue("vscode_extension_marketplace_extension_host_domain", VscodeExtensionMarketplaceExtensionHostDomain);
             writer.WriteStringValue("vscode_extension_marketplace_single_origin_fallback_enabled", VscodeExtensionMarketplaceSingleOriginFallbackEnabled);

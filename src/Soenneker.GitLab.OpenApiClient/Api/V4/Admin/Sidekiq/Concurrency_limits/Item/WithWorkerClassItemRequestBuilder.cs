@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Sidekiq.Concurrency_limits
         {
         }
         /// <summary>
-        /// Restores the adaptive limit if present, otherwise the worker default.
+        /// Clears the temporary override and returns the updated concurrency-limit status. Restores the adaptive limit if present, otherwise the worker default. This feature was introduced in GitLab 19.6.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSidekiqConcurrencyLimit"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Sidekiq.Concurrency_limits
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSidekiqConcurrencyLimit>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSidekiqConcurrencyLimit.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Returns concurrency limits, override expiry and job counts.
+        /// Returns concurrency limits, override expiry and job counts. Namespaced worker class names keep the `::` separator in the path. This feature was introduced in GitLab 19.6.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSidekiqConcurrencyLimit"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -70,7 +70,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Sidekiq.Concurrency_limits
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSidekiqConcurrencyLimit>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSidekiqConcurrencyLimit.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Overrides adaptive throttling until the TTL expires or the override is deleted.
+        /// Sets or replaces a temporary concurrency override. Overrides adaptive throttling until the TTL expires or the override is deleted. Replacing an override restarts its TTL. Workers without a limit can receive a temporary cap. A positive override takes precedence over adaptive throttling and the class default. Pausing takes precedence over an override. Disabled concurrency middleware ignores overrides. When an override expires or is cleared, the stored adaptive limit resumes if it remains valid. Otherwise, the worker&apos;s runtime default applies. Lowering a limit does not terminate running jobs. The override is rejected if the worker is paused, the `sidekiq_concurrency_limit_middleware` feature flag is disabled, the worker&apos;s `disable_sidekiq_concurrency_limit_middleware_&lt;WorkerClass&gt;` bypass flag is enabled, or the worker is `ConcurrencyLimit::ResumeWorker`, which resumes deferred jobs and cannot be limited. This feature was introduced in GitLab 19.6.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSidekiqConcurrencyLimit"/></returns>
         /// <param name="body">The request body</param>
@@ -90,7 +90,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Sidekiq.Concurrency_limits
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSidekiqConcurrencyLimit>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSidekiqConcurrencyLimit.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Restores the adaptive limit if present, otherwise the worker default.
+        /// Clears the temporary override and returns the updated concurrency-limit status. Restores the adaptive limit if present, otherwise the worker default. This feature was introduced in GitLab 19.6.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -109,7 +109,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Sidekiq.Concurrency_limits
             return requestInfo;
         }
         /// <summary>
-        /// Returns concurrency limits, override expiry and job counts.
+        /// Returns concurrency limits, override expiry and job counts. Namespaced worker class names keep the `::` separator in the path. This feature was introduced in GitLab 19.6.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -128,7 +128,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Sidekiq.Concurrency_limits
             return requestInfo;
         }
         /// <summary>
-        /// Overrides adaptive throttling until the TTL expires or the override is deleted.
+        /// Sets or replaces a temporary concurrency override. Overrides adaptive throttling until the TTL expires or the override is deleted. Replacing an override restarts its TTL. Workers without a limit can receive a temporary cap. A positive override takes precedence over adaptive throttling and the class default. Pausing takes precedence over an override. Disabled concurrency middleware ignores overrides. When an override expires or is cleared, the stored adaptive limit resumes if it remains valid. Otherwise, the worker&apos;s runtime default applies. Lowering a limit does not terminate running jobs. The override is rejected if the worker is paused, the `sidekiq_concurrency_limit_middleware` feature flag is disabled, the worker&apos;s `disable_sidekiq_concurrency_limit_middleware_&lt;WorkerClass&gt;` bypass flag is enabled, or the worker is `ConcurrencyLimit::ResumeWorker`, which resumes deferred jobs and cannot be limited. This feature was introduced in GitLab 19.6.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

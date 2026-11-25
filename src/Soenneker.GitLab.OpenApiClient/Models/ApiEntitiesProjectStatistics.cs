@@ -43,37 +43,37 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The commit_count property</summary>
+        /// <summary>Number of commits in the project.</summary>
         public int? CommitCount { get => _explicitNullValueCommitCount; set { _explicitNullValueCommitCount = value; AdditionalData?.Remove("commit_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("commit_count"); else _explicitNullProperties?.Remove("commit_count"); } }
         private int? _explicitNullValueCommitCount = default!;
-        /// <summary>The container_registry_size property</summary>
+        /// <summary>Total container registry storage size in bytes used by all container repositories in the project. Updates when container images are pushed or deleted. On GitLab Self-Managed, requires the container registry metadata database.</summary>
         public int? ContainerRegistrySize { get => _explicitNullValueContainerRegistrySize; set { _explicitNullValueContainerRegistrySize = value; AdditionalData?.Remove("container_registry_size"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("container_registry_size"); else _explicitNullProperties?.Remove("container_registry_size"); } }
         private int? _explicitNullValueContainerRegistrySize = default!;
-        /// <summary>The job_artifacts_size property</summary>
+        /// <summary>Job artifacts storage size in bytes.</summary>
         public int? JobArtifactsSize { get => _explicitNullValueJobArtifactsSize; set { _explicitNullValueJobArtifactsSize = value; AdditionalData?.Remove("job_artifacts_size"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("job_artifacts_size"); else _explicitNullProperties?.Remove("job_artifacts_size"); } }
         private int? _explicitNullValueJobArtifactsSize = default!;
-        /// <summary>The lfs_objects_size property</summary>
+        /// <summary>LFS objects storage size in bytes.</summary>
         public int? LfsObjectsSize { get => _explicitNullValueLfsObjectsSize; set { _explicitNullValueLfsObjectsSize = value; AdditionalData?.Remove("lfs_objects_size"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lfs_objects_size"); else _explicitNullProperties?.Remove("lfs_objects_size"); } }
         private int? _explicitNullValueLfsObjectsSize = default!;
-        /// <summary>The packages_size property</summary>
+        /// <summary>Packages storage size in bytes.</summary>
         public int? PackagesSize { get => _explicitNullValuePackagesSize; set { _explicitNullValuePackagesSize = value; AdditionalData?.Remove("packages_size"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("packages_size"); else _explicitNullProperties?.Remove("packages_size"); } }
         private int? _explicitNullValuePackagesSize = default!;
-        /// <summary>The pipeline_artifacts_size property</summary>
+        /// <summary>Pipeline artifacts storage size in bytes.</summary>
         public int? PipelineArtifactsSize { get => _explicitNullValuePipelineArtifactsSize; set { _explicitNullValuePipelineArtifactsSize = value; AdditionalData?.Remove("pipeline_artifacts_size"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pipeline_artifacts_size"); else _explicitNullProperties?.Remove("pipeline_artifacts_size"); } }
         private int? _explicitNullValuePipelineArtifactsSize = default!;
-        /// <summary>The repository_size property</summary>
+        /// <summary>Repository storage size in bytes.</summary>
         public int? RepositorySize { get => _explicitNullValueRepositorySize; set { _explicitNullValueRepositorySize = value; AdditionalData?.Remove("repository_size"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("repository_size"); else _explicitNullProperties?.Remove("repository_size"); } }
         private int? _explicitNullValueRepositorySize = default!;
-        /// <summary>The snippets_size property</summary>
+        /// <summary>Snippets storage size in bytes.</summary>
         public int? SnippetsSize { get => _explicitNullValueSnippetsSize; set { _explicitNullValueSnippetsSize = value; AdditionalData?.Remove("snippets_size"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("snippets_size"); else _explicitNullProperties?.Remove("snippets_size"); } }
         private int? _explicitNullValueSnippetsSize = default!;
-        /// <summary>The storage_size property</summary>
+        /// <summary>Total storage size in bytes.</summary>
         public int? StorageSize { get => _explicitNullValueStorageSize; set { _explicitNullValueStorageSize = value; AdditionalData?.Remove("storage_size"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("storage_size"); else _explicitNullProperties?.Remove("storage_size"); } }
         private int? _explicitNullValueStorageSize = default!;
-        /// <summary>The uploads_size property</summary>
+        /// <summary>Uploads storage size in bytes.</summary>
         public int? UploadsSize { get => _explicitNullValueUploadsSize; set { _explicitNullValueUploadsSize = value; AdditionalData?.Remove("uploads_size"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uploads_size"); else _explicitNullProperties?.Remove("uploads_size"); } }
         private int? _explicitNullValueUploadsSize = default!;
-        /// <summary>The wiki_size property</summary>
+        /// <summary>Wiki storage size in bytes.</summary>
         public int? WikiSize { get => _explicitNullValueWikiSize; set { _explicitNullValueWikiSize = value; AdditionalData?.Remove("wiki_size"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("wiki_size"); else _explicitNullProperties?.Remove("wiki_size"); } }
         private int? _explicitNullValueWikiSize = default!;
         /// <summary>

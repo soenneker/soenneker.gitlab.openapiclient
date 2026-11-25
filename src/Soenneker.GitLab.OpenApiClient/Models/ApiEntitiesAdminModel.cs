@@ -31,7 +31,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The checksum_information property</summary>
+        /// <summary>Geo checksum information. Returned only when Geo is enabled and verification is enabled for the model.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAdminModelChecksumInformation? ChecksumInformation { get => _explicitNullValueChecksumInformation; set { _explicitNullValueChecksumInformation = value; AdditionalData?.Remove("checksum_information"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checksum_information"); else _explicitNullProperties?.Remove("checksum_information"); } }
@@ -41,13 +41,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAdminModelChecksumInformation ChecksumInformation { get => _explicitNullValueChecksumInformation; set { _explicitNullValueChecksumInformation = value; AdditionalData?.Remove("checksum_information"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("checksum_information"); else _explicitNullProperties?.Remove("checksum_information"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAdminModelChecksumInformation _explicitNullValueChecksumInformation = default!;
 #endif
-        /// <summary>The created_at property</summary>
+        /// <summary>Creation timestamp, if available.</summary>
         public DateTimeOffset? CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; AdditionalData?.Remove("created_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_at"); else _explicitNullProperties?.Remove("created_at"); } }
         private DateTimeOffset? _explicitNullValueCreatedAt = default!;
-        /// <summary>The file_size property</summary>
+        /// <summary>Size of the object, if available.</summary>
         public int? FileSize { get => _explicitNullValueFileSize; set { _explicitNullValueFileSize = value; AdditionalData?.Remove("file_size"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file_size"); else _explicitNullProperties?.Remove("file_size"); } }
         private int? _explicitNullValueFileSize = default!;
-        /// <summary>The model_class property</summary>
+        /// <summary>Class name of the model.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ModelClass { get => _explicitNullValueModelClass; set { _explicitNullValueModelClass = value; AdditionalData?.Remove("model_class"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("model_class"); else _explicitNullProperties?.Remove("model_class"); } }
@@ -57,7 +57,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string ModelClass { get => _explicitNullValueModelClass; set { _explicitNullValueModelClass = value; AdditionalData?.Remove("model_class"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("model_class"); else _explicitNullProperties?.Remove("model_class"); } }
         private string _explicitNullValueModelClass = default!;
 #endif
-        /// <summary>The record_identifier property</summary>
+        /// <summary>Unique identifier of the record. An integer for single-column primary keys, or a Base64-encoded string for composite keys.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? RecordIdentifier { get => _explicitNullValueRecordIdentifier; set { _explicitNullValueRecordIdentifier = value; AdditionalData?.Remove("record_identifier"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("record_identifier"); else _explicitNullProperties?.Remove("record_identifier"); } }

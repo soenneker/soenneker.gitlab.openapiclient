@@ -66,7 +66,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Broadcast_messages
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// Creates a broadcast message.
+        /// Creates a broadcast message. Broadcast messages are publicly accessible through the API regardless of targeting settings. Do not include sensitive or confidential information.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSystemBroadcastMessage"/></returns>
         /// <param name="body">The request body</param>
@@ -105,7 +105,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Broadcast_messages
             return requestInfo;
         }
         /// <summary>
-        /// Creates a broadcast message.
+        /// Creates a broadcast message. Broadcast messages are publicly accessible through the API regardless of targeting settings. Do not include sensitive or confidential information.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

@@ -42,12 +42,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The headers property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Headers { get => _explicitNullValueHeaders; set { _explicitNullValueHeaders = value; AdditionalData?.Remove("headers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("headers"); else _explicitNullProperties?.Remove("headers"); } }
-        private string? _explicitNullValueHeaders = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesResponseEntityHeadersItemProperty>? Headers { get => _explicitNullValueHeaders; set { _explicitNullValueHeaders = value; AdditionalData?.Remove("headers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("headers"); else _explicitNullProperties?.Remove("headers"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesResponseEntityHeadersItemProperty>? _explicitNullValueHeaders = default!;
 #nullable restore
 #else
-        public string Headers { get => _explicitNullValueHeaders; set { _explicitNullValueHeaders = value; AdditionalData?.Remove("headers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("headers"); else _explicitNullProperties?.Remove("headers"); } }
-        private string _explicitNullValueHeaders = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesResponseEntityHeadersItemProperty> Headers { get => _explicitNullValueHeaders; set { _explicitNullValueHeaders = value; AdditionalData?.Remove("headers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("headers"); else _explicitNullProperties?.Remove("headers"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesResponseEntityHeadersItemProperty> _explicitNullValueHeaders = default!;
 #endif
         /// <summary>The reason_phrase property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -95,7 +95,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "body", n => { Body = n.GetStringValue(); } },
-                { "headers", n => { Headers = n.GetStringValue(); } },
+                { "headers", n => { Headers = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesResponseEntityHeadersItemProperty>(global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesResponseEntityHeadersItemProperty.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "reason_phrase", n => { ReasonPhrase = n.GetStringValue(); } },
                 { "status_code", n => { StatusCode = n.GetStringValue(); } },
             };
@@ -108,7 +108,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("body", Body);
-            writer.WriteStringValue("headers", Headers);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesResponseEntityHeadersItemProperty>("headers", Headers);
             writer.WriteStringValue("reason_phrase", ReasonPhrase);
             writer.WriteStringValue("status_code", StatusCode);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);

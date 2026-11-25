@@ -108,7 +108,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Maximum number of instance-level CI/CD variables that can be defined.</summary>
         public int? CiInstanceLevelVariables { get => _explicitNullValueCiInstanceLevelVariables; set { _explicitNullValueCiInstanceLevelVariables = value; AdditionalData?.Remove("ci_instance_level_variables"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ci_instance_level_variables"); else _explicitNullProperties?.Remove("ci_instance_level_variables"); } }
         private int? _explicitNullValueCiInstanceLevelVariables = default!;
-        /// <summary>Maximum number of job variables in a single job.</summary>
+        /// <summary>Maximum number of job variables in a single job. Default is `0`. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/254701) in GitLab 19.6.</summary>
         public int? CiJobVariablesCount { get => _explicitNullValueCiJobVariablesCount; set { _explicitNullValueCiJobVariablesCount = value; AdditionalData?.Remove("ci_job_variables_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ci_job_variables_count"); else _explicitNullProperties?.Remove("ci_job_variables_count"); } }
         private int? _explicitNullValueCiJobVariablesCount = default!;
         /// <summary>Maximum number of `needs` dependencies that a job can have.</summary>
@@ -120,7 +120,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Maximum number of jobs in a single pipeline.</summary>
         public int? CiPipelineSize { get => _explicitNullValueCiPipelineSize; set { _explicitNullValueCiPipelineSize = value; AdditionalData?.Remove("ci_pipeline_size"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ci_pipeline_size"); else _explicitNullProperties?.Remove("ci_pipeline_size"); } }
         private int? _explicitNullValueCiPipelineSize = default!;
-        /// <summary>Maximum number of pipeline variables in a single pipeline.</summary>
+        /// <summary>Maximum number of pipeline variables in a single pipeline. Default is `0`. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/253433) in GitLab 19.6.</summary>
         public int? CiPipelineVariablesCount { get => _explicitNullValueCiPipelineVariablesCount; set { _explicitNullValueCiPipelineVariablesCount = value; AdditionalData?.Remove("ci_pipeline_variables_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ci_pipeline_variables_count"); else _explicitNullProperties?.Remove("ci_pipeline_variables_count"); } }
         private int? _explicitNullValueCiPipelineVariablesCount = default!;
         /// <summary>Maximum number of pipeline subscriptions to and from a project.</summary>
@@ -132,10 +132,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Maximum number of runners created or active in a project during the past seven days.</summary>
         public int? CiRegisteredProjectRunners { get => _explicitNullValueCiRegisteredProjectRunners; set { _explicitNullValueCiRegisteredProjectRunners = value; AdditionalData?.Remove("ci_registered_project_runners"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ci_registered_project_runners"); else _explicitNullProperties?.Remove("ci_registered_project_runners"); } }
         private int? _explicitNullValueCiRegisteredProjectRunners = default!;
-        /// <summary>Maximum size of a file type CI/CD variable value in bytes.</summary>
+        /// <summary>Maximum size of a file type CI/CD variable value in bytes. Default is `0`. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/253433) in GitLab 19.6.</summary>
         public int? CiVariableFileValueSize { get => _explicitNullValueCiVariableFileValueSize; set { _explicitNullValueCiVariableFileValueSize = value; AdditionalData?.Remove("ci_variable_file_value_size"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ci_variable_file_value_size"); else _explicitNullProperties?.Remove("ci_variable_file_value_size"); } }
         private int? _explicitNullValueCiVariableFileValueSize = default!;
-        /// <summary>Maximum size of a CI/CD variable value in bytes.</summary>
+        /// <summary>Maximum size of a CI/CD variable value in bytes. Default is `0`. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/253433) in GitLab 19.6.</summary>
         public int? CiVariableValueSize { get => _explicitNullValueCiVariableValueSize; set { _explicitNullValueCiVariableValueSize = value; AdditionalData?.Remove("ci_variable_value_size"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ci_variable_value_size"); else _explicitNullProperties?.Remove("ci_variable_value_size"); } }
         private int? _explicitNullValueCiVariableValueSize = default!;
         /// <summary>Maximum Conan package file size in bytes.</summary>
@@ -159,10 +159,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Maximum Helm chart file size in bytes.</summary>
         public int? HelmMaxFileSize { get => _explicitNullValueHelmMaxFileSize; set { _explicitNullValueHelmMaxFileSize = value; AdditionalData?.Remove("helm_max_file_size"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("helm_max_file_size"); else _explicitNullProperties?.Remove("helm_max_file_size"); } }
         private int? _explicitNullValueHelmMaxFileSize = default!;
-        /// <summary>Maximum number of integration executions that can be enqueued per minute, per top-level namespace, excluding Datadog. Set to `0` for unlimited.</summary>
+        /// <summary>Maximum number of integration executions that can be enqueued per minute, per top-level namespace, excluding Datadog. Set to `0` for unlimited. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/work_items/636614) in GitLab 19.6. This parameter is in beta and might be changed or removed without notice.</summary>
         public int? IntegrationExecutions { get => _explicitNullValueIntegrationExecutions; set { _explicitNullValueIntegrationExecutions = value; AdditionalData?.Remove("integration_executions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("integration_executions"); else _explicitNullProperties?.Remove("integration_executions"); } }
         private int? _explicitNullValueIntegrationExecutions = default!;
-        /// <summary>Maximum number of Datadog integration executions that can be enqueued per minute, per top-level namespace. Set to `0` for unlimited.</summary>
+        /// <summary>Maximum number of Datadog integration executions that can be enqueued per minute, per top-level namespace. Set to `0` for unlimited. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/work_items/636614) in GitLab 19.6. This parameter is in beta and might be changed or removed without notice.</summary>
         public int? IntegrationExecutionsDatadog { get => _explicitNullValueIntegrationExecutionsDatadog; set { _explicitNullValueIntegrationExecutionsDatadog = value; AdditionalData?.Remove("integration_executions_datadog"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("integration_executions_datadog"); else _explicitNullProperties?.Remove("integration_executions_datadog"); } }
         private int? _explicitNullValueIntegrationExecutionsDatadog = default!;
         /// <summary>Maximum Maven package file size in bytes.</summary>

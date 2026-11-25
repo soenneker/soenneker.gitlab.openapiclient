@@ -64,12 +64,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The tags property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Tags { get => _explicitNullValueTags; set { _explicitNullValueTags = value; AdditionalData?.Remove("tags"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tags"); else _explicitNullProperties?.Remove("tags"); } }
-        private string? _explicitNullValueTags = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackageVersionTagsItemProperty>? Tags { get => _explicitNullValueTags; set { _explicitNullValueTags = value; AdditionalData?.Remove("tags"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tags"); else _explicitNullProperties?.Remove("tags"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackageVersionTagsItemProperty>? _explicitNullValueTags = default!;
 #nullable restore
 #else
-        public string Tags { get => _explicitNullValueTags; set { _explicitNullValueTags = value; AdditionalData?.Remove("tags"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tags"); else _explicitNullProperties?.Remove("tags"); } }
-        private string _explicitNullValueTags = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackageVersionTagsItemProperty> Tags { get => _explicitNullValueTags; set { _explicitNullValueTags = value; AdditionalData?.Remove("tags"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tags"); else _explicitNullProperties?.Remove("tags"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackageVersionTagsItemProperty> _explicitNullValueTags = default!;
 #endif
         /// <summary>The version property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -109,7 +109,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "created_at", n => { CreatedAt = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "pipeline", n => { Pipeline = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackagePipeline>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackagePipeline.CreateFromDiscriminatorValue); } },
-                { "tags", n => { Tags = n.GetStringValue(); } },
+                { "tags", n => { Tags = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackageVersionTagsItemProperty>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackageVersionTagsItemProperty.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "version", n => { Version = n.GetStringValue(); } },
             };
         }
@@ -123,7 +123,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("created_at", CreatedAt);
             writer.WriteStringValue("id", Id);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackagePipeline>("pipeline", Pipeline);
-            writer.WriteStringValue("tags", Tags);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesPackageVersionTagsItemProperty>("tags", Tags);
             writer.WriteStringValue("version", Version);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

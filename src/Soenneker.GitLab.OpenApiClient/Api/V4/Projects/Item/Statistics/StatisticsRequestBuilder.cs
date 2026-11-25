@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Statistics
         {
         }
         /// <summary>
-        /// Retrieves the clone and pull statistics for the last 30 days from a specified project.
+        /// Retrieves the clone and pull statistics for the last 30 days from a specified project. Requires at least the Reporter role for the project. Requires a token with the `read_api` or `api` scope.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectDailyStatistics"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Statistics
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectDailyStatistics>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectDailyStatistics.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Retrieves the clone and pull statistics for the last 30 days from a specified project.
+        /// Retrieves the clone and pull statistics for the last 30 days from a specified project. Requires at least the Reporter role for the project. Requires a token with the `read_api` or `api` scope.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

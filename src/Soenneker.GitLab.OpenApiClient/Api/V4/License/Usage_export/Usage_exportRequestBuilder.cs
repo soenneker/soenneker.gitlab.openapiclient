@@ -33,7 +33,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.License.Usage_export
         {
         }
         /// <summary>
-        /// Downloads usage data for the currently active license.
+        /// Downloads usage data for the currently active license in CSV format.
         /// </summary>
         /// <returns>A <see cref="Stream"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -51,7 +51,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.License.Usage_export
             return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Downloads usage data for the currently active license.
+        /// Downloads usage data for the currently active license in CSV format.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

@@ -36,20 +36,21 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Dora.Metrics
         /// <summary>
         /// Retrieves DORA metrics for a specified group.
         /// </summary>
-        /// <returns>A <see cref="Stream"/></returns>
+        /// <returns>A List&lt;global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDoraMetric&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<Stream?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Dora.Metrics.MetricsRequestBuilder.MetricsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDoraMetric>?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Dora.Metrics.MetricsRequestBuilder.MetricsRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<Stream> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Dora.Metrics.MetricsRequestBuilder.MetricsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDoraMetric>> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Dora.Metrics.MetricsRequestBuilder.MetricsRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
+            var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDoraMetric>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesDoraMetric.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
+            return collectionResult?.AsList();
         }
         /// <summary>
         /// Retrieves DORA metrics for a specified group.
@@ -67,6 +68,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Dora.Metrics
 #endif
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
+            requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
         }
         /// <summary>

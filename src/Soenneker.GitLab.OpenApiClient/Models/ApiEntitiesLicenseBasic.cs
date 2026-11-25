@@ -31,7 +31,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The html_url property</summary>
+        /// <summary>URL of the license information page.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? HtmlUrl { get => _explicitNullValueHtmlUrl; set { _explicitNullValueHtmlUrl = value; AdditionalData?.Remove("html_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("html_url"); else _explicitNullProperties?.Remove("html_url"); } }
@@ -41,7 +41,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string HtmlUrl { get => _explicitNullValueHtmlUrl; set { _explicitNullValueHtmlUrl = value; AdditionalData?.Remove("html_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("html_url"); else _explicitNullProperties?.Remove("html_url"); } }
         private string _explicitNullValueHtmlUrl = default!;
 #endif
-        /// <summary>The key property</summary>
+        /// <summary>Key of the license.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Key { get => _explicitNullValueKey; set { _explicitNullValueKey = value; AdditionalData?.Remove("key"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("key"); else _explicitNullProperties?.Remove("key"); } }
@@ -51,7 +51,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Key { get => _explicitNullValueKey; set { _explicitNullValueKey = value; AdditionalData?.Remove("key"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("key"); else _explicitNullProperties?.Remove("key"); } }
         private string _explicitNullValueKey = default!;
 #endif
-        /// <summary>The name property</summary>
+        /// <summary>Full name of the license.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
@@ -61,7 +61,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string _explicitNullValueName = default!;
 #endif
-        /// <summary>The nickname property</summary>
+        /// <summary>Nickname of the license.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Nickname { get => _explicitNullValueNickname; set { _explicitNullValueNickname = value; AdditionalData?.Remove("nickname"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nickname"); else _explicitNullProperties?.Remove("nickname"); } }
@@ -71,7 +71,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Nickname { get => _explicitNullValueNickname; set { _explicitNullValueNickname = value; AdditionalData?.Remove("nickname"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("nickname"); else _explicitNullProperties?.Remove("nickname"); } }
         private string _explicitNullValueNickname = default!;
 #endif
-        /// <summary>The source_url property</summary>
+        /// <summary>URL of the license source. Always `null`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? SourceUrl { get => _explicitNullValueSourceUrl; set { _explicitNullValueSourceUrl = value; AdditionalData?.Remove("source_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("source_url"); else _explicitNullProperties?.Remove("source_url"); } }

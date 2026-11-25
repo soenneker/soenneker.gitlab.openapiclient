@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Licenses
         {
         }
         /// <summary>
-        /// Lists all information about all licenses.
+        /// Lists all information about all licenses. `overage` is the difference between the number of billable users and the licensed number of users. For an expired license, it uses the historical maximum billable user count (`historical_max`). Otherwise, it uses the current billable user count.
         /// </summary>
         /// <returns>A List&lt;global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGitlabLicense&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -53,7 +53,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Licenses
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// Lists all information about all licenses.
+        /// Lists all information about all licenses. `overage` is the difference between the number of billable users and the licensed number of users. For an expired license, it uses the historical maximum billable user count (`historical_max`). Otherwise, it uses the current billable user count.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

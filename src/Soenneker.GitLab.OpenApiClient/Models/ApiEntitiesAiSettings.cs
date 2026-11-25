@@ -55,90 +55,55 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The ai_catalog_restricted_to_group_hierarchy property</summary>
+        /// <summary>If `true`, the AI Catalog is restricted to items in the top-level group hierarchy.</summary>
         public bool? AiCatalogRestrictedToGroupHierarchy { get => _explicitNullValueAiCatalogRestrictedToGroupHierarchy; set { _explicitNullValueAiCatalogRestrictedToGroupHierarchy = value; AdditionalData?.Remove("ai_catalog_restricted_to_group_hierarchy"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ai_catalog_restricted_to_group_hierarchy"); else _explicitNullProperties?.Remove("ai_catalog_restricted_to_group_hierarchy"); } }
         private bool? _explicitNullValueAiCatalogRestrictedToGroupHierarchy = default!;
-        /// <summary>The ai_usage_data_collection_enabled property</summary>
+        /// <summary>If `true`, AI usage data collection is enabled for the group.</summary>
         public bool? AiUsageDataCollectionEnabled { get => _explicitNullValueAiUsageDataCollectionEnabled; set { _explicitNullValueAiUsageDataCollectionEnabled = value; AdditionalData?.Remove("ai_usage_data_collection_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ai_usage_data_collection_enabled"); else _explicitNullProperties?.Remove("ai_usage_data_collection_enabled"); } }
         private bool? _explicitNullValueAiUsageDataCollectionEnabled = default!;
-        /// <summary>The allow_all_unix_sockets property</summary>
+        /// <summary>If `true`, all Unix sockets are allowed for GitLab Duo Agent Platform.</summary>
         public bool? AllowAllUnixSockets { get => _explicitNullValueAllowAllUnixSockets; set { _explicitNullValueAllowAllUnixSockets = value; AdditionalData?.Remove("allow_all_unix_sockets"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allow_all_unix_sockets"); else _explicitNullProperties?.Remove("allow_all_unix_sockets"); } }
         private bool? _explicitNullValueAllowAllUnixSockets = default!;
-        /// <summary>The allow_project_extension property</summary>
+        /// <summary>If `true`, projects can extend the network access domain allowlist for GitLab Duo Agent Platform.</summary>
         public bool? AllowProjectExtension { get => _explicitNullValueAllowProjectExtension; set { _explicitNullValueAllowProjectExtension = value; AdditionalData?.Remove("allow_project_extension"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allow_project_extension"); else _explicitNullProperties?.Remove("allow_project_extension"); } }
         private bool? _explicitNullValueAllowProjectExtension = default!;
-        /// <summary>The duo_agent_platform_enabled property</summary>
+        /// <summary>If `true`, GitLab Duo Agent Platform features are enabled for the group.</summary>
         public bool? DuoAgentPlatformEnabled { get => _explicitNullValueDuoAgentPlatformEnabled; set { _explicitNullValueDuoAgentPlatformEnabled = value; AdditionalData?.Remove("duo_agent_platform_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duo_agent_platform_enabled"); else _explicitNullProperties?.Remove("duo_agent_platform_enabled"); } }
         private bool? _explicitNullValueDuoAgentPlatformEnabled = default!;
-        /// <summary>The duo_workflow_file_attachments_enabled property</summary>
+        /// <summary>If `true`, file attachments are allowed in GitLab Duo Chat for the group. Returned only for top-level groups on GitLab.com.</summary>
         public bool? DuoWorkflowFileAttachmentsEnabled { get => _explicitNullValueDuoWorkflowFileAttachmentsEnabled; set { _explicitNullValueDuoWorkflowFileAttachmentsEnabled = value; AdditionalData?.Remove("duo_workflow_file_attachments_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duo_workflow_file_attachments_enabled"); else _explicitNullProperties?.Remove("duo_workflow_file_attachments_enabled"); } }
         private bool? _explicitNullValueDuoWorkflowFileAttachmentsEnabled = default!;
-        /// <summary>The duo_workflow_mcp_enabled property</summary>
+        /// <summary>If `true`, MCP support for GitLab Duo Agent Platform is enabled.</summary>
         public bool? DuoWorkflowMcpEnabled { get => _explicitNullValueDuoWorkflowMcpEnabled; set { _explicitNullValueDuoWorkflowMcpEnabled = value; AdditionalData?.Remove("duo_workflow_mcp_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duo_workflow_mcp_enabled"); else _explicitNullProperties?.Remove("duo_workflow_mcp_enabled"); } }
         private bool? _explicitNullValueDuoWorkflowMcpEnabled = default!;
-        /// <summary>The external_agent_audit_event_content_enabled property</summary>
+        /// <summary>If `true`, AI audit events from external agent sessions that `glab` uploads keep content such as prompts and tool arguments. If `false`, they keep metadata only. Returned for top-level groups only, and applies to all their subgroups and projects.</summary>
         public bool? ExternalAgentAuditEventContentEnabled { get => _explicitNullValueExternalAgentAuditEventContentEnabled; set { _explicitNullValueExternalAgentAuditEventContentEnabled = value; AdditionalData?.Remove("external_agent_audit_event_content_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("external_agent_audit_event_content_enabled"); else _explicitNullProperties?.Remove("external_agent_audit_event_content_enabled"); } }
         private bool? _explicitNullValueExternalAgentAuditEventContentEnabled = default!;
-        /// <summary>The foundational_agents_default_enabled property</summary>
+        /// <summary>If `true`, new foundational agents are enabled by default for the group.</summary>
         public bool? FoundationalAgentsDefaultEnabled { get => _explicitNullValueFoundationalAgentsDefaultEnabled; set { _explicitNullValueFoundationalAgentsDefaultEnabled = value; AdditionalData?.Remove("foundational_agents_default_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("foundational_agents_default_enabled"); else _explicitNullProperties?.Remove("foundational_agents_default_enabled"); } }
         private bool? _explicitNullValueFoundationalAgentsDefaultEnabled = default!;
-        /// <summary>The include_recommended_allowed property</summary>
+        /// <summary>If `true`, recommended domains are included in the network access allowlist for GitLab Duo Agent Platform.</summary>
         public bool? IncludeRecommendedAllowed { get => _explicitNullValueIncludeRecommendedAllowed; set { _explicitNullValueIncludeRecommendedAllowed = value; AdditionalData?.Remove("include_recommended_allowed"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("include_recommended_allowed"); else _explicitNullProperties?.Remove("include_recommended_allowed"); } }
         private bool? _explicitNullValueIncludeRecommendedAllowed = default!;
-        /// <summary>The minimum_access_level_enable_on_projects property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? MinimumAccessLevelEnableOnProjects { get => _explicitNullValueMinimumAccessLevelEnableOnProjects; set { _explicitNullValueMinimumAccessLevelEnableOnProjects = value; AdditionalData?.Remove("minimum_access_level_enable_on_projects"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minimum_access_level_enable_on_projects"); else _explicitNullProperties?.Remove("minimum_access_level_enable_on_projects"); } }
-        private string? _explicitNullValueMinimumAccessLevelEnableOnProjects = default!;
-#nullable restore
-#else
-        public string MinimumAccessLevelEnableOnProjects { get => _explicitNullValueMinimumAccessLevelEnableOnProjects; set { _explicitNullValueMinimumAccessLevelEnableOnProjects = value; AdditionalData?.Remove("minimum_access_level_enable_on_projects"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minimum_access_level_enable_on_projects"); else _explicitNullProperties?.Remove("minimum_access_level_enable_on_projects"); } }
-        private string _explicitNullValueMinimumAccessLevelEnableOnProjects = default!;
-#endif
-        /// <summary>The minimum_access_level_execute property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? MinimumAccessLevelExecute { get => _explicitNullValueMinimumAccessLevelExecute; set { _explicitNullValueMinimumAccessLevelExecute = value; AdditionalData?.Remove("minimum_access_level_execute"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minimum_access_level_execute"); else _explicitNullProperties?.Remove("minimum_access_level_execute"); } }
-        private string? _explicitNullValueMinimumAccessLevelExecute = default!;
-#nullable restore
-#else
-        public string MinimumAccessLevelExecute { get => _explicitNullValueMinimumAccessLevelExecute; set { _explicitNullValueMinimumAccessLevelExecute = value; AdditionalData?.Remove("minimum_access_level_execute"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minimum_access_level_execute"); else _explicitNullProperties?.Remove("minimum_access_level_execute"); } }
-        private string _explicitNullValueMinimumAccessLevelExecute = default!;
-#endif
-        /// <summary>The minimum_access_level_execute_async property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? MinimumAccessLevelExecuteAsync { get => _explicitNullValueMinimumAccessLevelExecuteAsync; set { _explicitNullValueMinimumAccessLevelExecuteAsync = value; AdditionalData?.Remove("minimum_access_level_execute_async"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minimum_access_level_execute_async"); else _explicitNullProperties?.Remove("minimum_access_level_execute_async"); } }
-        private string? _explicitNullValueMinimumAccessLevelExecuteAsync = default!;
-#nullable restore
-#else
-        public string MinimumAccessLevelExecuteAsync { get => _explicitNullValueMinimumAccessLevelExecuteAsync; set { _explicitNullValueMinimumAccessLevelExecuteAsync = value; AdditionalData?.Remove("minimum_access_level_execute_async"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minimum_access_level_execute_async"); else _explicitNullProperties?.Remove("minimum_access_level_execute_async"); } }
-        private string _explicitNullValueMinimumAccessLevelExecuteAsync = default!;
-#endif
-        /// <summary>The minimum_access_level_manage property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? MinimumAccessLevelManage { get => _explicitNullValueMinimumAccessLevelManage; set { _explicitNullValueMinimumAccessLevelManage = value; AdditionalData?.Remove("minimum_access_level_manage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minimum_access_level_manage"); else _explicitNullProperties?.Remove("minimum_access_level_manage"); } }
-        private string? _explicitNullValueMinimumAccessLevelManage = default!;
-#nullable restore
-#else
-        public string MinimumAccessLevelManage { get => _explicitNullValueMinimumAccessLevelManage; set { _explicitNullValueMinimumAccessLevelManage = value; AdditionalData?.Remove("minimum_access_level_manage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minimum_access_level_manage"); else _explicitNullProperties?.Remove("minimum_access_level_manage"); } }
-        private string _explicitNullValueMinimumAccessLevelManage = default!;
-#endif
-        /// <summary>The prompt_injection_protection_level property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? PromptInjectionProtectionLevel { get => _explicitNullValuePromptInjectionProtectionLevel; set { _explicitNullValuePromptInjectionProtectionLevel = value; AdditionalData?.Remove("prompt_injection_protection_level"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prompt_injection_protection_level"); else _explicitNullProperties?.Remove("prompt_injection_protection_level"); } }
-        private string? _explicitNullValuePromptInjectionProtectionLevel = default!;
-#nullable restore
-#else
-        public string PromptInjectionProtectionLevel { get => _explicitNullValuePromptInjectionProtectionLevel; set { _explicitNullValuePromptInjectionProtectionLevel = value; AdditionalData?.Remove("prompt_injection_protection_level"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prompt_injection_protection_level"); else _explicitNullProperties?.Remove("prompt_injection_protection_level"); } }
-        private string _explicitNullValuePromptInjectionProtectionLevel = default!;
-#endif
-        /// <summary>The require_sandbox property</summary>
+        /// <summary>Minimum access level required to enable GitLab Duo Agent Platform on projects. Behind a feature flag named `dap_group_customizable_permissions`, disabled by default.</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiSettingsMinimumAccessLevelEnableOnProjects? MinimumAccessLevelEnableOnProjects { get => _explicitNullValueMinimumAccessLevelEnableOnProjects; set { _explicitNullValueMinimumAccessLevelEnableOnProjects = value; AdditionalData?.Remove("minimum_access_level_enable_on_projects"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minimum_access_level_enable_on_projects"); else _explicitNullProperties?.Remove("minimum_access_level_enable_on_projects"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiSettingsMinimumAccessLevelEnableOnProjects? _explicitNullValueMinimumAccessLevelEnableOnProjects = default!;
+        /// <summary>Minimum access level required to use GitLab Duo Agent Platform features. Behind a feature flag named `dap_group_customizable_permissions`, disabled by default.</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiSettingsMinimumAccessLevelExecute? MinimumAccessLevelExecute { get => _explicitNullValueMinimumAccessLevelExecute; set { _explicitNullValueMinimumAccessLevelExecute = value; AdditionalData?.Remove("minimum_access_level_execute"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minimum_access_level_execute"); else _explicitNullProperties?.Remove("minimum_access_level_execute"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiSettingsMinimumAccessLevelExecute? _explicitNullValueMinimumAccessLevelExecute = default!;
+        /// <summary>Minimum access level required to run GitLab Duo Agent Platform features in CI/CD. Behind a feature flag named `dap_group_customizable_permissions`, disabled by default.</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiSettingsMinimumAccessLevelExecuteAsync? MinimumAccessLevelExecuteAsync { get => _explicitNullValueMinimumAccessLevelExecuteAsync; set { _explicitNullValueMinimumAccessLevelExecuteAsync = value; AdditionalData?.Remove("minimum_access_level_execute_async"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minimum_access_level_execute_async"); else _explicitNullProperties?.Remove("minimum_access_level_execute_async"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiSettingsMinimumAccessLevelExecuteAsync? _explicitNullValueMinimumAccessLevelExecuteAsync = default!;
+        /// <summary>Minimum access level required to manage GitLab Duo Agent Platform. Behind a feature flag named `dap_group_customizable_permissions`, disabled by default.</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiSettingsMinimumAccessLevelManage? MinimumAccessLevelManage { get => _explicitNullValueMinimumAccessLevelManage; set { _explicitNullValueMinimumAccessLevelManage = value; AdditionalData?.Remove("minimum_access_level_manage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minimum_access_level_manage"); else _explicitNullProperties?.Remove("minimum_access_level_manage"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiSettingsMinimumAccessLevelManage? _explicitNullValueMinimumAccessLevelManage = default!;
+        /// <summary>Prompt injection protection level.</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiSettingsPromptInjectionProtectionLevel? PromptInjectionProtectionLevel { get => _explicitNullValuePromptInjectionProtectionLevel; set { _explicitNullValuePromptInjectionProtectionLevel = value; AdditionalData?.Remove("prompt_injection_protection_level"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prompt_injection_protection_level"); else _explicitNullProperties?.Remove("prompt_injection_protection_level"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiSettingsPromptInjectionProtectionLevel? _explicitNullValuePromptInjectionProtectionLevel = default!;
+        /// <summary>If `true`, flows that run on GitLab Runner fail when the execution environment sandbox is unavailable, instead of running without it. Applies only to top-level groups on GitLab.com.</summary>
         public bool? RequireSandbox { get => _explicitNullValueRequireSandbox; set { _explicitNullValueRequireSandbox = value; AdditionalData?.Remove("require_sandbox"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("require_sandbox"); else _explicitNullProperties?.Remove("require_sandbox"); } }
         private bool? _explicitNullValueRequireSandbox = default!;
-        /// <summary>The web_search_enabled property</summary>
+        /// <summary>If `true`, web search is enabled in GitLab Duo Chat for the group.</summary>
         public bool? WebSearchEnabled { get => _explicitNullValueWebSearchEnabled; set { _explicitNullValueWebSearchEnabled = value; AdditionalData?.Remove("web_search_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("web_search_enabled"); else _explicitNullProperties?.Remove("web_search_enabled"); } }
         private bool? _explicitNullValueWebSearchEnabled = default!;
         /// <summary>
@@ -176,11 +141,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "external_agent_audit_event_content_enabled", n => { ExternalAgentAuditEventContentEnabled = n.GetBoolValue(); } },
                 { "foundational_agents_default_enabled", n => { FoundationalAgentsDefaultEnabled = n.GetBoolValue(); } },
                 { "include_recommended_allowed", n => { IncludeRecommendedAllowed = n.GetBoolValue(); } },
-                { "minimum_access_level_enable_on_projects", n => { MinimumAccessLevelEnableOnProjects = n.GetStringValue(); } },
-                { "minimum_access_level_execute", n => { MinimumAccessLevelExecute = n.GetStringValue(); } },
-                { "minimum_access_level_execute_async", n => { MinimumAccessLevelExecuteAsync = n.GetStringValue(); } },
-                { "minimum_access_level_manage", n => { MinimumAccessLevelManage = n.GetStringValue(); } },
-                { "prompt_injection_protection_level", n => { PromptInjectionProtectionLevel = n.GetStringValue(); } },
+                { "minimum_access_level_enable_on_projects", n => { var parsed = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiSettingsMinimumAccessLevelEnableOnProjects>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueMinimumAccessLevelEnableOnProjects = default; _explicitNullProperties?.Remove("minimum_access_level_enable_on_projects"); AdditionalData["minimum_access_level_enable_on_projects"] = unknown; } else { MinimumAccessLevelEnableOnProjects = parsed; AdditionalData.Remove("minimum_access_level_enable_on_projects"); } } },
+                { "minimum_access_level_execute", n => { var parsed = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiSettingsMinimumAccessLevelExecute>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueMinimumAccessLevelExecute = default; _explicitNullProperties?.Remove("minimum_access_level_execute"); AdditionalData["minimum_access_level_execute"] = unknown; } else { MinimumAccessLevelExecute = parsed; AdditionalData.Remove("minimum_access_level_execute"); } } },
+                { "minimum_access_level_execute_async", n => { var parsed = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiSettingsMinimumAccessLevelExecuteAsync>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueMinimumAccessLevelExecuteAsync = default; _explicitNullProperties?.Remove("minimum_access_level_execute_async"); AdditionalData["minimum_access_level_execute_async"] = unknown; } else { MinimumAccessLevelExecuteAsync = parsed; AdditionalData.Remove("minimum_access_level_execute_async"); } } },
+                { "minimum_access_level_manage", n => { var parsed = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiSettingsMinimumAccessLevelManage>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueMinimumAccessLevelManage = default; _explicitNullProperties?.Remove("minimum_access_level_manage"); AdditionalData["minimum_access_level_manage"] = unknown; } else { MinimumAccessLevelManage = parsed; AdditionalData.Remove("minimum_access_level_manage"); } } },
+                { "prompt_injection_protection_level", n => { var parsed = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiSettingsPromptInjectionProtectionLevel>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValuePromptInjectionProtectionLevel = default; _explicitNullProperties?.Remove("prompt_injection_protection_level"); AdditionalData["prompt_injection_protection_level"] = unknown; } else { PromptInjectionProtectionLevel = parsed; AdditionalData.Remove("prompt_injection_protection_level"); } } },
                 { "require_sandbox", n => { RequireSandbox = n.GetBoolValue(); } },
                 { "web_search_enabled", n => { WebSearchEnabled = n.GetBoolValue(); } },
             };
@@ -202,11 +167,11 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteBoolValue("external_agent_audit_event_content_enabled", ExternalAgentAuditEventContentEnabled);
             writer.WriteBoolValue("foundational_agents_default_enabled", FoundationalAgentsDefaultEnabled);
             writer.WriteBoolValue("include_recommended_allowed", IncludeRecommendedAllowed);
-            writer.WriteStringValue("minimum_access_level_enable_on_projects", MinimumAccessLevelEnableOnProjects);
-            writer.WriteStringValue("minimum_access_level_execute", MinimumAccessLevelExecute);
-            writer.WriteStringValue("minimum_access_level_execute_async", MinimumAccessLevelExecuteAsync);
-            writer.WriteStringValue("minimum_access_level_manage", MinimumAccessLevelManage);
-            writer.WriteStringValue("prompt_injection_protection_level", PromptInjectionProtectionLevel);
+            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiSettingsMinimumAccessLevelEnableOnProjects>("minimum_access_level_enable_on_projects", MinimumAccessLevelEnableOnProjects);
+            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiSettingsMinimumAccessLevelExecute>("minimum_access_level_execute", MinimumAccessLevelExecute);
+            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiSettingsMinimumAccessLevelExecuteAsync>("minimum_access_level_execute_async", MinimumAccessLevelExecuteAsync);
+            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiSettingsMinimumAccessLevelManage>("minimum_access_level_manage", MinimumAccessLevelManage);
+            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAiSettingsPromptInjectionProtectionLevel>("prompt_injection_protection_level", PromptInjectionProtectionLevel);
             writer.WriteBoolValue("require_sandbox", RequireSandbox);
             writer.WriteBoolValue("web_search_enabled", WebSearchEnabled);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);

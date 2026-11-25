@@ -15,5 +15,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         #pragma warning disable CS1591
         GitlabAutoflow,
         #pragma warning restore CS1591
+        [EnumMember(Value = "gitlab-repositories")]
+        #pragma warning disable CS1591
+        GitlabRepositories,
+        #pragma warning restore CS1591
     }
 }

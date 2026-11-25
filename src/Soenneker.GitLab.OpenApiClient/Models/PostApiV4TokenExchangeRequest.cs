@@ -23,6 +23,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             else if (parseNode.GetChildNode("expires_in") is { } nullNodeExpiresIn && nullNodeExpiresIn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExpiresIn = null;
             if (parseNode.GetChildNode("organization_id") is null) { _explicitNullValueOrganizationId = default!; _explicitNullProperties?.Remove("organization_id"); }
             else if (parseNode.GetChildNode("organization_id") is { } nullNodeOrganizationId && nullNodeOrganizationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrganizationId = null;
+            if (parseNode.GetChildNode("resource") is null) { _explicitNullValueResource = default!; _explicitNullProperties?.Remove("resource"); }
+            else if (parseNode.GetChildNode("resource") is { } nullNodeResource && nullNodeResource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Resource = null;
+            if (parseNode.GetChildNode("scope") is null) { _explicitNullValueScope = default!; _explicitNullProperties?.Remove("scope"); }
+            else if (parseNode.GetChildNode("scope") is { } nullNodeScope && nullNodeScope.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Scope = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -30,12 +34,32 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Target service audience. Required unless a CI/CD ID token names it in its target_audience claim. When both are sent, they must match.</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4TokenExchangeRequestAudience? Audience { get => _explicitNullValueAudience; set { _explicitNullValueAudience = value; AdditionalData?.Remove("audience"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("audience"); else _explicitNullProperties?.Remove("audience"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4TokenExchangeRequestAudience? _explicitNullValueAudience = default!;
-        /// <summary>Requested token lifetime in seconds. The granted lifetime may be shorter than requested depending on the authentication method used to call this endpoint or the audience.</summary>
+        /// <summary>Requested token lifetime in seconds. The granted lifetime may be shorter than requested depending on the authentication method used to call this endpoint or the audience. For an audience bound to a resource, it never outlasts the token used to request it.</summary>
         public int? ExpiresIn { get => _explicitNullValueExpiresIn; set { _explicitNullValueExpiresIn = value; AdditionalData?.Remove("expires_in"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expires_in"); else _explicitNullProperties?.Remove("expires_in"); } }
         private int? _explicitNullValueExpiresIn = default!;
         /// <summary>ID of the organization to mint the token for. Required for Artifact Registry when the caller belongs to more than one.</summary>
         public int? OrganizationId { get => _explicitNullValueOrganizationId; set { _explicitNullValueOrganizationId = value; AdditionalData?.Remove("organization_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organization_id"); else _explicitNullProperties?.Remove("organization_id"); } }
         private int? _explicitNullValueOrganizationId = default!;
+        /// <summary>Global ID of the resource the token grants access to, such as gid://gitlab/Project/1. Required for gitlab-repositories, ignored for other audiences.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Resource { get => _explicitNullValueResource; set { _explicitNullValueResource = value; AdditionalData?.Remove("resource"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resource"); else _explicitNullProperties?.Remove("resource"); } }
+        private string? _explicitNullValueResource = default!;
+#nullable restore
+#else
+        public string Resource { get => _explicitNullValueResource; set { _explicitNullValueResource = value; AdditionalData?.Remove("resource"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resource"); else _explicitNullProperties?.Remove("resource"); } }
+        private string _explicitNullValueResource = default!;
+#endif
+        /// <summary>Space-separated actions to grant on the resource. For gitlab-repositories, read, write, or both. Defaults to read. Ignored for other audiences.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Scope { get => _explicitNullValueScope; set { _explicitNullValueScope = value; AdditionalData?.Remove("scope"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scope"); else _explicitNullProperties?.Remove("scope"); } }
+        private string? _explicitNullValueScope = default!;
+#nullable restore
+#else
+        public string Scope { get => _explicitNullValueScope; set { _explicitNullValueScope = value; AdditionalData?.Remove("scope"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scope"); else _explicitNullProperties?.Remove("scope"); } }
+        private string _explicitNullValueScope = default!;
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4TokenExchangeRequest"/> and sets the default values.
         /// </summary>
@@ -60,11 +84,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(5)
             {
                 { "audience", n => { var parsed = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4TokenExchangeRequestAudience>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAudience = default; _explicitNullProperties?.Remove("audience"); AdditionalData["audience"] = unknown; } else { Audience = parsed; AdditionalData.Remove("audience"); } } },
                 { "expires_in", n => { ExpiresIn = n.GetIntValue(); } },
                 { "organization_id", n => { OrganizationId = n.GetIntValue(); } },
+                { "resource", n => { Resource = n.GetStringValue(); } },
+                { "scope", n => { Scope = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -77,6 +103,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4TokenExchangeRequestAudience>("audience", Audience);
             writer.WriteIntValue("expires_in", ExpiresIn);
             writer.WriteIntValue("organization_id", OrganizationId);
+            writer.WriteStringValue("resource", Resource);
+            writer.WriteStringValue("scope", Scope);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

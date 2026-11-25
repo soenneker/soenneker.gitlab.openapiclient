@@ -23,6 +23,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             else if (parseNode.GetChildNode("app_version") is { } nullNodeAppVersion && nullNodeAppVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AppVersion = null;
             if (parseNode.GetChildNode("bundle_id") is null) { _explicitNullValueBundleId = default!; _explicitNullProperties?.Remove("bundle_id"); }
             else if (parseNode.GetChildNode("bundle_id") is { } nullNodeBundleId && nullNodeBundleId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BundleId = null;
+            if (parseNode.GetChildNode("content_key") is null) { _explicitNullValueContentKey = default!; _explicitNullProperties?.Remove("content_key"); }
+            else if (parseNode.GetChildNode("content_key") is { } nullNodeContentKey && nullNodeContentKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContentKey = null;
             if (parseNode.GetChildNode("device_name") is null) { _explicitNullValueDeviceName = default!; _explicitNullProperties?.Remove("device_name"); }
             else if (parseNode.GetChildNode("device_name") is { } nullNodeDeviceName && nullNodeDeviceName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeviceName = null;
             if (parseNode.GetChildNode("device_token") is null) { _explicitNullValueDeviceToken = default!; _explicitNullProperties?.Remove("device_token"); }
@@ -59,6 +61,16 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string BundleId { get => _explicitNullValueBundleId; set { _explicitNullValueBundleId = value; AdditionalData?.Remove("bundle_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bundle_id"); else _explicitNullProperties?.Remove("bundle_id"); } }
         private string _explicitNullValueBundleId = default!;
+#endif
+        /// <summary>A base64-encoded 32-byte key the device minted; with it, notification content is sent AES-256-GCM encrypted for the app&apos;s notification extension and the alert is generic</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ContentKey { get => _explicitNullValueContentKey; set { _explicitNullValueContentKey = value; AdditionalData?.Remove("content_key"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("content_key"); else _explicitNullProperties?.Remove("content_key"); } }
+        private string? _explicitNullValueContentKey = default!;
+#nullable restore
+#else
+        public string ContentKey { get => _explicitNullValueContentKey; set { _explicitNullValueContentKey = value; AdditionalData?.Remove("content_key"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("content_key"); else _explicitNullProperties?.Remove("content_key"); } }
+        private string _explicitNullValueContentKey = default!;
 #endif
         /// <summary>A human-readable device name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -119,11 +131,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(8)
+            return new Dictionary<string, Action<IParseNode>>(9)
             {
                 { "apns_environment", n => { var parsed = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4UserPushSubscriptionsRequestApnsEnvironment>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueApnsEnvironment = default; _explicitNullProperties?.Remove("apns_environment"); AdditionalData["apns_environment"] = unknown; } else { ApnsEnvironment = parsed; AdditionalData.Remove("apns_environment"); } } },
                 { "app_version", n => { AppVersion = n.GetStringValue(); } },
                 { "bundle_id", n => { BundleId = n.GetStringValue(); } },
+                { "content_key", n => { ContentKey = n.GetStringValue(); } },
                 { "device_name", n => { DeviceName = n.GetStringValue(); } },
                 { "device_token", n => { DeviceToken = n.GetStringValue(); } },
                 { "locale", n => { Locale = n.GetStringValue(); } },
@@ -141,6 +154,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4UserPushSubscriptionsRequestApnsEnvironment>("apns_environment", ApnsEnvironment);
             writer.WriteStringValue("app_version", AppVersion);
             writer.WriteStringValue("bundle_id", BundleId);
+            writer.WriteStringValue("content_key", ContentKey);
             writer.WriteStringValue("device_name", DeviceName);
             writer.WriteStringValue("device_token", DeviceToken);
             writer.WriteStringValue("locale", Locale);

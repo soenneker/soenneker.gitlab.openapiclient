@@ -70,7 +70,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Broadcast_messages.Item
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSystemBroadcastMessage>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSystemBroadcastMessage.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Updates a specified broadcast message.
+        /// Updates a specified broadcast message. Broadcast messages are publicly accessible through the API regardless of targeting settings. Do not include sensitive or confidential information.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSystemBroadcastMessage"/></returns>
         /// <param name="body">The request body</param>
@@ -128,7 +128,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Broadcast_messages.Item
             return requestInfo;
         }
         /// <summary>
-        /// Updates a specified broadcast message.
+        /// Updates a specified broadcast message. Broadcast messages are publicly accessible through the API regardless of targeting settings. Do not include sensitive or confidential information.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

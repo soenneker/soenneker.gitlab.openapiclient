@@ -316,12 +316,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The links property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Links { get => _explicitNullValueLinks; set { _explicitNullValueLinks = value; AdditionalData?.Remove("links"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("links"); else _explicitNullProperties?.Remove("links"); } }
-        private string? _explicitNullValueLinks = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFindingEntityLinksItemProperty>? Links { get => _explicitNullValueLinks; set { _explicitNullValueLinks = value; AdditionalData?.Remove("links"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("links"); else _explicitNullProperties?.Remove("links"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFindingEntityLinksItemProperty>? _explicitNullValueLinks = default!;
 #nullable restore
 #else
-        public string Links { get => _explicitNullValueLinks; set { _explicitNullValueLinks = value; AdditionalData?.Remove("links"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("links"); else _explicitNullProperties?.Remove("links"); } }
-        private string _explicitNullValueLinks = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFindingEntityLinksItemProperty> Links { get => _explicitNullValueLinks; set { _explicitNullValueLinks = value; AdditionalData?.Remove("links"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("links"); else _explicitNullProperties?.Remove("links"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFindingEntityLinksItemProperty> _explicitNullValueLinks = default!;
 #endif
         /// <summary>The location property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -386,12 +386,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The remediations property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Remediations { get => _explicitNullValueRemediations; set { _explicitNullValueRemediations = value; AdditionalData?.Remove("remediations"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("remediations"); else _explicitNullProperties?.Remove("remediations"); } }
-        private string? _explicitNullValueRemediations = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFindingEntityRemediationsItemProperty>? Remediations { get => _explicitNullValueRemediations; set { _explicitNullValueRemediations = value; AdditionalData?.Remove("remediations"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("remediations"); else _explicitNullProperties?.Remove("remediations"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFindingEntityRemediationsItemProperty>? _explicitNullValueRemediations = default!;
 #nullable restore
 #else
-        public string Remediations { get => _explicitNullValueRemediations; set { _explicitNullValueRemediations = value; AdditionalData?.Remove("remediations"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("remediations"); else _explicitNullProperties?.Remove("remediations"); } }
-        private string _explicitNullValueRemediations = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFindingEntityRemediationsItemProperty> Remediations { get => _explicitNullValueRemediations; set { _explicitNullValueRemediations = value; AdditionalData?.Remove("remediations"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("remediations"); else _explicitNullProperties?.Remove("remediations"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFindingEntityRemediationsItemProperty> _explicitNullValueRemediations = default!;
 #endif
         /// <summary>The report_type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -559,14 +559,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "identifiers", n => { Identifiers = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesIdentifierEntity>(global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesIdentifierEntity.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "issue_feedback", n => { IssueFeedback = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFeedbackEntity>(global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFeedbackEntity.CreateFromDiscriminatorValue); } },
                 { "issue_links", n => { IssueLinks = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesIssueLinkEntity>(global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesIssueLinkEntity.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "links", n => { Links = n.GetStringValue(); } },
+                { "links", n => { Links = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFindingEntityLinksItemProperty>(global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFindingEntityLinksItemProperty.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "location", n => { Location = n.GetStringValue(); } },
                 { "matches_auto_dismiss_policy", n => { MatchesAutoDismissPolicy = n.GetStringValue(); } },
                 { "merge_request_feedback", n => { MergeRequestFeedback = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFeedbackEntity>(global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFeedbackEntity.CreateFromDiscriminatorValue); } },
                 { "merge_request_links", n => { MergeRequestLinks = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesMergeRequestLinkEntity>(global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesMergeRequestLinkEntity.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "project", n => { Project = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ProjectEntity>(global::Soenneker.GitLab.OpenApiClient.Models.ProjectEntity.CreateFromDiscriminatorValue); } },
-                { "remediations", n => { Remediations = n.GetStringValue(); } },
+                { "remediations", n => { Remediations = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFindingEntityRemediationsItemProperty>(global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFindingEntityRemediationsItemProperty.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "report_type", n => { ReportType = n.GetStringValue(); } },
                 { "request", n => { Request = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesRequestEntity>(global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesRequestEntity.CreateFromDiscriminatorValue); } },
                 { "response", n => { Response = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesResponseEntity>(global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesResponseEntity.CreateFromDiscriminatorValue); } },
@@ -609,14 +609,14 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesIdentifierEntity>("identifiers", Identifiers);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFeedbackEntity>("issue_feedback", IssueFeedback);
             writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesIssueLinkEntity>("issue_links", IssueLinks);
-            writer.WriteStringValue("links", Links);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFindingEntityLinksItemProperty>("links", Links);
             writer.WriteStringValue("location", Location);
             writer.WriteStringValue("matches_auto_dismiss_policy", MatchesAutoDismissPolicy);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFeedbackEntity>("merge_request_feedback", MergeRequestFeedback);
             writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesMergeRequestLinkEntity>("merge_request_links", MergeRequestLinks);
             writer.WriteStringValue("name", Name);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ProjectEntity>("project", Project);
-            writer.WriteStringValue("remediations", Remediations);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesFindingEntityRemediationsItemProperty>("remediations", Remediations);
             writer.WriteStringValue("report_type", ReportType);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesRequestEntity>("request", Request);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.VulnerabilitiesResponseEntity>("response", Response);

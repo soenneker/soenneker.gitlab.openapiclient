@@ -68,7 +68,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The confidential property</summary>
         public bool? Confidential { get => _explicitNullValueConfidential; set { _explicitNullValueConfidential = value; AdditionalData?.Remove("confidential"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("confidential"); else _explicitNullProperties?.Remove("confidential"); } }
         private bool? _explicitNullValueConfidential = default!;
-        /// <summary>The granular_scopes property</summary>
+        /// <summary>Granular scopes stored on the application, each with `access`, `permissions`, `group_id`, and `project_id`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGranularScope>? GranularScopes { get => _explicitNullValueGranularScopes; set { _explicitNullValueGranularScopes = value; AdditionalData?.Remove("granular_scopes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("granular_scopes"); else _explicitNullProperties?.Remove("granular_scopes"); } }

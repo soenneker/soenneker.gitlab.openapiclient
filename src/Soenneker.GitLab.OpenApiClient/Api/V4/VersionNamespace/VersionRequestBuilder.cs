@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.VersionNamespace
         {
         }
         /// <summary>
-        /// This feature was introduced in GitLab 8.13 and deprecated in 15.5. We recommend you instead use the Metadata API.
+        /// Retrieves metadata information for the GitLab instance. Deprecated. Use `GET /metadata` instead.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMetadata"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.VersionNamespace
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMetadata>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesMetadata.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// This feature was introduced in GitLab 8.13 and deprecated in 15.5. We recommend you instead use the Metadata API.
+        /// Retrieves metadata information for the GitLab instance. Deprecated. Use `GET /metadata` instead.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

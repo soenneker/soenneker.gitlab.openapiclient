@@ -53,7 +53,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Features
         {
         }
         /// <summary>
-        /// Lists all feature flags for the instance.
+        /// Lists all persisted feature flags for the instance, with their gate values.
         /// </summary>
         /// <returns>A List&lt;global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesFeature&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -72,7 +72,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Features
             return collectionResult?.AsList();
         }
         /// <summary>
-        /// Lists all feature flags for the instance.
+        /// Lists all persisted feature flags for the instance, with their gate values.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

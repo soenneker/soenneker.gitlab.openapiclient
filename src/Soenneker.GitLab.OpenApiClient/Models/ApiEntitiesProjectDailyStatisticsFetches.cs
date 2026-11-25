@@ -7,10 +7,11 @@ using System.IO;
 using System;
 namespace Soenneker.GitLab.OpenApiClient.Models
 {
+    /// <summary>
+    /// Fetch statistics of the project for the last 30 days.
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public partial class ApiEntitiesProjectDailyStatisticsFetches : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
     , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
         // Track explicitly assigned nulls separately from absent properties.
         private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
@@ -25,7 +26,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The days property</summary>
+        /// <summary>Daily fetch statistics.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectDailyFetches>? Days { get => _explicitNullValueDays; set { _explicitNullValueDays = value; AdditionalData?.Remove("days"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("days"); else _explicitNullProperties?.Remove("days"); } }
@@ -35,7 +36,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectDailyFetches> Days { get => _explicitNullValueDays; set { _explicitNullValueDays = value; AdditionalData?.Remove("days"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("days"); else _explicitNullProperties?.Remove("days"); } }
         private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesProjectDailyFetches> _explicitNullValueDays = default!;
 #endif
-        /// <summary>The total property</summary>
+        /// <summary>Total number of fetches in the last 30 days.</summary>
         public int? Total { get => _explicitNullValueTotal; set { _explicitNullValueTotal = value; AdditionalData?.Remove("total"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total"); else _explicitNullProperties?.Remove("total"); } }
         private int? _explicitNullValueTotal = default!;
         /// <summary>

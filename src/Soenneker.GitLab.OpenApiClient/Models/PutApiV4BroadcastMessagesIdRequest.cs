@@ -83,7 +83,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Starting time, in UTC. When creating a message, defaults to the current time.</summary>
         public DateTimeOffset? StartsAt { get => _explicitNullValueStartsAt; set { _explicitNullValueStartsAt = value; AdditionalData?.Remove("starts_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("starts_at"); else _explicitNullProperties?.Remove("starts_at"); } }
         private DateTimeOffset? _explicitNullValueStartsAt = default!;
-        /// <summary>Target access levels (roles) of the broadcast message.</summary>
+        /// <summary>Target access levels (roles) of the broadcast message. Possible values: `10` (Guest), `15` (Planner), `20` (Reporter), `30` (Developer), `40` (Maintainer), `50` (Owner).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<int?>? TargetAccessLevels { get => _explicitNullValueTargetAccessLevels; set { _explicitNullValueTargetAccessLevels = value; AdditionalData?.Remove("target_access_levels"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_access_levels"); else _explicitNullProperties?.Remove("target_access_levels"); } }
@@ -103,7 +103,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string TargetPath { get => _explicitNullValueTargetPath; set { _explicitNullValueTargetPath = value; AdditionalData?.Remove("target_path"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("target_path"); else _explicitNullProperties?.Remove("target_path"); } }
         private string _explicitNullValueTargetPath = default!;
 #endif
-        /// <summary>Color theme for the broadcast message. Applies only to banners.</summary>
+        /// <summary>Color theme for the broadcast message. Applies only to banners. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/498900) in GitLab 17.6.</summary>
         public global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4BroadcastMessagesIdRequestTheme? Theme { get => _explicitNullValueTheme; set { _explicitNullValueTheme = value; AdditionalData?.Remove("theme"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("theme"); else _explicitNullProperties?.Remove("theme"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.PutApiV4BroadcastMessagesIdRequestTheme? _explicitNullValueTheme = default!;
         /// <summary>

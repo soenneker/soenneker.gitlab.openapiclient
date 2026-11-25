@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Ci.Lint
         {
         }
         /// <summary>
-        /// Validates the `.gitlab-ci.yml` configuration for a specified project.
+        /// Validates the existing `.gitlab-ci.yml` configuration for a specified project. The validation runs in the context of the project, using the CI/CD variables of the project and searching the files of the project for `include:local` entries. If the `ci_lint_api_require_authentication` setting is enabled, this endpoint requires authentication, including for public projects. This endpoint does not accept CI/CD job tokens. Use a personal, project, or group access token instead.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiLintResult"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Ci.Lint
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiLintResult>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiLintResult.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Validates a provided CI/CD configuration in the context of a specified project.
+        /// Validates a provided CI/CD configuration in the context of a specified project. The validation uses the CI/CD variables of the project and searches the files of the project for `include:local` entries.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiLintResult"/></returns>
         /// <param name="body">The request body</param>
@@ -72,7 +72,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Ci.Lint
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiLintResult>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiLintResult.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Validates the `.gitlab-ci.yml` configuration for a specified project.
+        /// Validates the existing `.gitlab-ci.yml` configuration for a specified project. The validation runs in the context of the project, using the CI/CD variables of the project and searching the files of the project for `include:local` entries. If the `ci_lint_api_require_authentication` setting is enabled, this endpoint requires authentication, including for public projects. This endpoint does not accept CI/CD job tokens. Use a personal, project, or group access token instead.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -91,7 +91,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Ci.Lint
             return requestInfo;
         }
         /// <summary>
-        /// Validates a provided CI/CD configuration in the context of a specified project.
+        /// Validates a provided CI/CD configuration in the context of a specified project. The validation uses the CI/CD variables of the project and searches the files of the project for `include:local` entries.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
@@ -122,7 +122,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Ci.Lint
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Ci.Lint.LintRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Validates the `.gitlab-ci.yml` configuration for a specified project.
+        /// Validates the existing `.gitlab-ci.yml` configuration for a specified project. The validation runs in the context of the project, using the CI/CD variables of the project and searching the files of the project for `include:local` entries. If the `ci_lint_api_require_authentication` setting is enabled, this endpoint requires authentication, including for public projects. This endpoint does not accept CI/CD job tokens. Use a personal, project, or group access token instead.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class LintRequestBuilderGetQueryParameters 

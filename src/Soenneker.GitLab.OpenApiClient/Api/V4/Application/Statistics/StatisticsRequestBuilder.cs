@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Application.Statistics
         {
         }
         /// <summary>
-        /// Retrieves the current application statistics for this GitLab instance.
+        /// Retrieves the current application statistics for this GitLab instance. For values less than 10,000, an exact count is returned. For values of 10,000 and greater, the count might be approximate.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationStatistics"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
@@ -52,7 +52,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Application.Statistics
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationStatistics>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesApplicationStatistics.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Retrieves the current application statistics for this GitLab instance.
+        /// Retrieves the current application statistics for this GitLab instance. For values less than 10,000, an exact count is returned. For values of 10,000 and greater, the count might be approximate.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>

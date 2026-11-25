@@ -33,7 +33,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Sidekiq.Queues.Item
         {
         }
         /// <summary>
-        /// Deletes jobs from a Sidekiq queue that match the specified metadata. At least one of 32 related parameters must be provided.
+        /// Deletes jobs from a Sidekiq queue that match the specified metadata. The response has three fields: `deleted_jobs` is the number of jobs deleted by the request, `queue_size` is the remaining size of the queue after the request, and `completed` is whether the request processed the entire queue in time. If `completed` is `false`, retrying with the same parameters can delete more jobs, including jobs added after the first request. Only available to administrators. At least one of 32 related parameters must be provided.
         /// </summary>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -50,7 +50,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Sidekiq.Queues.Item
             await RequestAdapter.SendNoContentAsync(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Deletes jobs from a Sidekiq queue that match the specified metadata. At least one of 32 related parameters must be provided.
+        /// Deletes jobs from a Sidekiq queue that match the specified metadata. The response has three fields: `deleted_jobs` is the number of jobs deleted by the request, `queue_size` is the remaining size of the queue after the request, and `completed` is whether the request processed the entire queue in time. If `completed` is `false`, retrying with the same parameters can delete more jobs, including jobs added after the first request. Only available to administrators. At least one of 32 related parameters must be provided.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -77,7 +77,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Sidekiq.Queues.Item
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Sidekiq.Queues.Item.WithQueueNameItemRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Deletes jobs from a Sidekiq queue that match the specified metadata. At least one of 32 related parameters must be provided.
+        /// Deletes jobs from a Sidekiq queue that match the specified metadata. The response has three fields: `deleted_jobs` is the number of jobs deleted by the request, `queue_size` is the remaining size of the queue after the request, and `completed` is whether the request processed the entire queue in time. If `completed` is `false`, retrying with the same parameters can delete more jobs, including jobs added after the first request. Only available to administrators. At least one of 32 related parameters must be provided.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class WithQueueNameItemRequestBuilderDeleteQueryParameters 
@@ -142,7 +142,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Sidekiq.Queues.Item
             [QueryParameter("bulk_import_entity_id")]
             public string BulkImportEntityId { get; set; }
 #endif
-            /// <summary>Metadata key to match</summary>
+            /// <summary>Endpoint or background job that scheduled the job, for example `ProjectsController#create`, `/api/:version/projects/:id`, or `PostReceive`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("caller_id")]
@@ -162,7 +162,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Sidekiq.Queues.Item
             [QueryParameter("client_id")]
             public string ClientId { get; set; }
 #endif
-            /// <summary>Metadata key to match</summary>
+            /// <summary>Client whose request scheduled the jobs, for example `vscode` or `gitlab-mobile-ios`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("client_name")]
@@ -172,7 +172,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Sidekiq.Queues.Item
             [QueryParameter("client_name")]
             public string ClientName { get; set; }
 #endif
-            /// <summary>Metadata key to match</summary>
+            /// <summary>Kind of client whose request scheduled the jobs, for example `browser`, `ide`, or `mobile`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("client_type")]
@@ -182,7 +182,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Sidekiq.Queues.Item
             [QueryParameter("client_type")]
             public string ClientType { get; set; }
 #endif
-            /// <summary>Metadata key to match</summary>
+            /// <summary>Release of the client whose request scheduled the jobs, for example `6.21.0` or `1.2.0`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("client_version")]
@@ -192,7 +192,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Sidekiq.Queues.Item
             [QueryParameter("client_version")]
             public string ClientVersion { get; set; }
 #endif
-            /// <summary>Metadata key to match</summary>
+            /// <summary>Feature category of the background job, for example `team_planning` or `code_review`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("feature_category")]
@@ -282,7 +282,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Sidekiq.Queues.Item
             [QueryParameter("pipeline_id")]
             public string PipelineId { get; set; }
 #endif
-            /// <summary>Metadata key to match</summary>
+            /// <summary>Full path of the project where the jobs were scheduled from.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("project")]
@@ -322,7 +322,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Sidekiq.Queues.Item
             [QueryParameter("root_caller_id")]
             public string RootCallerId { get; set; }
 #endif
-            /// <summary>Metadata key to match</summary>
+            /// <summary>Root namespace of the project.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("root_namespace")]
@@ -362,7 +362,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Sidekiq.Queues.Item
             [QueryParameter("sidekiq_destination_shard_redis")]
             public string SidekiqDestinationShardRedis { get; set; }
 #endif
-            /// <summary>Metadata key to match</summary>
+            /// <summary>Subscription plan of the root namespace. GitLab.com only.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("subscription_plan")]
@@ -372,7 +372,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Sidekiq.Queues.Item
             [QueryParameter("subscription_plan")]
             public string SubscriptionPlan { get; set; }
 #endif
-            /// <summary>Metadata key to match</summary>
+            /// <summary>Username of the user who scheduled the jobs.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("user")]
@@ -392,7 +392,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Admin.Sidekiq.Queues.Item
             [QueryParameter("user_id")]
             public string UserId { get; set; }
 #endif
-            /// <summary>Metadata key to match</summary>
+            /// <summary>Class of the background job worker, for example `PostReceive` or `MergeWorker`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
             [QueryParameter("worker_class")]

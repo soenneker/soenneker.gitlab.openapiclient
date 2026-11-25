@@ -37,7 +37,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The column_name property</summary>
+        /// <summary>Name of the column the migration iterates over.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ColumnName { get => _explicitNullValueColumnName; set { _explicitNullValueColumnName = value; AdditionalData?.Remove("column_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("column_name"); else _explicitNullProperties?.Remove("column_name"); } }
@@ -47,10 +47,10 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string ColumnName { get => _explicitNullValueColumnName; set { _explicitNullValueColumnName = value; AdditionalData?.Remove("column_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("column_name"); else _explicitNullProperties?.Remove("column_name"); } }
         private string _explicitNullValueColumnName = default!;
 #endif
-        /// <summary>The created_at property</summary>
+        /// <summary>Timestamp when the migration was created.</summary>
         public DateTimeOffset? CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; AdditionalData?.Remove("created_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_at"); else _explicitNullProperties?.Remove("created_at"); } }
         private DateTimeOffset? _explicitNullValueCreatedAt = default!;
-        /// <summary>The estimated_time_remaining property</summary>
+        /// <summary>Estimated time until the migration completes. `null` when the migration is finished or no estimate is available.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? EstimatedTimeRemaining { get => _explicitNullValueEstimatedTimeRemaining; set { _explicitNullValueEstimatedTimeRemaining = value; AdditionalData?.Remove("estimated_time_remaining"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("estimated_time_remaining"); else _explicitNullProperties?.Remove("estimated_time_remaining"); } }
@@ -60,7 +60,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string EstimatedTimeRemaining { get => _explicitNullValueEstimatedTimeRemaining; set { _explicitNullValueEstimatedTimeRemaining = value; AdditionalData?.Remove("estimated_time_remaining"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("estimated_time_remaining"); else _explicitNullProperties?.Remove("estimated_time_remaining"); } }
         private string _explicitNullValueEstimatedTimeRemaining = default!;
 #endif
-        /// <summary>The id property</summary>
+        /// <summary>ID of the batched background migration.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
@@ -70,7 +70,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string _explicitNullValueId = default!;
 #endif
-        /// <summary>The job_class_name property</summary>
+        /// <summary>Name of the migration job class.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? JobClassName { get => _explicitNullValueJobClassName; set { _explicitNullValueJobClassName = value; AdditionalData?.Remove("job_class_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("job_class_name"); else _explicitNullProperties?.Remove("job_class_name"); } }
@@ -80,20 +80,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string JobClassName { get => _explicitNullValueJobClassName; set { _explicitNullValueJobClassName = value; AdditionalData?.Remove("job_class_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("job_class_name"); else _explicitNullProperties?.Remove("job_class_name"); } }
         private string _explicitNullValueJobClassName = default!;
 #endif
-        /// <summary>The progress property</summary>
+        /// <summary>Completion percentage of the migration.</summary>
         public double? Progress { get => _explicitNullValueProgress; set { _explicitNullValueProgress = value; AdditionalData?.Remove("progress"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("progress"); else _explicitNullProperties?.Remove("progress"); } }
         private double? _explicitNullValueProgress = default!;
-        /// <summary>The status property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; AdditionalData?.Remove("status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
-        private string? _explicitNullValueStatus = default!;
-#nullable restore
-#else
-        public string Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; AdditionalData?.Remove("status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
-        private string _explicitNullValueStatus = default!;
-#endif
-        /// <summary>The table_name property</summary>
+        /// <summary>Status of the migration.</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBatchedBackgroundMigrationStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; AdditionalData?.Remove("status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBatchedBackgroundMigrationStatus? _explicitNullValueStatus = default!;
+        /// <summary>Name of the table the migration iterates over.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? TableName { get => _explicitNullValueTableName; set { _explicitNullValueTableName = value; AdditionalData?.Remove("table_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("table_name"); else _explicitNullProperties?.Remove("table_name"); } }
@@ -134,7 +127,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "job_class_name", n => { JobClassName = n.GetStringValue(); } },
                 { "progress", n => { Progress = n.GetDoubleValue(); } },
-                { "status", n => { Status = n.GetStringValue(); } },
+                { "status", n => { var parsed = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBatchedBackgroundMigrationStatus>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStatus = default; _explicitNullProperties?.Remove("status"); AdditionalData["status"] = unknown; } else { Status = parsed; AdditionalData.Remove("status"); } } },
                 { "table_name", n => { TableName = n.GetStringValue(); } },
             };
         }
@@ -151,7 +144,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("job_class_name", JobClassName);
             writer.WriteDoubleValue("progress", Progress);
-            writer.WriteStringValue("status", Status);
+            writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBatchedBackgroundMigrationStatus>("status", Status);
             writer.WriteStringValue("table_name", TableName);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

@@ -35,13 +35,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The completed property</summary>
+        /// <summary>If `true`, the migration is completed.</summary>
         public bool? Completed { get => _explicitNullValueCompleted; set { _explicitNullValueCompleted = value; AdditionalData?.Remove("completed"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("completed"); else _explicitNullProperties?.Remove("completed"); } }
         private bool? _explicitNullValueCompleted = default!;
-        /// <summary>The completed_at property</summary>
+        /// <summary>Completion date for the migration.</summary>
         public DateTimeOffset? CompletedAt { get => _explicitNullValueCompletedAt; set { _explicitNullValueCompletedAt = value; AdditionalData?.Remove("completed_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("completed_at"); else _explicitNullProperties?.Remove("completed_at"); } }
         private DateTimeOffset? _explicitNullValueCompletedAt = default!;
-        /// <summary>The migration_state property</summary>
+        /// <summary>Stored migration state.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSearchMigrationMigrationStateProperty? MigrationState { get => _explicitNullValueMigrationState; set { _explicitNullValueMigrationState = value; AdditionalData?.Remove("migration_state"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("migration_state"); else _explicitNullProperties?.Remove("migration_state"); } }
@@ -51,7 +51,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSearchMigrationMigrationStateProperty MigrationState { get => _explicitNullValueMigrationState; set { _explicitNullValueMigrationState = value; AdditionalData?.Remove("migration_state"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("migration_state"); else _explicitNullProperties?.Remove("migration_state"); } }
         private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesSearchMigrationMigrationStateProperty _explicitNullValueMigrationState = default!;
 #endif
-        /// <summary>The name property</summary>
+        /// <summary>Name of the migration.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
@@ -61,13 +61,13 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string _explicitNullValueName = default!;
 #endif
-        /// <summary>The obsolete property</summary>
+        /// <summary>If `true`, the migration has been marked as obsolete.</summary>
         public bool? Obsolete { get => _explicitNullValueObsolete; set { _explicitNullValueObsolete = value; AdditionalData?.Remove("obsolete"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("obsolete"); else _explicitNullProperties?.Remove("obsolete"); } }
         private bool? _explicitNullValueObsolete = default!;
-        /// <summary>The started_at property</summary>
+        /// <summary>Start date for the migration.</summary>
         public DateTimeOffset? StartedAt { get => _explicitNullValueStartedAt; set { _explicitNullValueStartedAt = value; AdditionalData?.Remove("started_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("started_at"); else _explicitNullProperties?.Remove("started_at"); } }
         private DateTimeOffset? _explicitNullValueStartedAt = default!;
-        /// <summary>The version property</summary>
+        /// <summary>Version of the migration.</summary>
         public long? Version { get => _explicitNullValueVersion; set { _explicitNullValueVersion = value; AdditionalData?.Remove("version"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("version"); else _explicitNullProperties?.Remove("version"); } }
         private long? _explicitNullValueVersion = default!;
         /// <summary>
