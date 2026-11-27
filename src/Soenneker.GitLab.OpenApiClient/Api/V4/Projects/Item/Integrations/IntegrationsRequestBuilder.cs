@@ -54,6 +54,7 @@ using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Integrations.Teamcity;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Integrations.Telegram;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Integrations.UnifyCircuit;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Integrations.WebexTeams;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Integrations.Workday;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Integrations.Youtrack;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Integrations.Zentao;
 using Soenneker.GitLab.OpenApiClient.Models;
@@ -319,6 +320,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Integrations
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Integrations.WebexTeams.WebexTeamsRequestBuilder WebexTeams
         {
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Integrations.WebexTeams.WebexTeamsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The workday property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Integrations.Workday.WorkdayRequestBuilder Workday
+        {
+            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Integrations.Workday.WorkdayRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The youtrack property</summary>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Projects.Item.Integrations.Youtrack.YoutrackRequestBuilder Youtrack

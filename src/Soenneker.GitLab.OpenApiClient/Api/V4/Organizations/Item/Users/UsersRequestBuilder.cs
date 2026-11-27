@@ -19,9 +19,9 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Organizations.Item.Users
     public partial class UsersRequestBuilder : BaseRequestBuilder
     {
         /// <summary>Gets an item from the Soenneker.GitLab.OpenApiClient.api.v4.organizations.item.users.item collection</summary>
-        /// <param name="position">The ID of the user to update.</param>
+        /// <param name="position">ID or username of the user.</param>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Api.V4.Organizations.Item.Users.Item.WithUserItemRequestBuilder"/></returns>
-        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Organizations.Item.Users.Item.WithUserItemRequestBuilder this[int position]
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Organizations.Item.Users.Item.WithUserItemRequestBuilder this[string position]
         {
             get
             {
@@ -153,7 +153,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Organizations.Item.Users
 #endif
             /// <summary>Sort results by the specified field.</summary>
             [QueryParameter("order_by")]
-            public global::Soenneker.GitLab.OpenApiClient.Models.IdOrderBy? OrderBy { get; set; }
+            public global::Soenneker.GitLab.OpenApiClient.Models.UserIdOrderBy? OrderBy { get; set; }
             /// <summary>Pagination method. Only `keyset` is supported.</summary>
             [QueryParameter("pagination")]
             public global::Soenneker.GitLab.OpenApiClient.Models.KeysetPagination? Pagination { get; set; }

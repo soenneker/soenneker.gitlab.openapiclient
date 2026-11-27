@@ -907,6 +907,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             else if (parseNode.GetChildNode("merge_request_diff_resources_request_limit") is { } nullNodeMergeRequestDiffResourcesRequestLimit && nullNodeMergeRequestDiffResourcesRequestLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MergeRequestDiffResourcesRequestLimit = null;
             if (parseNode.GetChildNode("merge_request_diffs_page_request_limit") is null) { _explicitNullValueMergeRequestDiffsPageRequestLimit = default!; _explicitNullProperties?.Remove("merge_request_diffs_page_request_limit"); }
             else if (parseNode.GetChildNode("merge_request_diffs_page_request_limit") is { } nullNodeMergeRequestDiffsPageRequestLimit && nullNodeMergeRequestDiffsPageRequestLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MergeRequestDiffsPageRequestLimit = null;
+            if (parseNode.GetChildNode("merge_request_notes_index_unauthenticated_limit") is null) { _explicitNullValueMergeRequestNotesIndexUnauthenticatedLimit = default!; _explicitNullProperties?.Remove("merge_request_notes_index_unauthenticated_limit"); }
+            else if (parseNode.GetChildNode("merge_request_notes_index_unauthenticated_limit") is { } nullNodeMergeRequestNotesIndexUnauthenticatedLimit && nullNodeMergeRequestNotesIndexUnauthenticatedLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MergeRequestNotesIndexUnauthenticatedLimit = null;
             if (parseNode.GetChildNode("merge_requests_create_limit") is null) { _explicitNullValueMergeRequestsCreateLimit = default!; _explicitNullProperties?.Remove("merge_requests_create_limit"); }
             else if (parseNode.GetChildNode("merge_requests_create_limit") is { } nullNodeMergeRequestsCreateLimit && nullNodeMergeRequestsCreateLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MergeRequestsCreateLimit = null;
             if (parseNode.GetChildNode("merge_requests_merge_ref_limit") is null) { _explicitNullValueMergeRequestsMergeRefLimit = default!; _explicitNullProperties?.Remove("merge_requests_merge_ref_limit"); }
@@ -1051,6 +1053,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             else if (parseNode.GetChildNode("prevent_merge_requests_author_approval") is { } nullNodePreventMergeRequestsAuthorApproval && nullNodePreventMergeRequestsAuthorApproval.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreventMergeRequestsAuthorApproval = null;
             if (parseNode.GetChildNode("prevent_merge_requests_committers_approval") is null) { _explicitNullValuePreventMergeRequestsCommittersApproval = default!; _explicitNullProperties?.Remove("prevent_merge_requests_committers_approval"); }
             else if (parseNode.GetChildNode("prevent_merge_requests_committers_approval") is { } nullNodePreventMergeRequestsCommittersApproval && nullNodePreventMergeRequestsCommittersApproval.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreventMergeRequestsCommittersApproval = null;
+            if (parseNode.GetChildNode("preview_billable_user_change_limit") is null) { _explicitNullValuePreviewBillableUserChangeLimit = default!; _explicitNullProperties?.Remove("preview_billable_user_change_limit"); }
+            else if (parseNode.GetChildNode("preview_billable_user_change_limit") is { } nullNodePreviewBillableUserChangeLimit && nullNodePreviewBillableUserChangeLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreviewBillableUserChangeLimit = null;
             if (parseNode.GetChildNode("product_analytics_configurator_connection_string") is null) { _explicitNullValueProductAnalyticsConfiguratorConnectionString = default!; _explicitNullProperties?.Remove("product_analytics_configurator_connection_string"); }
             else if (parseNode.GetChildNode("product_analytics_configurator_connection_string") is { } nullNodeProductAnalyticsConfiguratorConnectionString && nullNodeProductAnalyticsConfiguratorConnectionString.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductAnalyticsConfiguratorConnectionString = null;
             if (parseNode.GetChildNode("product_analytics_data_collector_host") is null) { _explicitNullValueProductAnalyticsDataCollectorHost = default!; _explicitNullProperties?.Remove("product_analytics_data_collector_host"); }
@@ -5928,6 +5932,16 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string MergeRequestDiffsPageRequestLimit { get => _explicitNullValueMergeRequestDiffsPageRequestLimit; set { _explicitNullValueMergeRequestDiffsPageRequestLimit = value; AdditionalData?.Remove("merge_request_diffs_page_request_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_request_diffs_page_request_limit"); else _explicitNullProperties?.Remove("merge_request_diffs_page_request_limit"); } }
         private string _explicitNullValueMergeRequestDiffsPageRequestLimit = default!;
 #endif
+        /// <summary>The merge_request_notes_index_unauthenticated_limit property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? MergeRequestNotesIndexUnauthenticatedLimit { get => _explicitNullValueMergeRequestNotesIndexUnauthenticatedLimit; set { _explicitNullValueMergeRequestNotesIndexUnauthenticatedLimit = value; AdditionalData?.Remove("merge_request_notes_index_unauthenticated_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_request_notes_index_unauthenticated_limit"); else _explicitNullProperties?.Remove("merge_request_notes_index_unauthenticated_limit"); } }
+        private string? _explicitNullValueMergeRequestNotesIndexUnauthenticatedLimit = default!;
+#nullable restore
+#else
+        public string MergeRequestNotesIndexUnauthenticatedLimit { get => _explicitNullValueMergeRequestNotesIndexUnauthenticatedLimit; set { _explicitNullValueMergeRequestNotesIndexUnauthenticatedLimit = value; AdditionalData?.Remove("merge_request_notes_index_unauthenticated_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_request_notes_index_unauthenticated_limit"); else _explicitNullProperties?.Remove("merge_request_notes_index_unauthenticated_limit"); } }
+        private string _explicitNullValueMergeRequestNotesIndexUnauthenticatedLimit = default!;
+#endif
         /// <summary>The merge_requests_create_limit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -6647,6 +6661,16 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string PreventMergeRequestsCommittersApproval { get => _explicitNullValuePreventMergeRequestsCommittersApproval; set { _explicitNullValuePreventMergeRequestsCommittersApproval = value; AdditionalData?.Remove("prevent_merge_requests_committers_approval"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prevent_merge_requests_committers_approval"); else _explicitNullProperties?.Remove("prevent_merge_requests_committers_approval"); } }
         private string _explicitNullValuePreventMergeRequestsCommittersApproval = default!;
+#endif
+        /// <summary>The preview_billable_user_change_limit property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? PreviewBillableUserChangeLimit { get => _explicitNullValuePreviewBillableUserChangeLimit; set { _explicitNullValuePreviewBillableUserChangeLimit = value; AdditionalData?.Remove("preview_billable_user_change_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("preview_billable_user_change_limit"); else _explicitNullProperties?.Remove("preview_billable_user_change_limit"); } }
+        private string? _explicitNullValuePreviewBillableUserChangeLimit = default!;
+#nullable restore
+#else
+        public string PreviewBillableUserChangeLimit { get => _explicitNullValuePreviewBillableUserChangeLimit; set { _explicitNullValuePreviewBillableUserChangeLimit = value; AdditionalData?.Remove("preview_billable_user_change_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("preview_billable_user_change_limit"); else _explicitNullProperties?.Remove("preview_billable_user_change_limit"); } }
+        private string _explicitNullValuePreviewBillableUserChangeLimit = default!;
 #endif
         /// <summary>The product_analytics_configurator_connection_string property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -9444,7 +9468,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(795)
+            return new Dictionary<string, Action<IParseNode>>(797)
             {
                 { "abuse_notification_email", n => { AbuseNotificationEmail = n.GetStringValue(); } },
                 { "active_context_pause_indexing", n => { ActiveContextPauseIndexing = n.GetStringValue(); } },
@@ -9891,6 +9915,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "merge_request_diff_download_request_limit", n => { MergeRequestDiffDownloadRequestLimit = n.GetStringValue(); } },
                 { "merge_request_diff_resources_request_limit", n => { MergeRequestDiffResourcesRequestLimit = n.GetStringValue(); } },
                 { "merge_request_diffs_page_request_limit", n => { MergeRequestDiffsPageRequestLimit = n.GetStringValue(); } },
+                { "merge_request_notes_index_unauthenticated_limit", n => { MergeRequestNotesIndexUnauthenticatedLimit = n.GetStringValue(); } },
                 { "merge_requests_create_limit", n => { MergeRequestsCreateLimit = n.GetStringValue(); } },
                 { "merge_requests_merge_ref_limit", n => { MergeRequestsMergeRefLimit = n.GetStringValue(); } },
                 { "merge_requests_read_diffs_limit", n => { MergeRequestsReadDiffsLimit = n.GetStringValue(); } },
@@ -9963,6 +9988,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "pre_receive_secret_detection_enabled", n => { PreReceiveSecretDetectionEnabled = n.GetStringValue(); } },
                 { "prevent_merge_requests_author_approval", n => { PreventMergeRequestsAuthorApproval = n.GetStringValue(); } },
                 { "prevent_merge_requests_committers_approval", n => { PreventMergeRequestsCommittersApproval = n.GetStringValue(); } },
+                { "preview_billable_user_change_limit", n => { PreviewBillableUserChangeLimit = n.GetStringValue(); } },
                 { "product_analytics_configurator_connection_string", n => { ProductAnalyticsConfiguratorConnectionString = n.GetStringValue(); } },
                 { "product_analytics_data_collector_host", n => { ProductAnalyticsDataCollectorHost = n.GetStringValue(); } },
                 { "product_analytics_enabled", n => { ProductAnalyticsEnabled = n.GetStringValue(); } },
@@ -10695,6 +10721,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("merge_request_diff_download_request_limit", MergeRequestDiffDownloadRequestLimit);
             writer.WriteStringValue("merge_request_diff_resources_request_limit", MergeRequestDiffResourcesRequestLimit);
             writer.WriteStringValue("merge_request_diffs_page_request_limit", MergeRequestDiffsPageRequestLimit);
+            writer.WriteStringValue("merge_request_notes_index_unauthenticated_limit", MergeRequestNotesIndexUnauthenticatedLimit);
             writer.WriteStringValue("merge_requests_create_limit", MergeRequestsCreateLimit);
             writer.WriteStringValue("merge_requests_merge_ref_limit", MergeRequestsMergeRefLimit);
             writer.WriteStringValue("merge_requests_read_diffs_limit", MergeRequestsReadDiffsLimit);
@@ -10767,6 +10794,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("pre_receive_secret_detection_enabled", PreReceiveSecretDetectionEnabled);
             writer.WriteStringValue("prevent_merge_requests_author_approval", PreventMergeRequestsAuthorApproval);
             writer.WriteStringValue("prevent_merge_requests_committers_approval", PreventMergeRequestsCommittersApproval);
+            writer.WriteStringValue("preview_billable_user_change_limit", PreviewBillableUserChangeLimit);
             writer.WriteStringValue("product_analytics_configurator_connection_string", ProductAnalyticsConfiguratorConnectionString);
             writer.WriteStringValue("product_analytics_data_collector_host", ProductAnalyticsDataCollectorHost);
             writer.WriteStringValue("product_analytics_enabled", ProductAnalyticsEnabled);

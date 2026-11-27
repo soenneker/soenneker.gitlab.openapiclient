@@ -222,7 +222,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>Enable automatic reviews by GitLab Duo on merge requests</summary>
         public bool? AutoDuoCodeReviewEnabled { get => _explicitNullValueAutoDuoCodeReviewEnabled; set { _explicitNullValueAutoDuoCodeReviewEnabled = value; AdditionalData?.Remove("auto_duo_code_review_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auto_duo_code_review_enabled"); else _explicitNullProperties?.Remove("auto_duo_code_review_enabled"); } }
         private bool? _explicitNullValueAutoDuoCodeReviewEnabled = default!;
-        /// <summary>Avatar image for project. The file must be 200 KB or smaller, and one of these types: `.bmp`, `.gif`, `.ico`, `.jpeg`, `.jpg`, `.png`, `.tiff`, or `.webp`.</summary>
+        /// <summary>Avatar image for project. The file must be 200 KB or smaller, and one of these types: `.avif`, `.bmp`, `.gif`, `.ico`, `.jpeg`, `.jpg`, `.png`, `.tiff`, or `.webp`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public byte[]? Avatar { get => _explicitNullValueAvatar; set { _explicitNullValueAvatar = value; AdditionalData?.Remove("avatar"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("avatar"); else _explicitNullProperties?.Remove("avatar"); } }

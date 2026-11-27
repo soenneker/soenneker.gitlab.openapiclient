@@ -34,7 +34,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.User.Avatar
         {
         }
         /// <summary>
-        /// Uploads an avatar for the currently authenticated user. The file must be 200 KB or smaller. The ideal image size is 192 x 192 pixels. Supported file types are `.bmp`, `.gif`, `.ico`, `.jpeg`, `.jpg`, `.png`, `.tiff`, and `.webp`. This feature was introduced in GitLab 17.0.
+        /// Uploads an avatar for the currently authenticated user. The file must be 200 KB or smaller. The ideal image size is 192 x 192 pixels. Supported file types are `.avif`, `.bmp`, `.gif`, `.ico`, `.jpeg`, `.jpg`, `.png`, `.tiff`, and `.webp`. This feature was introduced in GitLab 17.0.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAvatar"/></returns>
         /// <param name="body">The request body</param>
@@ -54,7 +54,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.User.Avatar
             return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAvatar>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesAvatar.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Uploads an avatar for the currently authenticated user. The file must be 200 KB or smaller. The ideal image size is 192 x 192 pixels. Supported file types are `.bmp`, `.gif`, `.ico`, `.jpeg`, `.jpg`, `.png`, `.tiff`, and `.webp`. This feature was introduced in GitLab 17.0.
+        /// Uploads an avatar for the currently authenticated user. The file must be 200 KB or smaller. The ideal image size is 192 x 192 pixels. Supported file types are `.avif`, `.bmp`, `.gif`, `.ico`, `.jpeg`, `.jpg`, `.png`, `.tiff`, and `.webp`. This feature was introduced in GitLab 17.0.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

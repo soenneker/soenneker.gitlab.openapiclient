@@ -36,20 +36,21 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Search
         /// <summary>
         /// The `groups` scope returns the subgroups of the specified group, not the group itself.The `blobs` scope searches code. It is available only when advanced search or exact code search is enabled.The `wiki_blobs` scope searches wikis. The `commits`, `notes`, and `wiki_blobs` scopes are available onlywhen advanced search is enabled.The `blobs` and `wiki_blobs` scopes support the `filename`, `path`, and `extension` filters. To use a filter,include it in the search query, for example `a query filename:some_name*`. Filters support wildcards (`*`)for glob matching. Elasticsearch syntax might not work with exact code search. For exact code search, useregular expressions instead of Elasticsearch wildcard queries.In `blobs` and `wiki_blobs` results, `filename` is deprecated in favor of `path`. Both return the full pathof the file in the repository. In a future release, `filename` is planned to return only the file name.In `issues` results, `assignee` is deprecated in favor of `assignees`.To filter `work_items` results by more than one type, pass `type` as an array, for example`type[]=task&amp;type[]=issue`.
         /// </summary>
-        /// <returns>A <see cref="Stream"/></returns>
+        /// <returns>A List&lt;global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4GroupsIdDashSearch200ResponseItem&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<Stream?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Search.SearchRequestBuilder.SearchRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<List<global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4GroupsIdDashSearch200ResponseItem>?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Search.SearchRequestBuilder.SearchRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<Stream> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Search.SearchRequestBuilder.SearchRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<List<global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4GroupsIdDashSearch200ResponseItem>> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Search.SearchRequestBuilder.SearchRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendPrimitiveAsync<Stream>(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
+            var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4GroupsIdDashSearch200ResponseItem>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4GroupsIdDashSearch200ResponseItem.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
+            return collectionResult?.AsList();
         }
         /// <summary>
         /// The `groups` scope returns the subgroups of the specified group, not the group itself.The `blobs` scope searches code. It is available only when advanced search or exact code search is enabled.The `wiki_blobs` scope searches wikis. The `commits`, `notes`, and `wiki_blobs` scopes are available onlywhen advanced search is enabled.The `blobs` and `wiki_blobs` scopes support the `filename`, `path`, and `extension` filters. To use a filter,include it in the search query, for example `a query filename:some_name*`. Filters support wildcards (`*`)for glob matching. Elasticsearch syntax might not work with exact code search. For exact code search, useregular expressions instead of Elasticsearch wildcard queries.In `blobs` and `wiki_blobs` results, `filename` is deprecated in favor of `path`. Both return the full pathof the file in the repository. In a future release, `filename` is planned to return only the file name.In `issues` results, `assignee` is deprecated in favor of `assignees`.To filter `work_items` results by more than one type, pass `type` as an array, for example`type[]=task&amp;type[]=issue`.
@@ -67,6 +68,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Search
 #endif
             var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
+            requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
         }
         /// <summary>

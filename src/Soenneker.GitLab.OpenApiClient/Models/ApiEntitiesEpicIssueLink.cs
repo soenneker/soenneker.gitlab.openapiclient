@@ -32,12 +32,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The epic property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesEpicIssueLinkEpicProperty? Epic { get => _explicitNullValueEpic; set { _explicitNullValueEpic = value; AdditionalData?.Remove("epic"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("epic"); else _explicitNullProperties?.Remove("epic"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesEpicIssueLinkEpicProperty? _explicitNullValueEpic = default!;
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesEpic? Epic { get => _explicitNullValueEpic; set { _explicitNullValueEpic = value; AdditionalData?.Remove("epic"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("epic"); else _explicitNullProperties?.Remove("epic"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesEpic? _explicitNullValueEpic = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesEpicIssueLinkEpicProperty Epic { get => _explicitNullValueEpic; set { _explicitNullValueEpic = value; AdditionalData?.Remove("epic"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("epic"); else _explicitNullProperties?.Remove("epic"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesEpicIssueLinkEpicProperty _explicitNullValueEpic = default!;
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesEpic Epic { get => _explicitNullValueEpic; set { _explicitNullValueEpic = value; AdditionalData?.Remove("epic"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("epic"); else _explicitNullProperties?.Remove("epic"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesEpic _explicitNullValueEpic = default!;
 #endif
         /// <summary>ID of the epic-issue relation</summary>
         public int? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
@@ -80,7 +80,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>(4)
             {
-                { "epic", n => { Epic = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesEpicIssueLinkEpicProperty>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesEpicIssueLinkEpicProperty.CreateFromDiscriminatorValue); } },
+                { "epic", n => { Epic = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesEpic>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesEpic.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetIntValue(); } },
                 { "issue", n => { Issue = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesIssueBasic>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesIssueBasic.CreateFromDiscriminatorValue); } },
                 { "relative_position", n => { RelativePosition = n.GetIntValue(); } },
@@ -93,7 +93,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesEpicIssueLinkEpicProperty>("epic", Epic);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesEpic>("epic", Epic);
             writer.WriteIntValue("id", Id);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesIssueBasic>("issue", Issue);
             writer.WriteIntValue("relative_position", RelativePosition);

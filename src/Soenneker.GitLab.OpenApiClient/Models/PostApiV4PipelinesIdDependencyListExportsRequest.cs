@@ -21,6 +21,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             else if (parseNode.GetChildNode("export_type") is { } nullNodeExportType && nullNodeExportType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExportType = null;
             if (parseNode.GetChildNode("send_email") is null) { _explicitNullValueSendEmail = default!; _explicitNullProperties?.Remove("send_email"); }
             else if (parseNode.GetChildNode("send_email") is { } nullNodeSendEmail && nullNodeSendEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SendEmail = null;
+            if (parseNode.GetChildNode("separate_component_group_and_name") is null) { _explicitNullValueSeparateComponentGroupAndName = default!; _explicitNullProperties?.Remove("separate_component_group_and_name"); }
+            else if (parseNode.GetChildNode("separate_component_group_and_name") is { } nullNodeSeparateComponentGroupAndName && nullNodeSeparateComponentGroupAndName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SeparateComponentGroupAndName = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -31,6 +33,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>If `true`, sends an email notification to the requesting user when the export completes.</summary>
         public bool? SendEmail { get => _explicitNullValueSendEmail; set { _explicitNullValueSendEmail = value; AdditionalData?.Remove("send_email"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("send_email"); else _explicitNullProperties?.Remove("send_email"); } }
         private bool? _explicitNullValueSendEmail = default!;
+        /// <summary>For sbom, export the component group and name as separate fields</summary>
+        public bool? SeparateComponentGroupAndName { get => _explicitNullValueSeparateComponentGroupAndName; set { _explicitNullValueSeparateComponentGroupAndName = value; AdditionalData?.Remove("separate_component_group_and_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("separate_component_group_and_name"); else _explicitNullProperties?.Remove("separate_component_group_and_name"); } }
+        private bool? _explicitNullValueSeparateComponentGroupAndName = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.PostApiV4PipelinesIdDependencyListExportsRequest"/> and sets the default values.
         /// </summary>
@@ -38,6 +43,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         {
             AdditionalData = new Dictionary<string, object>();
             SendEmail = false;
+            SeparateComponentGroupAndName = false;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -59,6 +65,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             {
                 { "export_type", n => { var parsed = n.GetEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.SbomExportType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueExportType = default; _explicitNullProperties?.Remove("export_type"); AdditionalData["export_type"] = unknown; } else { ExportType = parsed; AdditionalData.Remove("export_type"); } } },
                 { "send_email", n => { SendEmail = n.GetBoolValue(); } },
+                { "separate_component_group_and_name", n => { SeparateComponentGroupAndName = n.GetBoolValue(); } },
             };
         }
         /// <summary>
@@ -70,6 +77,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.GitLab.OpenApiClient.Models.SbomExportType>("export_type", ExportType);
             writer.WriteBoolValue("send_email", SendEmail);
+            writer.WriteBoolValue("separate_component_group_and_name", SeparateComponentGroupAndName);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

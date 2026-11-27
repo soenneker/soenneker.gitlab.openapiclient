@@ -128,15 +128,15 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string _explicitNullValueId = default!;
 #endif
-        /// <summary>Latest pipeline for the commit.</summary>
+        /// <summary>The last_pipeline property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommitDetailLastPipelineProperty? LastPipeline { get => _explicitNullValueLastPipeline; set { _explicitNullValueLastPipeline = value; AdditionalData?.Remove("last_pipeline"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_pipeline"); else _explicitNullProperties?.Remove("last_pipeline"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommitDetailLastPipelineProperty? _explicitNullValueLastPipeline = default!;
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiPipelineBasic? LastPipeline { get => _explicitNullValueLastPipeline; set { _explicitNullValueLastPipeline = value; AdditionalData?.Remove("last_pipeline"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_pipeline"); else _explicitNullProperties?.Remove("last_pipeline"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiPipelineBasic? _explicitNullValueLastPipeline = default!;
 #nullable restore
 #else
-        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommitDetailLastPipelineProperty LastPipeline { get => _explicitNullValueLastPipeline; set { _explicitNullValueLastPipeline = value; AdditionalData?.Remove("last_pipeline"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_pipeline"); else _explicitNullProperties?.Remove("last_pipeline"); } }
-        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommitDetailLastPipelineProperty _explicitNullValueLastPipeline = default!;
+        public global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiPipelineBasic LastPipeline { get => _explicitNullValueLastPipeline; set { _explicitNullValueLastPipeline = value; AdditionalData?.Remove("last_pipeline"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_pipeline"); else _explicitNullProperties?.Remove("last_pipeline"); } }
+        private global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiPipelineBasic _explicitNullValueLastPipeline = default!;
 #endif
         /// <summary>Full commit message.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -255,7 +255,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "created_at", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "extended_trailers", n => { ExtendedTrailers = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommitDetailExtendedTrailersProperty>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommitDetailExtendedTrailersProperty.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "last_pipeline", n => { LastPipeline = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommitDetailLastPipelineProperty>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommitDetailLastPipelineProperty.CreateFromDiscriminatorValue); } },
+                { "last_pipeline", n => { LastPipeline = n.GetObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiPipelineBasic>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiPipelineBasic.CreateFromDiscriminatorValue); } },
                 { "message", n => { Message = n.GetStringValue(); } },
                 { "parent_ids", n => { ParentIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "project_id", n => { ProjectId = n.GetLongValue(); } },
@@ -283,7 +283,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("created_at", CreatedAt);
             writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommitDetailExtendedTrailersProperty>("extended_trailers", ExtendedTrailers);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCommitDetailLastPipelineProperty>("last_pipeline", LastPipeline);
+            writer.WriteObjectValue<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiPipelineBasic>("last_pipeline", LastPipeline);
             writer.WriteStringValue("message", Message);
             writer.WriteCollectionOfPrimitiveValues<string>("parent_ids", ParentIds);
             writer.WriteLongValue("project_id", ProjectId);

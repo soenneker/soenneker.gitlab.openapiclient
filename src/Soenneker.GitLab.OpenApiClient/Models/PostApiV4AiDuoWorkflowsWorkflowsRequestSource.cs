@@ -67,5 +67,9 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         #pragma warning disable CS1591
         MobileChat,
         #pragma warning restore CS1591
+        [EnumMember(Value = "work_item_update_implementation")]
+        #pragma warning disable CS1591
+        WorkItemUpdateImplementation,
+        #pragma warning restore CS1591
     }
 }

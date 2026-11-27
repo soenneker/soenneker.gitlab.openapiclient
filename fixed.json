@@ -1078,6 +1078,9 @@
               }
             }
           },
+          "202": {
+            "description": "Accepted - project has no embeddings yet, indexing started or in progress"
+          },
           "401": {
             "description": "Unauthorized"
           },
@@ -1091,7 +1094,10 @@
             "description": "Unprocessable entity - project has no embeddings"
           },
           "429": {
-            "description": "Too many requests"
+            "description": "Too many requests - search or ad-hoc indexing rate limited"
+          },
+          "500": {
+            "description": "Internal server error - ad-hoc indexing could not be started"
           },
           "503": {
             "description": "Service unavailable - search backend timed out"
@@ -1606,7 +1612,7 @@
           "GitLab Duo workflows"
         ],
         "summary": "Submit risk assessment results for a merge request",
-        "description": "Submits the categorical claims and summary produced by the risk assessment tool.",
+        "description": "Submits the risk level and reason for each area produced by the risk assessment flow.",
         "operationId": "PostApiV4AiDuoWorkflowsToolsRiskAssessmentResults",
         "requestBody": {
           "content": {
@@ -3104,6 +3110,9 @@
           },
           "404": {
             "description": "Not found"
+          },
+          "429": {
+            "description": "Too many requests"
           }
         },
         "x-gitlab-lifecycle": "experiment"
@@ -20424,11 +20433,17 @@
               }
             }
           },
-          "404": {
-            "description": "Not Found"
-          },
           "400": {
-            "description": "Bad Request"
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
           },
           "200": {
             "description": "Created",
@@ -20543,8 +20558,17 @@
               }
             }
           },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
           "404": {
-            "description": "Not Found"
+            "description": "Not found"
+          },
+          "412": {
+            "description": "Precondition failed"
           },
           "400": {
             "description": "Bad Request"
@@ -20694,8 +20718,14 @@
           "200": {
             "description": "OK"
           },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
           "404": {
-            "description": "Not Found"
+            "description": "Not found"
           },
           "400": {
             "description": "Bad Request"
@@ -20749,8 +20779,14 @@
           "200": {
             "description": "OK"
           },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
           "404": {
-            "description": "Not Found"
+            "description": "Not found"
           },
           "400": {
             "description": "Bad Request"
@@ -22070,11 +22106,17 @@
               }
             }
           },
-          "404": {
-            "description": "Not Found"
-          },
           "400": {
-            "description": "Bad Request"
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
           }
         }
       }
@@ -26332,7 +26374,7 @@
           "Avatars"
         ],
         "summary": "Upload an avatar",
-        "description": "Uploads an avatar for the currently authenticated user. The file must be 200 KB or smaller. The ideal image size is 192 x 192 pixels. Supported file types are \u0060.bmp\u0060, \u0060.gif\u0060, \u0060.ico\u0060, \u0060.jpeg\u0060, \u0060.jpg\u0060, \u0060.png\u0060, \u0060.tiff\u0060, and \u0060.webp\u0060. This feature was introduced in GitLab 17.0.",
+        "description": "Uploads an avatar for the currently authenticated user. The file must be 200 KB or smaller. The ideal image size is 192 x 192 pixels. Supported file types are \u0060.avif\u0060, \u0060.bmp\u0060, \u0060.gif\u0060, \u0060.ico\u0060, \u0060.jpeg\u0060, \u0060.jpg\u0060, \u0060.png\u0060, \u0060.tiff\u0060, and \u0060.webp\u0060. This feature was introduced in GitLab 17.0.",
         "operationId": "PutApiV4UserAvatar",
         "requestBody": {
           "content": {
@@ -26919,11 +26961,17 @@
               }
             }
           },
-          "404": {
-            "description": "Not Found"
-          },
           "400": {
-            "description": "Bad Request"
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
           },
           "200": {
             "description": "Created",
@@ -30935,8 +30983,17 @@
               }
             }
           },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
           "404": {
-            "description": "Not Found"
+            "description": "Not found"
+          },
+          "405": {
+            "description": "Method not allowed"
           },
           "400": {
             "description": "Bad Request"
@@ -34956,8 +35013,17 @@
               }
             }
           },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
           "404": {
-            "description": "Not Found"
+            "description": "Not found"
+          },
+          "405": {
+            "description": "Method not allowed"
           },
           "400": {
             "description": "Bad Request"
@@ -45155,7 +45221,14 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetApiV4Search200ResponseSchema"
+                }
+              }
+            }
           },
           "400": {
             "description": "Bad Request"
@@ -45390,7 +45463,14 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetApiV4GroupsIdDashSearch200ResponseSchema"
+                }
+              }
+            }
           },
           "404": {
             "description": "Not Found"
@@ -45619,7 +45699,14 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetApiV4ProjectsIdDashSearch200ResponseSchema"
+                }
+              }
+            }
           },
           "404": {
             "description": "Not Found"
@@ -54702,11 +54789,20 @@
               }
             }
           },
-          "404": {
-            "description": "Not Found"
-          },
           "400": {
-            "description": "Bad Request"
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "429": {
+            "description": "Too many requests"
           }
         },
         "x-gitlab-tier": "premium"
@@ -54759,11 +54855,20 @@
               }
             }
           },
-          "404": {
-            "description": "Not Found"
-          },
           "400": {
-            "description": "Bad Request"
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "429": {
+            "description": "Too many requests"
           }
         },
         "x-gitlab-tier": "premium"
@@ -61377,11 +61482,17 @@
               }
             }
           },
-          "404": {
-            "description": "Not Found"
-          },
           "400": {
-            "description": "Bad Request"
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
           }
         }
       }
@@ -61554,7 +61665,16 @@
             }
           },
           "400": {
-            "description": "Bad Request"
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "429": {
+            "description": "Too many requests"
           },
           "200": {
             "description": "Created",
@@ -61756,7 +61876,7 @@
             "in": "query",
             "description": "Sort results by the specified field.",
             "schema": {
-              "$ref": "#/components/schemas/IdOrderBy"
+              "$ref": "#/components/schemas/UserIdOrderBy"
             }
           },
           {
@@ -61834,8 +61954,7 @@
                 "$ref": "#/components/schemas/PostApiV4OrganizationsIdUsersRequest"
               }
             }
-          },
-          "required": true
+          }
         },
         "responses": {
           "201": {
@@ -61879,6 +61998,62 @@
       }
     },
     "/api/v4/organizations/{id}/users/{userId}": {
+      "get": {
+        "tags": [
+          "Organizations"
+        ],
+        "summary": "Get an organization user",
+        "description": "Gets a single user of an organization. This feature was introduced in GitLab 19.7.",
+        "operationId": "GetApiV4OrganizationsIdUsersUserId",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The ID of the organization.",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "userId",
+            "in": "path",
+            "description": "ID or username of the user.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesOrganizationsOrganizationUser"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "429": {
+            "description": "Too many requests"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        },
+        "x-gitlab-lifecycle": "experiment"
+      },
       "put": {
         "tags": [
           "Organizations"
@@ -61899,10 +62074,10 @@
           {
             "name": "userId",
             "in": "path",
-            "description": "The ID of the user to update.",
+            "description": "ID or username of the user.",
             "required": true,
             "schema": {
-              "type": "integer"
+              "type": "string"
             }
           }
         ],
@@ -61965,10 +62140,10 @@
           {
             "name": "userId",
             "in": "path",
-            "description": "The ID of the user to remove.",
+            "description": "ID or username of the user.",
             "required": true,
             "schema": {
-              "type": "integer"
+              "type": "string"
             }
           }
         ],
@@ -64811,11 +64986,17 @@
               }
             }
           },
-          "404": {
-            "description": "Not Found"
-          },
           "400": {
-            "description": "Bad Request"
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
           }
         }
       },
@@ -64904,8 +65085,17 @@
               }
             }
           },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
           "404": {
-            "description": "Not Found"
+            "description": "Not found"
+          },
+          "429": {
+            "description": "Too many requests"
           }
         }
       }
@@ -69975,7 +70165,14 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetApiV4ProjectsIdMergeRequestsMergeRequestIidRelatedIssues200ResponseSchema"
+                }
+              }
+            }
           },
           "403": {
             "description": "Forbidden"
@@ -70994,11 +71191,17 @@
               }
             }
           },
-          "404": {
-            "description": "Not Found"
-          },
           "400": {
-            "description": "Bad Request"
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
           },
           "200": {
             "description": "Created",
@@ -71051,11 +71254,17 @@
               }
             }
           },
-          "404": {
-            "description": "Not Found"
-          },
           "400": {
-            "description": "Bad Request"
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
           }
         }
       }
@@ -71092,11 +71301,17 @@
           "200": {
             "description": "OK"
           },
-          "404": {
-            "description": "Not Found"
-          },
           "400": {
-            "description": "Bad Request"
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
           }
         }
       }
@@ -71124,11 +71339,17 @@
           "201": {
             "description": "Created"
           },
-          "404": {
-            "description": "Not Found"
-          },
           "400": {
-            "description": "Bad Request"
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
           }
         }
       }
@@ -71185,11 +71406,17 @@
               }
             }
           },
-          "404": {
-            "description": "Not Found"
-          },
           "400": {
-            "description": "Bad Request"
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
           }
         }
       }
@@ -71263,11 +71490,20 @@
               }
             }
           },
-          "404": {
-            "description": "Not Found"
-          },
           "400": {
-            "description": "Bad Request"
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "429": {
+            "description": "Too many requests"
           }
         }
       }
@@ -71314,11 +71550,20 @@
           "200": {
             "description": "OK"
           },
-          "404": {
-            "description": "Not Found"
-          },
           "400": {
-            "description": "Bad Request"
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "422": {
+            "description": "Unprocessable entity"
           }
         }
       }
@@ -71384,11 +71629,17 @@
               }
             }
           },
-          "404": {
-            "description": "Not Found"
-          },
           "400": {
-            "description": "Bad Request"
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
           }
         }
       }
@@ -71454,11 +71705,17 @@
               }
             }
           },
-          "404": {
-            "description": "Not Found"
-          },
           "400": {
-            "description": "Bad Request"
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
           }
         }
       }
@@ -71495,11 +71752,20 @@
           "204": {
             "description": "Resource deleted"
           },
-          "404": {
-            "description": "Not Found"
-          },
           "400": {
-            "description": "Bad Request"
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "429": {
+            "description": "Too many requests"
           }
         }
       }
@@ -76730,8 +76996,14 @@
           "201": {
             "description": "Created"
           },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
           "404": {
-            "description": "Not Found"
+            "description": "Not found"
           },
           "400": {
             "description": "Bad Request"
@@ -76795,11 +77067,17 @@
               }
             }
           },
-          "404": {
-            "description": "Not Found"
-          },
           "400": {
-            "description": "Bad Request"
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
           },
           "200": {
             "description": "Created",
@@ -76859,8 +77137,14 @@
               }
             }
           },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
           "404": {
-            "description": "Not Found"
+            "description": "Not found"
           },
           "400": {
             "description": "Bad Request"
@@ -76932,11 +77216,17 @@
               }
             }
           },
-          "404": {
-            "description": "Not Found"
-          },
           "400": {
-            "description": "Bad Request"
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
           }
         }
       },
@@ -76994,11 +77284,17 @@
               }
             }
           },
-          "404": {
-            "description": "Not Found"
-          },
           "400": {
-            "description": "Bad Request"
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
           }
         }
       }
@@ -81299,6 +81595,70 @@
         }
       }
     },
+    "/api/v4/projects/{id}/services/workday": {
+      "put": {
+        "tags": [
+          "Integrations"
+        ],
+        "summary": "Create or update the Workday integration",
+        "description": "Creates or updates the Workday integration.",
+        "operationId": "PutApiV4ProjectsIdServicesWorkday",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID or URL-encoded path of the project.",
+            "required": true,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            },
+            "example": 1
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PutApiV4ProjectsIdServicesWorkdayRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesIntegrationBasic"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "422": {
+            "description": "Unprocessable entity"
+          }
+        },
+        "x-gitlab-tier": "ultimate"
+      }
+    },
     "/api/v4/projects/{id}/services/mock-ci": {
       "put": {
         "tags": [
@@ -84718,6 +85078,70 @@
         }
       }
     },
+    "/api/v4/projects/{id}/integrations/workday": {
+      "put": {
+        "tags": [
+          "Integrations"
+        ],
+        "summary": "Create or update the Workday integration",
+        "description": "Creates or updates the Workday integration.",
+        "operationId": "PutApiV4ProjectsIdIntegrationsWorkday",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID or URL-encoded path of the project.",
+            "required": true,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            },
+            "example": 1
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PutApiV4ProjectsIdIntegrationsWorkdayRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesIntegrationBasic"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "422": {
+            "description": "Unprocessable entity"
+          }
+        },
+        "x-gitlab-tier": "ultimate"
+      }
+    },
     "/api/v4/projects/{id}/integrations/mock-ci": {
       "put": {
         "tags": [
@@ -88087,6 +88511,69 @@
         }
       }
     },
+    "/api/v4/groups/{id}/integrations/workday": {
+      "put": {
+        "tags": [
+          "Integrations"
+        ],
+        "summary": "Create or update the Workday integration",
+        "description": "Creates or updates the Workday integration.",
+        "operationId": "PutApiV4GroupsIdIntegrationsWorkday",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID or URL-encoded path of the group.",
+            "required": true,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PutApiV4GroupsIdIntegrationsWorkdayRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesIntegrationBasic"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "422": {
+            "description": "Unprocessable entity"
+          }
+        },
+        "x-gitlab-tier": "ultimate"
+      }
+    },
     "/api/v4/groups/{id}/integrations/mock-ci": {
       "put": {
         "tags": [
@@ -89089,11 +89576,17 @@
               }
             }
           },
-          "404": {
-            "description": "Not Found"
-          },
           "400": {
-            "description": "Bad Request"
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
           }
         }
       },
@@ -89335,8 +89828,17 @@
               }
             }
           },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
           "404": {
-            "description": "Not Found"
+            "description": "Not found"
+          },
+          "422": {
+            "description": "Unprocessable entity"
           },
           "400": {
             "description": "Bad Request"
@@ -89375,11 +89877,23 @@
           "201": {
             "description": "Created"
           },
-          "404": {
-            "description": "Not Found"
-          },
           "400": {
-            "description": "Bad Request"
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "422": {
+            "description": "Unprocessable entity"
+          },
+          "429": {
+            "description": "Too many requests"
           }
         }
       }
@@ -89407,8 +89921,14 @@
           "201": {
             "description": "Created"
           },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
           "404": {
-            "description": "Not Found"
+            "description": "Not found"
           },
           "400": {
             "description": "Bad Request"
@@ -93256,6 +93776,12 @@
           "204": {
             "description": "Resource deleted"
           },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
           "404": {
             "description": "Not Found"
           },
@@ -94312,8 +94838,14 @@
               }
             }
           },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
           "404": {
-            "description": "Not Found"
+            "description": "Not found"
           },
           "400": {
             "description": "Bad Request"
@@ -94472,8 +95004,14 @@
               }
             }
           },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
           "404": {
-            "description": "Not Found"
+            "description": "Not found"
           },
           "400": {
             "description": "Bad Request"
@@ -94516,8 +95054,14 @@
               }
             }
           },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
           "404": {
-            "description": "Not Found"
+            "description": "Not found"
           },
           "400": {
             "description": "Bad Request"
@@ -96541,11 +97085,17 @@
               }
             }
           },
-          "404": {
-            "description": "Not Found"
-          },
           "400": {
-            "description": "Bad Request"
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
           },
           "200": {
             "description": "Created",
@@ -107157,11 +107707,17 @@
               }
             }
           },
-          "404": {
-            "description": "Not Found"
-          },
           "400": {
-            "description": "Bad Request"
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
           }
         }
       },
@@ -110226,11 +110782,17 @@
               }
             }
           },
-          "404": {
-            "description": "Not Found"
-          },
           "400": {
-            "description": "Bad Request"
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
           }
         }
       },
@@ -115469,8 +116031,14 @@
           "201": {
             "description": "Created"
           },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
           "404": {
-            "description": "Not Found"
+            "description": "Not found"
           },
           "400": {
             "description": "Bad Request"
@@ -115560,11 +116128,20 @@
               }
             }
           },
-          "404": {
-            "description": "Not Found"
-          },
           "400": {
-            "description": "Bad Request"
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "429": {
+            "description": "Too many requests"
           }
         },
         "x-gitlab-tier": "premium"
@@ -115616,11 +116193,20 @@
               }
             }
           },
-          "404": {
-            "description": "Not Found"
-          },
           "400": {
-            "description": "Bad Request"
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "429": {
+            "description": "Too many requests"
           }
         },
         "x-gitlab-tier": "premium"
@@ -115743,11 +116329,17 @@
               }
             }
           },
-          "404": {
-            "description": "Not Found"
-          },
           "400": {
-            "description": "Bad Request"
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
           }
         },
         "x-gitlab-tier": "premium"
@@ -115870,11 +116462,17 @@
               }
             }
           },
-          "404": {
-            "description": "Not Found"
-          },
           "400": {
-            "description": "Bad Request"
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
           }
         },
         "x-gitlab-tier": "premium"
@@ -121969,7 +122567,13 @@
             }
           },
           "400": {
-            "description": "Bad Request"
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
           }
         }
       },
@@ -132824,7 +133428,7 @@
             "example": 0
           },
           "epic": {
-            "$ref": "#/components/schemas/ApiEntitiesEpicIssueLinkEpicProperty"
+            "$ref": "#/components/schemas/ApiEntitiesEpic"
           },
           "issue": {
             "$ref": "#/components/schemas/ApiEntitiesIssueBasic"
@@ -137434,6 +138038,9 @@
           "merge_request_diff_download_request_limit": {
             "type": "string"
           },
+          "merge_request_notes_index_unauthenticated_limit": {
+            "type": "string"
+          },
           "merge_requests_create_limit": {
             "type": "string"
           },
@@ -138476,6 +139083,9 @@
             "type": "string"
           },
           "epic_move_list_limit": {
+            "type": "string"
+          },
+          "preview_billable_user_change_limit": {
             "type": "string"
           },
           "insights_query_limit": {
@@ -140055,7 +140665,7 @@
             "example": 1
           },
           "last_pipeline": {
-            "$ref": "#/components/schemas/ApiEntitiesCommitDetailLastPipelineProperty"
+            "$ref": "#/components/schemas/ApiEntitiesCiPipelineBasic"
           }
         }
       },
@@ -140336,6 +140946,227 @@
             "type": "boolean",
             "description": "If \u0060true\u0060, the details were submitted to Akismet for spam detection.",
             "example": false
+          }
+        }
+      },
+      "ApiEntitiesBlob": {
+        "type": "object",
+        "properties": {
+          "basename": {
+            "type": "string",
+            "example": "README"
+          },
+          "data": {
+            "type": "string",
+            "example": "---\ntitle: Page\n---"
+          },
+          "path": {
+            "type": "string",
+            "example": "README.md"
+          },
+          "filename": {
+            "type": "string",
+            "example": "README.md"
+          },
+          "id": {
+            "type": "string",
+            "example": "2695effb5807a22ff3d138d593fd856244e155e7"
+          },
+          "ref": {
+            "type": "string",
+            "example": "main"
+          },
+          "startline": {
+            "type": "integer",
+            "example": 1
+          },
+          "project_id": {
+            "type": "integer",
+            "format": "int64",
+            "example": 1
+          },
+          "group_id": {
+            "type": "integer",
+            "format": "int64",
+            "example": 1
+          }
+        }
+      },
+      "ApiEntitiesWorkItem": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64",
+            "example": 84
+          },
+          "iid": {
+            "type": "integer",
+            "example": 14
+          },
+          "project_id": {
+            "type": "integer",
+            "format": "int64",
+            "example": 4
+          },
+          "title": {
+            "type": "string",
+            "example": "Impedit et ut et dolores vero provident ullam est"
+          },
+          "description": {
+            "type": "string",
+            "example": "Repellendus impedit et vel velit dignissimos."
+          },
+          "state": {
+            "type": "string",
+            "example": "closed"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-08-17T12:46:35.053Z"
+          },
+          "updated_at": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-11-14T17:22:01.470Z"
+          },
+          "closed_at": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2022-11-15T08:30:55.232Z"
+          },
+          "closed_by": {
+            "$ref": "#/components/schemas/ApiEntitiesUserBasic"
+          },
+          "labels": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "example": [
+              "bug"
+            ]
+          },
+          "milestone": {
+            "$ref": "#/components/schemas/ApiEntitiesMilestone"
+          },
+          "assignees": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ApiEntitiesUserBasic"
+            }
+          },
+          "author": {
+            "$ref": "#/components/schemas/ApiEntitiesUserBasic"
+          },
+          "type": {
+            "type": "string",
+            "description": "One of [\u0022ISSUE\u0022, \u0022INCIDENT\u0022, \u0022TEST_CASE\u0022, \u0022REQUIREMENT\u0022, \u0022TASK\u0022, \u0022OBJECTIVE\u0022, \u0022KEY_RESULT\u0022, \u0022EPIC\u0022, \u0022TICKET\u0022]",
+            "example": "TASK"
+          },
+          "assignee": {
+            "$ref": "#/components/schemas/ApiEntitiesUserBasic"
+          },
+          "user_notes_count": {
+            "type": "integer"
+          },
+          "merge_requests_count": {
+            "type": "integer"
+          },
+          "upvotes": {
+            "type": "integer"
+          },
+          "downvotes": {
+            "type": "integer"
+          },
+          "start_date": {
+            "type": "string",
+            "format": "date",
+            "example": "2022-11-18"
+          },
+          "due_date": {
+            "type": "string",
+            "format": "date",
+            "example": "2022-11-20"
+          },
+          "confidential": {
+            "type": "boolean"
+          },
+          "discussion_locked": {
+            "type": "boolean"
+          },
+          "issue_type": {
+            "type": "string",
+            "example": "issue"
+          },
+          "web_url": {
+            "type": "string",
+            "example": "http://example.com/example/example/issues/14"
+          },
+          "time_stats": {
+            "$ref": "#/components/schemas/ApiEntitiesIssuableTimeStats"
+          },
+          "task_completion_status": {
+            "$ref": "#/components/schemas/ApiEntitiesTaskCompletionStatus"
+          },
+          "weight": {
+            "type": "integer",
+            "example": 5
+          },
+          "blocking_issues_count": {
+            "type": "integer",
+            "example": 2
+          },
+          "has_tasks": {
+            "type": "boolean",
+            "example": true
+          },
+          "task_status": {
+            "type": "string",
+            "example": "2 of 4 tasks completed"
+          },
+          "_links": {
+            "$ref": "#/components/schemas/ApiEntitiesWorkItemLinks"
+          },
+          "references": {
+            "$ref": "#/components/schemas/ApiEntitiesIssuableReferences"
+          },
+          "severity": {
+            "$ref": "#/components/schemas/ApiEntitiesWorkItemSeverity"
+          },
+          "subscribed": {
+            "type": "boolean",
+            "example": false
+          },
+          "moved_to_id": {
+            "type": "integer",
+            "format": "int64",
+            "example": 1
+          },
+          "imported": {
+            "type": "boolean",
+            "example": false
+          },
+          "imported_from": {
+            "type": "string",
+            "example": "github"
+          },
+          "service_desk_reply_to": {
+            "type": "string",
+            "example": "user@example.com"
+          },
+          "epic_iid": {
+            "type": "string"
+          },
+          "epic": {
+            "$ref": "#/components/schemas/EpicBaseEntity"
+          },
+          "iteration": {
+            "$ref": "#/components/schemas/ApiEntitiesIteration"
+          },
+          "health_status": {
+            "type": "string"
           }
         }
       },
@@ -146014,7 +146845,7 @@
       "ApiEntitiesOrganizationsOrganizationUser": {
         "type": "object",
         "properties": {
-          "id": {
+          "user_id": {
             "type": "integer",
             "format": "int64",
             "example": 1
@@ -147661,6 +148492,19 @@
           },
           "overflow": {
             "type": "boolean"
+          }
+        }
+      },
+      "ApiEntitiesExternalIssue": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "example": "External Issue PROJ-123"
+          },
+          "id": {
+            "type": "string",
+            "example": "PROJ-123"
           }
         }
       },
@@ -153493,9 +154337,9 @@
         "required": [
           "project_id",
           "merge_request_iid",
-          "diff_sha",
           "workflow_id",
-          "claims"
+          "diff_sha",
+          "areas"
         ],
         "type": "object",
         "properties": {
@@ -153509,30 +154353,23 @@
             "description": "The IID of the merge request",
             "nullable": true
           },
-          "diff_sha": {
-            "pattern": "^[0-9a-f]{40}(?:[0-9a-f]{24})?$",
-            "type": "string",
-            "description": "The full SHA of the diff revision the claims were assessed against",
-            "nullable": true
-          },
           "workflow_id": {
             "type": "integer",
-            "description": "ID of the Duo workflow session that produced these claims",
+            "description": "ID of the Duo workflow session that produced the assessment",
             "nullable": true
           },
-          "claims": {
+          "diff_sha": {
+            "minLength": 1,
+            "pattern": "^[0-9a-f]{40}(?:[0-9a-f]{24})?$",
+            "type": "string",
+            "description": "The full SHA of the diff revision the areas were assessed against"
+          },
+          "areas": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/PostApiV4AiDuoWorkflowsToolsRiskAssessmentResultsRequestClaimsItem"
+              "$ref": "#/components/schemas/PostApiV4AiDuoWorkflowsToolsRiskAssessmentResultsRequestAreasItem"
             },
-            "description": "Categorical claims about the merge request",
-            "nullable": true
-          },
-          "summary": {
-            "maxLength": 2048,
-            "type": "string",
-            "description": "Plain-language explanation of the change and where its risk lies",
-            "nullable": true
+            "description": "The risk level and reason for each area the merge request touches"
           }
         }
       },
@@ -154106,6 +154943,12 @@
           },
           "export_type": {
             "$ref": "#/components/schemas/PostApiV4ProjectsIdDependencyListExportsRequestExportType"
+          },
+          "separate_component_group_and_name": {
+            "type": "boolean",
+            "description": "For cyclonedx_1_6_json, export the component group and name as separate fields",
+            "default": false,
+            "nullable": true
           }
         }
       },
@@ -154134,6 +154977,12 @@
           },
           "export_type": {
             "$ref": "#/components/schemas/SbomExportType"
+          },
+          "separate_component_group_and_name": {
+            "type": "boolean",
+            "description": "For sbom, export the component group and name as separate fields",
+            "default": false,
+            "nullable": true
           }
         }
       },
@@ -159544,12 +160393,12 @@
           },
           "discussions_resolve_limit": {
             "type": "integer",
-            "description": "Maximum number of thread resolve and unresolve requests per minute for each user. Default: \u00600\u0060, which disables the rate limit. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/work_items/606720) in GitLab 19.6.",
+            "description": "Maximum number of thread resolve and unresolve requests per minute for each user. Default: \u00600\u0060, which disables the rate limit. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/264595) in GitLab 19.6.",
             "nullable": true
           },
           "draft_notes_create_limit": {
             "type": "integer",
-            "description": "Maximum number of draft note create requests per minute for each user. Default: \u00600\u0060, which disables the rate limit. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/work_items/636471) in GitLab 19.6.",
+            "description": "Maximum number of draft note create requests per minute for each user. Default: \u00600\u0060, which disables the rate limit. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/267498) in GitLab 19.6.",
             "nullable": true
           },
           "domain_denylist_enabled": {
@@ -159813,9 +160662,14 @@
             "description": "Maximum size of the Terraform state file in bytes. Set to \u00600\u0060 for unlimited size.",
             "nullable": true
           },
+          "merge_request_notes_index_unauthenticated_limit": {
+            "type": "integer",
+            "description": "Maximum number of unauthenticated requests to fetch new and changed merge request comments. Requests are counted every minute for each IP address. Default: \u006060\u0060. Set to \u00600\u0060 to disable the rate limit. Introduced in GitLab 19.7.",
+            "nullable": true
+          },
           "merge_requests_create_limit": {
             "type": "integer",
-            "description": "Maximum number of merge requests a user can create per minute. Default: \u00600\u0060, which disables the rate limit. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/work_items/606714) in GitLab 19.6.",
+            "description": "Maximum number of merge requests a user can create per minute. Default: \u00600\u0060, which disables the rate limit. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/264619) in GitLab 19.6.",
             "nullable": true
           },
           "merge_requests_merge_ref_limit": {
@@ -159825,12 +160679,12 @@
           },
           "merge_requests_rebase_limit": {
             "type": "integer",
-            "description": "Maximum number of merge request rebases per minute for each user. Default: \u006030\u0060. Set to \u00600\u0060 to disable the rate limit. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/work_items/606716) in GitLab 19.6.",
+            "description": "Maximum number of merge request rebases per minute for each user. Default: \u006030\u0060. Set to \u00600\u0060 to disable the rate limit. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/267972) in GitLab 19.6.",
             "nullable": true
           },
           "merge_requests_read_diffs_limit": {
             "type": "integer",
-            "description": "Maximum number of merge request changes, diffs, raw diffs, and diff version API requests per minute for each user, or for each IP address for unauthenticated requests. Default: \u0060300\u0060. Set to \u00600\u0060 to disable the rate limit. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/work_items/606717) in GitLab 19.7.",
+            "description": "Maximum number of merge request changes, diffs, raw diffs, and diff version API requests per minute for each user, or for each IP address for unauthenticated requests. Default: \u0060300\u0060. Set to \u00600\u0060 to disable the rate limit. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/270291) in GitLab 19.7.",
             "nullable": true
           },
           "metrics_method_call_threshold": {
@@ -160272,22 +161126,22 @@
           },
           "project_relations_export_limit": {
             "type": "integer",
-            "description": "Maximum number of project relations export requests per minute per user for each project during direct transfer migrations. Default: \u00606\u0060. Set to \u00600\u0060 to disable the rate limit. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/634958) in GitLab 19.6.",
+            "description": "Maximum number of project relations export requests per minute per user for each project during direct transfer migrations. Default: \u00606\u0060. Set to \u00600\u0060 to disable the rate limit. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/264070) in GitLab 19.6.",
             "nullable": true
           },
           "project_relations_export_download_limit": {
             "type": "integer",
-            "description": "Maximum number of project relations export downloads per minute per user for each project during direct transfer migrations. Default: \u0060100\u0060. Set to \u00600\u0060 to disable the rate limit. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/634958) in GitLab 19.6.",
+            "description": "Maximum number of project relations export downloads per minute per user for each project during direct transfer migrations. Default: \u0060100\u0060. Set to \u00600\u0060 to disable the rate limit. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/264070) in GitLab 19.6.",
             "nullable": true
           },
           "group_relations_export_limit": {
             "type": "integer",
-            "description": "Maximum number of group relations export requests per minute per user for each group during direct transfer migrations. Default: \u00606\u0060. Set to \u00600\u0060 to disable the rate limit. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/634958) in GitLab 19.6.",
+            "description": "Maximum number of group relations export requests per minute per user for each group during direct transfer migrations. Default: \u00606\u0060. Set to \u00600\u0060 to disable the rate limit. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/264070) in GitLab 19.6.",
             "nullable": true
           },
           "group_relations_export_download_limit": {
             "type": "integer",
-            "description": "Maximum number of group relations export downloads per minute per user for each group during direct transfer migrations. Default: \u0060100\u0060. Set to \u00600\u0060 to disable the rate limit. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/634958) in GitLab 19.6.",
+            "description": "Maximum number of group relations export downloads per minute per user for each group during direct transfer migrations. Default: \u0060100\u0060. Set to \u00600\u0060 to disable the rate limit. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/264070) in GitLab 19.6.",
             "nullable": true
           },
           "bulk_import_enabled": {
@@ -160686,7 +161540,7 @@
           },
           "concurrent_relation_export_limit": {
             "type": "string",
-            "description": "Maximum number of simultaneous project file exports to process. Default: \u006025\u0060. Behind a feature flag named \u0060limit_concurrent_project_exports\u0060, disabled by default. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/work_items/599092) in GitLab 19.4.",
+            "description": "Maximum number of simultaneous project file exports to process. Default: \u006025\u0060. Behind a feature flag named \u0060limit_concurrent_project_exports\u0060, disabled by default. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/250244) in GitLab 19.4.",
             "nullable": true
           },
           "container_expiration_policies_enable_historic_entries": {
@@ -160921,7 +161775,7 @@
           },
           "group_hooks_create_limit": {
             "type": "string",
-            "description": "Maximum number of group webhooks a user can create per minute for a given group. Default: \u006010\u0060. Set to \u00600\u0060 to disable limits. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/635281) in GitLab 19.6.",
+            "description": "Maximum number of group webhooks a user can create per minute for a given group. Default: \u006010\u0060. Set to \u00600\u0060 to disable limits. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/264311) in GitLab 19.6.",
             "nullable": true
           },
           "group_download_export_limit": {
@@ -161181,7 +162035,7 @@
           },
           "project_hooks_create_limit": {
             "type": "string",
-            "description": "Maximum number of project webhooks a user can create per minute for a given project. Default: \u00605\u0060. Set to \u00600\u0060 to disable limits. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/605597) in GitLab 19.6.",
+            "description": "Maximum number of project webhooks a user can create per minute for a given project. Default: \u00605\u0060. Set to \u00600\u0060 to disable limits. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/263931) in GitLab 19.6.",
             "nullable": true
           },
           "project_download_export_limit": {
@@ -161206,7 +162060,7 @@
           },
           "project_members_api_limit": {
             "type": "string",
-            "description": "Maximum number of requests every minute for each user or IP address to \u0060GET /projects/:id/members/all\u0060 and \u0060GET /groups/:id/members/all\u0060. Default: \u0060200\u0060. Set to \u00600\u0060 to disable the rate limit. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/578527) in GitLab 18.6.",
+            "description": "Maximum number of requests every minute for each user or IP address to \u0060GET /projects/:id/members/all\u0060 and \u0060GET /groups/:id/members/all\u0060. Default: \u0060200\u0060. Set to \u00600\u0060 to disable the rate limit. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/211239) in GitLab 18.6.",
             "nullable": true
           },
           "project_repositories_blame_limit": {
@@ -161276,17 +162130,17 @@
           },
           "runner_jobs_endpoints_api_limit": {
             "type": "string",
-            "description": "Maximum number of requests per minute per job token for requests to the \u0060/jobs/*\u0060 runner jobs API endpoints. Default: \u0060200\u0060. To disable throttling, set to \u00600\u0060. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/462537) in GitLab 18.5.",
+            "description": "Maximum number of requests per minute per job token for requests to the \u0060/jobs/*\u0060 runner jobs API endpoints. Default: \u0060200\u0060. To disable throttling, set to \u00600\u0060. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/206712) in GitLab 18.5.",
             "nullable": true
           },
           "runner_jobs_patch_trace_api_limit": {
             "type": "string",
-            "description": "Maximum number of requests per minute per runner token for requests to the \u0060PATCH /jobs/:id/trace\u0060 runner jobs API endpoint. Default: 2000. To disable throttling, set to 0. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/462537) in GitLab 18.5.",
+            "description": "Maximum number of requests per minute per runner token for requests to the \u0060PATCH /jobs/:id/trace\u0060 runner jobs API endpoint. Default: 2000. To disable throttling, set to 0. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/206712) in GitLab 18.5.",
             "nullable": true
           },
           "runner_jobs_request_api_limit": {
             "type": "string",
-            "description": "Maximum number of requests per minute per runner token for requests to the \u0060/jobs/request\u0060 runner jobs API endpoint. Default: \u00602000\u0060. To disable throttling, set to \u00600\u0060. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/462537) in GitLab 18.5.",
+            "description": "Maximum number of requests per minute per runner token for requests to the \u0060/jobs/request\u0060 runner jobs API endpoint. Default: \u00602000\u0060. To disable throttling, set to \u00600\u0060. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/206712) in GitLab 18.5.",
             "nullable": true
           },
           "runner_manager_creation_limit": {
@@ -161369,7 +162223,7 @@
           },
           "system_hooks_create_limit": {
             "type": "string",
-            "description": "Maximum number of system hooks a user can create per minute. Default: \u00605\u0060. Set to \u00600\u0060 to disable limits. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/issues/635281) in GitLab 19.6.",
+            "description": "Maximum number of system hooks a user can create per minute. Default: \u00605\u0060. Set to \u00600\u0060 to disable limits. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/264311) in GitLab 19.6.",
             "nullable": true
           },
           "tags_create_limit": {
@@ -161996,6 +162850,11 @@
           "issues_analytics_limit": {
             "type": "integer",
             "description": "Maximum number of issue analytics chart requests a user can make every minute in a group or project. For unauthenticated requests, the limit applies to each IP address. Default: \u006060\u0060. Set to \u00600\u0060 to disable the rate limit.",
+            "nullable": true
+          },
+          "preview_billable_user_change_limit": {
+            "type": "integer",
+            "description": "Maximum number of \u0060gitlabSubscriptionsPreviewBillableUserChange\u0060 GraphQL requests per minute per user. Default: \u00600\u0060, which disables the rate limit. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/271586) in GitLab 19.7.",
             "nullable": true
           },
           "merge_train_removal_limit_per_user": {
@@ -166764,7 +167623,7 @@
           },
           "avatar": {
             "type": "string",
-            "description": "Avatar image for project. The file must be 200 KB or smaller, and one of these types: \u0060.bmp\u0060, \u0060.gif\u0060, \u0060.ico\u0060, \u0060.jpeg\u0060, \u0060.jpg\u0060, \u0060.png\u0060, \u0060.tiff\u0060, or \u0060.webp\u0060.",
+            "description": "Avatar image for project. The file must be 200 KB or smaller, and one of these types: \u0060.avif\u0060, \u0060.bmp\u0060, \u0060.gif\u0060, \u0060.ico\u0060, \u0060.jpeg\u0060, \u0060.jpg\u0060, \u0060.png\u0060, \u0060.tiff\u0060, or \u0060.webp\u0060.",
             "format": "binary",
             "nullable": true
           },
@@ -167217,7 +168076,7 @@
           },
           "avatar": {
             "type": "string",
-            "description": "Avatar image for project. The file must be 200 KB or smaller, and one of these types: \u0060.bmp\u0060, \u0060.gif\u0060, \u0060.ico\u0060, \u0060.jpeg\u0060, \u0060.jpg\u0060, \u0060.png\u0060, \u0060.tiff\u0060, or \u0060.webp\u0060.",
+            "description": "Avatar image for project. The file must be 200 KB or smaller, and one of these types: \u0060.avif\u0060, \u0060.bmp\u0060, \u0060.gif\u0060, \u0060.ico\u0060, \u0060.jpeg\u0060, \u0060.jpg\u0060, \u0060.png\u0060, \u0060.tiff\u0060, or \u0060.webp\u0060.",
             "format": "binary",
             "nullable": true
           },
@@ -167667,7 +168526,7 @@
           },
           "avatar": {
             "type": "string",
-            "description": "Avatar image for project. The file must be 200 KB or smaller, and one of these types: \u0060.bmp\u0060, \u0060.gif\u0060, \u0060.ico\u0060, \u0060.jpeg\u0060, \u0060.jpg\u0060, \u0060.png\u0060, \u0060.tiff\u0060, or \u0060.webp\u0060.",
+            "description": "Avatar image for project. The file must be 200 KB or smaller, and one of these types: \u0060.avif\u0060, \u0060.bmp\u0060, \u0060.gif\u0060, \u0060.ico\u0060, \u0060.jpeg\u0060, \u0060.jpg\u0060, \u0060.png\u0060, \u0060.tiff\u0060, or \u0060.webp\u0060.",
             "format": "binary",
             "nullable": true
           },
@@ -167793,12 +168652,12 @@
           },
           "duo_sast_fp_detection_enabled": {
             "type": "boolean",
-            "description": "Enable GitLab Duo SAST false positive detection for this project. Requires the Maintainer or Owner role, or the Security Manager role behind a feature flag named \u0060update_false_positive_detection_setting_permission\u0060, disabled by default.",
+            "description": "Enable GitLab Duo SAST false positive detection for this project. Requires the Security Manager, Maintainer, or Owner role.",
             "nullable": true
           },
           "duo_secret_detection_fp_enabled": {
             "type": "boolean",
-            "description": "Enable GitLab Duo Secret Detection false positive detection for this project. Requires the Maintainer or Owner role, or the Security Manager role behind a feature flag named \u0060update_false_positive_detection_setting_permission\u0060, disabled by default.",
+            "description": "Enable GitLab Duo Secret Detection false positive detection for this project. Requires the Security Manager, Maintainer, or Owner role.",
             "nullable": true
           },
           "duo_dependency_bump_breaking_changes_enabled": {
@@ -169401,14 +170260,16 @@
         }
       },
       "PostApiV4OrganizationsIdUsersRequest": {
-        "required": [
-          "username"
-        ],
         "type": "object",
         "properties": {
+          "user_id": {
+            "type": "integer",
+            "description": "The ID of the user to add. Mutually exclusive with \u0060username\u0060. At least one of \u0060user_id\u0060, \u0060username\u0060 must be provided.",
+            "nullable": true
+          },
           "username": {
             "type": "string",
-            "description": "The username of the user to add.",
+            "description": "The username of the user to add. Mutually exclusive with \u0060user_id\u0060. At least one of \u0060user_id\u0060, \u0060username\u0060 must be provided.",
             "nullable": true
           },
           "access_level": {
@@ -173728,6 +174589,54 @@
           }
         }
       },
+      "PutApiV4ProjectsIdServicesWorkdayRequest": {
+        "required": [
+          "people_report_url",
+          "workforce_units_report_url",
+          "token_url",
+          "client_id",
+          "client_secret",
+          "refresh_token"
+        ],
+        "type": "object",
+        "properties": {
+          "people_report_url": {
+            "type": "string",
+            "description": "URL of the Workday report that lists people. Paste the URL exactly as Workday shows it. Must use HTTPS.",
+            "nullable": true
+          },
+          "workforce_units_report_url": {
+            "type": "string",
+            "description": "URL of the Workday report that lists workforce units. Paste the URL exactly as Workday shows it. Must use HTTPS.",
+            "nullable": true
+          },
+          "token_url": {
+            "type": "string",
+            "description": "Token endpoint of the Workday API client. Paste the URL exactly as Workday shows it. Must use HTTPS.",
+            "nullable": true
+          },
+          "client_id": {
+            "type": "string",
+            "description": "Client ID of the Workday API client.",
+            "nullable": true
+          },
+          "client_secret": {
+            "type": "string",
+            "description": "Client secret of the Workday API client.",
+            "nullable": true
+          },
+          "refresh_token": {
+            "type": "string",
+            "description": "Refresh token generated for the Workday API client.",
+            "nullable": true
+          },
+          "use_inherited_settings": {
+            "type": "boolean",
+            "description": "Indicates whether to inherit the default settings. Defaults to \u0060false\u0060.",
+            "nullable": true
+          }
+        }
+      },
       "PutApiV4ProjectsIdServicesMockCiRequest": {
         "required": [
           "mock_service_url"
@@ -176591,6 +177500,54 @@
           }
         }
       },
+      "PutApiV4ProjectsIdIntegrationsWorkdayRequest": {
+        "required": [
+          "people_report_url",
+          "workforce_units_report_url",
+          "token_url",
+          "client_id",
+          "client_secret",
+          "refresh_token"
+        ],
+        "type": "object",
+        "properties": {
+          "people_report_url": {
+            "type": "string",
+            "description": "URL of the Workday report that lists people. Paste the URL exactly as Workday shows it. Must use HTTPS.",
+            "nullable": true
+          },
+          "workforce_units_report_url": {
+            "type": "string",
+            "description": "URL of the Workday report that lists workforce units. Paste the URL exactly as Workday shows it. Must use HTTPS.",
+            "nullable": true
+          },
+          "token_url": {
+            "type": "string",
+            "description": "Token endpoint of the Workday API client. Paste the URL exactly as Workday shows it. Must use HTTPS.",
+            "nullable": true
+          },
+          "client_id": {
+            "type": "string",
+            "description": "Client ID of the Workday API client.",
+            "nullable": true
+          },
+          "client_secret": {
+            "type": "string",
+            "description": "Client secret of the Workday API client.",
+            "nullable": true
+          },
+          "refresh_token": {
+            "type": "string",
+            "description": "Refresh token generated for the Workday API client.",
+            "nullable": true
+          },
+          "use_inherited_settings": {
+            "type": "boolean",
+            "description": "Indicates whether to inherit the default settings. Defaults to \u0060false\u0060.",
+            "nullable": true
+          }
+        }
+      },
       "PutApiV4ProjectsIdIntegrationsMockCiRequest": {
         "required": [
           "mock_service_url"
@@ -179445,6 +180402,54 @@
           "workload_identity_pool_provider_id": {
             "type": "string",
             "description": "ID of the Workload Identity Pool provider.",
+            "nullable": true
+          },
+          "use_inherited_settings": {
+            "type": "boolean",
+            "description": "Indicates whether to inherit the default settings. Defaults to \u0060false\u0060.",
+            "nullable": true
+          }
+        }
+      },
+      "PutApiV4GroupsIdIntegrationsWorkdayRequest": {
+        "required": [
+          "people_report_url",
+          "workforce_units_report_url",
+          "token_url",
+          "client_id",
+          "client_secret",
+          "refresh_token"
+        ],
+        "type": "object",
+        "properties": {
+          "people_report_url": {
+            "type": "string",
+            "description": "URL of the Workday report that lists people. Paste the URL exactly as Workday shows it. Must use HTTPS.",
+            "nullable": true
+          },
+          "workforce_units_report_url": {
+            "type": "string",
+            "description": "URL of the Workday report that lists workforce units. Paste the URL exactly as Workday shows it. Must use HTTPS.",
+            "nullable": true
+          },
+          "token_url": {
+            "type": "string",
+            "description": "Token endpoint of the Workday API client. Paste the URL exactly as Workday shows it. Must use HTTPS.",
+            "nullable": true
+          },
+          "client_id": {
+            "type": "string",
+            "description": "Client ID of the Workday API client.",
+            "nullable": true
+          },
+          "client_secret": {
+            "type": "string",
+            "description": "Client secret of the Workday API client.",
+            "nullable": true
+          },
+          "refresh_token": {
+            "type": "string",
+            "description": "Refresh token generated for the Workday API client.",
             "nullable": true
           },
           "use_inherited_settings": {
@@ -183271,7 +184276,7 @@
           },
           "draft_notes_per_merge_request": {
             "type": "integer",
-            "description": "Maximum number of draft notes one user can have on a merge request. Set to \u00600\u0060 for unlimited. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/work_items/636471) in GitLab 19.6.",
+            "description": "Maximum number of draft notes one user can have on a merge request. Set to \u00600\u0060 for unlimited. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/267480) in GitLab 19.6.",
             "nullable": true
           },
           "enforcement_limit": {
@@ -183366,12 +184371,12 @@
           },
           "integration_executions": {
             "type": "integer",
-            "description": "Maximum number of integration executions that can be enqueued per minute, per top-level namespace, excluding Datadog. Set to \u00600\u0060 for unlimited. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/work_items/636614) in GitLab 19.6. This parameter is in beta and might be changed or removed without notice.",
+            "description": "Maximum number of integration executions that can be enqueued per minute, per top-level namespace, excluding Datadog. Set to \u00600\u0060 for unlimited. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/266721) in GitLab 19.6. This parameter is in beta and might be changed or removed without notice.",
             "nullable": true
           },
           "integration_executions_datadog": {
             "type": "integer",
-            "description": "Maximum number of Datadog integration executions that can be enqueued per minute, per top-level namespace. Set to \u00600\u0060 for unlimited. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/work_items/636614) in GitLab 19.6. This parameter is in beta and might be changed or removed without notice.",
+            "description": "Maximum number of Datadog integration executions that can be enqueued per minute, per top-level namespace. Set to \u00600\u0060 for unlimited. [Introduced](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/266721) in GitLab 19.6. This parameter is in beta and might be changed or removed without notice.",
             "nullable": true
           },
           "max_pipelines_per_merge_train": {
@@ -184352,6 +185357,31 @@
           }
         }
       },
+      "ApiEntitiesWorkItemLinks": {
+        "type": "object",
+        "properties": {
+          "self": {
+            "type": "string",
+            "example": "http://example.com/api/v4/projects/1/issues/2"
+          },
+          "notes": {
+            "type": "string",
+            "example": "http://example.com/api/v4/projects/1/issues/2/notes"
+          },
+          "award_emoji": {
+            "type": "string",
+            "example": "http://example.com/api/v4/projects/1/issues/2/award_emoji"
+          },
+          "project": {
+            "type": "string",
+            "example": "http://example.com/api/v4/projects/1"
+          },
+          "closed_as_duplicate_of": {
+            "type": "string",
+            "example": "http://example.com/api/v4/projects/1/issues/75"
+          }
+        }
+      },
       "ApiEntitiesMilestoneWithStatsIssueStats": {
         "type": "object",
         "properties": {
@@ -185129,31 +186159,28 @@
           }
         }
       },
-      "PostApiV4AiDuoWorkflowsToolsRiskAssessmentResultsRequestClaimsItem": {
+      "PostApiV4AiDuoWorkflowsToolsRiskAssessmentResultsRequestAreasItem": {
         "required": [
           "name",
-          "value"
+          "level",
+          "reason"
         ],
         "type": "object",
         "properties": {
           "name": {
-            "maxLength": 64,
-            "minLength": 1,
-            "pattern": "^[a-z0-9_]\u002B$",
-            "type": "string",
-            "description": "Name of the claim, for example authorization"
-          },
-          "value": {
-            "maxLength": 256,
+            "maxLength": 255,
             "minLength": 1,
             "type": "string",
-            "description": "Categorical answer, for example true, false, or behavioral. Never a score."
+            "description": "Name of the area, as the area definition spells it"
           },
-          "evidence": {
-            "maxLength": 256,
+          "level": {
+            "$ref": "#/components/schemas/PostApiV4AiDuoWorkflowsToolsRiskAssessmentResultsRequestAreasItemLevel"
+          },
+          "reason": {
+            "maxLength": 1024,
+            "minLength": 1,
             "type": "string",
-            "description": "Where the claim was observed, as a path:line reference",
-            "nullable": true
+            "description": "The file or the change that decided the risk level"
           }
         }
       },
@@ -186912,7 +187939,7 @@
           },
           "avatar": {
             "type": "string",
-            "description": "Avatar image for project. The file must be 200 KB or smaller, and one of these types: \u0060.bmp\u0060, \u0060.gif\u0060, \u0060.ico\u0060, \u0060.jpeg\u0060, \u0060.jpg\u0060, \u0060.png\u0060, \u0060.tiff\u0060, or \u0060.webp\u0060.",
+            "description": "Avatar image for project. The file must be 200 KB or smaller, and one of these types: \u0060.avif\u0060, \u0060.bmp\u0060, \u0060.gif\u0060, \u0060.ico\u0060, \u0060.jpeg\u0060, \u0060.jpg\u0060, \u0060.png\u0060, \u0060.tiff\u0060, or \u0060.webp\u0060.",
             "format": "binary",
             "nullable": true
           },
@@ -187308,7 +188335,7 @@
           },
           "avatar": {
             "type": "string",
-            "description": "Avatar image for project. The file must be 200 KB or smaller, and one of these types: \u0060.bmp\u0060, \u0060.gif\u0060, \u0060.ico\u0060, \u0060.jpeg\u0060, \u0060.jpg\u0060, \u0060.png\u0060, \u0060.tiff\u0060, or \u0060.webp\u0060.",
+            "description": "Avatar image for project. The file must be 200 KB or smaller, and one of these types: \u0060.avif\u0060, \u0060.bmp\u0060, \u0060.gif\u0060, \u0060.ico\u0060, \u0060.jpeg\u0060, \u0060.jpg\u0060, \u0060.png\u0060, \u0060.tiff\u0060, or \u0060.webp\u0060.",
             "format": "binary",
             "nullable": true
           },
@@ -187704,7 +188731,7 @@
           },
           "avatar": {
             "type": "string",
-            "description": "Avatar image for project. The file must be 200 KB or smaller, and one of these types: \u0060.bmp\u0060, \u0060.gif\u0060, \u0060.ico\u0060, \u0060.jpeg\u0060, \u0060.jpg\u0060, \u0060.png\u0060, \u0060.tiff\u0060, or \u0060.webp\u0060.",
+            "description": "Avatar image for project. The file must be 200 KB or smaller, and one of these types: \u0060.avif\u0060, \u0060.bmp\u0060, \u0060.gif\u0060, \u0060.ico\u0060, \u0060.jpeg\u0060, \u0060.jpg\u0060, \u0060.png\u0060, \u0060.tiff\u0060, or \u0060.webp\u0060.",
             "format": "binary",
             "nullable": true
           },
@@ -192146,6 +193173,24 @@
           "$ref": "#/components/schemas/ApiEntitiesSnippet"
         }
       },
+      "GetApiV4Search200ResponseSchema": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/GetApiV4Search200ResponseItem"
+        }
+      },
+      "GetApiV4GroupsIdDashSearch200ResponseSchema": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/GetApiV4GroupsIdDashSearch200ResponseItem"
+        }
+      },
+      "GetApiV4ProjectsIdDashSearch200ResponseSchema": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/GetApiV4ProjectsIdDashSearch200ResponseItem"
+        }
+      },
       "GetApiV4ProjectsIdPackagesRubygemsFileName200OctetStreamResponseSchema": {
         "type": "string",
         "format": "binary"
@@ -192571,7 +193616,13 @@
       "GetApiV4ProjectsIdMergeRequestsMergeRequestIidClosesIssues200ResponseSchema": {
         "type": "array",
         "items": {
-          "$ref": "#/components/schemas/ApiEntitiesIssueBasic"
+          "$ref": "#/components/schemas/GetApiV4ProjectsIdMergeRequestsMergeRequestIidClosesIssues200ResponseItem"
+        }
+      },
+      "GetApiV4ProjectsIdMergeRequestsMergeRequestIidRelatedIssues200ResponseSchema": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/GetApiV4ProjectsIdMergeRequestsMergeRequestIidClosesIssues200ResponseItem"
         }
       },
       "GetApiV4GroupsIdMembers200ResponseSchema": {
@@ -193359,6 +194410,115 @@
           "$ref": "#/components/schemas/ApiEntitiesAccessRequester"
         }
       },
+      "GetApiV4Search200ResponseItem": {
+        "anyOf": [
+          {
+            "$ref": "#/components/schemas/ApiEntitiesBlob"
+          },
+          {
+            "$ref": "#/components/schemas/ApiEntitiesCommitDetail"
+          },
+          {
+            "$ref": "#/components/schemas/ApiEntitiesNote"
+          },
+          {
+            "$ref": "#/components/schemas/ApiEntitiesBasicProjectDetails"
+          },
+          {
+            "$ref": "#/components/schemas/ApiEntitiesBasicGroupDetails"
+          },
+          {
+            "$ref": "#/components/schemas/ApiEntitiesIssueBasic"
+          },
+          {
+            "$ref": "#/components/schemas/ApiEntitiesWorkItem"
+          },
+          {
+            "$ref": "#/components/schemas/ApiEntitiesMergeRequestBasic"
+          },
+          {
+            "$ref": "#/components/schemas/ApiEntitiesMilestone"
+          },
+          {
+            "$ref": "#/components/schemas/ApiEntitiesSnippet"
+          },
+          {
+            "$ref": "#/components/schemas/ApiEntitiesUserBasic"
+          }
+        ]
+      },
+      "GetApiV4GroupsIdDashSearch200ResponseItem": {
+        "anyOf": [
+          {
+            "$ref": "#/components/schemas/ApiEntitiesBlob"
+          },
+          {
+            "$ref": "#/components/schemas/ApiEntitiesCommitDetail"
+          },
+          {
+            "$ref": "#/components/schemas/ApiEntitiesNote"
+          },
+          {
+            "$ref": "#/components/schemas/ApiEntitiesBasicProjectDetails"
+          },
+          {
+            "$ref": "#/components/schemas/ApiEntitiesBasicGroupDetails"
+          },
+          {
+            "$ref": "#/components/schemas/ApiEntitiesIssueBasic"
+          },
+          {
+            "$ref": "#/components/schemas/ApiEntitiesWorkItem"
+          },
+          {
+            "$ref": "#/components/schemas/ApiEntitiesMergeRequestBasic"
+          },
+          {
+            "$ref": "#/components/schemas/ApiEntitiesMilestone"
+          },
+          {
+            "$ref": "#/components/schemas/ApiEntitiesUserBasic"
+          }
+        ]
+      },
+      "GetApiV4ProjectsIdDashSearch200ResponseItem": {
+        "anyOf": [
+          {
+            "$ref": "#/components/schemas/ApiEntitiesIssueBasic"
+          },
+          {
+            "$ref": "#/components/schemas/ApiEntitiesWorkItem"
+          },
+          {
+            "$ref": "#/components/schemas/ApiEntitiesMergeRequestBasic"
+          },
+          {
+            "$ref": "#/components/schemas/ApiEntitiesMilestone"
+          },
+          {
+            "$ref": "#/components/schemas/ApiEntitiesNote"
+          },
+          {
+            "$ref": "#/components/schemas/ApiEntitiesBlob"
+          },
+          {
+            "$ref": "#/components/schemas/ApiEntitiesCommitDetail"
+          },
+          {
+            "$ref": "#/components/schemas/ApiEntitiesUserBasic"
+          }
+        ]
+      },
+      "GetApiV4ProjectsIdMergeRequestsMergeRequestIidClosesIssues200ResponseItem": {
+        "anyOf": [
+          {
+            "$ref": "#/components/schemas/ApiEntitiesIssueBasic"
+          },
+          {
+            "$ref": "#/components/schemas/ApiEntitiesExternalIssue"
+          }
+        ]
+      },
       "ApiEntitiesOrbitContextEntitySummaryProperty": {
         "type": "object",
         "description": "Summary of a found entity. Contains \u0060namespace_path\u0060 and \u0060project_path\u0060. \u0060project_path\u0060 is \u0060null\u0060 for group work items. Other fields can be added."
@@ -193461,9 +194621,6 @@
         "type": "object"
       },
       "ApiEntitiesEpicReferencesItemProperty": {
-        "type": "object"
-      },
-      "ApiEntitiesEpicIssueLinkEpicProperty": {
         "type": "object"
       },
       "DetailedStatusEntityIllustrationProperty": {
@@ -193592,10 +194749,6 @@
             "Jane Doe \u003Cjanedoe@gitlab.com\u003E"
           ]
         }
-      },
-      "ApiEntitiesCommitDetailLastPipelineProperty": {
-        "type": "object",
-        "description": "Latest pipeline for the commit."
       },
       "ApiEntitiesSnippetFilesItemProperty": {
         "type": "object"
@@ -194658,6 +195811,43 @@
             {
               "value": "local_ca",
               "name": "LocalCa"
+            }
+          ]
+        }
+      },
+      "ApiEntitiesWorkItemSeverity": {
+        "enum": [
+          "UNKNOWN",
+          "LOW",
+          "MEDIUM",
+          "HIGH",
+          "CRITICAL"
+        ],
+        "type": "string",
+        "description": "The severity of the issue.",
+        "x-ms-enum": {
+          "name": "ApiEntitiesWorkItemSeverity",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "UNKNOWN",
+              "name": "Unknown"
+            },
+            {
+              "value": "LOW",
+              "name": "Low"
+            },
+            {
+              "value": "MEDIUM",
+              "name": "Medium"
+            },
+            {
+              "value": "HIGH",
+              "name": "High"
+            },
+            {
+              "value": "CRITICAL",
+              "name": "Critical"
             }
           ]
         }
@@ -196230,7 +197420,8 @@
           "work_item_plan_to_merge_request",
           "web_chat",
           "vulnerability_leaked_token_rotation",
-          "mobile_chat"
+          "mobile_chat",
+          "work_item_update_implementation"
         ],
         "type": "string",
         "description": "Where the session was triggered from: a GitLab feature entry point, such as \u0060merge_request_code_conflict\u0060, or the client surface that created the session, such as \u0060duo_cli_run\u0060 or \u0060ide_extension\u0060. Stored as the session \u0060source_type\u0060.",
@@ -196298,6 +197489,10 @@
             {
               "value": "mobile_chat",
               "name": "MobileChat"
+            },
+            {
+              "value": "work_item_update_implementation",
+              "name": "WorkItemUpdateImplementation"
             }
           ]
         }
@@ -205047,6 +206242,39 @@
           ]
         }
       },
+      "PostApiV4AiDuoWorkflowsToolsRiskAssessmentResultsRequestAreasItemLevel": {
+        "minLength": 1,
+        "enum": [
+          "low",
+          "medium",
+          "high",
+          "critical"
+        ],
+        "type": "string",
+        "description": "Risk level of the change in this area",
+        "x-ms-enum": {
+          "name": "PostApiV4AiDuoWorkflowsToolsRiskAssessmentResultsRequestAreasItemLevel",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "low",
+              "name": "Low"
+            },
+            {
+              "value": "medium",
+              "name": "Medium"
+            },
+            {
+              "value": "high",
+              "name": "High"
+            },
+            {
+              "value": "critical",
+              "name": "Critical"
+            }
+          ]
+        }
+      },
       "PostApiV4AiDuoWorkflowsWorkflowsIdCheckpointsRequestChannelBlobsItemStepAction": {
         "minLength": 1,
         "enum": [
@@ -213654,19 +214882,19 @@
           ]
         }
       },
-      "IdOrderBy": {
+      "UserIdOrderBy": {
         "enum": [
-          "id"
+          "user_id"
         ],
         "type": "string",
         "nullable": true,
         "x-ms-enum": {
-          "name": "IdOrderBy",
+          "name": "UserIdOrderBy",
           "modelAsString": false,
           "values": [
             {
-              "value": "id",
-              "name": "Id"
+              "value": "user_id",
+              "name": "UserId"
             }
           ]
         }
@@ -215675,6 +216903,7 @@
           "git-guardian",
           "google-cloud-platform-artifact-registry",
           "google-cloud-platform-workload-identity-federation",
+          "workday",
           "mock-ci",
           "mock-monitoring"
         ],
@@ -215880,6 +217109,10 @@
               "name": "GoogleCloudPlatformWorkloadIdentityFederation"
             },
             {
+              "value": "workday",
+              "name": "Workday"
+            },
+            {
               "value": "mock-ci",
               "name": "MockCi"
             },
@@ -215942,6 +217175,7 @@
           "git-guardian",
           "google-cloud-platform-artifact-registry",
           "google-cloud-platform-workload-identity-federation",
+          "workday",
           "mock-ci",
           "mock-monitoring"
         ],
@@ -216147,6 +217381,10 @@
               "name": "GoogleCloudPlatformWorkloadIdentityFederation"
             },
             {
+              "value": "workday",
+              "name": "Workday"
+            },
+            {
               "value": "mock-ci",
               "name": "MockCi"
             },
@@ -216209,6 +217447,7 @@
           "git-guardian",
           "google-cloud-platform-artifact-registry",
           "google-cloud-platform-workload-identity-federation",
+          "workday",
           "mock-ci",
           "mock-monitoring"
         ],
@@ -216414,6 +217653,10 @@
               "name": "GoogleCloudPlatformWorkloadIdentityFederation"
             },
             {
+              "value": "workday",
+              "name": "Workday"
+            },
+            {
               "value": "mock-ci",
               "name": "MockCi"
             },
@@ -216476,6 +217719,7 @@
           "git-guardian",
           "google-cloud-platform-artifact-registry",
           "google-cloud-platform-workload-identity-federation",
+          "workday",
           "mock-ci",
           "mock-monitoring"
         ],
@@ -216681,6 +217925,10 @@
               "name": "GoogleCloudPlatformWorkloadIdentityFederation"
             },
             {
+              "value": "workday",
+              "name": "Workday"
+            },
+            {
               "value": "mock-ci",
               "name": "MockCi"
             },
@@ -216743,6 +217991,7 @@
           "git-guardian",
           "google-cloud-platform-artifact-registry",
           "google-cloud-platform-workload-identity-federation",
+          "workday",
           "mock-ci",
           "mock-monitoring"
         ],
@@ -216948,6 +218197,10 @@
               "name": "GoogleCloudPlatformWorkloadIdentityFederation"
             },
             {
+              "value": "workday",
+              "name": "Workday"
+            },
+            {
               "value": "mock-ci",
               "name": "MockCi"
             },
@@ -217010,6 +218263,7 @@
           "git-guardian",
           "google-cloud-platform-artifact-registry",
           "google-cloud-platform-workload-identity-federation",
+          "workday",
           "mock-ci",
           "mock-monitoring"
         ],
@@ -217213,6 +218467,10 @@
             {
               "value": "google-cloud-platform-workload-identity-federation",
               "name": "GoogleCloudPlatformWorkloadIdentityFederation"
+            },
+            {
+              "value": "workday",
+              "name": "Workday"
             },
             {
               "value": "mock-ci",
@@ -220060,6 +221318,23 @@
             {
               "value": "scheduled",
               "name": "Scheduled"
+            }
+          ]
+        }
+      },
+      "IdOrderBy": {
+        "enum": [
+          "id"
+        ],
+        "type": "string",
+        "nullable": true,
+        "x-ms-enum": {
+          "name": "IdOrderBy",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "id",
+              "name": "Id"
             }
           ]
         }
@@ -223206,9 +224481,6 @@
     "ApiEntitiesEpicReferencesItem": {
       "type": "object"
     },
-    "ApiEntitiesEpicIssueLinkEpic": {
-      "type": "object"
-    },
     "DetailedStatusEntityIllustration": {
       "type": "object",
       "example": {
@@ -223335,10 +224607,6 @@
           "Jane Doe \u003Cjanedoe@gitlab.com\u003E"
         ]
       }
-    },
-    "ApiEntitiesCommitDetailLastPipeline": {
-      "type": "object",
-      "description": "Latest pipeline for the commit."
     },
     "ApiEntitiesSnippetFilesItem": {
       "type": "object"
@@ -224852,6 +226120,24 @@
         "$ref": "#/components/schemas/ApiEntitiesSnippet"
       }
     },
+    "GetApiV4Search200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/GetApiV4Search200ResponseItem"
+      }
+    },
+    "GetApiV4GroupsIdDashSearch200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/GetApiV4GroupsIdDashSearch200ResponseItem"
+      }
+    },
+    "GetApiV4ProjectsIdDashSearch200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/GetApiV4ProjectsIdDashSearch200ResponseItem"
+      }
+    },
     "GetApiV4ProjectsIdPackagesRubygemsFileName200OctetStreamResponse": {
       "type": "string",
       "format": "binary"
@@ -225285,7 +226571,13 @@
     "GetApiV4ProjectsIdMergeRequestsMergeRequestIidClosesIssues200Response": {
       "type": "array",
       "items": {
-        "$ref": "#/components/schemas/ApiEntitiesIssueBasic"
+        "$ref": "#/components/schemas/GetApiV4ProjectsIdMergeRequestsMergeRequestIidClosesIssues200ResponseItem"
+      }
+    },
+    "GetApiV4ProjectsIdMergeRequestsMergeRequestIidRelatedIssues200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/GetApiV4ProjectsIdMergeRequestsMergeRequestIidClosesIssues200ResponseItem"
       }
     },
     "GetApiV4GroupsIdMembers200Response": {
@@ -226090,6 +227382,135 @@
     "GetApiV4ProjectsIdExportRelationsDownload200GzipResponseSchema": {
       "type": "string",
       "format": "binary"
+    },
+    "GetApiV4ProjectsIdMergeRequestsMergeRequestIidRelatedIssues200ResponseItem": {
+      "anyOf": [
+        {
+          "$ref": "#/components/schemas/ApiEntitiesIssueBasic"
+        },
+        {
+          "$ref": "#/components/schemas/ApiEntitiesExternalIssue"
+        }
+      ]
+    },
+    "GetApiV4Search200ResponseSchemaItem": {
+      "anyOf": [
+        {
+          "$ref": "#/components/schemas/ApiEntitiesBlob"
+        },
+        {
+          "$ref": "#/components/schemas/ApiEntitiesCommitDetail"
+        },
+        {
+          "$ref": "#/components/schemas/ApiEntitiesNote"
+        },
+        {
+          "$ref": "#/components/schemas/ApiEntitiesBasicProjectDetails"
+        },
+        {
+          "$ref": "#/components/schemas/ApiEntitiesBasicGroupDetails"
+        },
+        {
+          "$ref": "#/components/schemas/ApiEntitiesIssueBasic"
+        },
+        {
+          "$ref": "#/components/schemas/ApiEntitiesWorkItem"
+        },
+        {
+          "$ref": "#/components/schemas/ApiEntitiesMergeRequestBasic"
+        },
+        {
+          "$ref": "#/components/schemas/ApiEntitiesMilestone"
+        },
+        {
+          "$ref": "#/components/schemas/ApiEntitiesSnippet"
+        },
+        {
+          "$ref": "#/components/schemas/ApiEntitiesUserBasic"
+        }
+      ]
+    },
+    "GetApiV4GroupsIdDashSearch200ResponseSchemaItem": {
+      "anyOf": [
+        {
+          "$ref": "#/components/schemas/ApiEntitiesBlob"
+        },
+        {
+          "$ref": "#/components/schemas/ApiEntitiesCommitDetail"
+        },
+        {
+          "$ref": "#/components/schemas/ApiEntitiesNote"
+        },
+        {
+          "$ref": "#/components/schemas/ApiEntitiesBasicProjectDetails"
+        },
+        {
+          "$ref": "#/components/schemas/ApiEntitiesBasicGroupDetails"
+        },
+        {
+          "$ref": "#/components/schemas/ApiEntitiesIssueBasic"
+        },
+        {
+          "$ref": "#/components/schemas/ApiEntitiesWorkItem"
+        },
+        {
+          "$ref": "#/components/schemas/ApiEntitiesMergeRequestBasic"
+        },
+        {
+          "$ref": "#/components/schemas/ApiEntitiesMilestone"
+        },
+        {
+          "$ref": "#/components/schemas/ApiEntitiesUserBasic"
+        }
+      ]
+    },
+    "GetApiV4ProjectsIdDashSearch200ResponseSchemaItem": {
+      "anyOf": [
+        {
+          "$ref": "#/components/schemas/ApiEntitiesIssueBasic"
+        },
+        {
+          "$ref": "#/components/schemas/ApiEntitiesWorkItem"
+        },
+        {
+          "$ref": "#/components/schemas/ApiEntitiesMergeRequestBasic"
+        },
+        {
+          "$ref": "#/components/schemas/ApiEntitiesMilestone"
+        },
+        {
+          "$ref": "#/components/schemas/ApiEntitiesNote"
+        },
+        {
+          "$ref": "#/components/schemas/ApiEntitiesBlob"
+        },
+        {
+          "$ref": "#/components/schemas/ApiEntitiesCommitDetail"
+        },
+        {
+          "$ref": "#/components/schemas/ApiEntitiesUserBasic"
+        }
+      ]
+    },
+    "GetApiV4ProjectsIdMergeRequestsMergeRequestIidClosesIssues200ResponseSchemaItem": {
+      "anyOf": [
+        {
+          "$ref": "#/components/schemas/ApiEntitiesIssueBasic"
+        },
+        {
+          "$ref": "#/components/schemas/ApiEntitiesExternalIssue"
+        }
+      ]
+    },
+    "GetApiV4ProjectsIdMergeRequestsMergeRequestIidRelatedIssues200ResponseSchemaItem": {
+      "anyOf": [
+        {
+          "$ref": "#/components/schemas/ApiEntitiesIssueBasic"
+        },
+        {
+          "$ref": "#/components/schemas/ApiEntitiesExternalIssue"
+        }
+      ]
     }
   }
 }
