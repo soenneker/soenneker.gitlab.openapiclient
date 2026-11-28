@@ -23,6 +23,7 @@ using Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Impersonation_tokens;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Keys;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Memberships;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Personal_access_tokens;
+using Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Phone_number;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Project_deploy_keys;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Projects;
 using Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Reject;
@@ -145,6 +146,11 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Personal_access_tokens.Personal_access_tokensRequestBuilder Personal_access_tokens
         {
             get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Personal_access_tokens.Personal_access_tokensRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The phone_number property</summary>
+        public global::Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Phone_number.Phone_numberRequestBuilder Phone_number
+        {
+            get => new global::Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Phone_number.Phone_numberRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The project_deploy_keys property</summary>
         public global::Soenneker.GitLab.OpenApiClient.Api.V4.Users.Item.Project_deploy_keys.Project_deploy_keysRequestBuilder Project_deploy_keys

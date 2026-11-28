@@ -110,12 +110,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The variables property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Variables { get => _explicitNullValueVariables; set { _explicitNullValueVariables = value; AdditionalData?.Remove("variables"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variables"); else _explicitNullProperties?.Remove("variables"); } }
-        private string? _explicitNullValueVariables = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestServiceVariablesItemProperty>? Variables { get => _explicitNullValueVariables; set { _explicitNullValueVariables = value; AdditionalData?.Remove("variables"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variables"); else _explicitNullProperties?.Remove("variables"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestServiceVariablesItemProperty>? _explicitNullValueVariables = default!;
 #nullable restore
 #else
-        public string Variables { get => _explicitNullValueVariables; set { _explicitNullValueVariables = value; AdditionalData?.Remove("variables"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variables"); else _explicitNullProperties?.Remove("variables"); } }
-        private string _explicitNullValueVariables = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestServiceVariablesItemProperty> Variables { get => _explicitNullValueVariables; set { _explicitNullValueVariables = value; AdditionalData?.Remove("variables"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variables"); else _explicitNullProperties?.Remove("variables"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestServiceVariablesItemProperty> _explicitNullValueVariables = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestService"/> and sets the default values.
@@ -149,7 +149,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "ports", n => { Ports = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestPort>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestPort.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "pull_policy", n => { PullPolicy = n.GetStringValue(); } },
-                { "variables", n => { Variables = n.GetStringValue(); } },
+                { "variables", n => { Variables = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestServiceVariablesItemProperty>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestServiceVariablesItemProperty.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
         /// <summary>
@@ -166,7 +166,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("name", Name);
             writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestPort>("ports", Ports);
             writer.WriteStringValue("pull_policy", PullPolicy);
-            writer.WriteStringValue("variables", Variables);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesCiJobRequestServiceVariablesItemProperty>("variables", Variables);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

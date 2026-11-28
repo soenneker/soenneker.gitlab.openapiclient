@@ -889,6 +889,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             else if (parseNode.GetChildNode("max_pages_size") is { } nullNodeMaxPagesSize && nullNodeMaxPagesSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxPagesSize = null;
             if (parseNode.GetChildNode("max_personal_access_token_lifetime") is null) { _explicitNullValueMaxPersonalAccessTokenLifetime = default!; _explicitNullProperties?.Remove("max_personal_access_token_lifetime"); }
             else if (parseNode.GetChildNode("max_personal_access_token_lifetime") is { } nullNodeMaxPersonalAccessTokenLifetime && nullNodeMaxPersonalAccessTokenLifetime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxPersonalAccessTokenLifetime = null;
+            if (parseNode.GetChildNode("max_refs_per_push") is null) { _explicitNullValueMaxRefsPerPush = default!; _explicitNullProperties?.Remove("max_refs_per_push"); }
+            else if (parseNode.GetChildNode("max_refs_per_push") is { } nullNodeMaxRefsPerPush && nullNodeMaxRefsPerPush.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxRefsPerPush = null;
             if (parseNode.GetChildNode("max_ssh_key_lifetime") is null) { _explicitNullValueMaxSshKeyLifetime = default!; _explicitNullProperties?.Remove("max_ssh_key_lifetime"); }
             else if (parseNode.GetChildNode("max_ssh_key_lifetime") is { } nullNodeMaxSshKeyLifetime && nullNodeMaxSshKeyLifetime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MaxSshKeyLifetime = null;
             if (parseNode.GetChildNode("max_terraform_state_size_bytes") is null) { _explicitNullValueMaxTerraformStateSizeBytes = default!; _explicitNullProperties?.Remove("max_terraform_state_size_bytes"); }
@@ -947,6 +949,8 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             else if (parseNode.GetChildNode("notes_create_limit") is { } nullNodeNotesCreateLimit && nullNodeNotesCreateLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotesCreateLimit = null;
             if (parseNode.GetChildNode("notes_create_limit_allowlist_raw") is null) { _explicitNullValueNotesCreateLimitAllowlistRaw = default!; _explicitNullProperties?.Remove("notes_create_limit_allowlist_raw"); }
             else if (parseNode.GetChildNode("notes_create_limit_allowlist_raw") is { } nullNodeNotesCreateLimitAllowlistRaw && nullNodeNotesCreateLimitAllowlistRaw.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotesCreateLimitAllowlistRaw = null;
+            if (parseNode.GetChildNode("notes_update_limit") is null) { _explicitNullValueNotesUpdateLimit = default!; _explicitNullProperties?.Remove("notes_update_limit"); }
+            else if (parseNode.GetChildNode("notes_update_limit") is { } nullNodeNotesUpdateLimit && nullNodeNotesUpdateLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotesUpdateLimit = null;
             if (parseNode.GetChildNode("notify_on_unknown_sign_in") is null) { _explicitNullValueNotifyOnUnknownSignIn = default!; _explicitNullProperties?.Remove("notify_on_unknown_sign_in"); }
             else if (parseNode.GetChildNode("notify_on_unknown_sign_in") is { } nullNodeNotifyOnUnknownSignIn && nullNodeNotifyOnUnknownSignIn.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotifyOnUnknownSignIn = null;
             if (parseNode.GetChildNode("npm_package_requests_forwarding") is null) { _explicitNullValueNpmPackageRequestsForwarding = default!; _explicitNullProperties?.Remove("npm_package_requests_forwarding"); }
@@ -5842,6 +5846,16 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         public string MaxPersonalAccessTokenLifetime { get => _explicitNullValueMaxPersonalAccessTokenLifetime; set { _explicitNullValueMaxPersonalAccessTokenLifetime = value; AdditionalData?.Remove("max_personal_access_token_lifetime"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("max_personal_access_token_lifetime"); else _explicitNullProperties?.Remove("max_personal_access_token_lifetime"); } }
         private string _explicitNullValueMaxPersonalAccessTokenLifetime = default!;
 #endif
+        /// <summary>The max_refs_per_push property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? MaxRefsPerPush { get => _explicitNullValueMaxRefsPerPush; set { _explicitNullValueMaxRefsPerPush = value; AdditionalData?.Remove("max_refs_per_push"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("max_refs_per_push"); else _explicitNullProperties?.Remove("max_refs_per_push"); } }
+        private string? _explicitNullValueMaxRefsPerPush = default!;
+#nullable restore
+#else
+        public string MaxRefsPerPush { get => _explicitNullValueMaxRefsPerPush; set { _explicitNullValueMaxRefsPerPush = value; AdditionalData?.Remove("max_refs_per_push"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("max_refs_per_push"); else _explicitNullProperties?.Remove("max_refs_per_push"); } }
+        private string _explicitNullValueMaxRefsPerPush = default!;
+#endif
         /// <summary>The max_ssh_key_lifetime property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -6131,6 +6145,16 @@ namespace Soenneker.GitLab.OpenApiClient.Models
 #else
         public string NotesCreateLimitAllowlistRaw { get => _explicitNullValueNotesCreateLimitAllowlistRaw; set { _explicitNullValueNotesCreateLimitAllowlistRaw = value; AdditionalData?.Remove("notes_create_limit_allowlist_raw"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notes_create_limit_allowlist_raw"); else _explicitNullProperties?.Remove("notes_create_limit_allowlist_raw"); } }
         private string _explicitNullValueNotesCreateLimitAllowlistRaw = default!;
+#endif
+        /// <summary>The notes_update_limit property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? NotesUpdateLimit { get => _explicitNullValueNotesUpdateLimit; set { _explicitNullValueNotesUpdateLimit = value; AdditionalData?.Remove("notes_update_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notes_update_limit"); else _explicitNullProperties?.Remove("notes_update_limit"); } }
+        private string? _explicitNullValueNotesUpdateLimit = default!;
+#nullable restore
+#else
+        public string NotesUpdateLimit { get => _explicitNullValueNotesUpdateLimit; set { _explicitNullValueNotesUpdateLimit = value; AdditionalData?.Remove("notes_update_limit"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notes_update_limit"); else _explicitNullProperties?.Remove("notes_update_limit"); } }
+        private string _explicitNullValueNotesUpdateLimit = default!;
 #endif
         /// <summary>The notify_on_unknown_sign_in property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -9468,7 +9492,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(797)
+            return new Dictionary<string, Action<IParseNode>>(799)
             {
                 { "abuse_notification_email", n => { AbuseNotificationEmail = n.GetStringValue(); } },
                 { "active_context_pause_indexing", n => { ActiveContextPauseIndexing = n.GetStringValue(); } },
@@ -9906,6 +9930,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "max_pages_custom_domains_per_project", n => { MaxPagesCustomDomainsPerProject = n.GetStringValue(); } },
                 { "max_pages_size", n => { MaxPagesSize = n.GetStringValue(); } },
                 { "max_personal_access_token_lifetime", n => { MaxPersonalAccessTokenLifetime = n.GetStringValue(); } },
+                { "max_refs_per_push", n => { MaxRefsPerPush = n.GetStringValue(); } },
                 { "max_ssh_key_lifetime", n => { MaxSshKeyLifetime = n.GetStringValue(); } },
                 { "max_terraform_state_size_bytes", n => { MaxTerraformStateSizeBytes = n.GetStringValue(); } },
                 { "max_yaml_depth", n => { MaxYamlDepth = n.GetStringValue(); } },
@@ -9935,6 +9960,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "namespace_aggregation_schedule_lease_duration_in_seconds", n => { NamespaceAggregationScheduleLeaseDurationInSeconds = n.GetStringValue(); } },
                 { "notes_create_limit", n => { NotesCreateLimit = n.GetStringValue(); } },
                 { "notes_create_limit_allowlist_raw", n => { NotesCreateLimitAllowlistRaw = n.GetStringValue(); } },
+                { "notes_update_limit", n => { NotesUpdateLimit = n.GetStringValue(); } },
                 { "notify_on_unknown_sign_in", n => { NotifyOnUnknownSignIn = n.GetStringValue(); } },
                 { "npm_package_requests_forwarding", n => { NpmPackageRequestsForwarding = n.GetStringValue(); } },
                 { "nuget_skip_metadata_url_validation", n => { NugetSkipMetadataUrlValidation = n.GetStringValue(); } },
@@ -10712,6 +10738,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("max_pages_custom_domains_per_project", MaxPagesCustomDomainsPerProject);
             writer.WriteStringValue("max_pages_size", MaxPagesSize);
             writer.WriteStringValue("max_personal_access_token_lifetime", MaxPersonalAccessTokenLifetime);
+            writer.WriteStringValue("max_refs_per_push", MaxRefsPerPush);
             writer.WriteStringValue("max_ssh_key_lifetime", MaxSshKeyLifetime);
             writer.WriteStringValue("max_terraform_state_size_bytes", MaxTerraformStateSizeBytes);
             writer.WriteStringValue("max_yaml_depth", MaxYamlDepth);
@@ -10741,6 +10768,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteStringValue("namespace_aggregation_schedule_lease_duration_in_seconds", NamespaceAggregationScheduleLeaseDurationInSeconds);
             writer.WriteStringValue("notes_create_limit", NotesCreateLimit);
             writer.WriteStringValue("notes_create_limit_allowlist_raw", NotesCreateLimitAllowlistRaw);
+            writer.WriteStringValue("notes_update_limit", NotesUpdateLimit);
             writer.WriteStringValue("notify_on_unknown_sign_in", NotifyOnUnknownSignIn);
             writer.WriteStringValue("npm_package_requests_forwarding", NpmPackageRequestsForwarding);
             writer.WriteStringValue("nuget_skip_metadata_url_validation", NugetSkipMetadataUrlValidation);

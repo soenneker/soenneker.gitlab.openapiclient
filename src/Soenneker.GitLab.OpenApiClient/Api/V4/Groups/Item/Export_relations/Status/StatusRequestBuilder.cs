@@ -34,26 +34,25 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Export_relations.Sta
         {
         }
         /// <summary>
-        /// Retrieves the status of a relations export for a group. The status is one of `0` (started), `1` (finished), or `-1` (failed).
+        /// Retrieves the status of a relations export for a group. The status is one of `0` (started), `1` (finished), or `-1` (failed). Without `relation`, returns a list with the status of each relation. With `relation`, returns the status of that relation as a single object.
         /// </summary>
-        /// <returns>A List&lt;global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBulkImportsExportStatus&gt;</returns>
+        /// <returns>A <see cref="global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4GroupsIdExportRelationsStatus200Response"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBulkImportsExportStatus>?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Export_relations.Status.StatusRequestBuilder.StatusRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4GroupsIdExportRelationsStatus200Response?> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Export_relations.Status.StatusRequestBuilder.StatusRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBulkImportsExportStatus>> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Export_relations.Status.StatusRequestBuilder.StatusRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4GroupsIdExportRelationsStatus200Response> GetAsync(Action<RequestConfiguration<global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Export_relations.Status.StatusRequestBuilder.StatusRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBulkImportsExportStatus>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesBulkImportsExportStatus.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
-            return collectionResult?.AsList();
+            return await RequestAdapter.SendAsync<global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4GroupsIdExportRelationsStatus200Response>(requestInfo, global::Soenneker.GitLab.OpenApiClient.Models.GetApiV4GroupsIdExportRelationsStatus200Response.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Retrieves the status of a relations export for a group. The status is one of `0` (started), `1` (finished), or `-1` (failed).
+        /// Retrieves the status of a relations export for a group. The status is one of `0` (started), `1` (finished), or `-1` (failed). Without `relation`, returns a list with the status of each relation. With `relation`, returns the status of that relation as a single object.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
@@ -81,7 +80,7 @@ namespace Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Export_relations.Sta
             return new global::Soenneker.GitLab.OpenApiClient.Api.V4.Groups.Item.Export_relations.Status.StatusRequestBuilder(rawUrl, RequestAdapter);
         }
         /// <summary>
-        /// Retrieves the status of a relations export for a group. The status is one of `0` (started), `1` (finished), or `-1` (failed).
+        /// Retrieves the status of a relations export for a group. The status is one of `0` (started), `1` (finished), or `-1` (failed). Without `relation`, returns a list with the status of each relation. With `relation`, returns the status of that relation as a single object.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
         public partial class StatusRequestBuilderGetQueryParameters 

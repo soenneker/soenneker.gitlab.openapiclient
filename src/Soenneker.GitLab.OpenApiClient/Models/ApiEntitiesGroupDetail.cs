@@ -376,12 +376,12 @@ namespace Soenneker.GitLab.OpenApiClient.Models
         /// <summary>The duo_namespace_access_rules property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DuoNamespaceAccessRules { get => _explicitNullValueDuoNamespaceAccessRules; set { _explicitNullValueDuoNamespaceAccessRules = value; AdditionalData?.Remove("duo_namespace_access_rules"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duo_namespace_access_rules"); else _explicitNullProperties?.Remove("duo_namespace_access_rules"); } }
-        private string? _explicitNullValueDuoNamespaceAccessRules = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroupDetailDuoNamespaceAccessRulesItemProperty>? DuoNamespaceAccessRules { get => _explicitNullValueDuoNamespaceAccessRules; set { _explicitNullValueDuoNamespaceAccessRules = value; AdditionalData?.Remove("duo_namespace_access_rules"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duo_namespace_access_rules"); else _explicitNullProperties?.Remove("duo_namespace_access_rules"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroupDetailDuoNamespaceAccessRulesItemProperty>? _explicitNullValueDuoNamespaceAccessRules = default!;
 #nullable restore
 #else
-        public string DuoNamespaceAccessRules { get => _explicitNullValueDuoNamespaceAccessRules; set { _explicitNullValueDuoNamespaceAccessRules = value; AdditionalData?.Remove("duo_namespace_access_rules"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duo_namespace_access_rules"); else _explicitNullProperties?.Remove("duo_namespace_access_rules"); } }
-        private string _explicitNullValueDuoNamespaceAccessRules = default!;
+        public List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroupDetailDuoNamespaceAccessRulesItemProperty> DuoNamespaceAccessRules { get => _explicitNullValueDuoNamespaceAccessRules; set { _explicitNullValueDuoNamespaceAccessRules = value; AdditionalData?.Remove("duo_namespace_access_rules"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duo_namespace_access_rules"); else _explicitNullProperties?.Remove("duo_namespace_access_rules"); } }
+        private List<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroupDetailDuoNamespaceAccessRulesItemProperty> _explicitNullValueDuoNamespaceAccessRules = default!;
 #endif
         /// <summary>The duo_remote_flows_enabled property</summary>
         public bool? DuoRemoteFlowsEnabled { get => _explicitNullValueDuoRemoteFlowsEnabled; set { _explicitNullValueDuoRemoteFlowsEnabled = value; AdditionalData?.Remove("duo_remote_flows_enabled"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("duo_remote_flows_enabled"); else _explicitNullProperties?.Remove("duo_remote_flows_enabled"); } }
@@ -906,7 +906,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
                 { "duo_code_suggestions_enabled", n => { DuoCodeSuggestionsEnabled = n.GetBoolValue(); } },
                 { "duo_core_features_enabled", n => { DuoCoreFeaturesEnabled = n.GetBoolValue(); } },
                 { "duo_features_enabled", n => { DuoFeaturesEnabled = n.GetBoolValue(); } },
-                { "duo_namespace_access_rules", n => { DuoNamespaceAccessRules = n.GetStringValue(); } },
+                { "duo_namespace_access_rules", n => { DuoNamespaceAccessRules = n.GetCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroupDetailDuoNamespaceAccessRulesItemProperty>(global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroupDetailDuoNamespaceAccessRulesItemProperty.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "duo_remote_flows_enabled", n => { DuoRemoteFlowsEnabled = n.GetBoolValue(); } },
                 { "emails_disabled", n => { EmailsDisabled = n.GetBoolValue(); } },
                 { "emails_enabled", n => { EmailsEnabled = n.GetBoolValue(); } },
@@ -1004,7 +1004,7 @@ namespace Soenneker.GitLab.OpenApiClient.Models
             writer.WriteBoolValue("duo_code_suggestions_enabled", DuoCodeSuggestionsEnabled);
             writer.WriteBoolValue("duo_core_features_enabled", DuoCoreFeaturesEnabled);
             writer.WriteBoolValue("duo_features_enabled", DuoFeaturesEnabled);
-            writer.WriteStringValue("duo_namespace_access_rules", DuoNamespaceAccessRules);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.GitLab.OpenApiClient.Models.ApiEntitiesGroupDetailDuoNamespaceAccessRulesItemProperty>("duo_namespace_access_rules", DuoNamespaceAccessRules);
             writer.WriteBoolValue("duo_remote_flows_enabled", DuoRemoteFlowsEnabled);
             writer.WriteBoolValue("emails_disabled", EmailsDisabled);
             writer.WriteBoolValue("emails_enabled", EmailsEnabled);

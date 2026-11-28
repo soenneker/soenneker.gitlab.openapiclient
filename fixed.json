@@ -581,7 +581,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV4JobsIdSbomScansSbomScanId200ResponseSchema"
+                  "$ref": "#/components/schemas/ApiEntitiesSecurityVulnerabilityScanningSbomScan"
                 }
               }
             }
@@ -8543,7 +8543,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ApiEntitiesManagedLicense"
+                  "$ref": "#/components/schemas/GetApiV4ProjectsIdManagedLicensesManagedLicenseId200ResponseSchema"
                 }
               }
             }
@@ -15854,7 +15854,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ApiEntitiesEpic"
+                  "$ref": "#/components/schemas/PutApiV4GroupsIdDashEpicsEpicIidEpicsChildEpicId200ResponseSchema"
                 }
               }
             }
@@ -20837,7 +20837,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ApiEntitiesMlMlflowRegisteredModel"
+                  "$ref": "#/components/schemas/ApiEntitiesMlMlflowGetRegisteredModel"
                 }
               }
             }
@@ -20853,7 +20853,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ApiEntitiesMlMlflowRegisteredModel"
+                  "$ref": "#/components/schemas/ApiEntitiesMlMlflowGetRegisteredModel"
                 }
               }
             },
@@ -20905,7 +20905,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ApiEntitiesMlMlflowRegisteredModel"
+                  "$ref": "#/components/schemas/ApiEntitiesMlMlflowGetRegisteredModel"
                 }
               }
             }
@@ -20961,7 +20961,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ApiEntitiesMlMlflowRegisteredModel"
+                  "$ref": "#/components/schemas/ApiEntitiesMlMlflowGetRegisteredModel"
                 }
               }
             }
@@ -21017,7 +21017,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ApiEntitiesMlMlflowModelVersion"
+                  "$ref": "#/components/schemas/ApiEntitiesMlMlflowGetLatestVersions"
                 }
               }
             }
@@ -21033,7 +21033,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ApiEntitiesMlMlflowModelVersion"
+                  "$ref": "#/components/schemas/ApiEntitiesMlMlflowGetLatestVersions"
                 }
               }
             },
@@ -21241,7 +21241,14 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiEntitiesMlMlflowGetModelVersion"
+                }
+              }
+            }
           },
           "404": {
             "description": "Not Found"
@@ -21814,7 +21821,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ApiEntitiesMlMlflowModelVersion"
+                  "$ref": "#/components/schemas/ApiEntitiesMlMlflowGetModelVersion"
                 }
               }
             }
@@ -21830,7 +21837,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ApiEntitiesMlMlflowModelVersion"
+                  "$ref": "#/components/schemas/ApiEntitiesMlMlflowGetModelVersion"
                 }
               }
             },
@@ -21959,7 +21966,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ApiEntitiesMlMlflowModelVersion"
+                  "$ref": "#/components/schemas/ApiEntitiesMlMlflowGetModelVersion"
                 }
               }
             }
@@ -22015,7 +22022,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ApiEntitiesMlMlflowModelVersion"
+                  "$ref": "#/components/schemas/ApiEntitiesMlMlflowGetModelVersion"
                 }
               }
             }
@@ -22990,8 +22997,14 @@
               }
             }
           },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
           "404": {
-            "description": "Not Found"
+            "description": "Not found"
           },
           "400": {
             "description": "Bad Request"
@@ -23045,8 +23058,14 @@
               }
             }
           },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
           "404": {
-            "description": "Not Found"
+            "description": "Not found"
           },
           "400": {
             "description": "Bad Request"
@@ -23108,11 +23127,17 @@
               }
             }
           },
-          "404": {
-            "description": "Not Found"
-          },
           "400": {
-            "description": "Bad Request"
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
           }
         }
       },
@@ -23154,8 +23179,14 @@
           "204": {
             "description": "No Content"
           },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
           "404": {
-            "description": "Not Found"
+            "description": "Not found"
           },
           "400": {
             "description": "Bad Request"
@@ -26449,6 +26480,47 @@
         }
       }
     },
+    "/api/v4/users/{id}/phone_number": {
+      "delete": {
+        "tags": [
+          "Users"
+        ],
+        "summary": "Delete the phone number of a user",
+        "description": "Deletes the phone number a user provided for identity verification. Administrators only.",
+        "operationId": "DeleteApiV4UsersIdPhoneNumber",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID of the user.",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "412": {
+            "description": "Precondition failed"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      }
+    },
     "/api/v4/user/applications": {
       "post": {
         "tags": [
@@ -26479,7 +26551,13 @@
             }
           },
           "400": {
-            "description": "Bad Request"
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
           },
           "200": {
             "description": "Created",
@@ -26551,11 +26629,17 @@
               }
             }
           },
-          "404": {
-            "description": "Not Found"
-          },
           "400": {
-            "description": "Bad Request"
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
           }
         }
       },
@@ -26581,11 +26665,17 @@
           "204": {
             "description": "No Content"
           },
-          "404": {
-            "description": "Not Found"
-          },
           "400": {
-            "description": "Bad Request"
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
           }
         }
       },
@@ -26627,11 +26717,17 @@
               }
             }
           },
-          "404": {
-            "description": "Not Found"
-          },
           "400": {
-            "description": "Bad Request"
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
           }
         }
       }
@@ -26675,11 +26771,17 @@
               }
             }
           },
-          "404": {
-            "description": "Not Found"
-          },
           "400": {
-            "description": "Bad Request"
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
           },
           "200": {
             "description": "Created",
@@ -26734,11 +26836,17 @@
               }
             }
           },
-          "404": {
-            "description": "Not Found"
-          },
           "400": {
-            "description": "Bad Request"
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
           },
           "200": {
             "description": "Created",
@@ -26849,7 +26957,16 @@
             }
           },
           "400": {
-            "description": "Bad Request"
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "429": {
+            "description": "Too many requests"
           }
         }
       }
@@ -26884,11 +27001,17 @@
               }
             }
           },
-          "404": {
-            "description": "Not Found"
-          },
           "400": {
-            "description": "Bad Request"
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
           },
           "200": {
             "description": "Created",
@@ -26915,6 +27038,12 @@
         "responses": {
           "201": {
             "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
           },
           "400": {
             "description": "Bad Request"
@@ -29845,11 +29974,20 @@
               }
             }
           },
+          "400": {
+            "description": "Bad Request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
           "404": {
             "description": "Not Found"
           },
-          "400": {
-            "description": "Bad Request"
+          "422": {
+            "description": "Unprocessable entity"
           },
           "200": {
             "description": "Created",
@@ -29994,11 +30132,17 @@
               }
             }
           },
-          "404": {
-            "description": "Not Found"
-          },
           "400": {
-            "description": "Bad Request"
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
           },
           "200": {
             "description": "Created",
@@ -34271,11 +34415,20 @@
               }
             }
           },
+          "400": {
+            "description": "Bad Request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
           "404": {
             "description": "Not Found"
           },
-          "400": {
-            "description": "Bad Request"
+          "422": {
+            "description": "Unprocessable entity"
           },
           "200": {
             "description": "Created",
@@ -34420,11 +34573,17 @@
               }
             }
           },
-          "404": {
-            "description": "Not Found"
-          },
           "400": {
-            "description": "Bad Request"
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
           },
           "200": {
             "description": "Created",
@@ -41350,7 +41509,7 @@
             "description": "Unauthorized"
           },
           "429": {
-            "description": "Too many requests"
+            "description": "Too many requests, or an AI usage events write buffer is nearly full"
           }
         }
       }
@@ -43019,7 +43178,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV4PackagesTerraformModulesV1ModuleNamespaceModuleNameModuleSystemVersions200ResponseSchema"
+                  "$ref": "#/components/schemas/ApiEntitiesTerraformModuleVersions"
                 }
               }
             }
@@ -44387,7 +44546,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ApiEntitiesSuggestion"
+                  "$ref": "#/components/schemas/PutApiV4SuggestionsBatchApply200ResponseSchema"
                 }
               }
             }
@@ -45231,7 +45390,22 @@
             }
           },
           "400": {
-            "description": "Bad Request"
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "408": {
+            "description": "Request timed out"
+          },
+          "429": {
+            "description": "Too many requests"
+          },
+          "503": {
+            "description": "Service unavailable"
           }
         }
       }
@@ -45472,11 +45646,26 @@
               }
             }
           },
-          "404": {
-            "description": "Not Found"
-          },
           "400": {
-            "description": "Bad Request"
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "408": {
+            "description": "Request timed out"
+          },
+          "429": {
+            "description": "Too many requests"
+          },
+          "503": {
+            "description": "Service unavailable"
           }
         }
       }
@@ -45708,11 +45897,26 @@
               }
             }
           },
-          "404": {
-            "description": "Not Found"
-          },
           "400": {
-            "description": "Bad Request"
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "408": {
+            "description": "Request timed out"
+          },
+          "429": {
+            "description": "Too many requests"
+          },
+          "503": {
+            "description": "Service unavailable"
           }
         }
       }
@@ -49584,11 +49788,17 @@
               }
             }
           },
-          "404": {
-            "description": "Not Found"
-          },
           "400": {
-            "description": "Bad Request"
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
           }
         }
       },
@@ -51998,8 +52208,14 @@
               }
             }
           },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
           "404": {
-            "description": "Not Found"
+            "description": "Not found"
           },
           "400": {
             "description": "Bad Request"
@@ -52054,8 +52270,14 @@
               }
             }
           },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
           "404": {
-            "description": "Not Found"
+            "description": "Not found"
           },
           "400": {
             "description": "Bad Request"
@@ -52118,11 +52340,17 @@
               }
             }
           },
-          "404": {
-            "description": "Not Found"
-          },
           "400": {
-            "description": "Bad Request"
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
           }
         }
       },
@@ -52165,8 +52393,14 @@
           "204": {
             "description": "No Content"
           },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
           "404": {
-            "description": "Not Found"
+            "description": "Not found"
           },
           "400": {
             "description": "Bad Request"
@@ -56725,6 +56959,12 @@
           "201": {
             "description": "Created"
           },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
           "400": {
             "description": "Bad Request"
           }
@@ -56995,6 +57235,12 @@
         "responses": {
           "201": {
             "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
           },
           "400": {
             "description": "Bad Request"
@@ -58292,7 +58538,7 @@
           "Project import"
         ],
         "summary": "Retrieve the status of an relations export for a project",
-        "description": "Retrieves the status of a relations export for a project. The \u0060status\u0060 is one of \u0060-2\u0060 (pending), \u00600\u0060 (started), \u00601\u0060 (finished), or \u0060-1\u0060 (failed). The instance must meet the direct transfer prerequisites, including the \u0060bulk_import_enabled\u0060 application setting. If the setting is disabled, a \u0060404\u0060 is returned. This endpoint cannot be used with the file-based group import and export API.",
+        "description": "Retrieves the status of a relations export for a project. The \u0060status\u0060 is one of \u0060-2\u0060 (pending), \u00600\u0060 (started), \u00601\u0060 (finished), or \u0060-1\u0060 (failed). The instance must meet the direct transfer prerequisites, including the \u0060bulk_import_enabled\u0060 application setting. If the setting is disabled, a \u0060404\u0060 is returned. This endpoint cannot be used with the file-based group import and export API. Without \u0060relation\u0060, returns a list with the status of each relation. With \u0060relation\u0060, returns the status of that relation as a single object.",
         "operationId": "GetApiV4ProjectsIdExportRelationsStatus",
         "parameters": [
           {
@@ -58327,7 +58573,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV4ProjectsIdExportRelationsStatus200ResponseSchema"
+                  "$ref": "#/components/schemas/GetApiV4GroupsIdExportRelationsStatus200Response"
                 }
               }
             }
@@ -62193,7 +62439,22 @@
             "description": "Created"
           },
           "400": {
-            "description": "Bad Request"
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "422": {
+            "description": "Unprocessable entity"
+          },
+          "429": {
+            "description": "Too many requests"
           }
         }
       },
@@ -62256,7 +62517,16 @@
             }
           },
           "400": {
-            "description": "Bad Request"
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
           }
         }
       }
@@ -62284,11 +62554,17 @@
           "200": {
             "description": "OK"
           },
-          "404": {
-            "description": "Not Found"
-          },
           "400": {
-            "description": "Bad Request"
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
           }
         }
       }
@@ -77620,11 +77896,17 @@
               }
             }
           },
-          "404": {
-            "description": "Not Found"
-          },
           "400": {
-            "description": "Bad Request"
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
           },
           "200": {
             "description": "Created",
@@ -77699,11 +77981,17 @@
               }
             }
           },
-          "404": {
-            "description": "Not Found"
-          },
           "400": {
-            "description": "Bad Request"
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
           }
         }
       }
@@ -77756,11 +78044,17 @@
               }
             }
           },
-          "404": {
-            "description": "Not Found"
-          },
           "400": {
-            "description": "Bad Request"
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
           }
         }
       },
@@ -77850,11 +78144,17 @@
               }
             }
           },
-          "404": {
-            "description": "Not Found"
-          },
           "400": {
-            "description": "Bad Request"
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
           },
           "200": {
             "description": "Created",
@@ -77929,11 +78229,17 @@
               }
             }
           },
-          "404": {
-            "description": "Not Found"
-          },
           "400": {
-            "description": "Bad Request"
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
           }
         }
       }
@@ -77986,11 +78292,17 @@
               }
             }
           },
-          "404": {
-            "description": "Not Found"
-          },
           "400": {
-            "description": "Bad Request"
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
           }
         }
       },
@@ -90364,7 +90676,7 @@
           "Group import and export"
         ],
         "summary": "Retrieve the status of an relations export for a group",
-        "description": "Retrieves the status of a relations export for a group. The status is one of \u00600\u0060 (started), \u00601\u0060 (finished), or \u0060-1\u0060 (failed).",
+        "description": "Retrieves the status of a relations export for a group. The status is one of \u00600\u0060 (started), \u00601\u0060 (finished), or \u0060-1\u0060 (failed). Without \u0060relation\u0060, returns a list with the status of each relation. With \u0060relation\u0060, returns the status of that relation as a single object.",
         "operationId": "GetApiV4GroupsIdExportRelationsStatus",
         "parameters": [
           {
@@ -90392,7 +90704,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV4GroupsIdExportRelationsStatus200ResponseSchema"
+                  "$ref": "#/components/schemas/GetApiV4GroupsIdExportRelationsStatus200Response"
                 }
               }
             }
@@ -92013,7 +92325,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/GetApiV4GeoRepositoriesGlRepositoryPipelineRefs200ResponseSchema"
+                  "$ref": "#/components/schemas/ApiEntitiesGeoPipelineRefs"
                 }
               }
             }
@@ -113827,7 +114139,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ApiEntitiesCiJob"
+                  "$ref": "#/components/schemas/ApiEntitiesCiAllowedAgents"
                 }
               }
             }
@@ -113881,8 +114193,14 @@
               }
             }
           },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
           "404": {
-            "description": "Not Found"
+            "description": "Not found"
           },
           "400": {
             "description": "Bad Request"
@@ -113936,8 +114254,14 @@
               }
             }
           },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
           "404": {
-            "description": "Not Found"
+            "description": "Not found"
           },
           "400": {
             "description": "Bad Request"
@@ -113999,11 +114323,17 @@
               }
             }
           },
-          "404": {
-            "description": "Not Found"
-          },
           "400": {
-            "description": "Bad Request"
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
           }
         }
       },
@@ -114045,8 +114375,14 @@
           "204": {
             "description": "No Content"
           },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
           "404": {
-            "description": "Not Found"
+            "description": "Not found"
           },
           "400": {
             "description": "Bad Request"
@@ -123451,11 +123787,17 @@
               }
             }
           },
-          "404": {
-            "description": "Not Found"
-          },
           "400": {
-            "description": "Bad Request"
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
           }
         }
       },
@@ -123495,11 +123837,17 @@
               }
             }
           },
-          "404": {
-            "description": "Not Found"
-          },
           "400": {
-            "description": "Bad Request"
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
           }
         }
       }
@@ -123560,11 +123908,17 @@
               }
             }
           },
-          "404": {
-            "description": "Not Found"
-          },
           "400": {
-            "description": "Bad Request"
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
           },
           "200": {
             "description": "Created",
@@ -123620,11 +123974,20 @@
           "204": {
             "description": "Resource deleted"
           },
-          "404": {
-            "description": "Not Found"
-          },
           "400": {
-            "description": "Bad Request"
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "412": {
+            "description": "Precondition failed"
           }
         }
       }
@@ -123681,11 +124044,17 @@
               }
             }
           },
-          "404": {
-            "description": "Not Found"
-          },
           "400": {
-            "description": "Bad Request"
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
           }
         }
       },
@@ -123725,11 +124094,17 @@
               }
             }
           },
-          "404": {
-            "description": "Not Found"
-          },
           "400": {
-            "description": "Bad Request"
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
           }
         }
       }
@@ -123790,11 +124165,17 @@
               }
             }
           },
-          "404": {
-            "description": "Not Found"
-          },
           "400": {
-            "description": "Bad Request"
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
           },
           "200": {
             "description": "Created",
@@ -123850,11 +124231,20 @@
           "204": {
             "description": "Resource deleted"
           },
-          "404": {
-            "description": "Not Found"
-          },
           "400": {
-            "description": "Bad Request"
+            "description": "Bad request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not found"
+          },
+          "412": {
+            "description": "Precondition failed"
           }
         }
       }
@@ -123888,7 +124278,7 @@
             "description": "Not found"
           },
           "429": {
-            "description": "Too many requests"
+            "description": "Too many requests, or an AI usage events write buffer is nearly full"
           },
           "400": {
             "description": "Bad Request"
@@ -125855,7 +126245,10 @@
             "type": "string"
           },
           "duo_namespace_access_rules": {
-            "type": "string"
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ApiEntitiesGroupDuoNamespaceAccessRulesItemProperty"
+            }
           },
           "built_in_project_templates_enabled": {
             "type": "boolean"
@@ -126191,6 +126584,7 @@
           "description": {
             "type": "string",
             "description": "Description of the project.",
+            "nullable": true,
             "example": "desc"
           },
           "name": {
@@ -130572,37 +130966,48 @@
             "type": "string"
           },
           "ai_vectorizable_file_uploads_count": {
-            "type": "integer"
+            "type": "integer",
+            "nullable": true
           },
           "ai_vectorizable_file_uploads_checksum_total_count": {
-            "type": "integer"
+            "type": "integer",
+            "nullable": true
           },
           "ai_vectorizable_file_uploads_checksummed_count": {
-            "type": "integer"
+            "type": "integer",
+            "nullable": true
           },
           "ai_vectorizable_file_uploads_checksum_failed_count": {
-            "type": "integer"
+            "type": "integer",
+            "nullable": true
           },
           "ai_vectorizable_file_uploads_synced_count": {
-            "type": "integer"
+            "type": "integer",
+            "nullable": true
           },
           "ai_vectorizable_file_uploads_failed_count": {
-            "type": "integer"
+            "type": "integer",
+            "nullable": true
           },
           "ai_vectorizable_file_uploads_registry_count": {
-            "type": "integer"
+            "type": "integer",
+            "nullable": true
           },
           "ai_vectorizable_file_uploads_verification_total_count": {
-            "type": "integer"
+            "type": "integer",
+            "nullable": true
           },
           "ai_vectorizable_file_uploads_verified_count": {
-            "type": "integer"
+            "type": "integer",
+            "nullable": true
           },
           "ai_vectorizable_file_uploads_verification_failed_count": {
-            "type": "integer"
+            "type": "integer",
+            "nullable": true
           },
           "ai_vectorizable_file_uploads_oldest_unsynced_time": {
-            "type": "integer"
+            "type": "integer",
+            "nullable": true
           },
           "ai_vectorizable_file_uploads_synced_in_percentage": {
             "type": "string",
@@ -132484,37 +132889,48 @@
             "type": "string"
           },
           "ai_vectorizable_file_uploads_count": {
-            "type": "integer"
+            "type": "integer",
+            "nullable": true
           },
           "ai_vectorizable_file_uploads_checksum_total_count": {
-            "type": "integer"
+            "type": "integer",
+            "nullable": true
           },
           "ai_vectorizable_file_uploads_checksummed_count": {
-            "type": "integer"
+            "type": "integer",
+            "nullable": true
           },
           "ai_vectorizable_file_uploads_checksum_failed_count": {
-            "type": "integer"
+            "type": "integer",
+            "nullable": true
           },
           "ai_vectorizable_file_uploads_synced_count": {
-            "type": "integer"
+            "type": "integer",
+            "nullable": true
           },
           "ai_vectorizable_file_uploads_failed_count": {
-            "type": "integer"
+            "type": "integer",
+            "nullable": true
           },
           "ai_vectorizable_file_uploads_registry_count": {
-            "type": "integer"
+            "type": "integer",
+            "nullable": true
           },
           "ai_vectorizable_file_uploads_verification_total_count": {
-            "type": "integer"
+            "type": "integer",
+            "nullable": true
           },
           "ai_vectorizable_file_uploads_verified_count": {
-            "type": "integer"
+            "type": "integer",
+            "nullable": true
           },
           "ai_vectorizable_file_uploads_verification_failed_count": {
-            "type": "integer"
+            "type": "integer",
+            "nullable": true
           },
           "ai_vectorizable_file_uploads_oldest_unsynced_time": {
-            "type": "integer"
+            "type": "integer",
+            "nullable": true
           },
           "ai_vectorizable_file_uploads_synced_in_percentage": {
             "type": "string",
@@ -133441,10 +133857,12 @@
           "date": {
             "type": "string",
             "format": "date",
+            "nullable": true,
             "example": "2021-03-01"
           },
           "value": {
             "type": "number",
+            "nullable": true,
             "example": 3
           }
         }
@@ -134840,6 +135258,7 @@
           "description": {
             "type": "string",
             "description": "Description of the project.",
+            "nullable": true,
             "example": "desc"
           },
           "name": {
@@ -135213,6 +135632,25 @@
           }
         }
       },
+      "ApiEntitiesMlMlflowGetRegisteredModel": {
+        "type": "object",
+        "properties": {
+          "registered_model": {
+            "$ref": "#/components/schemas/ApiEntitiesMlMlflowRegisteredModel"
+          }
+        }
+      },
+      "ApiEntitiesMlMlflowGetLatestVersions": {
+        "type": "object",
+        "properties": {
+          "model_versions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ApiEntitiesMlMlflowModelVersion"
+            }
+          }
+        }
+      },
       "ApiEntitiesMlMlflowListRegisteredModels": {
         "type": "object",
         "properties": {
@@ -135224,6 +135662,14 @@
           },
           "next_page_token": {
             "type": "string"
+          }
+        }
+      },
+      "ApiEntitiesMlMlflowGetModelVersion": {
+        "type": "object",
+        "properties": {
+          "model_version": {
+            "$ref": "#/components/schemas/ApiEntitiesMlMlflowModelVersion"
           }
         }
       },
@@ -138002,6 +138448,9 @@
           "push_event_activities_limit": {
             "type": "string"
           },
+          "max_refs_per_push": {
+            "type": "string"
+          },
           "custom_http_clone_url_root": {
             "type": "string"
           },
@@ -138057,6 +138506,9 @@
             "type": "string"
           },
           "draft_notes_create_limit": {
+            "type": "string"
+          },
+          "notes_update_limit": {
             "type": "string"
           },
           "markdown_upload_limit_megabytes_per_day": {
@@ -139687,6 +140139,7 @@
           },
           "weight": {
             "type": "integer",
+            "nullable": true,
             "example": 2
           },
           "action": {
@@ -142117,6 +142570,7 @@
           "description": {
             "type": "string",
             "description": "Description of the project.",
+            "nullable": true,
             "example": "desc"
           },
           "name": {
@@ -142873,6 +143327,7 @@
           "description": {
             "type": "string",
             "description": "Description of the project.",
+            "nullable": true,
             "example": "desc"
           },
           "name": {
@@ -143661,6 +144116,7 @@
           "description": {
             "type": "string",
             "description": "Description of the project.",
+            "nullable": true,
             "example": "desc"
           },
           "name": {
@@ -144421,6 +144877,7 @@
           "description": {
             "type": "string",
             "description": "Description of the project.",
+            "nullable": true,
             "example": "desc"
           },
           "name": {
@@ -145629,6 +146086,7 @@
           "description": {
             "type": "string",
             "description": "Description of the project.",
+            "nullable": true,
             "example": "desc"
           },
           "name": {
@@ -145882,6 +146340,7 @@
           "description": {
             "type": "string",
             "description": "Description of the project.",
+            "nullable": true,
             "example": "desc"
           },
           "name": {
@@ -146513,6 +146972,7 @@
           "description": {
             "type": "string",
             "description": "Description of the project.",
+            "nullable": true,
             "example": "desc"
           },
           "name": {
@@ -147498,6 +147958,7 @@
           "plan": {
             "type": "string",
             "description": "Plan of the license the instance runs under. An active trial license reports its plan the same way as a paid license. \u0060free\u0060 on an instance with no license or with an expired trial. An expired paid license still reports its plan, because its licensed features remain available. \u0060null\u0060 where subscriptions are scoped for each namespace rather than for an instance, such as GitLab.com.",
+            "nullable": true,
             "example": "ultimate"
           }
         }
@@ -152352,7 +152813,11 @@
             "type": "string"
           },
           "variables": {
-            "type": "string"
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ApiEntitiesCiJobRequestServiceVariablesItemProperty"
+            },
+            "nullable": true
           }
         }
       },
@@ -152437,6 +152902,30 @@
           }
         }
       },
+      "ApiEntitiesCiJobRequestDependency": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "ID of the job.",
+            "format": "int64",
+            "example": 1
+          },
+          "name": {
+            "type": "string",
+            "description": "Name of the job.",
+            "example": "build"
+          },
+          "token": {
+            "type": "string",
+            "description": "Token of the running job, to download the artifacts.",
+            "example": "glcbt-64_abc"
+          },
+          "artifacts_file": {
+            "$ref": "#/components/schemas/ApiEntitiesCiJobArtifactFile"
+          }
+        }
+      },
       "ApiEntitiesCiJobRequestResponse": {
         "type": "object",
         "properties": {
@@ -152507,7 +152996,10 @@
             "type": "string"
           },
           "dependencies": {
-            "type": "string"
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ApiEntitiesCiJobRequestDependency"
+            }
           },
           "run": {
             "type": "string"
@@ -152646,6 +153138,48 @@
           },
           "project": {
             "$ref": "#/components/schemas/ApiEntitiesCiJobBasicProject"
+          }
+        }
+      },
+      "ApiEntitiesClustersAgentsAuthorizationsCiAccess": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64",
+            "example": 1
+          },
+          "config_project": {
+            "$ref": "#/components/schemas/ApiEntitiesProjectIdentity"
+          },
+          "configuration": {
+            "$ref": "#/components/schemas/ApiEntitiesClustersAgentsAuthorizationsCiAccessConfigurationProperty"
+          }
+        }
+      },
+      "ApiEntitiesCiAllowedAgents": {
+        "type": "object",
+        "properties": {
+          "allowed_agents": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ApiEntitiesClustersAgentsAuthorizationsCiAccess"
+            }
+          },
+          "job": {
+            "$ref": "#/components/schemas/ApiEntitiesCiAllowedAgentsJob"
+          },
+          "pipeline": {
+            "$ref": "#/components/schemas/ApiEntitiesCiAllowedAgentsPipeline"
+          },
+          "project": {
+            "$ref": "#/components/schemas/ApiEntitiesCiAllowedAgentsProject"
+          },
+          "user": {
+            "$ref": "#/components/schemas/ApiEntitiesCiAllowedAgentsUser"
+          },
+          "environment": {
+            "$ref": "#/components/schemas/ApiEntitiesCiAllowedAgentsEnvironment"
           }
         }
       },
@@ -152927,7 +153461,10 @@
             "type": "string"
           },
           "duo_namespace_access_rules": {
-            "type": "string"
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ApiEntitiesGroupDetailDuoNamespaceAccessRulesItemProperty"
+            }
           },
           "built_in_project_templates_enabled": {
             "type": "boolean"
@@ -160657,6 +161194,11 @@
             "description": "Maximum number of GitLab Pages custom domains per project",
             "nullable": true
           },
+          "max_refs_per_push": {
+            "type": "integer",
+            "description": "Maximum number of refs (branches or tags) a single Git push can update. Set to \u00600\u0060 for unlimited.",
+            "nullable": true
+          },
           "max_terraform_state_size_bytes": {
             "type": "integer",
             "description": "Maximum size of the Terraform state file in bytes. Set to \u00600\u0060 for unlimited size.",
@@ -160690,6 +161232,11 @@
           "metrics_method_call_threshold": {
             "type": "integer",
             "description": "Method call is only tracked if it takes longer than this threshold, in milliseconds.",
+            "nullable": true
+          },
+          "notes_update_limit": {
+            "type": "integer",
+            "description": "Maximum number of note edit requests per minute for each user. Default: \u0060300\u0060. Set to \u00600\u0060 to disable the rate limit. Introduced in GitLab 19.7.",
             "nullable": true
           },
           "o11y_provisioner_api_key": {
@@ -161960,7 +162507,7 @@
           },
           "notes_create_limit_allowlist_raw": {
             "type": "string",
-            "description": "Raw newline-, comma-, or whitespace-separated list of usernames excluded from the \u0060notes_create_limit\u0060 rate limit. Maximum: 100 usernames.",
+            "description": "Raw newline-, comma-, or whitespace-separated list of usernames excluded from the \u0060notes_create_limit\u0060, \u0060draft_notes_create_limit\u0060, and \u0060notes_update_limit\u0060 rate limits. Maximum: 100 usernames.",
             "nullable": true
           },
           "notify_on_unknown_sign_in": {
@@ -185871,6 +186418,79 @@
           }
         }
       },
+      "ApiEntitiesCiAllowedAgentsJob": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64",
+            "example": 1
+          }
+        }
+      },
+      "ApiEntitiesCiAllowedAgentsPipeline": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64",
+            "example": 1
+          }
+        }
+      },
+      "ApiEntitiesCiAllowedAgentsProject": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64",
+            "example": 1
+          },
+          "groups": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ApiEntitiesCiAllowedAgentsProjectGroupsItem"
+            }
+          }
+        }
+      },
+      "ApiEntitiesCiAllowedAgentsUser": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64",
+            "example": 1
+          },
+          "username": {
+            "type": "string",
+            "example": "root"
+          },
+          "roles_in_project": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "example": [
+              "guest",
+              "developer"
+            ]
+          }
+        }
+      },
+      "ApiEntitiesCiAllowedAgentsEnvironment": {
+        "type": "object",
+        "properties": {
+          "tier": {
+            "type": "string",
+            "example": "production"
+          },
+          "slug": {
+            "type": "string",
+            "example": "production"
+          }
+        }
+      },
       "ApiEntitiesGroupDetailStatistics": {
         "type": "object",
         "properties": {
@@ -190615,6 +191235,16 @@
         "description": "Platform Kubernetes data.",
         "nullable": true
       },
+      "ApiEntitiesCiAllowedAgentsProjectGroupsItem": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64",
+            "example": 1
+          }
+        }
+      },
       "PostApiV4SecurityProjectsIdVulnerabilityExportsRequestReportDataVulnerabilitiesBySeverityCount": {
         "type": "object",
         "properties": {
@@ -192188,11 +192818,18 @@
         "description": "End line for a multi-line note.",
         "nullable": true
       },
-      "GetApiV4JobsIdSbomScansSbomScanId200ResponseSchema": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesSecurityVulnerabilityScanningSbomScan"
-        }
+      "GetApiV4GroupsIdExportRelationsStatus200Response": {
+        "anyOf": [
+          {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ApiEntitiesBulkImportsExportStatus"
+            }
+          },
+          {
+            "$ref": "#/components/schemas/ApiEntitiesBulkImportsExportStatus"
+          }
+        ]
       },
       "GetApiV4ProjectsIdAiAgentSessions200ResponseSchema": {
         "type": "array",
@@ -192361,6 +192998,12 @@
         "type": "string"
       },
       "GetApiV4ProjectsIdManagedLicenses200ResponseSchema": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ApiEntitiesManagedLicense"
+        }
+      },
+      "GetApiV4ProjectsIdManagedLicensesManagedLicenseId200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/ApiEntitiesManagedLicense"
@@ -192551,6 +193194,12 @@
         }
       },
       "GetApiV4GroupsIdDashEpicsEpicIidEpics200ResponseSchema": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ApiEntitiesEpic"
+        }
+      },
+      "PutApiV4GroupsIdDashEpicsEpicIidEpicsChildEpicId200ResponseSchema": {
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/ApiEntitiesEpic"
@@ -193121,12 +193770,6 @@
           "$ref": "#/components/schemas/ApiEntitiesTerraformStateProtectionRule"
         }
       },
-      "GetApiV4PackagesTerraformModulesV1ModuleNamespaceModuleNameModuleSystemVersions200ResponseSchema": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesTerraformModuleVersions"
-        }
-      },
       "GetApiV4PackagesTerraformModulesV1ModuleNamespaceModuleNameModuleSystemModuleVersionFile200OctetStreamResponseSchema": {
         "type": "string",
         "format": "binary"
@@ -193153,6 +193796,12 @@
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/ApiEntitiesSupplyChainAttestation"
+        }
+      },
+      "PutApiV4SuggestionsBatchApply200ResponseSchema": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/ApiEntitiesSuggestion"
         }
       },
       "GetApiV4Snippets200ResponseSchema": {
@@ -193442,12 +194091,6 @@
       "GetApiV4ProjectsIdExportDownload200OctetStreamResponseSchema": {
         "type": "string",
         "format": "binary"
-      },
-      "GetApiV4ProjectsIdExportRelationsStatus200ResponseSchema": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesBulkImportsExportStatus"
-        }
       },
       "GetApiV4ProjectsIdEvents200ResponseSchema": {
         "type": "array",
@@ -193806,12 +194449,6 @@
         "type": "string",
         "format": "binary"
       },
-      "GetApiV4GroupsIdExportRelationsStatus200ResponseSchema": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesBulkImportsExportStatus"
-        }
-      },
       "GetApiV4GroupsIdDashDebianDistributions200ResponseSchema": {
         "type": "array",
         "items": {
@@ -193838,12 +194475,6 @@
         "type": "array",
         "items": {
           "$ref": "#/components/schemas/ApiEntitiesApplication"
-        }
-      },
-      "GetApiV4GeoRepositoriesGlRepositoryPipelineRefs200ResponseSchema": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/ApiEntitiesGeoPipelineRefs"
         }
       },
       "GetApiV4ProjectsIdFreezePeriods200ResponseSchema": {
@@ -194547,6 +195178,9 @@
       "ApiEntitiesAnalyticsCodeReviewMergeRequestDiffStatsProperty": {
         "type": "object"
       },
+      "ApiEntitiesGroupDuoNamespaceAccessRulesItemProperty": {
+        "type": "object"
+      },
       "ApiEntitiesVulnerabilityFindingProperty": {
         "type": "object"
       },
@@ -194977,6 +195611,15 @@
         "example": {
           "id": "75949910542696343243264405377658443914"
         }
+      },
+      "ApiEntitiesCiJobRequestServiceVariablesItemProperty": {
+        "type": "object"
+      },
+      "ApiEntitiesClustersAgentsAuthorizationsCiAccessConfigurationProperty": {
+        "type": "object"
+      },
+      "ApiEntitiesGroupDetailDuoNamespaceAccessRulesItemProperty": {
+        "type": "object"
       },
       "ApiEntitiesGroupDetailSharedWithGroupsItemProperty": {
         "type": "object"
@@ -224405,6 +225048,9 @@
     "ApiEntitiesAnalyticsCodeReviewMergeRequestDiffStats": {
       "type": "object"
     },
+    "ApiEntitiesGroupDuoNamespaceAccessRulesItem": {
+      "type": "object"
+    },
     "ApiEntitiesVulnerabilityFinding": {
       "type": "object"
     },
@@ -224836,6 +225482,15 @@
         "id": "75949910542696343243264405377658443914"
       }
     },
+    "ApiEntitiesCiJobRequestServiceVariablesItem": {
+      "type": "object"
+    },
+    "ApiEntitiesClustersAgentsAuthorizationsCiAccessConfiguration": {
+      "type": "object"
+    },
+    "ApiEntitiesGroupDetailDuoNamespaceAccessRulesItem": {
+      "type": "object"
+    },
     "ApiEntitiesGroupDetailSharedWithGroupsItem": {
       "type": "object"
     },
@@ -225135,12 +225790,6 @@
     "GetApiV4OrbitSkillsNamePath200PlainResponse": {
       "type": "string"
     },
-    "GetApiV4JobsIdSbomScansSbomScanId200Response": {
-      "type": "array",
-      "items": {
-        "$ref": "#/components/schemas/ApiEntitiesSecurityVulnerabilityScanningSbomScan"
-      }
-    },
     "GetApiV4ProjectsIdAiAgentSessions200Response": {
       "type": "array",
       "items": {
@@ -225308,6 +225957,12 @@
       "type": "string"
     },
     "GetApiV4ProjectsIdManagedLicenses200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesManagedLicense"
+      }
+    },
+    "GetApiV4ProjectsIdManagedLicensesManagedLicenseId200Response": {
       "type": "array",
       "items": {
         "$ref": "#/components/schemas/ApiEntitiesManagedLicense"
@@ -225498,6 +226153,12 @@
       }
     },
     "GetApiV4GroupsIdDashEpicsEpicIidEpics200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesEpic"
+      }
+    },
+    "PutApiV4GroupsIdDashEpicsEpicIidEpicsChildEpicId200Response": {
       "type": "array",
       "items": {
         "$ref": "#/components/schemas/ApiEntitiesEpic"
@@ -226068,12 +226729,6 @@
         "$ref": "#/components/schemas/ApiEntitiesTerraformStateProtectionRule"
       }
     },
-    "GetApiV4PackagesTerraformModulesV1ModuleNamespaceModuleNameModuleSystemVersions200Response": {
-      "type": "array",
-      "items": {
-        "$ref": "#/components/schemas/ApiEntitiesTerraformModuleVersions"
-      }
-    },
     "GetApiV4PackagesTerraformModulesV1ModuleNamespaceModuleNameModuleSystemModuleVersionFile200OctetStreamResponse": {
       "type": "string",
       "format": "binary"
@@ -226100,6 +226755,12 @@
       "type": "array",
       "items": {
         "$ref": "#/components/schemas/ApiEntitiesSupplyChainAttestation"
+      }
+    },
+    "PutApiV4SuggestionsBatchApply200Response": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ApiEntitiesSuggestion"
       }
     },
     "GetApiV4Snippets200Response": {
@@ -226399,10 +227060,17 @@
       "format": "binary"
     },
     "GetApiV4ProjectsIdExportRelationsStatus200Response": {
-      "type": "array",
-      "items": {
-        "$ref": "#/components/schemas/ApiEntitiesBulkImportsExportStatus"
-      }
+      "anyOf": [
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/components/schemas/ApiEntitiesBulkImportsExportStatus"
+          }
+        },
+        {
+          "$ref": "#/components/schemas/ApiEntitiesBulkImportsExportStatus"
+        }
+      ]
     },
     "GetApiV4ProjectsIdEvents200Response": {
       "type": "array",
@@ -226761,12 +227429,6 @@
       "type": "string",
       "format": "binary"
     },
-    "GetApiV4GroupsIdExportRelationsStatus200Response": {
-      "type": "array",
-      "items": {
-        "$ref": "#/components/schemas/ApiEntitiesBulkImportsExportStatus"
-      }
-    },
     "GetApiV4GroupsIdDashDebianDistributions200Response": {
       "type": "array",
       "items": {
@@ -226793,12 +227455,6 @@
       "type": "array",
       "items": {
         "$ref": "#/components/schemas/ApiEntitiesApplication"
-      }
-    },
-    "GetApiV4GeoRepositoriesGlRepositoryPipelineRefs200Response": {
-      "type": "array",
-      "items": {
-        "$ref": "#/components/schemas/ApiEntitiesGeoPipelineRefs"
       }
     },
     "GetApiV4ProjectsIdFreezePeriods200Response": {
